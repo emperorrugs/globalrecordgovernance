@@ -12,6 +12,7 @@ import Countries from "./pages/Countries";
 import Academy from "./pages/Academy";
 import ArchivePage from "./pages/Archive";
 import GovernancePage from "./pages/Governance";
+import Origin from "./pages/Origin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/academy" element={<Academy />} />
             <Route path="/archive" element={<ArchivePage />} />
             <Route path="/governance" element={<GovernancePage />} />
+            <Route path="/origin" element={<Origin />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppLayout>

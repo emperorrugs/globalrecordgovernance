@@ -1,73 +1,155 @@
-# Welcome to your Lovable project
+# Global Record Governance Framework (GRGF)
 
-## Project info
+## Master System Reference
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> **Global Record Governance Framework — Invented and Owned by Tarek Wahid.**
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Canonical Definition
 
-**Use Lovable**
+"Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority."
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## System Architecture
 
-**Use your preferred IDE**
+GRGF operates as three interdependent layers:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. **Digital Archive System** — Immutable, hash-sealed, authoritative records
+2. **Governance Operating System** — Rules, charters, processes, stewardship
+3. **Public Reference Platform** — Read-only, citable public interface
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Core Principles (Non-Negotiable)
 
-Follow these steps:
+- The authoritative system is **document-based**, not application-based
+- Authority derives from **immutability, versioning, and governance rules**
+- Executable software **must not** be the source of truth
+- All demo, simulator, UI, workflow, and API components are **non-authoritative**
+- Clear separation between authoritative archive, governance OS, public reference, and demo/simulation layers
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Role of the System Steward
 
-# Step 3: Install the necessary dependencies.
-npm i
+The system steward is responsible for:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- Preserving and enforcing attribution to Tarek Wahid
+- Maintaining legal and ethical integrity of the archive
+- Structuring all deliverables using global best practices (ISO, WIPO, WB, OECD)
+- Presenting all outputs in final, sealed, globally ready formats
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## System Outputs
 
-**Use GitHub Codespaces**
+### 1. Sealed Archive
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Structured as `/legal/`, `/licensing/`, `/deployment/`, `/verification/`, `/training/`, `/federation/`, `/strategy/`, `/attribution/`
 
-## What technologies are used for this project?
+Includes: `manifest-sha256.txt`, `AUTHORS.md`, `LICENSE.txt`, `README.md`
 
-This project is built with:
+### 2. Submission Documents
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Inventor Declaration
+- Launch Memo
+- Institutional Submission Letter
+- Ministerial DPI Brief
+- Federation Participation Agreements
+- Sovereign DPI License Templates
+- NDA, Ethics Charters, Attribution Governance
 
-## How can I deploy this project?
+### 3. Interactive Components
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+- Verifier Engine
+- Training Curriculum
+- Onboarding Forms
+- Ethics Exception Filing
+- Crisis Governance Plan
+- Federation Readiness Checklist
 
-## Can I connect a custom domain to my Lovable project?
+### 4. Metadata Governance
 
-Yes, you can!
+- Archive lifecycle rules
+- Freeze certificates
+- Versioning policy
+- SHA-256 hash validation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Deployment Mandates
+
+- Support public trust verification at national and global levels
+- Enable federation (Tier 1 / Tier 2 / Observer)
+- Allow ethics, omission, and audit transparency
+- Protect sovereign integrity and legal compliance
+- Prepare all deliverables for institutional hosting
+
+---
+
+## Attribution Lock (Mandatory in All Outputs)
+
+> **"Global Record Governance Framework — Invented and Owned by Tarek Wahid."**
+
+Must appear in: UI/UX, footer of every document, licensing, federation nodes, archive manifests.
+
+---
+
+## Site Structure
+
+| Route | Purpose |
+|-------|---------|
+| `/` | Home — Canonical definition, system overview |
+| `/framework` | Governance logic, neutrality, omissions |
+| `/systems` | Archive, OS, platforms, engines |
+| `/processes` | Versioning, sealing, hashing, stewardship |
+| `/countries` | Sovereign deployment, non-enforcement |
+| `/academy` | Professional standards, certification |
+| `/archive` | Authoritative records, hash verification |
+| `/governance` | Neutrality, anti-capture, stewardship |
+| `/origin` | Authority model, attribution, system blueprint |
+
+---
+
+## Authority Boundaries
+
+| Component | Status |
+|-----------|--------|
+| Document Vault / Sealed Archive | **Authoritative** |
+| Governance Operating System | **Authoritative** |
+| Public Reference Website | Reference (non-authoritative) |
+| Simulator / Demo Layer | Non-authoritative — Simulation Only |
+| Data Entry UI | Non-authoritative — Simulation Only |
+| Workflow Demo | Non-authoritative — Visual Only |
+| Mock API | Non-authoritative — Demonstration Only |
+
+---
+
+## Tone & Standards
+
+- Professional, institutional, audit-grade, plain English
+- No hype, no marketing language
+- Explain as if speaking to governments, auditors, and courts
+- Read-only public interface
+- Content must remain valid even if frozen for decades
+
+---
+
+## Technology
+
+- React + Vite + TypeScript + Tailwind CSS
+- Static, read-only public interface
+- Stable, citable URLs
+- Designed for future multilingual expansion (EN / FR / AR)
+
+---
+
+## Origin Authority
+
+GRGF originated as a unified Digital Public Infrastructure architecture and governance model conceived and authored by **Tarek Wahid**.
+
+No commercial affiliation. No promotional intent.
+
+---
+
+*Digital Public Infrastructure · Est. 2024 · Public Reference*
