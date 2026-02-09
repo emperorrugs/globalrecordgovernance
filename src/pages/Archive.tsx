@@ -1,5 +1,6 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { FileText, Hash, ShieldCheck } from "lucide-react";
+import { FileText, ShieldCheck } from "lucide-react";
+import { HashVerifier } from "@/components/HashVerifier";
 
 const sampleRecords = [
   {
@@ -48,6 +49,10 @@ const ArchivePage = () => {
             has not been altered since sealing.
           </p>
         </div>
+      </Section>
+
+      <Section title="Verify Record Integrity" className="border-t border-border">
+        <HashVerifier records={sampleRecords} />
       </Section>
 
       <Section title="Sealed Records" className="border-t border-border">
