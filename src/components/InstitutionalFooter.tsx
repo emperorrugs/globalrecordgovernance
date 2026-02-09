@@ -6,7 +6,7 @@ export function InstitutionalFooter() {
           <div>
             <h4 className="font-serif text-sm font-semibold mb-2">Citation Format</h4>
             <p className="text-xs text-muted-foreground leading-relaxed font-mono">
-              Global Record Governance Framework (GRGF), [Section Title], [Record ID if applicable]. Available at: globalrecordgovernance.lovable.app
+              Global Record Governance Framework (GRGF), [Section Title], [Record ID if applicable]. Available at: globalrecordgovernance.com
             </p>
           </div>
           <div>
