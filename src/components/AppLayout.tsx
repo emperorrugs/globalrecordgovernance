@@ -13,6 +13,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { InstitutionalFooter } from "@/components/InstitutionalFooter";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
@@ -92,9 +94,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 min-w-0">
-        {children}
-      </main>
+      <div className="flex-1 min-w-0 flex flex-col">
+        <Breadcrumbs />
+        <main className="flex-1">
+          {children}
+        </main>
+        <InstitutionalFooter />
+      </div>
     </div>
   );
 }
