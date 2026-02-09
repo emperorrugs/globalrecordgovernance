@@ -1,138 +1,145 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { Globe, Undo2, ShieldOff, MapPin } from "lucide-react";
+import { useViewMode } from "@/contexts/ViewModeContext";
+import { useState } from "react";
 
-const archetypes = [
+const stages = [
   {
-    name: "Canada",
-    type: "Federal Parliamentary · Common Law",
-    desc: "Bilingual deployment (EN/FR) across federal and provincial jurisdictions. Adapts to existing Access to Information and Privacy frameworks. Provincial stewardship authorities operate independently within a unified federal GRGF instance.",
+    stage: 0,
+    title: "Awareness",
+    plain: "The country learns about GRGF and begins exploring how it works.",
+    tech: "Initial stakeholder engagement. Assessment of existing governance infrastructure, legal frameworks, and institutional readiness.",
+    keeps: "Full sovereignty. No changes to existing systems.",
+    deploys: "Information materials, stakeholder briefings",
+    time: "1–3 months",
+    depth: "Informational only",
   },
   {
-    name: "Egypt",
-    type: "Unitary Republic · Civil Law",
-    desc: "Arabic-primary deployment with governance integration across centralized ministries. Designed for alignment with national digital transformation strategies while preserving sovereign data control and institutional independence.",
+    stage: 1,
+    title: "Pilot",
+    plain: "A small trial in one ministry or department — to see how records get created and sealed.",
+    tech: "Scoped pilot deployment within a single institutional domain. Record creation, sealing, and verification workflows tested in controlled environment.",
+    keeps: "All existing systems. Pilot runs alongside, not instead of.",
+    deploys: "Archive instance, basic governance rules, verification tools",
+    time: "3–6 months",
+    depth: "Single department",
   },
   {
-    name: "Global South Archetype",
-    type: "Emerging Governance Infrastructure",
-    desc: "Lightweight deployment model for jurisdictions building governance infrastructure for the first time. Minimal dependencies, offline-capable components, and phased adoption pathways that do not require existing digital infrastructure.",
+    stage: 2,
+    title: "Institutional",
+    plain: "Multiple departments start using GRGF. Governance rules are adapted to local laws.",
+    tech: "Multi-departmental deployment with localized governance protocols. Integration with existing national record systems. Stewardship authority designated.",
+    keeps: "Existing record systems. GRGF supplements, doesn't replace.",
+    deploys: "Full archive, GOS rules, certification programme",
+    time: "6–18 months",
+    depth: "Cross-departmental",
+  },
+  {
+    stage: 3,
+    title: "National",
+    plain: "GRGF becomes a standard part of national governance. All key institutions use it.",
+    tech: "National-scale deployment with full governance operating system. Cross-institutional record integrity. Federation readiness achieved.",
+    keeps: "Sovereign control. All data stays in-country.",
+    deploys: "Complete GRGF infrastructure, academy, audit tools",
+    time: "18–36 months",
+    depth: "National infrastructure",
+  },
+  {
+    stage: 4,
+    title: "Federated",
+    plain: "The country joins the global GRGF network, enabling cross-border record verification.",
+    tech: "Federation-tier integration enabling cross-jurisdictional verification while maintaining sovereign data boundaries. Interoperability protocols activated.",
+    keeps: "Full sovereignty. Data never leaves jurisdiction.",
+    deploys: "Federation protocols, cross-border verification layer",
+    time: "36+ months",
+    depth: "International interoperability",
   },
 ];
 
 const Countries = () => {
+  const { isPlain } = useViewMode();
+  const [activeStage, setActiveStage] = useState(0);
+  const s = stages[activeStage];
+
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="Countries"
-        subtitle="Sovereign deployment packages and the country-level adaptation model for GRGF implementation."
+        title="Country Deployment"
+        subtitle={isPlain
+          ? "How any country can adopt GRGF — step by step, at their own pace, keeping full control."
+          : "Sovereign deployment model with progressive adoption stages adapted to each jurisdiction's digital maturity."
+        }
       />
 
-      <Section title="Sovereign Deployment Model">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          GRGF is designed for sovereign deployment. Each country or jurisdiction receives a
-          self-contained deployment package that can be adapted to local legal, institutional,
-          and linguistic requirements while maintaining full interoperability with the global
-          reference architecture.
-        </p>
-
-        <div className="governance-card mb-6">
-          <h3 className="font-serif text-sm font-semibold mb-3">Country Package Contents</h3>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            {[
-              "Core GRGF infrastructure and governance protocols",
-              "Localization templates for legal and linguistic adaptation",
-              "Certification requirements for local operators and auditors",
-              "Integration specifications for existing national systems",
-              "Stewardship guidelines and succession protocols",
-              "Cryptographic key management procedures",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-2">
-                <span className="text-accent mt-1">·</span>
-                <span>{item}</span>
-              </li>
+      <Section>
+        {/* Stage Slider */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            {stages.map((st) => (
+              <button
+                key={st.stage}
+                onClick={() => setActiveStage(st.stage)}
+                className={`flex flex-col items-center gap-1 px-3 py-2 rounded-sm transition-colors ${
+                  activeStage === st.stage
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span className="text-lg font-semibold">{st.stage}</span>
+                <span className="text-[10px] font-mono uppercase tracking-wider hidden sm:block">{st.title}</span>
+              </button>
             ))}
-          </ul>
+          </div>
+          <div className="w-full h-1 bg-muted rounded-full overflow-hidden">
+            <div
+              className="h-full bg-accent transition-all duration-300"
+              style={{ width: `${(activeStage / 4) * 100}%` }}
+            />
+          </div>
         </div>
-      </Section>
 
-      {/* Country Archetypes */}
-      <Section title="Country Archetypes" className="border-t border-border">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          GRGF provides reference deployment archetypes for different governance contexts.
-          Each archetype serves as a starting template, adapted to the legal tradition,
-          language requirements, and institutional structure of the deploying jurisdiction.
-        </p>
-        <div className="space-y-4">
-          {archetypes.map((a) => (
-            <div key={a.name} className="governance-card">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-accent shrink-0 mt-1" />
-                <div>
-                  <div className="flex items-center gap-3 mb-1">
-                    <h3 className="font-serif text-sm font-semibold">{a.name}</h3>
-                    <span className="hash-text">{a.type.toUpperCase()}</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{a.desc}</p>
-                </div>
-              </div>
+        {/* Stage Detail */}
+        <div className="governance-card">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="inline-flex items-center justify-center h-8 w-8 rounded-full bg-primary text-primary-foreground text-sm font-semibold">
+              {s.stage}
+            </span>
+            <h3 className="font-serif text-xl font-semibold">{s.title}</h3>
+          </div>
+
+          <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+            {isPlain ? s.plain : s.tech}
+          </p>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="bg-background border border-border rounded-sm p-4">
+              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">What GRGF Deploys</p>
+              <p className="text-sm text-foreground">{s.deploys}</p>
             </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Reversible Adoption */}
-      <Section title="Reversible Adoption" className="border-t border-border">
-        <div className="governance-card border-l-2 border-l-accent mb-6">
-          <div className="flex items-start gap-3">
-            <Undo2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-            <div>
-              <h3 className="font-serif text-sm font-semibold mb-2">Sovereign Exit Guarantee</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Any country may discontinue its GRGF deployment at any time without penalty, lock-in,
-                or loss of previously sealed records. All records created during the deployment period
-                remain the sovereign property of the deploying jurisdiction. GRGF imposes no contractual,
-                technical, or political barriers to exit.
-              </p>
+            <div className="bg-background border border-border rounded-sm p-4">
+              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">What Country Keeps</p>
+              <p className="text-sm text-foreground">{s.keeps}</p>
+            </div>
+            <div className="bg-background border border-border rounded-sm p-4">
+              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">Time to Deploy</p>
+              <p className="text-sm text-foreground">{s.time}</p>
+            </div>
+            <div className="bg-background border border-border rounded-sm p-4">
+              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">Integration Depth</p>
+              <p className="text-sm text-foreground">{s.depth}</p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Non-enforcement */}
-      <Section title="Non-Enforcement Stance" className="border-t border-border">
-        <div className="governance-card border-l-2 border-l-accent">
-          <div className="flex items-start gap-3">
-            <ShieldOff className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-            <div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                GRGF does not enforce compliance, mandate adoption, or exercise any authority over
-                deploying jurisdictions. It provides infrastructure — not jurisdiction. Each sovereign
-                entity determines its own use, scope, and continuity of GRGF deployment.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                GRGF does not rank, score, evaluate, or compare countries or institutions.
-                No league tables, readiness indices, or performance benchmarks are produced.
-                Governance infrastructure must remain free of evaluative hierarchy.
-              </p>
-              <p className="hash-text">STANCE: NON-ENFORCEMENT · NON-JURISDICTIONAL · NON-EVALUATIVE · INFRASTRUCTURE ONLY</p>
-            </div>
-          </div>
-        </div>
-      </Section>
-
-      <Section title="Deployment Principles" className="border-t border-border">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            { title: "Data Sovereignty", desc: "All data remains within the deploying jurisdiction. No cross-border data transfer is required." },
-            { title: "Operational Independence", desc: "Each deployment operates independently while adhering to the global governance framework." },
-            { title: "Interoperability", desc: "Standardized protocols enable verification and reference across jurisdictions." },
-            { title: "Local Stewardship", desc: "Each country designates its own stewardship authority under GRGF governance guidelines." },
-          ].map((p) => (
-            <div key={p.title} className="governance-card">
-              <h4 className="font-serif text-sm font-semibold">{p.title}</h4>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{p.desc}</p>
-            </div>
-          ))}
+      {/* No Fear */}
+      <Section className="border-t border-border bg-card/30">
+        <div className="text-center max-w-2xl mx-auto">
+          <h3 className="font-serif text-lg font-semibold mb-3">No Fear. No Replacement.</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            {isPlain
+              ? "GRGF doesn't replace any existing system. Countries keep everything they have. GRGF adds a trust layer on top — and can be reversed at any time."
+              : "GRGF operates as supplementary infrastructure. Sovereign exit is guaranteed at any stage without penalty, lock-in, or loss of previously sealed records."}
+          </p>
         </div>
       </Section>
     </div>

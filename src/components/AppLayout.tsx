@@ -1,31 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import {
-  Home,
-  BookOpen,
-  Layers,
-  Play,
-  ShieldCheck,
-  Briefcase,
-  Archive,
-  Shield,
-  Lock,
-  Fingerprint,
-  Mail,
-  ChevronLeft,
-  ChevronRight,
+  Home, BookOpen, Layers, Play, ShieldCheck, Briefcase, Archive,
+  Shield, Lock, Fingerprint, Mail, ChevronLeft, ChevronRight, Globe, GraduationCap,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { InstitutionalFooter } from "@/components/InstitutionalFooter";
+import { useViewMode } from "@/contexts/ViewModeContext";
+import { Switch } from "@/components/ui/switch";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
   { title: "What Is GRGF", path: "/what-is-grgf", icon: BookOpen },
-  { title: "Architecture", path: "/architecture", icon: Layers },
+  { title: "How It Works", path: "/architecture", icon: Layers },
   { title: "Simulator", path: "/simulator", icon: Play },
   { title: "Verification", path: "/verification", icon: ShieldCheck },
   { title: "Use Cases", path: "/use-cases", icon: Briefcase },
+  { title: "Countries", path: "/countries", icon: Globe },
+  { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "Documents", path: "/archive", icon: Archive },
   { title: "Governance", path: "/governance", icon: Shield },
   { title: "Security", path: "/security", icon: Lock },
@@ -36,6 +29,7 @@ const navItems = [
 export function AppLayout({ children }: { children: React.ReactNode }) {
   const [collapsed, setCollapsed] = useState(false);
   const location = useLocation();
+  const { mode, toggle, isPlain } = useViewMode();
 
   return (
     <div className="flex min-h-screen w-full">
@@ -101,7 +95,19 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
       {/* Main Content */}
       <div className="flex-1 min-w-0 flex flex-col">
-        <Breadcrumbs />
+        {/* Top bar with toggle */}
+        <div className="flex items-center justify-between border-b border-border px-4 py-2">
+          <Breadcrumbs />
+          <div className="flex items-center gap-2 shrink-0">
+            <span className={cn("text-xs font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+              Plain English
+            </span>
+            <Switch checked={!isPlain} onCheckedChange={toggle} />
+            <span className={cn("text-xs font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+              Technical
+            </span>
+          </div>
+        </div>
         <main className="flex-1">
           {children}
         </main>

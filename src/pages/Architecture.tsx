@@ -1,161 +1,109 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { Database, Cpu, Monitor, Hash, FileText, Lock, Cog, Globe } from "lucide-react";
+import { ArrowDown, Lock, Scale, Globe } from "lucide-react";
+import { useViewMode } from "@/contexts/ViewModeContext";
+
+const flowSteps = [
+  {
+    step: 1, title: "Event Occurs", icon: "🔵",
+    plain: "Something happens — a decision, action, or a required action that wasn't taken.",
+    tech: "Institutional event trigger: action, decision, transaction, or obligation deadline expiry detected.",
+  },
+  {
+    step: 2, title: "Policy Check", icon: "🔍",
+    plain: "GRGF checks the event against governance rules to determine how it should be recorded.",
+    tech: "GOS rule engine evaluates event against classification taxonomy, authority scope, and governance protocols.",
+  },
+  {
+    step: 3, title: "Record Allowed or Denied", icon: "📋",
+    plain: "The system either creates a sealed record or documents why the event was rejected or flagged.",
+    tech: "Record creation authorised or denied. Non-compliance documented. Omission events auto-generated for unmet obligations.",
+  },
+  {
+    step: 4, title: "Evidence Status Returned", icon: "✅",
+    plain: "A clear answer: the record exists (with proof), or no verifiable record exists.",
+    tech: "SHA-256 integrity proof generated. Evidence status: SEALED / DENIED / OMISSION. Hash published to manifest.",
+  },
+  {
+    step: 5, title: "Verification Possible", icon: "🔒",
+    plain: "Anyone can independently check if the record exists and hasn't been changed.",
+    tech: "Public hash manifest enables independent verification. Any party can recompute and compare SHA-256 hash.",
+  },
+];
 
 const Architecture = () => {
+  const { isPlain } = useViewMode();
+
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="System Architecture"
-        subtitle="Three interdependent layers — Immutable Digital Archive, Governance Operating System, and Digital Platform."
+        title={isPlain ? "How It Works" : "System Architecture"}
+        subtitle={isPlain
+          ? "A simple visual guide to how GRGF processes a governance event."
+          : "Three interdependent layers: Immutable Archive, Governance Operating System, and Digital Platform."
+        }
       />
 
-      <Section>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          GRGF operates as three interdependent, non-commercial layers. Authority derives from
-          immutability, versioning, and governance rules — not from executable software.
-          Each layer serves a distinct function while maintaining strict separation of concerns.
-        </p>
-      </Section>
-
-      {/* Layer A: Immutable Digital Archive */}
-      <Section title="A. Immutable Digital Archive" className="border-t border-border">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          The foundational layer. All institutional actions, decisions, transactions, and omissions
-          are captured, hash-sealed, and preserved with full cryptographic integrity.
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            {
-              icon: <Database className="h-4 w-4" />,
-              title: "Hash-Sealed ZIP Archives",
-              desc: "Every record is packaged as an immutable ZIP archive with SHA-256 integrity proof. Once sealed, no modification is possible by any party.",
-            },
-            {
-              icon: <Hash className="h-4 w-4" />,
-              title: "Versioning",
-              desc: "All records carry explicit version identifiers. When superseded, prior versions remain sealed and accessible. No version may be deleted or overwritten.",
-            },
-            {
-              icon: <Lock className="h-4 w-4" />,
-              title: "Integrity Proof",
-              desc: "SHA-256 cryptographic hashes are generated at the point of finalization. Verification is performed by recomputing and comparing the hash against the sealed manifest.",
-            },
-            {
-              icon: <FileText className="h-4 w-4" />,
-              title: "Priority Proof",
-              desc: "Timestamps and hash chains establish priority — proving when a record was created, sealed, and made available. This supports legal and regulatory proceedings.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="governance-card">
-              <div className="flex items-start gap-3">
-                <div className="text-accent shrink-0 mt-0.5">{item.icon}</div>
-                <div>
-                  <h3 className="font-serif text-sm font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+      <Section title={isPlain ? "Step by Step" : "Governance Event Flow"}>
+        <div className="max-w-2xl mx-auto space-y-2">
+          {flowSteps.map((s, i) => (
+            <div key={s.step}>
+              <div className="governance-card group">
+                <div className="flex items-start gap-4">
+                  <span className="text-2xl shrink-0">{s.icon}</span>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="hash-text text-accent">STEP {s.step}</span>
+                      <h3 className="font-serif text-sm font-semibold">{s.title}</h3>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {isPlain ? s.plain : s.tech}
+                    </p>
+                  </div>
                 </div>
               </div>
+              {i < flowSteps.length - 1 && (
+                <div className="flex justify-center py-1">
+                  <ArrowDown className="h-4 w-4 text-accent/50" />
+                </div>
+              )}
             </div>
           ))}
         </div>
-        <p className="hash-text mt-4">LAYER STATUS: AUTHORITATIVE · IMMUTABLE · WRITE-ONCE</p>
       </Section>
 
-      {/* Layer B: Governance Operating System */}
-      <Section title="B. Governance Operating System" className="border-t border-border">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          The rule engine that defines how records are classified, sealed, governed, and stewarded.
-          It codifies institutional processes into verifiable, version-controlled governance protocols.
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            {
-              icon: <FileText className="h-4 w-4" />,
-              title: "Charters",
-              desc: "Constitutional documents that define the framework's mandate, boundaries, and principles. Immutable once ratified.",
-            },
-            {
-              icon: <Cpu className="h-4 w-4" />,
-              title: "Rules & Policies",
-              desc: "Operational governance rules covering record classification, access control, retention, and stewardship succession.",
-            },
-            {
-              icon: <Cog className="h-4 w-4" />,
-              title: "Decision Authority Logic",
-              desc: "Codified rules that define who may seal, classify, or release records. All authority flows from governance documents, not software permissions.",
-            },
-            {
-              icon: <Globe className="h-4 w-4" />,
-              title: "Country Adaptation",
-              desc: "Sovereign deployment archetypes that allow each country to adapt operational processes while maintaining architectural consistency.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="governance-card">
-              <div className="flex items-start gap-3">
-                <div className="text-accent shrink-0 mt-0.5">{item.icon}</div>
-                <div>
-                  <h3 className="font-serif text-sm font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="hash-text mt-4">LAYER STATUS: AUTHORITATIVE · VERSION-CONTROLLED · AUDITABLE</p>
-      </Section>
-
-      {/* Layer C: Digital Platform */}
-      <Section title="C. Digital Platform" className="border-t border-border">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          The access layer through which governments, courts, auditors, and professionals can
-          reference, cite, and verify authoritative records. No write access is provided through
-          this interface.
-        </p>
+      <Section title="Three System Layers" className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-3">
-          <div className="governance-card">
-            <div className="flex items-start gap-3">
-              <Monitor className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-serif text-sm font-semibold">User Interface</h3>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  Read-only, citable public interface for browsing and referencing authoritative records.
-                </p>
-              </div>
+          <div className="governance-card border-l-2 border-l-accent">
+            <div className="flex items-center gap-3 mb-2">
+              <Lock className="h-4 w-4 text-accent" />
+              <h3 className="font-serif text-sm font-semibold">Immutable Archive</h3>
             </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {isPlain ? "Where records are permanently stored. Once sealed, nothing can be changed." : "Hash-sealed, write-once records with cryptographic integrity proofs. Authoritative source of truth."}
+            </p>
+            <p className="hash-text mt-3">STATUS: AUTHORITATIVE</p>
           </div>
-          <div className="governance-card">
-            <div className="flex items-start gap-3">
-              <Hash className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-serif text-sm font-semibold">Verification Tools</h3>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  SHA-256 hash lookup and comparison tools for independent integrity verification.
-                </p>
-              </div>
+          <div className="governance-card border-l-2 border-l-accent">
+            <div className="flex items-center gap-3 mb-2">
+              <Scale className="h-4 w-4 text-accent" />
+              <h3 className="font-serif text-sm font-semibold">Governance OS</h3>
             </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {isPlain ? "The rules that govern how records are created, classified, and protected." : "Document-based rules, charters, processes, and stewardship protocols. Not software — governance logic."}
+            </p>
+            <p className="hash-text mt-3">STATUS: AUTHORITATIVE</p>
           </div>
-          <div className="governance-card">
-            <div className="flex items-start gap-3">
-              <Cog className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-serif text-sm font-semibold">Simulators</h3>
-                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  Demo-only tools for understanding governance workflows. Clearly labelled as non-authoritative.
-                </p>
-              </div>
+          <div className="governance-card border-l-2 border-l-accent">
+            <div className="flex items-center gap-3 mb-2">
+              <Globe className="h-4 w-4 text-accent" />
+              <h3 className="font-serif text-sm font-semibold">Digital Platform</h3>
             </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {isPlain ? "This website — a public reference tool. It shows information but doesn't create official records." : "Read-only public interface. References authority — never replaces it. Non-authoritative."}
+            </p>
+            <p className="hash-text mt-3">STATUS: REFERENCE (NON-AUTHORITATIVE)</p>
           </div>
         </div>
-        <p className="hash-text mt-4">LAYER STATUS: REFERENCE · NON-AUTHORITATIVE · READ-ONLY</p>
-      </Section>
-
-      {/* Footer */}
-      <Section className="border-t border-border bg-card/30">
-        <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
-          <span className="font-semibold text-foreground">Design Note.</span> GRGF systems are governance
-          infrastructure — not software products. They are described in terms of institutional function,
-          not commercial capability. The value of this architecture derives from governance integrity,
-          not software features.
-        </p>
       </Section>
     </div>
   );

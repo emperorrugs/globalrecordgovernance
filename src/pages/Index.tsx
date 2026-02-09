@@ -1,148 +1,116 @@
-import { PageHeader, Section, InfoCard } from "@/components/PageComponents";
-import { BookOpen, Layers, Play, ShieldCheck, Briefcase, Archive, Shield, Lock, Fingerprint, Mail, FileText } from "lucide-react";
+import { Section } from "@/components/PageComponents";
+import { Play, Mail, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const sections = [
-  {
-    title: "What Is GRGF",
-    description: "Definition, purpose, and the distinction between records, evidence, and trust.",
-    icon: <BookOpen className="h-5 w-5" />,
-    path: "/what-is-grgf",
-  },
-  {
-    title: "System Architecture",
-    description: "Three interdependent layers: Immutable Archive, Governance OS, and Digital Platform.",
-    icon: <Layers className="h-5 w-5" />,
-    path: "/architecture",
-  },
-  {
-    title: "Live Simulator",
-    description: "Demonstration-only governance workflow visualisation. No real data processed.",
-    icon: <Play className="h-5 w-5" />,
-    path: "/simulator",
-  },
-  {
-    title: "Verification",
-    description: "How record integrity is established, maintained, and independently verified.",
-    icon: <ShieldCheck className="h-5 w-5" />,
-    path: "/verification",
-  },
-  {
-    title: "Use Cases",
-    description: "Government decisions, procurement, regulatory actions, courts, and multilateral programmes.",
-    icon: <Briefcase className="h-5 w-5" />,
-    path: "/use-cases",
-  },
-  {
-    title: "Documents & Archive",
-    description: "Centralised repository of policies, contracts, technical documents, and frozen archives.",
-    icon: <Archive className="h-5 w-5" />,
-    path: "/archive",
-  },
-  {
-    title: "Governance & Compliance",
-    description: "Stewardship, neutrality principles, anti-capture protections, and independence safeguards.",
-    icon: <Shield className="h-5 w-5" />,
-    path: "/governance",
-  },
-  {
-    title: "Security & Confidentiality",
-    description: "Controlled access, disclosure principles, and owner-controlled governance.",
-    icon: <Lock className="h-5 w-5" />,
-    path: "/security",
-  },
-  {
-    title: "Inventor & Attribution",
-    description: "Origin authority, intellectual property notice, and attribution mandate.",
-    icon: <Fingerprint className="h-5 w-5" />,
-    path: "/origin",
-  },
-  {
-    title: "Institutional Access",
-    description: "Professional inquiry channel for governments and qualified institutional parties.",
-    icon: <Mail className="h-5 w-5" />,
-    path: "/contact",
-  },
-];
+import { useViewMode } from "@/contexts/ViewModeContext";
 
 const Index = () => {
+  const { isPlain } = useViewMode();
+
   return (
     <div className="animate-fade-in">
-      <PageHeader
-        title="Global Record Governance Framework"
-        subtitle="Sovereign-grade Digital Public Infrastructure for institutional record integrity."
-      >
-        <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
-          <FileText className="h-3.5 w-3.5" />
-          <span>Public Reference Platform · Read-Only · Citable</span>
+      {/* Hero */}
+      <header className="border-b border-border bg-card/50 px-8 py-16 md:px-12 lg:px-16">
+        <div className="max-w-4xl">
+          <h1 className="institutional-heading text-4xl md:text-5xl font-semibold leading-tight">
+            Global Record Governance Framework
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
+            {isPlain
+              ? "A global system that records what governments did, what they decided, and what they failed to do — with proof."
+              : "Sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time."}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              to="/simulator"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors"
+            >
+              <Play className="h-4 w-4" />
+              View Live Simulator
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-5 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors"
+            >
+              <Mail className="h-4 w-4" />
+              Request Institutional Access
+            </Link>
+          </div>
+          <div className="section-divider mt-8" />
         </div>
-      </PageHeader>
+      </header>
 
-      {/* Purpose */}
-      <Section title="What Problem GRGF Solves">
-        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-4">
-          Institutions around the world make decisions, take actions, and — critically — fail to act.
-          Yet most governance systems record only positive actions, leaving gaps that undermine
-          accountability, audit integrity, and public trust.
-        </p>
-        <p className="text-muted-foreground leading-relaxed max-w-3xl">
-          GRGF provides a unified, neutral trust layer that records verifiable facts about actions,
-          decisions, transactions, and omissions — without interpretation, enforcement, or decision
-          authority. It operates as infrastructure that can exist in every country under one common
-          architecture, adapting to each country's level of digital maturity.
-        </p>
-      </Section>
-
-      {/* Who It Is For */}
-      <Section title="Who It Is For" className="border-t border-border">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {["Governments & Ministries", "Courts & Judicial Bodies", "Auditors & Regulators", "Multilateral Institutions"].map((who) => (
-            <div key={who} className="governance-card text-center py-4">
-              <p className="text-sm font-semibold text-foreground">{who}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* What Makes It Different */}
-      <Section title="What Makes It Different" className="border-t border-border">
-        <div className="grid gap-4 sm:grid-cols-2">
+      {/* 3 Feature Cards */}
+      <Section>
+        <div className="grid gap-6 sm:grid-cols-3">
           {[
-            { label: "Omission Recording", desc: "Records what did not happen — a critical gap in existing governance systems." },
-            { label: "Cryptographic Integrity", desc: "Every record is hash-sealed and independently verifiable." },
-            { label: "Sovereign Neutrality", desc: "No interpretation, enforcement, ranking, or decision authority." },
-            { label: "Global Architecture", desc: "One common framework adaptable to any country's digital maturity." },
-          ].map((d) => (
-            <div key={d.label} className="governance-card border-l-2 border-l-accent">
-              <h3 className="font-serif text-sm font-semibold">{d.label}</h3>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{d.desc}</p>
+            {
+              title: "Record What Happened",
+              plain: "Every government action, decision, and transaction is permanently recorded with a tamper-proof seal.",
+              tech: "SHA-256 hash-sealed immutable records for institutional actions, decisions, and transactions with full version lineage and cryptographic integrity proofs.",
+            },
+            {
+              title: "Prove What Did Not Happen",
+              plain: "When a required action wasn't taken, GRGF records that too — creating proof of omission that can be independently verified.",
+              tech: "Omission recording captures non-action events against mandated obligations, generating verifiable absence records with timestamped governance audit trails.",
+            },
+            {
+              title: "Verify Without Authority",
+              plain: "Anyone can check if a record exists and whether it's been changed — without needing special access or permission.",
+              tech: "Public hash manifests enable independent verification of record integrity without requiring authorised access to underlying content or governance credentials.",
+            },
+          ].map((card) => (
+            <div key={card.title} className="governance-card border-l-2 border-l-accent">
+              <h3 className="font-serif text-base font-semibold">{card.title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                {isPlain ? card.plain : card.tech}
+              </p>
             </div>
           ))}
         </div>
       </Section>
 
-      {/* Canonical Definition */}
+      {/* Trust Strip */}
       <Section className="border-t border-border">
-        <div className="canonical-quote text-base md:text-lg leading-relaxed max-w-3xl">
-          "Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public
-          Infrastructure trust layer for recording, preserving, and verifying institutional
-          actions, decisions, and omissions over time — without interpretation, enforcement,
-          or decision authority."
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 py-4">
+          {[
+            "World Bank–aligned",
+            "OECD Principles",
+            "ISO Governance Logic",
+            "Sovereign-grade DPI",
+          ].map((badge) => (
+            <div
+              key={badge}
+              className="px-4 py-2 border border-border rounded-sm text-xs font-mono text-muted-foreground tracking-wider uppercase"
+            >
+              {badge}
+            </div>
+          ))}
         </div>
       </Section>
 
-      {/* Navigation Grid */}
-      <Section title="Reference Sections" className="border-t border-border">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {sections.map((s) => (
-            <Link key={s.path} to={s.path} className="block">
-              <InfoCard title={s.title} description={s.description} icon={s.icon} />
+      {/* Quick Navigation */}
+      <Section title="Explore the Framework" className="border-t border-border">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { label: "How It Works", path: "/architecture", desc: "Visual system architecture" },
+            { label: "Live Simulator", path: "/simulator", desc: "Interactive demo" },
+            { label: "Verification", path: "/verification", desc: "Check record integrity" },
+            { label: "Country Deployment", path: "/countries", desc: "Sovereign adoption model" },
+            { label: "Academy", path: "/academy", desc: "Professional certification" },
+            { label: "Documents", path: "/archive", desc: "Archive & governance docs" },
+          ].map((item) => (
+            <Link key={item.path} to={item.path} className="group governance-card flex items-center justify-between">
+              <div>
+                <h3 className="font-serif text-sm font-semibold">{item.label}</h3>
+                <p className="text-xs text-muted-foreground mt-1">{item.desc}</p>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors shrink-0" />
             </Link>
           ))}
         </div>
       </Section>
 
-      {/* Origin */}
+      {/* Attribution */}
       <Section className="border-t border-border bg-card/30">
         <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl">
           <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance
