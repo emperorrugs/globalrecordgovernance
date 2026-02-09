@@ -1,49 +1,67 @@
 import { PageHeader, Section, InfoCard } from "@/components/PageComponents";
-import { Layers, Server, Settings2, Globe, GraduationCap, Archive, Shield, FileText } from "lucide-react";
+import { BookOpen, Layers, Play, ShieldCheck, Briefcase, Archive, Shield, Lock, Fingerprint, Mail, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const sections = [
   {
-    title: "Framework",
-    description: "Principles, purpose, and the architectural spine governing all GRGF operations.",
+    title: "What Is GRGF",
+    description: "Definition, purpose, and the distinction between records, evidence, and trust.",
+    icon: <BookOpen className="h-5 w-5" />,
+    path: "/what-is-grgf",
+  },
+  {
+    title: "System Architecture",
+    description: "Three interdependent layers: Immutable Archive, Governance OS, and Digital Platform.",
     icon: <Layers className="h-5 w-5" />,
-    path: "/framework",
+    path: "/architecture",
   },
   {
-    title: "Systems",
-    description: "Digital Archive, Governance OS, Platforms, and Engines — the core infrastructure components.",
-    icon: <Server className="h-5 w-5" />,
-    path: "/systems",
+    title: "Live Simulator",
+    description: "Demonstration-only governance workflow visualisation. No real data processed.",
+    icon: <Play className="h-5 w-5" />,
+    path: "/simulator",
   },
   {
-    title: "Processes",
-    description: "Versioning, sealing, localization, certification, and stewardship procedures.",
-    icon: <Settings2 className="h-5 w-5" />,
-    path: "/processes",
+    title: "Verification",
+    description: "How record integrity is established, maintained, and independently verified.",
+    icon: <ShieldCheck className="h-5 w-5" />,
+    path: "/verification",
   },
   {
-    title: "Countries",
-    description: "Sovereign deployment packages and country-level adaptation models.",
-    icon: <Globe className="h-5 w-5" />,
-    path: "/countries",
+    title: "Use Cases",
+    description: "Government decisions, procurement, regulatory actions, courts, and multilateral programmes.",
+    icon: <Briefcase className="h-5 w-5" />,
+    path: "/use-cases",
   },
   {
-    title: "Academy",
-    description: "Professional standards, certification, and governance stewardship discipline.",
-    icon: <GraduationCap className="h-5 w-5" />,
-    path: "/academy",
-  },
-  {
-    title: "Archive",
-    description: "Authoritative records, integrity proofs, and cryptographic hash verification.",
+    title: "Documents & Archive",
+    description: "Centralised repository of policies, contracts, technical documents, and frozen archives.",
     icon: <Archive className="h-5 w-5" />,
     path: "/archive",
   },
   {
-    title: "Governance",
-    description: "Stewardship structure, neutrality principles, succession, and origin authority.",
+    title: "Governance & Compliance",
+    description: "Stewardship, neutrality principles, anti-capture protections, and independence safeguards.",
     icon: <Shield className="h-5 w-5" />,
     path: "/governance",
+  },
+  {
+    title: "Security & Confidentiality",
+    description: "Controlled access, disclosure principles, and owner-controlled governance.",
+    icon: <Lock className="h-5 w-5" />,
+    path: "/security",
+  },
+  {
+    title: "Inventor & Attribution",
+    description: "Origin authority, intellectual property notice, and attribution mandate.",
+    icon: <Fingerprint className="h-5 w-5" />,
+    path: "/origin",
+  },
+  {
+    title: "Institutional Access",
+    description: "Professional inquiry channel for governments and qualified institutional parties.",
+    icon: <Mail className="h-5 w-5" />,
+    path: "/contact",
   },
 ];
 
@@ -60,44 +78,56 @@ const Index = () => {
         </div>
       </PageHeader>
 
+      {/* Purpose */}
+      <Section title="What Problem GRGF Solves">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-4">
+          Institutions around the world make decisions, take actions, and — critically — fail to act.
+          Yet most governance systems record only positive actions, leaving gaps that undermine
+          accountability, audit integrity, and public trust.
+        </p>
+        <p className="text-muted-foreground leading-relaxed max-w-3xl">
+          GRGF provides a unified, neutral trust layer that records verifiable facts about actions,
+          decisions, transactions, and omissions — without interpretation, enforcement, or decision
+          authority. It operates as infrastructure that can exist in every country under one common
+          architecture, adapting to each country's level of digital maturity.
+        </p>
+      </Section>
+
+      {/* Who It Is For */}
+      <Section title="Who It Is For" className="border-t border-border">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {["Governments & Ministries", "Courts & Judicial Bodies", "Auditors & Regulators", "Multilateral Institutions"].map((who) => (
+            <div key={who} className="governance-card text-center py-4">
+              <p className="text-sm font-semibold text-foreground">{who}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* What Makes It Different */}
+      <Section title="What Makes It Different" className="border-t border-border">
+        <div className="grid gap-4 sm:grid-cols-2">
+          {[
+            { label: "Omission Recording", desc: "Records what did not happen — a critical gap in existing governance systems." },
+            { label: "Cryptographic Integrity", desc: "Every record is hash-sealed and independently verifiable." },
+            { label: "Sovereign Neutrality", desc: "No interpretation, enforcement, ranking, or decision authority." },
+            { label: "Global Architecture", desc: "One common framework adaptable to any country's digital maturity." },
+          ].map((d) => (
+            <div key={d.label} className="governance-card border-l-2 border-l-accent">
+              <h3 className="font-serif text-sm font-semibold">{d.label}</h3>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{d.desc}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* Canonical Definition */}
-      <Section>
+      <Section className="border-t border-border">
         <div className="canonical-quote text-base md:text-lg leading-relaxed max-w-3xl">
           "Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public
           Infrastructure trust layer for recording, preserving, and verifying institutional
           actions, decisions, and omissions over time — without interpretation, enforcement,
           or decision authority."
-        </div>
-      </Section>
-
-      {/* System Overview */}
-      <Section title="System Overview" className="border-t border-border">
-        <p className="text-muted-foreground mb-8 leading-relaxed max-w-3xl">
-          GRGF operates as three interdependent layers: a Digital Archive System for immutable,
-          hash-sealed records; a Governance Operating System defining rules, processes, and
-          stewardship; and a Public Reference Platform providing read-only, citable access
-          to authoritative institutional records.
-        </p>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="governance-card border-l-2 border-l-accent">
-            <h3 className="font-serif text-sm font-semibold">Digital Archive System</h3>
-            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              Immutable, hash-sealed records with cryptographic integrity verification.
-            </p>
-          </div>
-          <div className="governance-card border-l-2 border-l-accent">
-            <h3 className="font-serif text-sm font-semibold">Governance Operating System</h3>
-            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              Rules, processes, and stewardship protocols for institutional governance.
-            </p>
-          </div>
-          <div className="governance-card border-l-2 border-l-accent">
-            <h3 className="font-serif text-sm font-semibold">Public Reference Platform</h3>
-            <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              Read-only, citable public interface for authoritative record access.
-            </p>
-          </div>
         </div>
       </Section>
 
@@ -115,8 +145,8 @@ const Index = () => {
       {/* Origin */}
       <Section className="border-t border-border bg-card/30">
         <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl">
-          <span className="font-semibold">Origin Authority.</span> GRGF originated as a unified Digital
-          Public Infrastructure architecture and governance model conceived and authored by Tarek Wahid.
+          <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance
+          Framework — Invented and Owned by Tarek Wahid.
         </p>
       </Section>
     </div>

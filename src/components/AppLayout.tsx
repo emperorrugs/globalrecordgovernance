@@ -1,14 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home,
+  BookOpen,
   Layers,
-  Server,
-  Settings2,
-  Globe,
-  GraduationCap,
+  Play,
+  ShieldCheck,
+  Briefcase,
   Archive,
   Shield,
+  Lock,
   Fingerprint,
+  Mail,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -19,14 +21,16 @@ import { InstitutionalFooter } from "@/components/InstitutionalFooter";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
-  { title: "Framework", path: "/framework", icon: Layers },
-  { title: "Systems", path: "/systems", icon: Server },
-  { title: "Processes", path: "/processes", icon: Settings2 },
-  { title: "Countries", path: "/countries", icon: Globe },
-  { title: "Academy", path: "/academy", icon: GraduationCap },
-  { title: "Archive", path: "/archive", icon: Archive },
+  { title: "What Is GRGF", path: "/what-is-grgf", icon: BookOpen },
+  { title: "Architecture", path: "/architecture", icon: Layers },
+  { title: "Simulator", path: "/simulator", icon: Play },
+  { title: "Verification", path: "/verification", icon: ShieldCheck },
+  { title: "Use Cases", path: "/use-cases", icon: Briefcase },
+  { title: "Documents", path: "/archive", icon: Archive },
   { title: "Governance", path: "/governance", icon: Shield },
-  { title: "Origin", path: "/origin", icon: Fingerprint },
+  { title: "Security", path: "/security", icon: Lock },
+  { title: "Attribution", path: "/origin", icon: Fingerprint },
+  { title: "Contact", path: "/contact", icon: Mail },
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
