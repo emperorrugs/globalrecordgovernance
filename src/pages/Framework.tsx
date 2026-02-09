@@ -1,5 +1,5 @@
 import { PageHeader, Section, InfoCard } from "@/components/PageComponents";
-import { Target, Compass, BookOpen, Scale } from "lucide-react";
+import { Target, Compass, BookOpen, Scale, AlertTriangle, Clock, ShieldAlert, Eye } from "lucide-react";
 
 const principles = [
   {
@@ -41,6 +41,86 @@ const Framework = () => {
         </p>
       </Section>
 
+      {/* Why Governance Truth Fails */}
+      <Section title="Why Governance Truth Fails in Digital Systems" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
+          Most digital systems are built for transactions — not governance reality. They record
+          what happened, but not what should have happened, what was delayed, or what was omitted.
+          Governance truth requires a fundamentally different architecture.
+        </p>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div className="governance-card">
+            <div className="flex items-start gap-3">
+              <AlertTriangle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-serif text-sm font-semibold">Transactions vs. Governance Reality</h3>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                  Transaction systems record completed exchanges. Governance systems must also record
+                  non-events: the inspection that did not occur, the decision that was deferred,
+                  the authority that failed to act. GRGF captures both actions and omissions as
+                  first-class governance records.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="governance-card">
+            <div className="flex items-start gap-3">
+              <Eye className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+              <div>
+                <h3 className="font-serif text-sm font-semibold">Events and Omissions</h3>
+                <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
+                  An omission — a failure to act within mandated scope, time, or authority — is
+                  as significant as an action. GRGF treats omissions as verifiable governance events,
+                  each subject to the same hash-sealing and integrity preservation as affirmative records.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Governance Dimensions */}
+      <Section title="Governance Dimensions" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
+          Every institutional record exists within three governance dimensions. GRGF ensures
+          each dimension is captured, preserved, and independently verifiable.
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              label: "Time",
+              name: "Temporal Integrity",
+              desc: "When did the action or omission occur? Records are sealed with immutable timestamps that cannot be retroactively altered.",
+              icon: <Clock className="h-4 w-4" />,
+            },
+            {
+              label: "Authority",
+              name: "Jurisdictional Scope",
+              desc: "Who held the mandate to act? GRGF records capture the authority under which actions were taken or should have been taken.",
+              icon: <ShieldAlert className="h-4 w-4" />,
+            },
+            {
+              label: "Scope",
+              name: "Operational Boundary",
+              desc: "What was the defined scope of responsibility? Records document the boundaries within which institutional actors operated or failed to operate.",
+              icon: <Target className="h-4 w-4" />,
+            },
+          ].map((dim) => (
+            <div key={dim.label} className="governance-card flex items-start gap-4">
+              <div className="text-accent shrink-0 mt-0.5">{dim.icon}</div>
+              <div>
+                <div className="flex items-center gap-3 mb-1">
+                  <span className="hash-text">{dim.label.toUpperCase()}</span>
+                  <h4 className="font-serif text-sm font-semibold">{dim.name}</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">{dim.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section title="Core Principles" className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-2">
           {principles.map((p) => (
@@ -56,7 +136,7 @@ const Framework = () => {
         </p>
         <div className="space-y-3">
           {[
-            { label: "Layer 1", name: "Record Capture", desc: "Structured ingestion and validation of institutional actions." },
+            { label: "Layer 1", name: "Record Capture", desc: "Structured ingestion and validation of institutional actions and omissions." },
             { label: "Layer 2", name: "Hash Sealing", desc: "Cryptographic immutability applied at point of record finalization." },
             { label: "Layer 3", name: "Governance Binding", desc: "Rules and stewardship protocols attached to each record class." },
             { label: "Layer 4", name: "Public Reference", desc: "Read-only access layer for citation, audit, and verification." },
