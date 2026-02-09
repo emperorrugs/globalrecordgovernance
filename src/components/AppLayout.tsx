@@ -8,6 +8,7 @@ import {
   GraduationCap,
   Archive,
   Shield,
+  Fingerprint,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -25,6 +26,7 @@ const navItems = [
   { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "Archive", path: "/archive", icon: Archive },
   { title: "Governance", path: "/governance", icon: Shield },
+  { title: "Origin", path: "/origin", icon: Fingerprint },
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
