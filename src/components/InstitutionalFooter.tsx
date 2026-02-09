@@ -22,7 +22,9 @@ export function InstitutionalFooter() {
           <div>
             <h4 className="font-serif text-sm font-semibold mb-2">Origin Authority</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Conceived and authored by Tarek Wahid.
+              Global Record Governance Framework —
+              <br />
+              Invented and Owned by Tarek Wahid.
               <br />
               No commercial affiliation. No promotional intent.
             </p>
