@@ -43,6 +43,12 @@ const Processes = () => {
       />
 
       <Section>
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
+          GRGF processes prioritize clarity, auditability, and institutional durability over
+          automation. Each process is documented as a governance protocol — not a software workflow.
+          The sequence and separation of these processes is deliberate: each stage must be
+          independently verifiable and resistant to circumvention.
+        </p>
         <div className="space-y-6">
           {processes.map((p, i) => (
             <div key={p.title} className="governance-card">

@@ -160,6 +160,16 @@ const ArchivePage = () => {
           </p>
         </div>
       </Section>
+
+      {/* Origin Authority */}
+      <Section className="border-t border-border bg-card/30">
+        <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl">
+          <span className="font-semibold text-foreground">Origin Authority.</span> GRGF originated
+          as a unified Digital Public Infrastructure architecture and governance model conceived
+          and authored by Tarek Wahid. This archive preserves the authoritative record of that
+          origin as an immutable governance fact.
+        </p>
+      </Section>
     </div>
   );
 };
