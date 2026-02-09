@@ -1,12 +1,12 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { Shield, Users, Scale, Clock, User } from "lucide-react";
+import { Shield, Users, Scale, Clock, User, Ban, Lock } from "lucide-react";
 
 const GovernancePage = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader
         title="Governance"
-        subtitle="Stewardship structure, neutrality principles, succession protocols, and origin authority."
+        subtitle="Stewardship structure, neutrality principles, anti-capture protections, succession protocols, and origin authority."
       />
 
       <Section title="Stewardship Model">
@@ -66,6 +66,71 @@ const GovernancePage = () => {
               <p className="text-sm text-muted-foreground">{p}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Anti-Capture Clauses */}
+      <Section title="Anti-Capture Protections" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
+          The following structural safeguards prevent any single entity — governmental,
+          commercial, political, or individual — from capturing, co-opting, or redirecting
+          the framework for purposes outside its mandate.
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              clause: "No single entity may hold exclusive control over framework governance, stewardship appointments, or record classification rules.",
+              icon: <Ban className="h-4 w-4" />,
+            },
+            {
+              clause: "No commercial licence, sponsorship, or funding arrangement may create preferential access, influence over governance decisions, or modification of neutrality principles.",
+              icon: <Lock className="h-4 w-4" />,
+            },
+            {
+              clause: "Stewardship roles are term-limited and subject to independent review. No steward may serve indefinitely or appoint their own successor without governance council approval.",
+              icon: <Clock className="h-4 w-4" />,
+            },
+            {
+              clause: "Any proposed amendment to core neutrality principles requires supermajority approval from the Neutrality Council and a mandatory public review period.",
+              icon: <Scale className="h-4 w-4" />,
+            },
+            {
+              clause: "The framework's canonical definition, origin authority attribution, and core architectural principles are immutable and may not be altered by any governance process.",
+              icon: <Shield className="h-4 w-4" />,
+            },
+          ].map((item, i) => (
+            <div key={i} className="governance-card flex items-start gap-3">
+              <div className="text-accent shrink-0 mt-0.5">{item.icon}</div>
+              <div className="flex items-start gap-3">
+                <span className="hash-text shrink-0 mt-0.5">AC-{String(i + 1).padStart(2, "0")}</span>
+                <p className="text-sm text-muted-foreground">{item.clause}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Succession Logic */}
+      <Section title="Succession Logic" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
+          Stewardship continuity is ensured through structured succession protocols
+          that operate independently of any individual, government, or political cycle.
+        </p>
+        <div className="governance-card">
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {[
+              "Succession plans are documented and sealed as governance records within the GRGF Archive.",
+              "Successor candidates undergo independent vetting by the Neutrality Council.",
+              "Knowledge transfer protocols ensure institutional memory is preserved across transitions.",
+              "Emergency succession procedures activate automatically upon steward incapacity or departure.",
+              "All succession events are recorded, hash-sealed, and publicly verifiable.",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="text-accent mt-1">·</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 

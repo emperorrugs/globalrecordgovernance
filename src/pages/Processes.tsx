@@ -1,5 +1,5 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { Hash, GitBranch, Globe, Award, Users } from "lucide-react";
+import { Hash, GitBranch, Globe, Award, Users, Lock, RefreshCw, ShieldCheck } from "lucide-react";
 
 const processes = [
   {
@@ -8,23 +8,28 @@ const processes = [
     icon: <GitBranch className="h-5 w-5" />,
   },
   {
-    title: "Hash Sealing",
-    description: "Records are sealed using SHA-256 cryptographic hashing at the point of finalization. The resulting hash serves as an immutable integrity proof that can be independently verified at any time.",
-    icon: <Hash className="h-5 w-5" />,
+    title: "Freeze & Seal",
+    description: "Records are frozen at the point of finalization — no further modification is permitted. The frozen record is then cryptographically sealed using SHA-256, producing an immutable integrity proof. Freezing and sealing are distinct, sequential operations: freeze prevents edits; seal provides verification.",
+    icon: <Lock className="h-5 w-5" />,
   },
   {
-    title: "Localization",
-    description: "Country-specific deployments adapt the framework to local legal, linguistic, and institutional requirements while maintaining interoperability with the global reference architecture.",
+    title: "Integrity & Hashing",
+    description: "Record integrity is maintained through SHA-256 cryptographic hashing. The resulting hash serves as a permanent, independently verifiable proof that the record has not been altered since sealing. Hash verification requires no access to GRGF systems — any party can verify independently.",
+    icon: <ShieldCheck className="h-5 w-5" />,
+  },
+  {
+    title: "Country Localization",
+    description: "Country-specific deployments adapt the framework to local legal, linguistic, and institutional requirements while maintaining interoperability with the global reference architecture. Localization covers legal terminology, language, institutional naming, and regulatory alignment.",
     icon: <Globe className="h-5 w-5" />,
   },
   {
-    title: "Certification",
-    description: "Institutional operators, auditors, and administrators undergo structured certification to ensure competent stewardship of GRGF deployments and adherence to governance protocols.",
+    title: "Certification & Renewal",
+    description: "Institutional operators, auditors, and administrators undergo structured certification to ensure competent stewardship of GRGF deployments. Certifications are time-limited and require periodic renewal through re-assessment and continued professional development.",
     icon: <Award className="h-5 w-5" />,
   },
   {
-    title: "Stewardship",
-    description: "Ongoing governance of the framework is conducted through defined stewardship protocols, ensuring continuity, neutrality, and institutional independence across political and generational transitions.",
+    title: "Stewardship & Succession",
+    description: "Ongoing governance of the framework is conducted through defined stewardship protocols, ensuring continuity, neutrality, and institutional independence across political and generational transitions. Succession plans are sealed as governance records.",
     icon: <Users className="h-5 w-5" />,
   },
 ];
@@ -34,7 +39,7 @@ const Processes = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Processes"
-        subtitle="Operational procedures governing versioning, sealing, localization, certification, and stewardship."
+        subtitle="Operational procedures governing versioning, freeze and seal, integrity, localization, certification, and stewardship."
       />
 
       <Section>
