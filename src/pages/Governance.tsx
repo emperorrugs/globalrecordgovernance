@@ -134,6 +134,30 @@ const GovernancePage = () => {
         </div>
       </Section>
 
+      {/* Separation from Vendors and Governments */}
+      <Section title="Separation from Vendors & Governments" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
+          GRGF governance is structurally independent of any vendor, technology company,
+          government, or political entity. This separation is a design requirement, not
+          an aspiration.
+        </p>
+        <div className="governance-card">
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {[
+              "No vendor may hold governance authority, stewardship roles, or influence over framework evolution.",
+              "No government may unilaterally modify the global framework architecture or its canonical definition.",
+              "Technology providers operate as infrastructure suppliers — not governance participants.",
+              "Funding sources may not condition support on governance access, modification rights, or preferential treatment.",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2">
+                <span className="text-accent mt-1">·</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
       <Section title="Origin Authority" className="border-t border-border">
         <div className="governance-card border-l-2 border-l-accent">
           <div className="flex items-start gap-3">

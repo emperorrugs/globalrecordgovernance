@@ -60,6 +60,16 @@ const Systems = () => {
           </p>
         </div>
       </Section>
+
+      <Section className="border-t border-border bg-card/30">
+        <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
+          <span className="font-semibold text-foreground">Design Note.</span> GRGF systems are governance
+          infrastructure — not software products. They are described in terms of institutional function,
+          not commercial capability. No component of this architecture is marketed, licensed as SaaS,
+          or positioned as a technology solution. The value of these systems derives from governance
+          integrity, not software features.
+        </p>
+      </Section>
     </div>
   );
 };

@@ -109,7 +109,12 @@ const Countries = () => {
                 deploying jurisdictions. It provides infrastructure — not jurisdiction. Each sovereign
                 entity determines its own use, scope, and continuity of GRGF deployment.
               </p>
-              <p className="hash-text">STANCE: NON-ENFORCEMENT · NON-JURISDICTIONAL · INFRASTRUCTURE ONLY</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                GRGF does not rank, score, evaluate, or compare countries or institutions.
+                No league tables, readiness indices, or performance benchmarks are produced.
+                Governance infrastructure must remain free of evaluative hierarchy.
+              </p>
+              <p className="hash-text">STANCE: NON-ENFORCEMENT · NON-JURISDICTIONAL · NON-EVALUATIVE · INFRASTRUCTURE ONLY</p>
             </div>
           </div>
         </div>

@@ -121,6 +121,22 @@ const Framework = () => {
         </div>
       </Section>
 
+      {/* Why Neutrality Matters */}
+      <Section title="Why Neutrality Matters" className="border-t border-border">
+        <p className="text-muted-foreground leading-relaxed max-w-3xl mb-4">
+          Neutrality is not a design preference — it is a structural requirement. A governance
+          record system that carries interpretive bias, enforcement power, or political alignment
+          cannot function as a trust layer across jurisdictions. Nations, courts, and auditors
+          will only rely on infrastructure that demonstrably lacks agenda.
+        </p>
+        <p className="text-muted-foreground leading-relaxed max-w-3xl">
+          GRGF achieves neutrality through architecture: it records without interpreting,
+          preserves without adjudicating, and verifies without enforcing. This separation
+          is not aspirational — it is codified in the framework's anti-capture clauses,
+          stewardship protocols, and immutable canonical definition.
+        </p>
+      </Section>
+
       <Section title="Core Principles" className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-2">
           {principles.map((p) => (

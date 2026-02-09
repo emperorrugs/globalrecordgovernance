@@ -29,7 +29,7 @@ const sections = [
   },
   {
     title: "Academy",
-    description: "Training programmes, certification pathways, and professional standards.",
+    description: "Professional standards, certification, and governance stewardship discipline.",
     icon: <GraduationCap className="h-5 w-5" />,
     path: "/academy",
   },
