@@ -3,13 +3,21 @@ import { ChevronRight } from "lucide-react";
 
 const routeLabels: Record<string, string> = {
   "/": "Home",
+  "/what-is-grgf": "What Is GRGF",
+  "/architecture": "How It Works",
+  "/simulator": "Simulator",
+  "/verification": "Verification",
+  "/use-cases": "Use Cases",
+  "/countries": "Countries",
+  "/academy": "Academy",
+  "/archive": "Documents",
+  "/governance": "Governance",
+  "/security": "Security",
+  "/origin": "Attribution",
+  "/contact": "Contact",
   "/framework": "Framework",
   "/systems": "Systems",
   "/processes": "Processes",
-  "/countries": "Countries",
-  "/academy": "Academy",
-  "/archive": "Archive",
-  "/governance": "Governance",
 };
 
 export function Breadcrumbs() {
@@ -20,19 +28,12 @@ export function Breadcrumbs() {
   const label = routeLabels[pathname] || "Page";
 
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className="px-8 md:px-12 lg:px-16 py-3 text-xs text-muted-foreground border-b border-border bg-card/30"
-    >
+    <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground">
       <ol className="flex items-center gap-1.5 font-mono tracking-wide">
         <li>
-          <Link to="/" className="hover:text-foreground transition-colors">
-            GRGF
-          </Link>
+          <Link to="/" className="hover:text-foreground transition-colors">GRGF</Link>
         </li>
-        <li>
-          <ChevronRight className="h-3 w-3" />
-        </li>
+        <li><ChevronRight className="h-3 w-3" /></li>
         <li className="text-foreground font-medium">{label}</li>
       </ol>
     </nav>
