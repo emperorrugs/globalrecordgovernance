@@ -15,6 +15,7 @@ import ArchiveGovernment from "./pages/archive/ArchiveGovernment";
 import ArchivePartners from "./pages/archive/ArchivePartners";
 import ArchiveLegalIP from "./pages/archive/ArchiveLegalIP";
 import ArchiveMasterIndex from "./pages/archive/ArchiveMasterIndex";
+import ArchiveDownloads from "./pages/archive/ArchiveDownloads";
 
 // Simulation sub-pages (accessed from Launch Simulation button)
 import Simulation from "./pages/Simulation";
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/archive/partners" element={<ArchiveLayout><ArchivePartners /></ArchiveLayout>} />
             <Route path="/archive/legal-ip" element={<ArchiveLayout><ArchiveLegalIP /></ArchiveLayout>} />
             <Route path="/archive/master-index" element={<ArchiveLayout><ArchiveMasterIndex /></ArchiveLayout>} />
+            <Route path="/archive/downloads" element={<ArchiveLayout><ArchiveDownloads /></ArchiveLayout>} />
 
             {/* Legacy redirects — all go to home now */}
             <Route path="/about" element={<Navigate to="/" replace />} />
