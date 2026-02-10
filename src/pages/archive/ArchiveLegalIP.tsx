@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Lock, ChevronDown, ChevronRight, ShieldAlert } from "lucide-react";
+import { Lock, ChevronDown, ChevronRight, ShieldAlert, Download } from "lucide-react";
 
 interface DocEntry {
   id: string;
   title: string;
   updated: string;
   content: React.ReactNode;
+  downloadPath?: string;
 }
 
 function ExpandableDoc({ doc }: { doc: DocEntry }) {
@@ -31,6 +32,11 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
       {open && (
         <div className="mt-4 ml-8 border-l-2 border-accent/20 pl-5 text-sm text-muted-foreground leading-relaxed space-y-4">
           {doc.content}
+          {doc.downloadPath && (
+            <a href={doc.downloadPath} download className="inline-flex items-center gap-1.5 text-xs font-mono text-accent hover:text-accent/80 transition-colors mt-2">
+              <Download className="h-3.5 w-3.5" /> Download source document
+            </a>
+          )}
         </div>
       )}
     </div>
@@ -128,6 +134,48 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "LIP-008", title: "Authoritative Master Record — FREEZE (v3)", updated: "January 2026",
+    downloadPath: "/documents/Authoritative_Master_Record_FREEZE.md",
+    content: (
+      <>
+        <p>Freezes RELEASE v3 as the authoritative master record for submission, audit, procurement, and investment review.</p>
+        <p className="font-medium text-foreground">Any changes require a superseding release. Freeze Date (UTC): 2026-01-30T16:44:14.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-009", title: "SHA-256 Manifest (Full Archive)", updated: "February 2026",
+    downloadPath: "/documents/SHA256_MANIFEST.txt",
+    content: (
+      <>
+        <p>Complete cryptographic manifest containing SHA-256 hashes for all 250+ documents in the GRGF archive.</p>
+        <p className="font-medium text-foreground">Enables independent integrity verification of every document in the sealed archive.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-010", title: "SHA-256 Manifest v4 (PDF)", updated: "February 2026",
+    downloadPath: "/documents/SHA256_MANIFEST_v4.pdf",
+    content: (
+      <>
+        <p>Formal PDF edition of the SHA-256 integrity manifest for institutional distribution and audit submission.</p>
+        <p className="font-medium text-foreground">Suitable for inclusion in procurement and compliance packages.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-011", title: "5-Year Valuation & Inventor Return", updated: "February 2026",
+    downloadPath: "/documents/Valuation_5yr_Scenarios.md",
+    content: (
+      <>
+        <p><strong>Conservative EV:</strong> $960M · Inventor (40%): $384M</p>
+        <p><strong>Base EV:</strong> $2.6B · Inventor (40%): $1.04B</p>
+        <p><strong>Aggressive EV:</strong> $6.24B · Inventor (40%): $2.5B</p>
+        <p className="font-medium text-foreground">Valuation scenarios based on sovereign DPI adoption trajectory.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveLegalIP = () => (
@@ -155,7 +203,7 @@ const ArchiveLegalIP = () => (
     <div className="px-8 md:px-12 lg:px-16">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · CONTROLLED ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">7 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">11 DOCUMENTS</span>
       </div>
     </div>
 
