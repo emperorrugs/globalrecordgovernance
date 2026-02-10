@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, ChevronDown, ChevronRight } from "lucide-react";
+import { FileText, ChevronDown, ChevronRight, Download } from "lucide-react";
 
 interface DocEntry {
   id: string;
@@ -7,6 +7,7 @@ interface DocEntry {
   section: string;
   updated: string;
   content: React.ReactNode;
+  downloadPath?: string;
 }
 
 function ExpandableDoc({ doc }: { doc: DocEntry }) {
@@ -33,6 +34,11 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
       {open && (
         <div className="mt-4 ml-8 border-l-2 border-accent/20 pl-5 text-sm text-muted-foreground leading-relaxed space-y-4">
           {doc.content}
+          {doc.downloadPath && (
+            <a href={doc.downloadPath} download className="inline-flex items-center gap-1.5 text-xs font-mono text-accent hover:text-accent/80 transition-colors mt-2">
+              <Download className="h-3.5 w-3.5" /> Download source document
+            </a>
+          )}
         </div>
       )}
     </div>
@@ -159,6 +165,90 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  // Uploaded governance documents
+  {
+    id: "GOV-009", title: "Data Protection & Access Control Policy", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/Data_Protection_and_Access_Control_Policy.md",
+    content: (
+      <>
+        <p><strong>Security Model:</strong> Defense-in-depth with encryption at rest and in transit.</p>
+        <p><strong>Access Control:</strong> Role-Based and Attribute-Based Access Control (RBAC/ABAC).</p>
+        <p><strong>Key Management:</strong> Keys managed via sovereign-controlled HSMs.</p>
+        <p><strong>Auditing:</strong> All access events logged immutably.</p>
+        <p className="font-medium text-foreground">Aligned with ISO/IEC 27001 and 27701.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-010", title: "Privacy Impact Assessment (PIA)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/Privacy_Impact_Assessment.md",
+    content: (
+      <>
+        <p>Assessment of personal data processing within GRGF. Only event metadata strictly required for evidentiary integrity is captured.</p>
+        <p><strong>Lawful Basis:</strong> Public interest, legal obligation, and consent where applicable.</p>
+        <p><strong>Risk Mitigations:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Re-identification risk mitigated via pseudonymization</li>
+          <li>Access misuse mitigated via audited RBAC/ABAC</li>
+        </ul>
+        <p className="font-medium text-foreground">Residual privacy risk is low and acceptable under international standards.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-011", title: "Feasibility Study", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/Feasibility_Study.md",
+    content: (
+      <>
+        <p>This feasibility study assesses the technical, legal, financial, and operational viability of GRGF as a sovereign-grade DPI.</p>
+        <p><strong>Technical:</strong> Leverages mature technologies (event logging, cryptographic hashing, interoperability APIs) with novel governance-layer orchestration.</p>
+        <p><strong>Legal:</strong> Aligned with ISO 23081, ISO/IEC 27701, OECD DPI principles, and World Bank GovTech guidance.</p>
+        <p><strong>Financial:</strong> Projected ROI positive within 24–36 months under conservative assumptions.</p>
+        <p className="font-medium text-foreground">GRGF is technically, legally, and financially feasible for pilot and national-scale deployment.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-012", title: "Incident Response Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/Incident_Response_Plan.md",
+    content: (
+      <>
+        <p><strong>Severity Levels:</strong> Low, Medium, High, Critical.</p>
+        <p><strong>Response Phases:</strong> Detection → Containment → Eradication → Recovery → Post-Incident Review.</p>
+        <p className="font-medium text-foreground">Governed by an Incident Oversight Committee with mandatory reporting.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-013", title: "Procurement Strategy (PSPC)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
+    downloadPath: "/documents/Procurement_Strategy_PSPC.md",
+    content: (
+      <>
+        <p>Enables compliant pilot procurement under Canadian federal rules.</p>
+        <p><strong>Pathways:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Innovation pilot</li>
+          <li>Phased competitive procurement</li>
+        </ul>
+        <p className="font-medium text-foreground">Evaluation criteria: Security, interoperability, sovereignty, value-for-money.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-014", title: "Records Retention Schedule", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
+    downloadPath: "/documents/Records_Retention_Schedule.md",
+    content: (
+      <>
+        <p>Retention aligned with legal, fiscal, and historical value.</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Operational Records:</strong> 7 years</li>
+          <li><strong>Legal/Evidentiary Records:</strong> Permanent</li>
+          <li><strong>Audit Logs:</strong> Minimum 10 years</li>
+        </ul>
+        <p className="font-medium text-foreground">Disposition is controlled, logged, and reviewable.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -178,7 +268,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">8 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">14 DOCUMENTS</span>
       </div>
     </div>
 
