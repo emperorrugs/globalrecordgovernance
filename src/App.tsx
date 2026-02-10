@@ -36,6 +36,7 @@ import Processes from "./pages/Processes";
 import TechnicalBlueprints from "./pages/TechnicalBlueprints";
 import PilotProgramme from "./pages/PilotProgramme";
 import AcademyPage from "./pages/AcademyPage";
+import DPIComparison from "./pages/DPIComparison";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -89,6 +90,7 @@ const App = () => (
             <Route path="/blueprints" element={<AppLayout><TechnicalBlueprints /></AppLayout>} />
             <Route path="/pilot" element={<AppLayout><PilotProgramme /></AppLayout>} />
             <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
+            <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
