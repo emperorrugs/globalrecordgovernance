@@ -1,4 +1,5 @@
 import { PageHeader, Section } from "@/components/PageComponents";
+import { PDFExportButton } from "@/components/PDFExportButton";
 import { Link } from "react-router-dom";
 import { FileText, Lock, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Building2, Scale, Eye } from "lucide-react";
 
@@ -29,7 +30,11 @@ const ExecutiveDossier = () => (
     <PageHeader
       title="Executive Dossier"
       subtitle="Investor-grade institutional positioning with master binder structure, revenue model, and strategic roadmap."
-    />
+    >
+      <div className="mt-4">
+        <PDFExportButton filename="GRGF_Executive_Dossier" label="Export Dossier as PDF" />
+      </div>
+    </PageHeader>
 
     {/* Positioning */}
     <Section>

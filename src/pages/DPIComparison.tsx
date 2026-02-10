@@ -1,4 +1,5 @@
 import { PageHeader, Section } from "@/components/PageComponents";
+import { PDFExportButton } from "@/components/PDFExportButton";
 import { useViewMode } from "@/contexts/ViewModeContext";
 import { Check, X, Minus, Shield, Globe, FileCheck, Layers, Lock, Eye, GitBranch, Users } from "lucide-react";
 import {
@@ -95,7 +96,11 @@ export default function DPIComparison() {
             ? "A structured comparison of governance integrity capabilities between GRGF and conventional Digital Public Infrastructure systems."
             : "Capability matrix evaluating deterministic enforcement, cryptographic integrity, federation architecture, and audit-readiness posture across DPI paradigms."
         }
-      />
+      >
+        <div className="mt-4">
+          <PDFExportButton filename="GRGF_DPI_Comparison_Matrix" label="Export Comparison as PDF" />
+        </div>
+      </PageHeader>
 
       {/* Summary Stats */}
       <Section>

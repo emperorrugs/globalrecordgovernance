@@ -37,6 +37,7 @@ import TechnicalBlueprints from "./pages/TechnicalBlueprints";
 import PilotProgramme from "./pages/PilotProgramme";
 import AcademyPage from "./pages/AcademyPage";
 import DPIComparison from "./pages/DPIComparison";
+import Sitemap from "./pages/Sitemap";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -91,6 +92,7 @@ const App = () => (
             <Route path="/pilot" element={<AppLayout><PilotProgramme /></AppLayout>} />
             <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
+            <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
