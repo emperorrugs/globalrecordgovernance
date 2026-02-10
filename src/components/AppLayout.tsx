@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck,
-  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle,
+  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle, FileText, AlertTriangle, Building2,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -18,10 +18,13 @@ const navItems = [
   { title: "Architecture", path: "/architecture", icon: Layers },
   { title: "Security & Trust", path: "/security-trust", icon: Shield },
   { title: "Governance", path: "/governance-framework", icon: GitBranch },
+  { title: "Risk & Ethics", path: "/ethics", icon: AlertTriangle },
   { title: "Deployment", path: "/deployment", icon: Globe },
+  { title: "Canada Federal", path: "/canada", icon: Building2 },
   { title: "Impact & ROI", path: "/impact", icon: BarChart3 },
   { title: "Stakeholders", path: "/stakeholders", icon: Users },
   { title: "Compliance", path: "/compliance", icon: CheckCircle },
+  { title: "Executive Dossier", path: "/dossier", icon: FileText },
   { title: "Briefing Request", path: "/briefing", icon: Lock },
   { title: "Simulation", path: "/simulation", icon: Play },
   { title: "Systems", path: "/systems", icon: Cpu },
