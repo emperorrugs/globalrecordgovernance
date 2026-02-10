@@ -17,6 +17,14 @@ import ArchiveLegalIP from "./pages/archive/ArchiveLegalIP";
 import ArchiveMasterIndex from "./pages/archive/ArchiveMasterIndex";
 import ArchiveDownloads from "./pages/archive/ArchiveDownloads";
 
+// Core institutional pages
+import SystemArchitecture from "./pages/SystemArchitecture";
+import SecurityTrust from "./pages/SecurityTrust";
+import GovernanceFramework from "./pages/GovernanceFramework";
+import NationalDeployment from "./pages/NationalDeployment";
+import ImpactROI from "./pages/ImpactROI";
+import StakeholderSolutions from "./pages/StakeholderSolutions";
+
 // Standalone governance pages
 import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
@@ -24,7 +32,7 @@ import TechnicalBlueprints from "./pages/TechnicalBlueprints";
 import PilotProgramme from "./pages/PilotProgramme";
 import AcademyPage from "./pages/AcademyPage";
 
-// Simulation sub-pages (accessed from Launch Simulation button)
+// Simulation sub-pages
 import Simulation from "./pages/Simulation";
 import Simulator from "./pages/Simulator";
 import Records from "./pages/Records";
@@ -48,7 +56,15 @@ const App = () => (
             {/* One-page home */}
             <Route path="/" element={<Index />} />
 
-            {/* Simulation pages wrapped in AppLayout */}
+            {/* Core institutional pages */}
+            <Route path="/architecture" element={<AppLayout><SystemArchitecture /></AppLayout>} />
+            <Route path="/security-trust" element={<AppLayout><SecurityTrust /></AppLayout>} />
+            <Route path="/governance-framework" element={<AppLayout><GovernanceFramework /></AppLayout>} />
+            <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
+            <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
+            <Route path="/stakeholders" element={<AppLayout><StakeholderSolutions /></AppLayout>} />
+
+            {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
             <Route path="/simulator" element={<AppLayout><Simulator /></AppLayout>} />
             <Route path="/records" element={<AppLayout><Records /></AppLayout>} />
@@ -73,22 +89,21 @@ const App = () => (
             <Route path="/archive/master-index" element={<ArchiveLayout><ArchiveMasterIndex /></ArchiveLayout>} />
             <Route path="/archive/downloads" element={<ArchiveLayout><ArchiveDownloads /></ArchiveLayout>} />
 
-            {/* Legacy redirects — all go to home now */}
+            {/* Legacy redirects */}
             <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/how-it-works" element={<Navigate to="/" replace />} />
-            <Route path="/governance" element={<Navigate to="/" replace />} />
+            <Route path="/governance" element={<Navigate to="/governance-framework" replace />} />
             <Route path="/dashboards" element={<Navigate to="/" replace />} />
             <Route path="/source-of-truth" element={<Navigate to="/" replace />} />
             <Route path="/what-is-grgf" element={<Navigate to="/" replace />} />
-            <Route path="/architecture" element={<Navigate to="/" replace />} />
+            <Route path="/architecture-old" element={<Navigate to="/architecture" replace />} />
             <Route path="/dashboard" element={<Navigate to="/" replace />} />
             <Route path="/countries" element={<Navigate to="/" replace />} />
-            {/* /archive, /academy, /systems, /processes are real routes above */}
-            <Route path="/security" element={<Navigate to="/" replace />} />
+            <Route path="/security" element={<Navigate to="/security-trust" replace />} />
             <Route path="/origin" element={<Navigate to="/" replace />} />
-            <Route path="/contact" element={<Navigate to="/" replace />} />
-            <Route path="/framework" element={<Navigate to="/" replace />} />
-            <Route path="/use-cases" element={<Navigate to="/" replace />} />
+            <Route path="/contact" element={<Navigate to="/stakeholders" replace />} />
+            <Route path="/framework" element={<Navigate to="/governance-framework" replace />} />
+            <Route path="/use-cases" element={<Navigate to="/stakeholders" replace />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>
