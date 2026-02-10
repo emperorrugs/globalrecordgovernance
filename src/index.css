@@ -6,86 +6,88 @@
 
 @layer base {
   :root {
-    /* World Bank institutional palette — deep blue, white, sky accent */
-    --background: 210 20% 98%;
-    --foreground: 210 50% 10%;
+    /* Sovereign governance palette — deep navy, slate, controlled gold */
+    --background: 216 20% 96%;
+    --foreground: 215 50% 8%;
 
-    --card: 210 15% 96%;
-    --card-foreground: 210 50% 10%;
+    --card: 220 14% 96%;
+    --card-foreground: 215 50% 8%;
 
-    --popover: 210 20% 98%;
-    --popover-foreground: 210 50% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 8%;
 
-    --primary: 210 100% 14%;
+    --primary: 214 69% 14%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 15% 92%;
-    --secondary-foreground: 210 50% 16%;
+    --secondary: 216 14% 93%;
+    --secondary-foreground: 214 30% 18%;
 
-    --muted: 210 12% 93%;
-    --muted-foreground: 210 12% 44%;
+    --muted: 216 14% 93%;
+    --muted-foreground: 215 16% 40%;
 
-    --accent: 197 100% 40%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 40% 57%;
+    --accent-foreground: 214 69% 14%;
 
     --destructive: 0 60% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 18% 87%;
-    --input: 210 18% 87%;
-    --ring: 210 100% 14%;
+    --border: 216 18% 87%;
+    --input: 216 18% 87%;
+    --ring: 214 69% 14%;
 
-    --radius: 0.375rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 210 100% 10%;
-    --sidebar-foreground: 210 15% 92%;
-    --sidebar-primary: 197 100% 50%;
-    --sidebar-primary-foreground: 210 100% 8%;
-    --sidebar-accent: 210 80% 20%;
-    --sidebar-accent-foreground: 210 15% 94%;
-    --sidebar-border: 210 60% 18%;
-    --sidebar-ring: 197 100% 50%;
+    --sidebar-background: 214 69% 14%;
+    --sidebar-foreground: 216 14% 93%;
+    --sidebar-primary: 42 40% 57%;
+    --sidebar-primary-foreground: 214 69% 10%;
+    --sidebar-accent: 214 55% 20%;
+    --sidebar-accent-foreground: 216 14% 94%;
+    --sidebar-border: 214 50% 20%;
+    --sidebar-ring: 42 40% 57%;
 
     /* Custom tokens */
-    --gold: 197 100% 40%;
-    --gold-light: 197 60% 60%;
-    --navy-deep: 210 100% 8%;
-    --navy: 210 100% 14%;
-    --stone: 210 20% 98%;
-    --stone-dark: 210 12% 90%;
+    --gold: 42 40% 57%;
+    --gold-light: 42 30% 70%;
+    --navy-deep: 214 69% 10%;
+    --navy: 214 69% 14%;
+    --slate-inst: 214 23% 24%;
+    --stone: 216 20% 96%;
+    --stone-dark: 216 14% 90%;
+    --emerald-trust: 160 51% 24%;
     --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
     --mono: 'JetBrains Mono', 'Courier New', monospace;
   }
 
   .dark {
-    --background: 210 50% 6%;
-    --foreground: 210 15% 94%;
-    --card: 210 45% 10%;
-    --card-foreground: 210 15% 94%;
-    --popover: 210 45% 10%;
-    --popover-foreground: 210 15% 94%;
-    --primary: 197 100% 50%;
-    --primary-foreground: 210 100% 6%;
-    --secondary: 210 40% 16%;
-    --secondary-foreground: 210 15% 92%;
-    --muted: 210 35% 14%;
-    --muted-foreground: 210 12% 58%;
-    --accent: 197 100% 40%;
+    --background: 214 55% 6%;
+    --foreground: 216 14% 94%;
+    --card: 214 45% 10%;
+    --card-foreground: 216 14% 94%;
+    --popover: 214 45% 10%;
+    --popover-foreground: 216 14% 94%;
+    --primary: 42 40% 57%;
+    --primary-foreground: 214 69% 6%;
+    --secondary: 214 40% 16%;
+    --secondary-foreground: 216 14% 92%;
+    --muted: 214 35% 14%;
+    --muted-foreground: 215 12% 55%;
+    --accent: 42 40% 57%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
-    --border: 210 35% 18%;
-    --input: 210 35% 18%;
-    --ring: 197 100% 50%;
-    --sidebar-background: 210 55% 4%;
-    --sidebar-foreground: 210 15% 92%;
-    --sidebar-primary: 197 100% 50%;
-    --sidebar-primary-foreground: 210 100% 6%;
-    --sidebar-accent: 210 45% 12%;
-    --sidebar-accent-foreground: 210 15% 94%;
-    --sidebar-border: 210 40% 12%;
-    --sidebar-ring: 197 100% 50%;
+    --border: 214 35% 18%;
+    --input: 214 35% 18%;
+    --ring: 42 40% 57%;
+    --sidebar-background: 214 55% 4%;
+    --sidebar-foreground: 216 14% 92%;
+    --sidebar-primary: 42 40% 57%;
+    --sidebar-primary-foreground: 214 69% 6%;
+    --sidebar-accent: 214 45% 12%;
+    --sidebar-accent-foreground: 216 14% 94%;
+    --sidebar-border: 214 40% 12%;
+    --sidebar-ring: 42 40% 57%;
   }
 }
 

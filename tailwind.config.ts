@@ -68,10 +68,8 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           deep: "hsl(var(--navy-deep))",
         },
-        stone: {
-          DEFAULT: "hsl(var(--stone))",
-          dark: "hsl(var(--stone-dark))",
-        },
+        "slate-inst": "hsl(var(--slate-inst))",
+        "emerald-trust": "hsl(var(--emerald-trust))",
       },
       borderRadius: {
         lg: "var(--radius)",
