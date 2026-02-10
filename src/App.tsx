@@ -17,6 +17,13 @@ import ArchiveLegalIP from "./pages/archive/ArchiveLegalIP";
 import ArchiveMasterIndex from "./pages/archive/ArchiveMasterIndex";
 import ArchiveDownloads from "./pages/archive/ArchiveDownloads";
 
+// Standalone governance pages
+import Systems from "./pages/Systems";
+import Processes from "./pages/Processes";
+import TechnicalBlueprints from "./pages/TechnicalBlueprints";
+import PilotProgramme from "./pages/PilotProgramme";
+import AcademyPage from "./pages/AcademyPage";
+
 // Simulation sub-pages (accessed from Launch Simulation button)
 import Simulation from "./pages/Simulation";
 import Simulator from "./pages/Simulator";
@@ -50,6 +57,13 @@ const App = () => (
             <Route path="/api-mock" element={<AppLayout><APIMock /></AppLayout>} />
             <Route path="/verification" element={<AppLayout><Verification /></AppLayout>} />
 
+            {/* Standalone governance pages */}
+            <Route path="/systems" element={<AppLayout><Systems /></AppLayout>} />
+            <Route path="/processes" element={<AppLayout><Processes /></AppLayout>} />
+            <Route path="/blueprints" element={<AppLayout><TechnicalBlueprints /></AppLayout>} />
+            <Route path="/pilot" element={<AppLayout><PilotProgramme /></AppLayout>} />
+            <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
+
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
@@ -69,14 +83,11 @@ const App = () => (
             <Route path="/architecture" element={<Navigate to="/" replace />} />
             <Route path="/dashboard" element={<Navigate to="/" replace />} />
             <Route path="/countries" element={<Navigate to="/" replace />} />
-            <Route path="/academy" element={<Navigate to="/" replace />} />
-            {/* /archive is now a real route above */}
+            {/* /archive, /academy, /systems, /processes are real routes above */}
             <Route path="/security" element={<Navigate to="/" replace />} />
             <Route path="/origin" element={<Navigate to="/" replace />} />
             <Route path="/contact" element={<Navigate to="/" replace />} />
             <Route path="/framework" element={<Navigate to="/" replace />} />
-            <Route path="/systems" element={<Navigate to="/" replace />} />
-            <Route path="/processes" element={<Navigate to="/" replace />} />
             <Route path="/use-cases" element={<Navigate to="/" replace />} />
 
             <Route path="*" element={<NotFound />} />
