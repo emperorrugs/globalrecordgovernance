@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ArrowLeft, Archive, Users, Building2, Handshake, Lock, List } from "lucide-react";
+import { ArrowLeft, Archive, Users, Building2, Handshake, Lock, List, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const archiveNav = [
@@ -9,6 +9,7 @@ const archiveNav = [
   { path: "/archive/partners", label: "Partners & Integrators", icon: Handshake },
   { path: "/archive/legal-ip", label: "Legal, IP & Assurance", icon: Lock },
   { path: "/archive/master-index", label: "Master Index", icon: List },
+  { path: "/archive/downloads", label: "Download Packs", icon: Download },
 ];
 
 export function ArchiveLayout({ children }: { children: React.ReactNode }) {

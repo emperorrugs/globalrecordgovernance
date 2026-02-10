@@ -46,6 +46,9 @@ const ArchiveOverview = () => (
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
           This archive contains the authoritative records, architectures, policies, and governance materials of the Global Record Governance Framework (GRGF). Documents are organized by stakeholder role and deployment context to ensure clarity, integrity, and responsible access.
         </p>
+        <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl">
+          Materials herein are evidence-first, neutral, and suitable for audit, evaluation, and institutional reference.
+        </p>
         <div className="section-divider mt-6" />
       </div>
     </header>
