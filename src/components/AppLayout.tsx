@@ -2,25 +2,32 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Home, BookOpen, Layers, Play, ShieldCheck, Briefcase, Archive,
   Shield, Lock, Fingerprint, Mail, ChevronLeft, ChevronRight, Globe, GraduationCap,
+  Database, FileInput, GitBranch, BarChart3, Code, FileCheck,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { InstitutionalFooter } from "@/components/InstitutionalFooter";
+import { SimulationBanner } from "@/components/SimulationBanner";
 import { useViewMode } from "@/contexts/ViewModeContext";
 import { Switch } from "@/components/ui/switch";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
-  { title: "What Is GRGF", path: "/what-is-grgf", icon: BookOpen },
+  { title: "About GRGF", path: "/what-is-grgf", icon: BookOpen },
   { title: "How It Works", path: "/architecture", icon: Layers },
+  { title: "Governance", path: "/governance", icon: Shield },
   { title: "Simulator", path: "/simulator", icon: Play },
+  { title: "Records", path: "/records", icon: Database },
+  { title: "Data Entry", path: "/data-entry", icon: FileInput },
+  { title: "Workflow", path: "/workflow", icon: GitBranch },
+  { title: "Dashboard", path: "/dashboard", icon: BarChart3 },
+  { title: "API Reference", path: "/api-mock", icon: Code },
   { title: "Verification", path: "/verification", icon: ShieldCheck },
-  { title: "Use Cases", path: "/use-cases", icon: Briefcase },
   { title: "Countries", path: "/countries", icon: Globe },
   { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "Documents", path: "/archive", icon: Archive },
-  { title: "Governance", path: "/governance", icon: Shield },
+  { title: "Source of Truth", path: "/source-of-truth", icon: FileCheck },
   { title: "Security", path: "/security", icon: Lock },
   { title: "Attribution", path: "/origin", icon: Fingerprint },
   { title: "Contact", path: "/contact", icon: Mail },
@@ -67,7 +74,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-sm text-sm transition-all duration-150",
+                  "flex items-center gap-3 px-3 py-2 rounded-sm text-sm transition-all duration-150",
                   isActive
                     ? "bg-sidebar-accent text-sidebar-primary font-medium"
                     : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
@@ -75,7 +82,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 title={collapsed ? item.title : undefined}
               >
                 <item.icon className="h-4 w-4 shrink-0" />
-                {!collapsed && <span>{item.title}</span>}
+                {!collapsed && <span className="text-xs">{item.title}</span>}
               </Link>
             );
           })}
@@ -95,6 +102,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
       {/* Main Content */}
       <div className="flex-1 min-w-0 flex flex-col">
+        <SimulationBanner />
         {/* Top bar with toggle */}
         <div className="flex items-center justify-between border-b border-border px-4 py-2">
           <Breadcrumbs />

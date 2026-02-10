@@ -18,6 +18,12 @@ import Origin from "./pages/Origin";
 import Contact from "./pages/Contact";
 import Countries from "./pages/Countries";
 import Academy from "./pages/Academy";
+import Records from "./pages/Records";
+import DataEntry from "./pages/DataEntry";
+import WorkflowDemo from "./pages/WorkflowDemo";
+import Dashboard from "./pages/Dashboard";
+import APIMock from "./pages/APIMock";
+import SourceOfTruth from "./pages/SourceOfTruth";
 import NotFound from "./pages/NotFound";
 
 // Legacy routes
@@ -49,6 +55,12 @@ const App = () => (
               <Route path="/security" element={<Security />} />
               <Route path="/origin" element={<Origin />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/records" element={<Records />} />
+              <Route path="/data-entry" element={<DataEntry />} />
+              <Route path="/workflow" element={<WorkflowDemo />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/api-mock" element={<APIMock />} />
+              <Route path="/source-of-truth" element={<SourceOfTruth />} />
               {/* Legacy routes */}
               <Route path="/framework" element={<Framework />} />
               <Route path="/systems" element={<Systems />} />

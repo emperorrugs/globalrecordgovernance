@@ -1,5 +1,5 @@
 import { Section } from "@/components/PageComponents";
-import { Play, Mail, ShieldCheck, FileText, ArrowRight } from "lucide-react";
+import { Play, Mail, ShieldCheck, FileText, ArrowRight, Database, BarChart3, FileCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useViewMode } from "@/contexts/ViewModeContext";
 
@@ -12,12 +12,15 @@ const Index = () => {
       <header className="border-b border-border bg-card/50 px-8 py-16 md:px-12 lg:px-16">
         <div className="max-w-4xl">
           <h1 className="institutional-heading text-4xl md:text-5xl font-semibold leading-tight">
-            Global Record Governance Framework
+            A Global Governance Framework for Verifiable Records
           </h1>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
             {isPlain
-              ? "A global system that records what governments did, what they decided, and what they failed to do — with proof."
-              : "Sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time."}
+              ? "A global system that records what governments did, what they decided, and what they failed to do — with proof. GRGF is a governance framework, not a software application."
+              : "Sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority."}
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground italic">
+            This interface is for demonstration and training only.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -25,22 +28,34 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors"
             >
               <Play className="h-4 w-4" />
-              View Live Simulator
+              View Governance Simulation
             </Link>
             <Link
-              to="/contact"
+              to="/architecture"
               className="inline-flex items-center gap-2 px-5 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors"
             >
-              <Mail className="h-4 w-4" />
-              Request Institutional Access
+              <FileText className="h-4 w-4" />
+              Read How the Framework Works
             </Link>
           </div>
           <div className="section-divider mt-8" />
         </div>
       </header>
 
-      {/* 3 Feature Cards */}
+      {/* Who it's for */}
       <Section>
+        <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-wider mb-4">Built for</p>
+        <div className="flex flex-wrap gap-3">
+          {["Governments", "Auditors", "Institutions", "Public Bodies", "International Partners"].map((a) => (
+            <span key={a} className="px-4 py-2 border border-border rounded-sm text-xs font-mono text-muted-foreground tracking-wider">
+              {a}
+            </span>
+          ))}
+        </div>
+      </Section>
+
+      {/* 3 Feature Cards */}
+      <Section className="border-t border-border">
         <div className="grid gap-6 sm:grid-cols-3">
           {[
             {
@@ -56,7 +71,7 @@ const Index = () => {
             {
               title: "Verify Without Authority",
               plain: "Anyone can check if a record exists and whether it's been changed — without needing special access or permission.",
-              tech: "Public hash manifests enable independent verification of record integrity without requiring authorised access to underlying content or governance credentials.",
+              tech: "Public hash manifests enable independent verification of record integrity without requiring authorised access to underlying content.",
             },
           ].map((card) => (
             <div key={card.title} className="governance-card border-l-2 border-l-accent">
@@ -72,16 +87,8 @@ const Index = () => {
       {/* Trust Strip */}
       <Section className="border-t border-border">
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 py-4">
-          {[
-            "World Bank–aligned",
-            "OECD Principles",
-            "ISO Governance Logic",
-            "Sovereign-grade DPI",
-          ].map((badge) => (
-            <div
-              key={badge}
-              className="px-4 py-2 border border-border rounded-sm text-xs font-mono text-muted-foreground tracking-wider uppercase"
-            >
+          {["World Bank–aligned", "OECD Principles", "ISO Governance Logic", "Sovereign-grade DPI"].map((badge) => (
+            <div key={badge} className="px-4 py-2 border border-border rounded-sm text-xs font-mono text-muted-foreground tracking-wider uppercase">
               {badge}
             </div>
           ))}
@@ -93,11 +100,14 @@ const Index = () => {
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
             { label: "How It Works", path: "/architecture", desc: "Visual system architecture" },
-            { label: "Live Simulator", path: "/simulator", desc: "Interactive demo" },
+            { label: "Live Simulator", path: "/simulator", desc: "Interactive governance demo" },
+            { label: "Record Browser", path: "/records", desc: "Simulated record registry" },
+            { label: "Data Entry", path: "/data-entry", desc: "Record submission demo" },
+            { label: "Workflow Demo", path: "/workflow", desc: "Lifecycle visualization" },
+            { label: "Dashboard", path: "/dashboard", desc: "Simulated analytics" },
+            { label: "API Reference", path: "/api-mock", desc: "Mock integration spec" },
             { label: "Verification", path: "/verification", desc: "Check record integrity" },
-            { label: "Country Deployment", path: "/countries", desc: "Sovereign adoption model" },
-            { label: "Academy", path: "/academy", desc: "Professional certification" },
-            { label: "Documents", path: "/archive", desc: "Archive & governance docs" },
+            { label: "Source of Truth", path: "/source-of-truth", desc: "Authority boundaries" },
           ].map((item) => (
             <Link key={item.path} to={item.path} className="group governance-card flex items-center justify-between">
               <div>

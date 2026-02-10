@@ -4,9 +4,11 @@ export function InstitutionalFooter() {
       <div className="max-w-5xl">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <h4 className="font-serif text-sm font-semibold mb-2">Citation Format</h4>
-            <p className="text-xs text-muted-foreground leading-relaxed font-mono">
-              Global Record Governance Framework (GRGF), [Section Title], [Record ID if applicable]. Available at: globalrecordgovernance.com
+            <h4 className="font-serif text-sm font-semibold mb-2">Governance Framework</h4>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              Reference Website · No personal data collected
+              <br />
+              Simulation and explanation only
             </p>
           </div>
           <div>
@@ -30,10 +32,13 @@ export function InstitutionalFooter() {
             </p>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-border">
+        <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
           <p className="text-[10px] text-muted-foreground/50 tracking-wide uppercase">
             GRGF · Global Record Governance Framework · Digital Public Infrastructure · All content is public, citable, and non-proprietary.
           </p>
+          <a href="/source-of-truth" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
+            Source of Truth →
+          </a>
         </div>
       </div>
     </footer>
