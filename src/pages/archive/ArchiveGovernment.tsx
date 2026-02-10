@@ -329,6 +329,26 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "GOV-023", title: "Executive Decision Memo", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/Executive_Decision_Memo.md",
+    content: (
+      <>
+        <p><strong>Recommendation:</strong> APPROVE PILOT & PHASED SCALE</p>
+        <p className="font-medium text-foreground">Decision: Authorize pilot deployment and preparatory procurement.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-024", title: "Oral Defense Briefing Deck", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/Oral_Defense_Briefing_Deck.md",
+    content: (
+      <>
+        <p>Structured briefing following the Problem → Solution → Value → Ask framework for institutional presentation and defense.</p>
+        <p className="font-medium text-foreground">Designed for executive and procurement audiences.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -348,7 +368,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">22 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">24 DOCUMENTS</span>
       </div>
     </div>
 

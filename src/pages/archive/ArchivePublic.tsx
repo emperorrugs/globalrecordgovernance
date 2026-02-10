@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileText, ChevronDown, ChevronRight } from "lucide-react";
+import { FileText, ChevronDown, ChevronRight, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface DocEntry {
@@ -7,6 +7,7 @@ interface DocEntry {
   title: string;
   updated: string;
   content: React.ReactNode;
+  downloadPath?: string;
 }
 
 function ExpandableDoc({ doc }: { doc: DocEntry }) {
@@ -30,6 +31,11 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
       {open && (
         <div className="mt-4 ml-8 border-l-2 border-accent/20 pl-5 text-sm text-muted-foreground leading-relaxed space-y-4">
           {doc.content}
+          {doc.downloadPath && (
+            <a href={doc.downloadPath} download className="inline-flex items-center gap-1.5 text-xs font-mono text-accent hover:text-accent/80 transition-colors mt-2">
+              <Download className="h-3.5 w-3.5" /> Download source document
+            </a>
+          )}
         </div>
       )}
     </div>
@@ -129,6 +135,16 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "PUB-007", title: "GRGF Public Overview", updated: "February 2026",
+    downloadPath: "/documents/GRGF_Public_Overview.md",
+    content: (
+      <>
+        <p>GRGF is a neutral Digital Public Infrastructure that records institutional actions and omissions in real time, providing immutable evidence without interpretation.</p>
+        <p className="font-medium text-foreground">It supports transparency, accountability, and trust at national and global scale.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchivePublic = () => (
@@ -149,7 +165,7 @@ const ArchivePublic = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">6 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">7 DOCUMENTS</span>
       </div>
     </div>
 
