@@ -5,9 +5,15 @@ const GovernancePage = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="Governance"
-        subtitle="Stewardship structure, neutrality principles, anti-capture protections, succession protocols, and origin authority."
-      />
+        title="Governance & Rules"
+        subtitle="Authority model, decision rules, change control, audit principles, and anti-capture protections."
+      >
+        <div className="mt-4 governance-card border-l-2 border-l-accent max-w-3xl">
+          <p className="text-sm text-foreground leading-relaxed">
+            Governance authority derives from rules, accountability, and verifiable records — not from software execution.
+          </p>
+        </div>
+      </PageHeader>
 
       <Section title="Stewardship Model">
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
