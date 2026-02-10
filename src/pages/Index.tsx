@@ -511,6 +511,21 @@ const Index = () => (
       </div>
     </Sec>
 
+    {/* ─── POSITIONING STATEMENT ─── */}
+    <Sec id="positioning" className="border-b border-border bg-card/50">
+      <div className="governance-card border-l-2 border-l-accent">
+        <p className="text-sm text-foreground leading-relaxed font-medium mb-3">
+          GRGF is a governance integrity infrastructure layer designed to strengthen sovereign institutions through deterministic enforcement, cryptographic record integrity, and independent verification.
+        </p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+          It enhances existing digital public infrastructure without replacing national systems.
+        </p>
+        <p className="text-sm text-accent font-serif font-semibold italic">
+          Trust becomes structurally verifiable.
+        </p>
+      </div>
+    </Sec>
+
     {/* ─── FOOTER ─── */}
     <footer className="border-t border-border bg-primary text-primary-foreground px-8 py-12 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto">
