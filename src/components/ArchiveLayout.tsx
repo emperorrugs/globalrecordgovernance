@@ -32,7 +32,7 @@ export function ArchiveLayout({ children }: { children: React.ReactNode }) {
         </div>
       </header>
 
-      <div className="flex-1 flex">
+      <div className="flex-1 flex flex-col md:flex-row">
         {/* Sidebar */}
         <aside className="w-64 shrink-0 border-r border-border bg-card/50 hidden md:block">
           <div className="sticky top-12 py-6 px-3">
