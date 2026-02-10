@@ -1,27 +1,19 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { useViewMode } from "@/contexts/ViewModeContext";
 import { ShieldCheck, FileText, Monitor, AlertTriangle } from "lucide-react";
 
 const SourceOfTruth = () => {
-  const { isPlain } = useViewMode();
-
   return (
     <div className="animate-fade-in">
       <PageHeader
         title="Source of Truth"
-        subtitle={
-          isPlain
-            ? "Where governance authority actually lives — and where it does not."
-            : "Definitive separation of authoritative and non-authoritative system components within the GRGF architecture."
-        }
+        subtitle="Definitive separation of authoritative and non-authoritative system components."
       />
 
-      {/* Core Statement */}
+      {/* Core Mandatory Statement */}
       <Section>
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <p className="text-sm text-foreground leading-relaxed">
-            The Global Record Governance Framework operates through formally documented governance rules and sealed records.
-            Public websites and simulation systems exist solely to explain and demonstrate the framework and do not create or modify authoritative records.
+            The Global Record Governance Framework operates through formally documented governance rules and sealed records. Public websites, simulations, and dashboards exist solely to explain, demonstrate, and support understanding of the framework and do not create, modify, or replace authoritative records.
           </p>
         </div>
       </Section>
@@ -29,9 +21,7 @@ const SourceOfTruth = () => {
       {/* What IS Authoritative */}
       <Section title="What IS Authoritative" className="border-t border-border">
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          {isPlain
-            ? "The real authority of GRGF lives in its sealed documents and governance rules — not in any website or application."
-            : "Authoritative governance components are document-based, hash-sealed, and independent of any digital platform or interface."}
+          Authoritative governance components are document-based, hash-sealed, and independent of any digital platform or interface.
         </p>
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
           <div className="governance-card">
@@ -40,9 +30,7 @@ const SourceOfTruth = () => {
               <div>
                 <h3 className="font-serif text-sm font-semibold">Sealed Governance Archives</h3>
                 <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  {isPlain
-                    ? "Permanently sealed records with cryptographic proof. Once sealed, they cannot be changed — only verified."
-                    : "SHA-256 hash-sealed immutable records with cryptographic integrity proofs, version lineage, and audit trail preservation."}
+                  Permanently sealed records with cryptographic integrity proofs. Once sealed, they cannot be changed — only verified.
                 </p>
                 <p className="hash-text mt-3">STATUS: AUTHORITATIVE</p>
               </div>
@@ -54,9 +42,7 @@ const SourceOfTruth = () => {
               <div>
                 <h3 className="font-serif text-sm font-semibold">Governance Operating Documents</h3>
                 <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-                  {isPlain
-                    ? "The formal rules, charters, and policies that define how governance works. These are the source of authority."
-                    : "Document-based Governance Operating System: charters, classification taxonomies, authority matrices, stewardship protocols, and anti-capture clauses."}
+                  The formal rules, charters, and policies that define how governance works. These are the source of authority.
                 </p>
                 <p className="hash-text mt-3">STATUS: AUTHORITATIVE</p>
               </div>
@@ -68,33 +54,28 @@ const SourceOfTruth = () => {
       {/* What is NOT Authoritative */}
       <Section title="What is NOT Authoritative" className="border-t border-border">
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          {isPlain
-            ? "This website and the simulation system are tools for explanation and training — they do not create or store real governance records."
-            : "Non-authoritative components serve reference, demonstration, and training functions only. They carry no governance authority."}
+          Non-authoritative components serve reference, demonstration, and training functions only. They carry no governance authority.
         </p>
         <div className="grid gap-4 sm:grid-cols-3 max-w-4xl">
           {[
             {
-              icon: Monitor,
               title: "This Website",
               desc: "Public reference interface for explaining the framework.",
               status: "NON-AUTHORITATIVE",
             },
             {
-              icon: Monitor,
               title: "Simulation System",
               desc: "Interactive demonstration and training environment.",
               status: "NON-AUTHORITATIVE",
             },
             {
-              icon: Monitor,
-              title: "Data Entry UI & Mock APIs",
-              desc: "Interface demonstrations showing how records would be entered.",
+              title: "Dashboards & Mock APIs",
+              desc: "Visualisation and integration demonstrations.",
               status: "NON-AUTHORITATIVE",
             },
           ].map((item) => (
             <div key={item.title} className="governance-card">
-              <item.icon className="h-5 w-5 text-muted-foreground mb-3" />
+              <Monitor className="h-5 w-5 text-muted-foreground mb-3" />
               <h3 className="font-serif text-sm font-semibold">{item.title}</h3>
               <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
               <p className="hash-text mt-3 text-destructive">STATUS: {item.status}</p>
@@ -103,7 +84,7 @@ const SourceOfTruth = () => {
         </div>
       </Section>
 
-      {/* This App Is */}
+      {/* This App Exists For */}
       <Section title="This Application Exists For" className="border-t border-border">
         <div className="space-y-3 max-w-2xl">
           {[

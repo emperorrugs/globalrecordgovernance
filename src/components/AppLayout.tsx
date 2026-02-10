@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
-  Home, BookOpen, Layers, Play, ShieldCheck, Briefcase, Archive,
-  Shield, Lock, Fingerprint, Mail, ChevronLeft, ChevronRight, Globe, GraduationCap,
-  Database, FileInput, GitBranch, BarChart3, Code, FileCheck,
+  Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck,
+  ChevronLeft, ChevronRight,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -14,23 +13,12 @@ import { Switch } from "@/components/ui/switch";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
-  { title: "About GRGF", path: "/what-is-grgf", icon: BookOpen },
-  { title: "How It Works", path: "/architecture", icon: Layers },
+  { title: "About GRGF", path: "/about", icon: BookOpen },
+  { title: "How It Works", path: "/how-it-works", icon: Layers },
   { title: "Governance", path: "/governance", icon: Shield },
-  { title: "Simulator", path: "/simulator", icon: Play },
-  { title: "Records", path: "/records", icon: Database },
-  { title: "Data Entry", path: "/data-entry", icon: FileInput },
-  { title: "Workflow", path: "/workflow", icon: GitBranch },
-  { title: "Dashboard", path: "/dashboard", icon: BarChart3 },
-  { title: "API Reference", path: "/api-mock", icon: Code },
-  { title: "Verification", path: "/verification", icon: ShieldCheck },
-  { title: "Countries", path: "/countries", icon: Globe },
-  { title: "Academy", path: "/academy", icon: GraduationCap },
-  { title: "Documents", path: "/archive", icon: Archive },
+  { title: "Simulation", path: "/simulation", icon: Play },
+  { title: "Dashboards", path: "/dashboards", icon: BarChart3 },
   { title: "Source of Truth", path: "/source-of-truth", icon: FileCheck },
-  { title: "Security", path: "/security", icon: Lock },
-  { title: "Attribution", path: "/origin", icon: Fingerprint },
-  { title: "Contact", path: "/contact", icon: Mail },
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
@@ -74,7 +62,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2 rounded-sm text-sm transition-all duration-150",
+                  "flex items-center gap-3 px-3 py-2.5 rounded-sm text-sm transition-all duration-150",
                   isActive
                     ? "bg-sidebar-accent text-sidebar-primary font-medium"
                     : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
