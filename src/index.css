@@ -144,3 +144,46 @@
     font-family: var(--serif);
   }
 }
+
+/* PDF Export / Print Styles */
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide non-content elements */
+  aside,
+  nav[aria-label="Breadcrumb"],
+  .print\\:hidden,
+  button,
+  [data-radix-popper-content-wrapper],
+  header.border-b {
+    display: none !important;
+  }
+
+  /* Full width content */
+  .flex.min-h-screen > div.flex-1 {
+    margin: 0;
+    width: 100%;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  /* Page breaks */
+  section {
+    break-inside: avoid;
+  }
+
+  .governance-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  footer {
+    display: none !important;
+  }
+}
