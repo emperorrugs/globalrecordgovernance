@@ -29,6 +29,7 @@ import InstitutionalBriefing from "./pages/InstitutionalBriefing";
 import CanadaDeployment from "./pages/CanadaDeployment";
 import GovernanceEthics from "./pages/GovernanceEthics";
 import ExecutiveDossier from "./pages/ExecutiveDossier";
+import GovernanceInterface from "./pages/GovernanceInterface";
 
 // Standalone governance pages
 import Systems from "./pages/Systems";
@@ -75,6 +76,7 @@ const App = () => (
             <Route path="/canada" element={<AppLayout><CanadaDeployment /></AppLayout>} />
             <Route path="/ethics" element={<AppLayout><GovernanceEthics /></AppLayout>} />
             <Route path="/dossier" element={<AppLayout><ExecutiveDossier /></AppLayout>} />
+            <Route path="/governance-interface" element={<AppLayout><GovernanceInterface /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
