@@ -349,6 +349,36 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "GOV-025", title: "Executive Visual Binder (PPTX)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/GRGF_Executive_Visual_Binder.pptx",
+    content: (
+      <>
+        <p>10-slide board/ministerial briefing deck covering: What GRGF is, the governance gap, solution overview, Policy→Control→Evidence flow, system architecture, security & privacy, public value, risks & mitigations, and go-live recommendation.</p>
+        <p className="font-medium text-foreground">Recommendation: APPROVE PILOT@SCALE GO-LIVE. (PowerPoint format)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-026", title: "Executive Visual Binder (ZIP)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/GRGF_Executive_Visual_Binder_RESEND.zip",
+    content: (
+      <>
+        <p>Complete executive visual binder package for board, ministerial, and multilateral briefing. ZIP archive with all supporting materials.</p>
+        <p className="font-medium text-foreground">Full briefing package for institutional distribution.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-027", title: "Phase 3 — Visual Operating Model (PDF)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
+    downloadPath: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf",
+    content: (
+      <>
+        <p>Single authoritative model for policy, legal, technical, audit, and partner alignment. Maps the full flow: Law/Policy → Control → Event → Evidence → Verification.</p>
+        <p className="font-medium text-foreground">Core design principles: Neutral witness, evidence-first governance, privacy-by-design, append-only integrity, public verifiability without personal data exposure.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -368,7 +398,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">24 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">27 DOCUMENTS</span>
       </div>
     </div>
 
