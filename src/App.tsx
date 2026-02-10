@@ -5,7 +5,16 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ViewModeProvider } from "@/contexts/ViewModeContext";
 import { AppLayout } from "@/components/AppLayout";
+import { ArchiveLayout } from "@/components/ArchiveLayout";
 import Index from "./pages/Index";
+
+// Archive pages
+import ArchiveOverview from "./pages/archive/ArchiveOverview";
+import ArchivePublic from "./pages/archive/ArchivePublic";
+import ArchiveGovernment from "./pages/archive/ArchiveGovernment";
+import ArchivePartners from "./pages/archive/ArchivePartners";
+import ArchiveLegalIP from "./pages/archive/ArchiveLegalIP";
+import ArchiveMasterIndex from "./pages/archive/ArchiveMasterIndex";
 
 // Simulation sub-pages (accessed from Launch Simulation button)
 import Simulation from "./pages/Simulation";
@@ -40,6 +49,14 @@ const App = () => (
             <Route path="/api-mock" element={<AppLayout><APIMock /></AppLayout>} />
             <Route path="/verification" element={<AppLayout><Verification /></AppLayout>} />
 
+            {/* Archive pages */}
+            <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
+            <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
+            <Route path="/archive/government" element={<ArchiveLayout><ArchiveGovernment /></ArchiveLayout>} />
+            <Route path="/archive/partners" element={<ArchiveLayout><ArchivePartners /></ArchiveLayout>} />
+            <Route path="/archive/legal-ip" element={<ArchiveLayout><ArchiveLegalIP /></ArchiveLayout>} />
+            <Route path="/archive/master-index" element={<ArchiveLayout><ArchiveMasterIndex /></ArchiveLayout>} />
+
             {/* Legacy redirects — all go to home now */}
             <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/how-it-works" element={<Navigate to="/" replace />} />
@@ -51,7 +68,7 @@ const App = () => (
             <Route path="/dashboard" element={<Navigate to="/" replace />} />
             <Route path="/countries" element={<Navigate to="/" replace />} />
             <Route path="/academy" element={<Navigate to="/" replace />} />
-            <Route path="/archive" element={<Navigate to="/" replace />} />
+            {/* /archive is now a real route above */}
             <Route path="/security" element={<Navigate to="/" replace />} />
             <Route path="/origin" element={<Navigate to="/" replace />} />
             <Route path="/contact" element={<Navigate to="/" replace />} />
