@@ -145,6 +145,16 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "PUB-008", title: "Phase 5 — Public Transparency Package", updated: "February 2026",
+    downloadPath: "/documents/GRGF_Phase_5_Public_Transparency.zip",
+    content: (
+      <>
+        <p>Complete public transparency package including dashboards, aggregate indicators, and public verification materials.</p>
+        <p className="font-medium text-foreground">Designed for open distribution to media, academia, and civil society. (ZIP archive)</p>
+      </>
+    ),
+  },
 ];
 
 const ArchivePublic = () => (
@@ -165,7 +175,7 @@ const ArchivePublic = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">7 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">8 DOCUMENTS</span>
       </div>
     </div>
 
