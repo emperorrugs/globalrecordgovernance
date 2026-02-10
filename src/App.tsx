@@ -24,6 +24,8 @@ import GovernanceFramework from "./pages/GovernanceFramework";
 import NationalDeployment from "./pages/NationalDeployment";
 import ImpactROI from "./pages/ImpactROI";
 import StakeholderSolutions from "./pages/StakeholderSolutions";
+import StandardsCompliance from "./pages/StandardsCompliance";
+import InstitutionalBriefing from "./pages/InstitutionalBriefing";
 
 // Standalone governance pages
 import Systems from "./pages/Systems";
@@ -63,6 +65,8 @@ const App = () => (
             <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
             <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
             <Route path="/stakeholders" element={<AppLayout><StakeholderSolutions /></AppLayout>} />
+            <Route path="/compliance" element={<AppLayout><StandardsCompliance /></AppLayout>} />
+            <Route path="/briefing" element={<AppLayout><InstitutionalBriefing /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
