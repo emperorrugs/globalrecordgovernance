@@ -32,6 +32,7 @@ const navItems = [
   { title: "Blueprints", path: "/blueprints", icon: Layers },
   { title: "Pilot Programme", path: "/pilot", icon: Globe },
   { title: "Academy", path: "/academy", icon: GraduationCap },
+  { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
   { title: "Digital Archive", path: "/archive", icon: Shield },
 ];
 
