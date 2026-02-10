@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, FileText, Lock } from "lucide-react";
+import { ChevronDown, ChevronRight, FileText, Lock, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
@@ -12,12 +12,13 @@ interface IndexItem {
 interface IndexSection {
   code: string;
   title: string;
+  link: string;
   items: IndexItem[];
 }
 
 const masterIndex: IndexSection[] = [
   {
-    code: "00", title: "Archive Control",
+    code: "00", title: "Archive Control", link: "/archive",
     items: [
       { id: "AC-001", title: "Archive Master Index" },
       { id: "AC-002", title: "Version History & Change Log" },
@@ -26,7 +27,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "01", title: "Vision & Foundations",
+    code: "01", title: "Vision & Foundations", link: "/archive/public",
     items: [
       { id: "VF-001", title: "GRGF Vision & Purpose" },
       { id: "VF-002", title: "Governance Philosophy" },
@@ -36,7 +37,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "02", title: "System Architecture",
+    code: "02", title: "System Architecture", link: "/archive/government",
     items: [
       { id: "SA-001", title: "Global Architecture Overview" },
       { id: "SA-002", title: "Record Types & Event Models" },
@@ -46,7 +47,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "03", title: "Governance & Policy",
+    code: "03", title: "Governance & Policy", link: "/archive/government",
     items: [
       { id: "GP-001", title: "Governance Authority Model" },
       { id: "GP-002", title: "Decision, Action & Omission Framework" },
@@ -56,7 +57,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "04", title: "DPI & Standards Alignment",
+    code: "04", title: "DPI & Standards Alignment", link: "/archive/government",
     items: [
       { id: "DS-001", title: "DPI Principles Alignment" },
       { id: "DS-002", title: "Governance & Standards Mapping" },
@@ -66,7 +67,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "05", title: "Deployment Models",
+    code: "05", title: "Deployment Models", link: "/archive/government",
     items: [
       { id: "DM-001", title: "National Deployment Scenarios" },
       { id: "DM-002", title: "Incremental Adoption" },
@@ -76,7 +77,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "06", title: "Use Cases",
+    code: "06", title: "Use Cases", link: "/archive/government",
     items: [
       { id: "UC-001", title: "Public Procurement" },
       { id: "UC-002", title: "Regulatory Decisions" },
@@ -86,7 +87,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "07", title: "Value & Impact",
+    code: "07", title: "Value & Impact", link: "/archive/government",
     items: [
       { id: "VI-001", title: "Public Value Creation" },
       { id: "VI-002", title: "Fraud Reduction & Efficiency" },
@@ -96,7 +97,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "08", title: "Legal & IP",
+    code: "08", title: "Legal & IP", link: "/archive/legal-ip",
     items: [
       { id: "LI-001", title: "Inventor Attribution (Tarek Wahid)", restricted: true },
       { id: "LI-002", title: "Intellectual Property Scope", restricted: true },
@@ -106,7 +107,7 @@ const masterIndex: IndexSection[] = [
     ],
   },
   {
-    code: "09", title: "Appendices",
+    code: "09", title: "Appendices", link: "/archive/public",
     items: [
       { id: "AP-001", title: "Glossary" },
       { id: "AP-002", title: "Terminology" },
@@ -133,21 +134,26 @@ function SectionBlock({ section }: { section: IndexSection }) {
       {open && (
         <div className="border-t border-border divide-y divide-border/50">
           {section.items.map((item) => (
-            <div key={item.id} className="flex items-center gap-3 px-5 py-2.5 hover:bg-muted/30 transition-colors">
+            <Link
+              key={item.id}
+              to={section.link}
+              className="flex items-center gap-3 px-5 py-2.5 hover:bg-muted/30 transition-colors group"
+            >
               {item.restricted ? (
                 <Lock className="h-3.5 w-3.5 text-muted-foreground/50 shrink-0" />
               ) : (
                 <FileText className="h-3.5 w-3.5 text-accent/60 shrink-0" />
               )}
               <span className="hash-text shrink-0 w-14">{item.id}</span>
-              <span className={cn("text-xs", item.restricted ? "text-muted-foreground/60" : "text-foreground")}>
+              <span className={cn("text-xs group-hover:text-accent transition-colors", item.restricted ? "text-muted-foreground/60" : "text-foreground")}>
                 {item.title}
               </span>
+              <ExternalLink className="h-3 w-3 text-muted-foreground/30 group-hover:text-accent/60 transition-colors ml-1 shrink-0 hidden sm:block" />
               <span className="ml-auto text-[9px] font-mono text-muted-foreground/40 tracking-wider hidden sm:block">v1.0.0</span>
               {item.restricted && (
                 <span className="text-[9px] font-mono text-destructive/60 tracking-wider">RESTRICTED</span>
               )}
-            </div>
+            </Link>
           ))}
         </div>
       )}
@@ -166,7 +172,7 @@ const ArchiveMasterIndex = () => (
           GRGF Digital Archive — Master Index
         </h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Complete index of all governance documents, architectures, policies, and reference materials within the GRGF Digital Archive. Documents are organized by section and numbered for institutional reference.
+          Complete index of all governance documents, architectures, policies, and reference materials within the GRGF Digital Archive. Click any document to view its full content in the relevant stakeholder section.
         </p>
         <div className="section-divider mt-6" />
       </div>
