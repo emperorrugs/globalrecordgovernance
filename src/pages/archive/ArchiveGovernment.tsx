@@ -452,6 +452,80 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "GOV-035", title: "GC Submission Pack", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/GC_Submission_Pack_20260131_072144.zip",
+    content: (
+      <>
+        <p>Government of Canada formal submission package for institutional review, procurement evaluation, and policy alignment assessment.</p>
+        <p className="font-medium text-foreground">Complete submission-ready package for Canadian federal review. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-036", title: "Value Totals — Scenario Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
+    downloadPath: "/documents/dpi_value_common_totals.csv",
+    content: (
+      <>
+        <p>Three-scenario value analysis (Conservative / Expected / Aggressive):</p>
+        <p><strong>Canada:</strong> $397.7M – $1.51B net annual benefit</p>
+        <p><strong>Worldwide:</strong> $4.8B – $18.3B net annual benefit</p>
+        <p className="font-medium text-foreground">One-time costs: $124M (Canada) / $1.5B (Worldwide). Annualized costs well under 7% of benefits.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-037", title: "Value Totals — Canada & World Per-Org (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
+    downloadPath: "/documents/dpi_value_canada_world_totals.csv",
+    content: (
+      <>
+        <p>Per-organization annual benefit across scenarios:</p>
+        <p><strong>Conservative:</strong> $71,600/org · <strong>Expected:</strong> $223,750/org · <strong>Aggressive:</strong> $447,500/org</p>
+        <p className="font-medium text-foreground">Canada total (120 orgs): $8.6M – $53.7M · Worldwide (1,500 orgs): $107.4M – $671.3M.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-038", title: "System Architecture & Catalog (PDF)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "January 2026",
+    downloadPath: "/documents/System_Architecture_and_Catalog.pdf",
+    content: (
+      <>
+        <p>End-to-end DPI component diagram, API catalog, and AWS Canada deployment topology. Covers Collector API, Pseudonymization, OPA Policy Engine, Merkle/Proof Builder, Admin Console (GCWeb EN/FR), Public Proof Portal, VC Issuer/Verifier, and CICE Agent.</p>
+        <p><strong>Key APIs:</strong> POST /ingest · GET /schemas · POST /tokenize · POST /policy/decide · GET /proofs · POST /vc/issue · POST /vc/verify</p>
+        <p className="font-medium text-foreground">Region ca-central-1 with optional ca-west-1 DR. PBMM-aligned, SCP deny non-CA.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-039", title: "Canvas Folder — Visual Assets", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
+    downloadPath: "/documents/Canvas_Folder_20260131_124718.zip",
+    content: (
+      <>
+        <p>Visual design assets and canvas materials for institutional presentations, reports, and stakeholder communications.</p>
+        <p className="font-medium text-foreground">Brand-consistent visual materials for institutional use. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-040", title: "Pilot Starter + Upgrades Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/dpi_pilot_starter_PLUS_upgrades_20260131_060829.zip",
+    content: (
+      <>
+        <p>Combined pilot starter kit with all system upgrades applied through January 2026. Single package for rapid deployment.</p>
+        <p className="font-medium text-foreground">Ready-to-deploy pilot package with latest patches included. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-041", title: "Optimum Two-Week Backlog (CSV)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/optimum_two_week_backlog.csv",
+    content: (
+      <>
+        <p>15-item sprint backlog for two-week pilot build-out covering: landing zone & guardrails, network hardening, data plane (Aurora/S3), KMS/CloudHSM, Collector service, pseudonymization, OPA policies, observability, Merkle/proof builder, SSO/SCIM, Admin Console, Public Proof Portal, PIA/TRA & pen test, DR game-day, and cutover.</p>
+        <p className="font-medium text-foreground">Total estimated effort: ~156 hours across Platform, Backend, Security, Frontend, and PM.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -471,7 +545,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">34 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">41 DOCUMENTS</span>
       </div>
     </div>
 

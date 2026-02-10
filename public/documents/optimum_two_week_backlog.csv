@@ -1,0 +1,16 @@
+Key,Title,Owner,Description,Acceptance Criteria,When,Estimate (hrs)
+A1,Landing zone & guardrails,Platform,"Multi-account (Org/OUs), Control Tower/SCPs (deny non-CA), CloudTrail/Config/GuardDuty/SecurityHub; PBMM mapping",Done when SCP active; services enabled; evidence in repo,Week1-D1-D2,12
+A2,Network hardening,Platform,"Private subnets, VPC endpoints, egress control, WAF, ALB/NLB split",No public data stores; egress restricted; WAF enabled,Week1-D2-D3,12
+B1,"Data plane (Aurora, S3 Object Lock)",Platform,"Aurora Serverless v2 (Postgres), S3 payload/proofs/logs; Object Lock compliance 7y",PITR on; buckets block public; object lock verified,Week1-D3-D4,12
+B2,KMS/CloudHSM toggle,Platform,CMKs with rotation; optional CloudHSM module toggled via var,CMKs usable; HSM tested if enabled,Week1-D3-D4,6
+C1,Collector service,Backend,API Gateway + ECS/EKS; schema validate; rate limits; metrics,"200 valid, 422 invalid; metrics emitted",Week1-D4-D5,14
+C2,Pseudonymization service,Backend,Deterministic tokenization (HMAC/FPE) using KMS; dual-control ops,Unit tests pass; latency <50ms p95,Week1-D4-D5,10
+D1,OPA policies & sidecars,Sec/Privacy,ABAC + retention; unit tests; CI gates,Deny-by-default; tests passing; CI blocks on fail,Week1-D4-D5,10
+E1,Observability & SLOs,Platform,"Dashboards (ingest, backlog, proof lag, OPA denials, KMS errors); alerts",Synthetic alerts fire; SLO doc in repo,Week1-D5,8
+F1,Merkle/Proof builder + verifier,Backend,"Scheduled job, signed root, inclusion proofs; verify endpoint",Inclusion check passes test set,Week2-D6-D7,12
+G1,Enterprise SSO + SCIM,Platform,"OIDC/SAML to SSC prod tenant; MFA/WebAuthn; JIT admin, break‑glass",Admin login ok; SCIM provision works,Week2-D7-D8,12
+H1,Admin Console (EN/FR),Frontend,GCWeb theme; RBAC views; proof lookup; WCAG 2.2 fixes,WCAG scan pass; bilingual toggle,Week2-D8-D9,12
+H2,Public Proof Portal,Frontend,Verify inclusion proofs only; no PII,Correct/incorrect states; perf ok,Week2-D8-D9,10
+I1,PIA/TRA finalize & pen test,Sec/Privacy,Finalize docs; run pen test; remediate critical/high,Zero critical; highs tracked,Week2-D9,12
+J1,DR game‑day & capacity test,Platform,Failover drill; restore test; ≥1M events/day test,RTO/RPO met; load passes,Week2-D9,10
+K1,Cutover & hypercare,PM,Go/No-Go; runbooks; pager rotation; handover,Signed Go; hypercare calendar set,Week2-D10,6
