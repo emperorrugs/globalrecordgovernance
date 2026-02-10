@@ -1,0 +1,13 @@
+Deployment,Benefit Area,Per‑Org USD,Orgs,Total USD
+Canada (national),Audit prep time saved,72000.0,120,8640000.0
+Canada (national),Incident forensics speed,37500.0,120,4500000.0
+Canada (national),Regulatory fines risk down,12500.0,120,1500000.0
+Canada (national),Breach likelihood down (PII minimization),18750.0,120,2250000.0
+Canada (national),Ops toil reduced (change evidence),65000.0,120,7800000.0
+Canada (national),Faster partner onboarding,18000.0,120,2160000.0
+Worldwide,Audit prep time saved,72000.0,1500,108000000.0
+Worldwide,Incident forensics speed,37500.0,1500,56250000.0
+Worldwide,Regulatory fines risk down,12500.0,1500,18750000.0
+Worldwide,Breach likelihood down (PII minimization),18750.0,1500,28125000.0
+Worldwide,Ops toil reduced (change evidence),65000.0,1500,97500000.0
+Worldwide,Faster partner onboarding,18000.0,1500,27000000.0

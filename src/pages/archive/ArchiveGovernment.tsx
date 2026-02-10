@@ -379,6 +379,79 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "GOV-028", title: "DPI Deployment Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/dpi_deploy_kit_20260130_231918.zip",
+    content: (
+      <>
+        <p>Complete deployment kit for institutional DPI rollout including configuration templates, integration guides, and operational checklists.</p>
+        <p className="font-medium text-foreground">Ready-to-use deployment package for pilot and scale engagements. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-029", title: "DPI Pilot Starter Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/dpi_pilot_starter_20260130_231249.zip",
+    content: (
+      <>
+        <p>Starter package for 90-day pilot engagements including scope templates, milestone definitions, and initial configuration guides.</p>
+        <p className="font-medium text-foreground">Designed for rapid institutional onboarding. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-030", title: "DPI Pilot — Full Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
+    downloadPath: "/documents/dpi_pilot_FULL_20260131_061641.zip",
+    content: (
+      <>
+        <p>Comprehensive pilot package with all governance, technical, and operational materials for a complete 90-day pilot engagement.</p>
+        <p className="font-medium text-foreground">Full institutional pilot package including acceptance criteria and reporting templates. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-031", title: "DPI Upgrades — Complete Archive", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "January 2026",
+    downloadPath: "/documents/dpi_upgrades_ALL_20260131_054630.zip",
+    content: (
+      <>
+        <p>Complete archive of all DPI system upgrades, patches, and configuration changes applied through January 2026.</p>
+        <p className="font-medium text-foreground">Full upgrade history for audit and compliance review. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-032", title: "GRGF DPI Final v4 — Hardest Tests Passed", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "January 2026",
+    downloadPath: "/documents/GRGF_DPI_FINAL_v4_Hardest_Tests_Passed_2026-01-30.zip",
+    content: (
+      <>
+        <p>Final v4 release archive documenting successful completion of the most rigorous validation tests across security, integrity, and governance logic.</p>
+        <p className="font-medium text-foreground">Formal test evidence package for procurement and audit review. (ZIP archive)</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-033", title: "Value Breakdown — Per-Organization Benefits (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
+    downloadPath: "/documents/dpi_value_breakdown_expected.csv",
+    content: (
+      <>
+        <p>Detailed per-organization benefit analysis across six categories: audit prep time saved, incident forensics speed, regulatory fines risk reduction, breach likelihood reduction, ops toil reduction, and faster partner onboarding.</p>
+        <p><strong>Canada (120 orgs):</strong> $26.85M total · <strong>Worldwide (1,500 orgs):</strong> $335.6M total</p>
+        <p className="font-medium text-foreground">Granular ROI data for institutional business case development.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-034", title: "Value Breakdown — Segment Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
+    downloadPath: "/documents/dpi_value_common_breakdown_expected.csv",
+    content: (
+      <>
+        <p>Segment-level value analysis by organization size:</p>
+        <p><strong>Canada:</strong> Large orgs (25) — $625M · SMEs (95) — $142.5M</p>
+        <p><strong>Worldwide:</strong> Large orgs (300) — $7.5B · SMEs (1,200) — $1.8B</p>
+        <p className="font-medium text-foreground">Total projected annual benefit: $767.5M (Canada) · $9.3B (Worldwide).</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -398,7 +471,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">27 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">34 DOCUMENTS</span>
       </div>
     </div>
 
