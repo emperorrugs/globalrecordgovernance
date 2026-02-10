@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import {
-  Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck, Monitor,
+  Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck, Monitor, HelpCircle, ClipboardCheck, Search,
   ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle, FileText, AlertTriangle, Building2,
 } from "lucide-react";
 import { useState } from "react";
@@ -27,6 +27,9 @@ const navItems = [
   { title: "Executive Dossier", path: "/dossier", icon: FileText },
   { title: "Briefing Request", path: "/briefing", icon: Lock },
   { title: "Governance Interface", path: "/governance-interface", icon: Monitor },
+  { title: "Critical Questions", path: "/critical-questions", icon: HelpCircle },
+  { title: "Readiness", path: "/readiness", icon: ClipboardCheck },
+  { title: "Validation Pathway", path: "/validation", icon: Search },
   { title: "Simulation", path: "/simulation", icon: Play },
   { title: "Systems", path: "/systems", icon: Cpu },
   { title: "Processes", path: "/processes", icon: GitBranch },

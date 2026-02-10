@@ -30,6 +30,9 @@ import CanadaDeployment from "./pages/CanadaDeployment";
 import GovernanceEthics from "./pages/GovernanceEthics";
 import ExecutiveDossier from "./pages/ExecutiveDossier";
 import GovernanceInterface from "./pages/GovernanceInterface";
+import CriticalQuestions from "./pages/CriticalQuestions";
+import InstitutionalReadiness from "./pages/InstitutionalReadiness";
+import ValidationPathway from "./pages/ValidationPathway";
 
 // Standalone governance pages
 import Systems from "./pages/Systems";
@@ -77,6 +80,9 @@ const App = () => (
             <Route path="/ethics" element={<AppLayout><GovernanceEthics /></AppLayout>} />
             <Route path="/dossier" element={<AppLayout><ExecutiveDossier /></AppLayout>} />
             <Route path="/governance-interface" element={<AppLayout><GovernanceInterface /></AppLayout>} />
+            <Route path="/critical-questions" element={<AppLayout><CriticalQuestions /></AppLayout>} />
+            <Route path="/readiness" element={<AppLayout><InstitutionalReadiness /></AppLayout>} />
+            <Route path="/validation" element={<AppLayout><ValidationPathway /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
