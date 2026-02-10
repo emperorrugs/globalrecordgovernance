@@ -249,6 +249,86 @@ const documents: DocEntry[] = [
       </>
     ),
   },
+  {
+    id: "GOV-015", title: "System Data-Flow Architecture", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
+    downloadPath: "/documents/1_Data_Flow_Architecture.md",
+    content: (
+      <>
+        <p>End-to-end flow from source systems to GRGF custody, retention, access, and disclosure.</p>
+        <p className="font-medium text-foreground">Includes minimization, pseudonymization, and boundary controls.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-016", title: "Threat Model (STRIDE)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/2_Threat_Model_STRIDE.md",
+    content: (
+      <>
+        <p>Analyzes spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats against GRGF.</p>
+        <p className="font-medium text-foreground">Includes risk treatment plan.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-017", title: "Connector Minimization Standard", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/3_Connector_Minimization_Standard.md",
+    content: (
+      <>
+        <p>Defines mandatory exclusion rules for personal and operational data.</p>
+        <p className="font-medium text-foreground">Ensures least-collection-by-default.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-018", title: "Chain of Custody & Legal Hold", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
+    downloadPath: "/documents/4_Chain_of_Custody_OPS.md",
+    content: (
+      <>
+        <p>Defines evidence custody, integrity, disclosure, and court survivability procedures.</p>
+        <p className="font-medium text-foreground">Ensures records meet legal admissibility standards.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-019", title: "Interoperability Profile", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
+    downloadPath: "/documents/5_Interoperability_Profile.md",
+    content: (
+      <>
+        <p>Canonical schemas, APIs, versioning, and conformance testing framework.</p>
+        <p className="font-medium text-foreground">Ensures cross-system and cross-jurisdiction interoperability.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-020", title: "Resilience & Disaster Recovery", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/6_Resilience_RTO_RPO_DR.md",
+    content: (
+      <>
+        <p>Defines RTO/RPO targets, integrity recovery procedures, and offline survivability.</p>
+        <p className="font-medium text-foreground">Ensures continuity under adverse conditions.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-021", title: "Pilot SOW & Acceptance Criteria", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
+    downloadPath: "/documents/7_Pilot_SOW_Acceptance.md",
+    content: (
+      <>
+        <p>Defines scope, milestones, security/privacy gates, and success metrics for the 90-day pilot engagement.</p>
+        <p className="font-medium text-foreground">Formal statement of work with acceptance criteria.</p>
+      </>
+    ),
+  },
+  {
+    id: "GOV-022", title: "Independent Assurance Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
+    downloadPath: "/documents/8_Independent_Assurance_Plan.md",
+    content: (
+      <>
+        <p>External audits, penetration testing, SOC-equivalent assurance, and reporting cadence.</p>
+        <p className="font-medium text-foreground">Ensures continuous third-party validation of GRGF integrity.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveGovernment = () => (
@@ -268,7 +348,7 @@ const ArchiveGovernment = () => (
     <div className="px-8 md:px-12 lg:px-16 pt-6">
       <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · AUTHORITATIVE INITIAL ARCHIVE · FEBRUARY 2026</span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">14 DOCUMENTS</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">22 DOCUMENTS</span>
       </div>
     </div>
 
