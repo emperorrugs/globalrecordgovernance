@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function InstitutionalFooter() {
   return (
     <footer className="border-t border-border bg-card/30 px-8 py-10 md:px-12 lg:px-16">
@@ -34,11 +36,11 @@ export function InstitutionalFooter() {
         </div>
         <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
           <p className="text-[10px] text-muted-foreground/50 tracking-wide uppercase">
-            GRGF · Global Record Governance Framework · Digital Public Infrastructure · All content is public, citable, and non-proprietary.
+            GRGF · Governance Framework – Reference Website · No personal data collected · Simulation and explanation only
           </p>
-          <a href="/source-of-truth" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
+          <Link to="/source-of-truth" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
             Source of Truth →
-          </a>
+          </Link>
         </div>
       </div>
     </footer>

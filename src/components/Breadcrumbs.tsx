@@ -3,21 +3,12 @@ import { ChevronRight } from "lucide-react";
 
 const routeLabels: Record<string, string> = {
   "/": "Home",
-  "/what-is-grgf": "What Is GRGF",
-  "/architecture": "How It Works",
-  "/simulator": "Simulator",
-  "/verification": "Verification",
-  "/use-cases": "Use Cases",
-  "/countries": "Countries",
-  "/academy": "Academy",
-  "/archive": "Documents",
+  "/about": "About GRGF",
+  "/how-it-works": "How It Works",
   "/governance": "Governance",
-  "/security": "Security",
-  "/origin": "Attribution",
-  "/contact": "Contact",
-  "/framework": "Framework",
-  "/systems": "Systems",
-  "/processes": "Processes",
+  "/simulation": "Simulation",
+  "/dashboards": "Dashboards",
+  "/source-of-truth": "Source of Truth",
 };
 
 export function Breadcrumbs() {
