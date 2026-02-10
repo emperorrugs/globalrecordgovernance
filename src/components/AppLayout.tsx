@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck,
-  ChevronLeft, ChevronRight,
+  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -13,12 +13,13 @@ import { Switch } from "@/components/ui/switch";
 
 const navItems = [
   { title: "Home", path: "/", icon: Home },
-  { title: "About GRGF", path: "/about", icon: BookOpen },
-  { title: "How It Works", path: "/how-it-works", icon: Layers },
-  { title: "Governance", path: "/governance", icon: Shield },
   { title: "Simulation", path: "/simulation", icon: Play },
-  { title: "Dashboards", path: "/dashboards", icon: BarChart3 },
-  { title: "Source of Truth", path: "/source-of-truth", icon: FileCheck },
+  { title: "Systems", path: "/systems", icon: Cpu },
+  { title: "Processes", path: "/processes", icon: GitBranch },
+  { title: "Blueprints", path: "/blueprints", icon: Layers },
+  { title: "Pilot Programme", path: "/pilot", icon: Globe },
+  { title: "Academy", path: "/academy", icon: GraduationCap },
+  { title: "Digital Archive", path: "/archive", icon: Shield },
 ];
 
 export function AppLayout({ children }: { children: React.ReactNode }) {

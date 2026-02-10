@@ -140,6 +140,14 @@ const Index = () => (
             <Info className="h-4 w-4" />
             Digital Archive
           </Link>
+          <Link to="/blueprints" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
+            <Layers className="h-4 w-4" />
+            Technical Blueprints
+          </Link>
+          <Link to="/pilot" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
+            <Globe className="h-4 w-4" />
+            90-Day Pilot
+          </Link>
         </div>
         <div className="mt-12 flex justify-center">
           <a href="#what-grgf-is" className="text-muted-foreground/40 hover:text-accent transition-colors">
