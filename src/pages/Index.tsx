@@ -520,6 +520,9 @@ const Index = () => (
         <p className="text-sm text-muted-foreground leading-relaxed mb-3">
           It enhances existing digital public infrastructure without replacing national systems.
         </p>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+          GRGF is prepared for structured pilot evaluation, independent technical review, and institutional validation prior to national deployment.
+        </p>
         <p className="text-sm text-accent font-serif font-semibold italic">
           Trust becomes structurally verifiable.
         </p>
