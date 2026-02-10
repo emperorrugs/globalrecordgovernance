@@ -1,31 +1,148 @@
-import { FileText, ChevronRight, Lock, ShieldAlert } from "lucide-react";
+import { useState } from "react";
+import { Lock, ChevronDown, ChevronRight, ShieldAlert } from "lucide-react";
 
-const documents = [
-  { id: "LIP-001", title: "Inventor Attribution (Tarek Wahid)", desc: "Formal attribution record establishing Tarek Wahid as the inventor and owner of the Global Record Governance Framework." },
-  { id: "LIP-002", title: "Intellectual Property Scope", desc: "Comprehensive definition of the intellectual property boundaries, protected elements, and derivative work limitations." },
-  { id: "LIP-003", title: "Originality & Non-Substitutability", desc: "Evidence and documentation establishing the originality and unique positioning of GRGF among governance frameworks." },
-  { id: "LIP-004", title: "Governance Authority Proof", desc: "Formal proof chain demonstrating the framework's governance authority model and its structural independence." },
-  { id: "LIP-005", title: "Record Integrity & Immutability Logic", desc: "Technical and governance documentation of the immutability model used for sealed governance records." },
-  { id: "LIP-006", title: "Licensing & Usage Principles", desc: "Principles governing how GRGF may be licensed, referenced, or adopted by institutions and sovereign entities." },
-  { id: "LIP-007", title: "Controlled Disclosure Rules", desc: "Rules and procedures governing the controlled release of sensitive governance materials to authorized institutions." },
+interface DocEntry {
+  id: string;
+  title: string;
+  updated: string;
+  content: React.ReactNode;
+}
+
+function ExpandableDoc({ doc }: { doc: DocEntry }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="governance-card opacity-90">
+      <button onClick={() => setOpen(!open)} className="w-full text-left flex items-start gap-4">
+        <Lock className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-4">
+            <h3 className="font-serif text-sm font-semibold">{doc.title}</h3>
+            {open ? <ChevronDown className="h-4 w-4 text-accent shrink-0 mt-0.5" /> : <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 mt-0.5" />}
+          </div>
+          <div className="mt-2 flex items-center gap-3">
+            <span className="hash-text">{doc.id}</span>
+            <span className="text-muted-foreground/30">·</span>
+            <span className="text-[10px] text-destructive/70 font-mono">CONTROLLED</span>
+            <span className="text-muted-foreground/30">·</span>
+            <span className="text-[10px] text-muted-foreground/60">{doc.updated}</span>
+          </div>
+        </div>
+      </button>
+      {open && (
+        <div className="mt-4 ml-8 border-l-2 border-accent/20 pl-5 text-sm text-muted-foreground leading-relaxed space-y-4">
+          {doc.content}
+        </div>
+      )}
+    </div>
+  );
+}
+
+const documents: DocEntry[] = [
+  {
+    id: "LIP-001", title: "Inventor Attribution (Tarek Wahid)", updated: "February 2026",
+    content: (
+      <>
+        <p>The Global Record Governance Framework (GRGF) was conceived, designed, and architected by <strong>Tarek Wahid</strong>.</p>
+        <p>Inventorship refers to:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Conceptual architecture</li>
+          <li>Governance logic</li>
+          <li>Record-of-omission framework</li>
+          <li>DPI trust-layer design</li>
+        </ul>
+        <p className="font-medium text-foreground">This attribution is mandatory and must appear in all derivative works, deployments, and institutional references.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-002", title: "Intellectual Property Scope", updated: "February 2026",
+    content: (
+      <>
+        <p>Protected elements include:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>System architecture and layer model</li>
+          <li>Record types and event models</li>
+          <li>Governance logic and authority framework</li>
+          <li>Verification and audit concepts</li>
+          <li>Evidence Backbone design</li>
+        </ul>
+        <p>GRGF may be licensed for public interest use under defined terms. Commercialization does not compromise governance neutrality.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-003", title: "Originality & Non-Substitutability", updated: "February 2026",
+    content: (
+      <>
+        <p>GRGF introduces a novel category: <strong>governance record-of-record infrastructure</strong>.</p>
+        <p>It is not a registry, workflow engine, or analytics system. It occupies a unique position in the governance technology landscape that has no direct equivalent.</p>
+        <p className="font-medium text-foreground">This originality is documented and preserved as part of the intellectual property record.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-004", title: "Governance Authority Proof", updated: "February 2026",
+    content: (
+      <>
+        <p>Formal proof chain demonstrating the framework's governance authority model and its structural independence from any single institution, vendor, or government.</p>
+        <p>Authority derives exclusively from documented rules, sealed records, and human accountability — never from software execution.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-005", title: "Record Integrity & Immutability Logic", updated: "February 2026",
+    content: (
+      <>
+        <p>The immutability model ensures:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Append-only record logic</li>
+          <li>Referential integrity across governance events</li>
+          <li>Separation between record existence and record interpretation</li>
+          <li>Cryptographic integrity proofs (hash-sealing)</li>
+        </ul>
+        <p className="font-medium text-foreground">Records are never deleted. They may only be superseded by new records.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-006", title: "Licensing & Usage Principles", updated: "February 2026",
+    content: (
+      <>
+        <p>Licensing prioritizes:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Public benefit</li>
+          <li>Institutional integrity</li>
+          <li>Sovereign control</li>
+        </ul>
+        <p>Institutions may reference, adopt, and align to GRGF under terms that preserve governance neutrality and inventor attribution.</p>
+      </>
+    ),
+  },
+  {
+    id: "LIP-007", title: "Controlled Disclosure Rules", updated: "February 2026",
+    content: (
+      <>
+        <p>Certain materials are restricted to protect IP, prevent misuse, and preserve integrity.</p>
+        <p className="font-medium text-foreground">Disclosure is governed, not discretionary.</p>
+        <p>Access to controlled documents requires formal institutional authorization through official channels. Unauthorized reproduction or distribution is prohibited.</p>
+      </>
+    ),
+  },
 ];
 
 const ArchiveLegalIP = () => (
   <div className="animate-fade-in">
     <header className="border-b border-border bg-card/50 px-8 py-12 md:px-12 lg:px-16">
       <div className="max-w-4xl">
-        <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Legal & IP Archive</p>
-        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">
-          Legal, IP & Assurance
-        </h1>
+        <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Legal & IP Archive · Section 08</p>
+        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">Legal, IP & Assurance</h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Protection, proof, and ownership documentation. This section contains controlled materials related to intellectual property, legal authority, and governance assurance. Access is restricted to authorized institutional stakeholders.
+          Protection, proof, and ownership documentation. This section contains controlled materials related to intellectual property, legal authority, and governance assurance.
         </p>
         <div className="section-divider mt-6" />
       </div>
     </header>
 
-    {/* Access banner */}
     <div className="px-8 md:px-12 lg:px-16 py-4">
       <div className="max-w-5xl bg-destructive/10 border border-destructive/20 rounded-sm px-4 py-3 flex items-center gap-3">
         <ShieldAlert className="h-4 w-4 text-destructive shrink-0" />
@@ -35,33 +152,25 @@ const ArchiveLegalIP = () => (
       </div>
     </div>
 
+    <div className="px-8 md:px-12 lg:px-16">
+      <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
+        <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">VERSION 1.0.0 · CONTROLLED ARCHIVE · FEBRUARY 2026</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">7 DOCUMENTS</span>
+      </div>
+    </div>
+
     <section className="px-8 py-6 md:px-12 lg:px-16">
       <div className="max-w-5xl space-y-3">
-        {documents.map((doc) => (
-          <div key={doc.id} className="governance-card opacity-80">
-            <div className="flex items-start gap-4">
-              <Lock className="h-4 w-4 text-muted-foreground shrink-0 mt-1" />
-              <div className="flex-1 min-w-0">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="font-serif text-sm font-semibold">{doc.title}</h3>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground/30 shrink-0 mt-0.5" />
-                </div>
-                <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{doc.desc}</p>
-                <div className="mt-3 flex items-center gap-3">
-                  <span className="hash-text">{doc.id}</span>
-                  <span className="text-muted-foreground/30">·</span>
-                  <span className="text-[10px] text-destructive/70 font-mono">RESTRICTED</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
+        {documents.map((doc) => <ExpandableDoc key={doc.id} doc={doc} />)}
 
         <div className="mt-8 governance-card border-l-2 border-l-accent">
           <p className="text-sm text-foreground leading-relaxed">
             Access to controlled documents requires formal institutional authorization. For access requests, please contact the GRGF governance office through official institutional channels.
           </p>
         </div>
+      </div>
+      <div className="max-w-5xl mt-8 text-[10px] font-mono text-muted-foreground/40 text-right">
+        GRGF DIGITAL ARCHIVE · LEGAL & IP SECTION · CONTROLLED
       </div>
     </section>
   </div>
