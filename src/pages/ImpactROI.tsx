@@ -146,6 +146,76 @@ const ImpactROI = () => (
       </p>
     </Section>
 
+    {/* NPV & Fiscal Framing */}
+    <Section title="Net Present Value & Fiscal Risk Framing" className="border-t border-border">
+      <div className="grid gap-6 lg:grid-cols-2">
+        <div className="governance-card">
+          <h4 className="font-serif text-sm font-semibold mb-3">NPV Methodology</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+            Net Present Value (NPV) discounts all future benefits and costs to present-day value using a 5% social discount rate aligned with Treasury Board guidance. This ensures fiscal projections reflect time-value-of-money and institutional risk appetite.
+          </p>
+          <ul className="space-y-1.5 text-xs text-muted-foreground">
+            {[
+              "Social discount rate: 5% (aligned with PSPC guidance)",
+              "Deployment costs front-loaded in Years 1–3",
+              "Benefits modeled from operational year onward",
+              "Conservative: only fraud reduction and audit savings included",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2"><span className="text-accent mt-0.5 shrink-0">·</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="governance-card border-l-2 border-l-accent">
+          <h4 className="font-serif text-sm font-semibold mb-3">Fiscal Risk Mitigation Framing</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+            GRGF should be evaluated not as a technology investment but as fiscal risk mitigation infrastructure. The threshold for value creation is exceptionally low:
+          </p>
+          <div className="bg-card border border-border rounded-sm p-4 text-center mb-3">
+            <p className="text-2xl font-serif font-semibold text-accent">0.3%</p>
+            <p className="text-xs text-muted-foreground mt-1">Integrity improvement sufficient to offset full deployment cost</p>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            Even marginal improvements in procurement integrity, omission detection, or audit efficiency generate returns that exceed the total cost of deployment. This positions GRGF as a fiscally conservative investment with asymmetric upside potential.
+          </p>
+        </div>
+      </div>
+    </Section>
+
+    {/* Sensitivity Analysis */}
+    <Section title="Sensitivity Analysis" className="border-t border-border">
+      <div className="governance-card overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Variable</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Low Scenario</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Medium Scenario</th>
+              <th className="text-left py-2 text-muted-foreground/70 font-medium">High Scenario</th>
+            </tr>
+          </thead>
+          <tbody className="text-muted-foreground">
+            {[
+              ["Fraud detection rate", "30%", "50%", "75%"],
+              ["Audit cycle reduction", "15%", "25%", "40%"],
+              ["Deployment cost variance", "+50%", "Base", "-20%"],
+              ["Annual net benefit (Canada)", "$450M", "$1.51B", "$2.8B"],
+              ["10-year NPV", "$1.2B", "$4.53B", "$8.1B"],
+            ].map(([variable, low, med, high]) => (
+              <tr key={variable} className="border-b border-border/50">
+                <td className="py-2 pr-4 font-medium text-foreground">{variable}</td>
+                <td className="py-2 pr-4 font-mono">{low}</td>
+                <td className="py-2 pr-4 font-mono text-accent">{med}</td>
+                <td className="py-2 font-mono">{high}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="mt-3 text-xs text-muted-foreground italic">
+        All scenarios maintain positive NPV. Results remain viable even under worst-case assumptions across all variables simultaneously.
+      </p>
+    </Section>
+
     {/* Attribution */}
     <Section className="border-t border-border bg-card/30">
       <p className="text-xs text-muted-foreground leading-relaxed">

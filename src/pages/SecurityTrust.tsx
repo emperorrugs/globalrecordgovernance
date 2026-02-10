@@ -123,6 +123,44 @@ const SecurityTrust = () => (
       </div>
     </Section>
 
+    {/* Insider Threat & Deterministic Denial */}
+    <Section title="Insider Threat Mitigation" className="border-t border-border">
+      <div className="grid gap-6 lg:grid-cols-2">
+        <div className="governance-card">
+          <Shield className="h-5 w-5 text-accent mb-3" />
+          <h4 className="font-serif text-sm font-semibold mb-2">Insider Threat Model</h4>
+          <ul className="space-y-1.5 text-xs text-muted-foreground">
+            {[
+              "No single operator can access, modify, or suppress sealed records",
+              "Dual-authority requirement for all critical governance operations",
+              "All administrative actions logged as governance records themselves",
+              "Privileged access produces sealed audit evidence automatically",
+              "Separation between infrastructure operators and governance custodians",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2"><span className="text-accent mt-0.5 shrink-0">·</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="governance-card">
+          <Lock className="h-5 w-5 text-accent mb-3" />
+          <h4 className="font-serif text-sm font-semibold mb-2">Deterministic Denial Logic</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+            Every denied action produces both a machine-readable denial code and a human-readable explanation:
+          </p>
+          <ul className="space-y-1.5 text-xs text-muted-foreground">
+            {[
+              "Denial reason includes specific policy rule that triggered rejection",
+              "No silent failures — all denials are logged and sealed",
+              "Denial evidence is independently auditable",
+              "No administrative override pathway outside governance protocols",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-2"><span className="text-accent mt-0.5 shrink-0">·</span>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </Section>
+
     {/* Vulnerability Disclosure & External Audit */}
     <Section title="External Audit Readiness" className="border-t border-border">
       <div className="grid gap-6 lg:grid-cols-2">
