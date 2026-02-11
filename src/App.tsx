@@ -46,6 +46,8 @@ import ControlledAccess from "./pages/ControlledAccess";
 import ExecutiveSummary from "./pages/ExecutiveSummary";
 import OutreachMessages from "./pages/OutreachMessages";
 import ImpactModeling from "./pages/ImpactModeling";
+import TheProblem from "./pages/TheProblem";
+import Contact from "./pages/Contact";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -109,6 +111,8 @@ const App = () => (
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
             <Route path="/outreach" element={<AppLayout><OutreachMessages /></AppLayout>} />
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
+            <Route path="/the-problem" element={<AppLayout><TheProblem /></AppLayout>} />
+            <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
@@ -131,7 +135,6 @@ const App = () => (
             <Route path="/countries" element={<Navigate to="/" replace />} />
             <Route path="/security" element={<Navigate to="/security-trust" replace />} />
             <Route path="/origin" element={<Navigate to="/" replace />} />
-            <Route path="/contact" element={<Navigate to="/stakeholders" replace />} />
             <Route path="/framework" element={<Navigate to="/governance-framework" replace />} />
             <Route path="/use-cases" element={<Navigate to="/stakeholders" replace />} />
 

@@ -43,10 +43,16 @@ export function InstitutionalFooter() {
           <p className="text-[10px] text-muted-foreground/50 tracking-wide uppercase">
             GRGF · Governance Integrity Infrastructure · Reference Interface
           </p>
-          <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
-            Controlled Access →
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/security-trust" className="text-[10px] text-muted-foreground/70 hover:text-accent font-mono uppercase tracking-wider">Trust Center</Link>
+            <Link to="/sitemap" className="text-[10px] text-muted-foreground/70 hover:text-accent font-mono uppercase tracking-wider">Version Registry</Link>
+            <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">Controlled Access →</Link>
+            <Link to="/contact" className="text-[10px] text-muted-foreground/70 hover:text-accent font-mono uppercase tracking-wider">Contact</Link>
+          </div>
         </div>
+        <p className="mt-4 text-[9px] text-muted-foreground/30 leading-relaxed">
+          Modeled projections — pilot validation required. Not independently audited.
+        </p>
       </div>
     </footer>
   );

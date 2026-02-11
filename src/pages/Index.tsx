@@ -14,6 +14,10 @@ const sections = [
   { id: "category", label: "What It Is" },
   { id: "leverage", label: "Leverage" },
   { id: "architecture", label: "Architecture" },
+  { id: "stakeholders", label: "Stakeholders" },
+  { id: "kpis", label: "Pilot KPIs" },
+  { id: "roadmap", label: "Roadmap" },
+  { id: "trust", label: "Trust" },
   { id: "moat", label: "Defensibility" },
   { id: "execution", label: "Execution" },
   { id: "scaling", label: "Scale" },
@@ -98,26 +102,21 @@ const Index = () => (
     {/* ─── 1. HERO ─── */}
     <header id="hero" className="scroll-mt-14 border-b border-border bg-card/50 px-8 py-20 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto">
-        <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          Modern civilization has scaled compute, payments, communication, and AI — but has not scaled verifiable institutional accountability.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          Institutions rely on databases, documents, and audit cycles — not deterministic infrastructure.
-        </p>
-        <p className="text-xs font-mono text-accent uppercase tracking-[0.2em] mb-4">
-          The Missing Layer
-        </p>
+        <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-sm mb-6">
+          <span className="w-2 h-2 bg-accent rounded-full" />
+          <span className="text-[10px] font-mono text-accent uppercase tracking-wider">Pilot Evaluation Phase · Controlled Access</span>
+        </div>
         <h1 className="institutional-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-          A Global Governance
+          Global Records &amp;
           <br />
-          Integrity Engine
+          Governance Framework
         </h1>
         <p className="mt-6 text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl">
-          GRGF turns institutional action into cryptographically verifiable event. Deterministic. Append-only. Independently auditable.
+          Deterministic governance integrity infrastructure for verifiable policy execution and cryptographic record integrity.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/pilot" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
-            Request Pilot Evaluation
+          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            Request Pilot Access
           </Link>
           <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
             View Architecture
@@ -267,6 +266,109 @@ const Index = () => (
       </div>
       <Link to="/architecture" className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
         Full Architecture Detail <ArrowRight className="h-3 w-3" />
+      </Link>
+    </Sec>
+
+    {/* ─── STAKEHOLDER TILES ─── */}
+    <Sec id="stakeholders" className="border-b border-border bg-card/30">
+      <Title sub="Structured evaluation pathways for each institutional role.">Who It Serves</Title>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { title: "CIO / CTO", desc: "Technical architecture evaluation and integration assessment" },
+          { title: "Treasury / Finance", desc: "Fiscal impact modeling and break-even analysis" },
+          { title: "Auditor General", desc: "Audit reconstruction, determinism verification, evidence integrity" },
+          { title: "Procurement Authority", desc: "Procurement leakage simulation and integrity improvement modeling" },
+          { title: "Anti-Corruption Bodies", desc: "Structural integrity enforcement and omission detection" },
+          { title: "Multilateral Institutions", desc: "DPI alignment, federation readiness, cross-border verification" },
+          { title: "Regulators", desc: "Policy enforcement determinism and compliance monitoring" },
+          { title: "Development Banks", desc: "GovTech investment thesis and sovereign risk reduction" },
+        ].map(({ title, desc }) => (
+          <div key={title} className="governance-card">
+            <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
+            <p className="text-[11px] text-muted-foreground leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </Sec>
+
+    {/* ─── PILOT KPIs ─── */}
+    <Sec id="kpis" className="border-b border-border">
+      <Title sub="Measurable criteria for controlled pilot evaluation.">What You Can Evaluate</Title>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { kpi: "100%", label: "Policy Determinism Rate", desc: "Identical inputs produce identical outputs — every execution" },
+          { kpi: "100%", label: "Integrity Verification Success", desc: "All sealed records independently verifiable by any authorized party" },
+          { kpi: "<30 min", label: "Audit Reconstruction Time", desc: "Full decision-chain reconstruction from any sealed governance event" },
+          { kpi: "Structured", label: "Denial Clarity Index", desc: "Machine-readable + human-readable reason for every denied action" },
+          { kpi: "Complete", label: "Trace Completeness", desc: "Every action, denial, and omission captured in append-only evidence chain" },
+        ].map(({ kpi, label, desc }) => (
+          <div key={label} className="governance-card">
+            <p className="text-2xl font-serif font-semibold text-accent mb-1">{kpi}</p>
+            <h4 className="text-xs font-mono text-foreground uppercase tracking-wider mb-1">{label}</h4>
+            <p className="text-[11px] text-muted-foreground leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+      <Link to="/pilot" className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline">
+        View Pilot Evaluation Details <ArrowRight className="h-3 w-3" />
+      </Link>
+    </Sec>
+
+    {/* ─── MATURITY ROADMAP ─── */}
+    <Sec id="roadmap" className="border-b border-border bg-card/30">
+      <Title>From Concept to Engine</Title>
+      <div className="space-y-0 max-w-2xl">
+        {[
+          { version: "v0.1", title: "Pilot Node", status: "Current", desc: "Controlled evaluation edition — deterministic enforcement, hash chaining, audit reconstruction" },
+          { version: "v1.0", title: "Hardened Pilot", status: "Planned", desc: "Independent security audit, production controls, institutional onboarding" },
+          { version: "v2.0", title: "Federation-Ready", status: "Roadmap", desc: "Cross-border verification protocol, multi-node federation, sovereign interoperability" },
+        ].map((s, i) => (
+          <div key={s.version}>
+            <div className="flex items-center gap-4 py-4">
+              <div className="shrink-0 w-10 h-10 bg-primary text-primary-foreground rounded-sm flex items-center justify-center text-xs font-mono font-bold">
+                {s.version}
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h4 className="font-serif text-sm font-semibold">{s.title}</h4>
+                  <span className={`text-[9px] font-mono tracking-wider px-1.5 py-0.5 rounded-sm ${s.status === "Current" ? "bg-accent/20 text-accent" : "bg-muted text-muted-foreground"}`}>
+                    {s.status.toUpperCase()}
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground mt-0.5">{s.desc}</p>
+              </div>
+            </div>
+            {i < 2 && <div className="ml-5 w-px h-4 bg-border" />}
+          </div>
+        ))}
+      </div>
+    </Sec>
+
+    {/* ─── TRUST SIGNALS ─── */}
+    <Sec id="trust" className="border-b border-border">
+      <Title>Trust Signals</Title>
+      <div className="grid gap-4 sm:grid-cols-3 mb-6">
+        <div className="governance-card">
+          <h4 className="font-serif text-sm font-semibold mb-2">Transparent Limitations</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            Pilot-stage system. Not yet independently audited. Production deployment requires third-party security review. Transparency in limitations is intentional.
+          </p>
+        </div>
+        <div className="governance-card">
+          <h4 className="font-serif text-sm font-semibold mb-2">Security Posture</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            Zero-trust architecture. No administrative override. Append-only evidence backbone. Independent audit roadmap in progress.
+          </p>
+        </div>
+        <div className="governance-card">
+          <h4 className="font-serif text-sm font-semibold mb-2">Standards Alignment</h4>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            World Bank DPI principles. OECD governance standards. ISO 27001 alignment. NIST framework mapping. Not certification — structured alignment.
+          </p>
+        </div>
+      </div>
+      <Link to="/security-trust" className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
+        View Trust Center <ArrowRight className="h-3 w-3" />
       </Link>
     </Sec>
 
@@ -440,15 +542,14 @@ const Index = () => (
     {/* ─── POSITIONING ─── */}
     <Sec id="positioning" className="border-b border-border bg-card/50">
       <div className="text-center max-w-2xl mx-auto">
-        <p className="text-lg md:text-xl font-serif text-foreground leading-relaxed mb-4">
-          GRGF is a deterministic governance infrastructure layer that makes institutional actions structurally verifiable.
+        <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-4">
+          Trust should not rely on reputation.
+          <br />
+          It should rely on structure.
         </p>
-        <p className="text-base text-muted-foreground leading-relaxed mb-8">
-          This is the missing operating system for public trust.
-        </p>
-        <div className="flex flex-wrap gap-3 justify-center">
-          <Link to="/pilot" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
-            Request Pilot Evaluation
+        <div className="mt-8 flex flex-wrap gap-3 justify-center">
+          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            Request Pilot Access
           </Link>
           <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
             View Full Architecture
@@ -494,10 +595,16 @@ const Index = () => (
           <p className="text-[10px] text-primary-foreground/30 tracking-wide uppercase">
             GRGF · Governance Integrity Infrastructure · Reference Interface
           </p>
-          <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
-            Controlled Access →
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/security-trust" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Trust Center</Link>
+            <Link to="/sitemap" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Version Registry</Link>
+            <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">Controlled Access →</Link>
+            <Link to="/contact" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Contact</Link>
+          </div>
         </div>
+        <p className="mt-4 text-[9px] text-primary-foreground/20 leading-relaxed">
+          This platform provides scenario-based projections for structured pilot evaluation. Modeled projections — pilot validation required. Not independently audited. All outputs pending institutional verification.
+        </p>
       </div>
     </footer>
   </div>

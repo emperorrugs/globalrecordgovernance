@@ -1,11 +1,12 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { Shield, Lock, Eye, Key, UserCheck, ShieldCheck, Bug, Radio } from "lucide-react";
+import { Shield, Lock, Eye, Key, UserCheck, ShieldCheck, Bug, Radio, AlertTriangle, Mail, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SecurityTrust = () => (
   <div className="animate-fade-in">
     <PageHeader
-      title="Security & Trust Architecture"
-      subtitle="Structural security. No centralized override. No backdoor. No trust assumptions."
+      title="Trust Center"
+      subtitle="Security posture, transparency commitments, and current limitations — stated openly as a measure of institutional integrity."
     />
 
     {/* Threat Model */}
@@ -171,23 +172,78 @@ const SecurityTrust = () => (
       </div>
     </Section>
 
-    {/* External Audit Readiness */}
-    <Section title="External Audit Readiness" className="border-t border-border">
-      <div className="grid gap-6 lg:grid-cols-2">
-        <div className="governance-card border-l-2 border-l-accent">
-          <Bug className="h-5 w-5 text-accent mb-3" />
-          <h4 className="font-serif text-sm font-semibold mb-2">Vulnerability Disclosure</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Responsible disclosure protocol with defined response timelines. Security researchers and auditors can report through controlled channels.
+    {/* Vulnerability Disclosure */}
+    <Section title="Vulnerability Disclosure Policy" className="border-t border-border">
+      <div className="governance-card border-l-2 border-l-accent max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 mb-4">
+          <div className="flex items-start gap-3">
+            <Mail className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-wider mb-1">Report To</p>
+              <p className="text-sm text-foreground">security@globalrecordgovernance.com</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <Clock className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+            <div>
+              <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-wider mb-1">Response SLA</p>
+              <p className="text-sm text-foreground">Acknowledgment within 48 hours</p>
+            </div>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed">
+          Responsible disclosure is welcomed. Security researchers and institutional auditors may report vulnerabilities through the above channel. Reports are triaged by severity and addressed according to the incident response protocol. Reporters will be credited unless anonymity is requested.
+        </p>
+      </div>
+    </Section>
+
+    {/* Current Limitations */}
+    <Section title="Current Limitations" className="border-t border-border">
+      <div className="governance-card border-l-2 border-l-destructive/50 max-w-3xl">
+        <div className="flex items-start gap-3 mb-4">
+          <AlertTriangle className="h-5 w-5 text-destructive/70 shrink-0 mt-0.5" />
+          <p className="text-sm text-foreground font-medium">
+            Transparency in limitations is intentional. Concealing gaps contradicts the framework's integrity principles.
           </p>
         </div>
-        <div className="governance-card border-l-2 border-l-accent">
-          <Radio className="h-5 w-5 text-accent mb-3" />
-          <h4 className="font-serif text-sm font-semibold mb-2">Controlled Distribution</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Security architecture documentation distributed under controlled release protocols. NDA provisions and access logging enforced.
-          </p>
+        <div className="space-y-3">
+          {[
+            { limitation: "Pilot scope only", detail: "The current system is a controlled evaluation edition. It is not deployed in production and does not process real institutional data." },
+            { limitation: "Not yet independently audited", detail: "No third-party security audit has been completed. An independent audit roadmap is in progress with planned engagement of accredited security firms." },
+            { limitation: "Production deployment requires independent review", detail: "Before any production deployment, the system requires formal penetration testing, code audit, and governance review by an independent party." },
+            { limitation: "No formal certification", detail: "Standards alignment (ISO 27001, NIST, SOC 2) is documented but not certified. Certification is planned post-pilot." },
+            { limitation: "Single-node architecture", detail: "Federation and multi-node verification are architecturally designed but not yet implemented. Current evaluation is single-node only." },
+          ].map((item) => (
+            <div key={item.limitation} className="border-l border-border pl-4">
+              <p className="text-xs text-foreground font-semibold mb-0.5">{item.limitation}</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed">{item.detail}</p>
+            </div>
+          ))}
         </div>
+      </div>
+    </Section>
+
+    {/* Planned Audit Roadmap */}
+    <Section title="Independent Audit Roadmap" className="border-t border-border">
+      <div className="space-y-3 max-w-3xl">
+        {[
+          { phase: "Phase 1 — Architecture Review", status: "In Progress", desc: "Independent review of system architecture, data flow, and security design by qualified security architects." },
+          { phase: "Phase 2 — Penetration Testing", status: "Planned", desc: "Formal penetration testing by accredited cybersecurity firm. Scope: API, authentication, hash integrity, role separation." },
+          { phase: "Phase 3 — Policy Engine Audit", status: "Planned", desc: "Independent verification of deterministic policy enforcement. Confirm identical-input/identical-output behavior." },
+          { phase: "Phase 4 — Governance & Ethics Review", status: "Planned", desc: "Review of governance stewardship model, anti-capture clauses, and institutional neutrality commitments." },
+        ].map((item) => (
+          <div key={item.phase} className="governance-card">
+            <div className="flex items-start gap-3">
+              <span className={`text-[10px] font-mono tracking-wider shrink-0 mt-0.5 px-1.5 py-0.5 rounded-sm ${item.status === "In Progress" ? "bg-accent/20 text-accent" : "bg-muted text-muted-foreground"}`}>
+                {item.status.toUpperCase()}
+              </span>
+              <div>
+                <h4 className="font-serif text-sm font-semibold">{item.phase}</h4>
+                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
 
