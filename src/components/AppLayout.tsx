@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck, Monitor, HelpCircle, ClipboardCheck, Search,
-  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle, FileText, AlertTriangle, Building2,
+  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle, FileText, AlertTriangle, Building2, Server,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -34,7 +34,7 @@ const navItems = [
   { title: "Systems", path: "/systems", icon: Cpu },
   { title: "Processes", path: "/processes", icon: GitBranch },
   { title: "Blueprints", path: "/blueprints", icon: Layers },
-  { title: "Pilot Programme", path: "/pilot", icon: Globe },
+  { title: "Pilot Node v0.1", path: "/pilot", icon: Server },
   { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
   { title: "Sitemap", path: "/sitemap", icon: FileCheck },

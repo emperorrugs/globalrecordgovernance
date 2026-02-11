@@ -1,197 +1,276 @@
 import { PageHeader, Section } from "@/components/PageComponents";
 import { Link } from "react-router-dom";
 import {
-  Calendar, DollarSign, Target, FileCheck, Users, Shield,
-  ArrowRight, CheckCircle, HelpCircle, BarChart3, Globe,
-  TrendingUp, Clock, Building2,
+  Shield, Lock, FileCheck, CheckCircle, AlertTriangle,
+  BarChart3, Globe, Server, Eye, Hash, Users, Cpu,
+  ArrowRight, Clock, Building2,
 } from "lucide-react";
 
-const PilotProgramme = () => {
-  return (
-    <div className="animate-fade-in">
-      <PageHeader
-        title="90-Day Pilot Programme"
-        subtitle="A structured institutional engagement to validate GRGF deployment readiness with one public institution and 3–5 decision types."
-      />
+const capabilities = [
+  "Event normalization engine — structured ingestion of governance events",
+  "Deterministic policy engine — rule-based enforcement with no discretionary override",
+  "Append-only ledger — tamper-evident, cryptographically sealed record storage",
+  "SHA-256 hash chaining — continuous integrity verification across record sequences",
+  "Verification endpoint — independent proof validation without system access",
+  "Simulation mode — non-authoritative demonstration of system logic",
+  "Role-based access — cryptographic role separation with no shared credentials",
+];
 
-      {/* Overview */}
-      <Section title="Pilot Overview" className="border-b border-border">
-        <div className="governance-card border-l-2 border-l-accent mb-6">
-          <p className="text-sm text-foreground leading-relaxed">
-            The 90-day pilot is a read-only, non-invasive engagement designed to validate institutional readiness for GRGF adoption. It produces a cryptographically sealed decision ledger, policy-aligned evidence models, an audit simulation, and a final validation report.
-          </p>
-        </div>
+const evaluationScope = [
+  "Deterministic enforcement — verify policy decisions are consistent and repeatable",
+  "Authority validation — confirm role separation prevents unauthorized actions",
+  "Record immutability — attempt modification and verify tamper detection",
+  "Hash integrity — validate cryptographic chain across record sequences",
+  "Audit trace reconstruction — reconstruct decision history from sealed records",
+];
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
+const notIncluded = [
+  "Multi-node federation — single-node evaluation only",
+  "National scale deployment — pilot scope is bounded to 3–5 decision types",
+  "External anchor integration — no third-party timestamping or blockchain anchoring",
+  "Third-party penetration testing — pending independent security audit",
+];
+
+const kpis = [
+  { metric: "Policy enforcement determinism rate", target: "100%", method: "Decision output consistency analysis" },
+  { metric: "Denial clarity index", target: "100%", method: "Machine + human-readable output verification" },
+  { metric: "Ledger integrity validation rate", target: "100%", method: "Cryptographic chain verification" },
+  { metric: "Audit reconstruction time", target: "< 30 minutes", method: "Full trace recovery exercise" },
+  { metric: "Incident trace completeness", target: "100%", method: "End-to-end event correlation sampling" },
+];
+
+const archiveDocs = [
+  { id: "PN-001", title: "Technical Architecture Document", classification: "Level 2 — Institutional", version: "v0.1.0" },
+  { id: "PN-002", title: "Database Schema Description", classification: "Level 3 — Restricted", version: "v0.1.0" },
+  { id: "PN-003", title: "Policy Engine Specification", classification: "Level 2 — Institutional", version: "v0.1.0" },
+  { id: "PN-004", title: "Hash Chain Logic Documentation", classification: "Level 2 — Institutional", version: "v0.1.0" },
+  { id: "PN-005", title: "API Endpoint Specification", classification: "Level 3 — Restricted", version: "v0.1.0" },
+  { id: "PN-006", title: "Deployment Configuration Summary", classification: "Level 3 — Restricted", version: "v0.1.0" },
+  { id: "PN-007", title: "Version Registry Entry", classification: "Level 1 — Public", version: "v0.1.0" },
+];
+
+const PilotProgramme = () => (
+  <div className="animate-fade-in">
+    <PageHeader
+      title="GRGF Pilot Node v0.1 — Controlled Evaluation Edition"
+      subtitle="A minimal viable governance engine designed for structured institutional evaluation prior to national deployment."
+    />
+
+    {/* Purpose */}
+    <Section title="Purpose" className="border-b border-border">
+      <div className="governance-card border-l-2 border-l-accent mb-6">
+        <p className="text-sm text-foreground leading-relaxed">
+          The Pilot Node is a minimal viable governance engine designed for structured institutional evaluation prior to national deployment. It provides a controlled environment where authorised evaluators can validate deterministic enforcement, cryptographic integrity, and audit reconstruction capabilities against real governance scenarios.
+        </p>
+      </div>
+      <div className="governance-card">
+        <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-3">Transparency Statement</p>
+        <div className="grid gap-2 sm:grid-cols-2">
           {[
-            { icon: Calendar, label: "Duration", value: "90 Days" },
-            { icon: Target, label: "Scope", value: "1 Institution, 3–5 Decision Types" },
-            { icon: DollarSign, label: "Indicative Budget", value: "CAD/USD 1–2M" },
-            { icon: FileCheck, label: "Outcome", value: "Go/No-Go Readiness Decision" },
-          ].map(({ icon: Icon, label, value }) => (
-            <div key={label} className="governance-card text-center">
-              <Icon className="h-5 w-5 text-accent mx-auto mb-2" />
-              <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-wider mb-1">{label}</p>
-              <p className="text-sm text-foreground font-semibold">{value}</p>
+            "It is not production-scale",
+            "It is not federated",
+            "It is not yet externally audited",
+            "It is intended for pilot assessment only",
+          ].map((item) => (
+            <div key={item} className="flex items-start gap-2">
+              <AlertTriangle className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground">{item}</p>
             </div>
           ))}
         </div>
-      </Section>
+      </div>
+    </Section>
 
-      {/* Timeline */}
-      <Section title="Pilot Timeline" className="border-b border-border bg-card/30">
-        <div className="space-y-4">
-          {[
-            { week: "Weeks 1–2", title: "Discovery & Scoping", items: ["Map institutional decision workflows", "Identify 3–5 governance decision types", "Define evidence models and policy rules", "Establish baseline audit posture"] },
-            { week: "Weeks 3–6", title: "System Configuration & Integration", items: ["Deploy System A (Evidence Backbone) in read-only mode", "Configure policy engine for selected decision types", "Establish proof publication endpoints", "Begin event ingestion from existing systems"] },
-            { week: "Weeks 7–10", title: "Evidence Collection & Validation", items: ["Capture governance events and generate proofs", "Run omission detection against expected actions", "Produce Continuous Compliance Evidence attestations", "Validate cryptographic integrity of sealed records"] },
-            { week: "Weeks 11–12", title: "Audit Simulation & Report", items: ["Conduct full audit simulation against sealed ledger", "Produce validation report with findings and recommendations", "Present go/no-go institutional readiness decision", "Deliver sealed pilot archive for institutional records"] },
-          ].map((phase, i) => (
-            <div key={phase.week} className="governance-card">
-              <div className="flex items-start gap-4">
-                <div className="shrink-0">
-                  <span className="hash-text">{phase.week}</span>
-                </div>
-                <div>
-                  <h4 className="font-serif text-sm font-semibold mb-2">{phase.title}</h4>
-                  <ul className="space-y-1.5">
-                    {phase.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground">
-                        <CheckCircle className="h-3 w-3 text-accent shrink-0 mt-0.5" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+    {/* Technical Capabilities */}
+    <Section title="Technical Capabilities" className="border-b border-border">
+      <div className="governance-card">
+        <div className="space-y-2">
+          {capabilities.map((cap) => (
+            <div key={cap} className="flex items-start gap-2">
+              <Cpu className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground leading-relaxed">{cap}</p>
             </div>
           ))}
         </div>
-      </Section>
+      </div>
+    </Section>
 
-      {/* Pilot Deliverables */}
-      <Section title="Pilot Deliverables" className="border-b border-border">
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            { icon: Shield, title: "Sealed Decision Ledger", desc: "Cryptographically sealed record of all governance decisions captured during the pilot period." },
-            { icon: FileCheck, title: "Policy-Aligned Evidence Models", desc: "Governance event schemas mapped to institutional policy requirements and audit standards." },
-            { icon: BarChart3, title: "Audit Simulation Report", desc: "Full audit simulation demonstrating verifiability, completeness, and omission detection capabilities." },
-            { icon: Building2, title: "Institutional Readiness Assessment", desc: "Go/no-go recommendation with detailed findings, risk assessment, and next-steps roadmap." },
-          ].map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="governance-card">
-              <Icon className="h-5 w-5 text-accent mb-2" />
-              <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Economic Case */}
-      <Section title="Economic Case" className="border-b border-border bg-card/30">
-        <div className="governance-card border-l-2 border-l-accent mb-6">
-          <p className="text-sm text-foreground leading-relaxed">
-            Based on World Bank–style economic analysis, GRGF deployment as Digital Public Infrastructure is projected to deliver significant measurable returns through reduced improper payments, lower audit costs, and improved institutional accountability.
-          </p>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
-          {[
-            { icon: TrendingUp, label: "Net Benefits (10yr)", value: "≈ US$4.53B", sub: "Canada archetype" },
-            { icon: BarChart3, label: "Internal Rate of Return", value: "100% IRR", sub: "Investment analysis" },
-            { icon: Clock, label: "Payback Period", value: "Year 1", sub: "Rapid return" },
-            { icon: Globe, label: "Applicability", value: "Multi-Country", sub: "Jurisdiction-neutral" },
-          ].map(({ icon: Icon, label, value, sub }) => (
-            <div key={label} className="governance-card text-center">
-              <Icon className="h-5 w-5 text-accent mx-auto mb-2" />
-              <p className="text-xs font-mono text-muted-foreground/70 uppercase tracking-wider mb-1">{label}</p>
-              <p className="text-sm text-foreground font-semibold">{value}</p>
-              <p className="text-[10px] text-muted-foreground mt-0.5">{sub}</p>
-            </div>
-          ))}
-        </div>
-
-        <h3 className="institutional-heading text-lg font-semibold mb-4">Value Drivers</h3>
+    {/* Security Boundaries */}
+    <Section title="Security Boundaries" className="border-b border-border">
+      <div className="governance-card border-l-2 border-l-accent">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            "Reduced improper payments through omission detection",
-            "Lower audit costs via continuous compliance evidence (CICE)",
-            "Improved institutional accountability and transparency",
-            "Fraud prevention through tamper-evident governance records",
-            "Efficiency gains from automated policy evaluation",
-            "Long-term societal trust through verifiable governance",
-          ].map((item) => (
-            <div key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <CheckCircle className="h-3.5 w-3.5 text-accent shrink-0 mt-0.5" />
-              <span className="text-xs">{item}</span>
+            { icon: Lock, label: "Private access only — no public endpoints" },
+            { icon: Shield, label: "HTTPS enforced on all communication channels" },
+            { icon: Users, label: "Role-based authentication with cryptographic separation" },
+            { icon: Eye, label: "Simulation clearly separated from committed records" },
+            { icon: Hash, label: "All records sealed with SHA-256 hash integrity" },
+            { icon: Server, label: "Cloud-hosted in controlled, jurisdiction-aware environment" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex items-start gap-2">
+              <Icon className="h-3.5 w-3.5 text-accent shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground leading-relaxed">{label}</p>
             </div>
           ))}
         </div>
-      </Section>
+        <div className="mt-4 bg-muted/50 border border-border rounded-sm px-4 py-3">
+          <p className="text-[10px] font-mono text-accent/70 tracking-wider">
+            THIS ENVIRONMENT OPERATES UNDER THE GRGF CONTROLLED DISTRIBUTION PROTOCOL (CRP)
+          </p>
+        </div>
+      </div>
+    </Section>
 
-      {/* Anticipated Objections */}
-      <Section title="Addressing Common Questions" className="border-b border-border">
-        <div className="space-y-4 max-w-3xl">
-          {[
-            { q: "Does GRGF override existing legal authorities?", a: "No. GRGF operates read-only and does not override, replace, or interfere with existing legal frameworks, institutional mandates, or decision-making authority. It records and preserves — it does not govern." },
-            { q: "Does it expose personal data?", a: "No. The system pseudonymises identifiers and operates with data minimisation by design. No personal, sensitive, or identifiable data is stored or transmitted." },
-            { q: "Are sealed logs legally admissible?", a: "Sealed logs produce cryptographic integrity proofs (SHA-256, Merkle trees) that support admissibility under digital evidence standards. Independent verification requires no access to GRGF systems." },
-            { q: "Is the integration invasive?", a: "No. The pilot operates in read-only mode, observing existing decision workflows without modifying institutional systems. No write access to existing systems is required." },
-            { q: "Can GRGF reduce accountability?", a: "The opposite. GRGF increases accountability by making governance gaps (omissions) visible and verifiable — a capability absent from conventional record systems." },
-          ].map(({ q, a }) => (
-            <div key={q} className="governance-card">
-              <div className="flex items-start gap-3">
-                <HelpCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="font-serif text-sm font-semibold">{q}</h4>
-                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{a}</p>
-                </div>
+    {/* Evaluation Scope */}
+    <Section title="Evaluation Scope" className="border-b border-border">
+      <div className="grid gap-6 lg:grid-cols-2">
+        <div className="governance-card">
+          <p className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-3">What Evaluators Can Test</p>
+          <div className="space-y-2">
+            {evaluationScope.map((item) => (
+              <div key={item} className="flex items-start gap-2">
+                <CheckCircle className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+                <p className="text-xs text-muted-foreground leading-relaxed">{item}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Target Institutions */}
-      <Section title="Target Institutions" className="border-b border-border bg-card/30">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { org: "Government of Canada", role: "Treasury Board Secretariat — Audit & Accountability" },
-            { org: "World Bank", role: "Digital Public Infrastructure — Governance Programs" },
-            { org: "Egypt Ministry of Finance", role: "Public Financial Management — Reform Programs" },
-            { org: "African Development Bank", role: "Governance & Institutional Development" },
-            { org: "Inter-American Development Bank", role: "Transparency & Anti-Corruption Programs" },
-            { org: "UNDP", role: "Digital Governance & Rule of Law Programs" },
-          ].map(({ org, role }) => (
-            <div key={org} className="governance-card">
-              <h4 className="font-serif text-sm font-semibold">{org}</h4>
-              <p className="text-xs text-muted-foreground mt-1">{role}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Contact */}
-      <Section title="Express Interest">
-        <div className="governance-card border-l-2 border-l-accent">
-          <p className="text-sm text-foreground leading-relaxed mb-4">
-            Institutional inquiries regarding the 90-Day Pilot Programme, partnerships, or GRGF adoption can be directed through formal institutional channels.
-          </p>
-          <p className="text-xs text-muted-foreground">
-            For pilot sponsorship, audit executive engagement, or DPI program alignment, please reference the GRGF Digital Archive for comprehensive documentation.
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link to="/archive" className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
-              <FileCheck className="h-4 w-4" /> Access Digital Archive
-            </Link>
-            <Link to="/blueprints" className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
-              <Shield className="h-4 w-4" /> Technical Blueprints
-            </Link>
+            ))}
           </div>
         </div>
-      </Section>
-    </div>
-  );
-};
+        <div className="governance-card">
+          <p className="text-[10px] font-mono text-destructive/70 uppercase tracking-wider mb-3">Not Yet Included</p>
+          <div className="space-y-2">
+            {notIncluded.map((item) => (
+              <div key={item} className="flex items-start gap-2">
+                <AlertTriangle className="h-3 w-3 text-muted-foreground/50 shrink-0 mt-0.5" />
+                <p className="text-xs text-muted-foreground leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Section>
+
+    {/* KPI Framework */}
+    <Section title="Pilot KPI Framework" className="border-b border-border">
+      <div className="governance-card overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Metric</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Target</th>
+              <th className="text-left py-2 text-muted-foreground/70 font-medium">Measurement Method</th>
+            </tr>
+          </thead>
+          <tbody className="text-muted-foreground">
+            {kpis.map((k) => (
+              <tr key={k.metric} className="border-b border-border/50">
+                <td className="py-2 pr-4 font-medium text-foreground">{k.metric}</td>
+                <td className="py-2 pr-4 font-mono text-accent">{k.target}</td>
+                <td className="py-2">{k.method}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Section>
+
+    {/* Archive Documents */}
+    <Section title="Pilot Node Documentation Archive" className="border-b border-border">
+      <p className="text-xs text-muted-foreground mb-4">
+        The following documents constitute the technical archive for Pilot Node v0.1. Documents classified Level 3 require institutional access under CRP.
+      </p>
+      <div className="governance-card overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">ID</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Document</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Classification</th>
+              <th className="text-left py-2 text-muted-foreground/70 font-medium">Version</th>
+            </tr>
+          </thead>
+          <tbody className="text-muted-foreground">
+            {archiveDocs.map((doc) => (
+              <tr key={doc.id} className="border-b border-border/50">
+                <td className="py-2 pr-4 font-mono text-accent">{doc.id}</td>
+                <td className="py-2 pr-4 font-medium text-foreground">{doc.title}</td>
+                <td className="py-2 pr-4">
+                  <span className={`text-[10px] font-mono tracking-wider ${doc.classification.includes("Restricted") ? "text-destructive" : doc.classification.includes("Institutional") ? "text-accent" : "text-muted-foreground"}`}>
+                    {doc.classification}
+                  </span>
+                </td>
+                <td className="py-2 font-mono">{doc.version}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Section>
+
+    {/* Version Registry */}
+    <Section title="Version Registry" className="border-b border-border">
+      <div className="governance-card">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { label: "Version", value: "GRGF Pilot Node v0.1" },
+            { label: "Status", value: "Controlled Evaluation" },
+            { label: "Deployment Model", value: "Cloud-hosted (Private)" },
+            { label: "Audit Status", value: "Pending Third-Party Review" },
+          ].map(({ label, value }) => (
+            <div key={label}>
+              <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1">{label}</p>
+              <p className="text-sm font-serif font-semibold text-foreground">{value}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-[10px] font-mono text-muted-foreground/50 tracking-wider">
+          INTENDED USE: INSTITUTIONAL PILOT ASSESSMENT
+        </p>
+      </div>
+    </Section>
+
+    {/* Request Access */}
+    <Section title="Request Controlled Access" className="border-b border-border">
+      <div className="governance-card border-l-2 border-l-accent">
+        <p className="text-sm text-foreground leading-relaxed mb-4">
+          Access to the Pilot Node v0.1 is restricted to authorised institutional evaluators. Requests must include institutional identification, intended evaluation purpose, and acknowledgment of the Controlled Distribution Protocol.
+        </p>
+        <div className="grid gap-2 sm:grid-cols-3 mb-6">
+          {[
+            "Institutional email required",
+            "Intended evaluation purpose declaration",
+            "CRP acknowledgment and acceptance",
+          ].map((item) => (
+            <div key={item} className="flex items-start gap-2">
+              <Lock className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground">{item}</p>
+            </div>
+          ))}
+        </div>
+        <Link
+          to="/briefing"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-primary text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors"
+        >
+          Request Pilot Access <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+    </Section>
+
+    {/* Limitation Statement */}
+    <Section title="Limitation Statement">
+      <div className="governance-card bg-muted/30">
+        <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+          The Pilot Node v0.1 is intended solely for structured evaluation. Production deployment requires independent security audit, governance review, and formal institutional approval. No data processed within the pilot environment constitutes an authoritative governance record.
+        </p>
+        <div className="section-divider" />
+        <p className="text-sm text-foreground leading-relaxed mt-4 font-serif">
+          GRGF Pilot Node v0.1 marks the transition from architectural framework to operational governance engine. Structured pilot validation is the next step toward sovereign deployment.
+        </p>
+      </div>
+      <p className="mt-6 text-[10px] font-mono text-muted-foreground/40 tracking-wider text-center">
+        QUERIES WITHIN THIS INTERFACE MAY BE LOGGED FOR SYSTEM IMPROVEMENT AND INSTITUTIONAL REVIEW COMPLIANCE
+      </p>
+    </Section>
+  </div>
+);
 
 export default PilotProgramme;
