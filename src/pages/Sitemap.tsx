@@ -16,54 +16,43 @@ interface RouteEntry {
 }
 
 const routes: RouteEntry[] = [
-  // Core
-  { group: "Core Infrastructure", path: "/", title: "Home", description: "Executive overview, infrastructure pillars, and operational flow.", classification: "Level 1 — Public", icon: Home },
-  { group: "Core Infrastructure", path: "/architecture", title: "System Architecture", description: "Six-layer architecture with event capture, policy engine, and federation layers.", classification: "Level 2 — Institutional", icon: Layers },
-  { group: "Core Infrastructure", path: "/security-trust", title: "Security & Trust", description: "Zero Trust model, threat analysis, cryptographic sealing, and incident response.", classification: "Level 2 — Institutional", icon: Shield },
-  { group: "Core Infrastructure", path: "/governance-framework", title: "Governance Framework", description: "Custodial neutrality, sovereign interoperability, and federation rules.", classification: "Level 2 — Institutional", icon: GitBranch },
-  { group: "Core Infrastructure", path: "/ethics", title: "Risk & Ethics", description: "Anti-capture clauses, political neutrality safeguards, and whistleblower model.", classification: "Level 2 — Institutional", icon: AlertTriangle },
+  // Primary Navigation (11 items)
+  { group: "Primary Navigation", path: "/", title: "Home", description: "Executive overview, infrastructure pillars, stakeholder tiles, pilot KPIs, and trust signals.", classification: "Level 1 — Public", icon: Home },
+  { group: "Primary Navigation", path: "/the-problem", title: "The Problem", description: "First-principles explanation of governance integrity failures with real scenarios.", classification: "Level 1 — Public", icon: AlertTriangle },
+  { group: "Primary Navigation", path: "/architecture", title: "Architecture", description: "Six-layer architecture with event capture, policy engine, and federation layers.", classification: "Level 2 — Institutional", icon: Layers },
+  { group: "Primary Navigation", path: "/security-trust", title: "Trust Center", description: "Security posture, current limitations, vulnerability disclosure, and audit roadmap.", classification: "Level 2 — Institutional", icon: Shield },
+  { group: "Primary Navigation", path: "/governance-framework", title: "Governance Framework", description: "Custodial neutrality, sovereign interoperability, and federation rules.", classification: "Level 2 — Institutional", icon: GitBranch },
+  { group: "Primary Navigation", path: "/deployment", title: "Deployment Model", description: "Phased deployment with readiness assessment and budget modeling.", classification: "Level 2 — Institutional", icon: Globe },
+  { group: "Primary Navigation", path: "/impact-modeling", title: "Impact & ROI Tools", description: "9-module sovereign-grade decision-support system with Treasury-grade modeling.", classification: "Level 2 — Institutional", icon: BarChart3 },
+  { group: "Primary Navigation", path: "/pilot", title: "Pilot Evaluation", description: "Controlled evaluation edition — minimal viable governance engine for institutional assessment.", classification: "Level 3 — NDA Required", icon: Globe },
+  { group: "Primary Navigation", path: "/controlled-access", title: "Controlled Access", description: "Classification levels, CRP workflow, and institutional access request.", classification: "Level 1 — Public", icon: Lock },
+  { group: "Primary Navigation", path: "/archive", title: "Archive", description: "Central document archive organized by stakeholder roles with hash verification.", classification: "Level 1 — Public", icon: Archive },
+  { group: "Primary Navigation", path: "/contact", title: "Contact", description: "Institutional inquiry channel for governments and qualified institutional parties.", classification: "Level 1 — Public", icon: Users },
 
-  // Deployment
-  { group: "Deployment & Impact", path: "/deployment", title: "National Deployment", description: "24-month phased deployment with readiness assessment and budget modeling.", classification: "Level 2 — Institutional", icon: Globe },
-  { group: "Deployment & Impact", path: "/canada", title: "Canada Federal", description: "Tailored positioning for Treasury Board, OCIO, SSC, and EARB alignment.", classification: "Level 2 — Institutional", icon: Building2 },
-  { group: "Deployment & Impact", path: "/impact", title: "Impact & ROI", description: "Procurement integrity modeling, audit efficiency, and 10-year fiscal projection.", classification: "Level 2 — Institutional", icon: BarChart3 },
-  { group: "Deployment & Impact", path: "/stakeholders", title: "Stakeholder Solutions", description: "Role-specific value framing for Ministers, CIOs, Auditors, and Regulators.", classification: "Level 1 — Public", icon: Users },
+  // Extended Navigation
+  { group: "Extended Navigation", path: "/canada", title: "Canada Federal", description: "Tailored positioning for Treasury Board, OCIO, SSC, and EARB alignment.", classification: "Level 2 — Institutional", icon: Building2 },
+  { group: "Extended Navigation", path: "/ethics", title: "Risk & Ethics", description: "Anti-capture clauses, political neutrality safeguards, and whistleblower model.", classification: "Level 2 — Institutional", icon: AlertTriangle },
+  { group: "Extended Navigation", path: "/stakeholders", title: "Stakeholder Solutions", description: "Role-specific value framing for Ministers, CIOs, Auditors, and Regulators.", classification: "Level 1 — Public", icon: Users },
+  { group: "Extended Navigation", path: "/compliance", title: "Standards & Compliance", description: "ISO 27001, ISO 42001, ISO 37000, OECD AI, and World Bank DPI mapping.", classification: "Level 1 — Public", icon: CheckCircle },
+  { group: "Extended Navigation", path: "/dossier", title: "Executive Dossier", description: "Master binder structure, revenue model, and strategic roadmap.", classification: "Level 2 — Institutional", icon: FileText },
+  { group: "Extended Navigation", path: "/future-proofing", title: "Future-Proofing & Evolution", description: "Cryptographic agility, post-quantum readiness, federation model, and long-term stewardship.", classification: "Level 2 — Institutional", icon: Shield },
+  { group: "Extended Navigation", path: "/governance-interface", title: "Governance Interface", description: "Structured institutional navigation console with document, stakeholder, compliance, and simulation modes.", classification: "Level 2 — Institutional", icon: Cpu },
+  { group: "Extended Navigation", path: "/readiness", title: "Institutional Readiness", description: "Pilot proposal, cost calculator, risk register, exit policy, and version registry.", classification: "Level 2 — Institutional", icon: CheckCircle },
 
-  // Compliance & Legal
-  { group: "Compliance & Legal", path: "/compliance", title: "Standards & Compliance", description: "ISO 27001, ISO 42001, ISO 37000, OECD AI, and World Bank DPI mapping.", classification: "Level 1 — Public", icon: CheckCircle },
-  { group: "Compliance & Legal", path: "/dossier", title: "Executive Dossier", description: "Master binder structure, revenue model, and strategic roadmap.", classification: "Level 2 — Institutional", icon: FileText },
-  { group: "Compliance & Legal", path: "/briefing", title: "Briefing Request", description: "Controlled Distribution Protocol with institutional access request.", classification: "Level 2 — Institutional", icon: Lock },
-  { group: "Compliance & Legal", path: "/dpi-comparison", title: "DPI Comparison", description: "28-capability matrix comparing GRGF to traditional DPI systems.", classification: "Level 1 — Public", icon: BarChart3 },
-
-  // Simulation
+  // Simulation & Demo
   { group: "Simulation & Demo", path: "/simulation", title: "Simulation Hub", description: "Interactive governance workflow demonstrations and mock environments.", classification: "Non-Authoritative", icon: Play },
-  { group: "Simulation & Demo", path: "/simulator", title: "Simulator", description: "Live governance scenario simulation tool.", classification: "Non-Authoritative", icon: Play },
-  { group: "Simulation & Demo", path: "/records", title: "Records", description: "Simulated record management interface.", classification: "Non-Authoritative", icon: FileText },
-  { group: "Simulation & Demo", path: "/data-entry", title: "Data Entry", description: "Mock data entry workflows for demonstration.", classification: "Non-Authoritative", icon: Cpu },
-  { group: "Simulation & Demo", path: "/workflow", title: "Workflow Demo", description: "Step-by-step governance workflow visualization.", classification: "Non-Authoritative", icon: GitBranch },
-  { group: "Simulation & Demo", path: "/api-mock", title: "API Mock", description: "Simulated API endpoints for integration testing.", classification: "Non-Authoritative", icon: Cpu },
-  { group: "Simulation & Demo", path: "/verification", title: "Verification", description: "Record verification portal for integrity checks.", classification: "Non-Authoritative", icon: Shield },
+  { group: "Simulation & Demo", path: "/systems", title: "Systems", description: "Governance Operating System component documentation.", classification: "Level 1 — Public", icon: Cpu },
+  { group: "Simulation & Demo", path: "/blueprints", title: "Technical Blueprints", description: "Detailed technical specifications and deployment blueprints.", classification: "Level 2 — Institutional", icon: Layers },
+  { group: "Simulation & Demo", path: "/academy", title: "Academy", description: "Professional certification: Foundations, Practitioner, Steward/Architect.", classification: "Level 1 — Public", icon: GraduationCap },
+  { group: "Simulation & Demo", path: "/dpi-comparison", title: "DPI Comparison", description: "28-capability matrix comparing GRGF to traditional DPI systems.", classification: "Level 1 — Public", icon: BarChart3 },
 
-  // Institutional Readiness & Validation
-  { group: "Institutional Readiness", path: "/governance-interface", title: "Governance Interface", description: "Structured institutional navigation console with document, stakeholder, compliance, and simulation modes.", classification: "Level 2 — Institutional", icon: Cpu },
-  { group: "Institutional Readiness", path: "/critical-questions", title: "Critical Questions", description: "20 hardest institutional objections answered with structural safeguards and evidence.", classification: "Level 1 — Public", icon: AlertTriangle },
-  { group: "Institutional Readiness", path: "/readiness", title: "Institutional Readiness", description: "Pilot proposal, cost calculator, risk register, exit policy, advisory board, and version registry.", classification: "Level 2 — Institutional", icon: CheckCircle },
-  { group: "Institutional Readiness", path: "/validation", title: "Validation Pathway", description: "4-phase independent review roadmap: Architecture, Security, Policy Logic, Ethics.", classification: "Level 2 — Institutional", icon: Shield },
-
-  // Governance Pages
-  { group: "Governance Deep-Dives", path: "/systems", title: "Systems", description: "Governance Operating System component documentation.", classification: "Level 1 — Public", icon: Cpu },
-  { group: "Governance Deep-Dives", path: "/processes", title: "Processes", description: "Core governance processes and lifecycle management.", classification: "Level 1 — Public", icon: GitBranch },
-  { group: "Governance Deep-Dives", path: "/blueprints", title: "Technical Blueprints", description: "Detailed technical specifications and deployment blueprints.", classification: "Level 2 — Institutional", icon: Layers },
-  { group: "Governance Deep-Dives", path: "/pilot", title: "Pilot Node v0.1", description: "Controlled evaluation edition — minimal viable governance engine for institutional assessment.", classification: "Level 3 — NDA Required", icon: Globe },
-  { group: "Governance Deep-Dives", path: "/academy", title: "Academy", description: "Professional certification: Foundations, Practitioner, Steward/Architect.", classification: "Level 1 — Public", icon: GraduationCap },
-
-  // Archive
+  // Digital Archive
   { group: "Digital Archive", path: "/archive", title: "Archive Overview", description: "Central document archive organized by stakeholder roles.", classification: "Level 1 — Public", icon: Archive },
   { group: "Digital Archive", path: "/archive/public", title: "Public Archive", description: "Publicly accessible governance documents and summaries.", classification: "Level 1 — Public", icon: Archive },
   { group: "Digital Archive", path: "/archive/government", title: "Government Archive", description: "Policy-grade documents for government and multilateral review.", classification: "Level 2 — Institutional", icon: Building2 },
   { group: "Digital Archive", path: "/archive/partners", title: "Partner Archive", description: "Technical integration packages for partners and integrators.", classification: "Level 2 — Institutional", icon: Users },
   { group: "Digital Archive", path: "/archive/legal-ip", title: "Legal & IP Archive", description: "Patent documentation, licensing, and IP materials.", classification: "Level 3 — NDA Required", icon: Scale },
-  { group: "Digital Archive", path: "/archive/master-index", title: "Master Index", description: "49-document authoritative index across 10 sections.", classification: "Level 1 — Public", icon: FileText },
+  { group: "Digital Archive", path: "/archive/master-index", title: "Master Index", description: "68+ document authoritative index across 10 sections.", classification: "Level 1 — Public", icon: FileText },
   { group: "Digital Archive", path: "/archive/downloads", title: "Downloads", description: "Structured download packs by stakeholder role.", classification: "Level 1 — Public", icon: Archive },
 ];
 
