@@ -44,11 +44,17 @@ const routes: RouteEntry[] = [
   { group: "Simulation & Demo", path: "/api-mock", title: "API Mock", description: "Simulated API endpoints for integration testing.", classification: "Non-Authoritative", icon: Cpu },
   { group: "Simulation & Demo", path: "/verification", title: "Verification", description: "Record verification portal for integrity checks.", classification: "Non-Authoritative", icon: Shield },
 
+  // Institutional Readiness & Validation
+  { group: "Institutional Readiness", path: "/governance-interface", title: "Governance Interface", description: "Structured institutional navigation console with document, stakeholder, compliance, and simulation modes.", classification: "Level 2 — Institutional", icon: Cpu },
+  { group: "Institutional Readiness", path: "/critical-questions", title: "Critical Questions", description: "20 hardest institutional objections answered with structural safeguards and evidence.", classification: "Level 1 — Public", icon: AlertTriangle },
+  { group: "Institutional Readiness", path: "/readiness", title: "Institutional Readiness", description: "Pilot proposal, cost calculator, risk register, exit policy, advisory board, and version registry.", classification: "Level 2 — Institutional", icon: CheckCircle },
+  { group: "Institutional Readiness", path: "/validation", title: "Validation Pathway", description: "4-phase independent review roadmap: Architecture, Security, Policy Logic, Ethics.", classification: "Level 2 — Institutional", icon: Shield },
+
   // Governance Pages
   { group: "Governance Deep-Dives", path: "/systems", title: "Systems", description: "Governance Operating System component documentation.", classification: "Level 1 — Public", icon: Cpu },
   { group: "Governance Deep-Dives", path: "/processes", title: "Processes", description: "Core governance processes and lifecycle management.", classification: "Level 1 — Public", icon: GitBranch },
   { group: "Governance Deep-Dives", path: "/blueprints", title: "Technical Blueprints", description: "Detailed technical specifications and deployment blueprints.", classification: "Level 2 — Institutional", icon: Layers },
-  { group: "Governance Deep-Dives", path: "/pilot", title: "Pilot Programme", description: "90-day controlled pilot with institutional readiness validation.", classification: "Level 2 — Institutional", icon: Globe },
+  { group: "Governance Deep-Dives", path: "/pilot", title: "Pilot Node v0.1", description: "Controlled evaluation edition — minimal viable governance engine for institutional assessment.", classification: "Level 3 — NDA Required", icon: Globe },
   { group: "Governance Deep-Dives", path: "/academy", title: "Academy", description: "Professional certification: Foundations, Practitioner, Steward/Architect.", classification: "Level 1 — Public", icon: GraduationCap },
 
   // Archive
