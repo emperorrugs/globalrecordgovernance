@@ -6,11 +6,13 @@ export function InstitutionalFooter() {
       <div className="max-w-5xl">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
-            <h4 className="font-serif text-sm font-semibold mb-2">Governance Framework</h4>
+            <h4 className="font-serif text-sm font-semibold mb-2">Infrastructure</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Reference Website · No personal data collected
+              Governance Operating Layer
               <br />
-              Simulation and explanation only
+              Deterministic Policy Enforcement
+              <br />
+              Append-Only Cryptographic Ledger
             </p>
           </div>
           <div>
@@ -18,30 +20,28 @@ export function InstitutionalFooter() {
             <p className="text-xs text-muted-foreground leading-relaxed">
               Version 1.0 · Established 2024
               <br />
-              Sovereign-grade Digital Public Infrastructure
+              Pilot Node v0.1 Available
               <br />
-              Read-Only Public Reference
+              Canadian Patent CA 3,300,102
             </p>
           </div>
           <div>
-            <h4 className="font-serif text-sm font-semibold mb-2">Origin Authority</h4>
+            <h4 className="font-serif text-sm font-semibold mb-2">Origin</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
               Global Record Governance Framework —
               <br />
               Invented and Owned by Tarek Wahid.
-              <br />
-              No commercial affiliation. No promotional intent.
             </p>
           </div>
         </div>
-        <div className="mt-6 governance-card border-l-2 border-l-accent">
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            GRGF is a governance integrity infrastructure layer designed to support structured pilot evaluation prior to sovereign deployment. Trust becomes structurally verifiable.
+        <div className="mt-6 pt-6 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground font-serif italic">
+            Trust should not rely on reputation. It should rely on structure.
           </p>
         </div>
-        <div className="mt-6 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
           <p className="text-[10px] text-muted-foreground/50 tracking-wide uppercase">
-            GRGF · Governance Framework – Reference Website · No personal data collected · Simulation and explanation only
+            GRGF · Governance Integrity Infrastructure · Reference Interface
           </p>
           <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
             Controlled Access →
