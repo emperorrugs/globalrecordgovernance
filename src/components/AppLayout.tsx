@@ -13,42 +13,43 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-const navItems = [
+/* ── Primary navigation (11-item sovereign structure) ── */
+const primaryNav = [
   { title: "Home", path: "/", icon: Home },
+  { title: "The Problem", path: "/the-problem", icon: AlertTriangle },
   { title: "Architecture", path: "/architecture", icon: Layers },
-  { title: "Security & Trust", path: "/security-trust", icon: Shield },
+  { title: "Trust Center", path: "/security-trust", icon: Shield },
   { title: "Governance", path: "/governance-framework", icon: GitBranch },
-  { title: "Risk & Ethics", path: "/ethics", icon: AlertTriangle },
   { title: "Deployment", path: "/deployment", icon: Globe },
+  { title: "Impact & ROI", path: "/impact-modeling", icon: BarChart3 },
+  { title: "Pilot Evaluation", path: "/pilot", icon: Server },
+  { title: "Controlled Access", path: "/controlled-access", icon: Lock },
+  { title: "Archive", path: "/archive", icon: FileText },
+  { title: "Contact", path: "/contact", icon: Users },
+];
+
+/* ── Extended navigation (secondary pages) ── */
+const secondaryNav = [
   { title: "Canada Federal", path: "/canada", icon: Building2 },
-  { title: "Impact & ROI", path: "/impact", icon: BarChart3 },
-  { title: "Impact Modeling", path: "/impact-modeling", icon: BarChart3 },
+  { title: "Risk & Ethics", path: "/ethics", icon: AlertTriangle },
   { title: "Stakeholders", path: "/stakeholders", icon: Users },
   { title: "Compliance", path: "/compliance", icon: CheckCircle },
   { title: "Executive Dossier", path: "/dossier", icon: FileText },
-  { title: "Briefing Request", path: "/briefing", icon: Lock },
   { title: "Governance Interface", path: "/governance-interface", icon: Monitor },
-  { title: "Critical Questions", path: "/critical-questions", icon: HelpCircle },
   { title: "Readiness", path: "/readiness", icon: ClipboardCheck },
-  { title: "Validation Pathway", path: "/validation", icon: Search },
   { title: "Simulation", path: "/simulation", icon: Play },
   { title: "Systems", path: "/systems", icon: Cpu },
-  { title: "Processes", path: "/processes", icon: GitBranch },
   { title: "Blueprints", path: "/blueprints", icon: Layers },
-  { title: "Pilot Node v0.1", path: "/pilot", icon: Server },
-  { title: "Controlled Access", path: "/controlled-access", icon: Lock },
   { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
   { title: "Sitemap", path: "/sitemap", icon: FileCheck },
-  { title: "Digital Archive", path: "/archive", icon: Shield },
 ];
 
-function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
+function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; collapsed?: boolean; onNavigate?: () => void }) {
   const location = useLocation();
-
   return (
-    <nav className="flex-1 py-3 px-2 space-y-0.5 overflow-y-auto">
-      {navItems.map((item) => {
+    <>
+      {items.map((item) => {
         const isActive = location.pathname === item.path;
         return (
           <Link
@@ -68,6 +69,20 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
           </Link>
         );
       })}
+    </>
+  );
+}
+
+function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
+  return (
+    <nav className="flex-1 py-3 px-2 space-y-0.5 overflow-y-auto">
+      <NavGroup items={primaryNav} collapsed={collapsed} onNavigate={onNavigate} />
+      {!collapsed && (
+        <div className="pt-3 mt-3 border-t border-sidebar-border">
+          <p className="px-3 text-[9px] font-mono text-sidebar-foreground/40 uppercase tracking-wider mb-2">Extended</p>
+        </div>
+      )}
+      <NavGroup items={secondaryNav} collapsed={collapsed} onNavigate={onNavigate} />
     </nav>
   );
 }
@@ -149,6 +164,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <Breadcrumbs />
           </div>
           <div className="flex items-center gap-2 shrink-0">
+            <Link
+              to="/controlled-access"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent text-accent-foreground text-[11px] font-medium rounded-sm hover:bg-accent/90 transition-colors"
+            >
+              <Lock className="h-3 w-3" />
+              {isMobile ? "Access" : "Request Pilot Access"}
+            </Link>
             <span className={cn("text-xs font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
               {isMobile ? "Plain" : "Plain English"}
             </span>
