@@ -100,7 +100,7 @@ const TheProblem = () => (
     </Section>
 
     {/* What GRGF Changes */}
-    <Section title="What GRGF Changes" className="border-t border-border bg-card/30">
+    <Section title="What GRGF Changes" className="border-t border-border bg-surface2/30">
       <div className="governance-card border-l-2 border-l-accent max-w-3xl">
         <p className="text-sm text-foreground font-medium leading-relaxed mb-4">
           Administrative action becomes a cryptographically verifiable event governed by deterministic rules.

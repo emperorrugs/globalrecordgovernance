@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, children }: PageHeaderProps) {
   return (
-    <header className="border-b border-border bg-card/50 px-8 py-10 md:px-12 lg:px-16">
+    <header className="border-b border-border bg-surface/50 px-8 py-10 md:px-12 lg:px-16">
       <div className="max-w-4xl">
         <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">{title}</h1>
         {subtitle && (

@@ -101,7 +101,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       {!isMobile && (
         <aside
           className={cn(
-            "sticky top-0 h-screen flex flex-col bg-primary text-primary-foreground border-r border-sidebar-border transition-all duration-300 z-50",
+            "sticky top-0 h-screen flex flex-col bg-primary border-r border-border transition-all duration-300 z-50",
             collapsed ? "w-16" : "w-64"
           )}
         >
