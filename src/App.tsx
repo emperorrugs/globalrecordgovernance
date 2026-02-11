@@ -43,6 +43,8 @@ import AcademyPage from "./pages/AcademyPage";
 import DPIComparison from "./pages/DPIComparison";
 import Sitemap from "./pages/Sitemap";
 import ControlledAccess from "./pages/ControlledAccess";
+import ExecutiveSummary from "./pages/ExecutiveSummary";
+import OutreachMessages from "./pages/OutreachMessages";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -103,6 +105,8 @@ const App = () => (
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
             <Route path="/controlled-access" element={<AppLayout><ControlledAccess /></AppLayout>} />
+            <Route path="/executive-summary" element={<ExecutiveSummary />} />
+            <Route path="/outreach" element={<AppLayout><OutreachMessages /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />

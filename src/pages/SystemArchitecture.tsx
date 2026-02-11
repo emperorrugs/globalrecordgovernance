@@ -1,81 +1,6 @@
 import { Link } from "react-router-dom";
 import { PageHeader, Section } from "@/components/PageComponents";
-import { ArrowRight, Database, Cpu, Shield, Globe, Lock, Network, Layers } from "lucide-react";
-
-const layers = [
-  {
-    num: "01",
-    title: "Event Capture & Normalization",
-    icon: Database,
-    desc: "Institutional actions are structured into standardized schemas containing timestamp, actor role context, institutional scope, legal reference, action type, and metadata envelope.",
-    details: [
-      "Event normalization schema ensures cross-system compatibility",
-      "Structured record format with mandatory fields",
-      "Context-bound with institutional scope and legal reference",
-      "Metadata envelope preserves chain-of-custody information",
-    ],
-  },
-  {
-    num: "02",
-    title: "Policy Decision Engine",
-    icon: Cpu,
-    desc: "The policy engine executes deterministic logic: authority validation, scope verification, conflict-of-interest rules, and procedural completeness checks.",
-    details: [
-      "Outputs: allow = true/false with policy_id",
-      "Machine-readable denial reasoning",
-      "Human-readable explanation for audit trails",
-      "Encoded governance rules — not interpretive AI",
-    ],
-  },
-  {
-    num: "03",
-    title: "Evidence Backbone",
-    icon: Shield,
-    desc: "Append-only storage model with immutable event records, hash-based sealing, and chronological integrity chain. No record can be modified after sealing.",
-    details: [
-      "Write-once, read-many (WORM) storage architecture",
-      "Chronological integrity chain prevents reordering",
-      "Separation of custody between storage and governance",
-      "Canada-only regions for sovereign data residency",
-    ],
-  },
-  {
-    num: "04",
-    title: "Cryptographic Anchoring",
-    icon: Lock,
-    desc: "Each record is sealed using SHA-256 hash algorithms with Merkle-style integrity structures and external anchor compatibility.",
-    details: [
-      "SHA-256/512 hash generation at seal time",
-      "Merkle tree structure for batch verification",
-      "External timestamp anchor compatibility",
-      "Public hash manifest for independent verification",
-    ],
-  },
-  {
-    num: "05",
-    title: "Verification API Layer",
-    icon: Network,
-    desc: "Allows institutional audit access, proof validation, and public verification endpoints without exposing underlying record content.",
-    details: [
-      "RESTful API for proof-of-existence queries",
-      "Proof-of-absence verification capability",
-      "Institutional audit access with role-based scoping",
-      "Zero-knowledge validation — no content exposure",
-    ],
-  },
-  {
-    num: "06",
-    title: "Federation & Interoperability Layer",
-    icon: Globe,
-    desc: "National nodes can participate in interoperable trust federation, cross-border verification, and shared compliance standards.",
-    details: [
-      "Tier 1 (Full Federation), Tier 2 (Partial), Observer models",
-      "Cross-border record verification protocols",
-      "Shared compliance and interoperability standards",
-      "Voluntary participation — sovereignty preserved",
-    ],
-  },
-];
+import { ArrowRight, Database, Cpu, Shield, Globe, Lock, Network } from "lucide-react";
 
 const eventSchema = `{
   "event_id": "EVT-2026-00451",
@@ -112,40 +37,11 @@ const SystemArchitecture = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="System Architecture"
-      subtitle="Six-layer sovereign architecture ensuring integrity from event capture through international federation."
+      subtitle="Six layers. Unidirectional data flow. No override pathway. No interpretation."
     />
 
-    {/* Architecture layers */}
-    <Section>
-      <div className="space-y-6">
-        {layers.map((layer) => (
-          <div key={layer.num} className="governance-card">
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-12 h-12 bg-primary text-primary-foreground rounded-sm flex items-center justify-center">
-                <span className="text-sm font-mono font-bold">{layer.num}</span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-2">
-                  <layer.icon className="h-4 w-4 text-accent shrink-0" />
-                  <h3 className="font-serif text-base font-semibold">Layer {layer.num} — {layer.title}</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{layer.desc}</p>
-                <ul className="space-y-1.5">
-                  {layer.details.map((d) => (
-                    <li key={d} className="flex items-start gap-2 text-xs text-muted-foreground">
-                      <span className="text-accent mt-0.5 shrink-0">·</span>{d}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-
     {/* Data Flow */}
-    <Section title="Data Flow" className="border-t border-border">
+    <Section>
       <div className="flex flex-wrap items-center gap-2 justify-center mb-8">
         {["Institutional Action", "Event Capture", "Normalization", "Policy Engine", "Evidence Store", "Hash Seal", "Verification API"].map((step, i, arr) => (
           <div key={step} className="flex items-center gap-2">
@@ -155,9 +51,69 @@ const SystemArchitecture = () => (
         ))}
       </div>
       <div className="governance-card border-l-2 border-l-accent">
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          Data flows unidirectionally from institutional action through normalization, policy evaluation, and sealing. No reverse flow is permitted. The evidence backbone accepts only append operations — no updates, deletions, or modifications are possible after sealing.
+        <p className="text-sm text-foreground leading-relaxed">
+          Data flows one direction. No reverse path. No update operations. No deletion capability. The evidence backbone accepts only appends.
         </p>
+      </div>
+    </Section>
+
+    {/* Architecture layers */}
+    <Section title="Six-Layer Architecture" className="border-t border-border">
+      <div className="space-y-4">
+        {[
+          {
+            num: "01", title: "Event Capture & Normalization", icon: Database,
+            desc: "Structured ingestion. Mandatory context: timestamp, actor role, institutional scope, legal reference, action type, metadata envelope.",
+            points: ["Normalized schema ensures cross-system compatibility", "Context-bound with institutional scope", "Metadata preserves chain-of-custody"],
+          },
+          {
+            num: "02", title: "Policy Decision Engine", icon: Cpu,
+            desc: "Deterministic logic. Authority validation, scope verification, conflict-of-interest rules, procedural completeness checks.",
+            points: ["Output: allow = true/false with policy_id", "Machine-readable denial reasoning", "No interpretive AI — encoded rules only"],
+          },
+          {
+            num: "03", title: "Evidence Backbone", icon: Shield,
+            desc: "Append-only. Write-once, read-many (WORM). Chronological integrity chain. No modifications after sealing.",
+            points: ["Custody separation between storage and governance", "Canada-only regions for sovereign data residency", "Tamper detection invalidates downstream hashes"],
+          },
+          {
+            num: "04", title: "Cryptographic Anchoring", icon: Lock,
+            desc: "SHA-256 hash at seal time. Merkle-style integrity structures. External anchor compatibility.",
+            points: ["SHA-256/512 hash generation", "Merkle tree for batch verification", "Public hash manifest for independent verification"],
+          },
+          {
+            num: "05", title: "Verification API", icon: Network,
+            desc: "Proof-of-existence. Proof-of-absence. Institutional audit access. Zero content exposure.",
+            points: ["RESTful API for proof queries", "Role-based scoping for institutional access", "Zero-knowledge validation"],
+          },
+          {
+            num: "06", title: "Federation & Interoperability", icon: Globe,
+            desc: "National nodes. Interoperable trust. Cross-border verification. Shared compliance standards.",
+            points: ["Tier 1 (Full), Tier 2 (Partial), Observer models", "Voluntary participation — sovereignty preserved", "Cross-border record verification protocols"],
+          },
+        ].map((layer) => (
+          <div key={layer.num} className="governance-card">
+            <div className="flex items-start gap-4">
+              <div className="shrink-0 w-10 h-10 bg-primary text-primary-foreground rounded-sm flex items-center justify-center">
+                <span className="text-xs font-mono font-bold">{layer.num}</span>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <layer.icon className="h-4 w-4 text-accent shrink-0" />
+                  <h3 className="font-serif text-sm font-semibold">{layer.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-2">{layer.desc}</p>
+                <ul className="space-y-1">
+                  {layer.points.map((d) => (
+                    <li key={d} className="flex items-start gap-2 text-xs text-muted-foreground">
+                      <span className="text-accent mt-0.5 shrink-0">·</span>{d}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </Section>
 
@@ -187,13 +143,13 @@ const SystemArchitecture = () => (
     <Section title="Design Principles" className="border-t border-border">
       <div className="grid gap-4 sm:grid-cols-2">
         {[
-          { title: "Zero Trust", desc: "No component trusts another by default. Every interaction requires policy verification." },
-          { title: "No-Edit-After-Seal", desc: "Once a record is cryptographically sealed, it cannot be modified by any party — including the operator." },
-          { title: "Custody Separation", desc: "Storage, governance, and verification are structurally separated to prevent single points of compromise." },
-          { title: "Deterministic Execution", desc: "All policy decisions produce identical outputs for identical inputs. No probabilistic or AI-based logic." },
+          { title: "Zero Trust", desc: "No component trusts another. Every interaction requires policy verification." },
+          { title: "No-Edit-After-Seal", desc: "Once sealed, no party — including the operator — can modify a record." },
+          { title: "Custody Separation", desc: "Storage, governance, and verification are structurally separated." },
+          { title: "Deterministic Execution", desc: "Identical inputs produce identical outputs. No probabilistic logic." },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card">
-            <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
+            <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
             <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
           </div>
         ))}
@@ -202,7 +158,7 @@ const SystemArchitecture = () => (
 
     {/* Attribution */}
     <Section className="border-t border-border bg-card/30">
-      <p className="text-xs text-muted-foreground leading-relaxed">
+      <p className="text-xs text-muted-foreground">
         <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance Framework — Invented and Owned by Tarek Wahid.
       </p>
     </Section>
