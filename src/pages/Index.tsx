@@ -100,7 +100,7 @@ const Index = () => (
     <StickyNav />
 
     {/* ─── 1. HERO ─── */}
-    <header id="hero" className="scroll-mt-14 border-b border-border bg-card/50 px-8 py-20 md:px-12 lg:px-20">
+    <header id="hero" className="scroll-mt-14 border-b border-border px-8 py-20 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-sm mb-6">
           <span className="w-2 h-2 bg-accent rounded-full" />
@@ -184,7 +184,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── 3. WHY THIS MATTERS AT SCALE ─── */}
-    <Sec id="leverage" className="border-b border-border bg-card/30">
+    <Sec id="leverage" className="border-b border-border bg-surface2/30">
       <Title sub="Infrastructure leverage — not incremental improvement.">
         Why This Matters at Scale
       </Title>
@@ -270,7 +270,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── STAKEHOLDER TILES ─── */}
-    <Sec id="stakeholders" className="border-b border-border bg-card/30">
+    <Sec id="stakeholders" className="border-b border-border bg-surface2/30">
       <Title sub="Structured evaluation pathways for each institutional role.">Who It Serves</Title>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {[
@@ -315,7 +315,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── MATURITY ROADMAP ─── */}
-    <Sec id="roadmap" className="border-b border-border bg-card/30">
+    <Sec id="roadmap" className="border-b border-border bg-surface2/30">
       <Title>From Concept to Engine</Title>
       <div className="space-y-0 max-w-2xl">
         {[
@@ -373,7 +373,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── 5. STRUCTURAL MOAT ─── */}
-    <Sec id="moat" className="border-b border-border bg-card/30">
+    <Sec id="moat" className="border-b border-border bg-surface2/30">
       <Title sub="Once adopted at national level, switching cost is extremely high. This is infrastructure, not software.">
         Structural Defensibility
       </Title>
@@ -427,7 +427,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── 7. GLOBAL SCALING MODEL ─── */}
-    <Sec id="scaling" className="border-b border-border bg-card/30">
+    <Sec id="scaling" className="border-b border-border bg-surface2/30">
       <Title sub="From single node to global trust substrate.">
         Global Scaling Model
       </Title>
@@ -499,7 +499,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── 9. RISK ─── */}
-    <Sec id="risk" className="border-b border-border bg-card/30">
+    <Sec id="risk" className="border-b border-border bg-surface2/30">
       <Title>What Could Fail</Title>
       <div className="space-y-3 mb-6">
         {[
@@ -540,7 +540,7 @@ const Index = () => (
     </Sec>
 
     {/* ─── POSITIONING ─── */}
-    <Sec id="positioning" className="border-b border-border bg-card/50">
+    <Sec id="positioning" className="border-b border-border bg-surface/50">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-4">
           Trust should not rely on reputation.

@@ -248,7 +248,7 @@ const SecurityTrust = () => (
     </Section>
 
     {/* Attribution */}
-    <Section className="border-t border-border bg-card/30">
+    <Section className="border-t border-border bg-surface2/30">
       <p className="text-xs text-muted-foreground">
         <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance Framework — Invented and Owned by Tarek Wahid.
       </p>

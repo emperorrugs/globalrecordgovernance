@@ -6,88 +6,64 @@
 
 @layer base {
   :root {
-    /* Sovereign governance palette — deep navy, slate, controlled gold */
-    --background: 216 20% 96%;
-    --foreground: 215 50% 8%;
+    /* Sovereign Midnight Navy + Antique Gold — dark sovereign palette */
+    --background: 215 52% 8%;
+    --foreground: 210 43% 94%;
 
-    --card: 220 14% 96%;
-    --card-foreground: 215 50% 8%;
+    --card: 213 47% 12%;
+    --card-foreground: 210 43% 94%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 50% 8%;
+    --popover: 213 47% 12%;
+    --popover-foreground: 210 43% 94%;
 
-    --primary: 214 69% 14%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 209 73% 10%;
+    --primary-foreground: 210 43% 94%;
 
-    --secondary: 216 14% 93%;
-    --secondary-foreground: 214 30% 18%;
+    --secondary: 210 65% 16%;
+    --secondary-foreground: 211 23% 76%;
 
-    --muted: 216 14% 93%;
-    --muted-foreground: 215 16% 40%;
+    --muted: 210 42% 19%;
+    --muted-foreground: 211 23% 76%;
 
-    --accent: 42 40% 57%;
-    --accent-foreground: 214 69% 14%;
+    --accent: 42 46% 57%;
+    --accent-foreground: 215 52% 8%;
 
-    --destructive: 0 60% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 100% 71%;
+    --destructive-foreground: 210 43% 94%;
 
-    --border: 216 18% 87%;
-    --input: 216 18% 87%;
-    --ring: 214 69% 14%;
+    --border: 210 42% 19%;
+    --input: 212 49% 15%;
+    --ring: 42 46% 57%;
 
-    --radius: 0.25rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 214 69% 14%;
-    --sidebar-foreground: 216 14% 93%;
-    --sidebar-primary: 42 40% 57%;
-    --sidebar-primary-foreground: 214 69% 10%;
-    --sidebar-accent: 214 55% 20%;
-    --sidebar-accent-foreground: 216 14% 94%;
-    --sidebar-border: 214 50% 20%;
-    --sidebar-ring: 42 40% 57%;
+    --sidebar-background: 209 73% 10%;
+    --sidebar-foreground: 210 43% 94%;
+    --sidebar-primary: 42 46% 57%;
+    --sidebar-primary-foreground: 215 52% 8%;
+    --sidebar-accent: 210 65% 16%;
+    --sidebar-accent-foreground: 210 43% 94%;
+    --sidebar-border: 210 42% 19%;
+    --sidebar-ring: 42 46% 57%;
 
-    /* Custom tokens */
-    --gold: 42 40% 57%;
-    --gold-light: 42 30% 70%;
-    --navy-deep: 214 69% 10%;
-    --navy: 214 69% 14%;
-    --slate-inst: 214 23% 24%;
-    --stone: 216 20% 96%;
-    --stone-dark: 216 14% 90%;
-    --emerald-trust: 160 51% 24%;
+    /* Custom sovereign tokens */
+    --gold: 42 46% 57%;
+    --gold-light: 40 52% 48%;
+    --gold-hover: 40 52% 48%;
+    --navy-deep: 209 73% 10%;
+    --navy: 215 52% 8%;
+    --slate-inst: 212 49% 15%;
+    --surface: 213 47% 12%;
+    --surface2: 212 49% 15%;
+    --emerald-trust: 152 58% 53%;
+    --link: 216 100% 75%;
+    --link-hover: 214 100% 81%;
+    --info: 216 100% 72%;
+    --warning: 46 74% 63%;
+    --success: 152 58% 53%;
     --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
     --sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
     --mono: 'JetBrains Mono', 'Courier New', monospace;
-  }
-
-  .dark {
-    --background: 214 55% 6%;
-    --foreground: 216 14% 94%;
-    --card: 214 45% 10%;
-    --card-foreground: 216 14% 94%;
-    --popover: 214 45% 10%;
-    --popover-foreground: 216 14% 94%;
-    --primary: 42 40% 57%;
-    --primary-foreground: 214 69% 6%;
-    --secondary: 214 40% 16%;
-    --secondary-foreground: 216 14% 92%;
-    --muted: 214 35% 14%;
-    --muted-foreground: 215 12% 55%;
-    --accent: 42 40% 57%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 214 35% 18%;
-    --input: 214 35% 18%;
-    --ring: 42 40% 57%;
-    --sidebar-background: 214 55% 4%;
-    --sidebar-foreground: 216 14% 92%;
-    --sidebar-primary: 42 40% 57%;
-    --sidebar-primary-foreground: 214 69% 6%;
-    --sidebar-accent: 214 45% 12%;
-    --sidebar-accent-foreground: 216 14% 94%;
-    --sidebar-border: 214 40% 12%;
-    --sidebar-ring: 42 40% 57%;
   }
 }
 
@@ -129,11 +105,16 @@
   }
 
   .governance-card {
-    @apply bg-card border border-border rounded-sm p-6 transition-all duration-200;
+    background: hsl(var(--surface));
+    @apply border border-border rounded-md p-6 transition-all duration-200;
   }
 
   .governance-card:hover {
-    @apply border-accent/50 shadow-sm;
+    border-color: hsl(var(--muted-foreground) / 0.3);
+  }
+
+  .surface-elevated {
+    background: hsl(var(--surface2));
   }
 
   .hash-text {
@@ -144,6 +125,29 @@
   .canonical-quote {
     @apply border-l-2 border-accent pl-6 py-2 italic text-muted-foreground;
     font-family: var(--serif);
+  }
+
+  /* Sovereign badge styles */
+  .badge-pilot {
+    background: hsl(var(--gold) / 0.12);
+    color: hsl(var(--gold));
+  }
+  .badge-draft {
+    background: hsl(var(--warning) / 0.12);
+    color: hsl(var(--warning));
+  }
+  .badge-verified {
+    background: hsl(var(--success) / 0.12);
+    color: hsl(var(--success));
+  }
+
+  /* Link styling */
+  a.sovereign-link {
+    color: hsl(var(--link));
+  }
+  a.sovereign-link:hover {
+    color: hsl(var(--link-hover));
+    text-decoration: underline;
   }
 }
 
