@@ -35,6 +35,7 @@ const secondaryNav = [
   { title: "Stakeholders", path: "/stakeholders", icon: Users },
   { title: "Compliance", path: "/compliance", icon: CheckCircle },
   { title: "Executive Dossier", path: "/dossier", icon: FileText },
+  { title: "Future-Proofing", path: "/future-proofing", icon: Shield },
   { title: "Governance Interface", path: "/governance-interface", icon: Monitor },
   { title: "Readiness", path: "/readiness", icon: ClipboardCheck },
   { title: "Simulation", path: "/simulation", icon: Play },

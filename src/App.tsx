@@ -48,6 +48,7 @@ import OutreachMessages from "./pages/OutreachMessages";
 import ImpactModeling from "./pages/ImpactModeling";
 import TheProblem from "./pages/TheProblem";
 import Contact from "./pages/Contact";
+import FutureProofing from "./pages/FutureProofing";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -113,6 +114,7 @@ const App = () => (
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
             <Route path="/the-problem" element={<AppLayout><TheProblem /></AppLayout>} />
             <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
+            <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
