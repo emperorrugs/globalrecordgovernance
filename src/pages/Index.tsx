@@ -102,14 +102,15 @@ const Index = () => (
           Sovereign-Grade Digital Public Infrastructure
         </p>
         <h1 className="institutional-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-          A Verifiable Governance
+          Global Records &amp;
           <br />
-          Infrastructure for the
-          <br />
-          Digital State
+          Governance Framework
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl">
-          The Global Records & Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure designed to provide neutral, policy-enforced, and cryptographically verifiable institutional records.
+        <p className="mt-3 text-lg md:text-xl text-foreground/70 font-serif">
+          A Deterministic Governance Integrity Infrastructure
+        </p>
+        <p className="mt-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          A sovereign-grade Digital Public Infrastructure designed to enforce policy determinism and cryptographic record integrity across institutional systems.
         </p>
         <p className="mt-4 text-sm text-foreground/80 leading-relaxed max-w-3xl">
           GRGF integrates with existing national systems to ensure that what occurred — and what did not occur — can be independently verified without political or administrative interference.
@@ -128,21 +129,17 @@ const Index = () => (
           ))}
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
+          <Link to="/pilot" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            <Shield className="h-4 w-4" />
+            Request Controlled Pilot Evaluation
+          </Link>
           <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
             <Layers className="h-4 w-4" />
-            Explore System Architecture
+            View System Architecture
           </Link>
-          <Link to="/deployment" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
-            <Globe className="h-4 w-4" />
-            National Deployment Model
-          </Link>
-          <Link to="/archive" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
-            <FileText className="h-4 w-4" />
-            Technical Documentation
-          </Link>
-          <Link to="/stakeholders" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
-            <Building2 className="h-4 w-4" />
-            Request Institutional Briefing
+          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground text-sm font-medium rounded-sm hover:bg-card transition-colors">
+            <Lock className="h-4 w-4" />
+            Controlled Access
           </Link>
         </div>
         <p className="mt-6 text-xs text-muted-foreground italic">
@@ -165,7 +162,7 @@ const Index = () => (
         {/* Evidence Backbone */}
         <div className="governance-card border-l-2 border-l-accent">
           <Database className="h-5 w-5 text-accent mb-3" />
-          <h3 className="font-serif text-base font-semibold mb-3">Evidence Backbone</h3>
+          <h3 className="font-serif text-base font-semibold mb-3">Append-Only Cryptographic Ledger</h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             GRGF establishes an append-only, structured event record system.
           </p>
@@ -190,7 +187,7 @@ const Index = () => (
         {/* Policy Enforcement Engine */}
         <div className="governance-card border-l-2 border-l-accent">
           <Cpu className="h-5 w-5 text-accent mb-3" />
-          <h3 className="font-serif text-base font-semibold mb-3">Policy Enforcement Engine</h3>
+          <h3 className="font-serif text-base font-semibold mb-3">Deterministic Policy Enforcement</h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             GRGF does not interpret governance — it enforces encoded rules.
           </p>
@@ -215,7 +212,7 @@ const Index = () => (
         {/* Public Verification Layer */}
         <div className="governance-card border-l-2 border-l-accent">
           <ShieldCheck className="h-5 w-5 text-accent mb-3" />
-          <h3 className="font-serif text-base font-semibold mb-3">Public Verification Layer</h3>
+          <h3 className="font-serif text-base font-semibold mb-3">Independent Verification Layer</h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
             GRGF enables independent, zero-knowledge verification.
           </p>
@@ -513,19 +510,48 @@ const Index = () => (
 
     {/* ─── POSITIONING STATEMENT ─── */}
     <Sec id="positioning" className="border-b border-border bg-card/50">
-      <div className="governance-card border-l-2 border-l-accent">
+      <div className="governance-card border-l-2 border-l-accent mb-6">
         <p className="text-sm text-foreground leading-relaxed font-medium mb-3">
-          GRGF is a governance integrity infrastructure layer designed to strengthen sovereign institutions through deterministic enforcement, cryptographic record integrity, and independent verification.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          It enhances existing digital public infrastructure without replacing national systems.
-        </p>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-          GRGF is prepared for structured pilot evaluation, independent technical review, and institutional validation prior to national deployment.
+          GRGF is a governance integrity infrastructure layer designed to support structured pilot evaluation prior to sovereign deployment.
         </p>
         <p className="text-sm text-accent font-serif font-semibold italic">
           Trust becomes structurally verifiable.
         </p>
+      </div>
+
+      {/* Version Registry */}
+      <div className="governance-card overflow-x-auto">
+        <p className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-3">Version Registry</p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { label: "Framework", value: "GRGF v1.0" },
+            { label: "Pilot Node", value: "v0.1 — Controlled Evaluation" },
+            { label: "Status", value: "Pre-Pilot / Institutional Review" },
+            { label: "Patent", value: "CA 3,300,102 (Filed)" },
+          ].map(({ label, value }) => (
+            <div key={label}>
+              <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1">{label}</p>
+              <p className="text-xs font-serif font-semibold text-foreground">{value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Limitations */}
+      <div className="mt-6 governance-card bg-muted/30">
+        <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-2">Limitations Statement</p>
+        <ul className="space-y-1.5 text-xs text-muted-foreground">
+          {[
+            "Currently at pilot evaluation stage — not production-deployed",
+            "No completed third-party security audit (planned pre-production)",
+            "ROI modeling is scenario-based and requires pilot validation",
+            "National deployment requires structured institutional review and approval",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-2">
+              <span className="text-accent mt-0.5 shrink-0">·</span>{item}
+            </li>
+          ))}
+        </ul>
       </div>
     </Sec>
 

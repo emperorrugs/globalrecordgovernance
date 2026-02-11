@@ -39,6 +39,16 @@ const NationalDeployment = () => (
       <div className="space-y-6">
         {[
           {
+            phase: "Phase 0", timeline: "Pre-Deployment", title: "Readiness Assessment",
+            items: [
+              "Legal and regulatory compatibility analysis",
+              "Institutional digital maturity evaluation",
+              "Stakeholder mapping and governance authority identification",
+              "Risk appetite assessment and reversibility planning",
+              "Budget estimation and resource allocation framework",
+            ],
+          },
+          {
             phase: "Phase 1", timeline: "0–6 Months", title: "Pilot Deployment",
             items: [
               "Legal and regulatory assessment",
@@ -166,6 +176,61 @@ const NationalDeployment = () => (
             ))}
           </ul>
         </div>
+      </div>
+    </Section>
+
+    {/* Reversibility Policy */}
+    <Section title="Reversibility & Exit Policy" className="border-t border-border">
+      <div className="governance-card border-l-2 border-l-accent">
+        <p className="text-sm text-foreground leading-relaxed mb-4">
+          GRGF is designed for reversible deployment. Institutions can exit at any phase without data loss, vendor lock-in, or operational disruption.
+        </p>
+        <div className="space-y-2">
+          {[
+            "All sealed records remain accessible and verifiable after exit",
+            "No proprietary data formats — standard schemas ensure portability",
+            "Infrastructure can be decommissioned without affecting existing national systems",
+            "Governance rules and policies remain institutional property at all times",
+            "No contractual obligations beyond the active pilot period",
+          ].map((item) => (
+            <div key={item} className="flex items-start gap-2">
+              <CheckCircle className="h-3 w-3 text-accent shrink-0 mt-0.5" />
+              <p className="text-xs text-muted-foreground leading-relaxed">{item}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Section>
+
+    {/* Risk Register Summary */}
+    <Section title="Risk Register Summary" className="border-t border-border">
+      <div className="governance-card overflow-x-auto">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Risk</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Likelihood</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Impact</th>
+              <th className="text-left py-2 text-muted-foreground/70 font-medium">Mitigation</th>
+            </tr>
+          </thead>
+          <tbody className="text-muted-foreground">
+            {[
+              ["Integration complexity", "Medium", "Medium", "Phased deployment with rollback capability"],
+              ["Institutional resistance", "High", "Medium", "Stakeholder engagement and pilot evidence"],
+              ["Budget overrun", "Low", "Medium", "Conservative scoping with contingency reserves"],
+              ["Security incident", "Low", "High", "Incident response protocol and isolation capability"],
+              ["Regulatory change", "Low", "Medium", "Jurisdiction-neutral design and policy adaptability"],
+            ].map(([risk, likelihood, impact, mitigation]) => (
+              <tr key={risk} className="border-b border-border/50">
+                <td className="py-2 pr-4 font-medium text-foreground">{risk}</td>
+                <td className="py-2 pr-4 font-mono">{likelihood}</td>
+                <td className="py-2 pr-4 font-mono">{impact}</td>
+                <td className="py-2">{mitigation}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </Section>
 

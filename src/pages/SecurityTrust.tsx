@@ -181,6 +181,32 @@ const SecurityTrust = () => (
       </div>
     </Section>
 
+    {/* Current Security Posture */}
+    <Section title="Current Security Posture" className="border-t border-border">
+      <div className="governance-card border-l-2 border-l-accent">
+        <p className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-3">Transparency Statement</p>
+        <div className="space-y-3">
+          {[
+            { status: "Current", label: "Pilot evaluation stage — not production-deployed" },
+            { status: "Planned", label: "Independent third-party security audit (pre-production)" },
+            { status: "Planned", label: "Formal penetration testing by accredited security firm" },
+            { status: "Planned", label: "SOC 2 Type II equivalent assurance engagement" },
+            { status: "Active", label: "Production hardening roadmap under development" },
+          ].map((item) => (
+            <div key={item.label} className="flex items-start gap-3">
+              <span className={`text-[10px] font-mono tracking-wider shrink-0 mt-0.5 ${item.status === "Current" || item.status === "Active" ? "text-accent" : "text-muted-foreground/60"}`}>
+                [{item.status.toUpperCase()}]
+              </span>
+              <p className="text-xs text-muted-foreground leading-relaxed">{item.label}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-xs text-muted-foreground italic">
+          Transparency in security posture is an intentional design decision. Concealing limitations would contradict the framework's integrity principles.
+        </p>
+      </div>
+    </Section>
+
     {/* Attribution */}
     <Section className="border-t border-border bg-card/30">
       <p className="text-xs text-muted-foreground leading-relaxed">

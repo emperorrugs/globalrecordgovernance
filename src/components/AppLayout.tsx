@@ -35,6 +35,7 @@ const navItems = [
   { title: "Processes", path: "/processes", icon: GitBranch },
   { title: "Blueprints", path: "/blueprints", icon: Layers },
   { title: "Pilot Node v0.1", path: "/pilot", icon: Server },
+  { title: "Controlled Access", path: "/controlled-access", icon: Lock },
   { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
   { title: "Sitemap", path: "/sitemap", icon: FileCheck },

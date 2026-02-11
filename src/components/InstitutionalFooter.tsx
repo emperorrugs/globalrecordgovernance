@@ -34,12 +34,17 @@ export function InstitutionalFooter() {
             </p>
           </div>
         </div>
-        <div className="mt-8 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-6 governance-card border-l-2 border-l-accent">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            GRGF is a governance integrity infrastructure layer designed to support structured pilot evaluation prior to sovereign deployment. Trust becomes structurally verifiable.
+          </p>
+        </div>
+        <div className="mt-6 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
           <p className="text-[10px] text-muted-foreground/50 tracking-wide uppercase">
             GRGF · Governance Framework – Reference Website · No personal data collected · Simulation and explanation only
           </p>
-          <Link to="/source-of-truth" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
-            Source of Truth →
+          <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
+            Controlled Access →
           </Link>
         </div>
       </div>
