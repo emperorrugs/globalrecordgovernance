@@ -22,6 +22,7 @@ const navItems = [
   { title: "Deployment", path: "/deployment", icon: Globe },
   { title: "Canada Federal", path: "/canada", icon: Building2 },
   { title: "Impact & ROI", path: "/impact", icon: BarChart3 },
+  { title: "Impact Modeling", path: "/impact-modeling", icon: BarChart3 },
   { title: "Stakeholders", path: "/stakeholders", icon: Users },
   { title: "Compliance", path: "/compliance", icon: CheckCircle },
   { title: "Executive Dossier", path: "/dossier", icon: FileText },

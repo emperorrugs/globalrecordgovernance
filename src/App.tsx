@@ -45,6 +45,7 @@ import Sitemap from "./pages/Sitemap";
 import ControlledAccess from "./pages/ControlledAccess";
 import ExecutiveSummary from "./pages/ExecutiveSummary";
 import OutreachMessages from "./pages/OutreachMessages";
+import ImpactModeling from "./pages/ImpactModeling";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -107,6 +108,7 @@ const App = () => (
             <Route path="/controlled-access" element={<AppLayout><ControlledAccess /></AppLayout>} />
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
             <Route path="/outreach" element={<AppLayout><OutreachMessages /></AppLayout>} />
+            <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
