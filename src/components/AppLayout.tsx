@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
-  ChevronLeft, ChevronRight, GraduationCap,
+  GraduationCap,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -80,7 +80,6 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
 }
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
-  const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const { mode, toggle, isPlain } = useViewMode();
@@ -90,40 +89,23 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-screen w-full">
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside
-          className={cn(
-            "sticky top-0 h-screen flex flex-col bg-primary border-r border-border transition-all duration-300 z-50",
-            collapsed ? "w-16" : "w-64"
-          )}
-        >
-          <div className="flex items-center justify-between p-4 border-b border-sidebar-border">
-            {!collapsed && (
-              <div>
-                <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
-                <p className="text-[10px] text-sidebar-foreground/60 mt-0.5 leading-tight">
-                  Global Record Governance Framework
-                </p>
-              </div>
-            )}
-            <button
-              onClick={() => setCollapsed(!collapsed)}
-              className="p-1.5 rounded-sm hover:bg-sidebar-accent transition-colors text-sidebar-foreground/70 hover:text-sidebar-foreground"
-            >
-              {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-            </button>
+        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
+          <div className="p-4 border-b border-sidebar-border">
+            <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
+            <p className="text-[10px] text-sidebar-foreground/60 mt-0.5 leading-tight">
+              Global Record Governance Framework
+            </p>
           </div>
 
-          <SidebarNav collapsed={collapsed} />
+          <SidebarNav />
 
-          {!collapsed && (
-            <div className="p-4 border-t border-sidebar-border">
-              <p className="text-[10px] text-sidebar-foreground/40 leading-relaxed">
-                Digital Public Infrastructure
-                <br />
-                Est. 2024 · Read-Only Reference
-              </p>
-            </div>
-          )}
+          <div className="p-4 border-t border-sidebar-border">
+            <p className="text-[10px] text-sidebar-foreground/40 leading-relaxed">
+              Digital Public Infrastructure
+              <br />
+              Est. 2024 · Read-Only Reference
+            </p>
+          </div>
         </aside>
       )}
 
