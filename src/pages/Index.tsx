@@ -86,7 +86,7 @@ const Title = ({ children, sub }: { children: React.ReactNode; sub?: string }) =
 /* ── Page ── */
 const Index = () => (
   <div className="animate-fade-in">
-    <StickyNav />
+    
 
     {/* ─── HERO ─── */}
     <header id="hero" className="scroll-mt-14 border-b border-border px-8 py-24 md:px-12 lg:px-20 bg-primary text-primary-foreground">
