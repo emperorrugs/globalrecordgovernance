@@ -84,7 +84,7 @@ const App = () => (
         <ViewModeProvider>
           <Routes>
             {/* One-page home */}
-            <Route path="/" element={<Index />} />
+            <Route path="/" element={<AppLayout><Index /></AppLayout>} />
 
             {/* New OECD-aligned primary pages */}
             <Route path="/dpi-stack" element={<AppLayout><DPIStack /></AppLayout>} />
