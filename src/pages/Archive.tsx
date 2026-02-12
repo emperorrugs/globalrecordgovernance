@@ -31,6 +31,7 @@ const folders = [
       { name: "Demo Guide (v0.1)", file: "GRGF_Demo_Guide_v0.1.pdf", classification: "Public" },
       { name: "Pilot SOW & Acceptance", file: "7_Pilot_SOW_Acceptance.md", classification: "Public" },
       { name: "Optimum Backlog", file: "optimum_two_week_backlog.csv", classification: "Public" },
+      { name: "Full Pilot Kit ZIP (v0.1)", file: "GRGF_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip", classification: "Restricted" },
     ],
   },
   {
