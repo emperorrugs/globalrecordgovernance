@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
-  GraduationCap, Award, BookOpen, Handshake,
+  GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
+  Database, Landmark,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -13,34 +14,48 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-/* ── Primary navigation ── */
-const primaryNav = [
+/* ── LAYER 1: Institutional Authority ── */
+const layer1 = [
   { title: "Home", path: "/", icon: Home },
-  { title: "Architecture", path: "/architecture", icon: Cpu },
-  { title: "Institutional Alignment", path: "/oecd-alignment", icon: Layers },
-  { title: "Deployment Model", path: "/deployment-scenarios", icon: Globe },
-  { title: "Evidence & Assurance", path: "/safeguards-trust", icon: Shield },
-  { title: "Archive", path: "/archive", icon: FileText },
-  { title: "Academy", path: "/academy", icon: GraduationCap },
+  { title: "Transparency & Governance", path: "/transparency", icon: Eye },
+  { title: "Membership & Advisory", path: "/membership", icon: Building },
   { title: "Contact", path: "/contact", icon: Users },
 ];
 
-/* ── Extended navigation ── */
-const secondaryNav = [
-  { title: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
-  { title: "Strategic Governance", path: "/strategic-governance", icon: Shield },
-  { title: "Operational Model", path: "/operational-model", icon: Cpu },
-  { title: "Risk & Mitigation", path: "/risk-mitigation", icon: Shield },
-  { title: "International", path: "/international-cooperation", icon: Globe },
-  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: FileText },
-  { title: "DPI Comparison", path: "/dpi-comparison", icon: Layers },
+/* ── LAYER 2: Standards & Recognition ── */
+const layer2 = [
+  { title: "Recognition Framework", path: "/recognition", icon: Award },
+  { title: "Institutional Alignment", path: "/oecd-alignment", icon: Layers },
+  { title: "Governance Ethics", path: "/ethics", icon: Shield },
+  { title: "Compliance", path: "/compliance", icon: FileText },
+];
+
+/* ── LAYER 3: DPI Platform ── */
+const layer3 = [
+  { title: "Architecture", path: "/architecture", icon: Cpu },
+  { title: "DPI Stack", path: "/dpi-stack", icon: Layers },
+  { title: "Safeguards & Trust", path: "/safeguards-trust", icon: Shield },
+  { title: "Deployment Model", path: "/deployment-scenarios", icon: Globe },
+  { title: "Academy", path: "/academy", icon: GraduationCap },
+];
+
+/* ── LAYER 4: Digital Archive ── */
+const layer4 = [
+  { title: "Archive", path: "/archive", icon: FileText },
+  { title: "Research & Publications", path: "/research", icon: BookOpen },
+  { title: "Global Partnerships", path: "/partnerships", icon: Handshake },
   { title: "Controlled Access", path: "/controlled-access", icon: Lock },
 ];
 
-function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; collapsed?: boolean; onNavigate?: () => void }) {
+type NavItem = { title: string; path: string; icon: React.ComponentType<{ className?: string }> };
+
+function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; collapsed?: boolean; onNavigate?: () => void; label?: string }) {
   const location = useLocation();
   return (
-    <>
+    <div>
+      {label && !collapsed && (
+        <p className="px-3 pt-5 pb-2 text-overline font-mono text-sidebar-foreground/30 uppercase tracking-widest">{label}</p>
+      )}
       {items.map((item) => {
         const isActive = location.pathname === item.path;
         return (
@@ -61,20 +76,17 @@ function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; 
           </Link>
         );
       })}
-    </>
+    </div>
   );
 }
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
   return (
-    <nav className="flex-1 py-4 px-2 space-y-0.5 overflow-y-auto">
-      <NavGroup items={primaryNav} collapsed={collapsed} onNavigate={onNavigate} />
-      {!collapsed && (
-        <div className="pt-4 mt-4 border-t border-sidebar-border">
-          <p className="px-3 text-overline font-mono text-sidebar-foreground/30 uppercase tracking-widest mb-3">Extended</p>
-        </div>
-      )}
-      <NavGroup items={secondaryNav} collapsed={collapsed} onNavigate={onNavigate} />
+    <nav className="flex-1 py-2 px-2 overflow-y-auto">
+      <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
+      <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
+      <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
+      <NavGroup items={layer4} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
     </nav>
   );
 }
@@ -91,17 +103,17 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       {!isMobile && (
         <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
           <div className="p-5 border-b border-sidebar-border">
-            <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3">
               <div className="w-8 h-8 bg-accent flex items-center justify-center">
                 <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
               </div>
               <div>
                 <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
                 <p className="text-overline text-sidebar-foreground/40 leading-tight">
-                  Governance Framework
+                  Governance Foundation
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
 
           <SidebarNav />
@@ -110,7 +122,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             <p className="text-overline text-sidebar-foreground/30 leading-relaxed">
               Digital Public Infrastructure
               <br />
-              Est. 2024 · Read-Only Reference
+              Standards Authority · Est. 2024
             </p>
           </div>
         </aside>
@@ -140,7 +152,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                       <div>
                         <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
                         <p className="text-overline text-sidebar-foreground/40 leading-tight">
-                          Governance Framework
+                          Governance Foundation
                         </p>
                       </div>
                     </div>

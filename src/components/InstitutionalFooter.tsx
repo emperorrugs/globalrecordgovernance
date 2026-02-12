@@ -11,7 +11,7 @@ export function InstitutionalFooter() {
               <div className="w-7 h-7 bg-accent flex items-center justify-center">
                 <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
               </div>
-              <h4 className="font-serif text-sm font-semibold">GRGF</h4>
+              <h4 className="font-serif text-sm font-semibold">GRGF Foundation</h4>
             </div>
             <p className="text-caption text-primary-foreground/50 leading-relaxed">
               Global Record Governance Framework — 

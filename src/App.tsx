@@ -62,6 +62,13 @@ import TheProblem from "./pages/TheProblem";
 import Contact from "./pages/Contact";
 import FutureProofing from "./pages/FutureProofing";
 
+// New institutional pages
+import Recognition from "./pages/Recognition";
+import Membership from "./pages/Membership";
+import Partnerships from "./pages/Partnerships";
+import Research from "./pages/Research";
+import Transparency from "./pages/Transparency";
+
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
 import Simulator from "./pages/Simulator";
@@ -138,6 +145,13 @@ const App = () => (
             <Route path="/the-problem" element={<AppLayout><TheProblem /></AppLayout>} />
             <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
             <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
+
+            {/* New institutional pages */}
+            <Route path="/recognition" element={<AppLayout><Recognition /></AppLayout>} />
+            <Route path="/membership" element={<AppLayout><Membership /></AppLayout>} />
+            <Route path="/partnerships" element={<AppLayout><Partnerships /></AppLayout>} />
+            <Route path="/research" element={<AppLayout><Research /></AppLayout>} />
+            <Route path="/transparency" element={<AppLayout><Transparency /></AppLayout>} />
 
             {/* Archive pages */}
             <Route path="/archive" element={<AppLayout><Archive /></AppLayout>} />
