@@ -34,8 +34,19 @@ export function InstitutionalFooter() {
             </p>
           </div>
         </div>
-        <div className="mt-6 pt-6 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground font-serif italic">
+        {/* Trust Signals */}
+        <div className="mt-6 pt-6 border-t border-border">
+          <div className="grid gap-3 sm:grid-cols-4 mb-4">
+            {[
+              "Pilot stage — not production-certified",
+              "Independent security audit planned",
+              "No certification claims made",
+              "Responsible disclosure: contact@globalrecordgovernance.com",
+            ].map((signal) => (
+              <p key={signal} className="text-[10px] text-muted-foreground/60 leading-relaxed">{signal}</p>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground font-serif italic text-center">
             Trust should not rely on reputation. It should rely on structure.
           </p>
         </div>

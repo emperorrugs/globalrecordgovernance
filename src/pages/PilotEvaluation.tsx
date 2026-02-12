@@ -49,8 +49,8 @@ const PilotEvaluation = () => (
         {[
           { icon: Server, text: "Deterministic policy evaluation (allow/deny with human + machine reasons)" },
           { icon: Hash, text: "Append-only integrity logging with hash chaining" },
-          { icon: Shield, text: "Independent verification workflow" },
-          { icon: CheckCircle, text: "Evidence-first evaluation approach" },
+      { icon: Shield, text: "Independent verification workflow (verification of records via approved access)" },
+          { icon: CheckCircle, text: "Governance trace completeness (event → decision → record)" },
         ].map(({ icon: Icon, text }) => (
           <div key={text} className="flex items-start gap-3 governance-card">
             <Icon className="h-4 w-4 text-accent shrink-0 mt-0.5" />
@@ -65,10 +65,10 @@ const PilotEvaluation = () => (
       <div className="governance-card max-w-2xl">
         <ul className="space-y-2">
           {[
-            "Not a production-certified deployment",
-            "Not a completed third-party security audit",
-            "Not a replacement for national legal frameworks",
-            "Not an open/public operational system",
+            "Not a production certification",
+            "Not yet a completed third-party security audit",
+            "Not an open operational system",
+            "Not a replacement for legal frameworks; it is an integrity layer for administrative execution",
           ].map((item) => (
             <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
               <AlertTriangle className="h-4 w-4 text-warning shrink-0 mt-0.5" />

@@ -200,8 +200,35 @@ const ControlledAccess = () => {
         )}
       </Section>
 
+      {/* What Happens Next */}
+      <Section title="What Happens Next" className="border-t border-border bg-surface2/30">
+        <div className="max-w-2xl space-y-0">
+          {[
+            { step: "1", title: "Intake Review", desc: "Institutional validation of your identity, affiliation, and stated evaluation purpose." },
+            { step: "2", title: "Optional NDA Step", desc: "If required by classification level, a mutual NDA is executed before restricted materials are shared." },
+            { step: "3", title: "Approved Access", desc: "Approved reviewers receive restricted documents, evaluation instructions, and time-limited access links (if applicable)." },
+          ].map((s, i, arr) => (
+            <div key={s.step}>
+              <div className="flex items-start gap-4 py-4">
+                <div className="shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-sm flex items-center justify-center text-xs font-mono font-bold">
+                  {s.step}
+                </div>
+                <div>
+                  <h4 className="font-serif text-sm font-semibold mb-1">{s.title}</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+                </div>
+              </div>
+              {i < arr.length - 1 && <div className="ml-4 w-px h-3 bg-border" />}
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 text-xs text-muted-foreground/60 italic">
+          Direct download links are never exposed automatically. Access is granted through manual approval only.
+        </p>
+      </Section>
+
       {/* No Public Signup */}
-      <Section className="border-t border-border bg-surface2/30">
+      <Section className="border-t border-border">
         <div className="governance-card">
           <div className="flex items-start gap-3">
             <AlertTriangle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
