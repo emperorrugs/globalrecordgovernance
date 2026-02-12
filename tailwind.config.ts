@@ -69,6 +69,7 @@ export default {
           DEFAULT: "hsl(var(--navy))",
           deep: "hsl(var(--navy-deep))",
         },
+        "sovereign-green": "hsl(var(--sovereign-green))",
         "slate-inst": "hsl(var(--slate-inst))",
         "emerald-trust": "hsl(var(--emerald-trust))",
         surface: "hsl(var(--surface))",
