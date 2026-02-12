@@ -34,6 +34,16 @@ import CriticalQuestions from "./pages/CriticalQuestions";
 import InstitutionalReadiness from "./pages/InstitutionalReadiness";
 import ValidationPathway from "./pages/ValidationPathway";
 
+// New OECD-aligned pages
+import DPIStack from "./pages/DPIStack";
+import SafeguardsTrust from "./pages/SafeguardsTrust";
+import StrategicGovernance from "./pages/StrategicGovernance";
+import OperationalModel from "./pages/OperationalModel";
+import DeploymentScenarios from "./pages/DeploymentScenarios";
+import RiskMitigation from "./pages/RiskMitigation";
+import OECDAlignment from "./pages/OECDAlignment";
+import InternationalCooperation from "./pages/InternationalCooperation";
+
 // Standalone governance pages
 import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
@@ -76,7 +86,17 @@ const App = () => (
             {/* One-page home */}
             <Route path="/" element={<Index />} />
 
-            {/* Core institutional pages */}
+            {/* New OECD-aligned primary pages */}
+            <Route path="/dpi-stack" element={<AppLayout><DPIStack /></AppLayout>} />
+            <Route path="/safeguards-trust" element={<AppLayout><SafeguardsTrust /></AppLayout>} />
+            <Route path="/strategic-governance" element={<AppLayout><StrategicGovernance /></AppLayout>} />
+            <Route path="/operational-model" element={<AppLayout><OperationalModel /></AppLayout>} />
+            <Route path="/deployment-scenarios" element={<AppLayout><DeploymentScenarios /></AppLayout>} />
+            <Route path="/risk-mitigation" element={<AppLayout><RiskMitigation /></AppLayout>} />
+            <Route path="/oecd-alignment" element={<AppLayout><OECDAlignment /></AppLayout>} />
+            <Route path="/international-cooperation" element={<AppLayout><InternationalCooperation /></AppLayout>} />
+
+            {/* Core institutional pages (retained) */}
             <Route path="/architecture" element={<AppLayout><SystemArchitecture /></AppLayout>} />
             <Route path="/security-trust" element={<AppLayout><SecurityTrust /></AppLayout>} />
             <Route path="/governance-framework" element={<AppLayout><GovernanceFramework /></AppLayout>} />
