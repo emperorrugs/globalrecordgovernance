@@ -13,36 +13,35 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-/* ── Primary navigation (11-item sovereign structure) ── */
+/* ── Primary navigation (12-item OECD-aligned structure) ── */
 const primaryNav = [
-  { title: "Home", path: "/", icon: Home },
-  { title: "The Problem", path: "/the-problem", icon: AlertTriangle },
-  { title: "Architecture", path: "/architecture", icon: Layers },
-  { title: "Trust Center", path: "/security-trust", icon: Shield },
-  { title: "Governance", path: "/governance-framework", icon: GitBranch },
-  { title: "Deployment", path: "/deployment", icon: Globe },
-  { title: "Impact & ROI", path: "/impact-modeling", icon: BarChart3 },
-  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: Server },
-  { title: "Controlled Access", path: "/controlled-access", icon: Lock },
-  { title: "Archive", path: "/archive", icon: FileText },
-  { title: "Contact", path: "/contact", icon: Users },
+  { title: "Executive Overview", path: "/", icon: Home },
+  { title: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
+  { title: "Technical Architecture", path: "/architecture", icon: Cpu },
+  { title: "Safeguards & Trust", path: "/safeguards-trust", icon: Shield },
+  { title: "Strategic Governance", path: "/strategic-governance", icon: GitBranch },
+  { title: "Operational Model", path: "/operational-model", icon: BarChart3 },
+  { title: "Deployment Scenarios", path: "/deployment-scenarios", icon: Globe },
+  { title: "Risk & Mitigation", path: "/risk-mitigation", icon: AlertTriangle },
+  { title: "OECD Alignment", path: "/oecd-alignment", icon: CheckCircle },
+  { title: "International", path: "/international-cooperation", icon: Globe },
+  { title: "Archive & API", path: "/archive", icon: FileText },
+  { title: "Institutional Contact", path: "/contact", icon: Users },
 ];
 
 /* ── Extended navigation (secondary pages) ── */
 const secondaryNav = [
+  { title: "The Problem", path: "/the-problem", icon: AlertTriangle },
+  { title: "Impact & ROI", path: "/impact-modeling", icon: BarChart3 },
+  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: Server },
+  { title: "Controlled Access", path: "/controlled-access", icon: Lock },
   { title: "Canada Federal", path: "/canada", icon: Building2 },
-  { title: "Risk & Ethics", path: "/ethics", icon: AlertTriangle },
   { title: "Stakeholders", path: "/stakeholders", icon: Users },
   { title: "Compliance", path: "/compliance", icon: CheckCircle },
-  { title: "Executive Dossier", path: "/dossier", icon: FileText },
-  { title: "Future-Proofing", path: "/future-proofing", icon: Shield },
-  { title: "Governance Interface", path: "/governance-interface", icon: Monitor },
   { title: "Readiness", path: "/readiness", icon: ClipboardCheck },
   { title: "Simulation", path: "/simulation", icon: Play },
-  { title: "Systems", path: "/systems", icon: Cpu },
-  { title: "Blueprints", path: "/blueprints", icon: Layers },
-  { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
+  { title: "Academy", path: "/academy", icon: GraduationCap },
   { title: "Sitemap", path: "/sitemap", icon: FileCheck },
 ];
 
