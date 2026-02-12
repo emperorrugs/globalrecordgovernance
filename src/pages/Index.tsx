@@ -1,32 +1,21 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
-  CheckCircle, Layers, Shield, ShieldCheck,
-  FileText, BarChart3, Lock, Eye, Users, Scale,
-  ArrowRight, ArrowDown, Database, Cpu,
-  Network, Globe, Server, Zap, TrendingUp,
-  AlertTriangle,
+  ArrowDown, ArrowRight, Shield, Cpu, Globe, Lock,
+  Database, CheckCircle, BarChart3, FileText,
 } from "lucide-react";
 
-/* ── Section anchors ── */
-const sections = [
+/* ── Sticky Nav (simplified 8-item) ── */
+const navItems = [
   { id: "hero", label: "Home" },
-  { id: "category", label: "What It Is" },
-  { id: "leverage", label: "Leverage" },
+  { id: "positioning", label: "Why GRGF" },
+  { id: "alignment", label: "Alignment" },
   { id: "architecture", label: "Architecture" },
-  { id: "stakeholders", label: "Stakeholders" },
-  { id: "kpis", label: "Pilot KPIs" },
-  { id: "roadmap", label: "Roadmap" },
-  { id: "trust", label: "Trust" },
-  { id: "moat", label: "Defensibility" },
-  { id: "execution", label: "Execution" },
-  { id: "scaling", label: "Scale" },
-  { id: "capital", label: "Capital" },
-  { id: "risk", label: "Risk" },
+  { id: "assurance", label: "Evidence" },
+  { id: "deployment", label: "Deployment" },
   { id: "status", label: "Status" },
 ];
 
-/* ── Sticky Nav ── */
 function StickyNav() {
   const [active, setActive] = useState("hero");
   const [scrolled, setScrolled] = useState(false);
@@ -34,7 +23,7 @@ function StickyNav() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
-      const offsets = sections.map(({ id }) => {
+      const offsets = navItems.map(({ id }) => {
         const el = document.getElementById(id);
         return { id, top: el ? el.getBoundingClientRect().top : 9999 };
       });
@@ -61,7 +50,7 @@ function StickyNav() {
           GRGF
         </a>
         <div className="flex items-center gap-1 overflow-x-auto scrollbar-hide">
-          {sections.slice(1).map(({ id, label }) => (
+          {navItems.slice(1).map(({ id, label }) => (
             <a
               key={id}
               href={`#${id}`}
@@ -99,454 +88,232 @@ const Index = () => (
   <div className="animate-fade-in">
     <StickyNav />
 
-    {/* ─── 1. HERO ─── */}
-    <header id="hero" className="scroll-mt-14 border-b border-border px-8 py-20 md:px-12 lg:px-20">
+    {/* ─── HERO ─── */}
+    <header id="hero" className="scroll-mt-14 border-b border-border px-8 py-24 md:px-12 lg:px-20 bg-primary text-primary-foreground">
       <div className="max-w-4xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-sm mb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1 border border-primary-foreground/20 rounded-sm mb-6">
           <span className="w-2 h-2 bg-accent rounded-full" />
           <span className="text-[10px] font-mono text-accent uppercase tracking-wider">Pilot Evaluation Phase · Controlled Access</span>
         </div>
-        <h1 className="institutional-heading text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
-          Global Records &amp;
+        <h1 className="institutional-heading text-4xl md:text-5xl lg:text-[3.5rem] font-semibold leading-tight text-primary-foreground">
+          Global Record Governance
           <br />
-          Governance Framework
+          Framework (GRGF)
         </h1>
-        <p className="mt-6 text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl">
-          Deterministic governance integrity infrastructure for verifiable policy execution and cryptographic record integrity.
+        <p className="mt-4 text-lg text-primary-foreground/60 font-serif italic">
+          A Sovereign-Grade Digital Public Infrastructure for Institutional Trust
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
-            Request Pilot Access
+        <p className="mt-6 text-base md:text-lg text-primary-foreground/80 leading-relaxed max-w-3xl">
+          GRGF provides a neutral, interoperable, and verifiable record layer to strengthen institutional integrity, regulatory compliance, and global public trust.
+        </p>
+        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <Link to="/briefing" className="flex items-center gap-2 px-4 py-3 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            <FileText className="h-3.5 w-3.5" />
+            Institutional Brief
           </Link>
-          <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
-            View Architecture
+          <Link to="/architecture" className="flex items-center gap-2 px-4 py-3 bg-primary-foreground/10 text-primary-foreground text-xs font-medium rounded-sm hover:bg-primary-foreground/20 transition-colors border border-primary-foreground/20">
+            <Cpu className="h-3.5 w-3.5" />
+            Technical Architecture
+          </Link>
+          <Link to="/oecd-alignment" className="flex items-center gap-2 px-4 py-3 bg-primary-foreground/10 text-primary-foreground text-xs font-medium rounded-sm hover:bg-primary-foreground/20 transition-colors border border-primary-foreground/20">
+            <CheckCircle className="h-3.5 w-3.5" />
+            DPI Alignment Matrix
+          </Link>
+          <Link to="/deployment-scenarios" className="flex items-center gap-2 px-4 py-3 bg-primary-foreground/10 text-primary-foreground text-xs font-medium rounded-sm hover:bg-primary-foreground/20 transition-colors border border-primary-foreground/20">
+            <Globe className="h-3.5 w-3.5" />
+            Pilot Deployment Model
           </Link>
         </div>
-        <div className="mt-10 flex justify-center">
-          <a href="#category" className="text-muted-foreground/40 hover:text-accent transition-colors">
+        <div className="mt-12 flex justify-center">
+          <a href="#positioning" className="text-primary-foreground/30 hover:text-accent transition-colors">
             <ArrowDown className="h-5 w-5 animate-bounce" />
           </a>
         </div>
       </div>
     </header>
 
-    {/* ─── PILOT EVALUATION CALLOUT ─── */}
-    <Sec className="border-b border-border bg-surface2/30">
-      <div className="governance-card border-l-2 border-l-accent max-w-3xl">
-        <div className="inline-flex items-center gap-2 px-2.5 py-0.5 border border-accent/30 rounded-sm mb-4">
-          <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-          <span className="text-[9px] font-mono text-accent uppercase tracking-wider">Controlled Evaluation</span>
-        </div>
-        <h2 className="font-serif text-xl font-semibold mb-2">Pilot Evaluation Kit v0.1</h2>
-        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-          Structured evaluation package for institutional reviewers. Includes scope, KPIs, timeline, and public-safe documentation. Controlled technical materials available upon request.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <Link to="/pilot-evaluation" className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
-            View Pilot Evaluation
-          </Link>
-          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm font-medium rounded-sm hover:bg-surface2 transition-colors">
-            <Lock className="h-3.5 w-3.5" />
-            Request Pilot Access
-          </Link>
-        </div>
-      </div>
-    </Sec>
-
-    {/* ─── 2. CATEGORY DEFINITION ─── */}
-    <Sec id="category" className="border-b border-border">
-      <Title>A Governance Operating Layer</Title>
-      <div className="grid gap-4 sm:grid-cols-2 mb-8">
-        <div className="governance-card">
-          <p className="text-[10px] font-mono text-destructive/60 uppercase tracking-wider mb-3">GRGF is not</p>
+    {/* ─── WHY GRGF — GLOBAL POSITIONING ─── */}
+    <Sec id="positioning" className="border-b border-border">
+      <Title sub="Why current national DPIs remain fragmented — and how GRGF connects without replacing.">
+        Why GRGF Is a Digital Public Infrastructure Layer — Not a Software Tool
+      </Title>
+      <div className="grid gap-6 sm:grid-cols-2 mb-8">
+        <div className="governance-card border-l-2 border-l-primary">
+          <h3 className="font-serif text-sm font-semibold mb-3">The Problem</h3>
           <ul className="space-y-2 text-sm text-muted-foreground">
             {[
-              "A transparency tool",
-              "A compliance dashboard",
-              "A blockchain experiment",
-              "A policy platform",
-            ].map((t) => (
+              "Governance decisions lack structural verifiability",
+              "Audit reconstruction takes weeks, not minutes",
+              "Cross-border institutional trust relies on reputation",
+              "Policy enforcement is discretionary, not deterministic",
+            ].map(t => (
               <li key={t} className="flex items-start gap-2">
-                <span className="text-muted-foreground/40 mt-0.5 shrink-0">✕</span>{t}
+                <span className="text-destructive mt-0.5 shrink-0 text-xs">✕</span>{t}
               </li>
             ))}
           </ul>
         </div>
         <div className="governance-card border-l-2 border-l-accent">
-          <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-3">GRGF is</p>
-          <p className="text-sm text-foreground font-medium leading-relaxed mb-4">
-            A Governance Operating Layer that enforces deterministic execution of institutional authority.
-          </p>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            It turns administrative action into cryptographically verifiable event. That is category creation.
-          </p>
+          <h3 className="font-serif text-sm font-semibold mb-3">The GRGF Solution</h3>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            {[
+              "Every institutional action becomes a cryptographically sealed event",
+              "Full decision chains reconstructable in under 30 minutes",
+              "Cross-border trust via federation protocol — no bilateral treaties",
+              "Deterministic policy enforcement — identical inputs, identical outputs",
+            ].map(t => (
+              <li key={t} className="flex items-start gap-2">
+                <CheckCircle className="h-3.5 w-3.5 text-accent shrink-0 mt-0.5" />{t}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-      <div className="grid gap-6 lg:grid-cols-3">
-        {[
-          {
-            icon: Cpu, title: "Deterministic Policy Enforcement",
-            desc: "Encoded rules execute identically every time. No interpretation. No discretion. No override.",
-          },
-          {
-            icon: Database, title: "Append-Only Cryptographic Ledger",
-            desc: "Write-once, seal-once. SHA-256 hash chaining. No record modified after sealing — by anyone.",
-          },
-          {
-            icon: ShieldCheck, title: "Independent Verification Layer",
-            desc: "Any party verifies record existence, absence, or integrity — without system access or trust.",
-          },
-        ].map(({ icon: Icon, title, desc }) => (
-          <div key={title} className="governance-card">
-            <Icon className="h-5 w-5 text-accent mb-3" />
-            <h3 className="font-serif text-sm font-semibold mb-2">{title}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-          </div>
-        ))}
-      </div>
-    </Sec>
-
-    {/* ─── 3. WHY THIS MATTERS AT SCALE ─── */}
-    <Sec id="leverage" className="border-b border-border bg-surface2/30">
-      <Title sub="Infrastructure leverage — not incremental improvement.">
-        Why This Matters at Scale
-      </Title>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-        {[
-          { metric: "0.3%", label: "Procurement improvement offsets full deployment cost" },
-          { metric: "100%", label: "Policy enforcement determinism — identical inputs, identical outputs" },
-          { metric: "$18.3B", label: "Projected global net annual benefit (modeled)" },
-        ].map(({ metric, label }) => (
-          <div key={label} className="governance-card text-center">
-            <p className="text-3xl font-serif font-semibold text-accent mb-1">{metric}</p>
-            <p className="text-xs text-muted-foreground">{label}</p>
-          </div>
-        ))}
-      </div>
-      <div className="space-y-3">
-        {[
-          { icon: TrendingUp, text: "Eliminates retroactive record manipulation — structurally, not procedurally" },
-          { icon: BarChart3, text: "Reduces audit cycles through continuous compliance evidence" },
-          { icon: Globe, text: "Enables cross-border trust validation via federation protocol" },
-          { icon: Shield, text: "Reduces sovereign corruption risk premium through verifiable governance" },
-          { icon: Zap, text: "Creates new trust primitives for global institutional systems" },
-        ].map(({ icon: Icon, text }) => (
-          <div key={text} className="flex items-start gap-3">
-            <Icon className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-            <p className="text-sm text-muted-foreground leading-relaxed">{text}</p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-8 governance-card border-l-2 border-l-accent">
-        <p className="text-sm text-foreground leading-relaxed font-medium">
-          This is a leverage multiplier. Small integrity improvements across large institutional expenditure produce outsized returns.
+      <div className="governance-card border-l-2 border-l-primary">
+        <p className="text-sm text-foreground leading-relaxed">
+          <strong>Governance, sovereignty, and non-interference model:</strong> GRGF integrates alongside — never replaces — existing national systems. It operates as a non-invasive integrity layer that records governance events from source systems without modifying their operational logic.
         </p>
       </div>
     </Sec>
 
-    {/* ─── 4. ARCHITECTURE ─── */}
-    <Sec id="architecture" className="border-b border-border">
-      <Title sub="Six layers. Unidirectional data flow. No override pathway.">
-        System Architecture
+    {/* ─── INSTITUTIONAL ALIGNMENT MATRIX ─── */}
+    <Sec id="alignment" className="border-b border-border bg-muted/30">
+      <Title sub="GRGF maps directly to established multilateral governance frameworks.">
+        For Governments &amp; Multilaterals
       </Title>
-
-      {/* Flow diagram */}
-      <div className="mb-8 flex flex-wrap items-center gap-2 justify-center">
-        {[
-          { label: "Event Capture" },
-          { label: "Normalization" },
-          { label: "Policy Engine" },
-          { label: "Evidence Store" },
-          { label: "Hash Seal" },
-          { label: "Verification" },
-        ].map((s, i, arr) => (
-          <div key={s.label} className="flex items-center gap-2">
-            <span className="px-3 py-2 border border-border rounded-sm text-xs font-mono text-foreground bg-card">{s.label}</span>
-            {i < arr.length - 1 && <ArrowRight className="h-3 w-3 text-accent shrink-0" />}
-          </div>
-        ))}
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="border-b-2 border-primary/20">
+              <th className="text-left py-3 px-4 font-serif font-semibold text-foreground">GRGF Capability</th>
+              <th className="text-left py-3 px-4 font-serif font-semibold text-foreground">World Bank Pillars</th>
+              <th className="text-left py-3 px-4 font-serif font-semibold text-foreground">UN SDGs</th>
+              <th className="text-left py-3 px-4 font-serif font-semibold text-foreground">OECD Principles</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { cap: "Immutable Record Layer", wb: "Institutional Integrity", un: "SDG 16", oecd: "Trust & Transparency" },
+              { cap: "Audit Trails", wb: "Anti-Corruption", un: "SDG 16.5", oecd: "Accountability" },
+              { cap: "Interoperability", wb: "Digital Gov Reform", un: "SDG 9", oecd: "Data Governance" },
+              { cap: "Policy Enforcement", wb: "Rule of Law", un: "SDG 16.3", oecd: "Regulatory Quality" },
+              { cap: "Federation Protocol", wb: "Cross-Border Trust", un: "SDG 17", oecd: "International Cooperation" },
+            ].map(({ cap, wb, un, oecd }) => (
+              <tr key={cap} className="border-b border-border hover:bg-muted/50 transition-colors">
+                <td className="py-3 px-4 font-medium text-foreground">{cap}</td>
+                <td className="py-3 px-4 text-muted-foreground">{wb}</td>
+                <td className="py-3 px-4"><span className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-mono rounded-sm">{un}</span></td>
+                <td className="py-3 px-4 text-muted-foreground">{oecd}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+      <Link to="/oecd-alignment" className="mt-6 inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline">
+        View Full OECD Alignment Checklist <ArrowRight className="h-3 w-3" />
+      </Link>
+    </Sec>
 
-      {/* Architecture layers */}
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 mb-6">
+    {/* ─── ARCHITECTURE ─── */}
+    <Sec id="architecture" className="border-b border-border">
+      <Title sub="Three-layer sovereignty-preserving operating architecture.">
+        Global Governance Operating Architecture
+      </Title>
+      <div className="space-y-3 max-w-3xl mb-8">
         {[
-          { num: "01", icon: Database, title: "Event Capture", desc: "Structured ingestion with mandatory context fields" },
-          { num: "02", icon: Cpu, title: "Policy Engine", desc: "Deterministic logic — allow/deny with policy ID" },
-          { num: "03", icon: Shield, title: "Evidence Backbone", desc: "Append-only, WORM storage, custody separation" },
-          { num: "04", icon: Lock, title: "Cryptographic Seal", desc: "SHA-256/512, Merkle trees, external anchoring" },
-          { num: "05", icon: Network, title: "Verification API", desc: "Proof-of-existence and proof-of-absence" },
-          { num: "06", icon: Globe, title: "Federation Layer", desc: "Cross-border verification, sovereign interop" },
-        ].map(({ num, icon: Icon, title, desc }) => (
-          <div key={num} className="governance-card">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-[10px] font-mono text-accent/60">{num}</span>
-              <Icon className="h-4 w-4 text-accent" />
+          { layer: "Layer 3", title: "Global Trust Layer", desc: "Cross-border verification, federation protocol, multilateral interoperability", color: "border-accent" },
+          { layer: "Layer 2", title: "GRGF Verification Layer", desc: "Governance record custody, policy enforcement, authority validation, evidence backbone", color: "border-primary bg-primary/5" },
+          { layer: "Layer 1", title: "National Systems", desc: "Existing registries, identity systems, payment rails, departmental databases", color: "border-muted-foreground/30" },
+        ].map(({ layer, title, desc, color }) => (
+          <div key={layer} className={`governance-card border-l-2 ${color}`}>
+            <div className="flex items-start gap-4">
+              <span className="hash-text shrink-0 mt-1 text-primary font-bold">{layer}</span>
+              <div>
+                <h4 className="font-serif text-sm font-semibold">{title}</h4>
+                <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{desc}</p>
+              </div>
             </div>
-            <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
-            <p className="text-xs text-muted-foreground">{desc}</p>
           </div>
         ))}
       </div>
-      <Link to="/architecture" className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
+      <div className="flex flex-wrap items-center gap-2 justify-center mb-6">
+        {["Event Capture", "Normalization", "Policy Engine", "Evidence Store", "Hash Seal", "Verification API"].map((step, i, arr) => (
+          <div key={step} className="flex items-center gap-2">
+            <span className="px-3 py-2 border border-border rounded-sm text-xs font-mono text-foreground bg-card">{step}</span>
+            {i < arr.length - 1 && <ArrowRight className="h-3 w-3 text-primary shrink-0" />}
+          </div>
+        ))}
+      </div>
+      <Link to="/architecture" className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline">
         Full Architecture Detail <ArrowRight className="h-3 w-3" />
       </Link>
     </Sec>
 
-    {/* ─── STAKEHOLDER TILES ─── */}
-    <Sec id="stakeholders" className="border-b border-border bg-surface2/30">
-      <Title sub="Structured evaluation pathways for each institutional role.">Who It Serves</Title>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {/* ─── EVIDENCE & ASSURANCE ─── */}
+    <Sec id="assurance" className="border-b border-border bg-muted/30">
+      <Title sub="Audit-ready governance posture aligned with NIST, ISO 27001, and OECD safeguards.">
+        Evidence &amp; Assurance
+      </Title>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-6">
         {[
-          { title: "CIO / CTO", desc: "Technical architecture evaluation and integration assessment" },
-          { title: "Treasury / Finance", desc: "Fiscal impact modeling and break-even analysis" },
-          { title: "Auditor General", desc: "Audit reconstruction, determinism verification, evidence integrity" },
-          { title: "Procurement Authority", desc: "Procurement leakage simulation and integrity improvement modeling" },
-          { title: "Anti-Corruption Bodies", desc: "Structural integrity enforcement and omission detection" },
-          { title: "Multilateral Institutions", desc: "DPI alignment, federation readiness, cross-border verification" },
-          { title: "Regulators", desc: "Policy enforcement determinism and compliance monitoring" },
-          { title: "Development Banks", desc: "GovTech investment thesis and sovereign risk reduction" },
-        ].map(({ title, desc }) => (
+          { icon: Shield, title: "Governance Model", desc: "Formal charter with custodial neutrality, separation of powers, and anti-capture clauses." },
+          { icon: Lock, title: "Security Posture", desc: "Zero-trust architecture. No administrative override. Append-only evidence backbone." },
+          { icon: Database, title: "Data Minimization", desc: "Only governance metadata captured. No personal identifiers stored in evidence backbone." },
+          { icon: CheckCircle, title: "Audit Capability", desc: "Full decision-chain reconstruction from any sealed governance event in under 30 minutes." },
+          { icon: Globe, title: "Independent Verification", desc: "Any authorized party verifies record integrity without trusting operator or platform." },
+          { icon: BarChart3, title: "Cybersecurity Alignment", desc: "NIST CSF mapping, ISO 27001 alignment, HSM key management, tamper-evident registry." },
+        ].map(({ icon: Icon, title, desc }) => (
           <div key={title} className="governance-card">
-            <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">{desc}</p>
+            <Icon className="h-5 w-5 text-primary mb-3" />
+            <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
+            <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>
-    </Sec>
-
-    {/* ─── PILOT KPIs ─── */}
-    <Sec id="kpis" className="border-b border-border">
-      <Title sub="Measurable criteria for controlled pilot evaluation.">What You Can Evaluate</Title>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {[
-          { kpi: "100%", label: "Policy Determinism Rate", desc: "Identical inputs produce identical outputs — every execution" },
-          { kpi: "100%", label: "Integrity Verification Success", desc: "All sealed records independently verifiable by any authorized party" },
-          { kpi: "<30 min", label: "Audit Reconstruction Time", desc: "Full decision-chain reconstruction from any sealed governance event" },
-          { kpi: "Structured", label: "Denial Clarity Index", desc: "Machine-readable + human-readable reason for every denied action" },
-          { kpi: "Complete", label: "Trace Completeness", desc: "Every action, denial, and omission captured in append-only evidence chain" },
-        ].map(({ kpi, label, desc }) => (
-          <div key={label} className="governance-card">
-            <p className="text-2xl font-serif font-semibold text-accent mb-1">{kpi}</p>
-            <h4 className="text-xs font-mono text-foreground uppercase tracking-wider mb-1">{label}</h4>
-            <p className="text-[11px] text-muted-foreground leading-relaxed">{desc}</p>
-          </div>
-        ))}
-      </div>
-      <Link to="/pilot-evaluation" className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline">
-        View Pilot Evaluation Details <ArrowRight className="h-3 w-3" />
+      <Link to="/safeguards-trust" className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline">
+        View Full Safeguards Architecture <ArrowRight className="h-3 w-3" />
       </Link>
     </Sec>
 
-    {/* ─── MATURITY ROADMAP ─── */}
-    <Sec id="roadmap" className="border-b border-border bg-surface2/30">
-      <Title>From Concept to Engine</Title>
+    {/* ─── DEPLOYMENT MODEL ─── */}
+    <Sec id="deployment" className="border-b border-border">
+      <Title>National Pilot Implementation Model</Title>
       <div className="space-y-0 max-w-2xl">
         {[
-          { version: "v0.1", title: "Pilot Node", status: "Current", desc: "Controlled evaluation edition — deterministic enforcement, hash chaining, audit reconstruction" },
-          { version: "v1.0", title: "Hardened Pilot", status: "Planned", desc: "Independent security audit, production controls, institutional onboarding" },
-          { version: "v2.0", title: "Federation-Ready", status: "Roadmap", desc: "Cross-border verification protocol, multi-node federation, sovereign interoperability" },
+          { phase: "Phase 1", title: "Readiness Assessment", desc: "Institutional governance maturity evaluation, stakeholder mapping, integration scoping", status: "Active" },
+          { phase: "Phase 2", title: "Integration Nodes", desc: "Deploy connector to 1–3 source systems, encode initial policy rules, validate deterministic enforcement" },
+          { phase: "Phase 3", title: "Controlled Deployment", desc: "Expand to operational environment, independent security audit, audit trail reconstruction exercises" },
+          { phase: "Phase 4", title: "Institutional Scaling", desc: "Cross-department rollout, training programs, compliance reporting automation" },
+          { phase: "Phase 5", title: "International Federation", desc: "Federation protocol activation, cross-border verification testing, multilateral alignment" },
         ].map((s, i) => (
-          <div key={s.version}>
+          <div key={s.phase}>
             <div className="flex items-center gap-4 py-4">
               <div className="shrink-0 w-10 h-10 bg-primary text-primary-foreground rounded-sm flex items-center justify-center text-xs font-mono font-bold">
-                {s.version}
+                {i + 1}
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <h4 className="font-serif text-sm font-semibold">{s.title}</h4>
-                  <span className={`text-[9px] font-mono tracking-wider px-1.5 py-0.5 rounded-sm ${s.status === "Current" ? "bg-accent/20 text-accent" : "bg-muted text-muted-foreground"}`}>
-                    {s.status.toUpperCase()}
-                  </span>
+                  {s.status && (
+                    <span className="text-[9px] font-mono tracking-wider px-1.5 py-0.5 rounded-sm bg-accent/20 text-accent">
+                      {s.status.toUpperCase()}
+                    </span>
+                  )}
                 </div>
                 <p className="text-xs text-muted-foreground mt-0.5">{s.desc}</p>
               </div>
             </div>
-            {i < 2 && <div className="ml-5 w-px h-4 bg-border" />}
+            {i < 4 && <div className="ml-5 w-px h-4 bg-border" />}
           </div>
         ))}
       </div>
-    </Sec>
-
-    {/* ─── TRUST SIGNALS ─── */}
-    <Sec id="trust" className="border-b border-border">
-      <Title>Trust Signals</Title>
-      <div className="grid gap-4 sm:grid-cols-3 mb-6">
-        <div className="governance-card">
-          <h4 className="font-serif text-sm font-semibold mb-2">Transparent Limitations</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Pilot-stage system. Not yet independently audited. Production deployment requires third-party security review. Transparency in limitations is intentional.
-          </p>
-        </div>
-        <div className="governance-card">
-          <h4 className="font-serif text-sm font-semibold mb-2">Security Posture</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Zero-trust architecture. No administrative override. Append-only evidence backbone. Independent audit roadmap in progress.
-          </p>
-        </div>
-        <div className="governance-card">
-          <h4 className="font-serif text-sm font-semibold mb-2">Standards Alignment</h4>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            World Bank DPI principles. OECD governance standards. ISO 27001 alignment. NIST framework mapping. Not certification — structured alignment.
-          </p>
-        </div>
-      </div>
-      <Link to="/security-trust" className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
-        View Trust Center <ArrowRight className="h-3 w-3" />
+      <Link to="/deployment-scenarios" className="mt-6 inline-flex items-center gap-2 text-sm text-primary font-medium hover:underline">
+        View Deployment Scenarios <ArrowRight className="h-3 w-3" />
       </Link>
     </Sec>
 
-    {/* ─── 5. STRUCTURAL MOAT ─── */}
-    <Sec id="moat" className="border-b border-border bg-surface2/30">
-      <Title sub="Once adopted at national level, switching cost is extremely high. This is infrastructure, not software.">
-        Structural Defensibility
-      </Title>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-6">
-        {[
-          { title: "Policy Encoding Engine", desc: "Governance rules encoded as deterministic logic — institution-specific, non-transferable." },
-          { title: "Append-Only Ledger", desc: "Historical records accumulate permanent institutional value. Migration destroys integrity chain." },
-          { title: "Federation Protocol", desc: "Cross-border verification creates network effects. Value scales with adoption." },
-          { title: "Governance Neutrality", desc: "No commercial vendor alignment. Structural neutrality enables sovereign adoption." },
-          { title: "Controlled Distribution", desc: "Institutional access framework creates structured engagement pipeline." },
-          { title: "Institutional Onboarding", desc: "Deep integration with governance processes creates operational dependency." },
-        ].map(({ title, desc }) => (
-          <div key={title} className="governance-card">
-            <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
-            <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-          </div>
-        ))}
-      </div>
-    </Sec>
-
-    {/* ─── 6. EXECUTION ROADMAP ─── */}
-    <Sec id="execution" className="border-b border-border">
-      <Title>12-Month Execution Plan</Title>
-      <div className="space-y-3">
-        {[
-          { months: "Month 1–2", title: "Single Ministry Pilot", items: ["Deploy pilot node", "Encode 3–5 decision types", "Validate deterministic enforcement"] },
-          { months: "Month 3–4", title: "Security Audit + Validation", items: ["Independent penetration testing", "Policy encoding review", "Hash integrity verification"] },
-          { months: "Month 5–6", title: "Cross-Department Integration", items: ["Expand to 2–3 additional departments", "Cross-ministry verification testing", "Audit trail reconstruction exercise"] },
-          { months: "Month 7–9", title: "National Adoption Expansion", items: ["Full ministry rollout planning", "Training program deployment", "Compliance reporting automation"] },
-          { months: "Month 10–12", title: "Federation Architecture", items: ["Federation protocol implementation", "Cross-border verification testing", "Multilateral engagement preparation"] },
-        ].map((p) => (
-          <div key={p.months} className="governance-card">
-            <div className="flex items-start gap-4">
-              <div className="shrink-0">
-                <p className="text-[10px] font-mono text-accent uppercase tracking-wider">{p.months}</p>
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-semibold mb-2">{p.title}</h4>
-                <ul className="space-y-1">
-                  {p.items.map((item) => (
-                    <li key={item} className="text-xs text-muted-foreground flex items-start gap-2">
-                      <span className="text-accent mt-0.5 shrink-0">·</span>{item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Sec>
-
-    {/* ─── 7. GLOBAL SCALING MODEL ─── */}
-    <Sec id="scaling" className="border-b border-border bg-surface2/30">
-      <Title sub="From single node to global trust substrate.">
-        Global Scaling Model
-      </Title>
-      <div className="space-y-0">
-        {[
-          { num: "1", title: "Nation-Level Node", desc: "Sovereign deployment under national governance authority" },
-          { num: "2", title: "Federation Layer", desc: "Voluntary cross-nation verification and shared compliance standards" },
-          { num: "3", title: "Cross-Border Verification", desc: "Independent proof validation across jurisdictional boundaries" },
-          { num: "4", title: "Multilateral Integration", desc: "World Bank, OECD, and regional development bank alignment" },
-          { num: "5", title: "Development Bank Alignment", desc: "DPI funding and institutional capacity building programs" },
-          { num: "6", title: "Capital Markets Validation", desc: "Governance integrity as a sovereign risk metric" },
-        ].map((s, i) => (
-          <div key={s.num}>
-            <div className="flex items-center gap-4 py-4">
-              <div className="shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-sm flex items-center justify-center text-xs font-mono font-bold">
-                {s.num}
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-semibold">{s.title}</h4>
-                <p className="text-xs text-muted-foreground">{s.desc}</p>
-              </div>
-            </div>
-            {i < 5 && <div className="ml-4 w-px h-4 bg-border" />}
-          </div>
-        ))}
-      </div>
-      <div className="mt-6 governance-card border-l-2 border-l-accent">
-        <p className="text-sm text-foreground font-medium">
-          This becomes a new global trust substrate. Governance integrity as infrastructure — not aspiration.
-        </p>
-      </div>
-    </Sec>
-
-    {/* ─── 8. CAPITAL STRATEGY ─── */}
-    <Sec id="capital" className="border-b border-border">
-      <Title sub="Clear revenue logic. Not speculative valuation.">
-        Business Model &amp; Capital Structure
-      </Title>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-8">
-        {[
-          { title: "Sovereign Licensing", desc: "Nation-level deployment licenses with sovereignty-preserving terms" },
-          { title: "Integration Services", desc: "Technical integration with existing national DPI and enterprise systems" },
-          { title: "Certification Programs", desc: "Institutional training and governance practitioner certification" },
-          { title: "Support Contracts", desc: "Ongoing operational support and policy encoding assistance" },
-          { title: "API Verification", desc: "Trust-as-a-service verification endpoints for third-party validation" },
-          { title: "Public-Private Partnership", desc: "Structured partnership models with development banks and multilaterals" },
-        ].map(({ title, desc }) => (
-          <div key={title} className="governance-card">
-            <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
-            <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
-          </div>
-        ))}
-      </div>
-      <div className="grid gap-4 sm:grid-cols-3">
-        {[
-          { label: "Break-Even Threshold", value: "0.3% integrity improvement" },
-          { label: "Modeled IRR", value: "100% (conservative)" },
-          { label: "Payback Period", value: "Year 1" },
-        ].map(({ label, value }) => (
-          <div key={label} className="governance-card text-center">
-            <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-wider mb-1">{label}</p>
-            <p className="text-lg font-serif font-semibold text-accent">{value}</p>
-          </div>
-        ))}
-      </div>
-      <Link to="/impact" className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline">
-        Full Financial Analysis <ArrowRight className="h-3 w-3" />
-      </Link>
-    </Sec>
-
-    {/* ─── 9. RISK ─── */}
-    <Sec id="risk" className="border-b border-border bg-surface2/30">
-      <Title>What Could Fail</Title>
-      <div className="space-y-3 mb-6">
-        {[
-          { risk: "Political Resistance", mitigation: "Non-invasive integration. Does not replace existing authority structures. Reversible deployment at every phase." },
-          { risk: "Institutional Inertia", mitigation: "Pilot model with measurable KPIs. Evidence-based adoption — not mandate-driven." },
-          { risk: "Misencoding Risk", mitigation: "Policy encoding validated by institutional governance authorities. Deterministic testing against known scenarios." },
-          { risk: "Perception Misframing", mitigation: "Clear category definition. Not surveillance. Not AI. Not blockchain. Governance infrastructure." },
-          { risk: "Security Compromise", mitigation: "Independent audit roadmap. No centralized override. Append-only architecture limits blast radius." },
-        ].map(({ risk, mitigation }) => (
-          <div key={risk} className="governance-card">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-serif text-sm font-semibold mb-1">{risk}</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">{mitigation}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Sec>
-
-    {/* ─── 10. STATUS ─── */}
-    <Sec id="status" className="border-b border-border">
+    {/* ─── STATUS ─── */}
+    <Sec id="status" className="border-b border-border bg-muted/30">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8">
         {[
           { label: "Framework", value: "GRGF v1.0" },
@@ -562,8 +329,8 @@ const Index = () => (
       </div>
     </Sec>
 
-    {/* ─── POSITIONING ─── */}
-    <Sec id="positioning" className="border-b border-border bg-surface/50">
+    {/* ─── CLOSING ─── */}
+    <Sec className="border-b border-border">
       <div className="text-center max-w-2xl mx-auto">
         <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-4">
           Trust should not rely on reputation.
@@ -571,10 +338,10 @@ const Index = () => (
           It should rely on structure.
         </p>
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
+          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
             Request Pilot Access
           </Link>
-          <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">
+          <Link to="/architecture" className="inline-flex items-center gap-2 px-6 py-3 border border-border text-sm font-medium rounded-sm hover:bg-muted transition-colors">
             View Full Architecture
           </Link>
         </div>
@@ -610,6 +377,9 @@ const Index = () => (
           </div>
         </div>
         <div className="mt-8 pt-6 border-t border-primary-foreground/10">
+          <p className="text-[10px] text-primary-foreground/40 leading-relaxed mb-4">
+            Governance disclaimer: This platform provides structured evaluation materials for institutional assessment. Not independently audited. All projections require pilot validation. Jurisdictional base: Canada. Global scope.
+          </p>
           <p className="text-sm text-primary-foreground/70 font-serif italic text-center">
             Trust should not rely on reputation. It should rely on structure.
           </p>
@@ -619,15 +389,12 @@ const Index = () => (
             GRGF · Governance Integrity Infrastructure · Reference Interface
           </p>
           <div className="flex items-center gap-4">
-            <Link to="/security-trust" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Trust Center</Link>
-            <Link to="/sitemap" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Version Registry</Link>
-            <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">Controlled Access →</Link>
+            <Link to="/safeguards-trust" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Evidence & Assurance</Link>
+            <Link to="/sitemap" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Sitemap</Link>
+            <Link to="/controlled-access" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">Institutional Engagement →</Link>
             <Link to="/contact" className="text-[10px] text-primary-foreground/50 hover:text-accent font-mono uppercase tracking-wider">Contact</Link>
           </div>
         </div>
-        <p className="mt-4 text-[9px] text-primary-foreground/20 leading-relaxed">
-          This platform provides scenario-based projections for structured pilot evaluation. Modeled projections — pilot validation required. Not independently audited. All outputs pending institutional verification.
-        </p>
       </div>
     </footer>
   </div>

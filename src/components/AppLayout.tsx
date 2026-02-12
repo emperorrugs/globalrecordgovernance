@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
-  Home, BookOpen, Layers, Shield, Play, BarChart3, FileCheck, Monitor, HelpCircle, ClipboardCheck, Search,
-  ChevronLeft, ChevronRight, Cpu, GitBranch, GraduationCap, Globe, Menu, Users, Lock, CheckCircle, FileText, AlertTriangle, Building2, Server,
+  Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
+  ChevronLeft, ChevronRight, GraduationCap,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -13,36 +13,28 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-/* ── Primary navigation (12-item OECD-aligned structure) ── */
+/* ── Primary navigation (8-item institutional structure) ── */
 const primaryNav = [
-  { title: "Executive Overview", path: "/", icon: Home },
-  { title: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
-  { title: "Technical Architecture", path: "/architecture", icon: Cpu },
-  { title: "Safeguards & Trust", path: "/safeguards-trust", icon: Shield },
-  { title: "Strategic Governance", path: "/strategic-governance", icon: GitBranch },
-  { title: "Operational Model", path: "/operational-model", icon: BarChart3 },
-  { title: "Deployment Scenarios", path: "/deployment-scenarios", icon: Globe },
-  { title: "Risk & Mitigation", path: "/risk-mitigation", icon: AlertTriangle },
-  { title: "OECD Alignment", path: "/oecd-alignment", icon: CheckCircle },
-  { title: "International", path: "/international-cooperation", icon: Globe },
-  { title: "Archive & API", path: "/archive", icon: FileText },
-  { title: "Institutional Contact", path: "/contact", icon: Users },
+  { title: "Home", path: "/", icon: Home },
+  { title: "Architecture", path: "/architecture", icon: Cpu },
+  { title: "Institutional Alignment", path: "/oecd-alignment", icon: Layers },
+  { title: "Deployment Model", path: "/deployment-scenarios", icon: Globe },
+  { title: "Evidence & Assurance", path: "/safeguards-trust", icon: Shield },
+  { title: "Archive", path: "/archive", icon: FileText },
+  { title: "Academy", path: "/academy", icon: GraduationCap },
+  { title: "Contact", path: "/contact", icon: Users },
 ];
 
-/* ── Extended navigation (secondary pages) ── */
+/* ── Extended navigation (secondary / deep-dive pages) ── */
 const secondaryNav = [
-  { title: "The Problem", path: "/the-problem", icon: AlertTriangle },
-  { title: "Impact & ROI", path: "/impact-modeling", icon: BarChart3 },
-  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: Server },
+  { title: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
+  { title: "Strategic Governance", path: "/strategic-governance", icon: Shield },
+  { title: "Operational Model", path: "/operational-model", icon: Cpu },
+  { title: "Risk & Mitigation", path: "/risk-mitigation", icon: Shield },
+  { title: "International", path: "/international-cooperation", icon: Globe },
+  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: FileText },
+  { title: "DPI Comparison", path: "/dpi-comparison", icon: Layers },
   { title: "Controlled Access", path: "/controlled-access", icon: Lock },
-  { title: "Canada Federal", path: "/canada", icon: Building2 },
-  { title: "Stakeholders", path: "/stakeholders", icon: Users },
-  { title: "Compliance", path: "/compliance", icon: CheckCircle },
-  { title: "Readiness", path: "/readiness", icon: ClipboardCheck },
-  { title: "Simulation", path: "/simulation", icon: Play },
-  { title: "DPI Comparison", path: "/dpi-comparison", icon: BarChart3 },
-  { title: "Academy", path: "/academy", icon: GraduationCap },
-  { title: "Sitemap", path: "/sitemap", icon: FileCheck },
 ];
 
 function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; collapsed?: boolean; onNavigate?: () => void }) {
@@ -107,7 +99,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between p-4 border-b border-sidebar-border">
             {!collapsed && (
               <div>
-                <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
+                <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
                 <p className="text-[10px] text-sidebar-foreground/60 mt-0.5 leading-tight">
                   Global Record Governance Framework
                 </p>
@@ -139,7 +131,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1 min-w-0 flex flex-col">
         <SimulationBanner />
         {/* Top bar */}
-        <div className="flex items-center justify-between border-b border-border px-4 py-2 gap-2">
+        <div className="flex items-center justify-between border-b border-border px-4 py-2 gap-2 bg-card">
           <div className="flex items-center gap-2 min-w-0">
             {/* Mobile hamburger */}
             {isMobile && (
@@ -166,16 +158,16 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-2 shrink-0">
             <Link
               to="/controlled-access"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-accent text-accent-foreground text-[11px] font-medium rounded-sm hover:bg-accent/90 transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground text-[11px] font-medium rounded-sm hover:bg-primary/90 transition-colors"
             >
               <Lock className="h-3 w-3" />
               {isMobile ? "Access" : "Request Pilot Access"}
             </Link>
-            <span className={cn("text-xs font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+            <span className={cn("text-xs font-mono", isPlain ? "text-primary font-semibold" : "text-muted-foreground")}>
               {isMobile ? "Plain" : "Plain English"}
             </span>
             <Switch checked={!isPlain} onCheckedChange={toggle} />
-            <span className={cn("text-xs font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+            <span className={cn("text-xs font-mono", !isPlain ? "text-primary font-semibold" : "text-muted-foreground")}>
               {isMobile ? "Tech" : "Technical"}
             </span>
           </div>
