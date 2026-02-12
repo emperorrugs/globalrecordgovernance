@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
-  GraduationCap,
+  GraduationCap, Award, BookOpen, Handshake,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-/* ── Primary navigation (8-item institutional structure) ── */
+/* ── Primary navigation ── */
 const primaryNav = [
   { title: "Home", path: "/", icon: Home },
   { title: "Architecture", path: "/architecture", icon: Cpu },
@@ -25,7 +25,7 @@ const primaryNav = [
   { title: "Contact", path: "/contact", icon: Users },
 ];
 
-/* ── Extended navigation (secondary / deep-dive pages) ── */
+/* ── Extended navigation ── */
 const secondaryNav = [
   { title: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
   { title: "Strategic Governance", path: "/strategic-governance", icon: Shield },
@@ -49,15 +49,15 @@ function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; 
             to={item.path}
             onClick={onNavigate}
             className={cn(
-              "flex items-center gap-3 px-3 py-2.5 rounded-sm text-sm transition-all duration-150",
+              "flex items-center gap-3 px-3 py-2.5 text-sm transition-all duration-200",
               isActive
-                ? "bg-sidebar-accent text-sidebar-primary font-medium"
-                : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
+                ? "bg-sidebar-accent text-accent font-medium border-l-2 border-accent -ml-px"
+                : "text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 border-l-2 border-transparent -ml-px"
             )}
             title={collapsed ? item.title : undefined}
           >
             <item.icon className="h-4 w-4 shrink-0" />
-            {!collapsed && <span className="text-xs">{item.title}</span>}
+            {!collapsed && <span className="text-caption">{item.title}</span>}
           </Link>
         );
       })}
@@ -67,11 +67,11 @@ function NavGroup({ items, collapsed, onNavigate }: { items: typeof primaryNav; 
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
   return (
-    <nav className="flex-1 py-3 px-2 space-y-0.5 overflow-y-auto">
+    <nav className="flex-1 py-4 px-2 space-y-0.5 overflow-y-auto">
       <NavGroup items={primaryNav} collapsed={collapsed} onNavigate={onNavigate} />
       {!collapsed && (
-        <div className="pt-3 mt-3 border-t border-sidebar-border">
-          <p className="px-3 text-[9px] font-mono text-sidebar-foreground/40 uppercase tracking-wider mb-2">Extended</p>
+        <div className="pt-4 mt-4 border-t border-sidebar-border">
+          <p className="px-3 text-overline font-mono text-sidebar-foreground/30 uppercase tracking-widest mb-3">Extended</p>
         </div>
       )}
       <NavGroup items={secondaryNav} collapsed={collapsed} onNavigate={onNavigate} />
@@ -90,17 +90,24 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       {/* Desktop Sidebar */}
       {!isMobile && (
         <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
-          <div className="p-4 border-b border-sidebar-border">
-            <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
-            <p className="text-[10px] text-sidebar-foreground/60 mt-0.5 leading-tight">
-              Global Record Governance Framework
-            </p>
+          <div className="p-5 border-b border-sidebar-border">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-accent flex items-center justify-center">
+                <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
+              </div>
+              <div>
+                <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
+                <p className="text-overline text-sidebar-foreground/40 leading-tight">
+                  Governance Framework
+                </p>
+              </div>
+            </div>
           </div>
 
           <SidebarNav />
 
-          <div className="p-4 border-t border-sidebar-border">
-            <p className="text-[10px] text-sidebar-foreground/40 leading-relaxed">
+          <div className="p-5 border-t border-sidebar-border">
+            <p className="text-overline text-sidebar-foreground/30 leading-relaxed">
               Digital Public Infrastructure
               <br />
               Est. 2024 · Read-Only Reference
@@ -113,23 +120,30 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1 min-w-0 flex flex-col">
         <SimulationBanner />
         {/* Top bar */}
-        <div className="flex items-center justify-between border-b border-border px-4 py-2 gap-2 bg-card">
+        <div className="flex items-center justify-between border-b border-border px-5 py-2.5 gap-2 bg-card">
           <div className="flex items-center gap-2 min-w-0">
             {/* Mobile hamburger */}
             {isMobile && (
               <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                 <SheetTrigger asChild>
-                  <button className="p-1.5 rounded-sm hover:bg-muted transition-colors shrink-0">
+                  <button className="p-1.5 hover:bg-muted transition-colors shrink-0">
                     <Menu className="h-5 w-5" />
                   </button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-64 bg-primary text-primary-foreground p-0">
                   <SheetTitle className="sr-only">Navigation</SheetTitle>
-                  <div className="p-4 border-b border-sidebar-border">
-                    <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
-                    <p className="text-[10px] text-sidebar-foreground/60 mt-0.5 leading-tight">
-                      Global Record Governance Framework
-                    </p>
+                  <div className="p-5 border-b border-sidebar-border">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-accent flex items-center justify-center">
+                        <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
+                      </div>
+                      <div>
+                        <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
+                        <p className="text-overline text-sidebar-foreground/40 leading-tight">
+                          Governance Framework
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   <SidebarNav onNavigate={() => setMobileOpen(false)} />
                 </SheetContent>
@@ -137,21 +151,23 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             )}
             <Breadcrumbs />
           </div>
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
             <Link
               to="/controlled-access"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-primary-foreground text-[11px] font-medium rounded-sm hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-accent text-accent-foreground text-overline font-semibold tracking-wide transition-colors hover:bg-accent/90"
             >
               <Lock className="h-3 w-3" />
-              {isMobile ? "Access" : "Request Pilot Access"}
+              {isMobile ? "Access" : "Request Assessment"}
             </Link>
-            <span className={cn("text-xs font-mono", isPlain ? "text-primary font-semibold" : "text-muted-foreground")}>
-              {isMobile ? "Plain" : "Plain English"}
-            </span>
-            <Switch checked={!isPlain} onCheckedChange={toggle} />
-            <span className={cn("text-xs font-mono", !isPlain ? "text-primary font-semibold" : "text-muted-foreground")}>
-              {isMobile ? "Tech" : "Technical"}
-            </span>
+            <div className="flex items-center gap-1.5 ml-2">
+              <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                {isMobile ? "Plain" : "Plain English"}
+              </span>
+              <Switch checked={!isPlain} onCheckedChange={toggle} />
+              <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                {isMobile ? "Tech" : "Technical"}
+              </span>
+            </div>
           </div>
         </div>
         <main className="flex-1">
