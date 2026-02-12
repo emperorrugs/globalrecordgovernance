@@ -130,6 +130,29 @@ const Index = () => (
       </div>
     </header>
 
+    {/* ─── PILOT EVALUATION CALLOUT ─── */}
+    <Sec className="border-b border-border bg-surface2/30">
+      <div className="governance-card border-l-2 border-l-accent max-w-3xl">
+        <div className="inline-flex items-center gap-2 px-2.5 py-0.5 border border-accent/30 rounded-sm mb-4">
+          <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+          <span className="text-[9px] font-mono text-accent uppercase tracking-wider">Controlled Evaluation</span>
+        </div>
+        <h2 className="font-serif text-xl font-semibold mb-2">Pilot Evaluation Kit v0.1</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+          Structured evaluation package for institutional reviewers. Includes scope, KPIs, timeline, and public-safe documentation. Controlled technical materials available upon request.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Link to="/pilot-evaluation" className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            View Pilot Evaluation
+          </Link>
+          <Link to="/controlled-access" className="inline-flex items-center gap-2 px-4 py-2 border border-border text-sm font-medium rounded-sm hover:bg-surface2 transition-colors">
+            <Lock className="h-3.5 w-3.5" />
+            Request Pilot Access
+          </Link>
+        </div>
+      </div>
+    </Sec>
+
     {/* ─── 2. CATEGORY DEFINITION ─── */}
     <Sec id="category" className="border-b border-border">
       <Title>A Governance Operating Layer</Title>
@@ -309,7 +332,7 @@ const Index = () => (
           </div>
         ))}
       </div>
-      <Link to="/pilot" className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline">
+      <Link to="/pilot-evaluation" className="mt-4 inline-flex items-center gap-2 text-sm text-accent hover:underline">
         View Pilot Evaluation Details <ArrowRight className="h-3 w-3" />
       </Link>
     </Sec>

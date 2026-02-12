@@ -43,6 +43,8 @@ import AcademyPage from "./pages/AcademyPage";
 import DPIComparison from "./pages/DPIComparison";
 import Sitemap from "./pages/Sitemap";
 import ControlledAccess from "./pages/ControlledAccess";
+import PilotEvaluation from "./pages/PilotEvaluation";
+import Archive from "./pages/Archive";
 import ExecutiveSummary from "./pages/ExecutiveSummary";
 import OutreachMessages from "./pages/OutreachMessages";
 import ImpactModeling from "./pages/ImpactModeling";
@@ -104,7 +106,8 @@ const App = () => (
             <Route path="/systems" element={<AppLayout><Systems /></AppLayout>} />
             <Route path="/processes" element={<AppLayout><Processes /></AppLayout>} />
             <Route path="/blueprints" element={<AppLayout><TechnicalBlueprints /></AppLayout>} />
-            <Route path="/pilot" element={<AppLayout><PilotProgramme /></AppLayout>} />
+            <Route path="/pilot" element={<AppLayout><PilotEvaluation /></AppLayout>} />
+            <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
@@ -117,7 +120,7 @@ const App = () => (
             <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
 
             {/* Archive pages */}
-            <Route path="/archive" element={<ArchiveLayout><ArchiveOverview /></ArchiveLayout>} />
+            <Route path="/archive" element={<AppLayout><Archive /></AppLayout>} />
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
             <Route path="/archive/government" element={<ArchiveLayout><ArchiveGovernment /></ArchiveLayout>} />
             <Route path="/archive/partners" element={<ArchiveLayout><ArchivePartners /></ArchiveLayout>} />

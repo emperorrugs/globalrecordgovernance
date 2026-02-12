@@ -22,7 +22,7 @@ const primaryNav = [
   { title: "Governance", path: "/governance-framework", icon: GitBranch },
   { title: "Deployment", path: "/deployment", icon: Globe },
   { title: "Impact & ROI", path: "/impact-modeling", icon: BarChart3 },
-  { title: "Pilot Evaluation", path: "/pilot", icon: Server },
+  { title: "Pilot Evaluation", path: "/pilot-evaluation", icon: Server },
   { title: "Controlled Access", path: "/controlled-access", icon: Lock },
   { title: "Archive", path: "/archive", icon: FileText },
   { title: "Contact", path: "/contact", icon: Users },
