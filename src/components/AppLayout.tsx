@@ -63,7 +63,7 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
       {items.map((item) => {
         const isActive = location.pathname === item.path;
         return (
-          <Link
+          <Link aria-current={isActive ? "page" : undefined}
             key={item.path}
             to={item.path}
             onClick={onNavigate}
@@ -86,7 +86,7 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
   return (
-    <nav className="flex-1 py-2 px-2 overflow-y-auto">
+    <nav className="flex-1 py-2 px-2 overflow-y-auto" aria-label="Main navigation">
       <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
       <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
       <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />

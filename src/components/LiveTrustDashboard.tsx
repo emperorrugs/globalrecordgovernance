@@ -26,8 +26,8 @@ function MetricCard({ icon: Icon, label, children, status }: {
         <span className="text-overline font-mono text-muted-foreground/60 uppercase tracking-widest">{label}</span>
         {status && (
           <span className="ml-auto flex items-center gap-1.5">
-            <PulsingDot color="bg-emerald-500" />
-            <span className="text-overline font-mono text-emerald-600">{status}</span>
+            <PulsingDot color="bg-accent" />
+            <span className="text-overline font-mono text-accent">{status}</span>
           </span>
         )}
       </div>
@@ -53,7 +53,7 @@ export function LiveTrustDashboard() {
 
   return (
     <FadeIn>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" role="region" aria-label="Live trust metrics" aria-live="polite">
         <MetricCard icon={Shield} label="Integrity Score" status="LIVE">
           <AnimatedCounter end={100} suffix="%" className="text-accent" />
         </MetricCard>
@@ -66,7 +66,7 @@ export function LiveTrustDashboard() {
           <p className="text-overline text-muted-foreground/50 mt-1">Pilot evaluation phase</p>
         </MetricCard>
         <MetricCard icon={Activity} label="System Availability">
-          <span className="tabular-nums">{uptime.toFixed(2)}%</span>
+          <span className="tabular-nums" aria-label={`System availability: ${uptime.toFixed(2)} percent`}>{uptime.toFixed(2)}%</span>
           <p className="text-overline text-muted-foreground/50 mt-1">30-day rolling average</p>
         </MetricCard>
       </div>

@@ -34,15 +34,19 @@ export function InstitutionalFooter() {
               <li><Link to="/governance-framework" className="hover:text-accent transition-colors">Governance Model</Link></li>
               <li><Link to="/compliance" className="hover:text-accent transition-colors">Standards & Compliance</Link></li>
               <li><Link to="/oecd-alignment" className="hover:text-accent transition-colors">OECD Alignment</Link></li>
+              <li><Link to="/oecd-safeguards" className="hover:text-accent transition-colors">DPI Safeguards Scorecard</Link></li>
+              <li><Link to="/open-standards" className="hover:text-accent transition-colors">Open Standards</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Engage</h4>
-            <ul className="space-y-2">
-              <li><Link to="/controlled-access" className="text-caption text-primary-foreground/50 hover:text-accent transition-colors">Request Assessment</Link></li>
-              <li><Link to="/contact" className="text-caption text-primary-foreground/50 hover:text-accent transition-colors">Partner With Us</Link></li>
-              <li><Link to="/academy" className="text-caption text-primary-foreground/50 hover:text-accent transition-colors">Academy & Certification</Link></li>
-              <li><Link to="/archive" className="text-caption text-primary-foreground/50 hover:text-accent transition-colors">Document Archive</Link></li>
+            <ul className="space-y-2 text-caption text-primary-foreground/50">
+              <li><Link to="/controlled-access" className="hover:text-accent transition-colors">Request Assessment</Link></li>
+              <li><Link to="/stakeholder-consultation" className="hover:text-accent transition-colors">Public Consultation</Link></li>
+              <li><Link to="/risk-register" className="hover:text-accent transition-colors">Risk Register</Link></li>
+              <li><Link to="/human-rights-impact" className="hover:text-accent transition-colors">Human Rights</Link></li>
+              <li><Link to="/sustainability" className="hover:text-accent transition-colors">Sustainability</Link></li>
+              <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>
