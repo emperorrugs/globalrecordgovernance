@@ -97,7 +97,7 @@ const Sustainability = () => (
           <Leaf className="h-8 w-8 text-accent mx-auto mb-4" />
           <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Continuous Improvement</h2>
           <p className="text-body text-primary-foreground/60 mb-4">
-            The Foundation commits to annual sustainability reporting, progressive carbon reduction targets, and transparent disclosure of environmental impact metrics.
+            The Global Record Governance Framework (GRGF) commits to annual sustainability reporting, progressive carbon reduction targets, and transparent disclosure of environmental impact metrics.
           </p>
           <p className="text-overline text-primary-foreground/30">Sustainability report published annually · Next report: Q4 2026</p>
         </div>

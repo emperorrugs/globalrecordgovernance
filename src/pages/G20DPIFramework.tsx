@@ -143,7 +143,7 @@ const G20DPIFramework = () => {
                   { dim: "Primary Function", grgf: "Governance integrity verification", india: "Identity, payments, data exchange" },
                   { dim: "Omission Detection", grgf: "Yes — core capability", india: "No" },
                   { dim: "Cross-Border Design", grgf: "Federation protocol native", india: "National-first, export model" },
-                  { dim: "Governance Model", grgf: "Independent foundation, anti-capture", india: "Government-led" },
+                  { dim: "Governance Model", grgf: "Independent framework, anti-capture", india: "Government-led" },
                   { dim: "Privacy Architecture", grgf: "Content-blind, no PII", india: "Consent-based, PII processed" },
                   { dim: "Complementarity", grgf: "Designed as Layer 3 complement", india: "Layers 1-2 foundational" },
                 ].map(({ dim, grgf, india }) => (

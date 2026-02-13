@@ -130,7 +130,7 @@ const RiskRegister = () => (
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Risk Disclosure Inquiry</h2>
         <p className="text-body text-primary-foreground/60 mb-8">
-          For questions about specific risk items or to request detailed mitigation documentation, contact the Foundation's Compliance Oversight committee.
+          For questions about specific risk items or to request detailed mitigation documentation, contact the GRGF Compliance Oversight committee.
         </p>
         <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-accent/20">
           Contact Compliance <ArrowRight className="h-4 w-4" />

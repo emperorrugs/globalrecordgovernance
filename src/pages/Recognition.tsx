@@ -96,7 +96,7 @@ const Recognition = () => (
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Begin the Recognition Process</h2>
         <p className="text-body text-primary-foreground/60 mb-8">
-          Institutional recognition applications are reviewed by the Foundation's Technical Review Panel. The assessment process is structured, independent, and aligned with international governance standards.
+          Institutional recognition applications are reviewed by the GRGF Technical Review Panel. The assessment process is structured, independent, and aligned with international governance standards.
         </p>
         <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-200 hover:shadow-lg hover:shadow-accent/20">
           Submit Recognition Application <ArrowRight className="h-4 w-4" />

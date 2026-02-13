@@ -73,7 +73,7 @@ import Interoperability from "./pages/Interoperability";
 import Procurement from "./pages/Procurement";
 import Maturity from "./pages/Maturity";
 import StressTest from "./pages/StressTest";
-
+import ExecutiveBrief from "./pages/ExecutiveBrief";
 // Institutional pages
 import Recognition from "./pages/Recognition";
 import Membership from "./pages/Membership";
@@ -181,6 +181,7 @@ const App = () => (
             <Route path="/procurement" element={<AppLayout><Procurement /></AppLayout>} />
             <Route path="/maturity" element={<AppLayout><Maturity /></AppLayout>} />
             <Route path="/stress-test" element={<AppLayout><StressTest /></AppLayout>} />
+            <Route path="/executive-brief" element={<AppLayout><ExecutiveBrief /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
