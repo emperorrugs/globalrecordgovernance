@@ -1,8 +1,10 @@
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
   Database, Landmark, Languages, TrendingUp, Code, BarChart3, ClipboardList,
+  ChevronUp, ChevronDown,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -102,14 +104,56 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
 }
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
+  const navRef = React.useRef<HTMLElement>(null);
+  const [canScrollUp, setCanScrollUp] = React.useState(false);
+  const [canScrollDown, setCanScrollDown] = React.useState(false);
+
+  const checkScroll = () => {
+    const el = navRef.current;
+    if (!el) return;
+    setCanScrollUp(el.scrollTop > 20);
+    setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 20);
+  };
+
+  React.useEffect(() => {
+    checkScroll();
+    const el = navRef.current;
+    if (el) el.addEventListener("scroll", checkScroll, { passive: true });
+    return () => el?.removeEventListener("scroll", checkScroll);
+  }, []);
+
+  const scrollTo = (dir: "top" | "bottom") => {
+    navRef.current?.scrollTo({ top: dir === "top" ? 0 : navRef.current.scrollHeight, behavior: "smooth" });
+  };
+
   return (
-    <nav className="flex-1 py-2 px-2 overflow-y-auto min-h-0" aria-label="Main navigation">
-      <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
-      <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
-      <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
-      <NavGroup items={layer4} collapsed={collapsed} onNavigate={onNavigate} label="Decision Tools" />
-      <NavGroup items={layer5} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
-    </nav>
+    <div className="flex-1 flex flex-col min-h-0 relative">
+      {canScrollUp && (
+        <button
+          onClick={() => scrollTo("top")}
+          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-b from-primary via-primary/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          aria-label="Scroll navigation up"
+        >
+          <ChevronUp className="h-4 w-4" />
+        </button>
+      )}
+      <nav ref={navRef} className="flex-1 py-2 px-2 overflow-y-auto min-h-0" aria-label="Main navigation">
+        <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
+        <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
+        <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
+        <NavGroup items={layer4} collapsed={collapsed} onNavigate={onNavigate} label="Decision Tools" />
+        <NavGroup items={layer5} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
+      </nav>
+      {canScrollDown && (
+        <button
+          onClick={() => scrollTo("bottom")}
+          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-t from-primary via-primary/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          aria-label="Scroll navigation down"
+        >
+          <ChevronDown className="h-4 w-4" />
+        </button>
+      )}
+    </div>
   );
 }
 
