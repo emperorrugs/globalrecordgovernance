@@ -7,11 +7,11 @@ const PrivacyPolicy = () => {
     <div className="animate-fade-in">
       <SEOHead
         title="Privacy Policy"
-        description="Privacy Policy for the Global Record Governance Foundation. How we handle data, protect privacy, and comply with international data protection standards."
+        description="Privacy Policy for the Global Record Governance Framework. How we handle data, protect privacy, and comply with international data protection standards."
       />
       <PageHeader
         title="Privacy Policy"
-        subtitle="Data protection commitments of the Global Record Governance Foundation."
+        subtitle="Data protection commitments of the Global Record Governance Framework."
       />
 
       <Section>
@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-foreground">Effective Date:</span> February 13, 2026.
                 This policy applies to all visitors and users of globalrecordgovernance.com
-                and all associated services operated by the Global Record Governance Foundation.
+                and all associated services operated by the Global Record Governance Framework.
               </p>
             </div>
           </div>
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
           {[
             {
               title: "1. Data Controller",
-              content: "The Global Record Governance Foundation (\"GRGF\", \"we\", \"us\") is the data controller for information collected through this website. For inquiries: contact@globalrecordgovernance.com."
+              content: "The Global Record Governance Framework (\"GRGF\", \"we\", \"us\") is the data controller for information collected through this website. For inquiries: contact@globalrecordgovernance.com."
             },
             {
               title: "2. Information We Collect",
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
             },
             {
               title: "12. Contact",
-              content: "For privacy-related inquiries, data access requests, or complaints: Global Record Governance Foundation — contact@globalrecordgovernance.com. We aim to respond to all privacy requests within 30 days."
+              content: "For privacy-related inquiries, data access requests, or complaints: Global Record Governance Framework — contact@globalrecordgovernance.com. We aim to respond to all privacy requests within 30 days."
             },
           ].map((section) => (
             <div key={section.title}>

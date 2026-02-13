@@ -115,7 +115,7 @@ const translations: Record<string, Record<Language, string>> = {
   "home.closing_1": { en: "Trust should not rely", fr: "La confiance ne devrait pas", ar: "لا ينبغي أن تعتمد الثقة" },
   "home.closing_2": { en: "on reputation.", fr: "reposer sur la réputation.", ar: "على السمعة." },
   "home.closing_3": { en: "It should rely on structure.", fr: "Elle devrait reposer sur la structure.", ar: "بل يجب أن تعتمد على البنية." },
-  "home.closing_sub": { en: "The Global Record Governance Foundation exists to make that structural trust possible — for every institution, at every level, in every jurisdiction.", fr: "La Fondation mondiale de gouvernance des registres existe pour rendre cette confiance structurelle possible — pour chaque institution, à chaque niveau, dans chaque juridiction.", ar: "تهدف مؤسسة حوكمة السجلات العالمية إلى جعل هذه الثقة الهيكلية ممكنة — لكل مؤسسة، على كل مستوى، في كل ولاية قضائية." },
+  "home.closing_sub": { en: "The Global Record Governance Framework exists to make that structural trust possible — for every institution, at every level, in every jurisdiction.", fr: "Le Cadre mondial de gouvernance des registres existe pour rendre cette confiance structurelle possible — pour chaque institution, à chaque niveau, dans chaque juridiction.", ar: "يهدف إطار حوكمة السجلات العالمي إلى جعل هذه الثقة الهيكلية ممكنة — لكل مؤسسة، على كل مستوى، في كل ولاية قضائية." },
 
   // ═══ INTERNATIONAL COMPLIANCE HUB ═══
   "compliance.hub": { en: "International Compliance Hub", fr: "Centre de conformité internationale", ar: "مركز الامتثال الدولي" },

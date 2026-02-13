@@ -37,7 +37,7 @@ const Index = () => {
   return (
   <div>
     <SEOHead
-      title="GRGF — Global Record Governance Foundation | Digital Public Infrastructure Standards Authority"
+      title="GRGF — Global Record Governance Framework | Digital Public Infrastructure Standards Authority"
       description="Independent global framework for Digital Public Infrastructure governance, validation, and institutional recognition. Sovereign-grade trust layer for verifiable institutional accountability."
     />
 
@@ -224,7 +224,7 @@ const Index = () => {
               Federated governance interoperability model for scalable national integration
             </h2>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              The Global Record Governance Foundation is an independent standards-setting authority that establishes, maintains, and governs the structural framework for institutional record integrity across public and private sectors worldwide.
+              The Global Record Governance Framework is an independent standards-setting authority that establishes, maintains, and governs the structural framework for institutional record integrity across public and private sectors worldwide.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
               Positioned as the Governance Integrity Registry (Layer 3) within the national Digital Public Infrastructure stack, the Foundation ensures that governance decisions, institutional actions, and administrative omissions become cryptographically verifiable, independently auditable records.

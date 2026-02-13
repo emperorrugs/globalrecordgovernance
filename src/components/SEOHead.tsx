@@ -7,7 +7,7 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://www.globalrecordgovernance.com";
-const SITE_NAME = "Global Record Governance Foundation";
+const SITE_NAME = "Global Record Governance Framework";
 
 export function SEOHead({ title, description }: SEOHeadProps) {
   const { pathname } = useLocation();
