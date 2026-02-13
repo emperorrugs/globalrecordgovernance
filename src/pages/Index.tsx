@@ -64,12 +64,12 @@ const Index = () => {
 
         <FadeIn delay={100}>
           <h1 className="institutional-heading font-semibold leading-[0.9] text-primary-foreground max-w-5xl" style={{ fontSize: "clamp(2.5rem, 7vw, 5.5rem)" }}>
-            Federated Digital
+            Global Record
             <br />
-            Public Infrastructure
+            Governance Framework
             <br />
             <span className="text-accent relative">
-              Governance Platform
+              (GRGF)
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/20" viewBox="0 0 400 12" preserveAspectRatio="none">
                 <path d="M0,8 Q100,0 200,8 Q300,16 400,8" stroke="currentColor" strokeWidth="2" fill="none" />
               </svg>
@@ -79,8 +79,7 @@ const Index = () => {
 
         <FadeIn delay={200}>
           <p className="mt-8 text-body-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
-            GRGF is a federated digital public infrastructure designed to strengthen institutional trust,
-            reduce systemic inefficiency, and enable secure cross-border interoperability.
+            The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
           </p>
         </FadeIn>
 
@@ -221,16 +220,16 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
            <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
-              Federated governance interoperability model for scalable national integration
+              Global Record Governance Framework (GRGF) — Scalable National Integration
             </h2>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
               The Global Record Governance Framework is an independent standards-setting authority that establishes, maintains, and governs the structural framework for institutional record integrity across public and private sectors worldwide.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              Positioned as the Governance Integrity Registry (Layer 3) within the national Digital Public Infrastructure stack, the Foundation ensures that governance decisions, institutional actions, and administrative omissions become cryptographically verifiable, independently auditable records.
+              Positioned as the Governance Integrity Registry (Layer 3) within the national Digital Public Infrastructure stack, the Global Record Governance Framework (GRGF) ensures that governance decisions, institutional actions, and administrative omissions become cryptographically verifiable, independently auditable records.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed">
-              The Foundation maintains strict institutional neutrality — exercising no enforcement capability, no decision authority, and no evaluative function. It records. It preserves. It verifies.
+              The Global Record Governance Framework (GRGF) maintains strict institutional neutrality — exercising no enforcement capability, no decision authority, and no evaluative function. It records. It preserves. It verifies.
             </p>
           </div>
           <div className="space-y-4">
@@ -258,12 +257,12 @@ const Index = () => {
     {/* ═══════════════════ GOVERNANCE PRINCIPLES ═══════════════════ */}
     <Sec id="principles" className="border-b border-border">
       <SectionLabel>Governance Principles</SectionLabel>
-      <Title sub="The Foundation's operational mandate is grounded in six non-negotiable principles that ensure structural neutrality and institutional trust.">
+      <Title sub="The Global Record Governance Framework's (GRGF) operational mandate is grounded in six non-negotiable principles that ensure structural neutrality and institutional trust.">
         Charter Principles
       </Title>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[
-          { num: "I", title: "Custodial Neutrality", desc: "The Foundation holds no enforcement power. It records institutional reality without interpretation, evaluation, or recommendation." },
+          { num: "I", title: "Custodial Neutrality", desc: "The Global Record Governance Framework (GRGF) holds no enforcement power. It records institutional reality without interpretation, evaluation, or recommendation." },
           { num: "II", title: "Structural Verifiability", desc: "Every governance claim must be independently verifiable through cryptographic proof, not institutional reputation." },
           { num: "III", title: "Sovereign Primacy", desc: "National sovereignty is absolute. No federation participation diminishes a state's control over its governance data." },
           { num: "IV", title: "Omission Accountability", desc: "Governance silence is as significant as governance action. The architecture records both with equal structural weight." },
@@ -375,7 +374,7 @@ const Index = () => {
     {/* ═══════════════════ INSTITUTIONAL ALIGNMENT ═══════════════════ */}
     <Sec id="alignment" className="border-b border-border bg-muted/40">
       <SectionLabel>International Alignment</SectionLabel>
-      <Title sub="The Foundation's capabilities map directly to established multilateral governance frameworks.">
+      <Title sub="The Global Record Governance Framework's (GRGF) capabilities map directly to established multilateral governance frameworks.">
         Multilateral Institutional Matrix
       </Title>
       <FadeIn>
@@ -415,7 +414,7 @@ const Index = () => {
     <Sec id="services" className="border-b border-border">
       <SectionLabel>Institutional Engagement</SectionLabel>
       <Title sub="Structured pathways for governments, multilateral organizations, and institutional partners seeking governance integrity infrastructure.">
-        How the Foundation Engages
+        How the Global Record Governance Framework (GRGF) Engages
       </Title>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {[
@@ -441,7 +440,7 @@ const Index = () => {
     {/* ═══════════════════ GOVERNANCE MODEL ═══════════════════ */}
     <Sec id="governance" className="border-b border-border bg-muted/40">
       <SectionLabel>Governance Model</SectionLabel>
-      <Title sub="The Foundation operates under a formal governance structure designed for institutional independence and perpetual neutrality.">
+      <Title sub="The Global Record Governance Framework (GRGF) operates under a formal governance structure designed for institutional independence and perpetual neutrality.">
         Institutional Governance Architecture
       </Title>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-10">
@@ -536,7 +535,7 @@ const Index = () => {
       <FadeIn>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-6">
           {[
-            { label: "Foundation", value: "GRGF v1.0" },
+            { label: "Framework", value: "GRGF v1.0" },
             { label: "Recognition Model", value: "3-Tier Active" },
             { label: "Pilot Node", value: "v0.1 Evaluation" },
             { label: "Patent", value: "CA 3,300,102" },
