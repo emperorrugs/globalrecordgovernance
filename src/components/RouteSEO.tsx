@@ -78,6 +78,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/g20-dpi-framework": { title: "G20 DPI Framework Alignment", description: "G20 Digital Public Infrastructure principles alignment and Layer 3 governance integrity positioning." },
   "/itu-global-standards": { title: "ITU & Regional Standards", description: "ITU-T standard alignment and regional digital governance framework mapping worldwide." },
   "/international-compliance": { title: "International Compliance Hub", description: "Comprehensive multilateral alignment dashboard across OECD, World Bank, UN, G20, ITU, and regional frameworks." },
+  "/unesco-alignment": { title: "UNESCO Digital Governance Standards", description: "Alignment with UNESCO ROAM-X Indicators, AI Ethics Recommendation, IFAP Programme, and documentary heritage standards." },
 };
 
 export function RouteSEO() {
