@@ -100,11 +100,18 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const { mode, toggle, isPlain } = useViewMode();
-  const { lang, setLang, t } = useLanguage();
+  const { lang, setLang, t, isRTL } = useLanguage();
   const isMobile = useIsMobile();
 
+  const nextLang = () => {
+    const cycle: Record<string, "en" | "fr" | "ar"> = { en: "fr", fr: "ar", ar: "en" };
+    setLang(cycle[lang]);
+  };
+
+  const langLabel: Record<string, string> = { en: "FR", fr: "AR", ar: "EN" };
+
   return (
-    <div className="flex min-h-screen w-full">
+    <div className={cn("flex min-h-screen w-full", isRTL && "font-sans")} dir={isRTL ? "rtl" : "ltr"}>
       <RouteSEO />
       <CookieConsent />
       <ReadingProgress />
@@ -187,12 +194,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               {isMobile ? "Access" : "Request Assessment"}
             </Link>
             <button
-              onClick={() => setLang(lang === "en" ? "fr" : "en")}
+              onClick={nextLang}
               className="flex items-center gap-1 px-2 py-1 text-overline font-mono text-muted-foreground hover:text-accent transition-colors"
-              aria-label={`Switch to ${lang === "en" ? "French" : "English"}`}
+              aria-label={`Switch language (current: ${lang.toUpperCase()})`}
             >
               <Languages className="h-3.5 w-3.5" />
-              <span className="font-semibold">{lang === "en" ? "FR" : "EN"}</span>
+              <span className="font-semibold">{langLabel[lang]}</span>
             </button>
             <div className="flex items-center gap-1.5 ml-1">
               <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
