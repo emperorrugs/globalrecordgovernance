@@ -1,6 +1,7 @@
 import { useViewMode } from "@/contexts/ViewModeContext";
 import { FileText, Download, FileSpreadsheet, Archive, BookOpen, Shield, Landmark, BarChart3, Cpu, Scale } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { InteractiveDiagrams } from "@/components/InteractiveDiagrams";
 
 interface DocItem {
   name: string;
@@ -117,7 +118,12 @@ export default function ReportsStudies() {
         </div>
       </FadeIn>
 
-      {/* Categories */}
+      {/* Interactive Diagrams Section */}
+      <FadeIn delay={120}>
+        <InteractiveDiagrams />
+      </FadeIn>
+
+      {/* Document Categories */}
       {categories.map((category, idx) => {
         const Icon = categoryIcons[category] || FileText;
         const items = documents.filter((d) => d.category === category);
