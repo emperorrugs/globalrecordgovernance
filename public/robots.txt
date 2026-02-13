@@ -12,5 +12,10 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /simulation
+Disallow: /simulator
+Disallow: /api-mock
+Disallow: /data-entry
+Disallow: /workflow
 
-Sitemap: https://globalrecordgovernance.lovable.app/sitemap.xml
+Sitemap: https://www.globalrecordgovernance.com/sitemap.xml

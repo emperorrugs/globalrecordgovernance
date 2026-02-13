@@ -21,19 +21,19 @@ export function InstitutionalFooter() {
           <div>
             <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Infrastructure</h4>
             <ul className="space-y-2 text-caption text-primary-foreground/50">
-              <li>Governance Operating Layer</li>
-              <li>Deterministic Policy Enforcement</li>
-              <li>Append-Only Cryptographic Ledger</li>
-              <li>Federation Protocol</li>
+              <li><Link to="/architecture" className="hover:text-accent transition-colors">System Architecture</Link></li>
+              <li><Link to="/dpi-stack" className="hover:text-accent transition-colors">DPI Stack</Link></li>
+              <li><Link to="/safeguards-trust" className="hover:text-accent transition-colors">Safeguards & Trust</Link></li>
+              <li><Link to="/deployment-scenarios" className="hover:text-accent transition-colors">Deployment Model</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Framework</h4>
             <ul className="space-y-2 text-caption text-primary-foreground/50">
-              <li>Version 1.0 · Established 2024</li>
-              <li>Pilot Node v0.1 Available</li>
-              <li>Canadian Patent CA 3,300,102</li>
-              <li>OECD DPI Aligned</li>
+              <li><Link to="/recognition" className="hover:text-accent transition-colors">Recognition Framework</Link></li>
+              <li><Link to="/governance-framework" className="hover:text-accent transition-colors">Governance Model</Link></li>
+              <li><Link to="/compliance" className="hover:text-accent transition-colors">Standards & Compliance</Link></li>
+              <li><Link to="/oecd-alignment" className="hover:text-accent transition-colors">OECD Alignment</Link></li>
             </ul>
           </div>
           <div>
@@ -77,9 +77,11 @@ export function InstitutionalFooter() {
           <p className="text-overline text-primary-foreground/20 tracking-widest uppercase">
             GRGF · Governance Integrity Infrastructure
           </p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 flex-wrap">
             <Link to="/safeguards-trust" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Evidence</Link>
             <Link to="/sitemap" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Sitemap</Link>
+            <Link to="/privacy-policy" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Privacy</Link>
+            <Link to="/terms-of-service" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Terms</Link>
             <Link to="/controlled-access" className="text-overline text-accent hover:underline font-mono uppercase tracking-widest transition-colors">Engage →</Link>
             <Link to="/contact" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Contact</Link>
           </div>

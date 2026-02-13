@@ -1,43 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Primary Navigation -->
+  <!-- Layer 1: Institutional Authority -->
   <url><loc>https://www.globalrecordgovernance.com/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/the-problem</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/architecture</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/security-trust</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/governance-framework</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/deployment</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/impact-modeling</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/pilot</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/controlled-access</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/archive</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/contact</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/transparency</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/membership</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/contact</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
-  <!-- Extended Navigation -->
+  <!-- Layer 2: Standards & Recognition -->
+  <url><loc>https://www.globalrecordgovernance.com/recognition</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/oecd-alignment</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/ethics</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/compliance</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Layer 3: DPI Platform -->
+  <url><loc>https://www.globalrecordgovernance.com/architecture</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/dpi-stack</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/safeguards-trust</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/deployment-scenarios</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/academy</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Layer 4: Digital Archive -->
+  <url><loc>https://www.globalrecordgovernance.com/archive</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/research</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/partnerships</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/controlled-access</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Extended Institutional Pages -->
+  <url><loc>https://www.globalrecordgovernance.com/the-problem</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/governance-framework</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/security-trust</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/deployment</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/impact-modeling</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/impact</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/pilot</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/canada</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/ethics</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/stakeholders</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/compliance</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/dossier</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/future-proofing</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/governance-interface</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/readiness</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/executive-summary</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/impact</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-
-  <!-- Simulation & Tools -->
-  <url><loc>https://www.globalrecordgovernance.com/simulation</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/systems</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/blueprints</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/academy</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/future-proofing</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/governance-interface</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/critical-questions</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/validation</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/strategic-governance</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/operational-model</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/risk-mitigation</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/international-cooperation</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/dpi-comparison</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/blueprints</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/systems</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/outreach</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
-  <!-- Archive -->
+  <!-- Archive Sub-pages -->
   <url><loc>https://www.globalrecordgovernance.com/archive/public</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/government</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/partners</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/legal-ip</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/master-index</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/downloads</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://www.globalrecordgovernance.com/sitemap</loc><priority>0.4</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Legal & Compliance -->
+  <url><loc>https://www.globalrecordgovernance.com/privacy-policy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/terms-of-service</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/sitemap</loc><priority>0.3</priority><changefreq>monthly</changefreq></url>
 </urlset>
