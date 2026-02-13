@@ -46,10 +46,21 @@ const layer3 = [
   { title: "Academy", path: "/academy", icon: GraduationCap },
 ];
 
-/* ── LAYER 4: Digital Archive ── */
+/* ── LAYER 4: Decision Tools ── */
 const layer4 = [
-  { title: "Institutional Review", path: "/institutional-review", icon: ClipboardList },
   { title: "Financial Model", path: "/financial-model", icon: BarChart3 },
+  { title: "Risk Assessment", path: "/risk-assessment", icon: Shield },
+  { title: "Deployment Planner", path: "/deployment-planner", icon: Globe },
+  { title: "Interoperability", path: "/interoperability", icon: Network },
+  { title: "Procurement", path: "/procurement", icon: ClipboardList },
+  { title: "Maturity", path: "/maturity", icon: TrendingUp },
+  { title: "Stress Test", path: "/stress-test", icon: Shield },
+  { title: "Executive Brief", path: "/executive-brief", icon: FileText },
+];
+
+/* ── LAYER 5: Digital Archive ── */
+const layer5 = [
+  { title: "Institutional Review", path: "/institutional-review", icon: ClipboardList },
   { title: "Archive", path: "/archive", icon: FileText },
   { title: "Research & Publications", path: "/research", icon: BookOpen },
   { title: "Global Partnerships", path: "/partnerships", icon: Handshake },
@@ -95,7 +106,8 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
       <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
       <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
       <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
-      <NavGroup items={layer4} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
+      <NavGroup items={layer4} collapsed={collapsed} onNavigate={onNavigate} label="Decision Tools" />
+      <NavGroup items={layer5} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
     </nav>
   );
 }

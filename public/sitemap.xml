@@ -51,6 +51,19 @@
   <url><loc>https://www.globalrecordgovernance.com/systems</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/outreach</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
 
+  <!-- Decision Tools -->
+  <url><loc>https://www.globalrecordgovernance.com/financial-model</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/risk-assessment</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/deployment-planner</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/interoperability</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/procurement</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/maturity</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/stress-test</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/executive-brief</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/scalability</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/security</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/institutional-review</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
   <!-- Archive Sub-pages -->
   <url><loc>https://www.globalrecordgovernance.com/archive/public</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/archive/government</loc><priority>0.5</priority><changefreq>monthly</changefreq></url>
