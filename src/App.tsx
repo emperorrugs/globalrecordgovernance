@@ -80,6 +80,13 @@ import Sustainability from "./pages/Sustainability";
 import HumanRightsImpact from "./pages/HumanRightsImpact";
 import StakeholderConsultation from "./pages/StakeholderConsultation";
 
+// International DPI Compliance pages
+import WorldBankAlignment from "./pages/WorldBankAlignment";
+import UNAlignment from "./pages/UNAlignment";
+import G20DPIFramework from "./pages/G20DPIFramework";
+import ITUGlobalStandards from "./pages/ITUGlobalStandards";
+import InternationalCompliance from "./pages/InternationalCompliance";
+
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
 import Simulator from "./pages/Simulator";
@@ -182,6 +189,13 @@ const App = () => (
             <Route path="/sustainability" element={<AppLayout><Sustainability /></AppLayout>} />
             <Route path="/human-rights-impact" element={<AppLayout><HumanRightsImpact /></AppLayout>} />
             <Route path="/stakeholder-consultation" element={<AppLayout><StakeholderConsultation /></AppLayout>} />
+
+            {/* International DPI Compliance */}
+            <Route path="/world-bank-alignment" element={<AppLayout><WorldBankAlignment /></AppLayout>} />
+            <Route path="/un-alignment" element={<AppLayout><UNAlignment /></AppLayout>} />
+            <Route path="/g20-dpi-framework" element={<AppLayout><G20DPIFramework /></AppLayout>} />
+            <Route path="/itu-global-standards" element={<AppLayout><ITUGlobalStandards /></AppLayout>} />
+            <Route path="/international-compliance" element={<AppLayout><InternationalCompliance /></AppLayout>} />
 
             {/* Archive sub-pages */}
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />

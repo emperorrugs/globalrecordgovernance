@@ -73,6 +73,11 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/sustainability": { title: "Digital Sustainability", description: "Environmental impact assessment, digital carbon footprint statement, and sustainability commitments." },
   "/human-rights-impact": { title: "Human Rights Impact Assessment", description: "Formal HRIA aligned with UN Guiding Principles on Business and Human Rights." },
   "/stakeholder-consultation": { title: "Stakeholder Consultation", description: "Structured public consultation mechanism for governance standards development and review." },
+  "/world-bank-alignment": { title: "World Bank GovTech Alignment", description: "GovTech Maturity Index mapping and Digital Development Principles alignment for governance infrastructure." },
+  "/un-alignment": { title: "UN SDG & Digital Public Goods", description: "Sustainable Development Goals impact assessment and Digital Public Goods Alliance standard compliance." },
+  "/g20-dpi-framework": { title: "G20 DPI Framework Alignment", description: "G20 Digital Public Infrastructure principles alignment and Layer 3 governance integrity positioning." },
+  "/itu-global-standards": { title: "ITU & Regional Standards", description: "ITU-T standard alignment and regional digital governance framework mapping worldwide." },
+  "/international-compliance": { title: "International Compliance Hub", description: "Comprehensive multilateral alignment dashboard across OECD, World Bank, UN, G20, ITU, and regional frameworks." },
 };
 
 export function RouteSEO() {
