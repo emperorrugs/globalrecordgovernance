@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
-  Database, Landmark, Languages,
+  Database, Landmark, Languages, TrendingUp, Code, BarChart3, ClipboardList,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -39,13 +39,17 @@ const layer2 = [
 const layer3 = [
   { title: "Architecture", path: "/architecture", icon: Cpu },
   { title: "DPI Stack", path: "/dpi-stack", icon: Layers },
+  { title: "Scalability", path: "/scalability", icon: TrendingUp },
   { title: "Safeguards & Trust", path: "/safeguards-trust", icon: Shield },
   { title: "Deployment Model", path: "/deployment-scenarios", icon: Globe },
+  { title: "Developer Portal", path: "/developer", icon: Code },
   { title: "Academy", path: "/academy", icon: GraduationCap },
 ];
 
 /* ── LAYER 4: Digital Archive ── */
 const layer4 = [
+  { title: "Institutional Review", path: "/institutional-review", icon: ClipboardList },
+  { title: "Financial Model", path: "/financial-model", icon: BarChart3 },
   { title: "Archive", path: "/archive", icon: FileText },
   { title: "Research & Publications", path: "/research", icon: BookOpen },
   { title: "Global Partnerships", path: "/partnerships", icon: Handshake },

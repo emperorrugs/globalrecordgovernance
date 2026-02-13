@@ -63,6 +63,10 @@ import InternationalWhitepaper from "./pages/InternationalWhitepaper";
 import TheProblem from "./pages/TheProblem";
 import Contact from "./pages/Contact";
 import FutureProofing from "./pages/FutureProofing";
+import Scalability from "./pages/Scalability";
+import FinancialModel from "./pages/FinancialModel";
+import InstitutionalReview from "./pages/InstitutionalReview";
+import Developer from "./pages/Developer";
 
 // Institutional pages
 import Recognition from "./pages/Recognition";
@@ -161,6 +165,10 @@ const App = () => (
             <Route path="/risk-mitigation" element={<AppLayout><RiskMitigation /></AppLayout>} />
             <Route path="/international-cooperation" element={<AppLayout><InternationalCooperation /></AppLayout>} />
             <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
+            <Route path="/scalability" element={<AppLayout><Scalability /></AppLayout>} />
+            <Route path="/financial-model" element={<AppLayout><FinancialModel /></AppLayout>} />
+            <Route path="/institutional-review" element={<AppLayout><InstitutionalReview /></AppLayout>} />
+            <Route path="/developer" element={<AppLayout><Developer /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
