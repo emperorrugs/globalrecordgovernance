@@ -24,7 +24,10 @@ export function InstitutionalFooter() {
               <li><Link to="/architecture" className="hover:text-accent transition-colors">System Architecture</Link></li>
               <li><Link to="/dpi-stack" className="hover:text-accent transition-colors">DPI Stack</Link></li>
               <li><Link to="/safeguards-trust" className="hover:text-accent transition-colors">Safeguards & Trust</Link></li>
-              <li><Link to="/deployment-scenarios" className="hover:text-accent transition-colors">Deployment Model</Link></li>
+              <li><Link to="/international-compliance" className="hover:text-accent transition-colors">International Compliance</Link></li>
+              <li><Link to="/world-bank-alignment" className="hover:text-accent transition-colors">World Bank Alignment</Link></li>
+              <li><Link to="/un-alignment" className="hover:text-accent transition-colors">UN SDG & DPG</Link></li>
+              <li><Link to="/g20-dpi-framework" className="hover:text-accent transition-colors">G20 DPI Framework</Link></li>
             </ul>
           </div>
           <div>
