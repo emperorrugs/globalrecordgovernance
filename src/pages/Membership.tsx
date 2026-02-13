@@ -27,7 +27,7 @@ const Membership = () => (
       <h2 className="institutional-heading text-heading-1 font-semibold mb-10">Institutional Membership Tiers</h2>
       <div className="grid gap-6 md:grid-cols-3">
         {[
-          { tier: "Observer", icon: Globe, benefits: ["Access to published standards and frameworks", "Public consultation participation", "Annual governance integrity report", "Foundation newsletter and updates"], audience: "Academic institutions, civil society, media organizations" },
+          { tier: "Observer", icon: Globe, benefits: ["Access to published standards and frameworks", "Public consultation participation", "Annual governance integrity report", "GRGF newsletter and updates"], audience: "Academic institutions, civil society, media organizations" },
           { tier: "Associate", icon: Building, benefits: ["All Observer benefits", "Standards committee participation eligibility", "Pre-release access to draft frameworks", "Institutional peer review network", "Academy certification discount"], audience: "Government agencies, regulatory bodies, NGOs" },
           { tier: "Institutional Partner", icon: Shield, benefits: ["All Associate benefits", "Governance Board advisory participation", "Federation node deployment priority", "Joint research and co-development", "Dedicated assessment pathway", "Named institutional recognition"], audience: "National governments, multilateral organizations, international bodies" },
         ].map(({ tier, icon: Icon, benefits, audience }) => (
@@ -81,9 +81,9 @@ const Membership = () => (
     {/* CTA */}
     <Sec className="bg-primary text-primary-foreground">
       <div className="text-center max-w-2xl mx-auto">
-        <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Join the Foundation</h2>
+        <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Join the Global Record Governance Framework (GRGF)</h2>
         <p className="text-body text-primary-foreground/60 mb-8">
-          Institutional membership applications are reviewed on a rolling basis. All membership tiers include access to the Foundation's governance standards and public consultation processes.
+          Institutional membership applications are reviewed on a rolling basis. All membership tiers include access to the GRGF governance standards and public consultation processes.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide">
