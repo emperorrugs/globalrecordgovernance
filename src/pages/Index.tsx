@@ -11,6 +11,7 @@ import { FadeIn, StaggerChildren } from "@/components/FadeIn";
 import { LiveTrustDashboard } from "@/components/LiveTrustDashboard";
 import { GlobalFederationMap } from "@/components/GlobalFederationMap";
 import { CompetitiveEdgeMatrix } from "@/components/CompetitiveEdgeMatrix";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 /* ── Reusable ── */
 const Sec = ({ id, children, className = "" }: { id?: string; children: React.ReactNode; className?: string }) => (
@@ -31,7 +32,9 @@ const Title = ({ children, sub }: { children: React.ReactNode; sub?: string }) =
 );
 
 /* ── Page ── */
-const Index = () => (
+const Index = () => {
+  const { t } = useLanguage();
+  return (
   <div>
     <SEOHead
       title="GRGF — Global Record Governance Foundation | Digital Public Infrastructure Standards Authority"
@@ -56,18 +59,18 @@ const Index = () => (
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
-            <span className="text-overline font-mono text-accent uppercase">Digital Public Infrastructure Standards Authority</span>
+            <span className="text-overline font-mono text-accent uppercase">{t("home.badge")}</span>
           </div>
         </FadeIn>
 
         <FadeIn delay={100}>
           <h1 className="institutional-heading font-semibold leading-[0.9] text-primary-foreground max-w-5xl" style={{ fontSize: "clamp(2.5rem, 7vw, 5.5rem)" }}>
-            Global Record
+            {t("home.title_1")}
             <br />
-            Governance
+            {t("home.title_2")}
             <br />
             <span className="text-accent relative">
-              Foundation
+              {t("home.title_3")}
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/20" viewBox="0 0 400 12" preserveAspectRatio="none">
                 <path d="M0,8 Q100,0 200,8 Q300,16 400,8" stroke="currentColor" strokeWidth="2" fill="none" />
               </svg>
@@ -77,13 +80,13 @@ const Index = () => (
 
         <FadeIn delay={200}>
           <p className="mt-8 text-body-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
-            Independent global framework for Digital Public Infrastructure governance, validation, and institutional recognition. Establishing the structural standard for verifiable institutional accountability.
+            {t("home.subtitle")}
           </p>
         </FadeIn>
 
         <FadeIn delay={300}>
           <div className="mt-6 text-caption text-primary-foreground/35 font-mono">
-            Est. 2024 · Canadian Patent CA 3,300,102 · OECD DPI Aligned
+            {t("home.patent")}
           </div>
         </FadeIn>
 
@@ -91,15 +94,15 @@ const Index = () => (
           <div className="mt-14 flex flex-wrap gap-3">
             <Link to="/controlled-access" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
               <Scale className="h-4 w-4" />
-              Request Governance Assessment
+              {t("home.cta_assess")}
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link to="/recognition" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
               <Award className="h-4 w-4" />
-              Apply for Recognition
+              {t("home.cta_recognition")}
             </Link>
             <Link to="/architecture" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
-              Access Framework <ArrowRight className="h-3.5 w-3.5" />
+              {t("home.cta_framework")} <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </FadeIn>
@@ -108,11 +111,11 @@ const Index = () => (
         <FadeIn delay={600}>
           <div className="mt-20 pt-8 border-t border-primary-foreground/10 grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
-              { end: 100, suffix: "%", label: "Policy Determinism" },
-              { prefix: "<", end: 30, suffix: " min", label: "Audit Reconstruction" },
-              { prefix: "", end: 3, suffix: "-Tier", label: "Recognition Model" },
-              { prefix: "", end: 6, suffix: "-Layer", label: "Architecture" },
-              { prefix: "", end: 5, suffix: "-Phase", label: "Deployment Model" },
+              { end: 100, suffix: "%", label: t("home.stat_determinism") },
+              { prefix: "<", end: 30, suffix: " min", label: t("home.stat_audit") },
+              { prefix: "", end: 3, suffix: "-Tier", label: t("home.stat_recognition") },
+              { prefix: "", end: 6, suffix: "-Layer", label: t("home.stat_architecture") },
+              { prefix: "", end: 5, suffix: "-Phase", label: t("home.stat_deployment") },
             ].map(({ end, suffix, prefix, label }) => (
               <div key={label}>
                 <p className="text-xl md:text-2xl font-serif font-semibold text-accent">
@@ -129,9 +132,9 @@ const Index = () => (
 
     {/* ═══════════════════ LIVE TRUST DASHBOARD ═══════════════════ */}
     <Sec id="trust-metrics" className="border-b border-border bg-muted/30">
-      <SectionLabel>System Status</SectionLabel>
-      <Title sub="Real-time integrity metrics from the GRGF governance operating layer. All metrics are deterministically computed and independently verifiable.">
-        Live Trust Dashboard
+      <SectionLabel>{t("home.system_status")}</SectionLabel>
+      <Title sub={t("home.live_dashboard_sub")}>
+        {t("home.live_dashboard")}
       </Title>
       <LiveTrustDashboard />
     </Sec>
@@ -139,7 +142,7 @@ const Index = () => (
     {/* ═══════════════════ THE PROBLEM ═══════════════════ */}
     <Sec id="problem" className="border-b border-border">
       <FadeIn>
-        <SectionLabel>The Problem</SectionLabel>
+        <SectionLabel>{t("home.problem")}</SectionLabel>
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
@@ -531,23 +534,23 @@ const Index = () => (
       <FadeIn>
         <div className="text-center max-w-3xl mx-auto py-12">
           <p className="font-serif text-primary-foreground leading-tight mb-3" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>
-            Trust should not rely
+            {t("home.closing_1")}
             <br />
-            on reputation.
+            {t("home.closing_2")}
           </p>
           <p className="text-heading-2 font-serif text-accent mb-4">
-            It should rely on structure.
+            {t("home.closing_3")}
           </p>
           <p className="text-body text-primary-foreground/50 mb-10 max-w-xl mx-auto">
-            The Global Record Governance Foundation exists to make that structural trust possible — for every institution, at every level, in every jurisdiction.
+            {t("home.closing_sub")}
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Link to="/controlled-access" className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
-              Request Governance Assessment
+              {t("home.cta_assess")}
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link to="/recognition" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
-              Apply for Recognition
+              {t("home.cta_recognition")}
             </Link>
             <Link to="/partnerships" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               Partner With Us
@@ -557,6 +560,7 @@ const Index = () => (
       </FadeIn>
     </Sec>
   </div>
-);
+  );
+};
 
 export default Index;

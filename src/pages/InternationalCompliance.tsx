@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Globe, Shield, BarChart3, Users, Landmark, Scale, Database, Eye, Heart, Leaf, Lock, BookOpen } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Sec = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <section className={`px-6 py-20 md:px-12 lg:px-20 ${className}`}>
@@ -87,119 +88,123 @@ const crossCutting = [
   { area: "Privacy & Security", path: "/privacy-policy", icon: Lock, status: "GDPR/PIPEDA/CCPA" },
 ];
 
-const InternationalCompliance = () => (
-  <div className="animate-fade-in">
-    <header className="border-b border-border px-6 py-20 md:px-12 lg:px-20 bg-primary text-primary-foreground">
-      <div className="max-w-5xl mx-auto">
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">International Compliance Hub</p>
-        <h1 className="institutional-heading text-display font-semibold text-primary-foreground mb-4">
-          Multilateral Institutional Alignment
-        </h1>
-        <p className="text-body-lg text-primary-foreground/60 max-w-2xl">
-          Comprehensive compliance dashboard mapping GRGF capabilities across all major international governance frameworks — OECD, World Bank, United Nations, G20, ITU, and regional digital governance bodies.
-        </p>
-      </div>
-    </header>
+const InternationalCompliance = () => {
+  const { t } = useLanguage();
 
-    {/* Compliance Stats */}
-    <Sec className="border-b border-border">
-      <FadeIn>
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Compliance Overview</p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-8">
-          {[
-            { end: 6, suffix: "", label: "International Bodies" },
-            { end: 11, suffix: "", label: "SDGs Aligned" },
-            { end: 8, suffix: "", label: "ISO Standards" },
-            { end: 6, suffix: "", label: "Regional Frameworks" },
-            { end: 9, suffix: "/9", label: "DPG Criteria Met" },
-          ].map(({ end, suffix, label }) => (
-            <div key={label} className="governance-card-elevated text-center group hover:border-accent/30 transition-all">
-              <p className="text-2xl font-serif font-bold text-accent group-hover:scale-110 transition-transform">
-                <AnimatedCounter end={end} suffix={suffix} />
-              </p>
-              <p className="text-overline text-muted-foreground/50 mt-1">{label}</p>
-            </div>
-          ))}
+  return (
+    <div className="animate-fade-in">
+      <header className="border-b border-border px-6 py-20 md:px-12 lg:px-20 bg-primary text-primary-foreground">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("compliance.hub")}</p>
+          <h1 className="institutional-heading text-display font-semibold text-primary-foreground mb-4">
+            {t("compliance.title")}
+          </h1>
+          <p className="text-body-lg text-primary-foreground/60 max-w-2xl">
+            {t("compliance.subtitle")}
+          </p>
         </div>
-      </FadeIn>
-    </Sec>
+      </header>
 
-    {/* Framework Cards */}
-    <Sec className="border-b border-border bg-muted/40">
-      <FadeIn>
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">By Organization</p>
-        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">Institutional Framework Alignment</h2>
-        <div className="space-y-5">
-          {frameworks.map((f, i) => (
-            <FadeIn key={f.org} delay={i * 80}>
-              <div className={`governance-card-elevated border-l-4 ${f.color} hover:shadow-lg transition-all`}>
-                <div className="flex items-center gap-3 mb-4">
-                  <f.icon className="h-5 w-5 text-accent" />
-                  <div>
-                    <h3 className="font-serif text-heading-3 font-semibold">{f.org}</h3>
-                    <p className="text-caption text-muted-foreground">{f.title}</p>
+      {/* Compliance Stats */}
+      <Sec className="border-b border-border">
+        <FadeIn>
+          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("compliance.overview")}</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-8">
+            {[
+              { end: 6, suffix: "", label: t("compliance.stat_bodies") },
+              { end: 11, suffix: "", label: t("compliance.stat_sdgs") },
+              { end: 8, suffix: "", label: t("compliance.stat_iso") },
+              { end: 6, suffix: "", label: t("compliance.stat_regional") },
+              { end: 9, suffix: "/9", label: t("compliance.stat_dpg") },
+            ].map(({ end, suffix, label }) => (
+              <div key={label} className="governance-card-elevated text-center group hover:border-accent/30 transition-all">
+                <p className="text-2xl font-serif font-bold text-accent group-hover:scale-110 transition-transform">
+                  <AnimatedCounter end={end} suffix={suffix} />
+                </p>
+                <p className="text-overline text-muted-foreground/50 mt-1">{label}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </Sec>
+
+      {/* Framework Cards */}
+      <Sec className="border-b border-border bg-muted/40">
+        <FadeIn>
+          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("compliance.by_org")}</p>
+          <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("compliance.framework_alignment")}</h2>
+          <div className="space-y-5">
+            {frameworks.map((f, i) => (
+              <FadeIn key={f.org} delay={i * 80}>
+                <div className={`governance-card-elevated border-l-4 ${f.color} hover:shadow-lg transition-all`}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <f.icon className="h-5 w-5 text-accent" />
+                    <div>
+                      <h3 className="font-serif text-heading-3 font-semibold">{f.org}</h3>
+                      <p className="text-caption text-muted-foreground">{f.title}</p>
+                    </div>
+                  </div>
+                  <div className="grid gap-2 sm:grid-cols-3">
+                    {f.items.map(item => (
+                      <Link key={item.name} to={item.path} className="flex items-center justify-between gap-2 p-3 border border-border hover:border-accent/30 hover:bg-muted/50 transition-all group">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="h-3.5 w-3.5 text-accent shrink-0" />
+                          <span className="text-caption text-foreground group-hover:text-accent transition-colors">{item.name}</span>
+                        </div>
+                        <span className="text-overline font-mono text-muted-foreground/50 shrink-0">{item.status}</span>
+                      </Link>
+                    ))}
                   </div>
                 </div>
-                <div className="grid gap-2 sm:grid-cols-3">
-                  {f.items.map(item => (
-                    <Link key={item.name} to={item.path} className="flex items-center justify-between gap-2 p-3 border border-border hover:border-accent/30 hover:bg-muted/50 transition-all group">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle className="h-3.5 w-3.5 text-accent shrink-0" />
-                        <span className="text-caption text-foreground group-hover:text-accent transition-colors">{item.name}</span>
-                      </div>
-                      <span className="text-overline font-mono text-muted-foreground/50 shrink-0">{item.status}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-      </FadeIn>
-    </Sec>
-
-    {/* Cross-Cutting */}
-    <Sec className="border-b border-border">
-      <FadeIn>
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Cross-Cutting Compliance</p>
-        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">Universal Requirements</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {crossCutting.map(({ area, path, icon: Icon, status }, i) => (
-            <FadeIn key={area} delay={i * 60}>
-              <Link to={path} className="governance-card-elevated flex items-center gap-4 group hover:border-accent/30 transition-all">
-                <Icon className="h-5 w-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
-                <div className="flex-1">
-                  <h4 className="font-serif text-body font-semibold group-hover:text-accent transition-colors">{area}</h4>
-                  <p className="text-overline text-muted-foreground/50">{status}</p>
-                </div>
-                <ArrowRight className="h-3.5 w-3.5 text-muted-foreground/30 group-hover:text-accent transition-colors" />
-              </Link>
-            </FadeIn>
-          ))}
-        </div>
-      </FadeIn>
-    </Sec>
-
-    <Sec className="bg-primary text-primary-foreground">
-      <FadeIn>
-        <div className="text-center max-w-2xl mx-auto">
-          <Globe className="h-8 w-8 text-accent mx-auto mb-4" />
-          <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Complete Compliance Assessment</h2>
-          <p className="text-body text-primary-foreground/60 mb-8">
-            For institutions requiring detailed compliance mapping, gap analysis, or formal alignment certification across any international framework.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-accent/20">
-              Request Compliance Assessment <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link to="/oecd-safeguards" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all hover:bg-primary-foreground/5">
-              Try Self-Assessment
-            </Link>
+              </FadeIn>
+            ))}
           </div>
-        </div>
-      </FadeIn>
-    </Sec>
-  </div>
-);
+        </FadeIn>
+      </Sec>
+
+      {/* Cross-Cutting */}
+      <Sec className="border-b border-border">
+        <FadeIn>
+          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("compliance.cross_cutting")}</p>
+          <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("compliance.universal")}</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {crossCutting.map(({ area, path, icon: Icon, status }, i) => (
+              <FadeIn key={area} delay={i * 60}>
+                <Link to={path} className="governance-card-elevated flex items-center gap-4 group hover:border-accent/30 transition-all">
+                  <Icon className="h-5 w-5 text-accent shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="flex-1">
+                    <h4 className="font-serif text-body font-semibold group-hover:text-accent transition-colors">{area}</h4>
+                    <p className="text-overline text-muted-foreground/50">{status}</p>
+                  </div>
+                  <ArrowRight className="h-3.5 w-3.5 text-muted-foreground/30 group-hover:text-accent transition-colors" />
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </FadeIn>
+      </Sec>
+
+      <Sec className="bg-primary text-primary-foreground">
+        <FadeIn>
+          <div className="text-center max-w-2xl mx-auto">
+            <Globe className="h-8 w-8 text-accent mx-auto mb-4" />
+            <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">{t("compliance.full_assessment")}</h2>
+            <p className="text-body text-primary-foreground/60 mb-8">
+              {t("compliance.full_assessment_sub")}
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-accent/20">
+                {t("compliance.request_assessment")} <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/oecd-safeguards" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all hover:bg-primary-foreground/5">
+                {t("compliance.self_assessment")}
+              </Link>
+            </div>
+          </div>
+        </FadeIn>
+      </Sec>
+    </div>
+  );
+};
 
 export default InternationalCompliance;
