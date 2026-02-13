@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ViewModeProvider } from "@/contexts/ViewModeContext";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { AppLayout } from "@/components/AppLayout";
 import { ArchiveLayout } from "@/components/ArchiveLayout";
@@ -86,6 +87,7 @@ import UNAlignment from "./pages/UNAlignment";
 import G20DPIFramework from "./pages/G20DPIFramework";
 import ITUGlobalStandards from "./pages/ITUGlobalStandards";
 import InternationalCompliance from "./pages/InternationalCompliance";
+import UNESCOAlignment from "./pages/UNESCOAlignment";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -107,6 +109,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <LanguageProvider>
         <ViewModeProvider>
           <ScrollToTop />
           <Routes>
@@ -196,6 +199,7 @@ const App = () => (
             <Route path="/g20-dpi-framework" element={<AppLayout><G20DPIFramework /></AppLayout>} />
             <Route path="/itu-global-standards" element={<AppLayout><ITUGlobalStandards /></AppLayout>} />
             <Route path="/international-compliance" element={<AppLayout><InternationalCompliance /></AppLayout>} />
+            <Route path="/unesco-alignment" element={<AppLayout><UNESCOAlignment /></AppLayout>} />
 
             {/* Archive sub-pages */}
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
@@ -223,6 +227,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ViewModeProvider>
+        </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

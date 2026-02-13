@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
-  Database, Landmark,
+  Database, Landmark, Languages,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -15,6 +15,7 @@ import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
 import { CookieConsent } from "@/components/CookieConsent";
 import { RouteSEO } from "@/components/RouteSEO";
 import { useViewMode } from "@/contexts/ViewModeContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
@@ -99,6 +100,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const { mode, toggle, isPlain } = useViewMode();
+  const { lang, setLang, t } = useLanguage();
   const isMobile = useIsMobile();
 
   return (
@@ -184,13 +186,21 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <Lock className="h-3 w-3" />
               {isMobile ? "Access" : "Request Assessment"}
             </Link>
-            <div className="flex items-center gap-1.5 ml-2">
+            <button
+              onClick={() => setLang(lang === "en" ? "fr" : "en")}
+              className="flex items-center gap-1 px-2 py-1 text-overline font-mono text-muted-foreground hover:text-accent transition-colors"
+              aria-label={`Switch to ${lang === "en" ? "French" : "English"}`}
+            >
+              <Languages className="h-3.5 w-3.5" />
+              <span className="font-semibold">{lang === "en" ? "FR" : "EN"}</span>
+            </button>
+            <div className="flex items-center gap-1.5 ml-1">
               <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                {isMobile ? "Plain" : "Plain English"}
+                {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
               </span>
               <Switch checked={!isPlain} onCheckedChange={toggle} />
               <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                {isMobile ? "Tech" : "Technical"}
+                {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
               </span>
             </div>
           </div>

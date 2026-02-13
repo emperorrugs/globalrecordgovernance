@@ -65,6 +65,17 @@ const frameworks = [
     ],
     color: "border-l-accent/30",
   },
+  {
+    org: "UNESCO",
+    title: "ROAM-X, AI Ethics, Information Preservation",
+    icon: BookOpen,
+    items: [
+      { name: "ROAM-X Indicators", path: "/unesco-alignment", status: "5 Pillars" },
+      { name: "AI Ethics Recommendation", path: "/unesco-alignment", status: "8/8 Aligned" },
+      { name: "Information Preservation", path: "/unesco-alignment", status: "IFAP Aligned" },
+    ],
+    color: "border-l-accent/20",
+  },
 ];
 
 const crossCutting = [
@@ -96,7 +107,7 @@ const InternationalCompliance = () => (
         <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Compliance Overview</p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-8">
           {[
-            { end: 5, suffix: "", label: "International Bodies" },
+            { end: 6, suffix: "", label: "International Bodies" },
             { end: 11, suffix: "", label: "SDGs Aligned" },
             { end: 8, suffix: "", label: "ISO Standards" },
             { end: 6, suffix: "", label: "Regional Frameworks" },

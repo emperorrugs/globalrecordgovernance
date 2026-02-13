@@ -28,6 +28,8 @@ export function InstitutionalFooter() {
               <li><Link to="/world-bank-alignment" className="hover:text-accent transition-colors">World Bank Alignment</Link></li>
               <li><Link to="/un-alignment" className="hover:text-accent transition-colors">UN SDG & DPG</Link></li>
               <li><Link to="/g20-dpi-framework" className="hover:text-accent transition-colors">G20 DPI Framework</Link></li>
+              <li><Link to="/itu-global-standards" className="hover:text-accent transition-colors">ITU Standards</Link></li>
+              <li><Link to="/unesco-alignment" className="hover:text-accent transition-colors">UNESCO Alignment</Link></li>
             </ul>
           </div>
           <div>
