@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function InstitutionalFooter() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground px-6 py-14 md:px-12 lg:px-16">
       <div className="max-w-5xl mx-auto">
@@ -14,12 +17,11 @@ export function InstitutionalFooter() {
               <h4 className="font-serif text-sm font-semibold">GRGF Foundation</h4>
             </div>
             <p className="text-caption text-primary-foreground/50 leading-relaxed">
-              Global Record Governance Framework — 
-              Sovereign-grade Digital Public Infrastructure for institutional trust.
+              {t("footer.tagline")}
             </p>
           </div>
           <div>
-            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Infrastructure</h4>
+            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("footer.infrastructure")}</h4>
             <ul className="space-y-2 text-caption text-primary-foreground/50">
               <li><Link to="/architecture" className="hover:text-accent transition-colors">System Architecture</Link></li>
               <li><Link to="/dpi-stack" className="hover:text-accent transition-colors">DPI Stack</Link></li>
@@ -33,7 +35,7 @@ export function InstitutionalFooter() {
             </ul>
           </div>
           <div>
-            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Framework</h4>
+            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("footer.framework")}</h4>
             <ul className="space-y-2 text-caption text-primary-foreground/50">
               <li><Link to="/recognition" className="hover:text-accent transition-colors">Recognition Framework</Link></li>
               <li><Link to="/governance-framework" className="hover:text-accent transition-colors">Governance Model</Link></li>
@@ -44,14 +46,14 @@ export function InstitutionalFooter() {
             </ul>
           </div>
           <div>
-            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Engage</h4>
+            <h4 className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("footer.engage")}</h4>
             <ul className="space-y-2 text-caption text-primary-foreground/50">
-              <li><Link to="/controlled-access" className="hover:text-accent transition-colors">Request Assessment</Link></li>
+              <li><Link to="/controlled-access" className="hover:text-accent transition-colors">{t("topbar.request")}</Link></li>
               <li><Link to="/stakeholder-consultation" className="hover:text-accent transition-colors">Public Consultation</Link></li>
               <li><Link to="/risk-register" className="hover:text-accent transition-colors">Risk Register</Link></li>
               <li><Link to="/human-rights-impact" className="hover:text-accent transition-colors">Human Rights</Link></li>
               <li><Link to="/sustainability" className="hover:text-accent transition-colors">Sustainability</Link></li>
-              <li><Link to="/contact" className="hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link to="/contact" className="hover:text-accent transition-colors">{t("nav.contact")}</Link></li>
             </ul>
           </div>
         </div>
@@ -60,10 +62,10 @@ export function InstitutionalFooter() {
         <div className="mt-10 pt-8 border-t border-primary-foreground/8">
           <div className="grid gap-3 sm:grid-cols-4 mb-6">
             {[
-              "Pilot stage — not production-certified",
-              "Independent security audit planned",
-              "No certification claims made",
-              "Responsible disclosure: contact@globalrecordgovernance.com",
+              t("footer.pilot"),
+              t("footer.audit"),
+              t("footer.no_claims"),
+              t("footer.disclosure"),
             ].map((signal) => (
               <p key={signal} className="text-overline text-primary-foreground/30 leading-relaxed">{signal}</p>
             ))}
@@ -72,12 +74,12 @@ export function InstitutionalFooter() {
           {/* Origin attribution */}
           <div className="mb-6 py-4 border-y border-primary-foreground/6">
             <p className="text-caption text-primary-foreground/40 text-center">
-              Global Record Governance Framework — Invented and Owned by Tarek Wahid.
+              {t("footer.invented")}
             </p>
           </div>
 
           <p className="text-body font-serif italic text-primary-foreground/60 text-center mb-6">
-            Trust should not rely on reputation. It should rely on structure.
+            {t("footer.quote")}
           </p>
         </div>
 
@@ -87,12 +89,12 @@ export function InstitutionalFooter() {
             GRGF · Governance Integrity Infrastructure
           </p>
           <div className="flex items-center gap-5 flex-wrap">
-            <Link to="/safeguards-trust" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Evidence</Link>
-            <Link to="/sitemap" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Sitemap</Link>
-            <Link to="/privacy-policy" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Privacy</Link>
-            <Link to="/terms-of-service" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Terms</Link>
-            <Link to="/controlled-access" className="text-overline text-accent hover:underline font-mono uppercase tracking-widest transition-colors">Engage →</Link>
-            <Link to="/contact" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">Contact</Link>
+            <Link to="/safeguards-trust" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">{t("footer.evidence")}</Link>
+            <Link to="/sitemap" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">{t("footer.sitemap")}</Link>
+            <Link to="/privacy-policy" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">{t("footer.privacy")}</Link>
+            <Link to="/terms-of-service" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">{t("footer.terms")}</Link>
+            <Link to="/controlled-access" className="text-overline text-accent hover:underline font-mono uppercase tracking-widest transition-colors">{t("footer.engage")} →</Link>
+            <Link to="/contact" className="text-overline text-primary-foreground/40 hover:text-accent font-mono uppercase tracking-widest transition-colors">{t("nav.contact")}</Link>
           </div>
         </div>
       </div>
