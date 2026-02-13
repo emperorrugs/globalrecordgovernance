@@ -15,6 +15,7 @@ import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
 import { CookieConsent } from "@/components/CookieConsent";
 import { RouteSEO } from "@/components/RouteSEO";
 import { useViewMode } from "@/contexts/ViewModeContext";
+import { ViewModeBanner, ViewModeFirstVisitTooltip } from "@/components/ViewModeOnboarding";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -168,8 +169,8 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
       {/* Main Content */}
       <div className="flex-1 min-w-0 flex flex-col">
+        <ViewModeBanner />
         <SimulationBanner />
-        {/* Top bar */}
         <div className="flex items-center justify-between border-b border-border px-5 py-2.5 gap-2 bg-card">
           <div className="flex items-center gap-2 min-w-0">
             {/* Mobile hamburger */}
@@ -217,15 +218,17 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <Languages className="h-3.5 w-3.5" />
               <span className="font-semibold">{langLabel[lang]}</span>
             </button>
-            <div className="flex items-center gap-1.5 ml-1">
-              <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
-              </span>
-              <Switch checked={!isPlain} onCheckedChange={toggle} />
-              <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
-              </span>
-            </div>
+            <ViewModeFirstVisitTooltip>
+              <div className="flex items-center gap-1.5 ml-1">
+                <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                  {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
+                </span>
+                <Switch checked={!isPlain} onCheckedChange={toggle} />
+                <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                  {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
+                </span>
+              </div>
+            </ViewModeFirstVisitTooltip>
           </div>
         </div>
         <main id="main-content" className="flex-1" role="main">
