@@ -65,6 +65,7 @@ const layer4 = [
 const layer5 = [
   { title: "Institutional Review", path: "/institutional-review", icon: ClipboardList },
   { title: "Archive", path: "/archive", icon: FileText },
+  { title: "Reports & Studies", path: "/reports", icon: BookOpen },
   { title: "Research & Publications", path: "/research", icon: BookOpen },
   { title: "Global Partnerships", path: "/partnerships", icon: Handshake },
   { title: "Controlled Access", path: "/controlled-access", icon: Lock },
