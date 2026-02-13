@@ -67,6 +67,12 @@ import Scalability from "./pages/Scalability";
 import FinancialModel from "./pages/FinancialModel";
 import InstitutionalReview from "./pages/InstitutionalReview";
 import Developer from "./pages/Developer";
+import RiskAssessment from "./pages/RiskAssessment";
+import DeploymentPlanner from "./pages/DeploymentPlanner";
+import Interoperability from "./pages/Interoperability";
+import Procurement from "./pages/Procurement";
+import Maturity from "./pages/Maturity";
+import StressTest from "./pages/StressTest";
 
 // Institutional pages
 import Recognition from "./pages/Recognition";
@@ -169,6 +175,12 @@ const App = () => (
             <Route path="/financial-model" element={<AppLayout><FinancialModel /></AppLayout>} />
             <Route path="/institutional-review" element={<AppLayout><InstitutionalReview /></AppLayout>} />
             <Route path="/developer" element={<AppLayout><Developer /></AppLayout>} />
+            <Route path="/risk-assessment" element={<AppLayout><RiskAssessment /></AppLayout>} />
+            <Route path="/deployment-planner" element={<AppLayout><DeploymentPlanner /></AppLayout>} />
+            <Route path="/interoperability" element={<AppLayout><Interoperability /></AppLayout>} />
+            <Route path="/procurement" element={<AppLayout><Procurement /></AppLayout>} />
+            <Route path="/maturity" element={<AppLayout><Maturity /></AppLayout>} />
+            <Route path="/stress-test" element={<AppLayout><StressTest /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
