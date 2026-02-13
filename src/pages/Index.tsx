@@ -42,13 +42,12 @@ const Index = () => {
     />
 
     {/* ═══════════════════ HERO ═══════════════════ */}
-    <header id="hero" className="relative overflow-hidden border-b border-border px-6 py-32 md:py-40 md:px-12 lg:px-20 bg-primary text-primary-foreground">
+     <header id="hero" className="relative overflow-hidden border-b border-border px-6 py-32 md:py-40 md:px-12 lg:px-20 bg-primary text-primary-foreground">
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `repeating-linear-gradient(90deg, hsl(var(--accent)) 0px, transparent 1px, transparent 80px),
                           repeating-linear-gradient(0deg, hsl(var(--accent)) 0px, transparent 1px, transparent 80px)`
       }} />
-      {/* Gradient orb */}
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-[0.04]"
         style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 70%)" }}
       />
@@ -65,12 +64,12 @@ const Index = () => {
 
         <FadeIn delay={100}>
           <h1 className="institutional-heading font-semibold leading-[0.9] text-primary-foreground max-w-5xl" style={{ fontSize: "clamp(2.5rem, 7vw, 5.5rem)" }}>
-            {t("home.title_1")}
+            Federated Digital
             <br />
-            {t("home.title_2")}
+            Public Infrastructure
             <br />
             <span className="text-accent relative">
-              {t("home.title_3")}
+              Governance Platform
               <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/20" viewBox="0 0 400 12" preserveAspectRatio="none">
                 <path d="M0,8 Q100,0 200,8 Q300,16 400,8" stroke="currentColor" strokeWidth="2" fill="none" />
               </svg>
@@ -80,7 +79,8 @@ const Index = () => {
 
         <FadeIn delay={200}>
           <p className="mt-8 text-body-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
-            {t("home.subtitle")}
+            GRGF is a federated digital public infrastructure designed to strengthen institutional trust,
+            reduce systemic inefficiency, and enable secure cross-border interoperability.
           </p>
         </FadeIn>
 
@@ -90,19 +90,41 @@ const Index = () => {
           </div>
         </FadeIn>
 
+        {/* ── Executive KPI Panels ── */}
+        <FadeIn delay={350}>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { label: "Institutional Efficiency", value: "15–20%", sub: "Administrative gain (modeled)" },
+              { label: "Interoperability", value: "Level 3", sub: "Federation-ready" },
+              { label: "Deployment Maturity", value: "TRL 6", sub: "Pilot-validated" },
+              { label: "Investment Readiness", value: "Active", sub: "Evaluation stage" },
+              { label: "Implementation", value: "18 mo", sub: "Pilot to production" },
+            ].map(({ label, value, sub }) => (
+              <div key={label} className="border border-primary-foreground/10 p-4 bg-primary-foreground/[0.02]">
+                <p className="text-overline font-mono text-primary-foreground/40 uppercase mb-1">{label}</p>
+                <p className="text-xl font-serif font-semibold text-accent">{value}</p>
+                <p className="text-overline text-primary-foreground/30 mt-0.5">{sub}</p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+
         <FadeIn delay={400}>
-          <div className="mt-14 flex flex-wrap gap-3">
-            <Link to="/controlled-access" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
-              <Scale className="h-4 w-4" />
-              {t("home.cta_assess")}
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link to="/architecture" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
+              <Cpu className="h-4 w-4" />
+              View Architecture
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/recognition" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
-              <Award className="h-4 w-4" />
-              {t("home.cta_recognition")}
+            <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
+              <BarChart3 className="h-4 w-4" />
+              Explore Financial Model
             </Link>
-            <Link to="/architecture" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
-              {t("home.cta_framework")} <ArrowRight className="h-3.5 w-3.5" />
+            <Link to="/simulator" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/15 text-primary-foreground/80 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
+              Run Country Simulation <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link to="/institutional-review" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
+              Access Institutional Review <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </FadeIn>
@@ -146,13 +168,13 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
-              $2.6 Trillion lost annually to governance failures
+              Estimated $2.6 trillion in annual governance inefficiency
             </h2>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              Governments and institutions worldwide lose an estimated $2.6 trillion annually to procurement fraud, administrative corruption, and institutional opacity. The root cause isn't bad intent — it's the absence of structural accountability infrastructure.
+              International estimates suggest that governments lose up to $2.6 trillion annually through procurement irregularities, administrative inefficiency, and institutional opacity. The structural root cause is the absence of verifiable accountability infrastructure.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed mb-6">
-              No existing system records what institutions <em>didn't</em> do. GRGF is the first framework that makes institutional silence — omissions, delays, and inaction — structurally visible and independently verifiable.
+              Current governance systems do not record what institutions <em>didn't</em> do. GRGF introduces a unified architecture that makes institutional silence — omissions, delays, and inaction — structurally visible and independently verifiable.
             </p>
             <div className="flex gap-8">
               <div>
@@ -198,8 +220,8 @@ const Index = () => {
       <FadeIn>
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
-              The global standard for institutional record integrity
+           <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
+              Federated governance interoperability model for scalable national integration
             </h2>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
               The Global Record Governance Foundation is an independent standards-setting authority that establishes, maintains, and governs the structural framework for institutional record integrity across public and private sectors worldwide.
@@ -266,10 +288,10 @@ const Index = () => {
       <SectionLabel>Competitive Positioning</SectionLabel>
       <div className="mb-12">
         <h2 className="institutional-heading text-heading-1 font-semibold text-primary-foreground">
-          What No Other DPI Does
+          Structural Differentiation
         </h2>
         <p className="mt-3 text-body text-primary-foreground/60 leading-relaxed max-w-3xl">
-          GRGF is the only governance infrastructure that combines omission-awareness, deterministic policy enforcement, and anti-capture governance in a single sovereign-compatible layer.
+          Unified architecture for omission-awareness, deterministic policy enforcement, and anti-capture governance in a single sovereign-compatible layer.
         </p>
       </div>
       <div className="bg-card/5 border border-primary-foreground/10 p-6 md:p-8">
