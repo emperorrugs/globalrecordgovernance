@@ -35,7 +35,7 @@ import CriticalQuestions from "./pages/CriticalQuestions";
 import InstitutionalReadiness from "./pages/InstitutionalReadiness";
 import ValidationPathway from "./pages/ValidationPathway";
 
-// New OECD-aligned pages
+// OECD-aligned pages
 import DPIStack from "./pages/DPIStack";
 import SafeguardsTrust from "./pages/SafeguardsTrust";
 import StrategicGovernance from "./pages/StrategicGovernance";
@@ -49,13 +49,11 @@ import InternationalCooperation from "./pages/InternationalCooperation";
 import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
 import TechnicalBlueprints from "./pages/TechnicalBlueprints";
-import PilotProgramme from "./pages/PilotProgramme";
+import PilotEvaluation from "./pages/PilotEvaluation";
 import AcademyPage from "./pages/AcademyPage";
 import DPIComparison from "./pages/DPIComparison";
 import Sitemap from "./pages/Sitemap";
 import ControlledAccess from "./pages/ControlledAccess";
-import PilotEvaluation from "./pages/PilotEvaluation";
-import Archive from "./pages/Archive";
 import ExecutiveSummary from "./pages/ExecutiveSummary";
 import OutreachMessages from "./pages/OutreachMessages";
 import ImpactModeling from "./pages/ImpactModeling";
@@ -63,12 +61,16 @@ import TheProblem from "./pages/TheProblem";
 import Contact from "./pages/Contact";
 import FutureProofing from "./pages/FutureProofing";
 
-// New institutional pages
+// Institutional pages
 import Recognition from "./pages/Recognition";
 import Membership from "./pages/Membership";
 import Partnerships from "./pages/Partnerships";
 import Research from "./pages/Research";
 import Transparency from "./pages/Transparency";
+
+// Legal & Compliance pages
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
@@ -79,6 +81,7 @@ import WorkflowDemo from "./pages/WorkflowDemo";
 import APIMock from "./pages/APIMock";
 import Verification from "./pages/Verification";
 
+import Archive from "./pages/Archive";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -95,32 +98,49 @@ const App = () => (
             {/* One-page home */}
             <Route path="/" element={<AppLayout><Index /></AppLayout>} />
 
-            {/* New OECD-aligned primary pages */}
+            {/* Layer 1: Institutional Authority */}
+            <Route path="/transparency" element={<AppLayout><Transparency /></AppLayout>} />
+            <Route path="/membership" element={<AppLayout><Membership /></AppLayout>} />
+            <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
+
+            {/* Layer 2: Standards & Recognition */}
+            <Route path="/recognition" element={<AppLayout><Recognition /></AppLayout>} />
+            <Route path="/oecd-alignment" element={<AppLayout><OECDAlignment /></AppLayout>} />
+            <Route path="/ethics" element={<AppLayout><GovernanceEthics /></AppLayout>} />
+            <Route path="/compliance" element={<AppLayout><StandardsCompliance /></AppLayout>} />
+
+            {/* Layer 3: DPI Platform */}
+            <Route path="/architecture" element={<AppLayout><SystemArchitecture /></AppLayout>} />
             <Route path="/dpi-stack" element={<AppLayout><DPIStack /></AppLayout>} />
             <Route path="/safeguards-trust" element={<AppLayout><SafeguardsTrust /></AppLayout>} />
-            <Route path="/strategic-governance" element={<AppLayout><StrategicGovernance /></AppLayout>} />
-            <Route path="/operational-model" element={<AppLayout><OperationalModel /></AppLayout>} />
             <Route path="/deployment-scenarios" element={<AppLayout><DeploymentScenarios /></AppLayout>} />
-            <Route path="/risk-mitigation" element={<AppLayout><RiskMitigation /></AppLayout>} />
-            <Route path="/oecd-alignment" element={<AppLayout><OECDAlignment /></AppLayout>} />
-            <Route path="/international-cooperation" element={<AppLayout><InternationalCooperation /></AppLayout>} />
+            <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
 
-            {/* Core institutional pages (retained) */}
-            <Route path="/architecture" element={<AppLayout><SystemArchitecture /></AppLayout>} />
-            <Route path="/security-trust" element={<AppLayout><SecurityTrust /></AppLayout>} />
+            {/* Layer 4: Digital Archive */}
+            <Route path="/archive" element={<AppLayout><Archive /></AppLayout>} />
+            <Route path="/research" element={<AppLayout><Research /></AppLayout>} />
+            <Route path="/partnerships" element={<AppLayout><Partnerships /></AppLayout>} />
+            <Route path="/controlled-access" element={<AppLayout><ControlledAccess /></AppLayout>} />
+
+            {/* Extended institutional pages */}
+            <Route path="/the-problem" element={<AppLayout><TheProblem /></AppLayout>} />
             <Route path="/governance-framework" element={<AppLayout><GovernanceFramework /></AppLayout>} />
+            <Route path="/security-trust" element={<AppLayout><SecurityTrust /></AppLayout>} />
             <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
             <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
             <Route path="/stakeholders" element={<AppLayout><StakeholderSolutions /></AppLayout>} />
-            <Route path="/compliance" element={<AppLayout><StandardsCompliance /></AppLayout>} />
             <Route path="/briefing" element={<AppLayout><InstitutionalBriefing /></AppLayout>} />
             <Route path="/canada" element={<AppLayout><CanadaDeployment /></AppLayout>} />
-            <Route path="/ethics" element={<AppLayout><GovernanceEthics /></AppLayout>} />
             <Route path="/dossier" element={<AppLayout><ExecutiveDossier /></AppLayout>} />
             <Route path="/governance-interface" element={<AppLayout><GovernanceInterface /></AppLayout>} />
             <Route path="/critical-questions" element={<AppLayout><CriticalQuestions /></AppLayout>} />
             <Route path="/readiness" element={<AppLayout><InstitutionalReadiness /></AppLayout>} />
             <Route path="/validation" element={<AppLayout><ValidationPathway /></AppLayout>} />
+            <Route path="/strategic-governance" element={<AppLayout><StrategicGovernance /></AppLayout>} />
+            <Route path="/operational-model" element={<AppLayout><OperationalModel /></AppLayout>} />
+            <Route path="/risk-mitigation" element={<AppLayout><RiskMitigation /></AppLayout>} />
+            <Route path="/international-cooperation" element={<AppLayout><InternationalCooperation /></AppLayout>} />
+            <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
 
             {/* Simulation pages */}
             <Route path="/simulation" element={<AppLayout><Simulation /></AppLayout>} />
@@ -131,32 +151,23 @@ const App = () => (
             <Route path="/api-mock" element={<AppLayout><APIMock /></AppLayout>} />
             <Route path="/verification" element={<AppLayout><Verification /></AppLayout>} />
 
-            {/* Standalone governance pages */}
+            {/* Standalone pages */}
             <Route path="/systems" element={<AppLayout><Systems /></AppLayout>} />
             <Route path="/processes" element={<AppLayout><Processes /></AppLayout>} />
             <Route path="/blueprints" element={<AppLayout><TechnicalBlueprints /></AppLayout>} />
             <Route path="/pilot" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
-            <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
-            <Route path="/controlled-access" element={<AppLayout><ControlledAccess /></AppLayout>} />
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
             <Route path="/outreach" element={<AppLayout><OutreachMessages /></AppLayout>} />
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
-            <Route path="/the-problem" element={<AppLayout><TheProblem /></AppLayout>} />
-            <Route path="/contact" element={<AppLayout><Contact /></AppLayout>} />
-            <Route path="/future-proofing" element={<AppLayout><FutureProofing /></AppLayout>} />
 
-            {/* New institutional pages */}
-            <Route path="/recognition" element={<AppLayout><Recognition /></AppLayout>} />
-            <Route path="/membership" element={<AppLayout><Membership /></AppLayout>} />
-            <Route path="/partnerships" element={<AppLayout><Partnerships /></AppLayout>} />
-            <Route path="/research" element={<AppLayout><Research /></AppLayout>} />
-            <Route path="/transparency" element={<AppLayout><Transparency /></AppLayout>} />
+            {/* Legal & Compliance */}
+            <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
+            <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
 
-            {/* Archive pages */}
-            <Route path="/archive" element={<AppLayout><Archive /></AppLayout>} />
+            {/* Archive sub-pages */}
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
             <Route path="/archive/government" element={<ArchiveLayout><ArchiveGovernment /></ArchiveLayout>} />
             <Route path="/archive/partners" element={<ArchiveLayout><ArchivePartners /></ArchiveLayout>} />

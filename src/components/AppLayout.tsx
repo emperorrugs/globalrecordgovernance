@@ -9,11 +9,13 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { InstitutionalFooter } from "@/components/InstitutionalFooter";
 import { SimulationBanner } from "@/components/SimulationBanner";
+import { BackToTop } from "@/components/BackToTop";
+import { ReadingProgress } from "@/components/ReadingProgress";
+import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
 import { useViewMode } from "@/contexts/ViewModeContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
-
 /* ── LAYER 1: Institutional Authority ── */
 const layer1 = [
   { title: "Home", path: "/", icon: Home },
@@ -99,6 +101,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen w-full">
+      <ReadingProgress />
+      <KeyboardShortcuts />
+      <BackToTop />
+      {/* Skip to content - accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:text-sm">
+        Skip to main content
+      </a>
       {/* Desktop Sidebar */}
       {!isMobile && (
         <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
@@ -182,7 +191,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </div>
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" role="main">
           {children}
         </main>
         <InstitutionalFooter />
