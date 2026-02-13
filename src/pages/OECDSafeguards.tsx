@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Shield, BarChart3, Users, Globe, Heart, Zap } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   ResponsiveContainer, Tooltip,
@@ -89,6 +90,7 @@ function ScoreLabel({ score }: { score: number }) {
 }
 
 const OECDSafeguards = () => {
+  const { t } = useLanguage();
   const [scores, setScores] = useState<Record<string, number[]>>(
     Object.fromEntries(pillars.map(p => [p.id, p.questions.map(() => 0)]))
   );
@@ -115,12 +117,12 @@ const OECDSafeguards = () => {
     <div className="animate-fade-in">
       <header className="border-b border-border px-6 py-20 md:px-12 lg:px-20 bg-primary text-primary-foreground">
         <div className="max-w-5xl mx-auto">
-          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">OECD DPI Assessment</p>
+          <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("oecd.overline")}</p>
           <h1 className="institutional-heading text-display font-semibold text-primary-foreground mb-4">
-            DPI Safeguards Scorecard
+            {t("oecd.title")}
           </h1>
           <p className="text-body-lg text-primary-foreground/60 max-w-2xl">
-            Interactive self-assessment aligned with the OECD's five-pillar Digital Public Infrastructure safeguards framework. Score your institution's governance maturity across all dimensions.
+            {t("oecd.subtitle")}
           </p>
         </div>
       </header>
@@ -130,7 +132,7 @@ const OECDSafeguards = () => {
         <FadeIn>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Overall Assessment</p>
+              <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("oecd.overall")}</p>
               <div className="flex items-end gap-4 mb-4">
                 <span className="text-6xl font-serif font-bold text-foreground tabular-nums">{overallScore}</span>
                 <span className="text-2xl text-muted-foreground/50 mb-2">/100</span>
@@ -180,8 +182,8 @@ const OECDSafeguards = () => {
 
       {/* Pillar Assessment */}
       <Sec className="border-b border-border">
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Pillar Assessment</p>
-        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">Score Each Dimension</h2>
+        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("oecd.pillar_assessment")}</p>
+        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("oecd.score_each")}</h2>
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-2 mb-8" role="tablist" aria-label="OECD DPI safeguard pillars">
@@ -250,8 +252,8 @@ const OECDSafeguards = () => {
 
       {/* Methodology */}
       <Sec className="border-b border-border bg-muted/40">
-        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Methodology</p>
-        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">Assessment Framework</h2>
+        <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("oecd.methodology")}</p>
+        <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("oecd.framework")}</h2>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {[
             { score: "0–25%", label: "Foundational", desc: "Initial awareness. Basic governance structures being established." },
@@ -274,12 +276,12 @@ const OECDSafeguards = () => {
       {/* CTA */}
       <Sec className="bg-primary text-primary-foreground">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Request Formal Assessment</h2>
+          <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">{t("oecd.request_formal")}</h2>
           <p className="text-body text-primary-foreground/60 mb-8">
-            The Foundation's Technical Review Panel provides independent, structured governance maturity assessments for institutions seeking formal DPI recognition.
+            {t("oecd.cta_desc")}
           </p>
           <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-accent/20">
-            Request Assessment <ArrowRight className="h-4 w-4" />
+            {t("oecd.request_assessment")} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </Sec>
