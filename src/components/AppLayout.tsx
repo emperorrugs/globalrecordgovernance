@@ -136,7 +136,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <div>
                 <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
                 <p className="text-overline text-sidebar-foreground/40 leading-tight">
-                  Governance Foundation
+                  Governance Framework
                 </p>
               </div>
             </Link>
@@ -178,7 +178,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                       <div>
                         <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
                         <p className="text-overline text-sidebar-foreground/40 leading-tight">
-                          Governance Foundation
+                          Governance Framework
                         </p>
                       </div>
                     </div>

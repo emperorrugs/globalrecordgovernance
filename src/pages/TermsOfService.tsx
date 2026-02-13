@@ -7,11 +7,11 @@ const TermsOfService = () => {
     <div className="animate-fade-in">
       <SEOHead
         title="Terms of Service"
-        description="Terms of Service for the Global Record Governance Foundation. Conditions governing the use of GRGF institutional services and digital public infrastructure resources."
+        description="Terms of Service for the Global Record Governance Framework. Conditions governing the use of GRGF institutional services and digital public infrastructure resources."
       />
       <PageHeader
         title="Terms of Service"
-        subtitle="Conditions governing access to and use of the Global Record Governance Foundation platform."
+        subtitle="Conditions governing access to and use of the Global Record Governance Framework platform."
       />
 
       <Section>
@@ -33,7 +33,7 @@ const TermsOfService = () => {
             },
             {
               title: "2. Service Description",
-              content: "The Global Record Governance Foundation (\"GRGF\") provides an institutional information platform, governance framework documentation, standards publications, and associated digital public infrastructure resources. The platform is currently in pilot evaluation phase and is not production-certified."
+              content: "The Global Record Governance Framework (\"GRGF\") provides an institutional information platform, governance framework documentation, standards publications, and associated digital public infrastructure resources. The platform is currently in pilot evaluation phase and is not production-certified."
             },
             {
               title: "3. Intellectual Property",
@@ -73,7 +73,7 @@ const TermsOfService = () => {
             },
             {
               title: "12. Contact",
-              content: "For questions regarding these Terms of Service: Global Record Governance Foundation — contact@globalrecordgovernance.com."
+              content: "For questions regarding these Terms of Service: Global Record Governance Framework — contact@globalrecordgovernance.com."
             },
           ].map((section) => (
             <div key={section.title}>
