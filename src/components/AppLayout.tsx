@@ -12,6 +12,8 @@ import { SimulationBanner } from "@/components/SimulationBanner";
 import { BackToTop } from "@/components/BackToTop";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
+import { CookieConsent } from "@/components/CookieConsent";
+import { RouteSEO } from "@/components/RouteSEO";
 import { useViewMode } from "@/contexts/ViewModeContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -101,6 +103,8 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen w-full">
+      <RouteSEO />
+      <CookieConsent />
       <ReadingProgress />
       <KeyboardShortcuts />
       <BackToTop />
