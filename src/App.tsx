@@ -111,6 +111,7 @@ import APIMock from "./pages/APIMock";
 import Verification from "./pages/Verification";
 
 import Archive from "./pages/Archive";
+import ReportsStudies from "./pages/ReportsStudies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -148,6 +149,7 @@ const App = () => (
 
             {/* Layer 4: Digital Archive */}
             <Route path="/archive" element={<AppLayout><Archive /></AppLayout>} />
+            <Route path="/reports" element={<AppLayout><ReportsStudies /></AppLayout>} />
             <Route path="/research" element={<AppLayout><Research /></AppLayout>} />
             <Route path="/partnerships" element={<AppLayout><Partnerships /></AppLayout>} />
             <Route path="/controlled-access" element={<AppLayout><ControlledAccess /></AppLayout>} />
