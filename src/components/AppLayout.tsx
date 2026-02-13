@@ -87,7 +87,7 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
   return (
-    <nav className="flex-1 py-2 px-2 overflow-y-auto" aria-label="Main navigation">
+    <nav className="flex-1 py-2 px-2 overflow-y-auto min-h-0" aria-label="Main navigation">
       <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
       <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
       <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
@@ -123,7 +123,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </a>
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
+        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0 overflow-hidden">
           <div className="p-5 border-b border-sidebar-border">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-8 h-8 bg-accent flex items-center justify-center">
