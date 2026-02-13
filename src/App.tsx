@@ -58,6 +58,8 @@ import ControlledAccess from "./pages/ControlledAccess";
 import ExecutiveSummary from "./pages/ExecutiveSummary";
 import OutreachMessages from "./pages/OutreachMessages";
 import ImpactModeling from "./pages/ImpactModeling";
+import CaseStudies from "./pages/CaseStudies";
+import InternationalWhitepaper from "./pages/InternationalWhitepaper";
 import TheProblem from "./pages/TheProblem";
 import Contact from "./pages/Contact";
 import FutureProofing from "./pages/FutureProofing";
@@ -180,6 +182,8 @@ const App = () => (
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
             <Route path="/outreach" element={<AppLayout><OutreachMessages /></AppLayout>} />
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
+            <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
+            <Route path="/whitepaper" element={<AppLayout><InternationalWhitepaper /></AppLayout>} />
 
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />

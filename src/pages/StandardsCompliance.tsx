@@ -1,6 +1,83 @@
 import { PageHeader, Section } from "@/components/PageComponents";
-import { CheckCircle, Shield, Globe, FileText, Scale, Eye, Lock } from "lucide-react";
+import { CheckCircle, Shield, Globe, FileText, Scale, Eye, Lock, Table } from "lucide-react";
 
+/* ── Unified Cross-Reference Matrix (OECD + GDPR + ISO 27001 + ISO 15489) ── */
+const crossReferenceMatrix = [
+  {
+    feature: "Immutable record archival (append-only, WORM)",
+    oecdPrinciple: "Security Safeguards (§11)",
+    gdprArticle: "Art. 32 — Security of Processing",
+    iso27001: "A.12.3 — Backup / A.12.4 — Logging",
+    iso15489: "§8.3 — Integrity & Authenticity",
+    riskAddressed: "Unauthorized alteration or deletion of governance records",
+  },
+  {
+    feature: "Privacy-preserving metadata capture",
+    oecdPrinciple: "Purpose Limitation (§9)",
+    gdprArticle: "Art. 5(1)(b) — Purpose Limitation",
+    iso27001: "A.8.2 — Information Classification",
+    iso15489: "§6.3 — Privacy & Confidentiality",
+    riskAddressed: "Collection of excessive personal data beyond governance need",
+  },
+  {
+    feature: "Deterministic policy enforcement engine",
+    oecdPrinciple: "Accountability (§14)",
+    gdprArticle: "Art. 22 — Automated Decision-Making Safeguards",
+    iso27001: "A.14.2 — Security in Development",
+    iso15489: "§8.1 — Creation & Capture Rules",
+    riskAddressed: "Arbitrary discretionary override of governance rules",
+  },
+  {
+    feature: "Institutional audit trails & denial logging",
+    oecdPrinciple: "Openness & Transparency (§12)",
+    gdprArticle: "Art. 30 — Records of Processing Activities",
+    iso27001: "A.12.4 — Logging & Monitoring",
+    iso15489: "§9.8 — Audit Trail Requirements",
+    riskAddressed: "Lack of institutional transparency and accountability gaps",
+  },
+  {
+    feature: "SHA-256 cryptographic sealing & Merkle chains",
+    oecdPrinciple: "Security Safeguards (§11)",
+    gdprArticle: "Art. 32(1)(a) — Pseudonymisation & Encryption",
+    iso27001: "A.10.1 — Cryptographic Controls",
+    iso15489: "§8.3.1 — Integrity Verification",
+    riskAddressed: "Retroactive tampering or evidence manipulation",
+  },
+  {
+    feature: "Role-based access control (RBAC/ABAC)",
+    oecdPrinciple: "Use Limitation (§10)",
+    gdprArticle: "Art. 25 — Data Protection by Design",
+    iso27001: "A.9.1 — Access Control Policy",
+    iso15489: "§8.5 — Access & Permissions",
+    riskAddressed: "Unauthorized access to restricted governance records",
+  },
+  {
+    feature: "Cross-border federation protocols",
+    oecdPrinciple: "Transborder Data Flows (§15–18)",
+    gdprArticle: "Art. 44–49 — International Transfers",
+    iso27001: "A.13.2 — Information Transfer",
+    iso15489: "§6.2 — Jurisdictional Requirements",
+    riskAddressed: "Data sovereignty violations in cross-border governance",
+  },
+  {
+    feature: "Controlled retention & disposition schedules",
+    oecdPrinciple: "Collection Limitation (§7)",
+    gdprArticle: "Art. 5(1)(e) — Storage Limitation",
+    iso27001: "A.8.3 — Media Handling",
+    iso15489: "§9.9 — Disposition Authority",
+    riskAddressed: "Indefinite retention without governance justification",
+  },
+  {
+    feature: "Public verification without content exposure",
+    oecdPrinciple: "Individual Participation (§13)",
+    gdprArticle: "Art. 15 — Right of Access",
+    iso27001: "A.18.1 — Legal Compliance",
+    iso15489: "§8.4 — Availability & Access",
+    riskAddressed: "Inability to verify governance actions independently",
+  },
+];
+
+/* ── Per-Standard Detailed Mappings ── */
 const complianceMatrix = [
   {
     standard: "ISO 27001",
@@ -22,6 +99,18 @@ const complianceMatrix = [
       { control: "6.1 — Risk Assessment", alignment: "Threat model addresses six primary attack vectors with documented mitigations." },
       { control: "8.4 — AI System Operation", alignment: "Not applicable — GRGF explicitly rejects probabilistic or AI-based decision logic." },
       { control: "9.1 — Monitoring & Measurement", alignment: "Continuous integrity monitoring with hash-chain validation and anomaly detection." },
+    ],
+  },
+  {
+    standard: "ISO 15489",
+    title: "Records Management",
+    mappings: [
+      { control: "§5 — Concepts & Principles", alignment: "Records are authoritative, authentic, reliable, and useable — enforced structurally, not by policy alone." },
+      { control: "§6.2 — Policies & Responsibilities", alignment: "Governance Operating System encodes retention, access, and disposition rules as executable policy." },
+      { control: "§8.1 — Creation & Capture", alignment: "Structured event schemas capture mandatory context: actor, scope, legal reference, timestamp." },
+      { control: "§8.3 — Integrity & Authenticity", alignment: "SHA-256 hash sealing and Merkle chains ensure records cannot be altered post-capture." },
+      { control: "§9.8 — Audit Trail", alignment: "Every action, denial, and omission generates an append-only, verifiable audit record." },
+      { control: "§9.9 — Disposition", alignment: "Controlled disposition with governance-defined retention schedules and logged destruction." },
     ],
   },
   {
@@ -69,23 +158,62 @@ const StandardsCompliance = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="Standards & Compliance"
-      subtitle="Structured alignment mapping to international governance, security, and digital infrastructure standards."
+      subtitle="Structured alignment mapping to international governance, security, records management, and digital infrastructure standards."
     />
 
     {/* Overview */}
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-8">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF is designed to align with established international standards for information security, governance, AI management, and digital public infrastructure. The following mappings demonstrate conceptual alignment — not certification claims.
+          GRGF is designed to align with established international standards for information security, records management, governance, AI management, and digital public infrastructure. The following mappings demonstrate conceptual alignment — not certification claims.
         </p>
       </div>
-      <div className="grid gap-3 sm:grid-cols-5 mb-8">
+      <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6 mb-8">
         {complianceMatrix.map((s) => (
           <div key={s.standard} className="governance-card text-center">
             <p className="text-lg font-serif font-semibold text-accent">{s.standard}</p>
             <p className="text-[10px] text-muted-foreground mt-1">{s.title}</p>
           </div>
         ))}
+      </div>
+    </Section>
+
+    {/* ── Unified Cross-Reference Matrix ── */}
+    <Section title="Unified Compliance Cross-Reference Matrix" className="border-t border-border">
+      <div className="governance-card border-l-2 border-l-accent mb-6">
+        <div className="flex items-center gap-2 mb-2">
+          <Table className="h-4 w-4 text-accent" />
+          <span className="text-xs font-mono font-semibold text-foreground">OECD Privacy Guidelines × GDPR × ISO/IEC 27001 × ISO 15489</span>
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed">
+          This matrix maps each GRGF capability to four international regulatory and standards frameworks simultaneously, identifying the specific governance risk each alignment addresses.
+        </p>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="w-full text-xs border-collapse">
+          <thead>
+            <tr className="border-b-2 border-border">
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[180px]">GRGF Feature</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[140px]">OECD Principle</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[160px]">GDPR Article</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[140px]">ISO/IEC 27001</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[140px]">ISO 15489</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[200px]">Risk Addressed</th>
+            </tr>
+          </thead>
+          <tbody>
+            {crossReferenceMatrix.map((row, i) => (
+              <tr key={i} className={`border-b border-border ${i % 2 === 0 ? "bg-card/40" : ""}`}>
+                <td className="py-3 px-2 font-medium text-foreground">{row.feature}</td>
+                <td className="py-3 px-2 text-muted-foreground font-mono">{row.oecdPrinciple}</td>
+                <td className="py-3 px-2 text-muted-foreground font-mono">{row.gdprArticle}</td>
+                <td className="py-3 px-2 text-muted-foreground font-mono">{row.iso27001}</td>
+                <td className="py-3 px-2 text-muted-foreground font-mono">{row.iso15489}</td>
+                <td className="py-3 px-2 text-muted-foreground">{row.riskAddressed}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </Section>
 
