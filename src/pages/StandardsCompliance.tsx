@@ -143,6 +143,27 @@ const complianceMatrix = [
       { control: "Governance", alignment: "Custodial neutrality, sovereign interoperability, and anti-capture structural safeguards." },
     ],
   },
+  {
+    standard: "ISO 31000",
+    title: "Risk Management",
+    mappings: [
+      { control: "Clause 5.1 — Communication & Consultation", alignment: "Multi-stakeholder governance model with formal consultation mechanisms and transparency reporting." },
+      { control: "Clause 5.3 — Risk Identification", alignment: "Threat model identifies six primary attack vectors. Risk register tracks likelihood and mitigation strategies." },
+      { control: "Clause 5.4 — Risk Analysis", alignment: "Deterministic policy engine enables structured analysis of governance decision risks with audit evidence." },
+      { control: "Clause 5.5 — Risk Evaluation", alignment: "Compliance mapping and maturity indicators provide systematic risk evaluation against international standards." },
+      { control: "Clause 5.6 — Risk Treatment", alignment: "Anti-capture clauses, cryptographic sealing, and no-override principle as structural risk treatments." },
+    ],
+  },
+  {
+    standard: "EU AI Act",
+    title: "Artificial Intelligence Regulation",
+    mappings: [
+      { control: "Art. 6 — Risk Classification", alignment: "GRGF uses no AI for governance decisions. Deterministic logic eliminates high-risk AI classification concerns." },
+      { control: "Art. 13 — Transparency", alignment: "All policy decisions produce machine-readable explanations. No opaque algorithmic decision-making." },
+      { control: "Art. 14 — Human Oversight", alignment: "Human authority required for all governance actions. No automated override capability." },
+      { control: "Art. 15 — Accuracy & Robustness", alignment: "Deterministic enforcement ensures identical inputs always produce identical outputs. Cryptographically verifiable." },
+    ],
+  },
 ];
 
 const privacyPrinciples = [
