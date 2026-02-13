@@ -67,6 +67,12 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/security-trust": { title: "Security & Trust", description: "Security assurance framework and institutional trust architecture documentation." },
   "/governance-interface": { title: "Governance Interface", description: "Administrative governance interface for institutional record management operations." },
   "/origin": { title: "Origin Story", description: "The founding vision and institutional genesis of the Global Record Governance Foundation." },
+  "/oecd-safeguards": { title: "OECD DPI Safeguards Scorecard", description: "Interactive self-assessment aligned with the OECD five-pillar Digital Public Infrastructure safeguards framework." },
+  "/open-standards": { title: "Open Standards & Interoperability", description: "Machine-readable schema declarations, API standards, and data portability commitments for governance infrastructure." },
+  "/risk-register": { title: "Public Risk Register", description: "Structured risk disclosure matrix identifying and documenting mitigation strategies for institutional risks." },
+  "/sustainability": { title: "Digital Sustainability", description: "Environmental impact assessment, digital carbon footprint statement, and sustainability commitments." },
+  "/human-rights-impact": { title: "Human Rights Impact Assessment", description: "Formal HRIA aligned with UN Guiding Principles on Business and Human Rights." },
+  "/stakeholder-consultation": { title: "Stakeholder Consultation", description: "Structured public consultation mechanism for governance standards development and review." },
 };
 
 export function RouteSEO() {

@@ -72,6 +72,14 @@ import Transparency from "./pages/Transparency";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 
+// OECD Compliance pages
+import OECDSafeguards from "./pages/OECDSafeguards";
+import OpenStandards from "./pages/OpenStandards";
+import RiskRegister from "./pages/RiskRegister";
+import Sustainability from "./pages/Sustainability";
+import HumanRightsImpact from "./pages/HumanRightsImpact";
+import StakeholderConsultation from "./pages/StakeholderConsultation";
+
 // Simulation sub-pages
 import Simulation from "./pages/Simulation";
 import Simulator from "./pages/Simulator";
@@ -166,6 +174,14 @@ const App = () => (
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
             <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
+
+            {/* OECD Compliance */}
+            <Route path="/oecd-safeguards" element={<AppLayout><OECDSafeguards /></AppLayout>} />
+            <Route path="/open-standards" element={<AppLayout><OpenStandards /></AppLayout>} />
+            <Route path="/risk-register" element={<AppLayout><RiskRegister /></AppLayout>} />
+            <Route path="/sustainability" element={<AppLayout><Sustainability /></AppLayout>} />
+            <Route path="/human-rights-impact" element={<AppLayout><HumanRightsImpact /></AppLayout>} />
+            <Route path="/stakeholder-consultation" element={<AppLayout><StakeholderConsultation /></AppLayout>} />
 
             {/* Archive sub-pages */}
             <Route path="/archive/public" element={<ArchiveLayout><ArchivePublic /></ArchiveLayout>} />
