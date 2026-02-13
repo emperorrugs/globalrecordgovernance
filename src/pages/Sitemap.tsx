@@ -46,6 +46,15 @@ const routes: RouteEntry[] = [
   { group: "Simulation & Demo", path: "/academy", title: "Academy", description: "Professional certification: Foundations, Practitioner, Steward/Architect.", classification: "Level 1 — Public", icon: GraduationCap },
   { group: "Simulation & Demo", path: "/dpi-comparison", title: "DPI Comparison", description: "28-capability matrix comparing GRGF to traditional DPI systems.", classification: "Level 1 — Public", icon: BarChart3 },
 
+  // Decision Tools
+  { group: "Decision Tools", path: "/financial-model", title: "Financial Model", description: "Interactive fiscal modeling engine with GDP, population, and fraud exposure inputs.", classification: "Level 2 — Institutional", icon: BarChart3 },
+  { group: "Decision Tools", path: "/risk-assessment", title: "Risk Assessment", description: "National risk evaluation across legal, cyber, data governance, and coordination dimensions.", classification: "Level 2 — Institutional", icon: AlertTriangle },
+  { group: "Decision Tools", path: "/deployment-planner", title: "Deployment Planner", description: "Sector-based deployment scenario builder with 3-phase roadmap generation.", classification: "Level 2 — Institutional", icon: Globe },
+  { group: "Decision Tools", path: "/interoperability", title: "Interoperability", description: "Cross-ministry interoperability impact simulator with efficiency projections.", classification: "Level 2 — Institutional", icon: Cpu },
+  { group: "Decision Tools", path: "/procurement", title: "Procurement Readiness", description: "Interactive procurement checklist for open standards, vendor neutrality, and data portability.", classification: "Level 1 — Public", icon: CheckCircle },
+  { group: "Decision Tools", path: "/maturity", title: "Digital Maturity", description: "Digital maturity comparator for deployment complexity and prerequisites assessment.", classification: "Level 1 — Public", icon: BarChart3 },
+  { group: "Decision Tools", path: "/stress-test", title: "Stress Test", description: "Governance stress-test simulator for crisis scenarios and institutional resilience.", classification: "Level 2 — Institutional", icon: AlertTriangle },
+  { group: "Decision Tools", path: "/executive-brief", title: "Executive Brief Generator", description: "Auto-generate tailored institutional briefs with financial projections and compliance summary.", classification: "Level 2 — Institutional", icon: FileText },
   // Digital Archive
   { group: "Digital Archive", path: "/archive", title: "Archive Overview", description: "Central document archive organized by stakeholder roles.", classification: "Level 1 — Public", icon: Archive },
   { group: "Digital Archive", path: "/archive/public", title: "Public Archive", description: "Publicly accessible governance documents and summaries.", classification: "Level 1 — Public", icon: Archive },
