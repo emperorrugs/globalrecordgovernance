@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ViewModeProvider } from "@/contexts/ViewModeContext";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { AppLayout } from "@/components/AppLayout";
 import { ArchiveLayout } from "@/components/ArchiveLayout";
 import Index from "./pages/Index";
@@ -89,6 +90,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ViewModeProvider>
+          <ScrollToTop />
           <Routes>
             {/* One-page home */}
             <Route path="/" element={<AppLayout><Index /></AppLayout>} />
