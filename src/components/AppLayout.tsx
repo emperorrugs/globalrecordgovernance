@@ -117,10 +117,17 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
   };
 
   React.useEffect(() => {
-    checkScroll();
     const el = navRef.current;
-    if (el) el.addEventListener("scroll", checkScroll, { passive: true });
-    return () => el?.removeEventListener("scroll", checkScroll);
+    if (!el) return;
+    // Check after content renders
+    const timer = setTimeout(checkScroll, 100);
+    el.addEventListener("scroll", checkScroll, { passive: true });
+    window.addEventListener("resize", checkScroll);
+    return () => {
+      clearTimeout(timer);
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
   }, []);
 
   const scrollTo = (dir: "top" | "bottom") => {
@@ -185,7 +192,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </a>
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0 overflow-hidden">
+        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0">
           <div className="p-5 border-b border-sidebar-border">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-8 h-8 bg-accent flex items-center justify-center">
