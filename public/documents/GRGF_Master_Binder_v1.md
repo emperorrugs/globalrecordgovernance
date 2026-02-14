@@ -62,7 +62,7 @@ GRGF is **not** a startup product, blockchain experiment, or political transpare
 - **Pilot Node v0.1:** Operational in controlled evaluation mode
 - **Audit Status:** Prepared for independent third-party review
 - **Deployment:** Pre-pilot; no national deployment without formal validation
-- **Patent:** Canadian Patent No. 3,300,102 filed January 28, 2026
+- **Patent:** Canadian Patent Application No. 3,300,102 filed January 28, 2026 (publication pending)
 
 ## 1.6 Readiness Statement
 
@@ -394,9 +394,10 @@ This attribution is mandatory and must appear in all institutional documents, UI
 
 ## 8.2 Patent
 
-- **Patent:** Canadian Patent No. 3,300,102
+- **Patent:** Canadian Patent Application No. 3,300,102
 - **Title:** Global Record Governance Framework for Tamper-Evident Logging
-- **Filed:** January 28, 2026
+- **Filed:** January 28, 2026 (publication pending)
+- **Note:** Canadian patent applications are typically published approximately 18 months after filing.
 - **Inventor:** Tarek Wahid
 
 ## 8.3 Intellectual Property Scope

@@ -124,6 +124,8 @@ import Verification from "./pages/Verification";
 import Archive from "./pages/Archive";
 import ReportsStudies from "./pages/ReportsStudies";
 import Roadmap from "./pages/Roadmap";
+import Accessibility from "./pages/Accessibility";
+import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -224,6 +226,8 @@ const App = () => (
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
             <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
+            <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
+            <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
 
             {/* Submission Hub */}
             <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />

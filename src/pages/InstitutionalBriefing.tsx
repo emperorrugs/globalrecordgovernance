@@ -232,7 +232,7 @@ const InstitutionalBriefing = () => {
             GRGF documentation, including architectural models, governance schemas, cryptographic integrity structures, and deployment methodologies, remains the intellectual property of the inventor and designated custodial entity. The Controlled Distribution Protocol does not transfer intellectual property rights. All access is granted for institutional evaluation purposes only.
           </p>
           <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
-            Canadian Patent No. 3,300,102 — "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026.
+            Canadian Patent Application No. 3,300,102 — "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026 (publication pending).
           </p>
         </div>
       </Section>

@@ -112,7 +112,7 @@ const CanadaDeployment = () => (
           { icon: Users, title: "Reduced Reconciliation Workload", desc: "Pre-verified record integrity eliminates manual cross-departmental reconciliation." },
           { icon: Eye, title: "Audit Acceleration", desc: "Auditor General can validate governance integrity independently through cryptographic proof verification." },
           { icon: Globe, title: "International Leadership", desc: "Position Canada as a global leader in verifiable digital governance infrastructure." },
-          { icon: Lock, title: "Patent-Protected Innovation", desc: "Canadian Patent No. 3,300,102 — filed January 28, 2026. Canadian-origin sovereign infrastructure." },
+          { icon: Lock, title: "Patent-Protected Innovation", desc: "Canadian Patent Application No. 3,300,102 — filed January 28, 2026 (publication pending). Canadian-origin sovereign infrastructure." },
         ].map(({ icon: Icon, title, desc }) => (
           <div key={title} className="governance-card">
             <Icon className="h-5 w-5 text-accent mb-3" />

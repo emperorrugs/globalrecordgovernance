@@ -75,5 +75,8 @@
   <!-- Legal & Compliance -->
   <url><loc>https://www.globalrecordgovernance.com/privacy-policy</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/terms-of-service</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/accessibility</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/ip-status</loc><priority>0.4</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.globalrecordgovernance.com/roadmap</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.globalrecordgovernance.com/sitemap</loc><priority>0.3</priority><changefreq>monthly</changefreq></url>
 </urlset>
