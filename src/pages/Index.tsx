@@ -4,6 +4,7 @@ import {
   Database, CheckCircle, BarChart3, FileText, Users,
   Award, BookOpen, Handshake, Scale, Building, Eye,
   Landmark, Network, Gavel, TrendingUp, Zap, Activity,
+  AlertTriangle, Search, Layers,
 } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
@@ -41,9 +42,8 @@ const Index = () => {
       description="Independent global framework for Digital Public Infrastructure governance, validation, and institutional recognition. Sovereign-grade trust layer for verifiable institutional accountability."
     />
 
-    {/* ═══════════════════ HERO ═══════════════════ */}
-     <header id="hero" className="relative overflow-hidden border-b border-border px-6 py-32 md:py-40 md:px-12 lg:px-20 bg-primary text-primary-foreground">
-      {/* Animated grid pattern */}
+    {/* ═══════════════════ HERO — PROBLEM-FIRST ═══════════════════ */}
+    <header id="hero" className="relative overflow-hidden border-b border-border px-6 py-28 md:py-36 md:px-12 lg:px-20 bg-primary text-primary-foreground">
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `repeating-linear-gradient(90deg, hsl(var(--accent)) 0px, transparent 1px, transparent 80px),
                           repeating-linear-gradient(0deg, hsl(var(--accent)) 0px, transparent 1px, transparent 80px)`
@@ -52,52 +52,54 @@ const Index = () => {
         style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 70%)" }}
       />
       <div className="relative max-w-6xl mx-auto">
+        {/* Problem statement lead */}
         <FadeIn delay={0}>
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 border border-primary-foreground/15 mb-8">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-            </span>
-            <span className="text-overline font-mono text-accent uppercase">{t("home.badge")}</span>
-          </div>
+          <p className="text-sm font-mono text-destructive/80 uppercase tracking-widest mb-6 flex items-center gap-2">
+            <AlertTriangle className="h-3.5 w-3.5" />
+            The Global Governance Gap
+          </p>
         </FadeIn>
 
         <FadeIn delay={100}>
-          <h1 className="institutional-heading font-semibold leading-[0.9] text-primary-foreground max-w-5xl" style={{ fontSize: "clamp(2.5rem, 7vw, 5.5rem)" }}>
-            Global Record
+          <h1 className="institutional-heading font-semibold leading-[0.95] text-primary-foreground max-w-5xl" style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)" }}>
+            Governments lack independent
             <br />
-            Governance Framework
-            <br />
-            <span className="text-accent relative">
-              (GRGF)
-              <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/20" viewBox="0 0 400 12" preserveAspectRatio="none">
-                <path d="M0,8 Q100,0 200,8 Q300,16 400,8" stroke="currentColor" strokeWidth="2" fill="none" />
-              </svg>
-            </span>
+            institutional memory protection.
           </h1>
         </FadeIn>
 
         <FadeIn delay={200}>
-          <p className="mt-8 text-body-lg text-primary-foreground/70 max-w-2xl leading-relaxed">
-            The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
+          <p className="mt-6 text-body-lg text-primary-foreground/60 max-w-2xl leading-relaxed">
+            Political transitions erase continuity. Record tampering undermines public trust.
+            Existing DPI focuses on services — not institutional trust layers.
+            There is no global neutral verification backbone.
           </p>
         </FadeIn>
 
+        <FadeIn delay={250}>
+          <div className="mt-8 border-t border-primary-foreground/10 pt-8">
+            <p className="text-overline font-mono text-accent uppercase tracking-widest mb-3">The Solution</p>
+            <p className="text-xl md:text-2xl font-serif text-primary-foreground/90 max-w-3xl leading-snug">
+              The <span className="text-accent font-semibold">Global Record Governance Framework (GRGF)</span> is an independent institutional memory and trust verification layer for sovereign digital systems.
+            </p>
+          </div>
+        </FadeIn>
+
         <FadeIn delay={300}>
-          <div className="mt-6 text-caption text-primary-foreground/35 font-mono">
+          <div className="mt-4 text-caption text-primary-foreground/30 font-mono">
             {t("home.patent")}
           </div>
         </FadeIn>
 
-        {/* ── Executive KPI Panels ── */}
+        {/* KPI Panels */}
         <FadeIn delay={350}>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-3">
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-5 gap-3">
             {[
-              { label: "Institutional Efficiency", value: "15–20%", sub: "Administrative gain (modeled)" },
-              { label: "Interoperability", value: "Level 3", sub: "Federation-ready" },
+              { label: "Annual Governance Loss", value: "$2.6T", sub: "Global estimate" },
+              { label: "Integrity Threshold", value: "0.3%", sub: "To offset deployment cost" },
               { label: "Deployment Maturity", value: "TRL 6", sub: "Pilot-validated" },
-              { label: "Investment Readiness", value: "Active", sub: "Evaluation stage" },
-              { label: "Implementation", value: "18 mo", sub: "Pilot to production" },
+              { label: "Audit Reconstruction", value: "<30 min", sub: "vs. weeks manually" },
+              { label: "Policy Determinism", value: "100%", sub: "Identical inputs → outputs" },
             ].map(({ label, value, sub }) => (
               <div key={label} className="border border-primary-foreground/10 p-4 bg-primary-foreground/[0.02]">
                 <p className="text-overline font-mono text-primary-foreground/40 uppercase mb-1">{label}</p>
@@ -110,27 +112,29 @@ const Index = () => {
 
         <FadeIn delay={400}>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Link to="/architecture" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
-              <Cpu className="h-4 w-4" />
-              View Architecture
+            <Link to="/the-problem" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
+              <Search className="h-4 w-4" />
+              Understand the Problem
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
+            <Link to="/architecture" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
+              <Cpu className="h-4 w-4" />
+              View Architecture
+            </Link>
+            <Link to="/submission-hub" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/15 text-primary-foreground/80 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
+              <FileText className="h-4 w-4" />
+              International Submission Pack
+            </Link>
+            <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               <BarChart3 className="h-4 w-4" />
-              Explore Financial Model
-            </Link>
-            <Link to="/simulator" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/15 text-primary-foreground/80 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
-              Run Country Simulation <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
-            <Link to="/institutional-review" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
-              Access Institutional Review <ArrowRight className="h-3.5 w-3.5" />
+              ROI Analysis
             </Link>
           </div>
         </FadeIn>
 
-        {/* Animated trust strip */}
+        {/* Trust strip */}
         <FadeIn delay={600}>
-          <div className="mt-20 pt-8 border-t border-primary-foreground/10 grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="mt-16 pt-8 border-t border-primary-foreground/10 grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
               { end: 100, suffix: "%", label: t("home.stat_determinism") },
               { prefix: "<", end: 30, suffix: " min", label: t("home.stat_audit") },
@@ -151,6 +155,36 @@ const Index = () => {
       </div>
     </header>
 
+    {/* ═══════════════════ THE FIVE GOVERNANCE FAILURES ═══════════════════ */}
+    <Sec id="failures" className="border-b border-border">
+      <FadeIn>
+        <SectionLabel>Why This Matters</SectionLabel>
+        <Title sub="Five structural failures that existing Digital Public Infrastructure does not address.">
+          The Governance Trust Deficit
+        </Title>
+        <div className="grid gap-4 md:grid-cols-5">
+          {[
+            { icon: AlertTriangle, num: "01", title: "No Institutional Memory", desc: "Political transitions routinely erase governance continuity. Institutional knowledge is lost with each administration change." },
+            { icon: Eye, num: "02", title: "Invisible Omissions", desc: "No system records what governments didn't do. Delays, inaction, and silence remain structurally invisible." },
+            { icon: Shield, num: "03", title: "Tamperable Records", desc: "Existing record systems allow retroactive modification. Evidence of institutional decisions can be altered or deleted." },
+            { icon: Globe, num: "04", title: "No Verification Backbone", desc: "There is no global neutral infrastructure for verifying that governance events actually occurred as claimed." },
+            { icon: Layers, num: "05", title: "Service-Layer DPI Only", desc: "Current DPI focuses on identity, payments, and data sharing — not on the trust layer that governs them all." },
+          ].map(({ icon: Icon, num, title, desc }, i) => (
+            <FadeIn key={num} delay={i * 80}>
+              <div className="governance-card-elevated group hover:border-accent/30 transition-all duration-300 h-full">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-overline font-mono text-accent">{num}</span>
+                  <Icon className="h-4 w-4 text-accent" />
+                </div>
+                <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
+                <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+      </FadeIn>
+    </Sec>
+
     {/* ═══════════════════ LIVE TRUST DASHBOARD ═══════════════════ */}
     <Sec id="trust-metrics" className="border-b border-border bg-muted/30">
       <SectionLabel>{t("home.system_status")}</SectionLabel>
@@ -160,82 +194,39 @@ const Index = () => {
       <LiveTrustDashboard />
     </Sec>
 
-    {/* ═══════════════════ THE PROBLEM ═══════════════════ */}
-    <Sec id="problem" className="border-b border-border">
+    {/* ═══════════════════ GRGF POSITIONING ═══════════════════ */}
+    <Sec id="positioning" className="border-b border-border">
       <FadeIn>
-        <SectionLabel>{t("home.problem")}</SectionLabel>
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <SectionLabel>What GRGF Is</SectionLabel>
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
-              Estimated $2.6 trillion in annual governance inefficiency
+              An Independent Institutional Memory &amp; Trust Verification Layer
             </h2>
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              International estimates suggest that governments lose up to $2.6 trillion annually through procurement irregularities, administrative inefficiency, and institutional opacity. The structural root cause is the absence of verifiable accountability infrastructure.
+              GRGF is not a competing service layer. It is a <strong>governance trust backbone</strong> — a neutral, sovereign-compatible infrastructure that records, preserves, and verifies institutional actions, decisions, and omissions without interpretation or enforcement.
+            </p>
+            <p className="text-body text-muted-foreground leading-relaxed mb-4">
+              Positioned as the <strong>Governance Integrity Registry (Layer 3)</strong> within the national DPI stack, it sits above base registries and alongside core DPI components (Identity, Payments, Data Exchange) — complementing existing building blocks rather than replacing them.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed mb-6">
-              Current governance systems do not record what institutions <em>didn't</em> do. GRGF introduces a unified architecture that makes institutional silence — omissions, delays, and inaction — structurally visible and independently verifiable.
+              GRGF maintains strict institutional neutrality — exercising no enforcement capability, no decision authority, and no evaluative function. <em>It records. It preserves. It verifies.</em>
             </p>
             <div className="flex gap-8">
               <div>
-                <p className="text-2xl font-serif font-semibold text-accent">
-                  <AnimatedCounter end={0.3} suffix="%" decimals={1} />
-                </p>
-                <p className="text-overline text-muted-foreground/50">Integrity improvement needed to offset deployment cost</p>
-              </div>
-              <div>
                 <p className="text-2xl font-serif font-semibold text-accent">$<AnimatedCounter end={18.3} suffix="B" decimals={1} /></p>
                 <p className="text-overline text-muted-foreground/50">Projected global annual net benefit</p>
+              </div>
+              <div>
+                <p className="text-2xl font-serif font-semibold text-accent"><AnimatedCounter end={0.3} suffix="%" decimals={1} /></p>
+                <p className="text-overline text-muted-foreground/50">Integrity threshold to offset cost</p>
               </div>
             </div>
           </div>
           <div className="space-y-4">
             {[
-              { icon: Eye, stat: "67%", title: "of institutional decisions lack audit trails", desc: "Governance actions are routinely executed without verifiable evidence of authorization, creating accountability gaps." },
-              { icon: Shield, stat: "0", title: "existing DPIs record omissions", desc: "No current Digital Public Infrastructure makes institutional silence — things not done — independently verifiable." },
-              { icon: Zap, stat: "100×", title: "faster audit reconstruction with GRGF", desc: "From weeks of manual document assembly to under 30 minutes of automated cryptographic reconstruction." },
-            ].map(({ icon: Icon, stat, title, desc }) => (
-              <FadeIn key={title}>
-                <div className="governance-card-elevated flex gap-4 group hover:border-accent/30 transition-all duration-300">
-                  <div className="shrink-0">
-                    <div className="w-12 h-12 bg-primary flex items-center justify-center">
-                      <Icon className="h-5 w-5 text-accent" />
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-lg font-serif font-semibold text-accent">{stat} <span className="text-sm font-sans text-foreground font-medium">{title}</span></p>
-                    <p className="text-caption text-muted-foreground leading-relaxed mt-1">{desc}</p>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </FadeIn>
-    </Sec>
-
-    {/* ═══════════════════ INSTITUTIONAL MANDATE ═══════════════════ */}
-    <Sec id="mandate" className="border-b border-border bg-muted/40">
-      <SectionLabel>Our Mandate</SectionLabel>
-      <FadeIn>
-        <div className="grid md:grid-cols-2 gap-16 items-start">
-          <div>
-           <h2 className="institutional-heading text-heading-1 font-semibold mb-6">
-              Global Record Governance Framework (GRGF) — Scalable National Integration
-            </h2>
-            <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              The Global Record Governance Framework is an independent standards-setting authority that establishes, maintains, and governs the structural framework for institutional record integrity across public and private sectors worldwide.
-            </p>
-            <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              Positioned as the Governance Integrity Registry (Layer 3) within the national Digital Public Infrastructure stack, the Global Record Governance Framework (GRGF) ensures that governance decisions, institutional actions, and administrative omissions become cryptographically verifiable, independently auditable records.
-            </p>
-            <p className="text-body text-muted-foreground leading-relaxed">
-              The Global Record Governance Framework (GRGF) maintains strict institutional neutrality — exercising no enforcement capability, no decision authority, and no evaluative function. It records. It preserves. It verifies.
-            </p>
-          </div>
-          <div className="space-y-4">
-            {[
               { icon: Landmark, title: "Institutional Independence", desc: "Governed by charter with formal separation of powers. Anti-capture clauses (AC-01–05) prevent vendor or state control." },
-              { icon: Globe, title: "Sovereign Compatibility", desc: "Non-invasive integration that strengthens existing national systems without replacing operational control." },
+              { icon: Globe, title: "Sovereign Compatibility", desc: "Non-invasive integration strengthens existing national systems without replacing operational control." },
               { icon: Lock, title: "Cryptographic Assurance", desc: "Every governance event becomes a tamper-evident, independently verifiable record with full chain-of-custody." },
               { icon: Eye, title: "Omission Awareness", desc: "The only governance infrastructure that records inaction alongside action — making institutional silence visible." },
             ].map(({ icon: Icon, title, desc }, i) => (
@@ -254,15 +245,61 @@ const Index = () => {
       </FadeIn>
     </Sec>
 
+    {/* ═══════════════════ DPI COMPARATIVE POSITIONING ═══════════════════ */}
+    <Sec id="dpi-position" className="border-b border-border bg-muted/40">
+      <FadeIn>
+        <SectionLabel>DPI Positioning</SectionLabel>
+        <Title sub="GRGF complements — not competes with — existing Digital Public Infrastructure initiatives.">
+          Where GRGF Sits in the Global DPI Landscape
+        </Title>
+        <div className="overflow-x-auto governance-card-elevated">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="border-b-2 border-accent/30">
+                <th className="text-left py-4 px-4 font-serif font-semibold">Dimension</th>
+                <th className="text-left py-4 px-4 font-serif font-semibold">GovStack</th>
+                <th className="text-left py-4 px-4 font-serif font-semibold">DPGA</th>
+                <th className="text-left py-4 px-4 font-serif font-semibold">UNDP DPI</th>
+                <th className="text-left py-4 px-4 font-serif font-semibold text-accent">GRGF</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { dim: "Focus", gs: "Service building blocks", dp: "Open-source goods registry", un: "Safeguards framework", grgf: "Governance trust backbone" },
+                { dim: "Layer", gs: "Application (L4)", dp: "Discovery (cross-layer)", un: "Policy (cross-layer)", grgf: "Integrity Registry (L3)" },
+                { dim: "Record Integrity", gs: "Not addressed", dp: "Not addressed", un: "Guidance only", grgf: "Append-only, hash-anchored" },
+                { dim: "Omission Detection", gs: "No", dp: "No", un: "No", grgf: "Yes — structural" },
+                { dim: "Anti-Capture", gs: "Community governance", dp: "Multi-stakeholder", un: "Advisory", grgf: "5 codified clauses (AC-01–05)" },
+                { dim: "Relationship", gs: "Complementary", dp: "Complementary", un: "Complementary", grgf: "Governance layer for all" },
+              ].map(({ dim, gs, dp, un, grgf }) => (
+                <tr key={dim} className="border-b border-border/60 hover:bg-muted/50 transition-colors">
+                  <td className="py-3 px-4 font-medium text-foreground">{dim}</td>
+                  <td className="py-3 px-4 text-muted-foreground">{gs}</td>
+                  <td className="py-3 px-4 text-muted-foreground">{dp}</td>
+                  <td className="py-3 px-4 text-muted-foreground">{un}</td>
+                  <td className="py-3 px-4 text-accent font-medium">{grgf}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-4">
+          <Link to="/dpi-comparison" className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:text-accent transition-colors">
+            View Full 28-Point Comparison Matrix <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+      </FadeIn>
+    </Sec>
+
     {/* ═══════════════════ GOVERNANCE PRINCIPLES ═══════════════════ */}
     <Sec id="principles" className="border-b border-border">
       <SectionLabel>Governance Principles</SectionLabel>
-      <Title sub="The Global Record Governance Framework's (GRGF) operational mandate is grounded in six non-negotiable principles that ensure structural neutrality and institutional trust.">
+      <Title sub="GRGF's operational mandate is grounded in six non-negotiable principles that ensure structural neutrality and institutional trust.">
         Charter Principles
       </Title>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[
-          { num: "I", title: "Custodial Neutrality", desc: "The Global Record Governance Framework (GRGF) holds no enforcement power. It records institutional reality without interpretation, evaluation, or recommendation." },
+          { num: "I", title: "Custodial Neutrality", desc: "GRGF holds no enforcement power. It records institutional reality without interpretation, evaluation, or recommendation." },
           { num: "II", title: "Structural Verifiability", desc: "Every governance claim must be independently verifiable through cryptographic proof, not institutional reputation." },
           { num: "III", title: "Sovereign Primacy", desc: "National sovereignty is absolute. No federation participation diminishes a state's control over its governance data." },
           { num: "IV", title: "Omission Accountability", desc: "Governance silence is as significant as governance action. The architecture records both with equal structural weight." },
@@ -374,7 +411,7 @@ const Index = () => {
     {/* ═══════════════════ INSTITUTIONAL ALIGNMENT ═══════════════════ */}
     <Sec id="alignment" className="border-b border-border bg-muted/40">
       <SectionLabel>International Alignment</SectionLabel>
-      <Title sub="The Global Record Governance Framework's (GRGF) capabilities map directly to established multilateral governance frameworks.">
+      <Title sub="GRGF capabilities map directly to established multilateral governance frameworks.">
         Multilateral Institutional Matrix
       </Title>
       <FadeIn>
@@ -410,18 +447,79 @@ const Index = () => {
       </FadeIn>
     </Sec>
 
+    {/* ═══════════════════ FOUNDER & TRUST SIGNALS ═══════════════════ */}
+    <Sec id="trust-signals" className="border-b border-border">
+      <SectionLabel>Authority & Trust Signals</SectionLabel>
+      <Title sub="Transparency builds credibility. These are the institutional foundations underpinning GRGF.">
+        Institutional Foundations
+      </Title>
+      <div className="grid md:grid-cols-2 gap-10">
+        <FadeIn>
+          <div className="governance-card-elevated">
+            <h3 className="font-serif text-lg font-semibold mb-4 flex items-center gap-2">
+              <Users className="h-5 w-5 text-accent" /> Inventor & Principal Architect
+            </h3>
+            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+              <p><strong className="text-foreground">Tarek Wahid</strong> — Creator and sole inventor of the Global Record Governance Framework architecture.</p>
+              <p>Background in institutional systems design, governance integrity architecture, and digital public infrastructure standards. The framework was developed through first-principles analysis of governance accountability gaps across national and multilateral institutional environments.</p>
+              <p className="text-xs font-mono text-muted-foreground/60">Canadian Patent No. CA 3,300,102 · Filed January 28, 2026</p>
+            </div>
+          </div>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <div className="governance-card-elevated">
+            <h3 className="font-serif text-lg font-semibold mb-4 flex items-center gap-2">
+              <Building className="h-5 w-5 text-accent" /> Provisional Governance Structure
+            </h3>
+            <div className="space-y-3">
+              {[
+                { role: "Governance Board", status: "Formation Stage", desc: "Strategic oversight, charter stewardship, independent membership with term limits." },
+                { role: "Standards Committee", status: "Formation Stage", desc: "Technical standards development, recognition criteria maintenance." },
+                { role: "Advisory Council", status: "Open for Engagement", desc: "Multi-stakeholder input from governments, academia, civil society, and multilateral bodies." },
+                { role: "Technical Review Panel", status: "Formation Stage", desc: "Architecture validation, security assessment, deployment verification." },
+              ].map(({ role, status, desc }) => (
+                <div key={role} className="flex gap-3 text-sm">
+                  <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2 shrink-0" />
+                  <div>
+                    <p className="font-medium text-foreground">{role} <span className="text-xs font-mono text-accent/70 ml-1">{status}</span></p>
+                    <p className="text-xs text-muted-foreground">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+      <FadeIn delay={200}>
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-4">
+          {[
+            { label: "Framework", value: "GRGF v1.0" },
+            { label: "Recognition Model", value: "3-Tier Active" },
+            { label: "Pilot Node", value: "v0.1 Evaluation" },
+            { label: "Patent", value: "CA 3,300,102" },
+            { label: "Registry", value: "GRGF-2024-001" },
+          ].map(({ label, value }) => (
+            <div key={label} className="governance-card-elevated text-center group hover:border-accent/30 transition-all duration-300">
+              <p className="text-overline font-mono text-muted-foreground/60 uppercase mb-2">{label}</p>
+              <p className="text-body font-serif font-semibold text-foreground group-hover:text-accent transition-colors">{value}</p>
+            </div>
+          ))}
+        </div>
+      </FadeIn>
+    </Sec>
+
     {/* ═══════════════════ INSTITUTIONAL SERVICES ═══════════════════ */}
-    <Sec id="services" className="border-b border-border">
+    <Sec id="services" className="border-b border-border bg-muted/40">
       <SectionLabel>Institutional Engagement</SectionLabel>
-      <Title sub="Structured pathways for governments, multilateral organizations, and institutional partners seeking governance integrity infrastructure.">
-        How the Global Record Governance Framework (GRGF) Engages
+      <Title sub="Structured pathways for governments, multilateral organizations, and institutional partners.">
+        How GRGF Engages
       </Title>
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {[
-          { icon: Award, title: "Recognition & Certification", desc: "Three-tier governance maturity assessment. Structured accreditation pathway with independent audit validation.", cta: "Apply for Recognition", path: "/recognition" },
-          { icon: BookOpen, title: "Advisory Services", desc: "Sovereign deployment planning, architecture review, integration scoping, and compliance gap analysis.", cta: "Request Assessment", path: "/controlled-access" },
-          { icon: Handshake, title: "Strategic Partnerships", desc: "Multilateral collaboration framework, federation node participation, joint research, and co-development.", cta: "Partner With Us", path: "/partnerships" },
-          { icon: Users, title: "Membership & Academy", desc: "Institutional membership tiers, professional certification programs, and governance integrity training.", cta: "Explore Membership", path: "/membership" },
+          { icon: Award, title: "Recognition & Certification", desc: "Three-tier governance maturity assessment with independent audit validation.", cta: "Apply for Recognition", path: "/recognition" },
+          { icon: BookOpen, title: "Advisory Services", desc: "Sovereign deployment planning, architecture review, and compliance gap analysis.", cta: "Request Assessment", path: "/controlled-access" },
+          { icon: Handshake, title: "Strategic Partnerships", desc: "Multilateral collaboration, federation node participation, and co-development.", cta: "Partner With Us", path: "/partnerships" },
+          { icon: Users, title: "Membership & Academy", desc: "Institutional membership tiers, certification programs, and governance training.", cta: "Explore Membership", path: "/membership" },
         ].map(({ icon: Icon, title, desc, cta, path }, i) => (
           <FadeIn key={title} delay={i * 100}>
             <div className="governance-card-elevated flex flex-col group hover:border-accent/30 transition-all duration-300">
@@ -435,33 +533,6 @@ const Index = () => {
           </FadeIn>
         ))}
       </div>
-    </Sec>
-
-    {/* ═══════════════════ GOVERNANCE MODEL ═══════════════════ */}
-    <Sec id="governance" className="border-b border-border bg-muted/40">
-      <SectionLabel>Governance Model</SectionLabel>
-      <Title sub="The Global Record Governance Framework (GRGF) operates under a formal governance structure designed for institutional independence and perpetual neutrality.">
-        Institutional Governance Architecture
-      </Title>
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-10">
-        {[
-          { icon: Building, title: "Governance Board", desc: "Strategic oversight, charter stewardship, and institutional direction. Independent membership with term limits." },
-          { icon: Users, title: "Standards Committee", desc: "Technical standards development, recognition criteria maintenance, and compliance methodology governance." },
-          { icon: Shield, title: "Technical Review Panel", desc: "Architecture validation, security assessment, and deployment verification for recognition applicants." },
-          { icon: Gavel, title: "Compliance Oversight", desc: "Appeals mechanism, transparency reporting, re-certification management, and ethics enforcement." },
-        ].map(({ icon: Icon, title, desc }, i) => (
-          <FadeIn key={title} delay={i * 100}>
-            <div className="governance-card-elevated group hover:border-accent/30 transition-all duration-300">
-              <Icon className="h-5 w-5 text-accent mb-3 group-hover:scale-110 transition-transform" />
-              <h4 className="font-serif text-heading-3 font-semibold mb-2">{title}</h4>
-              <p className="text-caption text-muted-foreground leading-relaxed">{desc}</p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-      <Link to="/transparency" className="inline-flex items-center gap-2 text-sm text-primary font-medium hover:text-accent transition-colors">
-        View Transparency & Governance Documentation <ArrowRight className="h-3.5 w-3.5" />
-      </Link>
     </Sec>
 
     {/* ═══════════════════ DEPLOYMENT PATHWAY ═══════════════════ */}
@@ -501,53 +572,31 @@ const Index = () => {
       </div>
     </Sec>
 
-    {/* ═══════════════════ GLOBAL IMPACT ═══════════════════ */}
-    <Sec id="impact" className="border-b border-border bg-muted/40">
-      <SectionLabel>Global Relevance</SectionLabel>
-      <Title sub="Governance integrity infrastructure for every level of institutional operation.">
-        Sectors &amp; Regions
+    {/* ═══════════════════ THOUGHT LEADERSHIP ═══════════════════ */}
+    <Sec id="insights" className="border-b border-border bg-muted/40">
+      <SectionLabel>Institutional Insights</SectionLabel>
+      <Title sub="Research and analysis from the GRGF knowledge base.">
+        Thought Leadership
       </Title>
-      <div className="grid gap-5 md:grid-cols-3 mb-8">
+      <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-5">
         {[
-          { title: "Government & Public Sector", items: ["Procurement verification & authorization trails", "Cross-ministry governance coordination", "Regulatory compliance reconstruction", "Social benefit disbursement validation"] },
-          { title: "International Organizations", items: ["Multilateral governance reform infrastructure", "Cross-border recognition & federation", "Development programme oversight", "Anti-corruption structural assurance"] },
-          { title: "Institutional Partners", items: ["Governance maturity assessment", "Compliance certification pathway", "Federation node deployment", "Research collaboration & co-development"] },
-        ].map(({ title, items }, i) => (
-          <FadeIn key={title} delay={i * 100}>
-            <div className="governance-card-elevated group hover:border-accent/30 transition-all duration-300">
-              <h4 className="font-serif text-heading-3 font-semibold mb-4">{title}</h4>
-              <ul className="space-y-2.5">
-                {items.map(item => (
-                  <li key={item} className="flex items-center gap-2.5 text-caption text-muted-foreground">
-                    <span className="w-1 h-1 bg-accent rounded-full shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          { title: "The Missing Trust Layer in DPI", slug: "missing-trust-layer", cat: "Architecture" },
+          { title: "Why Institutional Memory Fails", slug: "institutional-memory-fails", cat: "Governance" },
+          { title: "Anti-Capture Governance Mechanisms", slug: "anti-capture-mechanisms", cat: "Safeguards" },
+          { title: "Append-Only Records vs Traditional Databases", slug: "append-only-records", cat: "Technology" },
+          { title: "Sovereign Digital Trust Architecture", slug: "sovereign-trust-architecture", cat: "Strategy" },
+        ].map(({ title, slug, cat }, i) => (
+          <FadeIn key={slug} delay={i * 80}>
+            <Link to={`/insights/${slug}`} className="governance-card-elevated group hover:border-accent/30 transition-all duration-300 flex flex-col h-full">
+              <span className="text-overline font-mono text-accent uppercase mb-2">{cat}</span>
+              <h4 className="font-serif text-sm font-semibold group-hover:text-accent transition-colors flex-1">{title}</h4>
+              <p className="mt-3 text-xs text-muted-foreground flex items-center gap-1">
+                Read analysis <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
+              </p>
+            </Link>
           </FadeIn>
         ))}
       </div>
-    </Sec>
-
-    {/* ═══════════════════ AUTHORITY SIGNALS ═══════════════════ */}
-    <Sec id="authority" className="border-b border-border">
-      <FadeIn>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5 mb-6">
-          {[
-            { label: "Framework", value: "GRGF v1.0" },
-            { label: "Recognition Model", value: "3-Tier Active" },
-            { label: "Pilot Node", value: "v0.1 Evaluation" },
-            { label: "Patent", value: "CA 3,300,102" },
-            { label: "Registry", value: "GRGF-2024-001" },
-          ].map(({ label, value }) => (
-            <div key={label} className="governance-card-elevated text-center group hover:border-accent/30 transition-all duration-300">
-              <p className="text-overline font-mono text-muted-foreground/60 uppercase mb-2">{label}</p>
-              <p className="text-body font-serif font-semibold text-foreground group-hover:text-accent transition-colors">{value}</p>
-            </div>
-          ))}
-        </div>
-      </FadeIn>
     </Sec>
 
     {/* ═══════════════════ CLOSING CTA ═══════════════════ */}
@@ -566,11 +615,14 @@ const Index = () => {
             {t("home.closing_sub")}
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link to="/controlled-access" className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
-              {t("home.cta_assess")}
+            <Link to="/submission-hub" className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]">
+              International Submission Pack
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link to="/recognition" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
+            <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:border-accent/40">
+              {t("home.cta_assess")}
+            </Link>
+            <Link to="/recognition" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/15 text-primary-foreground/80 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               {t("home.cta_recognition")}
             </Link>
             <Link to="/partnerships" className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
