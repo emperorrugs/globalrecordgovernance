@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { pageTranslations } from "@/i18n";
 
 export type Language = "en" | "fr" | "ar";
 
@@ -261,7 +262,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   const t = (key: string): string => {
-    return translations[key]?.[lang] || translations[key]?.en || key;
+    return translations[key]?.[lang] || pageTranslations[key]?.[lang] || translations[key]?.en || pageTranslations[key]?.en || key;
   };
 
   return (

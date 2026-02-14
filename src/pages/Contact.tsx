@@ -1,12 +1,15 @@
 import { PageHeader, Section } from "@/components/PageComponents";
 import { Mail, Building2, FileText, AlertTriangle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="Institutional Access"
-        subtitle="Professional inquiry channel for governments, multilateral institutions, auditors, and qualified institutional parties."
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
       />
 
       {/* Access Notice */}
@@ -15,107 +18,67 @@ const Contact = () => {
           <div className="flex items-start gap-3">
             <Building2 className="h-5 w-5 text-accent shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                GRGF institutional access is available to government agencies, courts,
-                multilateral organisations, audit bodies, and qualified institutional
-                parties with a legitimate governance interest. Access requests are
-                reviewed under the framework's governance rules.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                This channel is for institutional inquiries only. GRGF does not accept
-                unsolicited commercial proposals, marketing partnerships, or media
-                enquiries through this interface.
-              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-3">{t("contact.access_p1")}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{t("contact.access_p2")}</p>
             </div>
           </div>
         </div>
       </Section>
 
       {/* Inquiry Categories */}
-      <Section title="Inquiry Categories" className="border-t border-border">
+      <Section title={t("contact.categories")} className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            {
-              title: "Sovereign Deployment",
-              desc: "Inquiries regarding GRGF deployment within a national Digital Public Infrastructure framework.",
-            },
-            {
-              title: "Federation Membership",
-              desc: "Applications for Tier 1, Tier 2, or Observer status within the GRGF federation model.",
-            },
-            {
-              title: "Institutional Audit",
-              desc: "Requests for access to sealed records or hash manifests for audit or judicial purposes.",
-            },
-            {
-              title: "Technical Review",
-              desc: "Technical architecture review for institutional evaluation or integration assessment.",
-            },
+            { titleKey: "contact.sovereign_title", descKey: "contact.sovereign_desc" },
+            { titleKey: "contact.federation_title", descKey: "contact.federation_desc" },
+            { titleKey: "contact.audit_title", descKey: "contact.audit_desc" },
+            { titleKey: "contact.technical_title", descKey: "contact.technical_desc" },
           ].map((cat) => (
-            <div key={cat.title} className="governance-card">
-              <h3 className="font-serif text-sm font-semibold">{cat.title}</h3>
-              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{cat.desc}</p>
+            <div key={cat.titleKey} className="governance-card">
+              <h3 className="font-serif text-sm font-semibold">{t(cat.titleKey)}</h3>
+              <p className="mt-2 text-xs text-muted-foreground leading-relaxed">{t(cat.descKey)}</p>
             </div>
           ))}
         </div>
       </Section>
 
       {/* Contact Form */}
-      <Section title="Institutional Inquiry" className="border-t border-border">
+      <Section title={t("contact.inquiry")} className="border-t border-border">
         <div className="governance-card max-w-2xl">
           <div className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
-                <label className="text-xs font-semibold text-foreground block mb-1.5">Full Name</label>
-                <input
-                  type="text"
-                  className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50"
-                  placeholder="Name and title"
-                  disabled
-                />
+                <label className="text-xs font-semibold text-foreground block mb-1.5">{t("contact.full_name")}</label>
+                <input type="text" className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50" placeholder={t("contact.name_placeholder")} disabled />
               </div>
               <div>
-                <label className="text-xs font-semibold text-foreground block mb-1.5">Institution</label>
-                <input
-                  type="text"
-                  className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50"
-                  placeholder="Organisation or government body"
-                  disabled
-                />
+                <label className="text-xs font-semibold text-foreground block mb-1.5">{t("contact.institution")}</label>
+                <input type="text" className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50" placeholder={t("contact.institution_placeholder")} disabled />
               </div>
             </div>
             <div>
-              <label className="text-xs font-semibold text-foreground block mb-1.5">Institutional Email</label>
-              <input
-                type="email"
-                className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50"
-                placeholder="official@institution.gov"
-                disabled
-              />
+              <label className="text-xs font-semibold text-foreground block mb-1.5">{t("contact.email")}</label>
+              <input type="email" className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50" placeholder={t("contact.email_placeholder")} disabled />
             </div>
             <div>
-              <label className="text-xs font-semibold text-foreground block mb-1.5">Inquiry Category</label>
+              <label className="text-xs font-semibold text-foreground block mb-1.5">{t("contact.category_label")}</label>
               <select className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm text-muted-foreground" disabled>
-                <option>Select category…</option>
-                <option>Sovereign Deployment</option>
-                <option>Federation Membership</option>
-                <option>Institutional Audit</option>
-                <option>Technical Review</option>
+                <option>{t("contact.select_category")}</option>
+                <option>{t("contact.sovereign_title")}</option>
+                <option>{t("contact.federation_title")}</option>
+                <option>{t("contact.audit_title")}</option>
+                <option>{t("contact.technical_title")}</option>
               </select>
             </div>
             <div>
-              <label className="text-xs font-semibold text-foreground block mb-1.5">Inquiry Details</label>
-              <textarea
-                className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50 h-24 resize-none"
-                placeholder="Describe the nature and purpose of your institutional inquiry…"
-                disabled
-              />
+              <label className="text-xs font-semibold text-foreground block mb-1.5">{t("contact.details_label")}</label>
+              <textarea className="w-full border border-border bg-background rounded-sm px-3 py-2 text-sm placeholder:text-muted-foreground/50 h-24 resize-none" placeholder={t("contact.details_placeholder")} disabled />
             </div>
             <div className="flex items-center gap-3 pt-2">
               <button className="px-5 py-2 bg-muted text-muted-foreground text-sm rounded-sm cursor-not-allowed" disabled>
-                Submit Inquiry (Coming Soon)
+                {t("contact.submit")}
               </button>
-              <span className="text-xs text-muted-foreground">Form submission requires backend integration</span>
+              <span className="text-xs text-muted-foreground">{t("contact.submit_note")}</span>
             </div>
           </div>
         </div>
@@ -126,11 +89,7 @@ const Contact = () => {
         <div className="flex items-start gap-3">
           <AlertTriangle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
           <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
-            <span className="font-semibold text-foreground">Notice.</span> All communications through
-            this channel are subject to GRGF governance rules. Inquiries are processed in the order
-            received. Response times vary based on inquiry complexity and institutional verification
-            requirements. GRGF does not guarantee response to inquiries that fall outside the defined
-            categories or that lack verifiable institutional standing.
+            <span className="font-semibold text-foreground">{t("contact.notice_label")}</span> {t("contact.notice")}
           </p>
         </div>
       </Section>
