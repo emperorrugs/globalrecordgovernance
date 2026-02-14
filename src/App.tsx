@@ -85,6 +85,17 @@ import Transparency from "./pages/Transparency";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 
+// Submission Hub
+import SubmissionHub from "./pages/SubmissionHub";
+
+// Insights / Blog
+import InsightsIndex from "./pages/InsightsIndex";
+import MissingTrustLayer from "./pages/insights/MissingTrustLayer";
+import InstitutionalMemoryFails from "./pages/insights/InstitutionalMemoryFails";
+import AntiCaptureMechanisms from "./pages/insights/AntiCaptureMechanisms";
+import AppendOnlyRecords from "./pages/insights/AppendOnlyRecords";
+import SovereignTrustArchitecture from "./pages/insights/SovereignTrustArchitecture";
+
 // OECD Compliance pages
 import OECDSafeguards from "./pages/OECDSafeguards";
 import OpenStandards from "./pages/OpenStandards";
@@ -211,6 +222,17 @@ const App = () => (
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
             <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
+
+            {/* Submission Hub */}
+            <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />
+
+            {/* Insights / Blog */}
+            <Route path="/insights" element={<AppLayout><InsightsIndex /></AppLayout>} />
+            <Route path="/insights/missing-trust-layer" element={<AppLayout><MissingTrustLayer /></AppLayout>} />
+            <Route path="/insights/institutional-memory-fails" element={<AppLayout><InstitutionalMemoryFails /></AppLayout>} />
+            <Route path="/insights/anti-capture-mechanisms" element={<AppLayout><AntiCaptureMechanisms /></AppLayout>} />
+            <Route path="/insights/append-only-records" element={<AppLayout><AppendOnlyRecords /></AppLayout>} />
+            <Route path="/insights/sovereign-trust-architecture" element={<AppLayout><SovereignTrustArchitecture /></AppLayout>} />
 
             {/* OECD Compliance */}
             <Route path="/oecd-safeguards" element={<AppLayout><OECDSafeguards /></AppLayout>} />
