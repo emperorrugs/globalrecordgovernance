@@ -123,6 +123,7 @@ import Verification from "./pages/Verification";
 
 import Archive from "./pages/Archive";
 import ReportsStudies from "./pages/ReportsStudies";
+import Roadmap from "./pages/Roadmap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -218,6 +219,7 @@ const App = () => (
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
             <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
             <Route path="/whitepaper" element={<AppLayout><InternationalWhitepaper /></AppLayout>} />
+            <Route path="/roadmap" element={<AppLayout><Roadmap /></AppLayout>} />
 
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
