@@ -25,7 +25,9 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 /* ── LAYER 1: Institutional Authority ── */
 const layer1 = [
   { title: "Home", path: "/", icon: Home },
+  { title: "The Problem", path: "/the-problem", icon: Eye },
   { title: "Transparency & Governance", path: "/transparency", icon: Eye },
+  { title: "Governance Framework", path: "/governance-framework", icon: Landmark },
   { title: "Membership & Advisory", path: "/membership", icon: Building },
   { title: "Contact", path: "/contact", icon: Users },
 ];
@@ -33,40 +35,51 @@ const layer1 = [
 /* ── LAYER 2: Standards & Recognition ── */
 const layer2 = [
   { title: "Recognition Framework", path: "/recognition", icon: Award },
-  { title: "Institutional Alignment", path: "/oecd-alignment", icon: Layers },
+  { title: "OECD Alignment", path: "/oecd-alignment", icon: Layers },
+  { title: "World Bank Alignment", path: "/world-bank-alignment", icon: Landmark },
+  { title: "UN Alignment", path: "/un-alignment", icon: Globe },
   { title: "Governance Ethics", path: "/ethics", icon: Shield },
-  { title: "Compliance", path: "/compliance", icon: FileText },
+  { title: "Compliance Mapping", path: "/compliance", icon: FileText },
+  { title: "International Compliance", path: "/international-compliance", icon: Globe },
 ];
 
 /* ── LAYER 3: DPI Platform ── */
 const layer3 = [
   { title: "Architecture", path: "/architecture", icon: Cpu },
   { title: "DPI Stack", path: "/dpi-stack", icon: Layers },
-  { title: "Scalability", path: "/scalability", icon: TrendingUp },
+  { title: "Security & Trust", path: "/security-trust", icon: Lock },
   { title: "Safeguards & Trust", path: "/safeguards-trust", icon: Shield },
+  { title: "Scalability", path: "/scalability", icon: TrendingUp },
   { title: "Deployment Model", path: "/deployment-scenarios", icon: Globe },
+  { title: "Interoperability", path: "/interoperability", icon: Network },
   { title: "Developer Portal", path: "/developer", icon: Code },
   { title: "Academy", path: "/academy", icon: GraduationCap },
+  { title: "Simulation", path: "/simulation", icon: Cpu },
 ];
 
 /* ── LAYER 4: Decision Tools ── */
 const layer4 = [
+  { title: "Impact Modeling", path: "/impact-modeling", icon: BarChart3 },
   { title: "Financial Model", path: "/financial-model", icon: BarChart3 },
   { title: "Risk Assessment", path: "/risk-assessment", icon: Shield },
+  { title: "Risk Mitigation", path: "/risk-mitigation", icon: Shield },
   { title: "Deployment Planner", path: "/deployment-planner", icon: Globe },
-  { title: "Interoperability", path: "/interoperability", icon: Network },
   { title: "Procurement", path: "/procurement", icon: ClipboardList },
   { title: "Maturity", path: "/maturity", icon: TrendingUp },
   { title: "Stress Test", path: "/stress-test", icon: Shield },
   { title: "Executive Brief", path: "/executive-brief", icon: FileText },
+  { title: "DPI Comparison", path: "/dpi-comparison", icon: Layers },
 ];
 
-/* ── LAYER 5: Digital Archive ── */
+/* ── LAYER 5: Digital Archive & Insights ── */
 const layer5 = [
+  { title: "Submission Hub", path: "/submission-hub", icon: Globe },
+  { title: "Insights & Research", path: "/insights", icon: BookOpen },
   { title: "Institutional Review", path: "/institutional-review", icon: ClipboardList },
   { title: "Archive", path: "/archive", icon: FileText },
   { title: "Reports & Studies", path: "/reports", icon: BookOpen },
   { title: "Research & Publications", path: "/research", icon: BookOpen },
+  { title: "Whitepaper", path: "/whitepaper", icon: FileText },
   { title: "Global Partnerships", path: "/partnerships", icon: Handshake },
   { title: "Controlled Access", path: "/controlled-access", icon: Lock },
 ];
