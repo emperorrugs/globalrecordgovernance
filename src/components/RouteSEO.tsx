@@ -79,6 +79,9 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/itu-global-standards": { title: "ITU & Regional Standards", description: "ITU-T standard alignment and regional digital governance framework mapping worldwide." },
   "/international-compliance": { title: "International Compliance Hub", description: "Comprehensive multilateral alignment dashboard across OECD, World Bank, UN, G20, ITU, and regional frameworks." },
   "/unesco-alignment": { title: "UNESCO Digital Governance Standards", description: "Alignment with UNESCO ROAM-X Indicators, AI Ethics Recommendation, IFAP Programme, and documentary heritage standards." },
+  "/accessibility": { title: "Accessibility Statement", description: "GRGF accessibility commitment consistent with WCAG 2.2 Level AA, keyboard navigation, contrast, and semantic HTML." },
+  "/ip-status": { title: "Intellectual Property Status", description: "Legal clarity on GRGF patent application status, IP ownership, and institutional licensing terms." },
+  "/roadmap": { title: "Strategic Roadmap", description: "Three-phase deployment pathway from publication and validation through pilots to international federation." },
 };
 
 export function RouteSEO() {

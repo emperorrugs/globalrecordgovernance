@@ -191,10 +191,11 @@ const InternationalWhitepaper = () => (
           <div className="flex items-start gap-3">
             <Scale className="h-4 w-4 text-accent shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-xs font-serif font-semibold text-foreground">Canadian Patent No. 3,300,102</h4>
+              <h4 className="text-xs font-serif font-semibold text-foreground">Canadian Patent Application No. 3,300,102</h4>
               <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
-                "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026. Establishes legal protection for the framework's core architectural innovation.
+                "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026 (publication pending). Establishes legal protection for the framework's core architectural innovation.
               </p>
+              <p className="mt-1 text-[10px] text-muted-foreground/60 italic">Note: Canadian patent applications are typically published approximately 18 months after filing.</p>
             </div>
           </div>
         </div>

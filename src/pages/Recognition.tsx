@@ -91,6 +91,33 @@ const Recognition = () => (
       </div>
     </Sec>
 
+    {/* How to Engage */}
+    <Sec className="border-b border-border">
+      <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Adoption Pathway</p>
+      <h2 className="institutional-heading text-heading-1 font-semibold mb-10">How to Engage</h2>
+      <div className="space-y-4 max-w-3xl">
+        {[
+          { step: "01", title: "Initial Inquiry", desc: "Contact GRGF to express interest in institutional evaluation. Provide organizational context, jurisdiction, and scope of interest." },
+          { step: "02", title: "Scope Definition", desc: "GRGF works with the applicant to define certification scope, applicable systems, and expected evidence requirements." },
+          { step: "03", title: "Documentation Submission", desc: "Submit architecture documentation, governance charter, security controls summary, and operational procedures for review." },
+          { step: "04", title: "Technical Review", desc: "Independent reviewers assess cryptographic integrity, policy determinism, append-only enforcement, and verification capability." },
+          { step: "05", title: "Evidence Testing", desc: "Structured evidence sampling validates that records, proofs, retention controls, and audit trails meet the target certification level." },
+          { step: "06", title: "Certification Decision", desc: "Findings report issued with remediation window if needed. Certification granted upon successful completion with a published summary." },
+          { step: "07", title: "Renewal Schedule", desc: "Certified institutions enter a structured renewal cycle with continuous monitoring requirements and periodic re-assessment." },
+        ].map(({ step, title, desc }) => (
+          <div key={step} className="flex items-start gap-4 governance-card">
+            <div className="shrink-0 w-8 h-8 bg-primary text-primary-foreground rounded-sm flex items-center justify-center">
+              <span className="text-[10px] font-mono font-bold">{step}</span>
+            </div>
+            <div>
+              <h4 className="font-serif text-sm font-semibold mb-1">{title}</h4>
+              <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Sec>
+
     {/* Apply CTA */}
     <Sec className="bg-primary text-primary-foreground">
       <div className="text-center max-w-2xl mx-auto">

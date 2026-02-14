@@ -31,7 +31,7 @@ Economic rationale:
 · Modeled net annual benefit: $1.51B CAD (conservative scenario)
 · Year 1 payback period with 100% IRR (modeled)
 
-GRGF is protected under Canadian Patent No. 3,300,102.
+GRGF is protected under Canadian Patent Application No. 3,300,102 (filed January 28, 2026; publication pending).
 
 I am requesting a structured 30-minute briefing to present the technical architecture, pilot evaluation framework, and deployment model. All materials are available under the GRGF Controlled Distribution Protocol.
 
@@ -111,7 +111,7 @@ Respectfully,
 Tarek Wahid
 Inventor and Principal Architect
 Global Record Governance Framework
-Canadian Patent No. 3,300,102`,
+Canadian Patent Application No. 3,300,102 (Filed)`,
   },
 ];
 

@@ -47,7 +47,7 @@ const ExecutiveDossier = () => (
         {[
           { label: "Category", value: "Infrastructure Category Creation" },
           { label: "Revenue Model", value: "Sovereign Licensing + Services" },
-          { label: "IP Protection", value: "Canadian Patent No. 3,300,102" },
+          { label: "IP Protection", value: "Canadian Patent Application No. 3,300,102 (Filed)" },
         ].map(({ label, value }) => (
           <div key={label} className="governance-card text-center">
             <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1">{label}</p>
@@ -153,7 +153,7 @@ const ExecutiveDossier = () => (
     {/* Attribution */}
     <Section className="border-t border-border bg-card/30">
       <p className="text-xs text-muted-foreground leading-relaxed">
-        <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance Framework — Invented and Owned by Tarek Wahid. Canadian Patent No. 3,300,102 — "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026.
+        <span className="font-semibold text-foreground">Attribution.</span> Global Record Governance Framework — Invented and Owned by Tarek Wahid. Canadian Patent Application No. 3,300,102 — "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026 (publication pending).
       </p>
     </Section>
   </div>
