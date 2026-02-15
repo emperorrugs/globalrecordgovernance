@@ -26,68 +26,68 @@
 
 @layer base {
   :root {
-    /* ── Elite Institutional Palette ── */
+    /* ── High-Contrast Black + Gold Palette ── */
     /* Backgrounds */
-    --background: 220 16% 96%;
-    --foreground: 220 25% 10%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card: 0 0% 6.7%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Primary — Deep Institutional Navy */
-    --primary: 216 50% 12%;
-    --primary-foreground: 220 16% 96%;
+    /* Primary — Pure White */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
 
-    /* Secondary — Warm Stone */
-    --secondary: 220 10% 92%;
-    --secondary-foreground: 220 14% 35%;
+    /* Secondary — Soft Black */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 80%;
 
-    /* Muted — Institutional Grey */
-    --muted: 216 12% 92%;
-    --muted-foreground: 216 10% 46%;
+    /* Muted — Dark Grey */
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 55%;
 
-    /* Accent — Sovereign Gold */
-    --accent: 38 60% 52%;
-    --accent-foreground: 216 50% 12%;
+    /* Accent — Royal Gold */
+    --accent: 43 76% 52%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 12% 87%;
-    --input: 220 12% 89%;
-    --ring: 216 50% 12%;
+    --border: 0 0% 16%;
+    --input: 0 0% 14%;
+    --ring: 43 76% 52%;
 
     --radius: 0.25rem;
 
-    /* ── Sidebar — Authority Navy ── */
-    --sidebar-background: 216 50% 10%;
-    --sidebar-foreground: 220 16% 96%;
-    --sidebar-primary: 38 60% 52%;
-    --sidebar-primary-foreground: 216 50% 10%;
-    --sidebar-accent: 216 42% 18%;
-    --sidebar-accent-foreground: 220 16% 96%;
-    --sidebar-border: 216 38% 18%;
-    --sidebar-ring: 38 60% 52%;
+    /* ── Sidebar — Deep Black ── */
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 43 76% 52%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 43 76% 52%;
 
-    /* ── Sovereign Design Tokens ── */
-    --gold: 38 60% 52%;
-    --gold-light: 38 52% 62%;
-    --gold-hover: 38 65% 45%;
-    --navy-deep: 216 50% 10%;
-    --navy: 216 50% 12%;
-    --sovereign-green: 162 48% 22%;
-    --slate-inst: 220 12% 89%;
-    --surface: 220 14% 95%;
-    --surface2: 220 12% 92%;
-    --emerald-trust: 162 48% 22%;
-    --link: 216 50% 28%;
-    --link-hover: 216 50% 18%;
-    --info: 216 50% 28%;
-    --warning: 42 74% 50%;
-    --success: 162 48% 32%;
+    /* ── Design Tokens ── */
+    --gold: 43 76% 52%;
+    --gold-light: 43 60% 62%;
+    --gold-hover: 43 80% 42%;
+    --navy-deep: 0 0% 4%;
+    --navy: 0 0% 6.7%;
+    --sovereign-green: 140 70% 40%;
+    --slate-inst: 0 0% 14%;
+    --surface: 0 0% 5%;
+    --surface2: 0 0% 8%;
+    --emerald-trust: 140 70% 40%;
+    --link: 43 76% 52%;
+    --link-hover: 43 76% 62%;
+    --info: 195 100% 50%;
+    --warning: 43 76% 52%;
+    --success: 140 70% 40%;
 
     /* Typography */
     --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
