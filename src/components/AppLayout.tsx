@@ -159,7 +159,7 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
       {canScrollUp && (
         <button
           onClick={() => scrollTo("top")}
-          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-b from-primary via-primary/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-b from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
           aria-label="Scroll navigation up"
         >
           <ChevronUp className="h-4 w-4" />
@@ -175,7 +175,7 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
       {canScrollDown && (
         <button
           onClick={() => scrollTo("bottom")}
-          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-t from-primary via-primary/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-t from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
           aria-label="Scroll navigation down"
         >
           <ChevronDown className="h-4 w-4" />
@@ -212,7 +212,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       </a>
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-primary border-r border-border z-50 shrink-0 overflow-hidden">
+        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-sidebar border-r border-sidebar-border z-50 shrink-0 overflow-hidden">
           <div className="p-5 border-b border-sidebar-border shrink-0">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-8 h-8 bg-accent flex items-center justify-center">
@@ -253,7 +253,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                     <Menu className="h-5 w-5" />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-64 bg-primary text-primary-foreground p-0">
+                <SheetContent side="left" className="w-64 bg-sidebar text-sidebar-foreground p-0">
                   <SheetTitle className="sr-only">Navigation</SheetTitle>
                   <div className="p-5 border-b border-sidebar-border">
                     <div className="flex items-center gap-3">
