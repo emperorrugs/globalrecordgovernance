@@ -253,7 +253,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                     <Menu className="h-5 w-5" />
                   </button>
                 </SheetTrigger>
-                <SheetContent side="left" className="w-64 bg-sidebar text-sidebar-foreground p-0">
+                <SheetContent side="left" className="w-64 bg-sidebar text-sidebar-foreground p-0 flex flex-col">
                   <SheetTitle className="sr-only">Navigation</SheetTitle>
                   <div className="p-5 border-b border-sidebar-border">
                     <div className="flex items-center gap-3">
