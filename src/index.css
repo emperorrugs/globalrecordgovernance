@@ -26,69 +26,70 @@
 
 @layer base {
   :root {
-    /* ── High-Contrast Black + Gold Palette ── */
+    /* ── Neon Shock — Digital Rebel Palette ── */
+    /* Industrial Black #1A1A1A base, Acid Green #AAFF00 highlight, Electric Yellow #FFE000 accent */
+
     /* Backgrounds */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 6.7%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 6.7%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Primary — Pure White */
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    /* Primary — Off-White */
+    --primary: 0 0% 95%;
+    --primary-foreground: 0 0% 5%;
 
-    /* Secondary — Soft Black */
+    /* Secondary — Dark Industrial */
     --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 80%;
+    --secondary-foreground: 0 0% 75%;
 
-    /* Muted — Dark Grey */
+    /* Muted — Charcoal */
     --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 55%;
+    --muted-foreground: 0 0% 50%;
 
-    /* Accent — Royal Gold */
-    --accent: 43 76% 52%;
-    --accent-foreground: 0 0% 0%;
+    /* Accent — Acid Green #AAFF00 → HSL 80 100% 50% */
+    --accent: 80 100% 50%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 0 0% 16%;
     --input: 0 0% 14%;
-    --ring: 43 76% 52%;
+    --ring: 80 100% 50%;
 
     --radius: 0.25rem;
 
-    /* ── Sidebar — Deep Black ── */
-    --sidebar-background: 0 0% 4%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 43 76% 52%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
+    /* ── Sidebar — Deep Industrial Black ── */
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 80 100% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 12%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 14%;
-    --sidebar-ring: 43 76% 52%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 80 100% 50%;
 
     /* ── Design Tokens ── */
-    --gold: 43 76% 52%;
-    --gold-light: 43 60% 62%;
-    --gold-hover: 43 80% 42%;
+    --gold: 51 100% 50%;          /* Electric Yellow #FFE000 */
+    --gold-light: 51 100% 60%;
+    --gold-hover: 51 100% 40%;
     --navy-deep: 0 0% 4%;
-    --navy: 0 0% 6.7%;
-    --sovereign-green: 140 70% 40%;
-    --slate-inst: 0 0% 14%;
-    --surface: 0 0% 5%;
-    --surface2: 0 0% 8%;
-    --emerald-trust: 140 70% 40%;
-    --link: 43 76% 52%;
-    --link-hover: 43 76% 62%;
+    --navy: 0 0% 8%;
+    --sovereign-green: 80 100% 50%;
+    --slate-inst: 0 0% 16%;
+    --surface: 0 0% 6%;
+    --surface2: 0 0% 10%;
+    --emerald-trust: 80 100% 50%;
+    --link: 80 100% 50%;
+    --link-hover: 80 100% 60%;
     --info: 195 100% 50%;
-    --warning: 43 76% 52%;
-    --success: 140 70% 40%;
-
+    --warning: 51 100% 50%;
+    --success: 80 100% 50%;
     /* Typography */
     --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
     --sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
