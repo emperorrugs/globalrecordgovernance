@@ -13,6 +13,7 @@ import { LiveTrustDashboard } from "@/components/LiveTrustDashboard";
 import { GlobalFederationMap } from "@/components/GlobalFederationMap";
 import { CompetitiveEdgeMatrix } from "@/components/CompetitiveEdgeMatrix";
 import { useLanguage } from "@/contexts/LanguageContext";
+import InstitutionalReadinessBanner from "@/components/InstitutionalReadinessBanner";
 
 /* ── Reusable ── */
 const Sec = ({ id, children, className = "" }: { id?: string; children: React.ReactNode; className?: string }) => (
@@ -446,6 +447,9 @@ const Index = () => {
         </div>
       </FadeIn>
     </Sec>
+
+    {/* ═══════════════════ GC & WORLD BANK READINESS ═══════════════════ */}
+    <InstitutionalReadinessBanner />
 
     {/* ═══════════════════ FOUNDER & TRUST SIGNALS ═══════════════════ */}
     <Sec id="trust-signals" className="border-b border-border">
