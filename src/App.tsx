@@ -124,6 +124,7 @@ import Verification from "./pages/Verification";
 import Archive from "./pages/Archive";
 import ReportsStudies from "./pages/ReportsStudies";
 import Roadmap from "./pages/Roadmap";
+import InstitutionalBlueprint from "./pages/InstitutionalBlueprint";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
@@ -222,6 +223,7 @@ const App = () => (
             <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
             <Route path="/whitepaper" element={<AppLayout><InternationalWhitepaper /></AppLayout>} />
             <Route path="/roadmap" element={<AppLayout><Roadmap /></AppLayout>} />
+            <Route path="/institutional-blueprint" element={<AppLayout><InstitutionalBlueprint /></AppLayout>} />
 
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
