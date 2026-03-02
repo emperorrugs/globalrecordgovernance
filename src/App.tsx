@@ -128,6 +128,7 @@ import InstitutionalBlueprint from "./pages/InstitutionalBlueprint";
 import CredibilitySignals from "./pages/CredibilitySignals";
 import UnifiedTransformation from "./pages/UnifiedTransformation";
 import SovereignDeployment from "./pages/SovereignDeployment";
+import SubmissionReady from "./pages/SubmissionReady";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
@@ -230,6 +231,7 @@ const App = () => (
             <Route path="/credibility-signals" element={<AppLayout><CredibilitySignals /></AppLayout>} />
             <Route path="/unified-transformation" element={<AppLayout><UnifiedTransformation /></AppLayout>} />
             <Route path="/sovereign-deployment" element={<AppLayout><SovereignDeployment /></AppLayout>} />
+            <Route path="/submission-ready" element={<AppLayout><SubmissionReady /></AppLayout>} />
 
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
