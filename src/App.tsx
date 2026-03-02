@@ -126,6 +126,7 @@ import ReportsStudies from "./pages/ReportsStudies";
 import Roadmap from "./pages/Roadmap";
 import InstitutionalBlueprint from "./pages/InstitutionalBlueprint";
 import CredibilitySignals from "./pages/CredibilitySignals";
+import UnifiedTransformation from "./pages/UnifiedTransformation";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
@@ -226,6 +227,7 @@ const App = () => (
             <Route path="/roadmap" element={<AppLayout><Roadmap /></AppLayout>} />
             <Route path="/institutional-blueprint" element={<AppLayout><InstitutionalBlueprint /></AppLayout>} />
             <Route path="/credibility-signals" element={<AppLayout><CredibilitySignals /></AppLayout>} />
+            <Route path="/unified-transformation" element={<AppLayout><UnifiedTransformation /></AppLayout>} />
 
             {/* Legal & Compliance */}
             <Route path="/privacy-policy" element={<AppLayout><PrivacyPolicy /></AppLayout>} />
