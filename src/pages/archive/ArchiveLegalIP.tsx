@@ -62,6 +62,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "LIP-002", title: "Intellectual Property Scope", updated: "February 2026",
+    downloadPath: "/documents/IP_Scope_and_Attribution.md",
     content: (
       <>
         <p>Protected elements include:</p>
