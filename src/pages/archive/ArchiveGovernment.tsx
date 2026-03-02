@@ -49,6 +49,7 @@ const documents: DocEntry[] = [
   // Section 02
   {
     id: "GOV-001", title: "GRGF DPI Architecture (Full)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
+    downloadPath: "/documents/High_Level_Architecture.md",
     content: (
       <>
         <p>The Global Record Governance Framework (GRGF) is architected as a foundational, horizontal Digital Public Infrastructure (DPI) that operates independently of sectoral systems while remaining interoperable with them.</p>
@@ -66,6 +67,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-002", title: "Governance & Authority Model", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
+    downloadPath: "/documents/Governance_Authority_Model.md",
     content: (
       <>
         <p>GRGF explicitly distinguishes between institutional authority, individual actors, and delegated mandates. Authority is treated as a recordable attribute, not an assumption.</p>
@@ -77,6 +79,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-003", title: "Decision, Action & Omission Framework", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
+    downloadPath: "/documents/Actions_and_Omissions_Framework.md",
     content: (
       <>
         <p>GRGF enables accountability by preserving chain of authority, temporal responsibility, and jurisdictional scope.</p>
@@ -99,6 +102,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-004", title: "Auditability & Verification Logic", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
+    downloadPath: "/documents/Auditability_Verification_Logic.md",
     content: (
       <>
         <p>GRGF supports negative and positive verification:</p>
@@ -114,6 +118,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-005", title: "Deployment Models (National / Incremental)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
+    downloadPath: "/documents/Deployment_Models.md",
     content: (
       <>
         <p>A typical national deployment follows three stages:</p>
@@ -129,6 +134,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-006", title: "Integration with Existing Systems", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
+    downloadPath: "/documents/DPI_Integration_Guide.md",
     content: (
       <>
         <p>GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
@@ -140,6 +146,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-007", title: "Risk, Safeguards & Oversight", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
+    downloadPath: "/documents/Risk_Safeguards_Oversight.md",
     content: (
       <>
         <p><strong>Primary risks addressed:</strong></p>
@@ -156,6 +163,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-008", title: "Public Value & ROI Logic", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
+    downloadPath: "/documents/Public_Value_ROI.md",
     content: (
       <>
         <p>GRGF creates public value by reducing ambiguity, increasing trust, strengthening institutions, and protecting lawful decision-makers. Value is systemic, not transactional.</p>
