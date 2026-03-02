@@ -134,6 +134,11 @@ const Index = () => {
               <Award className="h-4 w-4" />
               Credibility Signals
             </Link>
+            <Link to="/unified-transformation" className="group inline-flex items-center gap-2 px-7 py-4 border border-accent/50 text-accent text-sm font-semibold transition-all duration-300 hover:bg-accent/10 hover:shadow-lg hover:shadow-accent/10">
+              <Globe className="h-4 w-4" />
+              Unified Transformation
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            </Link>
             <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               <BarChart3 className="h-4 w-4" />
               ROI Analysis

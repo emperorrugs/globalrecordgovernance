@@ -26,11 +26,12 @@ interface SectionProps {
   title?: string;
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-export function Section({ title, children, className }: SectionProps) {
+export function Section({ title, children, className, id }: SectionProps) {
   return (
-    <section className={cn("px-8 py-10 md:px-12 lg:px-16", className)}>
+    <section id={id} className={cn("px-8 py-10 md:px-12 lg:px-16", className)}>
       <div className="max-w-5xl">
         {title && (
           <h2 className="institutional-heading text-xl md:text-2xl font-semibold mb-6">{title}</h2>
