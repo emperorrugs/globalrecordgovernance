@@ -143,16 +143,33 @@ const ArchiveDownloads = () => (
               </div>
             </div>
 
-            {/* Download button placeholder */}
+            {/* Download button */}
             <div className="flex items-center gap-3 pt-3 border-t border-border/50">
-              <button
-                disabled
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary text-xs font-medium rounded-sm cursor-not-allowed opacity-60"
-              >
-                <Download className="h-3.5 w-3.5" />
-                Download Pack (Coming Soon)
-              </button>
-              <span className="text-[10px] text-muted-foreground/50 font-mono">PDF / ZIP · HASH-SEALED</span>
+              {restricted ? (
+                <Link
+                  to="/controlled-access"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary text-xs font-medium rounded-sm hover:bg-primary/20 transition-colors"
+                >
+                  <Lock className="h-3.5 w-3.5" />
+                  Request Controlled Access
+                </Link>
+              ) : (
+                <a
+                  href={
+                    access === "OPEN"
+                      ? "/documents/GRGF_Phase_5_Public_Transparency.zip"
+                      : access === "INSTITUTIONAL"
+                      ? "/documents/GC_Submission_Pack_20260131_072144.zip"
+                      : "/documents/GRGF_Service_Partnership_Send_Today.zip"
+                  }
+                  download
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors"
+                >
+                  <Download className="h-3.5 w-3.5" />
+                  Download Pack
+                </a>
+              )}
+              <span className="text-[10px] text-muted-foreground/50 font-mono">ZIP · HASH-SEALED</span>
             </div>
           </div>
         ))}

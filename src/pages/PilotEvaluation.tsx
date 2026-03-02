@@ -20,8 +20,8 @@ const timeline = [
 ];
 
 const publicDocs = [
-  { title: "Pilot Evaluation Plan (v0.1)", version: "0.1", date: "2026-01-31", file: "GRGF_Pilot_Evaluation_Plan_v0.1.pdf" },
-  { title: "Demo Guide (v0.1)", version: "0.1", date: "2026-01-31", file: "GRGF_Demo_Guide_v0.1.pdf" },
+  { title: "Pilot Kit (Institution-Ready)", version: "0.1", date: "2026-01-31", file: "GRGF_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip" },
+  { title: "Phase 3 Visual Operating Model", version: "1.0", date: "2026-01-31", file: "GRGF_Phase_3_Visual_Operating_Model.pdf" },
   { title: "Executive Slide Deck", version: "1.0", date: "2026-01-31", file: "GRGF_Executive_Visual_Binder.pptx" },
 ];
 
