@@ -149,6 +149,11 @@ const Index = () => {
               Submission-Ready Package
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
+            <Link to="/canada" className="group inline-flex items-center gap-2 px-7 py-4 border-2 border-accent text-accent text-sm font-semibold transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:shadow-lg hover:shadow-accent/20">
+              <Landmark className="h-4 w-4" />
+              Canada Sovereign DPI
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            </Link>
             <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               <BarChart3 className="h-4 w-4" />
               ROI Analysis
