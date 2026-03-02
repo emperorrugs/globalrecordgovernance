@@ -130,6 +130,10 @@ const Index = () => {
               <Landmark className="h-4 w-4" />
               Institutional Blueprint
             </Link>
+            <Link to="/credibility-signals" className="inline-flex items-center gap-2 px-7 py-4 border border-accent/30 text-accent/90 text-sm font-medium transition-all duration-300 hover:bg-accent/10 hover:text-accent">
+              <Award className="h-4 w-4" />
+              Credibility Signals
+            </Link>
             <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               <BarChart3 className="h-4 w-4" />
               ROI Analysis
