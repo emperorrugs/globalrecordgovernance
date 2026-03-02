@@ -139,6 +139,11 @@ const Index = () => {
               Unified Transformation
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
+            <Link to="/sovereign-deployment" className="group inline-flex items-center gap-2 px-7 py-4 bg-accent/90 text-accent-foreground text-sm font-semibold transition-all duration-300 hover:bg-accent hover:shadow-lg hover:shadow-accent/20">
+              <Shield className="h-4 w-4" />
+              Sovereign Deployment
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+            </Link>
             <Link to="/financial-model" className="inline-flex items-center gap-2 px-7 py-4 border border-primary-foreground/10 text-primary-foreground/70 text-sm font-medium transition-all duration-300 hover:bg-primary-foreground/5 hover:text-primary-foreground">
               <BarChart3 className="h-4 w-4" />
               ROI Analysis
