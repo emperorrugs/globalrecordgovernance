@@ -67,6 +67,7 @@ const packs = [
       "Sandbox Configuration References",
     ],
     restricted: true,
+    restrictedReason: "This document contains proprietary technical schemas, API specifications, and integration blueprints protected under Canadian Patent No. CA 3,300,102. Access requires a signed Non-Disclosure Agreement (NDA) to protect intellectual property and ensure responsible use by authorized implementers only.",
   },
   {
     icon: Lock,
@@ -76,6 +77,7 @@ const packs = [
     level: 4,
     pages: "878 pages",
     restricted: true,
+    restrictedReason: "This document contains classified sovereign deployment protocols, national key management procedures, and federation architecture specifications. Access is restricted to authorized government officials to protect national security infrastructure and ensure sovereign control over deployment configurations.",
     sections: ["Parts I–XV (Technical Foundations)", "Part XVI — Sovereign Configuration", "Part XVII — National Federation", "Part XVIII — Classified Protocols", "Part XIX — Exit & Continuity"],
     coverNote: "Maximum-depth controlled deployment documentation with sovereign configuration manuals, national federation architecture, classified operational protocols, and continuity procedures. Requires formal government authorization.",
     contents: [
