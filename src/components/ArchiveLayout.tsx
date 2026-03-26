@@ -1,9 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import { ArrowLeft, Archive, Users, Building2, Handshake, Lock, List, Download } from "lucide-react";
+import { ArrowLeft, Archive, Users, Building2, Handshake, Lock, List, Download, FolderSearch } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const archiveNav = [
   { path: "/archive", label: "Overview", icon: Archive },
+  { path: "/archive/intelligent", label: "Smart Archive", icon: FolderSearch },
   { path: "/archive/public", label: "Public & Civil Society", icon: Users },
   { path: "/archive/government", label: "Government & Multilateral", icon: Building2 },
   { path: "/archive/partners", label: "Partners & Integrators", icon: Handshake },
