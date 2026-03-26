@@ -199,7 +199,7 @@ const AdminDashboard = () => {
                       </div>
                       <div>
                         <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1">Jurisdiction</p>
-                        <p className="text-xs">{req.jurisdiction || "—"}</p>
+                        <p className="text-xs">{(req as any).jurisdiction || "—"}</p>
                       </div>
                     </div>
                     {req.purpose_detail && (
