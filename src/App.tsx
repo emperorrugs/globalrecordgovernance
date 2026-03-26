@@ -239,6 +239,7 @@ const App = () => (
             <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
             <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
+            <Route path="/admin" element={<AppLayout><AdminDashboard /></AppLayout>} />
 
             {/* Submission Hub */}
             <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />
