@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Download, FileText, Users, Building2, Handshake, Lock, CheckCircle, ArrowLeft } from "lucide-react";
+import { Download, FileText, Users, Building2, Handshake, Lock, CheckCircle, ArrowLeft, Globe } from "lucide-react";
 
 const packs = [
   {
@@ -8,19 +8,22 @@ const packs = [
     audience: "Public, media, academia, civil society",
     access: "OPEN",
     level: 1,
-    sections: ["01 — Vision & Foundations", "02 — High-Level Architecture", "06 — Use-Case Narratives", "09 — Appendices (Glossary, Terminology)"],
-    coverNote: "This pack provides a clear, non-technical overview of the Global Record Governance Framework. It is intended for general audiences seeking to understand the framework's purpose, scope, and relevance to public governance.",
+    pages: "438 pages",
+    sections: ["01 — Governance Foundations", "02 — Six-Layer Architecture", "03 — Standards Compliance", "04 — Deployment Models", "05 — Training Manual", "06 — Operational Toolkit", "07 — Risk & Security", "08 — Value Analysis", "09 — Appendices"],
+    coverNote: "Maximum depth public overview of the Global Record Governance Framework. Includes complete training manual, operational toolkit, risk management framework, and all reference appendices. Suitable for general audiences, academic researchers, and civil society organizations.",
     contents: [
-      "GRGF Vision & Purpose (Full Chapter)",
-      "Six-Layer Deterministic Architecture (Overview)",
-      "Actions & Omissions Framework (Explainer)",
-      "Public Use-Case Narratives",
-      "Training Guide — Public Stakeholders",
-      "User Manual — Public Portal Navigation",
-      "Glossary & References",
+      "GRGF Vision, Mission & Strategic Framework (Ch. 1–3)",
+      "Six-Layer Deterministic Architecture (Full Deep-Dive)",
+      "International Standards Compliance (ISO, OECD, ITU, UN)",
+      "Deployment Models & Configuration Guide",
+      "Complete Training Manual — 6 Certification Modules",
+      "Operational Toolkit — 8 Implementation Tools",
+      "Risk Management & Security Framework",
+      "Economic Value & ROI Analysis (10-Year Model)",
+      "Glossary, Schema References & Appendices A–J",
     ],
-    downloadUrl: "/documents/GRGF_Level1_Public_Overview.pdf",
-    frenchUrl: "/documents/GRGF_Level1_Apercu_Public_FR.pdf",
+    downloadUrl: "/documents/GRGF_Level1_Public_Overview_MaxDepth.pdf",
+    frenchUrl: "/documents/GRGF_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
   },
   {
     icon: Building2,
@@ -28,20 +31,21 @@ const packs = [
     audience: "Governments, World Bank, regulators, oversight bodies",
     access: "INSTITUTIONAL",
     level: 2,
-    sections: ["01 — Vision & Foundations", "02 — System Architecture", "03 — Governance & Policy", "04 — DPI & Standards Alignment", "05 — Deployment Models", "06 — Use Cases", "07 — Value & Impact", "09 — Appendices"],
-    coverNote: "This comprehensive evaluation pack provides all materials required for institutional assessment, policy alignment, and sovereign adoption planning. Documents are formal, neutral, and suitable for audit, judicial review, and institutional decision-making.",
+    pages: "566 pages",
+    sections: ["Parts I–IX (Public Foundations)", "Part X — Advanced Governance Protocols", "Part XI — Institutional Implementation Guide", "Part XII — Compliance Evidence Workbook"],
+    coverNote: "Comprehensive institutional evaluation pack with all materials required for sovereign adoption planning, policy alignment, and institutional decision-making. Extends Level 1 with advanced governance protocols, institutional implementation guides, and compliance evidence workbooks.",
     contents: [
-      "Complete Vision & Foundations (5 documents)",
-      "Full System Architecture (5 documents)",
-      "Governance & Policy Framework (5 documents)",
-      "DPI & Standards Alignment (5 documents)",
-      "Deployment Models (5 documents)",
-      "Training Manual — Institutional Reviewers",
-      "Standards Compliance Toolkit",
-      "Value & Impact Analysis (5 documents)",
+      "All Level 1 Content (438 pages)",
+      "Advanced Governance Protocols — 7 Chapters",
+      "Institutional Implementation Guide — 10 Chapters",
+      "Compliance Evidence Workbook — 10 Frameworks",
+      "Training Manual — Institutional Reviewer Certification",
+      "Standards Compliance Toolkit (ISO 27001, 15489, 16175)",
+      "OECD & World Bank DPI Alignment Matrices",
+      "Procurement Strategy (PSPC-aligned)",
     ],
-    downloadUrl: "/documents/GRGF_Level2_Institutional_Review.pdf",
-    frenchUrl: "/documents/GRGF_Level2_Examen_Institutionnel_FR.pdf",
+    downloadUrl: "/documents/GRGF_Level2_Institutional_Review_MaxDepth.pdf",
+    frenchUrl: "/documents/GRGF_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
   },
   {
     icon: Handshake,
@@ -49,16 +53,18 @@ const packs = [
     audience: "Implementers, vendors, system integrators (NDA required)",
     access: "NDA REQUIRED",
     level: 3,
-    sections: ["02 — System Architecture", "04 — Interoperability Framework", "05 — Deployment Models", "06 — Use Cases (Technical Context)", "08 — API & Schema"],
-    coverNote: "This pack provides abstracted technical documentation for evaluation, planning, and integration readiness. No source code or trade secrets are disclosed. Documentation is sufficient for feasibility assessment and pilot planning. NDA required.",
+    pages: "702 pages",
+    sections: ["Parts I–XII (Institutional Foundations)", "Part XIII — Technical Schema & API", "Part XIV — Integration & Interoperability", "Part XV — Developer Operations Handbook"],
+    coverNote: "Restricted technical documentation for evaluation, integration planning, and pilot preparation. Extends Level 2 with complete schema definitions, API references, integration guides, and developer operations handbooks. NDA required.",
     contents: [
-      "Architecture Deep-Dive (Conceptual)",
-      "Functional Modules & Interaction Diagrams",
+      "All Level 2 Content (566 pages)",
+      "Technical Schema & API Reference — 9 Schema Types",
+      "Integration & Interoperability Guide — 10 Chapters",
+      "Developer Operations Handbook — 10 Chapters",
       "Record Lifecycle Logic & Schema Definitions",
       "Verification Hooks & API Endpoints",
-      "Integration Toolkit & Developer Guide",
       "Pilot Operations Handbook",
-      "Sandbox & Pilot References",
+      "Sandbox Configuration References",
     ],
     restricted: true,
   },
@@ -68,17 +74,19 @@ const packs = [
     audience: "Controlled — government authorization required",
     access: "CONTROLLED",
     level: 4,
+    pages: "878 pages",
     restricted: true,
-    sections: ["00 — Archive Control", "05 — Sovereign Config", "08 — Legal & IP"],
-    coverNote: "This controlled pack contains sovereign deployment configuration, national federation architecture, and classified operational protocols. Access requires formal government authorization.",
+    sections: ["Parts I–XV (Technical Foundations)", "Part XVI — Sovereign Configuration", "Part XVII — National Federation", "Part XVIII — Classified Protocols", "Part XIX — Exit & Continuity"],
+    coverNote: "Maximum-depth controlled deployment documentation with sovereign configuration manuals, national federation architecture, classified operational protocols, and continuity procedures. Requires formal government authorization.",
     contents: [
-      "National Configuration Planning Guide",
-      "Federal–Provincial Federation Architecture",
-      "Sovereign Node Deployment Runbook",
+      "All Level 3 Content (702 pages)",
+      "Sovereign Configuration Manual — 7 National Modules",
+      "National Federation Architecture — 12 Chapters",
+      "Classified Operational Protocols — 10 Sections",
+      "Continuity & Exit Procedures — 8 Chapters",
       "Key Management & HSM Integration",
-      "Sovereign Exit & Continuity Protocols",
-      "Inventor Attribution (Tarek Wahid)",
-      "IP & Legal Framework",
+      "Federal–Provincial Federation Architecture",
+      "IP Attribution (Tarek Wahid, CA 3,300,102)",
     ],
   },
 ];
@@ -92,45 +100,46 @@ const ArchiveDownloads = () => (
           Institutional Download Packs
         </h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Pre-assembled document bundles organized by stakeholder role. Each pack includes a cover note, contents checklist, and all relevant archive sections for the intended audience.
+          Pre-assembled document bundles organized by classification level. Each digital book includes training manuals, operational toolkits, implementation guides, assessment frameworks, templates, and reference appendices.
         </p>
         <div className="section-divider mt-6" />
       </div>
     </header>
 
-    {/* Global banner */}
     <div className="px-8 md:px-12 lg:px-16 pt-6">
-      <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between">
+      <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between flex-wrap gap-2">
         <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">
-          AUTHORITATIVE ARCHIVE · EVIDENCE-FIRST · NEUTRAL · VERSIONED
+          MAXIMUM DEPTH EDITION · EVIDENCE-FIRST · NEUTRAL · CRP v1.0
         </span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">v1.0.0 · FEB 2026</span>
+        <span className="text-[10px] font-mono text-accent/60 tracking-wider">v3.0 · MARCH 2026</span>
       </div>
     </div>
 
     <section className="px-8 py-8 md:px-12 lg:px-16">
       <div className="max-w-5xl space-y-8">
-        {packs.map(({ icon: Icon, title, audience, access, sections, coverNote, contents, restricted }) => (
+        {packs.map(({ icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, downloadUrl, frenchUrl }) => (
           <div key={title} className="governance-card">
-            {/* Header */}
             <div className="flex items-start gap-4 mb-5">
               <Icon className={`h-6 w-6 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
               <div className="flex-1 min-w-0">
                 <h2 className="font-serif text-lg font-semibold">{title}</h2>
                 <p className="text-xs text-muted-foreground mt-1">{audience}</p>
-                <p className={`text-[10px] font-mono mt-2 tracking-wider ${restricted ? "text-destructive" : "text-accent"}`}>
-                  {restricted && "🔒 "}{access} ACCESS
-                </p>
+                <div className="flex items-center gap-3 mt-2">
+                  <p className={`text-[10px] font-mono tracking-wider ${restricted ? "text-destructive" : "text-accent"}`}>
+                    {restricted && "🔒 "}{access} ACCESS
+                  </p>
+                  {pages && (
+                    <span className="text-[10px] font-mono text-muted-foreground/50 bg-muted px-2 py-0.5 rounded-sm">{pages}</span>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Cover note */}
             <div className="border-l-2 border-accent/30 pl-4 mb-5">
               <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1.5">Cover Note</p>
               <p className="text-xs text-muted-foreground leading-relaxed">{coverNote}</p>
             </div>
 
-            {/* Sections included */}
             <div className="mb-5">
               <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-2">Sections Included</p>
               <div className="flex flex-wrap gap-2">
@@ -140,7 +149,6 @@ const ArchiveDownloads = () => (
               </div>
             </div>
 
-            {/* Contents checklist */}
             <div className="mb-5">
               <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-2">Contents Checklist</p>
               <div className="grid gap-1.5 sm:grid-cols-2">
@@ -153,8 +161,7 @@ const ArchiveDownloads = () => (
               </div>
             </div>
 
-            {/* Download button */}
-            <div className="flex items-center gap-3 pt-3 border-t border-border/50">
+            <div className="flex items-center gap-3 pt-3 border-t border-border/50 flex-wrap">
               {restricted ? (
                 <Link
                   to="/controlled-access"
@@ -164,35 +171,40 @@ const ArchiveDownloads = () => (
                   Request Controlled Access
                 </Link>
               ) : (
-                <a
-                  href={
-                    access === "OPEN"
-                      ? "/documents/GRGF_Phase_5_Public_Transparency.zip"
-                      : access === "INSTITUTIONAL"
-                      ? "/documents/GC_Submission_Pack_20260131_072144.zip"
-                      : "/documents/GRGF_Service_Partnership_Send_Today.zip"
-                  }
-                  download
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors"
-                >
-                  <Download className="h-3.5 w-3.5" />
-                  Download Pack
-                </a>
+                <>
+                  <a
+                    href={downloadUrl}
+                    download
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    Download (English)
+                  </a>
+                  {frenchUrl && (
+                    <a
+                      href={frenchUrl}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border"
+                    >
+                      <Globe className="h-3.5 w-3.5" />
+                      Télécharger (Français)
+                    </a>
+                  )}
+                </>
               )}
-              <span className="text-[10px] text-muted-foreground/50 font-mono">ZIP · HASH-SEALED</span>
+              <span className="text-[10px] text-muted-foreground/50 font-mono">PDF · CRP v1.0 · HASH-SEALED</span>
             </div>
           </div>
         ))}
 
-        {/* Footer */}
         <div className="governance-card border-l-2 border-l-accent">
           <p className="text-sm text-foreground leading-relaxed">
-            Documents may be hash-sealed and time-stamped in future releases without semantic change. All packs follow major / minor / patch versioning with no silent edits.
+            All digital books follow the Controlled Distribution Protocol (CRP v1.0). Documents are hash-sealed, version-controlled, and subject to no silent edits. Canadian Patent No. CA 3,300,102 — Invented and Owned by Tarek Wahid.
           </p>
         </div>
 
         <div className="flex items-center justify-between text-[10px] font-mono text-muted-foreground/40">
-          <span>GRGF DIGITAL ARCHIVE · STAKEHOLDER PACKAGES · REFERENCE ONLY</span>
+          <span>GRGF DIGITAL ARCHIVE · MAXIMUM DEPTH EDITION · v3.0</span>
           <Link to="/archive" className="text-accent hover:underline flex items-center gap-1">
             <ArrowLeft className="h-3 w-3" /> Back to Archive
           </Link>
