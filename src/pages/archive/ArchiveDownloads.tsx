@@ -119,7 +119,7 @@ const ArchiveDownloads = () => (
 
     <section className="px-8 py-8 md:px-12 lg:px-16">
       <div className="max-w-5xl space-y-8">
-        {packs.map(({ icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, downloadUrl, frenchUrl }) => (
+        {packs.map(({ icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, restrictedReason, downloadUrl, frenchUrl }) => (
           <div key={title} className="governance-card">
             <div className="flex items-start gap-4 mb-5">
               <Icon className={`h-6 w-6 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
