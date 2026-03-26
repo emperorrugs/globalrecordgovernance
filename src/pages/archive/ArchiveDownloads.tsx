@@ -67,6 +67,7 @@ const packs = [
       "Sandbox Configuration References",
     ],
     restricted: true,
+    restrictedReason: "This document contains proprietary technical schemas, API specifications, and integration blueprints protected under Canadian Patent No. CA 3,300,102. Access requires a signed Non-Disclosure Agreement (NDA) to protect intellectual property and ensure responsible use by authorized implementers only.",
   },
   {
     icon: Lock,
@@ -76,6 +77,7 @@ const packs = [
     level: 4,
     pages: "878 pages",
     restricted: true,
+    restrictedReason: "This document contains classified sovereign deployment protocols, national key management procedures, and federation architecture specifications. Access is restricted to authorized government officials to protect national security infrastructure and ensure sovereign control over deployment configurations.",
     sections: ["Parts I–XV (Technical Foundations)", "Part XVI — Sovereign Configuration", "Part XVII — National Federation", "Part XVIII — Classified Protocols", "Part XIX — Exit & Continuity"],
     coverNote: "Maximum-depth controlled deployment documentation with sovereign configuration manuals, national federation architecture, classified operational protocols, and continuity procedures. Requires formal government authorization.",
     contents: [
@@ -117,7 +119,7 @@ const ArchiveDownloads = () => (
 
     <section className="px-8 py-8 md:px-12 lg:px-16">
       <div className="max-w-5xl space-y-8">
-        {packs.map(({ icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, downloadUrl, frenchUrl }) => (
+        {packs.map(({ icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, restrictedReason, downloadUrl, frenchUrl }) => (
           <div key={title} className="governance-card">
             <div className="flex items-start gap-4 mb-5">
               <Icon className={`h-6 w-6 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
@@ -160,6 +162,18 @@ const ArchiveDownloads = () => (
                 ))}
               </div>
             </div>
+
+            {restricted && restrictedReason && (
+              <div className="bg-destructive/5 border border-destructive/20 rounded-sm px-4 py-3 mb-1">
+                <div className="flex items-start gap-2">
+                  <Lock className="h-3.5 w-3.5 text-destructive mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-[10px] font-mono text-destructive uppercase tracking-wider mb-1">Access Restricted</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{restrictedReason}</p>
+                  </div>
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center gap-3 pt-3 border-t border-border/50 flex-wrap">
               {restricted ? (
