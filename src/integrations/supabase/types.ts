@@ -14,7 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      access_requests: {
+        Row: {
+          country: string
+          created_at: string
+          crp_acknowledged: boolean
+          department_type: string | null
+          document_categories: string[] | null
+          email: string
+          email_verified: boolean
+          evaluation_purpose: string
+          full_name: string
+          id: string
+          jurisdiction: string | null
+          nda_required: boolean
+          organization: string
+          purpose_detail: string | null
+          requested_level: string
+          reviewer_notes: string | null
+          status: string
+          title_role: string
+          updated_at: string
+          verification_expires_at: string | null
+          verification_token: string | null
+        }
+        Insert: {
+          country: string
+          created_at?: string
+          crp_acknowledged?: boolean
+          department_type?: string | null
+          document_categories?: string[] | null
+          email: string
+          email_verified?: boolean
+          evaluation_purpose: string
+          full_name: string
+          id?: string
+          jurisdiction?: string | null
+          nda_required?: boolean
+          organization: string
+          purpose_detail?: string | null
+          requested_level: string
+          reviewer_notes?: string | null
+          status?: string
+          title_role: string
+          updated_at?: string
+          verification_expires_at?: string | null
+          verification_token?: string | null
+        }
+        Update: {
+          country?: string
+          created_at?: string
+          crp_acknowledged?: boolean
+          department_type?: string | null
+          document_categories?: string[] | null
+          email?: string
+          email_verified?: boolean
+          evaluation_purpose?: string
+          full_name?: string
+          id?: string
+          jurisdiction?: string | null
+          nda_required?: boolean
+          organization?: string
+          purpose_detail?: string | null
+          requested_level?: string
+          reviewer_notes?: string | null
+          status?: string
+          title_role?: string
+          updated_at?: string
+          verification_expires_at?: string | null
+          verification_token?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
