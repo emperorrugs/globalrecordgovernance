@@ -129,6 +129,7 @@ import CredibilitySignals from "./pages/CredibilitySignals";
 import UnifiedTransformation from "./pages/UnifiedTransformation";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import SubmissionReady from "./pages/SubmissionReady";
+import AdminDashboard from "./pages/AdminDashboard";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
@@ -238,6 +239,7 @@ const App = () => (
             <Route path="/terms-of-service" element={<AppLayout><TermsOfService /></AppLayout>} />
             <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
+            <Route path="/admin" element={<AppLayout><AdminDashboard /></AppLayout>} />
 
             {/* Submission Hub */}
             <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />
