@@ -129,6 +129,7 @@ import CredibilitySignals from "./pages/CredibilitySignals";
 import UnifiedTransformation from "./pages/UnifiedTransformation";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import SubmissionReady from "./pages/SubmissionReady";
+import AdminDashboard from "./pages/AdminDashboard";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import NotFound from "./pages/NotFound";
