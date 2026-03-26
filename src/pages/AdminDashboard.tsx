@@ -26,6 +26,7 @@ interface AccessRequest {
   email_verified: boolean;
   crp_acknowledged: boolean;
   nda_required: boolean;
+  jurisdiction: string | null;
   reviewer_notes: string | null;
   created_at: string;
   updated_at: string;
