@@ -197,6 +197,34 @@ const ArchiveDownloads = () => (
           </div>
         ))}
 
+        <div className="governance-card">
+          <div className="flex items-start gap-4 mb-4">
+            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
+            <div>
+              <h2 className="font-serif text-lg font-semibold">Quick Reference Materials</h2>
+              <p className="text-xs text-muted-foreground mt-1">Executive summaries for institutional distribution and outreach</p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="/documents/GRGF_Executive_Summary_LinkedIn_Brief.pdf"
+              download
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Executive Summary (LinkedIn Brief)
+            </a>
+            <a
+              href="/documents/GRGF_One_Pager.pdf"
+              download
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors"
+            >
+              <Download className="h-3.5 w-3.5" />
+              Marketing One-Pager
+            </a>
+          </div>
+        </div>
+
         <div className="governance-card border-l-2 border-l-accent">
           <p className="text-sm text-foreground leading-relaxed">
             All digital books follow the Controlled Distribution Protocol (CRP v1.0). Documents are hash-sealed, version-controlled, and subject to no silent edits. Canadian Patent No. CA 3,300,102 — Invented and Owned by Tarek Wahid.
