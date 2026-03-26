@@ -163,6 +163,18 @@ const ArchiveDownloads = () => (
               </div>
             </div>
 
+            {restricted && restrictedReason && (
+              <div className="bg-destructive/5 border border-destructive/20 rounded-sm px-4 py-3 mb-1">
+                <div className="flex items-start gap-2">
+                  <Lock className="h-3.5 w-3.5 text-destructive mt-0.5 shrink-0" />
+                  <div>
+                    <p className="text-[10px] font-mono text-destructive uppercase tracking-wider mb-1">Access Restricted</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{restrictedReason}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="flex items-center gap-3 pt-3 border-t border-border/50 flex-wrap">
               {restricted ? (
                 <Link
