@@ -18,6 +18,7 @@ import ArchivePartners from "./pages/archive/ArchivePartners";
 import ArchiveLegalIP from "./pages/archive/ArchiveLegalIP";
 import ArchiveMasterIndex from "./pages/archive/ArchiveMasterIndex";
 import ArchiveDownloads from "./pages/archive/ArchiveDownloads";
+import ArchiveIntelligent from "./pages/archive/ArchiveIntelligent";
 
 // Core institutional pages
 import SystemArchitecture from "./pages/SystemArchitecture";
@@ -275,6 +276,7 @@ const App = () => (
             <Route path="/archive/legal-ip" element={<ArchiveLayout><ArchiveLegalIP /></ArchiveLayout>} />
             <Route path="/archive/master-index" element={<ArchiveLayout><ArchiveMasterIndex /></ArchiveLayout>} />
             <Route path="/archive/downloads" element={<ArchiveLayout><ArchiveDownloads /></ArchiveLayout>} />
+            <Route path="/archive/intelligent" element={<ArchiveLayout><ArchiveIntelligent /></ArchiveLayout>} />
 
             {/* Legacy redirects */}
             <Route path="/about" element={<Navigate to="/" replace />} />
