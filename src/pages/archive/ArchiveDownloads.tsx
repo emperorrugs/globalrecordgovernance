@@ -222,6 +222,22 @@ const ArchiveDownloads = () => (
               <Download className="h-3.5 w-3.5" />
               Marketing One-Pager
             </a>
+            <a
+              href="/documents/GRGF_Resume_Executif_LinkedIn_FR.pdf"
+              download
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              Résumé exécutif (Français)
+            </a>
+            <a
+              href="/documents/GRGF_Une_Page_FR.pdf"
+              download
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              Une page (Français)
+            </a>
           </div>
         </div>
 
