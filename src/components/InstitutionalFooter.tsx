@@ -89,11 +89,11 @@ export function InstitutionalFooter() {
         </p>
 
         {/* Bottom bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-[10px] font-mono text-muted-foreground/20 tracking-[0.15em] uppercase">
             GRGF · Governance Integrity Infrastructure
           </p>
-          <div className="flex items-center gap-5 flex-wrap">
+          <div className="flex items-center gap-3 sm:gap-5 flex-wrap">
             <Link to="/safeguards-trust" className="text-[10px] text-muted-foreground/30 hover:text-accent font-mono uppercase tracking-[0.12em] transition-colors duration-300">{t("footer.evidence")}</Link>
             <Link to="/sitemap" className="text-[10px] text-muted-foreground/30 hover:text-accent font-mono uppercase tracking-[0.12em] transition-colors duration-300">{t("footer.sitemap")}</Link>
             <Link to="/privacy-policy" className="text-[10px] text-muted-foreground/30 hover:text-accent font-mono uppercase tracking-[0.12em] transition-colors duration-300">{t("footer.privacy")}</Link>

@@ -10,7 +10,7 @@ const layers = [
     layer: 1,
     name: "Event Capture & Normalization",
     icon: Database,
-    color: "bg-blue-500",
+    color: "bg-primary",
     description: "Schema-based ingestion of institutional events: actions, decisions, transactions, and obligation deadline expiry detection.",
     tech: "Events are normalized against a governance taxonomy, validated for authority scope, and classified before entering the evidence pipeline.",
     components: ["Event Normalizer", "Classification Engine", "Obligation Monitor", "Schema Validator"],
@@ -20,7 +20,7 @@ const layers = [
     layer: 2,
     name: "Policy Decision Engine",
     icon: Scale,
-    color: "bg-violet-500",
+    color: "bg-accent",
     description: "Deterministic rule evaluation against governance protocols. Every event is assessed for compliance, authorization, and omission detection.",
     tech: "OPA (Open Policy Agent) evaluates events against codified governance rules. Non-compliance is documented. Omissions are auto-generated for unmet obligations.",
     components: ["OPA Rule Engine", "Compliance Evaluator", "Omission Detector", "Authorization Gate"],
@@ -30,7 +30,7 @@ const layers = [
     layer: 3,
     name: "Evidence Backbone",
     icon: HardDrive,
-    color: "bg-emerald-500",
+    color: "bg-primary",
     description: "Append-only record store establishing integrity, provenance, and temporal immutability for all governance events.",
     tech: "Write-Once Read-Many (WORM) storage in Canada-only sovereign regions. Records are append-only — no modification, deletion, or overwrite is physically possible.",
     components: ["WORM Storage", "Record Sequencer", "Provenance Tracker", "Temporal Index"],
@@ -40,7 +40,7 @@ const layers = [
     layer: 4,
     name: "Cryptographic Anchoring",
     icon: Shield,
-    color: "bg-amber-500",
+    color: "bg-accent",
     description: "SHA-256/512 hash sealing at point of record finalization. Each sealed record produces an independently verifiable integrity proof.",
     tech: "Hash chains establish tamper-evidence. CICE attestations (Cryptographic Integrity Certificates of Evidence) provide court-grade provenance.",
     components: ["SHA-256 Hasher", "Merkle Chain Builder", "CICE Generator", "Manifest Publisher"],
@@ -50,7 +50,7 @@ const layers = [
     layer: 5,
     name: "Verification API",
     icon: FileCheck,
-    color: "bg-cyan-500",
+    color: "bg-primary",
     description: "Public endpoints enabling any party to independently verify record existence and integrity without content access.",
     tech: "RESTful API exposing hash verification, record existence checks, and integrity audit reconstruction endpoints. No authentication required for verification.",
     components: ["Hash Verifier API", "Existence Prover", "Audit Reconstructor", "Status Endpoint"],
@@ -60,7 +60,7 @@ const layers = [
     layer: 6,
     name: "Federation & Interoperability",
     icon: Globe,
-    color: "bg-rose-500",
+    color: "bg-accent",
     description: "Cross-border node synchronization with canonical schema versioning. Multi-node federation enabling international governance verification.",
     tech: "Tier 1/2/3 federation nodes with canonical schemas, versioned APIs, and conformance testing. Each node is independently survivable.",
     components: ["Node Sync Protocol", "Schema Registry", "Conformance Tester", "Federation Gateway"],
@@ -71,8 +71,8 @@ const systemComparison = {
   A: {
     name: "System A — Evidence Backbone",
     subtitle: "Integrity, policy evaluation, and public proofs",
-    color: "border-emerald-500",
-    accent: "text-emerald-600 dark:text-emerald-400",
+    color: "border-primary",
+    accent: "text-foreground",
     features: [
       "Append-only event store",
       "OPA policy engine integration",
@@ -85,8 +85,8 @@ const systemComparison = {
   B: {
     name: "System B — Document Pipeline",
     subtitle: "Air-gapped ingestion, classification, and omission detection",
-    color: "border-violet-500",
-    accent: "text-violet-600 dark:text-violet-400",
+    color: "border-accent",
+    accent: "text-accent",
     features: [
       "Air-gapped from System A",
       "Document ingestion & OCR",
@@ -272,12 +272,12 @@ export default function Architecture() {
             <div className="flex items-center justify-center gap-3 mt-4 py-3 border border-dashed border-border bg-muted/20">
               <span className="text-[10px] font-mono text-muted-foreground">SYSTEM B</span>
               <div className="flex items-center gap-1">
-                <div className="w-8 h-px bg-violet-500" />
+                <div className="w-8 h-px bg-accent" />
                 <Wifi className="h-3 w-3 text-muted-foreground" />
-                <div className="w-8 h-px bg-emerald-500" />
+                <div className="w-8 h-px bg-primary" />
               </div>
               <span className="text-[10px] font-mono text-muted-foreground">SYSTEM A</span>
-              <span className="text-[9px] font-mono text-amber-600 dark:text-amber-400 ml-2">HASHED METADATA ONLY</span>
+              <span className="text-[9px] font-mono text-accent ml-2">HASHED METADATA ONLY</span>
             </div>
           </div>
         </section>
@@ -319,9 +319,9 @@ export default function Architecture() {
             <h2 className="font-mono text-xs tracking-[0.2em] text-accent font-semibold mb-8">AUTHORITY CLASSIFICATION</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { icon: Lock, title: "Immutable Archive", desc: "Hash-sealed, write-once records with cryptographic integrity proofs. Authoritative source of truth.", status: "AUTHORITATIVE", color: "border-t-emerald-500" },
-                { icon: Scale, title: "Governance OS", desc: "Document-based rules, charters, processes, and stewardship protocols. Not software — governance logic.", status: "AUTHORITATIVE", color: "border-t-blue-500" },
-                { icon: Globe, title: "Digital Platform", desc: "Read-only public interface. References authority — never replaces it. Non-authoritative.", status: "REFERENCE", color: "border-t-muted-foreground/30" },
+                { icon: Lock, title: "Immutable Archive", desc: "Hash-sealed, write-once records with cryptographic integrity proofs. Authoritative source of truth.", status: "AUTHORITATIVE", color: "border-t-primary" },
+                { icon: Scale, title: "Governance OS", desc: "Document-based rules, charters, processes, and stewardship protocols. Not software — governance logic.", status: "AUTHORITATIVE", color: "border-t-accent" },
+                { icon: Globe, title: "Digital Platform", desc: "Read-only public interface. References authority — never replaces it. Non-authoritative.", status: "REFERENCE", color: "border-t-muted" },
               ].map((item) => (
                 <div key={item.title} className={cn("border border-border border-t-2 bg-card p-5", item.color)}>
                   <item.icon className="h-5 w-5 text-accent mb-3" />

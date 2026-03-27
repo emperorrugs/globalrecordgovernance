@@ -128,7 +128,7 @@ const Index = () => {
       subtitle: "Governance Foundation",
       description: "The constitutional backbone — governance principles, international compliance, anti-capture clauses, and the institutional trust architecture for sovereign digital infrastructure.",
       icon: Scale,
-      gradient: "radial-gradient(ellipse at 30% 100%, hsl(195 100% 50% / 0.06), transparent 60%)",
+      gradient: "radial-gradient(ellipse at 30% 100%, hsl(var(--accent) / 0.08), transparent 60%)",
       delay: 100,
       links: [
         { label: "Governance Framework", path: "/governance-framework", icon: Landmark },
@@ -149,7 +149,7 @@ const Index = () => {
       subtitle: "Technical Blueprint",
       description: "The engineering core — six-layer deterministic architecture, append-only records, hash-chain integrity, DPI stack positioning, and deployment scenarios.",
       icon: Cpu,
-      gradient: "radial-gradient(ellipse at 50% 100%, hsl(211 100% 50% / 0.06), transparent 60%)",
+      gradient: "radial-gradient(ellipse at 50% 100%, hsl(var(--primary) / 0.08), transparent 60%)",
       delay: 200,
       links: [
         { label: "System Architecture", path: "/architecture", icon: Cpu },
@@ -170,7 +170,7 @@ const Index = () => {
       subtitle: "Capacity Building",
       description: "The knowledge institute — professional certification, training curricula, institutional readiness, pilot evaluation, and the sovereign deployment pathway.",
       icon: GraduationCap,
-      gradient: "radial-gradient(ellipse at 70% 100%, hsl(160 70% 42% / 0.06), transparent 60%)",
+      gradient: "radial-gradient(ellipse at 70% 100%, hsl(var(--accent) / 0.08), transparent 60%)",
       delay: 300,
       links: [
         { label: "GRGF Academy", path: "/academy", icon: GraduationCap },
@@ -198,11 +198,11 @@ const Index = () => {
       <header className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
         {/* Background ambient orbs */}
         <div className="absolute top-[-30%] right-[-15%] w-[800px] h-[800px] rounded-full opacity-[0.035]"
-          style={{ background: "radial-gradient(circle, hsl(195 100% 50%), transparent 50%)" }} />
+          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)" }} />
         <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-[0.025]"
-          style={{ background: "radial-gradient(circle, hsl(160 70% 42%), transparent 50%)" }} />
+          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)" }} />
         <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-[0.02] -translate-x-1/2"
-          style={{ background: "radial-gradient(circle, hsl(211 100% 50%), transparent 50%)" }} />
+          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)" }} />
 
         {/* Title */}
         <div className="relative text-center max-w-5xl mx-auto">

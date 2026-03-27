@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { PageTransition } from "@/components/PageTransition";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
@@ -301,7 +302,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         <main id="main-content" className="flex-1" role="main">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
         <InstitutionalFooter />
       </div>
