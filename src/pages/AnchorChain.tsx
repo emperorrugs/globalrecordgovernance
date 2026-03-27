@@ -72,7 +72,7 @@ const AnchorChain = () => {
             </p>
           </div>
           <h1 className="institutional-heading text-3xl md:text-5xl font-semibold leading-tight">
-            GRGF Anchor Chain
+            GRGF Anchor Chain™
           </h1>
           <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-2xl">
             Real-time verification of governance records through the Six-Layer Deterministic Architecture. 
