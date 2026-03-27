@@ -19,15 +19,15 @@ export default {
         mono: ["JetBrains Mono", "Courier New", "monospace"],
       },
       fontSize: {
-        "display-xl": ["5rem", { lineHeight: "1.0", letterSpacing: "-0.04em" }],
-        "display": ["3.75rem", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
-        "heading-1": ["2.75rem", { lineHeight: "1.1", letterSpacing: "-0.025em" }],
-        "heading-2": ["2rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
-        "heading-3": ["1.25rem", { lineHeight: "1.25", letterSpacing: "-0.01em" }],
+        "display-xl": ["5.5rem", { lineHeight: "0.92", letterSpacing: "-0.045em" }],
+        "display": ["4rem", { lineHeight: "0.95", letterSpacing: "-0.035em" }],
+        "heading-1": ["2.75rem", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        "heading-2": ["2rem", { lineHeight: "1.12", letterSpacing: "-0.025em" }],
+        "heading-3": ["1.25rem", { lineHeight: "1.25", letterSpacing: "-0.015em" }],
         "body-lg": ["1.125rem", { lineHeight: "1.75" }],
         "body": ["0.9375rem", { lineHeight: "1.75" }],
         "caption": ["0.8125rem", { lineHeight: "1.55" }],
-        "overline": ["0.6875rem", { lineHeight: "1.4", letterSpacing: "0.1em" }],
+        "overline": ["0.6875rem", { lineHeight: "1.4", letterSpacing: "0.12em" }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -110,7 +110,7 @@ export default {
           to: { height: "0" },
         },
         "fade-in": {
-          from: { opacity: "0", transform: "translateY(16px)" },
+          from: { opacity: "0", transform: "translateY(20px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in-slow": {
@@ -118,8 +118,12 @@ export default {
           to: { opacity: "1" },
         },
         "slide-up": {
-          from: { opacity: "0", transform: "translateY(32px)" },
+          from: { opacity: "0", transform: "translateY(40px)" },
           to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in-right": {
+          from: { opacity: "0", transform: "translateX(30px)" },
+          to: { opacity: "1", transform: "translateX(0)" },
         },
         "shimmer": {
           "0%": { backgroundPosition: "-200% 0" },
@@ -127,22 +131,38 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": { opacity: "0.4" },
-          "50%": { opacity: "0.8" },
+          "50%": { opacity: "0.9" },
         },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-6px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "scale-in": {
+          from: { opacity: "0", transform: "scale(0.92)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+        "blur-in": {
+          from: { opacity: "0", filter: "blur(12px)" },
+          to: { opacity: "1", filter: "blur(0)" },
+        },
+        "line-grow": {
+          from: { width: "0" },
+          to: { width: "100%" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "fade-in-slow": "fade-in-slow 1.2s ease-out forwards",
-        "slide-up": "slide-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-in": "fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "fade-in-slow": "fade-in-slow 1.4s ease-out forwards",
+        "slide-up": "slide-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "slide-in-right": "slide-in-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "shimmer": "shimmer 3s linear infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
+        "scale-in": "scale-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "blur-in": "blur-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "line-grow": "line-grow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards",
       },
     },
   },
