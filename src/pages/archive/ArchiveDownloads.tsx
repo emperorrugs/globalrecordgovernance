@@ -240,6 +240,42 @@ const ArchiveDownloads = () => (
 
         <div className="governance-card">
           <div className="flex items-start gap-4 mb-4">
+            <BookOpen className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
+            <div>
+              <h2 className="font-serif text-lg font-semibold">Sovereign Authority Edition — 2026</h2>
+              <p className="text-xs text-muted-foreground mt-1">Definitive inventor-controlled presentation — public interest stewardship model</p>
+              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · 17 PAGES · LEVEL 1</span>
+            </div>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
+            The optimal institutional presentation featuring the Inventor-Controlled Stewardship Model, Six-Layer Deterministic Architecture, Anti-Capture Clauses (AC-01 to AC-05), 10-year ROI modeling, and enterprise valuation scenarios.
+          </p>
+          <a href="/documents/GRGF_Sovereign_Authority_Edition_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            <Download className="h-3.5 w-3.5" />
+            Download Sovereign Edition (PDF)
+          </a>
+        </div>
+
+        <div className="governance-card">
+          <div className="flex items-start gap-4 mb-4">
+            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
+            <div>
+              <h2 className="font-serif text-lg font-semibold">Comprehensive Value Proposition &amp; Stakeholder Analysis</h2>
+              <p className="text-xs text-muted-foreground mt-1">Full maximum-depth economic analysis — all scenarios, all stakeholders, all horizons</p>
+              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · 29 PAGES · LEVEL 1</span>
+            </div>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
+            Complete value proposition across 6 stakeholder categories, 120+ applications, $18.3B–$96.2B projections, 5 historical what-if cases ($113.2B documented losses), and future projections to 2040.
+          </p>
+          <a href="/documents/GRGF_Value_Proposition_Complete_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
+            <Download className="h-3.5 w-3.5" />
+            Download Value Proposition (PDF)
+          </a>
+        </div>
+
+        <div className="governance-card">
+          <div className="flex items-start gap-4 mb-4">
             <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
             <div>
               <h2 className="font-serif text-lg font-semibold">Quick Reference Materials</h2>
