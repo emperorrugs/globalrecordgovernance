@@ -64,7 +64,7 @@ const sections: NavSection[] = [
     ],
   },
   {
-    id: "anchor-chain", label: "Anchor Chain", icon: Link2,
+    id: "anchor-chain", label: "Anchor Chain™", icon: Link2,
     items: [
       { title: "Verification System", path: "/anchor-chain", desc: "Core governance verification engine" },
       { title: "Live Chain Monitor", path: "/anchor-chain#live-chain", desc: "Real-time record tracking" },
