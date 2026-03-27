@@ -97,19 +97,30 @@ const ArchiveOverview = () => (
     <section className="px-8 py-8 md:px-12 lg:px-16">
       <div className="max-w-5xl">
         <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-[0.15em] mb-6">
-          Access by Stakeholder Role
+          Quick Access & Stakeholder Sections
         </p>
         <div className="grid gap-6 sm:grid-cols-2">
-          {cards.map(({ to, icon: Icon, title, desc, access, docCount, restricted }) => (
+          {cards.map(({ to, icon: Icon, title, desc, access, docCount, restricted, highlight }) => (
             <Link
               key={to}
               to={to}
-              className="governance-card group flex flex-col justify-between hover:border-accent/50"
+              className={`governance-card group flex flex-col justify-between transition-all duration-300 ${
+                highlight
+                  ? "border-accent/40 bg-accent/5 hover:border-accent hover:shadow-lg hover:shadow-accent/10"
+                  : "hover:border-accent/50"
+              }`}
             >
               <div>
                 <div className="flex items-start gap-3 mb-4">
                   <Icon className={`h-5 w-5 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
-                  <h2 className="font-serif text-base font-semibold">{title}</h2>
+                  <div>
+                    <h2 className="font-serif text-base font-semibold">{title}</h2>
+                    {highlight && (
+                      <span className="inline-flex items-center gap-1 mt-1 px-2 py-0.5 bg-accent/15 text-accent text-[9px] font-mono rounded-sm tracking-wider">
+                        <Printer className="h-2.5 w-2.5" /> PRINTABLE & DOWNLOADABLE
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
               </div>
