@@ -298,6 +298,34 @@ const ArchiveDownloads = () => (
           <div className="flex items-start gap-4 mb-4">
             <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
             <div>
+              <h2 className="font-serif text-lg font-semibold">Complete Project Proposal — Expanded Edition</h2>
+              <p className="text-xs text-muted-foreground mt-1">28-page institutional proposal with case studies, sensitivity analysis, charts & visualizations</p>
+              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
+            </div>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
+            Full expanded proposal featuring 5 sectoral case studies, 10-year sensitivity analysis ($27.1B–$206.8B), historical counterfactuals ($113.2B documented losses), Six-Layer Architecture radar, risk mitigation heatmaps, and enterprise valuation scenarios.
+          </p>
+          <div className="flex items-center gap-3 flex-wrap">
+            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
+              <Download className="h-3.5 w-3.5" />
+              Download (English)
+            </a>
+            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
+              <Globe className="h-3.5 w-3.5" />
+              Français
+            </a>
+            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
+              <Globe className="h-3.5 w-3.5" />
+              العربية
+            </a>
+          </div>
+        </div>
+
+        <div className="governance-card">
+          <div className="flex items-start gap-4 mb-4">
+            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
+            <div>
               <h2 className="font-serif text-lg font-semibold">Quick Reference Materials</h2>
               <p className="text-xs text-muted-foreground mt-1">Executive summaries for institutional distribution and outreach</p>
             </div>
