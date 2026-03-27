@@ -14,82 +14,88 @@
 
 @layer base {
   :root {
-    /* ═══ Warm Gold / Amber System ═══ */
+    /* ═══ Clean White + Microsoft 4-Color System ═══ */
 
-    --background: 45 80% 65%;
-    --foreground: 30 10% 10%;
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
 
-    --card: 45 70% 92%;
-    --card-foreground: 30 10% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 13% 18%;
 
-    --popover: 45 70% 92%;
-    --popover-foreground: 30 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
 
-    /* Primary — Deep Black */
-    --primary: 30 10% 8%;
-    --primary-foreground: 45 80% 65%;
+    /* Primary — Microsoft Blue */
+    --primary: 200 100% 47%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary */
-    --secondary: 42 50% 82%;
-    --secondary-foreground: 30 10% 25%;
+    /* Secondary — Microsoft Green */
+    --secondary: 79 100% 36%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted */
-    --muted: 42 40% 78%;
-    --muted-foreground: 30 8% 40%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
 
-    /* Accent — Rich Amber */
-    --accent: 38 90% 50%;
-    --accent-foreground: 30 10% 8%;
+    /* Accent — Microsoft Yellow */
+    --accent: 42 100% 50%;
+    --accent-foreground: 220 13% 18%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 11 100% 54%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 30% 60%;
-    --input: 42 40% 85%;
-    --ring: 38 90% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 100% 47%;
 
     --radius: 0.75rem;
 
     /* ── Sidebar ── */
-    --sidebar-background: 42 60% 88%;
-    --sidebar-foreground: 30 10% 30%;
-    --sidebar-primary: 30 10% 8%;
-    --sidebar-primary-foreground: 45 80% 65%;
-    --sidebar-accent: 42 50% 82%;
-    --sidebar-accent-foreground: 30 10% 10%;
-    --sidebar-border: 40 30% 70%;
-    --sidebar-ring: 38 90% 50%;
+    --sidebar-background: 220 14% 97%;
+    --sidebar-foreground: 220 9% 36%;
+    --sidebar-primary: 200 100% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 93%;
+    --sidebar-accent-foreground: 220 13% 18%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 200 100% 47%;
 
-    /* ── Extended Palette ── */
-    --gold: 40 90% 50%;
-    --gold-light: 42 80% 62%;
-    --gold-hover: 38 95% 42%;
-    --navy-deep: 30 10% 8%;
-    --navy: 30 10% 15%;
-    --sovereign-green: 30 10% 8%;
-    --slate-inst: 40 20% 50%;
-    --surface: 45 65% 70%;
-    --surface2: 42 50% 82%;
-    --emerald-trust: 38 90% 50%;
-    --link: 30 10% 8%;
-    --link-hover: 30 10% 20%;
-    --info: 38 90% 50%;
-    --warning: 30 70% 45%;
-    --success: 38 90% 50%;
-    --gc-red: 0 72% 42%;
-    --wb-blue: 30 10% 15%;
+    /* ── Microsoft 4-Color Tokens ── */
+    --ms-red: 11 100% 54%;
+    --ms-green: 79 100% 36%;
+    --ms-blue: 200 100% 47%;
+    --ms-yellow: 42 100% 50%;
+
+    /* ── Extended Palette (mapped to Microsoft colors) ── */
+    --gold: 42 100% 50%;
+    --gold-light: 42 90% 65%;
+    --gold-hover: 42 100% 42%;
+    --navy-deep: 220 13% 18%;
+    --navy: 220 13% 26%;
+    --sovereign-green: 79 100% 36%;
+    --slate-inst: 220 9% 46%;
+    --surface: 220 14% 96%;
+    --surface2: 220 14% 93%;
+    --emerald-trust: 79 100% 36%;
+    --link: 200 100% 47%;
+    --link-hover: 200 100% 38%;
+    --info: 200 100% 47%;
+    --warning: 42 100% 50%;
+    --success: 79 100% 36%;
+    --gc-red: 11 100% 54%;
+    --wb-blue: 200 100% 47%;
 
     /* Glow System */
-    --glow-accent: 38 90% 50%;
-    --glow-soft: 42 40% 75%;
+    --glow-accent: 200 100% 47%;
+    --glow-soft: 200 60% 80%;
 
     /* Semantic */
-    --interactive: 30 10% 8%;
-    --highlight: 38 90% 50%;
-    --support-error: 0 72% 45%;
-    --support-success: 38 90% 50%;
-    --support-warning: 30 70% 45%;
-    --support-info: 38 90% 50%;
+    --interactive: 200 100% 47%;
+    --highlight: 42 100% 50%;
+    --support-error: 11 100% 54%;
+    --support-success: 79 100% 36%;
+    --support-warning: 42 100% 50%;
+    --support-info: 200 100% 47%;
 
     /* Typography */
     --serif: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
