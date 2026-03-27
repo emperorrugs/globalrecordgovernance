@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
   BookOpen, Shield, Cpu, GraduationCap, ArrowRight,
@@ -120,6 +120,21 @@ const StatPill = ({ value, label }: { value: string; label: string }) => (
 /* ══════════════════════════════════════════ INDEX ══════════════════════════════════════════ */
 const Index = () => {
   const { t } = useLanguage();
+  const heroRef = useRef<HTMLElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const rect = heroRef.current.getBoundingClientRect();
+        if (rect.bottom > 0) {
+          setScrollY(window.scrollY);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const doors: DoorProps[] = [
     {
@@ -195,17 +210,17 @@ const Index = () => {
       />
 
       {/* ═══════════════ HERO — Apple Keynote Style ═══════════════ */}
-      <header className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
-        {/* Background ambient orbs */}
-        <div className="absolute top-[-30%] right-[-15%] w-[800px] h-[800px] rounded-full opacity-[0.035]"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)" }} />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-[0.025]"
-          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)" }} />
-        <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-[0.02] -translate-x-1/2"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)" }} />
+      <header ref={heroRef} className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
+        {/* Background ambient orbs — parallax layers */}
+        <div className="absolute top-[-30%] right-[-15%] w-[800px] h-[800px] rounded-full opacity-[0.035] will-change-transform"
+          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translateY(${scrollY * 0.15}px) scale(${1 + scrollY * 0.0002})` }} />
+        <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-[0.025] will-change-transform"
+          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)", transform: `translateY(${scrollY * -0.1}px) scale(${1 + scrollY * 0.00015})` }} />
+        <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-[0.02] -translate-x-1/2 will-change-transform"
+          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translate(-50%, ${scrollY * 0.08}px)` }} />
 
-        {/* Title */}
-        <div className="relative text-center max-w-5xl mx-auto">
+        {/* Title — subtle parallax on content */}
+        <div className="relative text-center max-w-5xl mx-auto will-change-transform" style={{ transform: `translateY(${scrollY * 0.12}px)`, opacity: Math.max(0, 1 - scrollY * 0.0015) }}>
           <FadeIn delay={0}>
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-foreground/[0.03] border border-foreground/[0.06] mb-10">
               <div className="w-2 h-2 rounded-full bg-accent/60 animate-pulse-glow" />
