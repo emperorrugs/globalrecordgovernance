@@ -90,6 +90,10 @@ export default {
         info: "hsl(var(--info))",
         warning: "hsl(var(--warning))",
         success: "hsl(var(--success))",
+        "ms-red": "hsl(var(--ms-red))",
+        "ms-green": "hsl(var(--ms-green))",
+        "ms-blue": "hsl(var(--ms-blue))",
+        "ms-yellow": "hsl(var(--ms-yellow))",
       },
       borderRadius: {
         lg: "var(--radius)",
