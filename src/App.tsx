@@ -242,6 +242,7 @@ const App = () => (
             <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
             <Route path="/admin" element={<AppLayout><AdminDashboard /></AppLayout>} />
+            <Route path="/anchor-chain" element={<AppLayout><AnchorChain /></AppLayout>} />
 
             {/* Submission Hub */}
             <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />
