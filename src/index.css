@@ -14,82 +14,82 @@
 
 @layer base {
   :root {
-    /* ═══ Apple-Inspired Luminous Dark System ═══ */
+    /* ═══ Warm Gold / Amber System ═══ */
 
-    --background: 220 12% 4%;
-    --foreground: 0 0% 98%;
+    --background: 45 80% 65%;
+    --foreground: 30 10% 10%;
 
-    --card: 220 10% 8%;
-    --card-foreground: 0 0% 98%;
+    --card: 45 70% 92%;
+    --card-foreground: 30 10% 10%;
 
-    --popover: 220 10% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 45 70% 92%;
+    --popover-foreground: 30 10% 10%;
 
-    /* Primary — Apple Blue */
-    --primary: 211 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary — Deep Black */
+    --primary: 30 10% 8%;
+    --primary-foreground: 45 80% 65%;
 
     /* Secondary */
-    --secondary: 220 8% 12%;
-    --secondary-foreground: 220 6% 60%;
+    --secondary: 42 50% 82%;
+    --secondary-foreground: 30 10% 25%;
 
     /* Muted */
-    --muted: 220 8% 10%;
-    --muted-foreground: 220 6% 44%;
+    --muted: 42 40% 78%;
+    --muted-foreground: 30 8% 40%;
 
-    /* Accent — Vivid Cyan */
-    --accent: 195 100% 50%;
-    --accent-foreground: 220 12% 4%;
+    /* Accent — Rich Amber */
+    --accent: 38 90% 50%;
+    --accent-foreground: 30 10% 8%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 8% 14%;
-    --input: 220 8% 12%;
-    --ring: 195 100% 50%;
+    --border: 40 30% 60%;
+    --input: 42 40% 85%;
+    --ring: 38 90% 50%;
 
     --radius: 0.75rem;
 
     /* ── Sidebar ── */
-    --sidebar-background: 220 14% 3.5%;
-    --sidebar-foreground: 220 6% 60%;
-    --sidebar-primary: 195 100% 50%;
-    --sidebar-primary-foreground: 220 12% 4%;
-    --sidebar-accent: 220 8% 9%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 220 8% 9%;
-    --sidebar-ring: 195 100% 50%;
+    --sidebar-background: 42 60% 88%;
+    --sidebar-foreground: 30 10% 30%;
+    --sidebar-primary: 30 10% 8%;
+    --sidebar-primary-foreground: 45 80% 65%;
+    --sidebar-accent: 42 50% 82%;
+    --sidebar-accent-foreground: 30 10% 10%;
+    --sidebar-border: 40 30% 70%;
+    --sidebar-ring: 38 90% 50%;
 
     /* ── Extended Palette ── */
-    --gold: 40 90% 52%;
-    --gold-light: 42 80% 64%;
-    --gold-hover: 38 95% 44%;
-    --navy-deep: 220 16% 2.5%;
-    --navy: 220 10% 8%;
-    --sovereign-green: 160 70% 42%;
-    --slate-inst: 220 8% 18%;
-    --surface: 220 10% 6%;
-    --surface2: 220 8% 10%;
-    --emerald-trust: 160 70% 42%;
-    --link: 211 100% 62%;
-    --link-hover: 211 100% 72%;
-    --info: 211 100% 56%;
-    --warning: 40 90% 52%;
-    --success: 160 70% 42%;
+    --gold: 40 90% 50%;
+    --gold-light: 42 80% 62%;
+    --gold-hover: 38 95% 42%;
+    --navy-deep: 30 10% 8%;
+    --navy: 30 10% 15%;
+    --sovereign-green: 30 10% 8%;
+    --slate-inst: 40 20% 50%;
+    --surface: 45 65% 70%;
+    --surface2: 42 50% 82%;
+    --emerald-trust: 38 90% 50%;
+    --link: 30 10% 8%;
+    --link-hover: 30 10% 20%;
+    --info: 38 90% 50%;
+    --warning: 30 70% 45%;
+    --success: 38 90% 50%;
     --gc-red: 0 72% 42%;
-    --wb-blue: 213 100% 13%;
+    --wb-blue: 30 10% 15%;
 
     /* Glow System */
-    --glow-accent: 195 100% 50%;
-    --glow-soft: 220 12% 14%;
+    --glow-accent: 38 90% 50%;
+    --glow-soft: 42 40% 75%;
 
     /* Semantic */
-    --interactive: 195 100% 50%;
-    --highlight: 211 100% 56%;
-    --support-error: 0 72% 51%;
-    --support-success: 160 70% 42%;
-    --support-warning: 40 90% 52%;
-    --support-info: 211 100% 56%;
+    --interactive: 30 10% 8%;
+    --highlight: 38 90% 50%;
+    --support-error: 0 72% 45%;
+    --support-success: 38 90% 50%;
+    --support-warning: 30 70% 45%;
+    --support-info: 38 90% 50%;
 
     /* Typography */
     --serif: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
