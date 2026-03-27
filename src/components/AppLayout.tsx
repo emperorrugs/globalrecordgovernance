@@ -64,6 +64,14 @@ const sections: NavSection[] = [
     ],
   },
   {
+    id: "anchor-chain", label: "Anchor Chain", icon: Link2,
+    items: [
+      { title: "Verification System", path: "/anchor-chain", desc: "Core governance verification engine" },
+      { title: "Live Chain Monitor", path: "/anchor-chain#live-chain", desc: "Real-time record tracking" },
+      { title: "Architecture Layers", path: "/anchor-chain#architecture", desc: "Six-layer deterministic model" },
+    ],
+  },
+  {
     id: "architecture", label: "Architecture", icon: Cpu,
     items: [
       { title: "System Architecture", path: "/architecture" },
@@ -73,7 +81,6 @@ const sections: NavSection[] = [
       { title: "Scalability", path: "/scalability" },
       { title: "Technical Blueprints", path: "/blueprints" },
       { title: "Developer Portal", path: "/developer" },
-      { title: "Anchor Chain", path: "/anchor-chain" },
     ],
   },
   {
