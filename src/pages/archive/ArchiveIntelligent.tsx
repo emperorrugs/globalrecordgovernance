@@ -158,6 +158,9 @@ const archiveDocuments: ArchiveDocument[] = [
   // Institutional access docs
   { id: "IN-001", title: "Phase 3 Visual Operating Model", description: "Visual operating model for institutional evaluation (institutional access)", department: "executive", category: "Reports & Studies", access: "institutional", format: "PDF", version: "1.0", date: "2026-01-30", downloadUrl: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf", tags: ["operating-model", "visual"] },
 
+  // === 126 APPLICATIONS CATALOG ===
+  { id: "APP-001", title: "126 Applications & Use Cases — Complete Catalog", description: "Full catalog of 126 applications across 12 sectors with value projections ($15.4B–$61.7B), implementation horizons, and standards alignment", department: "executive", category: "Reports & Studies", access: "public", format: "PDF", version: "1.0", date: "2026-03-27", downloadUrl: "/documents/GRGF_126_Applications_Complete_2026.pdf", tags: ["applications", "use-cases", "value"] },
+
   // === VOLUMES (Trilingual) ===
   { id: "VOL-001", title: "Volume I — Master Complete Edition (English)", description: "438+ page definitive consolidated reference including architecture, ROI model, anti-capture clauses, and operational toolkit", department: "executive", category: "Digital Books", access: "public", format: "PDF", version: "3.0", date: "2026-03-27", downloadUrl: "/documents/GRGF_Vol1_Master_Complete_Edition.pdf", tags: ["volume", "master", "english"] },
   { id: "VOL-002", title: "Volume I — Édition Maîtresse Complète (Français)", description: "Référence institutionnelle définitive — architecture, modèle de valeur, clauses anti-capture", department: "executive", category: "Digital Books", access: "public", format: "PDF", version: "3.0", date: "2026-03-27", downloadUrl: "/documents/GRGF_Vol1_Master_Complete_Edition_FR.pdf", tags: ["volume", "master", "french"] },
