@@ -4,7 +4,7 @@ import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
   Database, Landmark, Languages, TrendingUp, Code, BarChart3, ClipboardList,
-  ChevronUp, ChevronDown,
+  ChevronUp, ChevronDown, Sparkles,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -22,6 +22,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+
 /* ── LAYER 1: Institutional Authority ── */
 const layer1 = [
   { title: "Home", path: "/", icon: Home },
@@ -91,7 +92,7 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
   return (
     <div>
       {label && !collapsed && (
-        <p className="px-3 pt-5 pb-2 text-overline font-mono text-sidebar-foreground/30 uppercase tracking-widest">{label}</p>
+        <p className="px-4 pt-6 pb-2 text-overline font-mono text-accent/40 uppercase tracking-[0.15em]">{label}</p>
       )}
       {items.map((item) => {
         const isActive = location.pathname === item.path;
@@ -101,14 +102,14 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
             to={item.path}
             onClick={onNavigate}
             className={cn(
-              "flex items-center gap-3 px-3 py-2.5 text-sm transition-all duration-200",
+              "flex items-center gap-3 px-4 py-2 mx-2 text-sm rounded-md transition-all duration-300",
               isActive
-                ? "bg-sidebar-accent text-accent font-medium border-l-2 border-accent -ml-px"
-                : "text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent/40 border-l-2 border-transparent -ml-px"
+                ? "bg-accent/10 text-accent font-medium"
+                : "text-sidebar-foreground/50 hover:text-sidebar-foreground hover:bg-sidebar-accent/50"
             )}
             title={collapsed ? item.title : undefined}
           >
-            <item.icon className="h-4 w-4 shrink-0" />
+            <item.icon className={cn("h-3.5 w-3.5 shrink-0 transition-colors", isActive ? "text-accent" : "")} />
             {!collapsed && <span className="text-caption">{item.title}</span>}
           </Link>
         );
@@ -132,13 +133,11 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
   React.useEffect(() => {
     const el = navRef.current;
     if (!el) return;
-    // Multiple checks to handle layout timing
     checkScroll();
     const t1 = setTimeout(checkScroll, 200);
     const t2 = setTimeout(checkScroll, 600);
     el.addEventListener("scroll", checkScroll, { passive: true });
     window.addEventListener("resize", checkScroll);
-    // ResizeObserver catches layout changes reliably
     const ro = new ResizeObserver(checkScroll);
     ro.observe(el);
     return () => {
@@ -159,13 +158,13 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
       {canScrollUp && (
         <button
           onClick={() => scrollTo("top")}
-          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-b from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1.5 bg-gradient-to-b from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/30 hover:text-accent transition-colors"
           aria-label="Scroll navigation up"
         >
-          <ChevronUp className="h-4 w-4" />
+          <ChevronUp className="h-3.5 w-3.5" />
         </button>
       )}
-      <nav ref={navRef} className="h-0 flex-grow py-2 px-2 overflow-y-auto" aria-label="Main navigation">
+      <nav ref={navRef} className="h-0 flex-grow py-2 overflow-y-auto" aria-label="Main navigation">
         <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
         <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
         <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
@@ -175,10 +174,10 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
       {canScrollDown && (
         <button
           onClick={() => scrollTo("bottom")}
-          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1 bg-gradient-to-t from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/40 hover:text-accent transition-colors"
+          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1.5 bg-gradient-to-t from-sidebar via-sidebar/90 to-transparent text-sidebar-foreground/30 hover:text-accent transition-colors"
           aria-label="Scroll navigation down"
         >
-          <ChevronDown className="h-4 w-4" />
+          <ChevronDown className="h-3.5 w-3.5" />
         </button>
       )}
     </div>
@@ -206,21 +205,22 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <ReadingProgress />
       <KeyboardShortcuts />
       <BackToTop />
-      {/* Skip to content - accessibility */}
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:text-sm">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:text-sm focus:rounded-md">
         Skip to main content
       </a>
+
       {/* Desktop Sidebar */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-64 flex flex-col bg-sidebar border-r border-sidebar-border z-50 shrink-0 overflow-hidden">
-          <div className="p-5 border-b border-sidebar-border shrink-0">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
+        <aside className="sticky top-0 h-screen w-72 flex flex-col bg-sidebar border-r border-sidebar-border z-50 shrink-0 overflow-hidden">
+          {/* Logo */}
+          <div className="p-6 border-b border-sidebar-border shrink-0">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 group-hover:border-accent/40 transition-all duration-300">
+                <span className="text-accent text-sm font-mono font-bold">G</span>
               </div>
               <div>
-                <h1 className="font-serif text-sm font-semibold tracking-wide text-primary-foreground">GRGF</h1>
-                <p className="text-overline text-sidebar-foreground/40 leading-tight">
+                <h1 className="font-serif text-base font-semibold tracking-wide text-foreground">GRGF</h1>
+                <p className="text-[10px] font-mono text-sidebar-foreground/30 uppercase tracking-[0.12em] leading-tight">
                   Governance Framework
                 </p>
               </div>
@@ -229,8 +229,13 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
           <SidebarNav />
 
+          {/* Bottom */}
           <div className="p-5 border-t border-sidebar-border shrink-0">
-            <p className="text-overline text-sidebar-foreground/30 leading-relaxed">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
+              <p className="text-[10px] font-mono text-accent/60 uppercase tracking-widest">System Active</p>
+            </div>
+            <p className="text-[10px] text-sidebar-foreground/25 font-mono leading-relaxed">
               Digital Public Infrastructure
               <br />
               Standards Authority · Est. 2024
@@ -243,66 +248,70 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1 min-w-0 flex flex-col">
         <ViewModeBanner />
         <SimulationBanner />
-        <div className="flex items-center justify-between border-b border-border px-5 py-2.5 gap-2 bg-card">
-          <div className="flex items-center gap-2 min-w-0">
-            {/* Mobile hamburger */}
-            {isMobile && (
-              <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-                <SheetTrigger asChild>
-                  <button className="p-1.5 hover:bg-muted transition-colors shrink-0">
-                    <Menu className="h-5 w-5" />
-                  </button>
-                </SheetTrigger>
-                <SheetContent side="left" className="w-64 bg-sidebar text-sidebar-foreground p-0 flex flex-col">
-                  <SheetTitle className="sr-only">Navigation</SheetTitle>
-                  <div className="p-5 border-b border-sidebar-border">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-accent flex items-center justify-center">
-                        <span className="text-accent-foreground text-xs font-mono font-bold">G</span>
-                      </div>
-                      <div>
-                        <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
-                        <p className="text-overline text-sidebar-foreground/40 leading-tight">
-                          Governance Framework
-                        </p>
+        
+        {/* Top Bar */}
+        <div className="sticky top-0 z-40 glass-subtle border-b border-border/50">
+          <div className="flex items-center justify-between px-5 py-2.5 gap-2">
+            <div className="flex items-center gap-2 min-w-0">
+              {isMobile && (
+                <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+                  <SheetTrigger asChild>
+                    <button className="p-2 hover:bg-accent/10 rounded-md transition-colors shrink-0">
+                      <Menu className="h-5 w-5" />
+                    </button>
+                  </SheetTrigger>
+                  <SheetContent side="left" className="w-72 bg-sidebar text-sidebar-foreground p-0 flex flex-col border-r border-sidebar-border">
+                    <SheetTitle className="sr-only">Navigation</SheetTitle>
+                    <div className="p-5 border-b border-sidebar-border">
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                          <span className="text-accent text-xs font-mono font-bold">G</span>
+                        </div>
+                        <div>
+                          <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
+                          <p className="text-[10px] font-mono text-sidebar-foreground/30 uppercase tracking-widest leading-tight">
+                            Governance Framework
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <SidebarNav onNavigate={() => setMobileOpen(false)} />
-                </SheetContent>
-              </Sheet>
-            )}
-            <Breadcrumbs />
-          </div>
-          <div className="flex items-center gap-2.5 shrink-0">
-            <Link
-              to="/controlled-access"
-              className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-accent text-accent-foreground text-overline font-semibold tracking-wide transition-colors hover:bg-accent/90"
-            >
-              <Lock className="h-3 w-3" />
-              {isMobile ? "Access" : "Request Assessment"}
-            </Link>
-            <button
-              onClick={nextLang}
-              className="flex items-center gap-1 px-2 py-1 text-overline font-mono text-muted-foreground hover:text-accent transition-colors"
-              aria-label={`Switch language (current: ${lang.toUpperCase()})`}
-            >
-              <Languages className="h-3.5 w-3.5" />
-              <span className="font-semibold">{langLabel[lang]}</span>
-            </button>
-            <ViewModeFirstVisitTooltip>
-              <div className="flex items-center gap-1.5 ml-1">
-                <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                  {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
-                </span>
-                <Switch checked={!isPlain} onCheckedChange={toggle} />
-                <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
-                  {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
-                </span>
-              </div>
-            </ViewModeFirstVisitTooltip>
+                    <SidebarNav onNavigate={() => setMobileOpen(false)} />
+                  </SheetContent>
+                </Sheet>
+              )}
+              <Breadcrumbs />
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <Link
+                to="/controlled-access"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-accent text-accent-foreground text-overline font-semibold tracking-wide rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02]"
+              >
+                <Lock className="h-3 w-3" />
+                {isMobile ? "Access" : "Request Assessment"}
+              </Link>
+              <button
+                onClick={nextLang}
+                className="flex items-center gap-1 px-2.5 py-1.5 text-overline font-mono text-muted-foreground hover:text-accent rounded-md hover:bg-accent/5 transition-all duration-300"
+                aria-label={`Switch language (current: ${lang.toUpperCase()})`}
+              >
+                <Languages className="h-3.5 w-3.5" />
+                <span className="font-semibold">{langLabel[lang]}</span>
+              </button>
+              <ViewModeFirstVisitTooltip>
+                <div className="flex items-center gap-1.5 ml-1">
+                  <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                    {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
+                  </span>
+                  <Switch checked={!isPlain} onCheckedChange={toggle} />
+                  <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground")}>
+                    {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
+                  </span>
+                </div>
+              </ViewModeFirstVisitTooltip>
+            </div>
           </div>
         </div>
+
         <main id="main-content" className="flex-1" role="main">
           {children}
         </main>

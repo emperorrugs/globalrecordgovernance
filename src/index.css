@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 /* ── RTL Support ── */
 [dir="rtl"] {
-  font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  font-family: 'Noto Sans Arabic', 'Space Grotesk', sans-serif;
 }
 
 [dir="rtl"] .border-l-2 {
@@ -26,77 +26,81 @@
 
 @layer base {
   :root {
-    /* ── GC/WB Institutional Standard ── */
-    /* Government of Canada Navy #26374A + World Bank Blue #002244 */
-    /* Clean, high-contrast, WCAG AA compliant, formal governance palette */
+    /* ── 2026 Award-Winning: Luminous Obsidian ── */
+    /* Ultra-dark with warm undertones + electric accents */
 
-    /* Backgrounds — Deep Sovereign Navy */
-    --background: 210 32% 10%;
-    --foreground: 210 20% 95%;
+    /* Backgrounds — Rich Obsidian with warm depth */
+    --background: 220 20% 6%;
+    --foreground: 45 10% 93%;
 
-    --card: 210 28% 14%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 18% 10%;
+    --card-foreground: 45 10% 93%;
 
-    --popover: 210 28% 14%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 220 18% 10%;
+    --popover-foreground: 45 10% 93%;
 
-    /* Primary — Clean White */
-    --primary: 210 20% 95%;
-    --primary-foreground: 210 32% 10%;
+    /* Primary — Warm Ivory */
+    --primary: 45 20% 92%;
+    --primary-foreground: 220 20% 6%;
 
-    /* Secondary — Mid Navy */
-    --secondary: 210 25% 18%;
-    --secondary-foreground: 210 15% 75%;
+    /* Secondary — Deep Charcoal */
+    --secondary: 220 15% 14%;
+    --secondary-foreground: 45 8% 70%;
 
-    /* Muted — Institutional Grey-Navy */
-    --muted: 210 20% 16%;
-    --muted-foreground: 210 10% 55%;
+    /* Muted — Subtle Depth */
+    --muted: 220 14% 12%;
+    --muted-foreground: 220 8% 50%;
 
-    /* Accent — GC Institutional Blue #2B5797 → HSL 213 55% 38% */
-    --accent: 213 55% 38%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent — Electric Amber / Sovereign Gold */
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 20% 6%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 22%;
-    --input: 210 20% 20%;
-    --ring: 213 55% 38%;
+    --border: 220 12% 16%;
+    --input: 220 14% 14%;
+    --ring: 38 92% 50%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
-    /* ── Sidebar — Deep Sovereign Navy ── */
-    --sidebar-background: 210 35% 8%;
-    --sidebar-foreground: 210 15% 82%;
-    --sidebar-primary: 213 55% 38%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 25% 16%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 210 20% 20%;
-    --sidebar-ring: 213 55% 38%;
+    /* ── Sidebar — Obsidian Glass ── */
+    --sidebar-background: 220 22% 5%;
+    --sidebar-foreground: 45 8% 75%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 45 10% 93%;
+    --sidebar-border: 220 12% 12%;
+    --sidebar-ring: 38 92% 50%;
 
-    /* ── Design Tokens ── */
-    --gold: 43 76% 52%;              /* Institutional Gold — awards & emphasis */
-    --gold-light: 43 60% 62%;
-    --gold-hover: 43 80% 42%;
-    --navy-deep: 210 40% 7%;
-    --navy: 210 28% 14%;
-    --sovereign-green: 152 56% 38%;   /* GC/WB compliant green */
-    --slate-inst: 210 18% 24%;
-    --surface: 210 30% 11%;
-    --surface2: 210 25% 15%;
-    --emerald-trust: 152 56% 38%;
-    --link: 213 55% 48%;
-    --link-hover: 213 55% 58%;
+    /* ── Extended Palette ── */
+    --gold: 38 92% 50%;
+    --gold-light: 40 80% 62%;
+    --gold-hover: 36 95% 42%;
+    --navy-deep: 220 25% 4%;
+    --navy: 220 18% 10%;
+    --sovereign-green: 160 60% 42%;
+    --slate-inst: 220 14% 20%;
+    --surface: 220 18% 8%;
+    --surface2: 220 16% 12%;
+    --emerald-trust: 160 60% 42%;
+    --link: 38 70% 55%;
+    --link-hover: 38 92% 60%;
     --info: 200 75% 50%;
-    --warning: 43 76% 52%;
-    --success: 152 56% 38%;
-    --gc-red: 0 72% 42%;             /* Government of Canada FIP red */
-    --wb-blue: 213 100% 13%;         /* World Bank deep blue */
+    --warning: 38 92% 50%;
+    --success: 160 60% 42%;
+    --gc-red: 0 72% 42%;
+    --wb-blue: 213 100% 13%;
+
+    /* Glow effects */
+    --glow-accent: 38 92% 50%;
+    --glow-soft: 220 20% 20%;
+
     /* Typography */
-    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    --sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
-    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
   }
 }
 
@@ -119,13 +123,28 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--serif);
-    letter-spacing: -0.015em;
-    line-height: 1.15;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     font-weight: 600;
   }
 
   code, pre {
     font-family: var(--mono);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent) / 0.4);
   }
 }
 
@@ -133,22 +152,39 @@
   .institutional-heading {
     font-family: var(--serif);
     @apply text-foreground;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
   }
 
   .section-divider {
-    @apply w-12 h-px bg-accent;
+    @apply w-16 h-0.5;
+    background: linear-gradient(90deg, hsl(var(--accent)), transparent);
   }
 
   .governance-card {
     background: hsl(var(--card));
-    @apply border border-border p-6 transition-all duration-300;
-    border-radius: 2px;
+    @apply border border-border p-6 transition-all duration-500;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .governance-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.03), transparent 60%);
+    transition: opacity 0.5s ease;
+  }
+
+  .governance-card:hover::before {
+    opacity: 1;
   }
 
   .governance-card:hover {
-    border-color: hsl(var(--accent) / 0.4);
-    box-shadow: 0 2px 16px -4px hsl(var(--navy) / 0.06);
+    border-color: hsl(var(--accent) / 0.25);
+    box-shadow: 0 0 40px -12px hsl(var(--accent) / 0.08);
+    transform: translateY(-2px);
   }
 
   .surface-elevated {
@@ -161,14 +197,15 @@
   }
 
   .canonical-quote {
-    @apply border-l-2 border-accent pl-6 py-3 text-muted-foreground;
+    @apply border-l-2 pl-6 py-3 text-muted-foreground;
+    border-color: hsl(var(--accent));
     font-family: var(--serif);
     font-style: italic;
     font-size: 1.125rem;
     line-height: 1.6;
   }
 
-  /* Sovereign badge styles */
+  /* Badge styles */
   .badge-pilot {
     background: hsl(var(--gold) / 0.1);
     color: hsl(var(--gold-hover));
@@ -197,21 +234,83 @@
   /* Institutional divider */
   .inst-divider {
     @apply w-full h-px;
-    background: linear-gradient(to right, transparent, hsl(var(--border)), transparent);
+    background: linear-gradient(to right, transparent, hsl(var(--accent) / 0.3), transparent);
   }
 
   /* Premium card variant */
   .governance-card-elevated {
     background: hsl(var(--card));
-    @apply border border-border p-8 transition-all duration-300;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px hsl(var(--navy) / 0.04);
+    @apply border border-border p-8 transition-all duration-500;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .governance-card-elevated::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(160deg, hsl(var(--accent) / 0.04), transparent 50%);
+    transition: opacity 0.5s ease;
+  }
+
+  .governance-card-elevated:hover::before {
+    opacity: 1;
   }
 
   .governance-card-elevated:hover {
-    border-color: hsl(var(--accent) / 0.3);
-    box-shadow: 0 4px 24px -6px hsl(var(--navy) / 0.08);
-    transform: translateY(-1px);
+    border-color: hsl(var(--accent) / 0.2);
+    box-shadow: 
+      0 8px 32px -8px hsl(var(--accent) / 0.06),
+      0 0 0 1px hsl(var(--accent) / 0.05);
+    transform: translateY(-3px);
+  }
+
+  /* Glass effect */
+  .glass {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  }
+
+  .glass-subtle {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* Ambient glow */
+  .glow-accent {
+    box-shadow: 0 0 60px -20px hsl(var(--accent) / 0.15);
+  }
+
+  .glow-accent-sm {
+    box-shadow: 0 0 30px -10px hsl(var(--accent) / 0.12);
+  }
+
+  /* Grain texture overlay */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.015;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+
+  /* Accent line decorators */
+  .accent-line-left {
+    position: relative;
+  }
+  .accent-line-left::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, hsl(var(--accent)), transparent);
   }
 }
 
