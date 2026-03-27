@@ -1,105 +1,90 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
-  BookOpen, Shield, Cpu, GraduationCap, ArrowRight,
-  Layers, Lock, Globe, Award, Scale, Network,
-  Database, FileText, Eye, Landmark, ChevronDown,
-  Sparkles, Zap, CheckCircle2,
+  ArrowRight, Shield, Cpu, GraduationCap, Scale,
+  Globe, Lock, Eye, ChevronDown, Database,
+  Layers, Network, BarChart3, FileText, Link2,
+  CheckCircle2, Zap, BookOpen,
 } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
 import { FadeIn } from "@/components/FadeIn";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-/* ── Door Card (Apple-style interactive volume) ── */
-interface DoorProps {
-  number: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  gradient: string;
-  links: { label: string; path: string; icon: React.ComponentType<{ className?: string }> }[];
-  delay: number;
-}
+/* ── Metric Counter ── */
+const Metric = ({ value, label, suffix = "" }: { value: string; label: string; suffix?: string }) => (
+  <div className="text-center group">
+    <p className="text-3xl md:text-4xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors duration-500">
+      {value}<span className="text-accent/60 text-xl">{suffix}</span>
+    </p>
+    <p className="text-[11px] text-muted-foreground/30 mt-1.5 tracking-wide uppercase font-medium">{label}</p>
+  </div>
+);
 
-const DoorCard = ({ number, title, subtitle, description, icon: Icon, gradient, links, delay }: DoorProps) => {
-  const [open, setOpen] = useState(false);
+/* ── Volume Card (Apple product card style) ── */
+const VolumeCard = ({ num, title, subtitle, desc, icon: Icon, links, delay }: {
+  num: string; title: string; subtitle: string; desc: string;
+  icon: React.ComponentType<{ className?: string }>;
+  links: { label: string; path: string }[];
+  delay: number;
+}) => {
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <FadeIn delay={delay}>
-      <div
-        className="group relative flex flex-col h-full"
-        onClick={() => setOpen(!open)}
-        onKeyDown={(e) => e.key === "Enter" && setOpen(!open)}
-        role="button"
-        tabIndex={0}
-        aria-expanded={open}
-      >
-        {/* Main Door */}
+      <div className="group relative">
         <div
-          className="relative flex-1 border border-border/20 overflow-hidden transition-all duration-700 cursor-pointer hover:border-foreground/10"
-          style={{ minHeight: "460px", borderRadius: "20px" }}
+          className="relative border border-border/15 bg-card/30 overflow-hidden cursor-pointer transition-all duration-700 hover:border-accent/15 hover:bg-card/50"
+          style={{ borderRadius: "20px", minHeight: "380px" }}
+          onClick={() => setExpanded(!expanded)}
+          role="button"
+          tabIndex={0}
+          aria-expanded={expanded}
+          onKeyDown={e => e.key === "Enter" && setExpanded(!expanded)}
         >
-          {/* Ambient glow */}
+          {/* Volume number watermark */}
+          <div className="absolute top-6 right-8 text-[100px] font-black text-foreground/[0.02] leading-none select-none">
+            {num}
+          </div>
+
+          <div className="relative flex flex-col justify-end h-full p-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/5 border border-accent/10 mb-5 w-fit">
+              <Icon className="h-3.5 w-3.5 text-accent" />
+              <span className="text-[10px] font-medium text-muted-foreground/50 tracking-wide">{subtitle}</span>
+            </div>
+
+            <h3 className="text-2xl md:text-3xl font-bold tracking-tight leading-[1.1] group-hover:text-accent transition-colors duration-500 mb-3">
+              {title}
+            </h3>
+            <p className="text-[14px] text-muted-foreground/40 leading-[1.7] max-w-sm mb-6">{desc}</p>
+
+            <div className="flex items-center gap-2 text-accent text-[14px] font-semibold group-hover:gap-3 transition-all duration-500">
+              <span>{expanded ? "Close" : "Explore"}</span>
+              <ArrowRight className={`h-4 w-4 transition-transform duration-500 ${expanded ? "rotate-90" : "group-hover:translate-x-1"}`} />
+            </div>
+          </div>
+
+          {/* Bottom accent line */}
           <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
-            style={{ background: gradient }}
+            className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700"
+            style={{ background: "linear-gradient(90deg, hsl(var(--accent)), transparent)" }}
           />
-
-          {/* Subtle grain */}
-          <div className="absolute inset-0 grain opacity-20" />
-
-          {/* Volume watermark */}
-          <div className="absolute top-8 right-8">
-            <p className="text-[120px] font-black text-foreground/[0.025] leading-none select-none">{number}</p>
-          </div>
-
-          {/* Content */}
-          <div className="relative flex flex-col justify-end h-full p-8 md:p-10">
-            <div className="mb-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-foreground/[0.04] border border-foreground/[0.06] mb-6">
-                <Icon className="h-3.5 w-3.5 text-accent" />
-                <span className="text-[11px] font-medium text-muted-foreground/60 tracking-wide">{subtitle}</span>
-              </div>
-              <h3 className="text-[28px] md:text-[34px] font-bold tracking-tight leading-[1.05] group-hover:text-accent transition-colors duration-700">
-                {title}
-              </h3>
-            </div>
-            <p className="text-[15px] text-muted-foreground/50 leading-[1.65] mb-8 max-w-[360px]">
-              {description}
-            </p>
-
-            {/* CTA */}
-            <div className="flex items-center gap-2.5 text-accent text-[15px] font-semibold group-hover:gap-4 transition-all duration-500">
-              <span>Explore Volume</span>
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1.5 transition-transform duration-500" />
-            </div>
-
-            {/* Bottom accent */}
-            <div
-              className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-1000"
-              style={{ background: "linear-gradient(90deg, hsl(var(--accent)), transparent)" }}
-            />
-          </div>
         </div>
 
-        {/* Chapter list */}
-        <div className={`overflow-hidden transition-all duration-700 ${open ? "max-h-[600px] opacity-100 mt-4" : "max-h-0 opacity-0 mt-0"}`}
+        {/* Expandable chapters */}
+        <div
+          className={`overflow-hidden transition-all duration-700 ${expanded ? "max-h-[500px] opacity-100 mt-3" : "max-h-0 opacity-0"}`}
           style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
         >
-          <div className="border border-border/15 bg-card/30 p-5 space-y-0.5" style={{ borderRadius: "16px" }}>
-            <p className="text-[11px] font-medium text-muted-foreground/30 uppercase tracking-[0.1em] px-3 pb-3">Chapters</p>
-            {links.map((link) => (
+          <div className="border border-border/10 bg-card/20 p-4 space-y-0.5" style={{ borderRadius: "14px" }}>
+            {links.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
-                onClick={(e) => e.stopPropagation()}
-                className="flex items-center gap-3 px-3 py-2.5 text-[14px] text-muted-foreground/60 hover:text-accent hover:bg-accent/[0.04] transition-all duration-300"
-                style={{ borderRadius: "10px" }}
+                onClick={e => e.stopPropagation()}
+                className="flex items-center justify-between px-3 py-2.5 text-[13px] text-muted-foreground/50 hover:text-accent hover:bg-accent/5 rounded-lg transition-all duration-200"
               >
-                <link.icon className="h-4 w-4 shrink-0 opacity-60" />
                 <span>{link.label}</span>
-                <ArrowRight className="h-3 w-3 ml-auto opacity-0 group-hover:opacity-30 transition-opacity" />
+                <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-40" />
               </Link>
             ))}
           </div>
@@ -109,15 +94,28 @@ const DoorCard = ({ number, title, subtitle, description, icon: Icon, gradient, 
   );
 };
 
-/* ── Stat Pill ── */
-const StatPill = ({ value, label }: { value: string; label: string }) => (
-  <div className="text-center px-5 py-6 group">
-    <p className="text-2xl md:text-3xl font-bold text-foreground tracking-tight group-hover:text-accent transition-colors duration-500">{value}</p>
-    <p className="text-[11px] font-medium text-muted-foreground/35 uppercase tracking-[0.06em] mt-1.5">{label}</p>
-  </div>
+/* ── Quick Access Card ── */
+const QuickCard = ({ icon: Icon, title, desc, path, delay }: {
+  icon: React.ComponentType<{ className?: string }>; title: string; desc: string; path: string; delay: number;
+}) => (
+  <FadeIn delay={delay}>
+    <Link
+      to={path}
+      className="group flex items-start gap-4 p-5 border border-border/10 bg-card/15 hover:bg-card/40 hover:border-accent/15 transition-all duration-500"
+      style={{ borderRadius: "14px" }}
+    >
+      <div className="w-9 h-9 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/10 transition-all duration-300">
+        <Icon className="h-4 w-4 text-accent/70" />
+      </div>
+      <div className="min-w-0">
+        <h4 className="text-[14px] font-semibold tracking-tight group-hover:text-accent transition-colors duration-300">{title}</h4>
+        <p className="text-[12px] text-muted-foreground/35 leading-relaxed mt-0.5">{desc}</p>
+      </div>
+    </Link>
+  </FadeIn>
 );
 
-/* ══════════════════════════════════════════ INDEX ══════════════════════════════════════════ */
+/* ══════════════════════ INDEX ══════════════════════ */
 const Index = () => {
   const { t } = useLanguage();
   const heroRef = useRef<HTMLElement>(null);
@@ -127,77 +125,50 @@ const Index = () => {
     const handleScroll = () => {
       if (heroRef.current) {
         const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) {
-          setScrollY(window.scrollY);
-        }
+        if (rect.bottom > 0) setScrollY(window.scrollY);
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const doors: DoorProps[] = [
+  const volumes = [
     {
-      number: "I",
-      title: "Framework & Standards",
-      subtitle: "Governance Foundation",
-      description: "The constitutional backbone — governance principles, international compliance, anti-capture clauses, and the institutional trust architecture for sovereign digital infrastructure.",
-      icon: Scale,
-      gradient: "radial-gradient(ellipse at 30% 100%, hsl(var(--accent) / 0.08), transparent 60%)",
-      delay: 100,
+      num: "I", title: "Framework & Standards", subtitle: "Governance Foundation", icon: Scale,
+      desc: "Constitutional backbone — governance principles, international compliance, anti-capture clauses, and institutional trust architecture.",
       links: [
-        { label: "Governance Framework", path: "/governance-framework", icon: Landmark },
-        { label: "The Problem", path: "/the-problem", icon: Eye },
-        { label: "OECD Alignment", path: "/oecd-alignment", icon: Globe },
-        { label: "World Bank Alignment", path: "/world-bank-alignment", icon: Landmark },
-        { label: "UN & UNESCO Alignment", path: "/un-alignment", icon: Globe },
-        { label: "International Compliance", path: "/international-compliance", icon: Shield },
-        { label: "Ethics & Safeguards", path: "/ethics", icon: Scale },
-        { label: "Standards Compliance", path: "/compliance", icon: FileText },
-        { label: "Risk Mitigation", path: "/risk-mitigation", icon: Shield },
-        { label: "Recognition & IP", path: "/recognition", icon: Award },
+        { label: "Governance Framework", path: "/governance-framework" },
+        { label: "OECD Alignment", path: "/oecd-alignment" },
+        { label: "World Bank Alignment", path: "/world-bank-alignment" },
+        { label: "UN & UNESCO", path: "/un-alignment" },
+        { label: "Ethics & Safeguards", path: "/ethics" },
+        { label: "Standards Compliance", path: "/compliance" },
+        { label: "Risk Mitigation", path: "/risk-mitigation" },
       ],
     },
     {
-      number: "II",
-      title: "System & Architecture",
-      subtitle: "Technical Blueprint",
-      description: "The engineering core — six-layer deterministic architecture, append-only records, hash-chain integrity, DPI stack positioning, and deployment scenarios.",
-      icon: Cpu,
-      gradient: "radial-gradient(ellipse at 50% 100%, hsl(var(--primary) / 0.08), transparent 60%)",
-      delay: 200,
+      num: "II", title: "System & Architecture", subtitle: "Technical Blueprint", icon: Cpu,
+      desc: "Engineering core — six-layer deterministic architecture, append-only records, hash-chain integrity, and deployment infrastructure.",
       links: [
-        { label: "System Architecture", path: "/architecture", icon: Cpu },
-        { label: "DPI Stack Position", path: "/dpi-stack", icon: Layers },
-        { label: "Security & Trust", path: "/security-trust", icon: Lock },
-        { label: "Interoperability", path: "/interoperability", icon: Network },
-        { label: "Scalability", path: "/scalability", icon: Database },
-        { label: "Deployment Scenarios", path: "/deployment-scenarios", icon: Globe },
-        { label: "Technical Blueprints", path: "/blueprints", icon: FileText },
-        { label: "Developer Portal", path: "/developer", icon: Cpu },
-        { label: "Simulation Engine", path: "/simulation", icon: Cpu },
-        { label: "Stress Test", path: "/stress-test", icon: Shield },
+        { label: "System Architecture", path: "/architecture" },
+        { label: "DPI Stack Position", path: "/dpi-stack" },
+        { label: "Security & Trust", path: "/security-trust" },
+        { label: "Interoperability", path: "/interoperability" },
+        { label: "Technical Blueprints", path: "/blueprints" },
+        { label: "Anchor Chain", path: "/anchor-chain" },
+        { label: "Developer Portal", path: "/developer" },
       ],
     },
     {
-      number: "III",
-      title: "Academy & Certification",
-      subtitle: "Capacity Building",
-      description: "The knowledge institute — professional certification, training curricula, institutional readiness, pilot evaluation, and the sovereign deployment pathway.",
-      icon: GraduationCap,
-      gradient: "radial-gradient(ellipse at 70% 100%, hsl(var(--accent) / 0.08), transparent 60%)",
-      delay: 300,
+      num: "III", title: "Academy & Certification", subtitle: "Capacity Building", icon: GraduationCap,
+      desc: "Knowledge institute — professional certification, training curricula, institutional readiness, and sovereign deployment pathway.",
       links: [
-        { label: "GRGF Academy", path: "/academy", icon: GraduationCap },
-        { label: "Institutional Readiness", path: "/readiness", icon: Award },
-        { label: "Pilot Evaluation", path: "/pilot-evaluation", icon: FileText },
-        { label: "Deployment Planner", path: "/deployment-planner", icon: Globe },
-        { label: "Maturity Assessment", path: "/maturity", icon: Layers },
-        { label: "Impact Modeling", path: "/impact-modeling", icon: BookOpen },
-        { label: "Financial Model", path: "/financial-model", icon: FileText },
-        { label: "Executive Brief", path: "/executive-brief", icon: FileText },
-        { label: "Case Studies", path: "/case-studies", icon: BookOpen },
-        { label: "Sovereign Deployment", path: "/sovereign-deployment", icon: Landmark },
+        { label: "GRGF Academy", path: "/academy" },
+        { label: "Institutional Readiness", path: "/readiness" },
+        { label: "Pilot Evaluation", path: "/pilot-evaluation" },
+        { label: "Impact Modeling", path: "/impact-modeling" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Deployment Planner", path: "/deployment-planner" },
       ],
     },
   ];
@@ -205,197 +176,156 @@ const Index = () => {
   return (
     <div>
       <SEOHead
-        title="GRGF — Global Record Governance Framework | Digital Public Infrastructure"
-        description="Independent global framework for Digital Public Infrastructure governance. Three volumes: Framework & Standards, System & Architecture, Academy & Certification."
+        title="GRGF — Global Record Governance Framework"
+        description="Independent global framework for Digital Public Infrastructure governance. Sovereign-grade institutional memory and trust verification."
       />
 
-      {/* ═══════════════ HERO — Apple Keynote Style ═══════════════ */}
-      <header ref={heroRef} className="relative min-h-[100vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
-        {/* Background ambient orbs — parallax layers */}
-        <div className="absolute top-[-30%] right-[-15%] w-[800px] h-[800px] rounded-full opacity-[0.035] will-change-transform"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translateY(${scrollY * 0.15}px) scale(${1 + scrollY * 0.0002})` }} />
-        <div className="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full opacity-[0.025] will-change-transform"
-          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)", transform: `translateY(${scrollY * -0.1}px) scale(${1 + scrollY * 0.00015})` }} />
-        <div className="absolute top-[40%] left-[50%] w-[400px] h-[400px] rounded-full opacity-[0.02] -translate-x-1/2 will-change-transform"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translate(-50%, ${scrollY * 0.08}px)` }} />
+      {/* ═══ HERO ═══ */}
+      <header ref={heroRef} className="relative min-h-[92vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
+        {/* Ambient light */}
+        <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] rounded-full opacity-[0.03] will-change-transform"
+          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translateY(${scrollY * 0.12}px)` }} />
+        <div className="absolute bottom-[-15%] left-[-8%] w-[500px] h-[500px] rounded-full opacity-[0.02] will-change-transform"
+          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)", transform: `translateY(${scrollY * -0.08}px)` }} />
 
-        {/* Title — subtle parallax on content */}
-        <div className="relative text-center max-w-5xl mx-auto will-change-transform" style={{ transform: `translateY(${scrollY * 0.12}px)`, opacity: Math.max(0, 1 - scrollY * 0.0015) }}>
+        <div className="relative text-center max-w-4xl mx-auto will-change-transform"
+          style={{ transform: `translateY(${scrollY * 0.1}px)`, opacity: Math.max(0, 1 - scrollY * 0.0012) }}>
+
           <FadeIn delay={0}>
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-foreground/[0.03] border border-foreground/[0.06] mb-10">
-              <div className="w-2 h-2 rounded-full bg-accent/60 animate-pulse-glow" />
-              <span className="text-[11px] font-medium text-muted-foreground/40 tracking-wide">Digital Public Infrastructure · Standards Authority</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-foreground/[0.03] border border-foreground/[0.06] mb-8">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/50 animate-pulse" />
+              <span className="text-[11px] font-medium text-muted-foreground/35 tracking-wide">
+                Digital Public Infrastructure · Trust Layer
+              </span>
             </div>
           </FadeIn>
 
-          <FadeIn delay={80}>
-            <h1 className="display-massive" style={{ fontSize: "clamp(2.6rem, 8vw, 6.5rem)" }}>
-              <span className="text-foreground/25">The</span>
+          <FadeIn delay={60}>
+            <h1 className="display-massive" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
+              <span className="text-foreground/20">The</span>{" "}
+              <span className="bg-gradient-to-r from-accent via-accent to-primary bg-clip-text text-transparent">Global Record</span>
               <br />
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Global Record</span>
-              <br />
-              <span className="text-foreground">Governance</span>
-              <br />
-              <span className="text-foreground/20">Framework</span>
+              <span className="text-foreground">Governance Framework</span>
             </h1>
           </FadeIn>
 
-          <FadeIn delay={180}>
-            <p className="mt-10 text-[17px] md:text-[19px] text-muted-foreground/45 max-w-2xl mx-auto leading-[1.7] tracking-tight">
-              An independent institutional memory and trust verification layer for sovereign digital systems.
+          <FadeIn delay={140}>
+            <p className="mt-8 text-[16px] md:text-[18px] text-muted-foreground/40 max-w-xl mx-auto leading-[1.75] tracking-tight">
+              Sovereign-grade institutional memory and trust verification for digital public infrastructure.
               <em className="text-accent/50 not-italic font-medium"> It records. It preserves. It verifies.</em>
             </p>
           </FadeIn>
 
-          <FadeIn delay={250}>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <FadeIn delay={200}>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Link
                 to="/governance-framework"
-                className="apple-button bg-accent text-accent-foreground px-7 py-3 text-[15px] hover:brightness-110 hover:shadow-lg hover:shadow-accent/15 duration-500"
+                className="apple-button bg-accent text-accent-foreground px-6 py-2.5 text-[14px] hover:brightness-110 hover:shadow-lg hover:shadow-accent/15 duration-500"
               >
-                <Sparkles className="h-4 w-4" />
                 Explore Framework
+                <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
                 to="/controlled-access"
-                className="apple-button bg-foreground/[0.06] text-foreground/80 border border-foreground/[0.08] px-7 py-3 text-[15px] hover:bg-foreground/[0.1] duration-500"
+                className="apple-button bg-foreground/[0.05] text-foreground/70 border border-foreground/[0.08] px-6 py-2.5 text-[14px] hover:bg-foreground/[0.1] duration-500"
               >
                 Request Assessment
               </Link>
             </div>
           </FadeIn>
 
-          <FadeIn delay={320}>
-            <p className="mt-6 text-[10px] font-mono text-muted-foreground/15 tracking-wider">
+          <FadeIn delay={260}>
+            <p className="mt-5 text-[9px] font-mono text-muted-foreground/15 tracking-wider">
               {t("home.patent")}
             </p>
           </FadeIn>
 
-          <FadeIn delay={400}>
-            <div className="mt-16 flex items-center justify-center gap-2 text-muted-foreground/15 animate-float">
-              <ChevronDown className="h-4 w-4" />
-              <span className="text-[11px] font-medium uppercase tracking-[0.12em]">Three Volumes</span>
+          <FadeIn delay={350}>
+            <div className="mt-14 flex items-center justify-center gap-2 text-muted-foreground/15 animate-bounce">
               <ChevronDown className="h-4 w-4" />
             </div>
           </FadeIn>
         </div>
       </header>
 
-      {/* ═══════════════ THREE VOLUMES ═══════════════ */}
-      <section className="relative px-5 md:px-10 lg:px-16 py-24 md:py-36">
-        <div className="max-w-[1440px] mx-auto">
+      {/* ═══ METRICS BAR ═══ */}
+      <section className="px-5 md:px-10 lg:px-14 pb-20">
+        <div className="max-w-5xl mx-auto">
           <FadeIn>
-            <div className="text-center mb-20">
-              <p className="text-[11px] font-medium text-muted-foreground/25 uppercase tracking-[0.12em] mb-4">Select a Volume</p>
-              <h2 className="text-[32px] md:text-[48px] font-bold tracking-tight leading-[1.05]">
-                Three Doors to{" "}
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Governance Trust</span>
-              </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border border-border/10 bg-card/15" style={{ borderRadius: "16px" }}>
+              <Metric value="6" label="Architecture Layers" suffix="-Layer" />
+              <Metric value="126" label="Applications" />
+              <Metric value="$61.7" label="Annual Value" suffix="B" />
+              <Metric value="47" label="Standards Aligned" />
             </div>
           </FadeIn>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
-            {doors.map((door) => (
-              <DoorCard key={door.number} {...door} />
+      {/* ═══ THREE VOLUMES ═══ */}
+      <section className="px-5 md:px-10 lg:px-14 pb-24">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <p className="text-[11px] font-medium text-muted-foreground/20 uppercase tracking-[0.12em] mb-3">Three Volumes</p>
+            <h2 className="text-[28px] md:text-[40px] font-bold tracking-tight leading-[1.05] mb-12">
+              Governance{" "}
+              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Trust Architecture</span>
+            </h2>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {volumes.map((v, i) => (
+              <VolumeCard key={v.num} {...v} delay={i * 100} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════ STATS STRIP ═══════════════ */}
-      <section className="px-5 md:px-10 lg:px-16 pb-24">
-        <div className="max-w-[1440px] mx-auto">
-          <FadeIn>
-            <div
-              className="grid grid-cols-2 md:grid-cols-5 border border-border/15 overflow-hidden"
-              style={{ borderRadius: "16px" }}
-            >
-              {[
-                { label: "Determinism", value: "100%" },
-                { label: "Audit Speed", value: "<30 min" },
-                { label: "Architecture", value: "6-Layer" },
-                { label: "Certification", value: "3-Tier" },
-                { label: "Anti-Capture", value: "5 Clauses" },
-              ].map(({ label, value }, i) => (
-                <div key={label} className={`${i > 0 ? "border-l border-border/10" : ""} ${i >= 2 ? "max-md:border-t max-md:border-border/10" : ""}`}>
-                  <StatPill value={value} label={label} />
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ═══════════════ TRUST INDICATORS ═══════════════ */}
-      <section className="px-5 md:px-10 lg:px-16 pb-24">
-        <div className="max-w-[1440px] mx-auto">
+      {/* ═══ TRUST PILLARS ═══ */}
+      <section className="px-5 md:px-10 lg:px-14 pb-24">
+        <div className="max-w-5xl mx-auto">
           <FadeIn>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { icon: CheckCircle2, title: "OECD · UN · World Bank Aligned", desc: "Mapped to international DPI safeguards and governance maturity frameworks" },
-                { icon: Zap, title: "Deterministic by Design", desc: "Zero discretionary override — every record action follows immutable institutional rules" },
+                { icon: CheckCircle2, title: "OECD · UN · World Bank", desc: "Mapped to international DPI safeguards and governance maturity frameworks" },
+                { icon: Zap, title: "Deterministic by Design", desc: "Zero discretionary override — every action follows immutable institutional rules" },
                 { icon: Shield, title: "Anti-Capture Architecture", desc: "Five constitutional clauses preventing corporate, political, or insider override" },
-              ].map(({ icon: TIcon, title: tTitle, desc }) => (
-                <div
-                  key={tTitle}
-                  className="flex items-start gap-4 p-6 border border-border/10 bg-card/20 hover:bg-card/40 transition-all duration-500"
-                  style={{ borderRadius: "16px" }}
-                >
-                  <div className="mt-0.5 w-9 h-9 rounded-full bg-accent/[0.06] border border-accent/10 flex items-center justify-center shrink-0">
-                    <TIcon className="h-4 w-4 text-accent/70" />
+              ].map(({ icon: TIcon, title: tt, desc }, i) => (
+                <FadeIn key={tt} delay={i * 80}>
+                  <div className="flex items-start gap-4 p-5 border border-border/10 bg-card/15 hover:bg-card/30 transition-all duration-500" style={{ borderRadius: "14px" }}>
+                    <div className="w-8 h-8 rounded-full bg-accent/5 border border-accent/10 flex items-center justify-center shrink-0 mt-0.5">
+                      <TIcon className="h-3.5 w-3.5 text-accent/60" />
+                    </div>
+                    <div>
+                      <h4 className="text-[14px] font-semibold tracking-tight mb-1">{tt}</h4>
+                      <p className="text-[12px] text-muted-foreground/35 leading-relaxed">{desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-[15px] font-semibold tracking-tight mb-1">{tTitle}</h4>
-                    <p className="text-[13px] text-muted-foreground/40 leading-relaxed">{desc}</p>
-                  </div>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* ═══════════════ RESOURCES ═══════════════ */}
-      <section className="px-5 md:px-10 lg:px-16 pb-28">
-        <div className="max-w-[1440px] mx-auto">
+      {/* ═══ QUICK ACCESS ═══ */}
+      <section className="px-5 md:px-10 lg:px-14 pb-28">
+        <div className="max-w-5xl mx-auto">
           <FadeIn>
-            <div
-              className="border border-border/15 bg-card/15 p-8 md:p-14"
-              style={{ borderRadius: "20px" }}
-            >
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <p className="text-[11px] font-medium text-muted-foreground/25 uppercase tracking-[0.12em] mb-4">Beyond the Volumes</p>
-                  <h3 className="text-[26px] md:text-[32px] font-bold tracking-tight leading-[1.1] mb-5">
-                    Digital Archive & Resources
-                  </h3>
-                  <p className="text-[15px] text-muted-foreground/40 leading-[1.7]">
-                    Access the complete institutional archive — publications, research papers, deployment templates, submission packages, and controlled-access institutional documents.
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-2.5">
-                  {[
-                    { label: "Archive", path: "/archive", icon: BookOpen },
-                    { label: "Downloads", path: "/archive/downloads", icon: FileText },
-                    { label: "Submission Hub", path: "/submission-hub", icon: Globe },
-                    { label: "Insights", path: "/insights", icon: Eye },
-                    { label: "Research", path: "/research", icon: BookOpen },
-                    { label: "Controlled Access", path: "/controlled-access", icon: Lock },
-                  ].map(({ label, path, icon: LIcon }) => (
-                    <Link
-                      key={path}
-                      to={path}
-                      className="flex items-center gap-2.5 px-4 py-3 border border-border/10 text-[14px] text-muted-foreground/50 hover:text-accent hover:border-accent/20 hover:bg-accent/[0.03] transition-all duration-300"
-                      style={{ borderRadius: "12px" }}
-                    >
-                      <LIcon className="h-4 w-4 shrink-0 opacity-50" />
-                      <span>{label}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <p className="text-[11px] font-medium text-muted-foreground/20 uppercase tracking-[0.12em] mb-3">Quick Access</p>
+            <h2 className="text-[24px] md:text-[32px] font-bold tracking-tight leading-[1.1] mb-8">
+              Tools & Resources
+            </h2>
           </FadeIn>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <QuickCard icon={BarChart3} title="Impact Modeling" desc="Fiscal projections and ROI analysis" path="/impact-modeling" delay={0} />
+            <QuickCard icon={Link2} title="Anchor Chain" desc="Cryptographic governance verification" path="/anchor-chain" delay={60} />
+            <QuickCard icon={Database} title="Smart Archive" desc="Trilingual institutional repository" path="/archive/intelligent" delay={120} />
+            <QuickCard icon={Globe} title="Submission Hub" desc="OECD, World Bank, UN packages" path="/submission-hub" delay={180} />
+            <QuickCard icon={FileText} title="Downloads" desc="Publications and documentation" path="/archive/downloads" delay={240} />
+            <QuickCard icon={Lock} title="Controlled Access" desc="Institutional verification portal" path="/controlled-access" delay={300} />
+          </div>
         </div>
       </section>
     </div>
