@@ -199,18 +199,18 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         Skip to main content
       </a>
 
-      {/* ── Desktop Sidebar — Carbon UI Shell ── */}
+      {/* ── Desktop Sidebar ── */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-[260px] flex flex-col bg-sidebar border-r border-sidebar-border z-50 shrink-0 overflow-hidden">
+        <aside className="sticky top-0 h-screen w-[260px] flex flex-col bg-sidebar border-r border-sidebar-border/50 z-50 shrink-0 overflow-hidden">
           {/* Header */}
-          <div className="px-5 py-4 border-b border-sidebar-border shrink-0">
+          <div className="px-5 py-5 border-b border-sidebar-border/40 shrink-0">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-lg bg-accent/12 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-300">
-                <span className="text-accent text-xs font-mono font-bold">G</span>
+              <div className="w-9 h-9 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center group-hover:bg-accent/15 transition-all duration-500">
+                <span className="text-accent text-sm font-bold">G</span>
               </div>
               <div>
                 <h1 className="text-sm font-bold tracking-tight text-foreground">GRGF</h1>
-                <p className="text-[9px] font-mono text-muted-foreground/30 uppercase tracking-[0.1em]">
+                <p className="text-[9px] text-muted-foreground/25 tracking-[0.08em]">
                   Governance Framework
                 </p>
               </div>
@@ -220,12 +220,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <SidebarNav />
 
           {/* Footer */}
-          <div className="px-5 py-3 border-t border-sidebar-border shrink-0">
-            <div className="flex items-center gap-2 mb-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              <p className="text-[9px] font-mono text-accent/50 uppercase tracking-[0.1em]">System Active</p>
+          <div className="px-5 py-4 border-t border-sidebar-border/30 shrink-0">
+            <div className="flex items-center gap-2 mb-1.5">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/60 animate-pulse-glow" />
+              <p className="text-[9px] text-accent/40 tracking-[0.08em]">System Active</p>
             </div>
-            <p className="text-[9px] text-muted-foreground/20 font-mono leading-relaxed">
+            <p className="text-[9px] text-muted-foreground/15 leading-relaxed">
               Digital Public Infrastructure<br />Standards Authority · Est. 2024
             </p>
           </div>
@@ -237,27 +237,27 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <ViewModeBanner />
         <SimulationBanner />
 
-        {/* Top Bar — Fluent Command Bar */}
-        <div className="sticky top-0 z-40 acrylic-subtle border-b border-border/30">
-          <div className="flex items-center justify-between px-4 py-2 gap-2">
+        {/* Top Bar */}
+        <div className="sticky top-0 z-40 acrylic-subtle border-b border-border/20">
+          <div className="flex items-center justify-between px-5 py-2.5 gap-3">
             <div className="flex items-center gap-2 min-w-0">
               {isMobile && (
                 <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                   <SheetTrigger asChild>
-                    <button className="p-2 hover:bg-accent/8 rounded-md transition-colors shrink-0">
+                    <button className="p-2 hover:bg-foreground/[0.04] rounded-lg transition-colors duration-300 shrink-0">
                       <Menu className="h-5 w-5" />
                     </button>
                   </SheetTrigger>
-                  <SheetContent side="left" className="w-[260px] bg-sidebar text-sidebar-foreground p-0 flex flex-col border-r border-sidebar-border">
+                  <SheetContent side="left" className="w-[280px] bg-sidebar text-sidebar-foreground p-0 flex flex-col border-r border-sidebar-border/50">
                     <SheetTitle className="sr-only">Navigation</SheetTitle>
-                    <div className="px-5 py-4 border-b border-sidebar-border">
+                    <div className="px-5 py-5 border-b border-sidebar-border/40">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-accent/12 border border-accent/20 flex items-center justify-center">
-                          <span className="text-accent text-xs font-mono font-bold">G</span>
+                        <div className="w-9 h-9 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center">
+                          <span className="text-accent text-sm font-bold">G</span>
                         </div>
                         <div>
                           <h1 className="text-sm font-bold tracking-tight">GRGF</h1>
-                          <p className="text-[9px] font-mono text-muted-foreground/30 uppercase tracking-[0.1em]">
+                          <p className="text-[9px] text-muted-foreground/25 tracking-[0.08em]">
                             Governance Framework
                           </p>
                         </div>
@@ -269,17 +269,17 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               )}
               <Breadcrumbs />
             </div>
-            <div className="flex items-center gap-1.5 shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
               <Link
                 to="/controlled-access"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent text-accent-foreground text-[11px] font-semibold tracking-wide rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:brightness-110"
+                className="apple-button bg-accent text-accent-foreground px-4 py-1.5 text-[12px] font-semibold hover:brightness-110 hover:shadow-lg hover:shadow-accent/15 duration-500"
               >
                 <Lock className="h-3 w-3" />
                 {isMobile ? "Access" : "Request Assessment"}
               </Link>
               <button
                 onClick={nextLang}
-                className="flex items-center gap-1 px-2 py-1.5 text-[11px] font-mono text-muted-foreground/50 hover:text-accent rounded-md hover:bg-accent/5 transition-all duration-200"
+                className="flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] font-medium text-muted-foreground/40 hover:text-accent rounded-lg hover:bg-foreground/[0.04] transition-all duration-300"
                 aria-label={`Switch language (current: ${lang.toUpperCase()})`}
               >
                 <Languages className="h-3.5 w-3.5" />
@@ -287,11 +287,11 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               </button>
               <ViewModeFirstVisitTooltip>
                 <div className="flex items-center gap-1.5 ml-0.5">
-                  <span className={cn("text-[11px] font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
+                  <span className={cn("text-[11px] font-medium", isPlain ? "text-accent" : "text-muted-foreground/30")}>
                     {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
                   </span>
                   <Switch checked={!isPlain} onCheckedChange={toggle} />
-                  <span className={cn("text-[11px] font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
+                  <span className={cn("text-[11px] font-medium", !isPlain ? "text-accent" : "text-muted-foreground/30")}>
                     {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
                   </span>
                 </div>
