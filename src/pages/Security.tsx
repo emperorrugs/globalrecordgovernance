@@ -7,7 +7,7 @@ const accessTiers = [
   {
     level: "Level 1",
     name: "Public Verification",
-    color: "bg-emerald-500",
+    color: "bg-accent",
     clearance: "OPEN",
     access: ["Hash manifest verification", "Record existence queries", "Integrity proof validation", "Public API endpoints"],
     restriction: "Content access prohibited. Metadata only.",
@@ -15,7 +15,7 @@ const accessTiers = [
   {
     level: "Level 2",
     name: "Institutional Access",
-    color: "bg-blue-500",
+    color: "bg-primary",
     clearance: "RESTRICTED",
     access: ["Record metadata retrieval", "Classification-level queries", "Audit trail inspection", "Governance rule review"],
     restriction: "Requires institutional agreement and role-based authorization.",
@@ -23,7 +23,7 @@ const accessTiers = [
   {
     level: "Level 3",
     name: "Stewardship Access",
-    color: "bg-amber-500",
+    color: "bg-primary",
     clearance: "CONTROLLED",
     access: ["Full record content access", "Administrative operations", "Governance rule modification", "Emergency procedures"],
     restriction: "Individual assignment with mandatory audit logging of all actions.",
@@ -60,7 +60,7 @@ export default function Security() {
     <div className="animate-fade-in">
       {/* Hero */}
       <header className="relative border-b border-border bg-gradient-to-br from-background via-primary/2 to-background px-8 py-14 md:px-12 lg:px-16 overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-72 h-72 bg-rose-500/3 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute top-1/2 right-0 w-72 h-72 bg-destructive/3 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
         <div className="relative max-w-5xl">
           <p className="text-overline font-mono text-accent tracking-[0.25em] mb-3">SECURITY ARCHITECTURE</p>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground leading-tight">
@@ -127,9 +127,9 @@ export default function Security() {
                   </h3>
                   <span className={cn(
                     "text-[9px] font-mono px-2 py-0.5 ml-auto",
-                    activeAccess === 0 ? "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400" :
-                    activeAccess === 1 ? "bg-blue-500/15 text-blue-600 dark:text-blue-400" :
-                    "bg-amber-500/15 text-amber-600 dark:text-amber-400"
+                    activeAccess === 0 ? "bg-accent/15 text-accent" :
+                    activeAccess === 1 ? "bg-primary/15 text-primary" :
+                    "bg-accent/15 text-accent"
                   )}>
                     {accessTiers[activeAccess].clearance}
                   </span>
@@ -137,13 +137,13 @@ export default function Security() {
                 <ul className="space-y-2 mb-4">
                   {accessTiers[activeAccess].access.map((a) => (
                     <li key={a} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <CheckCircle className="h-3 w-3 text-emerald-500 shrink-0" />
+                      <CheckCircle className="h-3 w-3 text-accent shrink-0" />
                       {a}
                     </li>
                   ))}
                 </ul>
                 <div className="p-3 bg-muted/30 border border-border">
-                  <p className="text-[10px] font-mono text-amber-600 dark:text-amber-400 mb-1">RESTRICTION</p>
+                  <p className="text-[10px] font-mono text-accent mb-1">RESTRICTION</p>
                   <p className="text-xs text-muted-foreground">{accessTiers[activeAccess].restriction}</p>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function Security() {
                 <div key={dp.id} className="grid grid-cols-[70px_1fr_80px] items-center px-4 py-3 border-b border-border last:border-b-0 hover:bg-accent/3 transition-colors">
                   <span className="text-xs font-mono font-bold text-accent">{dp.id}</span>
                   <p className="text-xs text-muted-foreground pr-4">{dp.principle}</p>
-                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-center">
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-accent/10 text-accent text-center">
                     {dp.status}
                   </span>
                 </div>
@@ -263,9 +263,9 @@ export default function Security() {
                     <span className="text-xs font-mono text-foreground font-semibold w-36 shrink-0">{item.label}</span>
                     <span className="text-xs text-muted-foreground flex-1">{item.owner}</span>
                     {item.vendor ? (
-                      <AlertTriangle className="h-3.5 w-3.5 text-amber-500 shrink-0" />
+                      <AlertTriangle className="h-3.5 w-3.5 text-muted-foreground shrink-0" />
                     ) : (
-                      <Shield className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                      <Shield className="h-3.5 w-3.5 text-accent shrink-0" />
                     )}
                   </div>
                 ))}
@@ -286,9 +286,9 @@ export default function Security() {
             <div className="space-y-2">
               {integrityGuarantees.map((ig, i) => (
                 <div key={i} className="flex items-center gap-3 p-3 border border-border bg-card hover:border-accent/20 transition-colors">
-                  <CheckCircle className="h-4 w-4 text-emerald-500 shrink-0" />
+                  <CheckCircle className="h-4 w-4 text-accent shrink-0" />
                   <p className="text-sm text-muted-foreground flex-1">{ig.guarantee}</p>
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 shrink-0">VERIFIED</span>
+                  <span className="text-[9px] font-mono text-accent shrink-0">VERIFIED</span>
                 </div>
               ))}
             </div>

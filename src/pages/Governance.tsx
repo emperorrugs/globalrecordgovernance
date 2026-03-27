@@ -168,9 +168,9 @@ export default function GovernancePage() {
                     <span className="text-[10px] font-mono text-muted-foreground">{ac.category}</span>
                     <span className={cn(
                       "text-[9px] font-mono px-1.5 py-0.5 text-center",
-                      ac.severity === "ABSOLUTE" ? "bg-rose-500/15 text-rose-600 dark:text-rose-400" :
-                      ac.severity === "CRITICAL" ? "bg-amber-500/15 text-amber-600 dark:text-amber-400" :
-                      "bg-blue-500/15 text-blue-600 dark:text-blue-400"
+                      ac.severity === "ABSOLUTE" ? "bg-destructive/15 text-destructive" :
+                      ac.severity === "CRITICAL" ? "bg-accent/15 text-accent" :
+                      "bg-primary/15 text-primary"
                     )}>
                       {ac.severity}
                     </span>

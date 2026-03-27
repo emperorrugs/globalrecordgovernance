@@ -26,19 +26,19 @@ function DiagramNode({
 }) {
   const colorMap: Record<string, string> = {
     accent: "border-accent/40 bg-accent/10 text-accent",
-    blue: "border-blue-500/40 bg-blue-500/10 text-blue-500",
-    amber: "border-amber-500/40 bg-amber-500/10 text-amber-500",
-    emerald: "border-emerald-500/40 bg-emerald-500/10 text-emerald-500",
-    rose: "border-rose-500/40 bg-rose-500/10 text-rose-500",
-    purple: "border-purple-500/40 bg-purple-500/10 text-purple-500",
+    blue: "border-primary/40 bg-primary/10 text-primary",
+    amber: "border-accent/40 bg-accent/10 text-accent",
+    emerald: "border-accent/40 bg-accent/10 text-accent",
+    rose: "border-destructive/40 bg-destructive/10 text-destructive",
+    purple: "border-primary/40 bg-primary/10 text-primary",
   };
 
   return (
     <div className={cn("relative flex flex-col items-center gap-1 p-3 border rounded-lg text-center min-w-[100px]", colorMap[color] || colorMap.accent, className)}>
       {pulse && (
         <span className="absolute -top-1 -right-1 flex h-3 w-3">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500" />
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+          <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
         </span>
       )}
       <Icon className="h-5 w-5" />
@@ -168,12 +168,12 @@ function DataFlowDiagram() {
                   <div className="flex items-center gap-2">
                     <span className="text-sm font-semibold text-foreground">{step.label}</span>
                     {step.status === "active" ? (
-                      <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                      <CheckCircle2 className="h-3 w-3 text-accent" />
                     ) : (
-                      <AlertTriangle className="h-3 w-3 text-amber-500" />
+                      <AlertTriangle className="h-3 w-3 text-muted-foreground" />
                     )}
                     <span className={cn("text-[9px] font-mono px-1.5 py-0.5 rounded",
-                      step.status === "active" ? "bg-emerald-500/15 text-emerald-600" : "bg-amber-500/15 text-amber-600"
+                      step.status === "active" ? "bg-accent/15 text-accent" : "bg-muted/30 text-muted-foreground"
                     )}>
                       {step.status === "active" ? "OPERATIONAL" : "PLANNED"}
                     </span>
@@ -269,9 +269,9 @@ function ThreatModelDiagram() {
   ];
 
   const severityColors: Record<string, string> = {
-    critical: "bg-rose-500/15 text-rose-600 border-rose-500/30",
-    high: "bg-amber-500/15 text-amber-600 border-amber-500/30",
-    medium: "bg-blue-500/15 text-blue-600 border-blue-500/30",
+    critical: "bg-destructive/15 text-destructive border-destructive/30",
+    high: "bg-accent/15 text-accent border-accent/30",
+    medium: "bg-primary/15 text-primary border-primary/30",
   };
 
   return (
@@ -299,7 +299,7 @@ function ThreatModelDiagram() {
                 </div>
                 <p className="text-xs text-muted-foreground mt-0.5">{t.mitigation}</p>
               </div>
-              <Zap className="h-4 w-4 text-emerald-500 shrink-0" />
+              <Zap className="h-4 w-4 text-accent shrink-0" />
             </div>
           ))}
         </div>

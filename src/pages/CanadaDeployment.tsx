@@ -507,7 +507,7 @@ const CanadaDeployment = () => {
                   <td className="py-3 px-3 text-muted-foreground align-top">{s.mapping}</td>
                   <td className="py-3 px-3 align-top">
                     <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-sm ${
-                      s.risk === "Low" ? "bg-accent/20 text-accent" : "bg-yellow-500/20 text-yellow-600"
+                      s.risk === "Low" ? "bg-accent/20 text-accent" : "bg-muted/30 text-muted-foreground"
                     }`}>{s.risk}</span>
                   </td>
                   <td className="py-3 px-3 text-muted-foreground align-top">{s.mitigation}</td>

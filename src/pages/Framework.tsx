@@ -9,9 +9,9 @@ const pillars = [
     icon: Database,
     label: "Infrastructure",
     title: "DPI Registry Layer",
-    color: "border-l-emerald-600 dark:border-l-emerald-400",
-    accent: "text-emerald-600 dark:text-emerald-400",
-    bg: "bg-emerald-500/5",
+    color: "border-l-accent",
+    accent: "text-accent",
+    bg: "bg-accent/5",
     description: "Sovereign-grade Digital Public Infrastructure positioned as Layer 3 within the national DPI stack — above base registries and core DPI, below services and applications.",
     details: [
       "Sits above Layer 1 (Base Registries) and Layer 2 (Identity, Payments, Data Exchange)",
@@ -25,9 +25,9 @@ const pillars = [
     icon: BookOpen,
     label: "Evidence",
     title: "Append-Only Backbone",
-    color: "border-l-blue-600 dark:border-l-blue-400",
-    accent: "text-blue-600 dark:text-blue-400",
-    bg: "bg-blue-500/5",
+    color: "border-l-primary",
+    accent: "text-primary",
+    bg: "bg-primary/5",
     description: "Write-once, immutable record architecture ensuring that governance facts — including omissions — are preserved with full temporal integrity across political and generational transitions.",
     details: [
       "Records are write-once: no modification after sealing by any party, including the origin authority",
@@ -41,9 +41,9 @@ const pillars = [
     icon: Eye,
     label: "Verification",
     title: "Audit Reconstruction",
-    color: "border-l-violet-600 dark:border-l-violet-400",
-    accent: "text-violet-600 dark:text-violet-400",
-    bg: "bg-violet-500/5",
+    color: "border-l-accent",
+    accent: "text-accent",
+    bg: "bg-accent/5",
     description: "Any party can independently verify record integrity without requiring trust in GRGF systems. Public hash manifests enable cryptographic proof of non-tampering.",
     details: [
       "SHA-256 cryptographic integrity proofs generated at seal time",
@@ -57,9 +57,9 @@ const pillars = [
     icon: Scale,
     label: "Standards",
     title: "Policy & Certification",
-    color: "border-l-amber-600 dark:border-l-amber-400",
-    accent: "text-amber-600 dark:text-amber-400",
-    bg: "bg-amber-500/5",
+    color: "border-l-primary",
+    accent: "text-primary",
+    bg: "bg-primary/5",
     description: "Document-based governance logic — not software workflows. All rules, charters, processes, and stewardship protocols are codified as governance documents with versioned integrity.",
     details: [
       "Three-tier institutional recognition: Foundational → Verified → Certified DPI",
@@ -73,9 +73,9 @@ const pillars = [
     icon: Globe,
     label: "Federation",
     title: "Interoperable Trust",
-    color: "border-l-cyan-600 dark:border-l-cyan-400",
-    accent: "text-cyan-600 dark:text-cyan-400",
-    bg: "bg-cyan-500/5",
+    color: "border-l-accent",
+    accent: "text-accent",
+    bg: "bg-accent/5",
     description: "Multi-node federation protocol enabling cross-border verification while preserving full sovereign control within each deploying jurisdiction.",
     details: [
       "Three federation tiers: Tier 1 (Full Node), Tier 2 (Observer Node), Tier 3 (Reference Node)",
@@ -89,9 +89,9 @@ const pillars = [
     icon: Shield,
     label: "Governance",
     title: "Anti-Capture Controls",
-    color: "border-l-rose-600 dark:border-l-rose-400",
-    accent: "text-rose-600 dark:text-rose-400",
-    bg: "bg-rose-500/5",
+    color: "border-l-destructive",
+    accent: "text-destructive",
+    bg: "bg-destructive/5",
     description: "Five structural Anti-Capture Clauses (AC-01–05) preventing any entity — government, vendor, or individual — from redirecting, monopolizing, or undermining framework neutrality.",
     details: [
       "AC-01: No single entity may hold exclusive control over framework governance",
@@ -138,7 +138,7 @@ export default function Framework() {
           </p>
           <div className="flex items-center gap-6 mt-8">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-xs font-mono text-muted-foreground">Reference v1.0</span>
             </div>
             <div className="h-3 w-px bg-border" />
@@ -325,8 +325,8 @@ export default function Framework() {
                           <span className={cn(
                             "text-[9px] font-mono px-1.5 py-0.5 rounded ml-auto",
                             layer.status === "ACTIVE"
-                              ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
-                              : "bg-amber-500/10 text-amber-600 dark:text-amber-400"
+                              ? "bg-accent/10 text-accent"
+                              : "bg-muted/30 text-muted-foreground"
                           )}>
                             {layer.status}
                           </span>
