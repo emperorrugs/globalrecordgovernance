@@ -540,7 +540,7 @@ const AdminDashboard = () => {
                             size="sm"
                             variant="outline"
                             onClick={(e) => { e.stopPropagation(); handleSendNotification(req, "approved"); }}
-                            className="text-[10px] h-7 gap-1 border-green-500/30 text-green-600 hover:bg-green-500/10"
+                            className="text-[10px] h-7 gap-1 border-accent/30 text-accent hover:bg-accent/10"
                           >
                             <CheckCircle className="h-3 w-3" /> Approve & Notify
                           </Button>
@@ -548,7 +548,7 @@ const AdminDashboard = () => {
                             size="sm"
                             variant="outline"
                             onClick={(e) => { e.stopPropagation(); handleSendNotification(req, "rejected"); }}
-                            className="text-[10px] h-7 gap-1 border-red-500/30 text-red-600 hover:bg-red-500/10"
+                            className="text-[10px] h-7 gap-1 border-destructive/30 text-destructive hover:bg-destructive/10"
                           >
                             <XCircle className="h-3 w-3" /> Reject & Notify
                           </Button>
