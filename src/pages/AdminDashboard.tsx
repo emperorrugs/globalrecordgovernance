@@ -33,10 +33,10 @@ interface AccessRequest {
 }
 
 const statusColors: Record<string, string> = {
-  pending: "bg-yellow-500/10 text-yellow-600 border-yellow-500/20",
-  approved: "bg-green-500/10 text-green-600 border-green-500/20",
-  rejected: "bg-red-500/10 text-red-600 border-red-500/20",
-  under_review: "bg-blue-500/10 text-blue-600 border-blue-500/20",
+  pending: "bg-accent/10 text-accent border-accent/20",
+  approved: "bg-primary/10 text-primary border-primary/20",
+  rejected: "bg-destructive/10 text-destructive border-destructive/20",
+  under_review: "bg-muted/30 text-muted-foreground border-border",
 };
 
 const levelDownloadLinks: Record<string, { en: string; fr: string }> = {
@@ -243,10 +243,10 @@ const AdminDashboard = () => {
         <div className="max-w-7xl grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3">
           {[
             { label: "Total", value: stats.total, icon: Mail, color: "text-foreground" },
-            { label: "Pending", value: stats.pending, icon: Clock, color: "text-yellow-600" },
-            { label: "Approved", value: stats.approved, icon: CheckCircle, color: "text-green-600" },
-            { label: "Rejected", value: stats.rejected, icon: XCircle, color: "text-red-600" },
-            { label: "Countries", value: stats.uniqueCountries, icon: Globe, color: "text-blue-600" },
+            { label: "Pending", value: stats.pending, icon: Clock, color: "text-accent" },
+            { label: "Approved", value: stats.approved, icon: CheckCircle, color: "text-primary" },
+            { label: "Rejected", value: stats.rejected, icon: XCircle, color: "text-destructive" },
+            { label: "Countries", value: stats.uniqueCountries, icon: Globe, color: "text-accent" },
             { label: "Today", value: stats.todayCount, icon: Calendar, color: "text-accent" },
           ].map(({ label, value, icon: Icon, color }) => (
             <div key={label} className="bg-background border border-border rounded-sm px-3 py-2.5 flex items-center gap-2.5">
@@ -268,9 +268,9 @@ const AdminDashboard = () => {
               <div className="governance-card">
                 <h3 className="text-xs font-mono text-muted-foreground/60 uppercase tracking-wider mb-3">Requests by Level</h3>
                 {[
-                  { level: "Level 2", count: stats.level2, color: "bg-blue-500" },
-                  { level: "Level 3", count: stats.level3, color: "bg-yellow-500" },
-                  { level: "Level 4", count: stats.level4, color: "bg-red-500" },
+                  { level: "Level 2", count: stats.level2, color: "bg-primary" },
+                  { level: "Level 3", count: stats.level3, color: "bg-accent" },
+                  { level: "Level 4", count: stats.level4, color: "bg-destructive" },
                 ].map(({ level, count, color }) => (
                   <div key={level} className="flex items-center gap-3 mb-2">
                     <span className="text-xs w-16">{level}</span>
@@ -287,11 +287,11 @@ const AdminDashboard = () => {
                 <div className="space-y-2">
                   <div className="flex justify-between text-xs">
                     <span className="text-muted-foreground">Email Verified</span>
-                    <span className="font-mono text-green-600">{stats.emailVerified}</span>
+                    <span className="font-mono text-accent">{stats.emailVerified}</span>
                   </div>
                   <div className="flex justify-between text-xs">
                     <span className="text-muted-foreground">Unverified</span>
-                    <span className="font-mono text-yellow-600">{stats.total - stats.emailVerified}</span>
+                    <span className="font-mono text-muted-foreground">{stats.total - stats.emailVerified}</span>
                   </div>
                   <div className="flex justify-between text-xs">
                     <span className="text-muted-foreground">NDA Required</span>
@@ -357,12 +357,12 @@ const AdminDashboard = () => {
                   <div className="bg-muted/50 rounded-sm p-3 border border-border/50 space-y-2">
                     <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider">Notification Features</p>
                     <ul className="text-xs text-muted-foreground space-y-1">
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> Auto-generated approval emails with download links</li>
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> Level-specific document links (EN + FR)</li>
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> NDA reminder for Level 3+ access</li>
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> CRP v1.0 compliance language included</li>
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> Rejection notifications with resubmission guidance</li>
-                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-green-600" /> CSV export for audit trails</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> Auto-generated approval emails with download links</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> Level-specific document links (EN + FR)</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> NDA reminder for Level 3+ access</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> CRP v1.0 compliance language included</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> Rejection notifications with resubmission guidance</li>
+                      <li className="flex items-center gap-1.5"><CheckCircle className="h-3 w-3 text-accent" /> CSV export for audit trails</li>
                     </ul>
                   </div>
                 </div>
@@ -521,11 +521,11 @@ const AdminDashboard = () => {
                         )}
 
                         <div className="flex items-center gap-2 text-[10px] flex-wrap">
-                          <span className={req.email_verified ? "text-green-600" : "text-yellow-600"}>
+                          <span className={req.email_verified ? "text-accent" : "text-muted-foreground"}>
                             {req.email_verified ? "✓ Email verified" : "⏳ Email unverified"}
                           </span>
                           <span className="text-muted-foreground/30">·</span>
-                          <span className={req.crp_acknowledged ? "text-green-600" : "text-red-600"}>
+                          <span className={req.crp_acknowledged ? "text-accent" : "text-destructive"}>
                             {req.crp_acknowledged ? "✓ CRP acknowledged" : "✗ CRP not acknowledged"}
                           </span>
                           <span className="text-muted-foreground/30">·</span>

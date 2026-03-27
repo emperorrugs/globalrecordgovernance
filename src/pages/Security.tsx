@@ -7,7 +7,7 @@ const accessTiers = [
   {
     level: "Level 1",
     name: "Public Verification",
-    color: "bg-emerald-500",
+    color: "bg-accent",
     clearance: "OPEN",
     access: ["Hash manifest verification", "Record existence queries", "Integrity proof validation", "Public API endpoints"],
     restriction: "Content access prohibited. Metadata only.",
@@ -15,7 +15,7 @@ const accessTiers = [
   {
     level: "Level 2",
     name: "Institutional Access",
-    color: "bg-blue-500",
+    color: "bg-primary",
     clearance: "RESTRICTED",
     access: ["Record metadata retrieval", "Classification-level queries", "Audit trail inspection", "Governance rule review"],
     restriction: "Requires institutional agreement and role-based authorization.",
@@ -23,7 +23,7 @@ const accessTiers = [
   {
     level: "Level 3",
     name: "Stewardship Access",
-    color: "bg-amber-500",
+    color: "bg-primary",
     clearance: "CONTROLLED",
     access: ["Full record content access", "Administrative operations", "Governance rule modification", "Emergency procedures"],
     restriction: "Individual assignment with mandatory audit logging of all actions.",

@@ -24,8 +24,8 @@ const risks = [
 function StatusBadge({ status }: { status: string }) {
   const styles: Record<string, string> = {
     Mitigated: "bg-accent/15 text-accent",
-    Monitored: "bg-yellow-500/15 text-yellow-600",
-    Active: "bg-red-500/15 text-red-500",
+    Monitored: "bg-muted/30 text-muted-foreground",
+    Active: "bg-destructive/15 text-destructive",
   };
   return <span className={`px-2 py-0.5 text-xs font-mono ${styles[status] || "bg-muted text-muted-foreground"}`}>{status}</span>;
 }
@@ -33,9 +33,9 @@ function StatusBadge({ status }: { status: string }) {
 function LikelihoodBadge({ level }: { level: string }) {
   const styles: Record<string, string> = {
     Low: "text-accent",
-    Medium: "text-yellow-600",
-    High: "text-red-500",
-    Critical: "text-red-600 font-bold",
+    Medium: "text-muted-foreground",
+    High: "text-destructive",
+    Critical: "text-destructive font-bold",
   };
   return <span className={`text-xs font-mono ${styles[level] || ""}`}>{level}</span>;
 }

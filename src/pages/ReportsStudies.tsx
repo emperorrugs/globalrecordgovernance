@@ -94,11 +94,11 @@ const categoryIcons: Record<string, React.ComponentType<{ className?: string }>>
 
 const typeColors: Record<string, string> = {
   report: "bg-accent/15 text-accent",
-  study: "bg-blue-500/15 text-blue-600 dark:text-blue-400",
-  policy: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
-  data: "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
-  kit: "bg-purple-500/15 text-purple-600 dark:text-purple-400",
-  diagram: "bg-rose-500/15 text-rose-600 dark:text-rose-400",
+  study: "bg-primary/15 text-primary",
+  policy: "bg-accent/15 text-accent",
+  data: "bg-primary/15 text-primary",
+  kit: "bg-accent/15 text-accent",
+  diagram: "bg-primary/15 text-primary",
 };
 
 const categories = [...new Set(documents.map((d) => d.category))];
