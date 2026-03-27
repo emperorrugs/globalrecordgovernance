@@ -9,7 +9,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, children }: PageHeaderProps) {
   return (
-    <header className="relative border-b border-border px-8 py-14 md:px-12 lg:px-16 overflow-hidden">
+    <header className="relative border-b border-border px-5 py-10 md:px-12 md:py-14 lg:px-16 overflow-hidden">
       {/* Subtle ambient glow */}
       <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full opacity-[0.02]"
         style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 70%)" }} />
@@ -34,7 +34,7 @@ interface SectionProps {
 
 export function Section({ title, children, className, id }: SectionProps) {
   return (
-    <section id={id} className={cn("px-8 py-12 md:px-12 lg:px-16", className)}>
+    <section id={id} className={cn("px-5 py-10 md:px-12 md:py-12 lg:px-16", className)}>
       <div className="max-w-5xl">
         {title && (
           <h2 className="institutional-heading text-heading-2 font-semibold mb-8">{title}</h2>
