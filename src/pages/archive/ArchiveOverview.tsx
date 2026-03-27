@@ -1,14 +1,32 @@
 import { Link } from "react-router-dom";
-import { Users, Building2, Handshake, Lock, ArrowRight, ShieldCheck, Info } from "lucide-react";
+import { Users, Building2, Handshake, Lock, ArrowRight, ShieldCheck, Info, Search, Download, BookOpen, Printer } from "lucide-react";
 
 const cards = [
+  {
+    to: "/archive/intelligent",
+    icon: Search,
+    title: "Smart Archive",
+    desc: "Search, filter, and browse 90+ documents across 11 departments. Full-text search, access-level filtering, and department categorization.",
+    access: "ALL ACCESS LEVELS",
+    docCount: 90,
+    highlight: true,
+  },
+  {
+    to: "/archive/downloads",
+    icon: Download,
+    title: "Publication Suite & Downloads",
+    desc: "All 4 GRGF volumes, Sovereign Authority Edition, Value Proposition, and Complete Proposal — trilingual (EN/FR/AR). Printable PDFs.",
+    access: "TRILINGUAL · DOWNLOADABLE",
+    docCount: 47,
+    highlight: true,
+  },
   {
     to: "/archive/public",
     icon: Users,
     title: "Public & Civil Society",
     desc: "Transparency and understanding. Open documents for public, media, academia, and civil society stakeholders.",
     access: "OPEN ACCESS",
-    docCount: 6,
+    docCount: 9,
   },
   {
     to: "/archive/government",
@@ -67,7 +85,7 @@ const ArchiveOverview = () => (
               <div className="mt-3 flex flex-wrap gap-4">
                 <span className="text-[10px] font-mono text-muted-foreground/60">VERSION: 1.0.0</span>
                 <span className="text-[10px] font-mono text-muted-foreground/60">STATUS: AUTHORITATIVE INITIAL ARCHIVE</span>
-                <span className="text-[10px] font-mono text-muted-foreground/60">DOCUMENTS: 43</span>
+                <span className="text-[10px] font-mono text-muted-foreground/60">DOCUMENTS: 90+</span>
                 <span className="text-[10px] font-mono text-muted-foreground/60">SECTIONS: 10</span>
               </div>
             </div>
@@ -79,19 +97,30 @@ const ArchiveOverview = () => (
     <section className="px-8 py-8 md:px-12 lg:px-16">
       <div className="max-w-5xl">
         <p className="text-xs font-mono text-muted-foreground/60 uppercase tracking-[0.15em] mb-6">
-          Access by Stakeholder Role
+          Quick Access & Stakeholder Sections
         </p>
         <div className="grid gap-6 sm:grid-cols-2">
-          {cards.map(({ to, icon: Icon, title, desc, access, docCount, restricted }) => (
+          {cards.map(({ to, icon: Icon, title, desc, access, docCount, restricted, highlight }) => (
             <Link
               key={to}
               to={to}
-              className="governance-card group flex flex-col justify-between hover:border-accent/50"
+              className={`governance-card group flex flex-col justify-between transition-all duration-300 ${
+                highlight
+                  ? "border-accent/40 bg-accent/5 hover:border-accent hover:shadow-lg hover:shadow-accent/10"
+                  : "hover:border-accent/50"
+              }`}
             >
               <div>
                 <div className="flex items-start gap-3 mb-4">
                   <Icon className={`h-5 w-5 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
-                  <h2 className="font-serif text-base font-semibold">{title}</h2>
+                  <div>
+                    <h2 className="font-serif text-base font-semibold">{title}</h2>
+                    {highlight && (
+                      <span className="inline-flex items-center gap-1 mt-1 px-2 py-0.5 bg-accent/15 text-accent text-[9px] font-mono rounded-sm tracking-wider">
+                        <Printer className="h-2.5 w-2.5" /> PRINTABLE & DOWNLOADABLE
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
               </div>
