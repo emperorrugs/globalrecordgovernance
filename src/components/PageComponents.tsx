@@ -9,14 +9,17 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, subtitle, children }: PageHeaderProps) {
   return (
-    <header className="border-b border-border bg-surface/50 px-8 py-10 md:px-12 lg:px-16">
-      <div className="max-w-4xl">
-        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">{title}</h1>
+    <header className="relative border-b border-border px-8 py-14 md:px-12 lg:px-16 overflow-hidden">
+      {/* Subtle ambient glow */}
+      <div className="absolute -top-20 -right-20 w-[400px] h-[400px] rounded-full opacity-[0.02]"
+        style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 70%)" }} />
+      <div className="relative max-w-4xl">
+        <h1 className="institutional-heading text-heading-1 font-semibold">{title}</h1>
         {subtitle && (
-          <p className="mt-3 text-muted-foreground text-lg leading-relaxed max-w-2xl">{subtitle}</p>
+          <p className="mt-4 text-muted-foreground text-body-lg leading-relaxed max-w-2xl">{subtitle}</p>
         )}
         {children}
-        <div className="section-divider mt-6" />
+        <div className="section-divider mt-8" />
       </div>
     </header>
   );
@@ -31,10 +34,10 @@ interface SectionProps {
 
 export function Section({ title, children, className, id }: SectionProps) {
   return (
-    <section id={id} className={cn("px-8 py-10 md:px-12 lg:px-16", className)}>
+    <section id={id} className={cn("px-8 py-12 md:px-12 lg:px-16", className)}>
       <div className="max-w-5xl">
         {title && (
-          <h2 className="institutional-heading text-xl md:text-2xl font-semibold mb-6">{title}</h2>
+          <h2 className="institutional-heading text-heading-2 font-semibold mb-8">{title}</h2>
         )}
         {children}
       </div>
