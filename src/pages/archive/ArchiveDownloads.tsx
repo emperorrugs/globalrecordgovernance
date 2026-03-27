@@ -296,6 +296,34 @@ const ArchiveDownloads = () => (
 
         <div className="governance-card">
           <div className="flex items-start gap-4 mb-4">
+            <ShieldCheck className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
+            <div>
+              <h2 className="font-serif text-lg font-semibold">126 Applications — Complete Implementation Catalog</h2>
+              <p className="text-xs text-muted-foreground mt-1">Full-depth catalog of 126 applications across 12 sectors with blueprints, techniques & value projections</p>
+              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
+            </div>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
+            Comprehensive mapping of 126 governance record-keeping applications spanning Government, Justice, Healthcare, Finance, Education, Environment, Infrastructure, Trade, Human Rights, Digital, Energy, and Defense sectors. Includes $61.7B annual value projections, Six-Layer Architecture blueprints, and alignment with 47 international standards.
+          </p>
+          <div className="flex items-center gap-3 flex-wrap">
+            <a href="/documents/GRGF_126_Applications_Complete_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
+              <Download className="h-3.5 w-3.5" />
+              Download (English)
+            </a>
+            <a href="/documents/GRGF_126_Applications_Complete_2026_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
+              <Globe className="h-3.5 w-3.5" />
+              Français
+            </a>
+            <a href="/documents/GRGF_126_Applications_Complete_2026_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
+              <Globe className="h-3.5 w-3.5" />
+              العربية
+            </a>
+          </div>
+        </div>
+
+        <div className="governance-card">
+          <div className="flex items-start gap-4 mb-4">
             <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
             <div>
               <h2 className="font-serif text-lg font-semibold">Complete Project Proposal — Expanded Edition</h2>
