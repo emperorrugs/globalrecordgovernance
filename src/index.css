@@ -26,76 +26,75 @@
 
 @layer base {
   :root {
-    /* ── 2026 Award-Winning: Luminous Obsidian ── */
-    /* Ultra-dark with warm undertones + electric accents */
+    /* ── 2026 Awwwards: Luminous Obsidian Evolved ── */
 
-    /* Backgrounds — Rich Obsidian with warm depth */
-    --background: 220 20% 6%;
-    --foreground: 45 10% 93%;
+    /* Backgrounds — Rich black with warm undertones */
+    --background: 225 18% 5%;
+    --foreground: 42 12% 94%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 45 10% 93%;
+    --card: 225 16% 9%;
+    --card-foreground: 42 12% 94%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 45 10% 93%;
+    --popover: 225 16% 9%;
+    --popover-foreground: 42 12% 94%;
 
     /* Primary — Warm Ivory */
-    --primary: 45 20% 92%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 42 20% 92%;
+    --primary-foreground: 225 18% 5%;
 
     /* Secondary — Deep Charcoal */
-    --secondary: 220 15% 14%;
-    --secondary-foreground: 45 8% 70%;
+    --secondary: 225 14% 13%;
+    --secondary-foreground: 42 8% 68%;
 
     /* Muted — Subtle Depth */
-    --muted: 220 14% 12%;
-    --muted-foreground: 220 8% 50%;
+    --muted: 225 12% 11%;
+    --muted-foreground: 225 8% 48%;
 
-    /* Accent — Electric Amber / Sovereign Gold */
-    --accent: 38 92% 50%;
-    --accent-foreground: 220 20% 6%;
+    /* Accent — Liquid Gold */
+    --accent: 40 95% 52%;
+    --accent-foreground: 225 18% 5%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 12% 16%;
-    --input: 220 14% 14%;
-    --ring: 38 92% 50%;
+    --border: 225 10% 14%;
+    --input: 225 14% 13%;
+    --ring: 40 95% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
 
     /* ── Sidebar — Obsidian Glass ── */
-    --sidebar-background: 220 22% 5%;
-    --sidebar-foreground: 45 8% 75%;
-    --sidebar-primary: 38 92% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 12%;
-    --sidebar-accent-foreground: 45 10% 93%;
-    --sidebar-border: 220 12% 12%;
-    --sidebar-ring: 38 92% 50%;
+    --sidebar-background: 225 20% 4%;
+    --sidebar-foreground: 42 8% 72%;
+    --sidebar-primary: 40 95% 52%;
+    --sidebar-primary-foreground: 225 18% 5%;
+    --sidebar-accent: 225 14% 11%;
+    --sidebar-accent-foreground: 42 12% 94%;
+    --sidebar-border: 225 10% 10%;
+    --sidebar-ring: 40 95% 52%;
 
     /* ── Extended Palette ── */
-    --gold: 38 92% 50%;
-    --gold-light: 40 80% 62%;
-    --gold-hover: 36 95% 42%;
-    --navy-deep: 220 25% 4%;
-    --navy: 220 18% 10%;
-    --sovereign-green: 160 60% 42%;
-    --slate-inst: 220 14% 20%;
-    --surface: 220 18% 8%;
-    --surface2: 220 16% 12%;
-    --emerald-trust: 160 60% 42%;
-    --link: 38 70% 55%;
-    --link-hover: 38 92% 60%;
-    --info: 200 75% 50%;
-    --warning: 38 92% 50%;
-    --success: 160 60% 42%;
+    --gold: 40 95% 52%;
+    --gold-light: 42 80% 64%;
+    --gold-hover: 38 98% 44%;
+    --navy-deep: 225 22% 3%;
+    --navy: 225 16% 9%;
+    --sovereign-green: 162 65% 40%;
+    --slate-inst: 225 12% 18%;
+    --surface: 225 16% 7%;
+    --surface2: 225 14% 11%;
+    --emerald-trust: 162 65% 40%;
+    --link: 40 72% 56%;
+    --link-hover: 40 95% 62%;
+    --info: 205 80% 52%;
+    --warning: 40 95% 52%;
+    --success: 162 65% 40%;
     --gc-red: 0 72% 42%;
     --wb-blue: 213 100% 13%;
 
     /* Glow effects */
-    --glow-accent: 38 92% 50%;
-    --glow-soft: 220 20% 20%;
+    --glow-accent: 40 95% 52%;
+    --glow-soft: 225 18% 18%;
 
     /* Typography */
     --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -132,23 +131,24 @@
     font-family: var(--mono);
   }
 
-  /* Custom scrollbar */
+  /* Scrollbar — Invisible until hover */
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 5px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: transparent;
   }
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--border));
-    border-radius: 3px;
+    border-radius: 8px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--accent) / 0.4);
+    background: hsl(var(--accent) / 0.5);
   }
 }
 
 @layer components {
+  /* ── Institutional Typography ── */
   .institutional-heading {
     font-family: var(--serif);
     @apply text-foreground;
@@ -156,10 +156,39 @@
   }
 
   .section-divider {
-    @apply w-16 h-0.5;
+    @apply w-20 h-px;
     background: linear-gradient(90deg, hsl(var(--accent)), transparent);
   }
 
+  /* ── Bento Grid Card ── */
+  .bento-card {
+    background: hsl(var(--card));
+    @apply border border-border/60 transition-all duration-700;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bento-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.04), transparent 50%);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bento-card:hover::before {
+    opacity: 1;
+  }
+
+  .bento-card:hover {
+    border-color: hsl(var(--accent) / 0.2);
+    box-shadow: 0 20px 60px -15px hsl(var(--accent) / 0.08);
+    transform: translateY(-3px);
+  }
+
+  /* ── Legacy governance-card (keep for compatibility) ── */
   .governance-card {
     background: hsl(var(--card));
     @apply border border-border p-6 transition-all duration-500;
@@ -177,9 +206,7 @@
     transition: opacity 0.5s ease;
   }
 
-  .governance-card:hover::before {
-    opacity: 1;
-  }
+  .governance-card:hover::before { opacity: 1; }
 
   .governance-card:hover {
     border-color: hsl(var(--accent) / 0.25);
@@ -187,10 +214,51 @@
     transform: translateY(-2px);
   }
 
-  .surface-elevated {
-    background: hsl(var(--surface2));
+  /* ── Elevated Card ── */
+  .governance-card-elevated {
+    background: hsl(var(--card));
+    @apply border border-border p-8 transition-all duration-700;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
   }
 
+  .governance-card-elevated::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(160deg, hsl(var(--accent) / 0.05), transparent 50%);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .governance-card-elevated:hover::before { opacity: 1; }
+
+  .governance-card-elevated:hover {
+    border-color: hsl(var(--accent) / 0.2);
+    box-shadow: 
+      0 16px 48px -12px hsl(var(--accent) / 0.08),
+      0 0 0 1px hsl(var(--accent) / 0.06);
+    transform: translateY(-4px);
+  }
+
+  /* ── Glass Effects ── */
+  .glass {
+    background: hsl(var(--card) / 0.5);
+    backdrop-filter: blur(24px) saturate(1.3);
+    -webkit-backdrop-filter: blur(24px) saturate(1.3);
+  }
+
+  .glass-subtle {
+    background: hsl(var(--background) / 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  /* ── Surface Elevations ── */
+  .surface-elevated { background: hsl(var(--surface2)); }
+
+  /* ── Typography Utilities ── */
   .hash-text {
     font-family: var(--mono);
     @apply text-xs text-muted-foreground tracking-wider;
@@ -205,21 +273,12 @@
     line-height: 1.6;
   }
 
-  /* Badge styles */
-  .badge-pilot {
-    background: hsl(var(--gold) / 0.1);
-    color: hsl(var(--gold-hover));
-  }
-  .badge-draft {
-    background: hsl(var(--warning) / 0.1);
-    color: hsl(var(--warning));
-  }
-  .badge-verified {
-    background: hsl(var(--success) / 0.1);
-    color: hsl(var(--success));
-  }
+  /* ── Badge Styles ── */
+  .badge-pilot { background: hsl(var(--gold) / 0.1); color: hsl(var(--gold-hover)); }
+  .badge-draft { background: hsl(var(--warning) / 0.1); color: hsl(var(--warning)); }
+  .badge-verified { background: hsl(var(--success) / 0.1); color: hsl(var(--success)); }
 
-  /* Link styling */
+  /* ── Link Styling ── */
   a.sovereign-link {
     color: hsl(var(--link));
     text-decoration-color: hsl(var(--accent) / 0.3);
@@ -231,75 +290,27 @@
     text-decoration-color: hsl(var(--accent));
   }
 
-  /* Institutional divider */
+  /* ── Dividers ── */
   .inst-divider {
     @apply w-full h-px;
     background: linear-gradient(to right, transparent, hsl(var(--accent) / 0.3), transparent);
   }
 
-  /* Premium card variant */
-  .governance-card-elevated {
-    background: hsl(var(--card));
-    @apply border border-border p-8 transition-all duration-500;
-    border-radius: var(--radius);
-    position: relative;
-    overflow: hidden;
-  }
+  /* ── Glow Effects ── */
+  .glow-accent { box-shadow: 0 0 80px -20px hsl(var(--accent) / 0.18); }
+  .glow-accent-sm { box-shadow: 0 0 40px -12px hsl(var(--accent) / 0.14); }
 
-  .governance-card-elevated::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    background: linear-gradient(160deg, hsl(var(--accent) / 0.04), transparent 50%);
-    transition: opacity 0.5s ease;
-  }
-
-  .governance-card-elevated:hover::before {
-    opacity: 1;
-  }
-
-  .governance-card-elevated:hover {
-    border-color: hsl(var(--accent) / 0.2);
-    box-shadow: 
-      0 8px 32px -8px hsl(var(--accent) / 0.06),
-      0 0 0 1px hsl(var(--accent) / 0.05);
-    transform: translateY(-3px);
-  }
-
-  /* Glass effect */
-  .glass {
-    background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(20px) saturate(1.2);
-    -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  }
-
-  .glass-subtle {
-    background: hsl(var(--background) / 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  /* Ambient glow */
-  .glow-accent {
-    box-shadow: 0 0 60px -20px hsl(var(--accent) / 0.15);
-  }
-
-  .glow-accent-sm {
-    box-shadow: 0 0 30px -10px hsl(var(--accent) / 0.12);
-  }
-
-  /* Grain texture overlay */
+  /* ── Grain Texture ── */
   .grain::after {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.015;
+    opacity: 0.02;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
-  /* Accent line decorators */
+  /* ── Accent Line Decorators ── */
   .accent-line-left {
     position: relative;
   }
@@ -312,9 +323,91 @@
     width: 2px;
     background: linear-gradient(to bottom, hsl(var(--accent)), transparent);
   }
+
+  /* ── Kinetic Reveal (scroll triggered via IntersectionObserver) ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Horizontal Marquee ── */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 40s linear infinite;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* ── Oversized Display Type ── */
+  .display-massive {
+    font-family: var(--serif);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 0.92;
+  }
+
+  /* ── Bento Grid Layouts ── */
+  .bento-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .bento-span-2 { grid-column: span 2; }
+  .bento-span-3 { grid-column: span 3; }
+  .bento-span-full { grid-column: 1 / -1; }
+  .bento-row-2 { grid-row: span 2; }
+
+  @media (max-width: 768px) {
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    .bento-span-2, .bento-span-3, .bento-span-full {
+      grid-column: span 1;
+    }
+    .bento-row-2 { grid-row: span 1; }
+  }
+
+  /* ── Magnetic hover (micro-interaction) ── */
+  .magnetic {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .magnetic:hover {
+    transform: scale(1.03);
+  }
+
+  /* ── Stagger children animation ── */
+  .stagger > * {
+    opacity: 0;
+    animation: stagger-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger > *:nth-child(2) { animation-delay: 80ms; }
+  .stagger > *:nth-child(3) { animation-delay: 160ms; }
+  .stagger > *:nth-child(4) { animation-delay: 240ms; }
+  .stagger > *:nth-child(5) { animation-delay: 320ms; }
+  .stagger > *:nth-child(6) { animation-delay: 400ms; }
 }
 
-/* PDF Export / Print Styles */
+/* ── Keyframe Animations ── */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes stagger-in {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Print Styles ── */
 @media print {
   body {
     -webkit-print-color-adjust: exact;
@@ -335,21 +428,14 @@
     width: 100%;
   }
 
-  main {
-    padding: 0;
-  }
+  main { padding: 0; }
+  section { break-inside: avoid; }
 
-  section {
-    break-inside: avoid;
-  }
-
-  .governance-card, .governance-card-elevated {
+  .governance-card, .governance-card-elevated, .bento-card {
     break-inside: avoid;
     box-shadow: none;
     border: 1px solid #ddd;
   }
 
-  footer {
-    display: none !important;
-  }
+  footer { display: none !important; }
 }
