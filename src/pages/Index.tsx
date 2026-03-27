@@ -155,6 +155,7 @@ const Index = () => {
         { label: "Security & Trust", path: "/security-trust" },
         { label: "Interoperability", path: "/interoperability" },
         { label: "Technical Blueprints", path: "/blueprints" },
+        { label: "Developer Portal", path: "/developer" },
         { label: "Anchor Chain", path: "/anchor-chain" },
         { label: "Developer Portal", path: "/developer" },
       ],
@@ -308,6 +309,44 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══ ANCHOR CHAIN — CORE SYSTEM ═══ */}
+      <section className="px-5 md:px-10 lg:px-14 pb-20">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <Link
+              to="/anchor-chain"
+              className="group relative block overflow-hidden border border-border/20 bg-gradient-to-br from-primary/5 via-card/30 to-secondary/5 hover:border-primary/30 transition-all duration-700"
+              style={{ borderRadius: "24px" }}
+            >
+              <div className="absolute top-6 right-8 text-[120px] font-black text-primary/[0.03] leading-none select-none">⛓</div>
+              <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-all duration-500">
+                  <Link2 className="h-7 w-7 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <p className="text-[10px] font-mono text-primary/60 uppercase tracking-[0.15em] mb-1">Core System</p>
+                  <h2 className="text-[24px] md:text-[32px] font-bold tracking-tight leading-[1.1] mb-2 group-hover:text-primary transition-colors duration-500">
+                    GRGF Anchor Chain™
+                  </h2>
+                  <p className="text-[14px] text-muted-foreground/50 leading-relaxed max-w-xl">
+                    The cryptographic governance verification engine — real-time immutable record anchoring, 
+                    six-layer deterministic architecture, and independent proof-of-existence for every institutional action.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-primary/40 group-hover:text-primary group-hover:translate-x-1 transition-all duration-500 shrink-0" />
+              </div>
+              <div className="px-8 md:px-12 pb-8 flex flex-wrap gap-2">
+                {["SHA-256 Hash Chain", "X.509 Authority", "Zero-Knowledge Proofs", "Append-Only", "Federation Protocol"].map(tag => (
+                  <span key={tag} className="px-3 py-1 text-[10px] font-mono text-primary/50 bg-primary/5 border border-primary/10 rounded-full tracking-wider">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* ═══ QUICK ACCESS ═══ */}
       <section className="px-5 md:px-10 lg:px-14 pb-28">
         <div className="max-w-5xl mx-auto">
@@ -320,11 +359,10 @@ const Index = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <QuickCard icon={BarChart3} title="Impact Modeling" desc="Fiscal projections and ROI analysis" path="/impact-modeling" delay={0} />
-            <QuickCard icon={Link2} title="Anchor Chain" desc="Cryptographic governance verification" path="/anchor-chain" delay={60} />
-            <QuickCard icon={Database} title="Smart Archive" desc="Trilingual institutional repository" path="/archive/intelligent" delay={120} />
-            <QuickCard icon={Globe} title="Submission Hub" desc="OECD, World Bank, UN packages" path="/submission-hub" delay={180} />
-            <QuickCard icon={FileText} title="Downloads" desc="Publications and documentation" path="/archive/downloads" delay={240} />
-            <QuickCard icon={Lock} title="Controlled Access" desc="Institutional verification portal" path="/controlled-access" delay={300} />
+            <QuickCard icon={Database} title="Smart Archive" desc="Trilingual institutional repository" path="/archive/intelligent" delay={60} />
+            <QuickCard icon={Globe} title="Submission Hub" desc="OECD, World Bank, UN packages" path="/submission-hub" delay={120} />
+            <QuickCard icon={FileText} title="Downloads" desc="Publications and documentation" path="/archive/downloads" delay={180} />
+            <QuickCard icon={Lock} title="Controlled Access" desc="Institutional verification portal" path="/controlled-access" delay={240} />
           </div>
         </div>
       </section>
