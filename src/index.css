@@ -2,104 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 /* ── RTL Support ── */
 [dir="rtl"] {
-  font-family: 'Noto Sans Arabic', 'Space Grotesk', sans-serif;
+  font-family: 'Noto Sans Arabic', 'IBM Plex Sans', sans-serif;
 }
-
-[dir="rtl"] .border-l-2 {
-  border-left-width: 0;
-  border-right-width: 2px;
-}
-
-[dir="rtl"] .border-l-4 {
-  border-left-width: 0;
-  border-right-width: 4px;
-}
-
-[dir="rtl"] .-ml-px {
-  margin-left: 0;
-  margin-right: -1px;
-}
+[dir="rtl"] .border-l-2 { border-left-width: 0; border-right-width: 2px; }
+[dir="rtl"] .border-l-4 { border-left-width: 0; border-right-width: 4px; }
+[dir="rtl"] .-ml-px { margin-left: 0; margin-right: -1px; }
 
 @layer base {
   :root {
-    /* ── 2026 Awwwards: Luminous Obsidian Evolved ── */
+    /* ═══ Microsoft Fluent × IBM Carbon — 2026 Enterprise Fusion ═══ */
 
-    /* Backgrounds — Rich black with warm undertones */
-    --background: 225 18% 5%;
-    --foreground: 42 12% 94%;
+    /* Backgrounds — Carbon Cool Gray + Fluent Mica */
+    --background: 220 16% 3.5%;
+    --foreground: 0 0% 96%;
 
-    --card: 225 16% 9%;
-    --card-foreground: 42 12% 94%;
+    --card: 220 14% 7%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 225 16% 9%;
-    --popover-foreground: 42 12% 94%;
+    --popover: 220 14% 7%;
+    --popover-foreground: 0 0% 96%;
 
-    /* Primary — Warm Ivory */
-    --primary: 42 20% 92%;
-    --primary-foreground: 225 18% 5%;
+    /* Primary — Fluent Blue */
+    --primary: 210 100% 56%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary — Deep Charcoal */
-    --secondary: 225 14% 13%;
-    --secondary-foreground: 42 8% 68%;
+    /* Secondary — Carbon Layer */
+    --secondary: 220 12% 10%;
+    --secondary-foreground: 220 8% 65%;
 
-    /* Muted — Subtle Depth */
-    --muted: 225 12% 11%;
-    --muted-foreground: 225 8% 48%;
+    /* Muted — Subtle Layer */
+    --muted: 220 10% 9%;
+    --muted-foreground: 220 8% 46%;
 
-    /* Accent — Liquid Gold */
-    --accent: 40 95% 52%;
-    --accent-foreground: 225 18% 5%;
+    /* Accent — Electric Cyan (Fluent Signature) */
+    --accent: 195 100% 50%;
+    --accent-foreground: 220 16% 3.5%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 225 10% 14%;
-    --input: 225 14% 13%;
-    --ring: 40 95% 52%;
+    --border: 220 10% 12%;
+    --input: 220 12% 10%;
+    --ring: 195 100% 50%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
-    /* ── Sidebar — Obsidian Glass ── */
-    --sidebar-background: 225 20% 4%;
-    --sidebar-foreground: 42 8% 72%;
-    --sidebar-primary: 40 95% 52%;
-    --sidebar-primary-foreground: 225 18% 5%;
-    --sidebar-accent: 225 14% 11%;
-    --sidebar-accent-foreground: 42 12% 94%;
-    --sidebar-border: 225 10% 10%;
-    --sidebar-ring: 40 95% 52%;
+    /* ── Sidebar — Carbon UI Shell ── */
+    --sidebar-background: 220 18% 3%;
+    --sidebar-foreground: 220 8% 65%;
+    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary-foreground: 220 16% 3.5%;
+    --sidebar-accent: 220 12% 8%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 220 10% 8%;
+    --sidebar-ring: 195 100% 50%;
 
-    /* ── Extended Palette ── */
-    --gold: 40 95% 52%;
+    /* ── Extended Enterprise Palette ── */
+    --gold: 40 90% 52%;
     --gold-light: 42 80% 64%;
-    --gold-hover: 38 98% 44%;
-    --navy-deep: 225 22% 3%;
-    --navy: 225 16% 9%;
-    --sovereign-green: 162 65% 40%;
-    --slate-inst: 225 12% 18%;
-    --surface: 225 16% 7%;
-    --surface2: 225 14% 11%;
-    --emerald-trust: 162 65% 40%;
-    --link: 40 72% 56%;
-    --link-hover: 40 95% 62%;
-    --info: 205 80% 52%;
-    --warning: 40 95% 52%;
-    --success: 162 65% 40%;
+    --gold-hover: 38 95% 44%;
+    --navy-deep: 220 20% 2%;
+    --navy: 220 14% 7%;
+    --sovereign-green: 162 72% 42%;
+    --slate-inst: 220 12% 16%;
+    --surface: 220 14% 5.5%;
+    --surface2: 220 12% 9%;
+    --emerald-trust: 162 72% 42%;
+    --link: 195 90% 56%;
+    --link-hover: 195 100% 64%;
+    --info: 210 100% 56%;
+    --warning: 40 90% 52%;
+    --success: 162 72% 42%;
     --gc-red: 0 72% 42%;
     --wb-blue: 213 100% 13%;
 
-    /* Glow effects */
-    --glow-accent: 40 95% 52%;
-    --glow-soft: 225 18% 18%;
+    /* ── Fluent Glow System ── */
+    --glow-accent: 195 100% 50%;
+    --glow-soft: 220 16% 14%;
 
-    /* Typography */
-    --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
-    --sans: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
-    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    /* ── Semantic Tones (IBM Carbon) ── */
+    --interactive: 195 100% 50%;
+    --highlight: 210 100% 56%;
+    --support-error: 0 72% 51%;
+    --support-success: 162 72% 42%;
+    --support-warning: 40 90% 52%;
+    --support-info: 210 100% 56%;
+
+    /* Typography stacks */
+    --serif: 'IBM Plex Sans', 'Inter', system-ui, sans-serif;
+    --sans: 'Inter', 'IBM Plex Sans', system-ui, sans-serif;
+    --mono: 'IBM Plex Mono', 'Consolas', monospace;
   }
 }
 
@@ -118,131 +114,157 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-optical-sizing: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--serif);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    font-weight: 600;
+    font-family: var(--sans);
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    font-weight: 700;
   }
 
   code, pre {
     font-family: var(--mono);
   }
 
-  /* Scrollbar — Invisible until hover */
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
+  /* Scrollbar — Fluent minimal */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb {
     background: hsl(var(--border));
-    border-radius: 8px;
+    border-radius: 999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--accent) / 0.5);
+    background: hsl(var(--accent) / 0.4);
   }
 }
 
 @layer components {
-  /* ── Institutional Typography ── */
-  .institutional-heading {
-    font-family: var(--serif);
-    @apply text-foreground;
-    letter-spacing: -0.03em;
+  /* ═══ FLUENT ACRYLIC MATERIALS ═══ */
+  .acrylic {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(40px) saturate(1.6);
+    -webkit-backdrop-filter: blur(40px) saturate(1.6);
   }
 
-  .section-divider {
-    @apply w-20 h-px;
-    background: linear-gradient(90deg, hsl(var(--accent)), transparent);
+  .acrylic-subtle {
+    background: hsl(var(--background) / 0.88);
+    backdrop-filter: blur(20px) saturate(1.2);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
   }
 
-  /* ── Bento Grid Card ── */
-  .bento-card {
+  .mica {
+    background: hsl(var(--card) / 0.35);
+    backdrop-filter: blur(80px) saturate(2);
+    -webkit-backdrop-filter: blur(80px) saturate(2);
+  }
+
+  /* ═══ CARBON PRODUCTIVE CARDS ═══ */
+  .carbon-tile {
     background: hsl(var(--card));
-    @apply border border-border/60 transition-all duration-700;
+    @apply border border-border/50 transition-all duration-300;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carbon-tile:hover {
+    border-color: hsl(var(--accent) / 0.4);
+    background: hsl(var(--card) / 0.8);
+  }
+
+  .carbon-tile::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: hsl(var(--accent));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .carbon-tile:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* ═══ FLUENT CARD (Elevated) ═══ */
+  .fluent-card {
+    background: hsl(var(--card));
+    @apply border border-border/40 transition-all duration-400;
     border-radius: var(--radius);
     position: relative;
     overflow: hidden;
   }
 
-  .bento-card::before {
+  .fluent-card::before {
     content: '';
     position: absolute;
-    inset: 0;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.12), transparent 40%, transparent 60%, hsl(var(--accent) / 0.06));
     opacity: 0;
-    background: linear-gradient(135deg, hsl(var(--accent) / 0.04), transparent 50%);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
   }
 
-  .bento-card:hover::before {
-    opacity: 1;
-  }
+  .fluent-card:hover::before { opacity: 1; }
 
-  .bento-card:hover {
-    border-color: hsl(var(--accent) / 0.2);
-    box-shadow: 0 20px 60px -15px hsl(var(--accent) / 0.08);
-    transform: translateY(-3px);
-  }
-
-  /* ── Legacy governance-card (keep for compatibility) ── */
-  .governance-card {
-    background: hsl(var(--card));
-    @apply border border-border p-6 transition-all duration-500;
-    border-radius: var(--radius);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .governance-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    background: linear-gradient(135deg, hsl(var(--accent) / 0.03), transparent 60%);
-    transition: opacity 0.5s ease;
-  }
-
-  .governance-card:hover::before { opacity: 1; }
-
-  .governance-card:hover {
+  .fluent-card:hover {
     border-color: hsl(var(--accent) / 0.25);
-    box-shadow: 0 0 40px -12px hsl(var(--accent) / 0.08);
+    box-shadow:
+      0 2px 4px hsl(0 0% 0% / 0.15),
+      0 8px 24px hsl(0 0% 0% / 0.2),
+      0 0 0 1px hsl(var(--accent) / 0.08);
     transform: translateY(-2px);
   }
 
-  /* ── Elevated Card ── */
-  .governance-card-elevated {
+  /* ═══ LEGACY COMPAT — bento-card maps to fluent-card ═══ */
+  .bento-card {
     background: hsl(var(--card));
-    @apply border border-border p-8 transition-all duration-700;
+    @apply border border-border/40 transition-all duration-300;
     border-radius: var(--radius);
     position: relative;
     overflow: hidden;
   }
 
-  .governance-card-elevated::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    background: linear-gradient(160deg, hsl(var(--accent) / 0.05), transparent 50%);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  .bento-card:hover {
+    border-color: hsl(var(--accent) / 0.25);
+    box-shadow: 0 8px 24px hsl(0 0% 0% / 0.2);
+    transform: translateY(-2px);
   }
 
-  .governance-card-elevated:hover::before { opacity: 1; }
+  /* Legacy governance-card */
+  .governance-card {
+    background: hsl(var(--card));
+    @apply border border-border p-6 transition-all duration-300;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
+  .governance-card:hover {
+    border-color: hsl(var(--accent) / 0.25);
+    box-shadow: 0 8px 24px hsl(0 0% 0% / 0.2);
+    transform: translateY(-2px);
+  }
 
+  .governance-card-elevated {
+    background: hsl(var(--card));
+    @apply border border-border p-8 transition-all duration-300;
+    border-radius: var(--radius);
+    position: relative;
+    overflow: hidden;
+  }
   .governance-card-elevated:hover {
     border-color: hsl(var(--accent) / 0.2);
-    box-shadow: 
-      0 16px 48px -12px hsl(var(--accent) / 0.08),
-      0 0 0 1px hsl(var(--accent) / 0.06);
-    transform: translateY(-4px);
+    box-shadow: 0 16px 48px hsl(0 0% 0% / 0.25);
+    transform: translateY(-3px);
   }
 
-  /* ── Glass Effects ── */
+  /* ═══ GLASS EFFECTS (Fluent) ═══ */
   .glass {
     background: hsl(var(--card) / 0.5);
     backdrop-filter: blur(24px) saturate(1.3);
@@ -255,10 +277,50 @@
     -webkit-backdrop-filter: blur(16px);
   }
 
-  /* ── Surface Elevations ── */
   .surface-elevated { background: hsl(var(--surface2)); }
 
-  /* ── Typography Utilities ── */
+  /* ═══ CARBON TYPOGRAPHY ═══ */
+  .productive-heading-01 {
+    font-family: var(--sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+  }
+
+  .productive-heading-02 {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .expressive-heading-04 {
+    font-family: var(--sans);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+
+  .display-massive {
+    font-family: var(--sans);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  .institutional-heading {
+    font-family: var(--sans);
+    @apply text-foreground;
+    letter-spacing: -0.025em;
+  }
+
+  .section-divider {
+    @apply w-20 h-px;
+    background: linear-gradient(90deg, hsl(var(--accent)), transparent);
+  }
+
   .hash-text {
     font-family: var(--mono);
     @apply text-xs text-muted-foreground tracking-wider;
@@ -267,18 +329,50 @@
   .canonical-quote {
     @apply border-l-2 pl-6 py-3 text-muted-foreground;
     border-color: hsl(var(--accent));
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-style: italic;
     font-size: 1.125rem;
     line-height: 1.6;
   }
 
-  /* ── Badge Styles ── */
+  /* ═══ CARBON DATA TABLE STYLE ═══ */
+  .data-table {
+    @apply w-full text-sm;
+    border-collapse: collapse;
+  }
+
+  .data-table thead tr {
+    border-bottom: 2px solid hsl(var(--accent) / 0.15);
+    background: hsl(var(--surface));
+  }
+
+  .data-table th {
+    @apply text-left py-3.5 px-5 font-semibold text-foreground/70;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .data-table td {
+    @apply py-3.5 px-5 text-foreground/80;
+  }
+
+  .data-table tbody tr {
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+    transition: background 0.15s ease;
+  }
+
+  .data-table tbody tr:hover {
+    background: hsl(var(--accent) / 0.04);
+  }
+
+  /* ═══ BADGE STYLES ═══ */
   .badge-pilot { background: hsl(var(--gold) / 0.1); color: hsl(var(--gold-hover)); }
   .badge-draft { background: hsl(var(--warning) / 0.1); color: hsl(var(--warning)); }
   .badge-verified { background: hsl(var(--success) / 0.1); color: hsl(var(--success)); }
 
-  /* ── Link Styling ── */
+  /* ═══ LINK STYLING ═══ */
   a.sovereign-link {
     color: hsl(var(--link));
     text-decoration-color: hsl(var(--accent) / 0.3);
@@ -290,71 +384,69 @@
     text-decoration-color: hsl(var(--accent));
   }
 
-  /* ── Dividers ── */
+  /* ═══ DIVIDERS ═══ */
   .inst-divider {
     @apply w-full h-px;
-    background: linear-gradient(to right, transparent, hsl(var(--accent) / 0.3), transparent);
+    background: linear-gradient(to right, transparent, hsl(var(--accent) / 0.2), transparent);
   }
 
-  /* ── Glow Effects ── */
-  .glow-accent { box-shadow: 0 0 80px -20px hsl(var(--accent) / 0.18); }
-  .glow-accent-sm { box-shadow: 0 0 40px -12px hsl(var(--accent) / 0.14); }
+  /* ═══ GLOW EFFECTS ═══ */
+  .glow-accent { box-shadow: 0 0 60px -15px hsl(var(--accent) / 0.2); }
+  .glow-accent-sm { box-shadow: 0 0 30px -8px hsl(var(--accent) / 0.15); }
 
-  /* ── Grain Texture ── */
+  /* ═══ FLUENT REVEAL (border-light effect) ═══ */
+  .reveal-border {
+    position: relative;
+  }
+
+  .reveal-border::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle, 0deg), transparent 20%, hsl(var(--accent) / 0.2) 50%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+
+  .reveal-border:hover::before {
+    opacity: 1;
+  }
+
+  /* ═══ GRAIN TEXTURE ═══ */
   .grain::after {
     content: '';
     position: absolute;
     inset: 0;
-    opacity: 0.02;
+    opacity: 0.015;
     pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
-  /* ── Accent Line Decorators ── */
-  .accent-line-left {
-    position: relative;
-  }
-  .accent-line-left::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(to bottom, hsl(var(--accent)), transparent);
-  }
-
-  /* ── Kinetic Reveal (scroll triggered via IntersectionObserver) ── */
+  /* ═══ KINETIC REVEAL ═══ */
   .reveal {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .reveal.visible {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* ── Horizontal Marquee ── */
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee-scroll 40s linear infinite;
-  }
-  .marquee-track:hover {
-    animation-play-state: paused;
-  }
-
-  /* ── Oversized Display Type ── */
-  .display-massive {
-    font-family: var(--serif);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    line-height: 0.92;
+  /* ═══ ACCENT LINE ═══ */
+  .accent-line-left { position: relative; }
+  .accent-line-left::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, hsl(var(--accent)), transparent);
   }
 
-  /* ── Bento Grid Layouts ── */
+  /* ═══ BENTO GRID ═══ */
   .bento-grid {
     display: grid;
     gap: 1rem;
@@ -366,76 +458,74 @@
   .bento-row-2 { grid-row: span 2; }
 
   @media (max-width: 768px) {
-    .bento-grid {
-      grid-template-columns: 1fr;
-    }
-    .bento-span-2, .bento-span-3, .bento-span-full {
-      grid-column: span 1;
-    }
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-span-2, .bento-span-3, .bento-span-full { grid-column: span 1; }
     .bento-row-2 { grid-row: span 1; }
   }
 
-  /* ── Magnetic hover (micro-interaction) ── */
+  /* ═══ MAGNETIC HOVER ═══ */
   .magnetic {
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .magnetic:hover {
-    transform: scale(1.03);
-  }
+  .magnetic:hover { transform: scale(1.02); }
 
-  /* ── Stagger children animation ── */
+  /* ═══ STAGGER ANIMATION ═══ */
   .stagger > * {
     opacity: 0;
-    animation: stagger-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: stagger-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
   .stagger > *:nth-child(1) { animation-delay: 0ms; }
-  .stagger > *:nth-child(2) { animation-delay: 80ms; }
-  .stagger > *:nth-child(3) { animation-delay: 160ms; }
-  .stagger > *:nth-child(4) { animation-delay: 240ms; }
-  .stagger > *:nth-child(5) { animation-delay: 320ms; }
-  .stagger > *:nth-child(6) { animation-delay: 400ms; }
+  .stagger > *:nth-child(2) { animation-delay: 60ms; }
+  .stagger > *:nth-child(3) { animation-delay: 120ms; }
+  .stagger > *:nth-child(4) { animation-delay: 180ms; }
+  .stagger > *:nth-child(5) { animation-delay: 240ms; }
+  .stagger > *:nth-child(6) { animation-delay: 300ms; }
+
+  /* ═══ FLUENT PROGRESS INDICATOR ═══ */
+  .fluent-bar {
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
+    border-radius: 999px;
+  }
+
+  /* ═══ CARBON TAG ═══ */
+  .carbon-tag {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full;
+    background: hsl(var(--accent) / 0.1);
+    color: hsl(var(--accent));
+    border: 1px solid hsl(var(--accent) / 0.2);
+  }
+
+  /* ═══ MARQUEE ═══ */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 40s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
 }
 
-/* ── Keyframe Animations ── */
+/* ═══ KEYFRAMES ═══ */
 @keyframes marquee-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @keyframes stagger-in {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Print Styles ── */
+/* ═══ PRINT ═══ */
 @media print {
-  body {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  aside,
-  nav[aria-label="Breadcrumb"],
-  .print\:hidden,
-  button,
-  [data-radix-popper-content-wrapper],
-  header.border-b {
-    display: none !important;
-  }
-
-  .flex.min-h-screen > div.flex-1 {
-    margin: 0;
-    width: 100%;
-  }
-
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  aside, nav[aria-label="Breadcrumb"], .print\:hidden, button,
+  [data-radix-popper-content-wrapper], header.border-b { display: none !important; }
+  .flex.min-h-screen > div.flex-1 { margin: 0; width: 100%; }
   main { padding: 0; }
   section { break-inside: avoid; }
-
-  .governance-card, .governance-card-elevated, .bento-card {
-    break-inside: avoid;
-    box-shadow: none;
-    border: 1px solid #ddd;
+  .governance-card, .governance-card-elevated, .bento-card, .fluent-card, .carbon-tile {
+    break-inside: avoid; box-shadow: none; border: 1px solid #ddd;
   }
-
   footer { display: none !important; }
 }

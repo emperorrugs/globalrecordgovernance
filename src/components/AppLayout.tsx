@@ -1,12 +1,11 @@
-import React from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Home, Layers, Shield, Cpu, Globe, Menu, Users, Lock, FileText,
   GraduationCap, Award, BookOpen, Handshake, Eye, Building, Network,
   Database, Landmark, Languages, TrendingUp, Code, BarChart3, ClipboardList,
-  ChevronUp, ChevronDown, Sparkles,
+  ChevronUp, ChevronDown,
 } from "lucide-react";
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { InstitutionalFooter } from "@/components/InstitutionalFooter";
@@ -23,7 +22,7 @@ import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
-/* ── Navigation Layers ── */
+/* ── Navigation Layers (IBM Carbon UI Shell pattern) ── */
 const layer1 = [
   { title: "Home", path: "/", icon: Home },
   { title: "The Problem", path: "/the-problem", icon: Eye },
@@ -88,24 +87,25 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
   return (
     <div>
       {label && !collapsed && (
-        <p className="px-5 pt-7 pb-2 text-[10px] font-mono text-accent/30 uppercase tracking-[0.2em]">{label}</p>
+        <p className="px-5 pt-6 pb-1.5 text-[10px] font-mono text-muted-foreground/30 uppercase tracking-[0.12em] font-medium">{label}</p>
       )}
       {items.map((item) => {
         const isActive = location.pathname === item.path;
         return (
-          <Link aria-current={isActive ? "page" : undefined}
+          <Link
+            aria-current={isActive ? "page" : undefined}
             key={item.path}
             to={item.path}
             onClick={onNavigate}
             className={cn(
-              "flex items-center gap-3 px-5 py-2 mx-2 text-[13px] rounded-lg transition-all duration-500",
+              "flex items-center gap-3 px-4 py-[7px] mx-2 text-[13px] rounded-md transition-all duration-200",
               isActive
-                ? "bg-accent/8 text-accent font-medium border border-accent/10"
-                : "text-sidebar-foreground/40 hover:text-sidebar-foreground/80 hover:bg-sidebar-accent/30 border border-transparent"
+                ? "bg-accent/10 text-accent font-medium"
+                : "text-sidebar-foreground/50 hover:text-sidebar-foreground/90 hover:bg-sidebar-accent/40"
             )}
             title={collapsed ? item.title : undefined}
           >
-            <item.icon className={cn("h-3.5 w-3.5 shrink-0 transition-colors duration-300", isActive ? "text-accent" : "")} />
+            <item.icon className={cn("h-[14px] w-[14px] shrink-0", isActive ? "text-accent" : "")} />
             {!collapsed && <span>{item.title}</span>}
           </Link>
         );
@@ -115,30 +115,28 @@ function NavGroup({ items, collapsed, onNavigate, label }: { items: NavItem[]; c
 }
 
 function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate?: () => void }) {
-  const navRef = React.useRef<HTMLElement>(null);
-  const [canScrollUp, setCanScrollUp] = React.useState(false);
-  const [canScrollDown, setCanScrollDown] = React.useState(true);
+  const navRef = useRef<HTMLElement>(null);
+  const [canScrollUp, setCanScrollUp] = useState(false);
+  const [canScrollDown, setCanScrollDown] = useState(true);
 
-  const checkScroll = React.useCallback(() => {
+  const checkScroll = useCallback(() => {
     const el = navRef.current;
     if (!el) return;
     setCanScrollUp(el.scrollTop > 20);
     setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 20);
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const el = navRef.current;
     if (!el) return;
     checkScroll();
     const t1 = setTimeout(checkScroll, 200);
-    const t2 = setTimeout(checkScroll, 600);
     el.addEventListener("scroll", checkScroll, { passive: true });
     window.addEventListener("resize", checkScroll);
     const ro = new ResizeObserver(checkScroll);
     ro.observe(el);
     return () => {
       clearTimeout(t1);
-      clearTimeout(t2);
       el.removeEventListener("scroll", checkScroll);
       window.removeEventListener("resize", checkScroll);
       ro.disconnect();
@@ -152,15 +150,13 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
   return (
     <div className="flex-1 flex flex-col min-h-0 overflow-hidden relative">
       {canScrollUp && (
-        <button
-          onClick={() => scrollTo("top")}
-          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-2 bg-gradient-to-b from-sidebar via-sidebar/95 to-transparent text-sidebar-foreground/20 hover:text-accent transition-colors duration-300"
-          aria-label="Scroll navigation up"
-        >
+        <button onClick={() => scrollTo("top")}
+          className="absolute top-0 left-0 right-0 z-10 flex justify-center py-1.5 bg-gradient-to-b from-sidebar via-sidebar/90 to-transparent text-muted-foreground/20 hover:text-accent transition-colors"
+          aria-label="Scroll navigation up">
           <ChevronUp className="h-3 w-3" />
         </button>
       )}
-      <nav ref={navRef} className="h-0 flex-grow py-3 overflow-y-auto" aria-label="Main navigation">
+      <nav ref={navRef} className="h-0 flex-grow py-2 overflow-y-auto" aria-label="Main navigation">
         <NavGroup items={layer1} collapsed={collapsed} onNavigate={onNavigate} label="Authority" />
         <NavGroup items={layer2} collapsed={collapsed} onNavigate={onNavigate} label="Standards" />
         <NavGroup items={layer3} collapsed={collapsed} onNavigate={onNavigate} label="Platform" />
@@ -168,11 +164,9 @@ function SidebarNav({ collapsed, onNavigate }: { collapsed?: boolean; onNavigate
         <NavGroup items={layer5} collapsed={collapsed} onNavigate={onNavigate} label="Archive" />
       </nav>
       {canScrollDown && (
-        <button
-          onClick={() => scrollTo("bottom")}
-          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-2 bg-gradient-to-t from-sidebar via-sidebar/95 to-transparent text-sidebar-foreground/20 hover:text-accent transition-colors duration-300"
-          aria-label="Scroll navigation down"
-        >
+        <button onClick={() => scrollTo("bottom")}
+          className="absolute bottom-0 left-0 right-0 z-10 flex justify-center py-1.5 bg-gradient-to-t from-sidebar via-sidebar/90 to-transparent text-muted-foreground/20 hover:text-accent transition-colors"
+          aria-label="Scroll navigation down">
           <ChevronDown className="h-3 w-3" />
         </button>
       )}
@@ -195,7 +189,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   const langLabel: Record<string, string> = { en: "FR", fr: "AR", ar: "EN" };
 
   return (
-    <div className={cn("flex min-h-screen w-full", isRTL && "font-sans")} dir={isRTL ? "rtl" : "ltr"}>
+    <div className={cn("flex min-h-screen w-full")} dir={isRTL ? "rtl" : "ltr"}>
       <RouteSEO />
       <CookieConsent />
       <ReadingProgress />
@@ -205,18 +199,18 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         Skip to main content
       </a>
 
-      {/* ── Desktop Sidebar ── */}
+      {/* ── Desktop Sidebar — Carbon UI Shell ── */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-[280px] flex flex-col bg-sidebar border-r border-sidebar-border/50 z-50 shrink-0 overflow-hidden">
-          {/* Logo */}
-          <div className="p-6 border-b border-sidebar-border/50 shrink-0">
+        <aside className="sticky top-0 h-screen w-[260px] flex flex-col bg-sidebar border-r border-sidebar-border z-50 shrink-0 overflow-hidden">
+          {/* Header */}
+          <div className="px-5 py-4 border-b border-sidebar-border shrink-0">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center group-hover:bg-accent/15 group-hover:border-accent/30 transition-all duration-500">
-                <span className="text-accent text-sm font-mono font-bold">G</span>
+              <div className="w-8 h-8 rounded-lg bg-accent/12 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-300">
+                <span className="text-accent text-xs font-mono font-bold">G</span>
               </div>
               <div>
-                <h1 className="font-serif text-base font-semibold tracking-wide text-foreground">GRGF</h1>
-                <p className="text-[9px] font-mono text-sidebar-foreground/25 uppercase tracking-[0.15em] leading-tight">
+                <h1 className="text-sm font-bold tracking-tight text-foreground">GRGF</h1>
+                <p className="text-[9px] font-mono text-muted-foreground/30 uppercase tracking-[0.1em]">
                   Governance Framework
                 </p>
               </div>
@@ -225,16 +219,14 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
 
           <SidebarNav />
 
-          {/* Bottom */}
-          <div className="p-5 border-t border-sidebar-border/50 shrink-0">
-            <div className="flex items-center gap-2 mb-2">
+          {/* Footer */}
+          <div className="px-5 py-3 border-t border-sidebar-border shrink-0">
+            <div className="flex items-center gap-2 mb-1">
               <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-glow" />
-              <p className="text-[9px] font-mono text-accent/50 uppercase tracking-[0.2em]">System Active</p>
+              <p className="text-[9px] font-mono text-accent/50 uppercase tracking-[0.1em]">System Active</p>
             </div>
-            <p className="text-[9px] text-sidebar-foreground/20 font-mono leading-relaxed">
-              Digital Public Infrastructure
-              <br />
-              Standards Authority · Est. 2024
+            <p className="text-[9px] text-muted-foreground/20 font-mono leading-relaxed">
+              Digital Public Infrastructure<br />Standards Authority · Est. 2024
             </p>
           </div>
         </aside>
@@ -244,28 +236,28 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex-1 min-w-0 flex flex-col">
         <ViewModeBanner />
         <SimulationBanner />
-        
-        {/* Top Bar */}
-        <div className="sticky top-0 z-40 glass-subtle border-b border-border/30">
-          <div className="flex items-center justify-between px-5 py-2.5 gap-2">
+
+        {/* Top Bar — Fluent Command Bar */}
+        <div className="sticky top-0 z-40 acrylic-subtle border-b border-border/30">
+          <div className="flex items-center justify-between px-4 py-2 gap-2">
             <div className="flex items-center gap-2 min-w-0">
               {isMobile && (
                 <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
                   <SheetTrigger asChild>
-                    <button className="p-2 hover:bg-accent/8 rounded-lg transition-colors duration-300 shrink-0">
+                    <button className="p-2 hover:bg-accent/8 rounded-md transition-colors shrink-0">
                       <Menu className="h-5 w-5" />
                     </button>
                   </SheetTrigger>
-                  <SheetContent side="left" className="w-[280px] bg-sidebar text-sidebar-foreground p-0 flex flex-col border-r border-sidebar-border/50">
+                  <SheetContent side="left" className="w-[260px] bg-sidebar text-sidebar-foreground p-0 flex flex-col border-r border-sidebar-border">
                     <SheetTitle className="sr-only">Navigation</SheetTitle>
-                    <div className="p-5 border-b border-sidebar-border/50">
+                    <div className="px-5 py-4 border-b border-sidebar-border">
                       <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-lg bg-accent/12 border border-accent/20 flex items-center justify-center">
                           <span className="text-accent text-xs font-mono font-bold">G</span>
                         </div>
                         <div>
-                          <h1 className="font-serif text-sm font-semibold tracking-wide">GRGF</h1>
-                          <p className="text-[9px] font-mono text-sidebar-foreground/25 uppercase tracking-[0.2em] leading-tight">
+                          <h1 className="text-sm font-bold tracking-tight">GRGF</h1>
+                          <p className="text-[9px] font-mono text-muted-foreground/30 uppercase tracking-[0.1em]">
                             Governance Framework
                           </p>
                         </div>
@@ -277,29 +269,29 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               )}
               <Breadcrumbs />
             </div>
-            <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center gap-1.5 shrink-0">
               <Link
                 to="/controlled-access"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-accent text-accent-foreground text-overline font-semibold tracking-wide rounded-lg transition-all duration-500 hover:shadow-xl hover:shadow-accent/20 hover:scale-[1.02]"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-accent text-accent-foreground text-[11px] font-semibold tracking-wide rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-accent/20 hover:brightness-110"
               >
                 <Lock className="h-3 w-3" />
                 {isMobile ? "Access" : "Request Assessment"}
               </Link>
               <button
                 onClick={nextLang}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 text-overline font-mono text-muted-foreground/50 hover:text-accent rounded-lg hover:bg-accent/5 transition-all duration-500"
+                className="flex items-center gap-1 px-2 py-1.5 text-[11px] font-mono text-muted-foreground/50 hover:text-accent rounded-md hover:bg-accent/5 transition-all duration-200"
                 aria-label={`Switch language (current: ${lang.toUpperCase()})`}
               >
                 <Languages className="h-3.5 w-3.5" />
                 <span className="font-semibold">{langLabel[lang]}</span>
               </button>
               <ViewModeFirstVisitTooltip>
-                <div className="flex items-center gap-1.5 ml-1">
-                  <span className={cn("text-overline font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
+                <div className="flex items-center gap-1.5 ml-0.5">
+                  <span className={cn("text-[11px] font-mono", isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
                     {isMobile ? t("topbar.plain_short") : t("topbar.plain")}
                   </span>
                   <Switch checked={!isPlain} onCheckedChange={toggle} />
-                  <span className={cn("text-overline font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
+                  <span className={cn("text-[11px] font-mono", !isPlain ? "text-accent font-semibold" : "text-muted-foreground/40")}>
                     {isMobile ? t("topbar.tech_short") : t("topbar.technical")}
                   </span>
                 </div>
