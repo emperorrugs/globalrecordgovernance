@@ -1,14 +1,32 @@
 import { Link } from "react-router-dom";
-import { Users, Building2, Handshake, Lock, ArrowRight, ShieldCheck, Info } from "lucide-react";
+import { Users, Building2, Handshake, Lock, ArrowRight, ShieldCheck, Info, Search, Download, BookOpen, Printer } from "lucide-react";
 
 const cards = [
+  {
+    to: "/archive/intelligent",
+    icon: Search,
+    title: "Smart Archive",
+    desc: "Search, filter, and browse 90+ documents across 11 departments. Full-text search, access-level filtering, and department categorization.",
+    access: "ALL ACCESS LEVELS",
+    docCount: 90,
+    highlight: true,
+  },
+  {
+    to: "/archive/downloads",
+    icon: Download,
+    title: "Publication Suite & Downloads",
+    desc: "All 4 GRGF volumes, Sovereign Authority Edition, Value Proposition, and Complete Proposal — trilingual (EN/FR/AR). Printable PDFs.",
+    access: "TRILINGUAL · DOWNLOADABLE",
+    docCount: 47,
+    highlight: true,
+  },
   {
     to: "/archive/public",
     icon: Users,
     title: "Public & Civil Society",
     desc: "Transparency and understanding. Open documents for public, media, academia, and civil society stakeholders.",
     access: "OPEN ACCESS",
-    docCount: 6,
+    docCount: 9,
   },
   {
     to: "/archive/government",
@@ -67,7 +85,7 @@ const ArchiveOverview = () => (
               <div className="mt-3 flex flex-wrap gap-4">
                 <span className="text-[10px] font-mono text-muted-foreground/60">VERSION: 1.0.0</span>
                 <span className="text-[10px] font-mono text-muted-foreground/60">STATUS: AUTHORITATIVE INITIAL ARCHIVE</span>
-                <span className="text-[10px] font-mono text-muted-foreground/60">DOCUMENTS: 43</span>
+                <span className="text-[10px] font-mono text-muted-foreground/60">DOCUMENTS: 90+</span>
                 <span className="text-[10px] font-mono text-muted-foreground/60">SECTIONS: 10</span>
               </div>
             </div>
