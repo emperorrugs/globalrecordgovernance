@@ -11,21 +11,22 @@ import { FadeIn } from "@/components/FadeIn";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 /* ── Metric Counter ── */
-const Metric = ({ value, label, suffix = "" }: { value: string; label: string; suffix?: string }) => (
-  <div className="text-center group">
-    <p className="text-3xl md:text-4xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors duration-500">
-      {value}<span className="text-accent/60 text-xl">{suffix}</span>
+const Metric = ({ value, label, suffix = "", color }: { value: string; label: string; suffix?: string; color?: string }) => (
+  <div className="text-center">
+    <p className={`text-3xl md:text-4xl font-bold tracking-tight ${color || "text-primary"}`}>
+      {value}<span className="text-lg">{suffix}</span>
     </p>
-    <p className="text-[11px] text-muted-foreground/30 mt-1.5 tracking-wide uppercase font-medium">{label}</p>
+    <p className="text-xs text-muted-foreground mt-1.5 font-medium">{label}</p>
   </div>
 );
 
-/* ── Volume Card (Apple product card style) ── */
-const VolumeCard = ({ num, title, subtitle, desc, icon: Icon, links, delay }: {
+/* ── Product Card (Azure style) ── */
+const ProductCard = ({ num, title, subtitle, desc, icon: Icon, links, delay, accent }: {
   num: string; title: string; subtitle: string; desc: string;
   icon: React.ComponentType<{ className?: string }>;
   links: { label: string; path: string }[];
   delay: number;
+  accent: string;
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -33,58 +34,49 @@ const VolumeCard = ({ num, title, subtitle, desc, icon: Icon, links, delay }: {
     <FadeIn delay={delay}>
       <div className="group relative">
         <div
-          className="relative border border-border/15 bg-card/30 overflow-hidden cursor-pointer transition-all duration-700 hover:border-accent/15 hover:bg-card/50"
-          style={{ borderRadius: "20px", minHeight: "380px" }}
+          className="relative bg-background border border-border overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-foreground/5 rounded-lg"
+          style={{ minHeight: "340px" }}
           onClick={() => setExpanded(!expanded)}
           role="button"
           tabIndex={0}
           aria-expanded={expanded}
           onKeyDown={e => e.key === "Enter" && setExpanded(!expanded)}
         >
-          {/* Volume number watermark */}
-          <div className="absolute top-6 right-8 text-[100px] font-black text-foreground/[0.02] leading-none select-none">
-            {num}
-          </div>
+          {/* Top accent bar */}
+          <div className={`h-1 w-full ${accent}`} />
 
-          <div className="relative flex flex-col justify-end h-full p-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/5 border border-accent/10 mb-5 w-fit">
-              <Icon className="h-3.5 w-3.5 text-accent" />
-              <span className="text-[10px] font-medium text-muted-foreground/50 tracking-wide">{subtitle}</span>
+          <div className="relative flex flex-col justify-end h-full p-7">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-muted mb-4 w-fit">
+              <Icon className="h-3.5 w-3.5 text-primary" />
+              <span className="text-[11px] font-medium text-muted-foreground tracking-wide">{subtitle}</span>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-bold tracking-tight leading-[1.1] group-hover:text-accent transition-colors duration-500 mb-3">
+            <h3 className="text-xl md:text-2xl font-bold tracking-tight leading-tight group-hover:text-primary transition-colors duration-300 mb-2">
               {title}
             </h3>
-            <p className="text-[14px] text-muted-foreground/40 leading-[1.7] max-w-sm mb-6">{desc}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mb-5">{desc}</p>
 
-            <div className="flex items-center gap-2 text-accent text-[14px] font-semibold group-hover:gap-3 transition-all duration-500">
+            <div className="flex items-center gap-2 text-primary text-sm font-semibold group-hover:gap-3 transition-all duration-300">
               <span>{expanded ? "Close" : "Explore"}</span>
-              <ArrowRight className={`h-4 w-4 transition-transform duration-500 ${expanded ? "rotate-90" : "group-hover:translate-x-1"}`} />
+              <ArrowRight className={`h-4 w-4 transition-transform duration-300 ${expanded ? "rotate-90" : "group-hover:translate-x-1"}`} />
             </div>
           </div>
-
-          {/* Bottom accent line */}
-          <div
-            className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-700"
-            style={{ background: "linear-gradient(90deg, hsl(var(--accent)), transparent)" }}
-          />
         </div>
 
-        {/* Expandable chapters */}
+        {/* Expandable links */}
         <div
-          className={`overflow-hidden transition-all duration-700 ${expanded ? "max-h-[500px] opacity-100 mt-3" : "max-h-0 opacity-0"}`}
-          style={{ transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)" }}
+          className={`overflow-hidden transition-all duration-500 ${expanded ? "max-h-[500px] opacity-100 mt-2" : "max-h-0 opacity-0"}`}
         >
-          <div className="border border-border/10 bg-card/20 p-4 space-y-0.5" style={{ borderRadius: "14px" }}>
+          <div className="border border-border bg-muted/30 rounded-lg p-2 space-y-0.5">
             {links.map(link => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={e => e.stopPropagation()}
-                className="flex items-center justify-between px-3 py-2.5 text-[13px] text-muted-foreground/50 hover:text-accent hover:bg-accent/5 rounded-lg transition-all duration-200"
+                className="flex items-center justify-between px-3 py-2 text-[13px] text-muted-foreground hover:text-primary hover:bg-primary/5 rounded-md transition-all duration-200"
               >
                 <span>{link.label}</span>
-                <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-40" />
+                <ArrowRight className="h-3 w-3 opacity-30" />
               </Link>
             ))}
           </div>
@@ -101,15 +93,14 @@ const QuickCard = ({ icon: Icon, title, desc, path, delay }: {
   <FadeIn delay={delay}>
     <Link
       to={path}
-      className="group flex items-start gap-4 p-5 border border-border/10 bg-card/15 hover:bg-card/40 hover:border-accent/15 transition-all duration-500"
-      style={{ borderRadius: "14px" }}
+      className="group flex items-start gap-4 p-5 bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all duration-300 rounded-lg"
     >
-      <div className="w-9 h-9 rounded-xl bg-accent/5 border border-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/10 transition-all duration-300">
-        <Icon className="h-4 w-4 text-accent/70" />
+      <div className="w-10 h-10 rounded-lg bg-primary/8 flex items-center justify-center shrink-0 group-hover:bg-primary/12 transition-all duration-300">
+        <Icon className="h-4.5 w-4.5 text-primary" />
       </div>
       <div className="min-w-0">
-        <h4 className="text-[14px] font-semibold tracking-tight group-hover:text-accent transition-colors duration-300">{title}</h4>
-        <p className="text-[12px] text-muted-foreground/35 leading-relaxed mt-0.5">{desc}</p>
+        <h4 className="text-sm font-semibold tracking-tight group-hover:text-primary transition-colors duration-300">{title}</h4>
+        <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
       </div>
     </Link>
   </FadeIn>
@@ -118,23 +109,10 @@ const QuickCard = ({ icon: Icon, title, desc, path, delay }: {
 /* ══════════════════════ INDEX ══════════════════════ */
 const Index = () => {
   const { t } = useLanguage();
-  const heroRef = useRef<HTMLElement>(null);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current) {
-        const rect = heroRef.current.getBoundingClientRect();
-        if (rect.bottom > 0) setScrollY(window.scrollY);
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const volumes = [
     {
-      num: "I", title: "Framework & Standards", subtitle: "Governance Foundation", icon: Scale,
+      num: "I", title: "Framework & Standards", subtitle: "Governance Foundation", icon: Scale, accent: "bg-ms-red",
       desc: "Constitutional backbone — governance principles, international compliance, anti-capture clauses, and institutional trust architecture.",
       links: [
         { label: "Governance Framework", path: "/governance-framework" },
@@ -147,7 +125,7 @@ const Index = () => {
       ],
     },
     {
-      num: "II", title: "System & Architecture", subtitle: "Technical Blueprint", icon: Cpu,
+      num: "II", title: "System & Architecture", subtitle: "Technical Blueprint", icon: Cpu, accent: "bg-ms-blue",
       desc: "Engineering core — six-layer deterministic architecture, append-only records, hash-chain integrity, and deployment infrastructure.",
       links: [
         { label: "System Architecture", path: "/architecture" },
@@ -155,13 +133,12 @@ const Index = () => {
         { label: "Security & Trust", path: "/security-trust" },
         { label: "Interoperability", path: "/interoperability" },
         { label: "Technical Blueprints", path: "/blueprints" },
-        { label: "Developer Portal", path: "/developer" },
         { label: "Anchor Chain", path: "/anchor-chain" },
         { label: "Developer Portal", path: "/developer" },
       ],
     },
     {
-      num: "III", title: "Academy & Certification", subtitle: "Capacity Building", icon: GraduationCap,
+      num: "III", title: "Academy & Certification", subtitle: "Capacity Building", icon: GraduationCap, accent: "bg-ms-green",
       desc: "Knowledge institute — professional certification, training curricula, institutional readiness, and sovereign deployment pathway.",
       links: [
         { label: "GRGF Academy", path: "/academy" },
@@ -182,53 +159,54 @@ const Index = () => {
       />
 
       {/* ═══ HERO ═══ */}
-      <header ref={heroRef} className="relative min-h-[92vh] flex flex-col items-center justify-center overflow-hidden px-6 md:px-12">
-        {/* Ambient light */}
-        <div className="absolute top-[-20%] right-[-10%] w-[700px] h-[700px] rounded-full opacity-[0.03] will-change-transform"
-          style={{ background: "radial-gradient(circle, hsl(var(--accent)), transparent 50%)", transform: `translateY(${scrollY * 0.12}px)` }} />
-        <div className="absolute bottom-[-15%] left-[-8%] w-[500px] h-[500px] rounded-full opacity-[0.02] will-change-transform"
-          style={{ background: "radial-gradient(circle, hsl(var(--primary)), transparent 50%)", transform: `translateY(${scrollY * -0.08}px)` }} />
+      <header className="relative bg-gradient-to-br from-primary via-primary to-[hsl(220,85%,35%)] text-primary-foreground px-6 md:px-12 py-20 md:py-28 overflow-hidden">
+        {/* Geometric pattern */}
+        <div className="absolute inset-0 pointer-events-none opacity-10">
+          <div className="absolute top-0 right-0 w-[600px] h-[600px]" style={{
+            background: "radial-gradient(circle at 70% 30%, rgba(255,255,255,0.15), transparent 50%)"
+          }} />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px]" style={{
+            background: "radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1), transparent 50%)"
+          }} />
+        </div>
 
-        <div className="relative text-center max-w-4xl mx-auto will-change-transform"
-          style={{ transform: `translateY(${scrollY * 0.1}px)`, opacity: Math.max(0, 1 - scrollY * 0.0012) }}>
-
+        <div className="relative max-w-5xl mx-auto">
           <FadeIn delay={0}>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-foreground/[0.03] border border-foreground/[0.06] mb-8">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent/50 animate-pulse" />
-              <span className="text-[11px] font-medium text-muted-foreground/35 tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 mb-6">
+              <div className="w-1.5 h-1.5 rounded-full bg-ms-green animate-pulse" />
+              <span className="text-[11px] font-medium text-white/70 tracking-wide">
                 Digital Public Infrastructure · Trust Layer
               </span>
             </div>
           </FadeIn>
 
           <FadeIn delay={60}>
-            <h1 className="display-massive" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-              <span className="text-foreground/20">The</span>{" "}
-              <span className="bg-gradient-to-r from-accent via-accent to-primary bg-clip-text text-transparent">Global Record</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] max-w-3xl">
+              Global Record
               <br />
-              <span className="text-foreground">Governance Framework</span>
+              Governance Framework
             </h1>
           </FadeIn>
 
           <FadeIn delay={140}>
-            <p className="mt-8 text-[16px] md:text-[18px] text-muted-foreground/40 max-w-xl mx-auto leading-[1.75] tracking-tight">
+            <p className="mt-6 text-base md:text-lg text-white/75 max-w-xl leading-relaxed">
               Sovereign-grade institutional memory and trust verification for digital public infrastructure.
-              <em className="text-accent/50 not-italic font-medium"> It records. It preserves. It verifies.</em>
+              <span className="text-white font-medium"> It records. It preserves. It verifies.</span>
             </p>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="mt-8 flex flex-col sm:flex-row items-start gap-3">
               <Link
                 to="/governance-framework"
-                className="apple-button bg-accent text-accent-foreground px-6 py-2.5 text-[14px] hover:brightness-110 hover:shadow-lg hover:shadow-accent/15 duration-500"
+                className="apple-button bg-white text-primary px-6 py-2.5 text-sm font-semibold hover:bg-white/90 duration-200 shadow-lg"
               >
                 Explore Framework
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
                 to="/controlled-access"
-                className="apple-button bg-foreground/[0.05] text-foreground/70 border border-foreground/[0.08] px-6 py-2.5 text-[14px] hover:bg-foreground/[0.1] duration-500"
+                className="apple-button bg-white/10 text-white border border-white/20 px-6 py-2.5 text-sm font-semibold hover:bg-white/20 duration-200"
               >
                 Request Assessment
               </Link>
@@ -236,204 +214,162 @@ const Index = () => {
           </FadeIn>
 
           <FadeIn delay={260}>
-            <p className="mt-5 text-[9px] font-mono text-muted-foreground/15 tracking-wider">
+            <p className="mt-6 text-[10px] font-mono text-white/30 tracking-wider">
               {t("home.patent")}
             </p>
-          </FadeIn>
-
-          <FadeIn delay={350}>
-            <div className="mt-14 flex items-center justify-center gap-2 text-muted-foreground/15 animate-bounce">
-              <ChevronDown className="h-4 w-4" />
-            </div>
           </FadeIn>
         </div>
       </header>
 
       {/* ═══ METRICS BAR ═══ */}
-      <section className="px-5 md:px-10 lg:px-14 pb-20">
+      <section className="px-6 md:px-12 -mt-8 relative z-10 pb-16">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border border-border/10 bg-card/15" style={{ borderRadius: "16px" }}>
-              <Metric value="6" label="Architecture Layers" suffix="-Layer" />
-              <Metric value="126" label="Applications" />
-              <Metric value="$61.7" label="Annual Value" suffix="B" />
-              <Metric value="47" label="Standards Aligned" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 bg-background border border-border rounded-lg shadow-lg px-6">
+              <Metric value="6" label="Architecture Layers" suffix="-Layer" color="text-ms-red" />
+              <Metric value="126" label="Applications" color="text-ms-blue" />
+              <Metric value="$61.7" label="Annual Value" suffix="B" color="text-ms-green" />
+              <Metric value="47" label="Standards Aligned" color="text-ms-yellow" />
             </div>
           </FadeIn>
         </div>
       </section>
 
       {/* ═══ THREE VOLUMES ═══ */}
-      <section className="px-5 md:px-10 lg:px-14 pb-24">
+      <section className="px-6 md:px-12 pb-20">
         <div className="max-w-5xl mx-auto">
           <FadeIn>
-            <p className="text-[11px] font-medium text-muted-foreground/20 uppercase tracking-[0.12em] mb-3">Three Volumes</p>
-            <h2 className="text-[28px] md:text-[40px] font-bold tracking-tight leading-[1.05] mb-12">
-              Governance{" "}
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Trust Architecture</span>
+            <p className="text-xs font-semibold text-primary uppercase tracking-[0.1em] mb-2">Products</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-10">
+              Governance Trust Architecture
             </h2>
           </FadeIn>
 
           <div className="grid md:grid-cols-3 gap-5">
             {volumes.map((v, i) => (
-              <VolumeCard key={v.num} {...v} delay={i * 100} />
+              <ProductCard key={v.num} {...v} delay={i * 80} />
             ))}
           </div>
         </div>
       </section>
 
       {/* ═══ TRUST PILLARS ═══ */}
-      <section className="px-5 md:px-10 lg:px-14 pb-24">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-6 md:px-12 pb-20 bg-muted/30">
+        <div className="max-w-5xl mx-auto py-16">
           <FadeIn>
-            <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { icon: CheckCircle2, title: "OECD · UN · World Bank", desc: "Mapped to international DPI safeguards and governance maturity frameworks" },
-                { icon: Zap, title: "Deterministic by Design", desc: "Zero discretionary override — every action follows immutable institutional rules" },
-                { icon: Shield, title: "Anti-Capture Architecture", desc: "Five constitutional clauses preventing corporate, political, or insider override" },
-              ].map(({ icon: TIcon, title: tt, desc }, i) => (
-                <FadeIn key={tt} delay={i * 80}>
-                  <div className="flex items-start gap-4 p-5 border border-border/10 bg-card/15 hover:bg-card/30 transition-all duration-500" style={{ borderRadius: "14px" }}>
-                    <div className="w-8 h-8 rounded-full bg-accent/5 border border-accent/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <TIcon className="h-3.5 w-3.5 text-accent/60" />
-                    </div>
-                    <div>
-                      <h4 className="text-[14px] font-semibold tracking-tight mb-1">{tt}</h4>
-                      <p className="text-[12px] text-muted-foreground/35 leading-relaxed">{desc}</p>
-                    </div>
-                  </div>
-                </FadeIn>
-              ))}
-            </div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-[0.1em] mb-2">Compliance</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-10">
+              Built for international standards
+            </h2>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* ═══ ANCHOR CHAIN — CORE SYSTEM ═══ */}
-      <section className="relative pb-24 overflow-hidden">
-        {/* Animated glow background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/[0.04] blur-[120px] animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent/[0.06] blur-[80px]" style={{ animation: "pulse 3s cubic-bezier(0.4,0,0.6,1) infinite" }} />
-        </div>
-
-        {/* Animated chain links running across */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.04]">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute border-2 border-primary rounded-full"
-              style={{
-                width: `${60 + i * 8}px`,
-                height: `${30 + i * 4}px`,
-                left: `${5 + i * 8}%`,
-                top: `${30 + Math.sin(i) * 20}%`,
-                transform: `rotate(${i * 15 - 30}deg)`,
-                animation: `fade-in 1s ease-out ${i * 0.15}s both`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="relative z-10 px-5 md:px-10 lg:px-14">
-          <div className="max-w-6xl mx-auto">
-            <FadeIn>
-              {/* Label */}
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-transparent to-primary/30" />
-                <span className="text-[10px] font-mono text-primary/60 uppercase tracking-[0.25em]">Core System</span>
-                <div className="h-px flex-1 max-w-[80px] bg-gradient-to-l from-transparent to-primary/30" />
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={100}>
-              <Link
-                to="/anchor-chain"
-                className="group relative block overflow-hidden border border-primary/15 hover:border-primary/40 transition-all duration-700"
-                style={{
-                  borderRadius: "28px",
-                  background: "linear-gradient(135deg, hsl(var(--primary) / 0.06), hsl(var(--card) / 0.4), hsl(var(--primary) / 0.03))",
-                  boxShadow: "0 0 60px -20px hsl(var(--primary) / 0.15), inset 0 1px 0 hsl(var(--primary) / 0.08)",
-                }}
-              >
-                {/* Watermark */}
-                <div className="absolute top-4 right-6 text-[160px] md:text-[220px] font-black text-primary/[0.03] leading-none select-none">⛓</div>
-
-                {/* Glowing corner accents */}
-                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-br-full" />
-                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-primary/8 to-transparent rounded-tl-full" />
-
-                <div className="relative p-8 md:p-14">
-                  {/* Icon row */}
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/25 flex items-center justify-center shrink-0 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-700" style={{ boxShadow: "0 0 30px -8px hsl(var(--primary) / 0.3)" }}>
-                      <Link2 className="h-9 w-9 text-primary" />
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
-                      <span className="text-[10px] font-mono text-green-500/80 tracking-wider">ACTIVE</span>
-                    </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { icon: CheckCircle2, title: "OECD · UN · World Bank", desc: "Mapped to international DPI safeguards and governance maturity frameworks", color: "text-ms-blue" },
+              { icon: Zap, title: "Deterministic by Design", desc: "Zero discretionary override — every action follows immutable institutional rules", color: "text-ms-red" },
+              { icon: Shield, title: "Anti-Capture Architecture", desc: "Five constitutional clauses preventing corporate, political, or insider override", color: "text-ms-green" },
+            ].map(({ icon: TIcon, title: tt, desc, color }, i) => (
+              <FadeIn key={tt} delay={i * 60}>
+                <div className="flex items-start gap-4 p-6 bg-background border border-border rounded-lg hover:shadow-md transition-all duration-300">
+                  <div className={`w-10 h-10 rounded-lg bg-muted flex items-center justify-center shrink-0 mt-0.5`}>
+                    <TIcon className={`h-5 w-5 ${color}`} />
                   </div>
-
-                  {/* Title */}
-                  <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold tracking-tight leading-[1.05] mb-4 group-hover:text-primary transition-colors duration-500">
-                    GRGF Anchor Chain<span className="text-primary">™</span>
-                  </h2>
-                  <p className="text-[15px] md:text-[17px] text-muted-foreground/50 leading-relaxed max-w-2xl mb-10">
-                    The cryptographic governance verification engine — real-time immutable record anchoring, 
-                    six-layer deterministic architecture, and independent proof-of-existence for every institutional action.
-                  </p>
-
-                  {/* Animated chain visualization */}
-                  <div className="flex items-center gap-1 mb-10 overflow-hidden">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="flex items-center gap-1" style={{ animation: `fade-in 0.5s ease-out ${i * 0.1}s both` }}>
-                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg border border-primary/20 bg-primary/5 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500" style={{ transitionDelay: `${i * 50}ms` }}>
-                          <span className="text-[8px] md:text-[9px] font-mono text-primary/60">#{String(i + 1).padStart(2, '0')}</span>
-                        </div>
-                        {i < 7 && <div className="w-3 md:w-5 h-px bg-primary/20 group-hover:bg-primary/40 transition-colors duration-500" style={{ transitionDelay: `${i * 50}ms` }} />}
-                      </div>
-                    ))}
-                    <div className="ml-1 text-primary/30 text-xs">→</div>
-                  </div>
-
-                  {/* Tech tags */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {["SHA-256 Hash Chain", "X.509 Authority", "Zero-Knowledge Proofs", "Append-Only", "Federation Protocol", "Post-Quantum Ready"].map((tag, i) => (
-                      <span key={tag} className="px-3.5 py-1.5 text-[10px] font-mono text-primary/60 bg-primary/5 border border-primary/10 rounded-full tracking-wider group-hover:border-primary/25 group-hover:text-primary/80 transition-all duration-500" style={{ transitionDelay: `${i * 30}ms` }}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex items-center gap-3 text-primary/60 group-hover:text-primary transition-colors duration-500">
-                    <span className="text-sm font-semibold tracking-wide">Enter the Anchor Chain</span>
-                    <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
+                  <div>
+                    <h4 className="text-sm font-semibold tracking-tight mb-1">{tt}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
                   </div>
                 </div>
-              </Link>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ═══ QUICK ACCESS ═══ */}
-      <section className="px-5 md:px-10 lg:px-14 pb-28">
-        <div className="max-w-5xl mx-auto">
+      {/* ═══ ANCHOR CHAIN — CORE SYSTEM ═══ */}
+      <section className="px-6 md:px-12 pb-20">
+        <div className="max-w-5xl mx-auto pt-16">
           <FadeIn>
-            <p className="text-[11px] font-medium text-muted-foreground/20 uppercase tracking-[0.12em] mb-3">Quick Access</p>
-            <h2 className="text-[24px] md:text-[32px] font-bold tracking-tight leading-[1.1] mb-8">
+            <Link
+              to="/anchor-chain"
+              className="group relative block overflow-hidden border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 rounded-xl bg-gradient-to-br from-primary/[0.03] to-primary/[0.08]"
+            >
+              <div className="relative p-8 md:p-12">
+                {/* Icon row */}
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center shrink-0 group-hover:shadow-lg group-hover:shadow-primary/25 transition-all duration-300">
+                    <Link2 className="h-8 w-8 text-primary-foreground" />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+                    <span className="text-[11px] font-mono text-success tracking-wider font-medium">ACTIVE</span>
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight mb-3">
+                  GRGF Anchor Chain<span className="text-primary">™</span>
+                </h2>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl mb-8">
+                  The cryptographic governance verification engine — real-time immutable record anchoring,
+                  six-layer deterministic architecture, and independent proof-of-existence for every institutional action.
+                </p>
+
+                {/* Chain visualization */}
+                <div className="flex items-center gap-1.5 mb-8 overflow-hidden">
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="flex items-center gap-1.5" style={{ animation: `fade-in 0.4s ease-out ${i * 0.08}s both` }}>
+                      <div className="w-10 h-10 md:w-11 md:h-11 rounded-md border border-primary/20 bg-primary/5 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-300" style={{ transitionDelay: `${i * 40}ms` }}>
+                        <span className="text-[9px] font-mono text-primary/70">#{String(i + 1).padStart(2, '0')}</span>
+                      </div>
+                      {i < 7 && <div className="w-4 h-px bg-primary/20 group-hover:bg-primary/40 transition-colors duration-300" />}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {[
+                    { tag: "SHA-256 Hash Chain", color: "text-ms-red bg-ms-red/5 border-ms-red/15" },
+                    { tag: "X.509 Authority", color: "text-ms-blue bg-ms-blue/5 border-ms-blue/15" },
+                    { tag: "Zero-Knowledge Proofs", color: "text-ms-green bg-ms-green/5 border-ms-green/15" },
+                    { tag: "Append-Only", color: "text-ms-yellow bg-ms-yellow/5 border-ms-yellow/15" },
+                    { tag: "Federation Protocol", color: "text-primary bg-primary/5 border-primary/15" },
+                    { tag: "Post-Quantum Ready", color: "text-muted-foreground bg-muted border-border" },
+                  ].map(({ tag, color }) => (
+                    <span key={tag} className={`px-3 py-1 text-[10px] font-mono border rounded-md tracking-wider ${color}`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="flex items-center gap-2 text-primary group-hover:gap-3 transition-all duration-300">
+                  <span className="text-sm font-semibold">Enter the Anchor Chain</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </div>
+              </div>
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* ═══ QUICK ACCESS ═══ */}
+      <section className="px-6 md:px-12 pb-20 bg-muted/20">
+        <div className="max-w-5xl mx-auto py-16">
+          <FadeIn>
+            <p className="text-xs font-semibold text-primary uppercase tracking-[0.1em] mb-2">Resources</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-8">
               Tools & Resources
             </h2>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <QuickCard icon={BarChart3} title="Impact Modeling" desc="Fiscal projections and ROI analysis" path="/impact-modeling" delay={0} />
             <QuickCard icon={Database} title="Smart Archive" desc="Trilingual institutional repository" path="/archive/intelligent" delay={60} />
             <QuickCard icon={Globe} title="Submission Hub" desc="OECD, World Bank, UN packages" path="/submission-hub" delay={120} />
             <QuickCard icon={FileText} title="Downloads" desc="Publications and documentation" path="/archive/downloads" delay={180} />
             <QuickCard icon={Lock} title="Controlled Access" desc="Institutional verification portal" path="/controlled-access" delay={240} />
+            <QuickCard icon={BookOpen} title="GRGF Academy" desc="Training and certification programs" path="/academy" delay={300} />
           </div>
         </div>
       </section>

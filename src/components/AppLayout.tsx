@@ -4,7 +4,7 @@ import { PageTransition } from "@/components/PageTransition";
 import {
   Home, Shield, Cpu, Globe, Menu, Lock, FileText,
   GraduationCap, Award, BookOpen, Eye, Network,
-  Landmark, Languages, ChevronRight, X, Link2,
+  Landmark, Languages, ChevronRight, ChevronDown, X, Link2,
   Search, BarChart3, Scale, Database, Building,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -22,15 +22,15 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Switch } from "@/components/ui/switch";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-/* ── Intelligent Navigation Structure ── */
-type NavSection = {
+/* ── Navigation Structure ── */
+type NavSectionType = {
   id: string;
   label: string;
   icon: React.ComponentType<{ className?: string }>;
   items: { title: string; path: string; desc?: string }[];
 };
 
-const sections: NavSection[] = [
+const sections: NavSectionType[] = [
   {
     id: "overview", label: "Overview", icon: Home,
     items: [
@@ -38,6 +38,14 @@ const sections: NavSection[] = [
       { title: "The Problem", path: "/the-problem", desc: "Why governance records matter" },
       { title: "Executive Brief", path: "/executive-brief", desc: "For decision makers" },
       { title: "Contact", path: "/contact", desc: "Get in touch" },
+    ],
+  },
+  {
+    id: "anchor-chain", label: "Anchor Chain™", icon: Link2,
+    items: [
+      { title: "Core System", path: "/anchor-chain", desc: "Governance verification engine" },
+      { title: "Live Chain Monitor", path: "/anchor-chain#live-chain", desc: "Real-time record tracking" },
+      { title: "Architecture Layers", path: "/anchor-chain#architecture", desc: "Six-layer model" },
     ],
   },
   {
@@ -61,14 +69,6 @@ const sections: NavSection[] = [
       { title: "G20 DPI", path: "/g20-dpi-framework" },
       { title: "ITU Standards", path: "/itu-global-standards" },
       { title: "Int'l Compliance", path: "/international-compliance" },
-    ],
-  },
-  {
-    id: "anchor-chain", label: "Anchor Chain™", icon: Link2,
-    items: [
-      { title: "Verification System", path: "/anchor-chain", desc: "Core governance verification engine" },
-      { title: "Live Chain Monitor", path: "/anchor-chain#live-chain", desc: "Real-time record tracking" },
-      { title: "Architecture Layers", path: "/anchor-chain#architecture", desc: "Six-layer deterministic model" },
     ],
   },
   {
@@ -152,40 +152,39 @@ function CommandSearch({ open, onClose }: { open: boolean; onClose: () => void }
 
   return (
     <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh]" onClick={onClose}>
-      <div className="absolute inset-0 bg-background/60 backdrop-blur-xl" />
+      <div className="absolute inset-0 bg-foreground/20 backdrop-blur-sm" />
       <div
-        className="relative w-full max-w-lg mx-4 bg-card border border-border/40 shadow-2xl overflow-hidden"
-        style={{ borderRadius: "16px" }}
+        className="relative w-full max-w-lg mx-4 bg-background border border-border shadow-xl rounded-lg overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
-        <div className="flex items-center gap-3 px-5 py-4 border-b border-border/30">
-          <Search className="h-4 w-4 text-muted-foreground/40 shrink-0" />
+        <div className="flex items-center gap-3 px-4 py-3 border-b border-border">
+          <Search className="h-4 w-4 text-muted-foreground shrink-0" />
           <input
             ref={inputRef}
             value={query}
             onChange={e => setQuery(e.target.value)}
             placeholder="Search pages..."
-            className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/30 outline-none"
+            className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/50 outline-none"
           />
-          <kbd className="text-[10px] font-mono text-muted-foreground/30 px-1.5 py-0.5 border border-border/30 rounded">ESC</kbd>
+          <kbd className="text-[10px] font-mono text-muted-foreground px-1.5 py-0.5 border border-border rounded text-xs">ESC</kbd>
         </div>
-        <div className="max-h-[320px] overflow-y-auto py-2">
+        <div className="max-h-[320px] overflow-y-auto py-1">
           {filtered.map(item => (
             <Link
               key={item.path}
               to={item.path}
               onClick={onClose}
-              className="flex items-center justify-between px-5 py-2.5 hover:bg-accent/5 transition-colors"
+              className="flex items-center justify-between px-4 py-2.5 hover:bg-primary/5 transition-colors"
             >
               <div>
                 <p className="text-sm text-foreground">{item.title}</p>
-                <p className="text-[11px] text-muted-foreground/30">{item.section}</p>
+                <p className="text-xs text-muted-foreground">{item.section}</p>
               </div>
-              <ChevronRight className="h-3 w-3 text-muted-foreground/20" />
+              <ChevronRight className="h-3 w-3 text-muted-foreground/40" />
             </Link>
           ))}
           {filtered.length === 0 && (
-            <p className="px-5 py-8 text-sm text-muted-foreground/30 text-center">No results found</p>
+            <p className="px-4 py-8 text-sm text-muted-foreground text-center">No results found</p>
           )}
         </div>
       </div>
@@ -194,30 +193,33 @@ function CommandSearch({ open, onClose }: { open: boolean; onClose: () => void }
 }
 
 /* ── Navigation Section (collapsible) ── */
-function NavSection({ section, collapsed, onNavigate }: { section: NavSection; collapsed?: boolean; onNavigate?: () => void }) {
+function NavSectionComponent({ section, onNavigate }: { section: NavSectionType; collapsed?: boolean; onNavigate?: () => void }) {
   const location = useLocation();
   const hasActive = section.items.some(i => location.pathname === i.path);
   const [open, setOpen] = useState(hasActive);
+
+  const isAnchorChain = section.id === "anchor-chain";
 
   return (
     <div className="mb-0.5">
       <button
         onClick={() => setOpen(!open)}
         className={cn(
-          "w-full flex items-center gap-2.5 px-4 py-2 text-[12px] font-medium transition-colors duration-200",
-          hasActive ? "text-accent" : "text-muted-foreground/40 hover:text-muted-foreground/70"
+          "w-full flex items-center gap-2.5 px-4 py-2 text-[13px] font-medium transition-colors duration-200 rounded-md mx-1",
+          isAnchorChain
+            ? "text-primary font-semibold"
+            : hasActive
+              ? "text-primary bg-primary/5"
+              : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
         )}
+        style={{ width: "calc(100% - 8px)" }}
       >
-        <section.icon className="h-3.5 w-3.5 shrink-0" />
-        {!collapsed && (
-          <>
-            <span className="flex-1 text-left">{section.label}</span>
-            <ChevronRight className={cn("h-3 w-3 transition-transform duration-200", open && "rotate-90")} />
-          </>
-        )}
+        <section.icon className={cn("h-4 w-4 shrink-0", isAnchorChain && "text-primary")} />
+        <span className="flex-1 text-left">{section.label}</span>
+        <ChevronDown className={cn("h-3 w-3 transition-transform duration-200", !open && "-rotate-90")} />
       </button>
-      {!collapsed && open && (
-        <div className="ml-4 pl-3 border-l border-border/15 space-y-px">
+      {open && (
+        <div className="ml-5 pl-3 border-l-2 border-border space-y-px mt-0.5">
           {section.items.map(item => {
             const isActive = location.pathname === item.path;
             return (
@@ -228,8 +230,8 @@ function NavSection({ section, collapsed, onNavigate }: { section: NavSection; c
                 className={cn(
                   "block px-3 py-[6px] text-[13px] rounded-md transition-all duration-200",
                   isActive
-                    ? "text-accent font-medium bg-accent/8"
-                    : "text-muted-foreground/40 hover:text-foreground/70 hover:bg-muted/30"
+                    ? "text-primary font-medium bg-primary/8"
+                    : "text-muted-foreground hover:text-foreground hover:bg-muted/40"
                 )}
               >
                 {item.title}
@@ -247,7 +249,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <nav className="flex-1 overflow-y-auto py-3 scrollbar-thin" aria-label="Main navigation">
       {sections.map(s => (
-        <NavSection key={s.id} section={s} onNavigate={onNavigate} />
+        <NavSectionComponent key={s.id} section={s} onNavigate={onNavigate} />
       ))}
     </nav>
   );
@@ -266,7 +268,6 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     setLang(cycle[lang]);
   };
 
-  // Keyboard shortcut: Cmd/Ctrl+K for search
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
@@ -280,29 +281,29 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className={cn("flex min-h-screen w-full")} dir={isRTL ? "rtl" : "ltr"}>
+    <div className={cn("flex min-h-screen w-full bg-background")} dir={isRTL ? "rtl" : "ltr"}>
       <RouteSEO />
       <CookieConsent />
       <ReadingProgress />
       <KeyboardShortcuts />
       <BackToTop />
       <CommandSearch open={searchOpen} onClose={() => setSearchOpen(false)} />
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-accent focus:text-accent-foreground focus:text-sm focus:rounded-md">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[200] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:text-sm focus:rounded-md">
         Skip to main content
       </a>
 
       {/* ── Desktop Sidebar ── */}
       {!isMobile && (
-        <aside className="sticky top-0 h-screen w-[240px] flex flex-col bg-sidebar border-r border-sidebar-border/30 z-50 shrink-0 overflow-hidden">
+        <aside className="sticky top-0 h-screen w-[260px] flex flex-col bg-background border-r border-border z-50 shrink-0 overflow-hidden">
           {/* Logo */}
-          <div className="px-5 py-5 border-b border-sidebar-border/20 shrink-0">
+          <div className="px-5 py-5 border-b border-border shrink-0">
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center group-hover:bg-accent/20 transition-all duration-500">
-                <span className="text-accent text-xs font-bold">G</span>
+              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center group-hover:shadow-md group-hover:shadow-primary/20 transition-all duration-300">
+                <span className="text-primary-foreground text-sm font-bold">G</span>
               </div>
               <div>
-                <h1 className="text-[13px] font-bold tracking-tight text-foreground">GRGF</h1>
-                <p className="text-[9px] text-muted-foreground/25 tracking-[0.06em]">Governance Framework</p>
+                <h1 className="text-[14px] font-bold tracking-tight text-foreground">GRGF</h1>
+                <p className="text-[10px] text-muted-foreground tracking-wide">Governance Framework</p>
               </div>
             </Link>
           </div>
@@ -311,23 +312,23 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="px-3 pt-3 pb-1 shrink-0">
             <button
               onClick={() => setSearchOpen(true)}
-              className="w-full flex items-center gap-2.5 px-3 py-2 text-[12px] text-muted-foreground/30 bg-muted/20 border border-border/15 rounded-lg hover:border-border/30 hover:text-muted-foreground/50 transition-all duration-200"
+              className="w-full flex items-center gap-2.5 px-3 py-2 text-[13px] text-muted-foreground bg-muted/50 border border-border rounded-md hover:border-primary/30 hover:bg-muted transition-all duration-200"
             >
               <Search className="h-3.5 w-3.5" />
               <span className="flex-1 text-left">Search</span>
-              <kbd className="text-[9px] font-mono text-muted-foreground/20 px-1 py-0.5 border border-border/20 rounded">⌘K</kbd>
+              <kbd className="text-[10px] font-mono text-muted-foreground px-1.5 py-0.5 border border-border rounded">⌘K</kbd>
             </button>
           </div>
 
           <SidebarContent />
 
           {/* Footer */}
-          <div className="px-5 py-3 border-t border-sidebar-border/15 shrink-0">
+          <div className="px-5 py-3 border-t border-border shrink-0">
             <div className="flex items-center gap-1.5 mb-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-accent/50 animate-pulse" />
-              <p className="text-[9px] text-muted-foreground/25 tracking-wide">Active</p>
+              <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
+              <p className="text-[10px] text-muted-foreground">Active</p>
             </div>
-            <p className="text-[8px] text-muted-foreground/15 leading-relaxed">
+            <p className="text-[9px] text-muted-foreground/60 leading-relaxed">
               DPI Standards Authority
             </p>
           </div>
@@ -337,17 +338,17 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       {/* ── Mobile Sidebar Overlay ── */}
       {isMobile && mobileOpen && (
         <div className="fixed inset-0 z-50">
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-          <aside className="relative w-[280px] h-full bg-sidebar border-r border-sidebar-border/30 flex flex-col overflow-hidden">
-            <div className="flex items-center justify-between px-5 py-4 border-b border-sidebar-border/20">
+          <div className="absolute inset-0 bg-foreground/20 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+          <aside className="relative w-[300px] h-full bg-background border-r border-border flex flex-col overflow-hidden">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-border">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center">
-                  <span className="text-accent text-xs font-bold">G</span>
+                <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
+                  <span className="text-primary-foreground text-sm font-bold">G</span>
                 </div>
-                <h1 className="text-[13px] font-bold tracking-tight">GRGF</h1>
+                <h1 className="text-[14px] font-bold tracking-tight">GRGF</h1>
               </div>
-              <button onClick={() => setMobileOpen(false)} className="p-1.5 hover:bg-muted/30 rounded-lg transition-colors">
-                <X className="h-4 w-4 text-muted-foreground/40" />
+              <button onClick={() => setMobileOpen(false)} className="p-1.5 hover:bg-muted rounded-md transition-colors">
+                <X className="h-4 w-4 text-muted-foreground" />
               </button>
             </div>
             <SidebarContent onNavigate={() => setMobileOpen(false)} />
@@ -360,52 +361,52 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         <ViewModeBanner />
         <SimulationBanner />
 
-        {/* Top Bar — minimal Apple style */}
-        <div className="sticky top-0 z-40 acrylic-subtle border-b border-border/15">
+        {/* Top Bar — Azure style */}
+        <div className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border">
           <div className="flex items-center justify-between px-4 py-2 gap-3">
             <div className="flex items-center gap-2 min-w-0">
               {isMobile && (
                 <button
                   onClick={() => setMobileOpen(true)}
-                  className="p-2 hover:bg-muted/30 rounded-lg transition-colors shrink-0"
+                  className="p-2 hover:bg-muted rounded-md transition-colors shrink-0"
                 >
-                  <Menu className="h-4.5 w-4.5" />
+                  <Menu className="h-5 w-5 text-foreground" />
                 </button>
               )}
               <Breadcrumbs />
             </div>
-            <div className="flex items-center gap-1.5 shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
               {!isMobile && (
                 <button
                   onClick={() => setSearchOpen(true)}
-                  className="p-2 hover:bg-muted/30 rounded-lg transition-colors"
+                  className="p-2 hover:bg-muted rounded-md transition-colors"
                   aria-label="Search"
                 >
-                  <Search className="h-4 w-4 text-muted-foreground/40" />
+                  <Search className="h-4 w-4 text-muted-foreground" />
                 </button>
               )}
               <button
                 onClick={nextLang}
-                className="flex items-center gap-1 px-2.5 py-1.5 text-[11px] font-medium text-muted-foreground/35 hover:text-accent rounded-lg hover:bg-muted/20 transition-all duration-200"
-                aria-label={`Switch language`}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 text-[12px] font-medium text-muted-foreground hover:text-foreground rounded-md hover:bg-muted transition-all duration-200"
+                aria-label="Switch language"
               >
                 <Languages className="h-3.5 w-3.5" />
                 <span className="font-semibold">{lang.toUpperCase()}</span>
               </button>
               <ViewModeFirstVisitTooltip>
                 <div className="flex items-center gap-1.5">
-                  <span className={cn("text-[10px] font-medium", isPlain ? "text-accent" : "text-muted-foreground/25")}>
+                  <span className={cn("text-[11px] font-medium", isPlain ? "text-primary" : "text-muted-foreground")}>
                     {isMobile ? "P" : t("topbar.plain")}
                   </span>
                   <Switch checked={!isPlain} onCheckedChange={toggle} />
-                  <span className={cn("text-[10px] font-medium", !isPlain ? "text-accent" : "text-muted-foreground/25")}>
+                  <span className={cn("text-[11px] font-medium", !isPlain ? "text-primary" : "text-muted-foreground")}>
                     {isMobile ? "T" : t("topbar.technical")}
                   </span>
                 </div>
               </ViewModeFirstVisitTooltip>
               <Link
                 to="/controlled-access"
-                className="apple-button bg-accent text-accent-foreground px-3.5 py-1.5 text-[11px] font-semibold hover:brightness-110 duration-300 ml-1"
+                className="apple-button bg-primary text-primary-foreground px-4 py-1.5 text-[12px] font-semibold hover:bg-primary/90 duration-200 ml-1"
               >
                 <Lock className="h-3 w-3" />
                 {isMobile ? "" : "Access"}
