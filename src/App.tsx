@@ -139,6 +139,8 @@ import AnchorChain from "./pages/AnchorChain";
 import AnchorChainPrototype from "./pages/AnchorChainPrototype";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
+import BeforeAfter from "./pages/BeforeAfter";
+import AdvisoryBoard from "./pages/AdvisoryBoard";
 
 // Platform pages
 import AuthPage from "./pages/platform/AuthPage";
@@ -153,6 +155,8 @@ import WorkflowQueue from "./pages/platform/WorkflowQueue";
 import DisputesConsole from "./pages/platform/DisputesConsole";
 import Reports from "./pages/platform/Reports";
 import GuidedDemo from "./pages/platform/GuidedDemo";
+import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
+import GuestDashboard from "./pages/platform/GuestDashboard";
 
 const queryClient = new QueryClient();
 
@@ -181,6 +185,16 @@ const App = () => (
             <Route path="/app/disputes" element={<PlatformLayout><DisputesConsole /></PlatformLayout>} />
             <Route path="/app/reports" element={<PlatformLayout><Reports /></PlatformLayout>} />
             <Route path="/app/demo" element={<PlatformLayout><GuidedDemo /></PlatformLayout>} />
+
+            {/* Guest Demo (no auth required) */}
+            <Route path="/demo/app" element={<GuestDemoLayout><GuestDashboard /></GuestDemoLayout>} />
+            <Route path="/demo/app/records" element={<GuestDemoLayout><RecordsList /></GuestDemoLayout>} />
+            <Route path="/demo/app/workflow" element={<GuestDemoLayout><WorkflowQueue /></GuestDemoLayout>} />
+            <Route path="/demo/app/audit" element={<GuestDemoLayout><AuditTrail /></GuestDemoLayout>} />
+            <Route path="/demo/app/verify" element={<GuestDemoLayout><PublicVerifier /></GuestDemoLayout>} />
+            <Route path="/demo/app/disputes" element={<GuestDemoLayout><DisputesConsole /></GuestDemoLayout>} />
+            <Route path="/demo/app/reports" element={<GuestDemoLayout><Reports /></GuestDemoLayout>} />
+            <Route path="/demo/app/demo" element={<GuestDemoLayout><GuidedDemo /></GuestDemoLayout>} />
 
             {/* Public Verifier (standalone) */}
             <Route path="/verify" element={<PublicVerifier />} />
@@ -259,6 +273,8 @@ const App = () => (
             <Route path="/pilot" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-results" element={<AppLayout><PilotResults /></AppLayout>} />
+            <Route path="/before-after" element={<AppLayout><BeforeAfter /></AppLayout>} />
+            <Route path="/advisory-board" element={<AppLayout><AdvisoryBoard /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
