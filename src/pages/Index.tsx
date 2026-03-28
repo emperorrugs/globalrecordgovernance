@@ -310,40 +310,111 @@ const Index = () => {
       </section>
 
       {/* ═══ ANCHOR CHAIN — CORE SYSTEM ═══ */}
-      <section className="px-5 md:px-10 lg:px-14 pb-20">
-        <div className="max-w-5xl mx-auto">
-          <FadeIn>
-            <Link
-              to="/anchor-chain"
-              className="group relative block overflow-hidden border border-border/20 bg-gradient-to-br from-primary/5 via-card/30 to-secondary/5 hover:border-primary/30 transition-all duration-700"
-              style={{ borderRadius: "24px" }}
-            >
-              <div className="absolute top-6 right-8 text-[120px] font-black text-primary/[0.03] leading-none select-none">⛓</div>
-              <div className="relative p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-all duration-500">
-                  <Link2 className="h-7 w-7 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="text-[10px] font-mono text-primary/60 uppercase tracking-[0.15em] mb-1">Core System</p>
-                  <h2 className="text-[24px] md:text-[32px] font-bold tracking-tight leading-[1.1] mb-2 group-hover:text-primary transition-colors duration-500">
-                    GRGF Anchor Chain™
+      <section className="relative pb-24 overflow-hidden">
+        {/* Animated glow background */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/[0.04] blur-[120px] animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent/[0.06] blur-[80px]" style={{ animation: "pulse 3s cubic-bezier(0.4,0,0.6,1) infinite" }} />
+        </div>
+
+        {/* Animated chain links running across */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.04]">
+          {[...Array(12)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute border-2 border-primary rounded-full"
+              style={{
+                width: `${60 + i * 8}px`,
+                height: `${30 + i * 4}px`,
+                left: `${5 + i * 8}%`,
+                top: `${30 + Math.sin(i) * 20}%`,
+                transform: `rotate(${i * 15 - 30}deg)`,
+                animation: `fade-in 1s ease-out ${i * 0.15}s both`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10 px-5 md:px-10 lg:px-14">
+          <div className="max-w-6xl mx-auto">
+            <FadeIn>
+              {/* Label */}
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="h-px flex-1 max-w-[80px] bg-gradient-to-r from-transparent to-primary/30" />
+                <span className="text-[10px] font-mono text-primary/60 uppercase tracking-[0.25em]">Core System</span>
+                <div className="h-px flex-1 max-w-[80px] bg-gradient-to-l from-transparent to-primary/30" />
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={100}>
+              <Link
+                to="/anchor-chain"
+                className="group relative block overflow-hidden border border-primary/15 hover:border-primary/40 transition-all duration-700"
+                style={{
+                  borderRadius: "28px",
+                  background: "linear-gradient(135deg, hsl(var(--primary) / 0.06), hsl(var(--card) / 0.4), hsl(var(--primary) / 0.03))",
+                  boxShadow: "0 0 60px -20px hsl(var(--primary) / 0.15), inset 0 1px 0 hsl(var(--primary) / 0.08)",
+                }}
+              >
+                {/* Watermark */}
+                <div className="absolute top-4 right-6 text-[160px] md:text-[220px] font-black text-primary/[0.03] leading-none select-none">⛓</div>
+
+                {/* Glowing corner accents */}
+                <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-br-full" />
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-gradient-to-tl from-primary/8 to-transparent rounded-tl-full" />
+
+                <div className="relative p-8 md:p-14">
+                  {/* Icon row */}
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/25 flex items-center justify-center shrink-0 group-hover:bg-primary/20 group-hover:scale-105 transition-all duration-700" style={{ boxShadow: "0 0 30px -8px hsl(var(--primary) / 0.3)" }}>
+                      <Link2 className="h-9 w-9 text-primary" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse" />
+                      <span className="text-[10px] font-mono text-green-500/80 tracking-wider">ACTIVE</span>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-[32px] md:text-[48px] lg:text-[56px] font-bold tracking-tight leading-[1.05] mb-4 group-hover:text-primary transition-colors duration-500">
+                    GRGF Anchor Chain<span className="text-primary">™</span>
                   </h2>
-                  <p className="text-[14px] text-muted-foreground/50 leading-relaxed max-w-xl">
+                  <p className="text-[15px] md:text-[17px] text-muted-foreground/50 leading-relaxed max-w-2xl mb-10">
                     The cryptographic governance verification engine — real-time immutable record anchoring, 
                     six-layer deterministic architecture, and independent proof-of-existence for every institutional action.
                   </p>
+
+                  {/* Animated chain visualization */}
+                  <div className="flex items-center gap-1 mb-10 overflow-hidden">
+                    {[...Array(8)].map((_, i) => (
+                      <div key={i} className="flex items-center gap-1" style={{ animation: `fade-in 0.5s ease-out ${i * 0.1}s both` }}>
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg border border-primary/20 bg-primary/5 flex items-center justify-center group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-500" style={{ transitionDelay: `${i * 50}ms` }}>
+                          <span className="text-[8px] md:text-[9px] font-mono text-primary/60">#{String(i + 1).padStart(2, '0')}</span>
+                        </div>
+                        {i < 7 && <div className="w-3 md:w-5 h-px bg-primary/20 group-hover:bg-primary/40 transition-colors duration-500" style={{ transitionDelay: `${i * 50}ms` }} />}
+                      </div>
+                    ))}
+                    <div className="ml-1 text-primary/30 text-xs">→</div>
+                  </div>
+
+                  {/* Tech tags */}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {["SHA-256 Hash Chain", "X.509 Authority", "Zero-Knowledge Proofs", "Append-Only", "Federation Protocol", "Post-Quantum Ready"].map((tag, i) => (
+                      <span key={tag} className="px-3.5 py-1.5 text-[10px] font-mono text-primary/60 bg-primary/5 border border-primary/10 rounded-full tracking-wider group-hover:border-primary/25 group-hover:text-primary/80 transition-all duration-500" style={{ transitionDelay: `${i * 30}ms` }}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex items-center gap-3 text-primary/60 group-hover:text-primary transition-colors duration-500">
+                    <span className="text-sm font-semibold tracking-wide">Enter the Anchor Chain</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform duration-500" />
+                  </div>
                 </div>
-                <ArrowRight className="h-5 w-5 text-primary/40 group-hover:text-primary group-hover:translate-x-1 transition-all duration-500 shrink-0" />
-              </div>
-              <div className="px-8 md:px-12 pb-8 flex flex-wrap gap-2">
-                {["SHA-256 Hash Chain", "X.509 Authority", "Zero-Knowledge Proofs", "Append-Only", "Federation Protocol"].map(tag => (
-                  <span key={tag} className="px-3 py-1 text-[10px] font-mono text-primary/50 bg-primary/5 border border-primary/10 rounded-full tracking-wider">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          </FadeIn>
+              </Link>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
