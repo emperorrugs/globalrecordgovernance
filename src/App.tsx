@@ -186,6 +186,16 @@ const App = () => (
             <Route path="/app/reports" element={<PlatformLayout><Reports /></PlatformLayout>} />
             <Route path="/app/demo" element={<PlatformLayout><GuidedDemo /></PlatformLayout>} />
 
+            {/* Guest Demo (no auth required) */}
+            <Route path="/demo/app" element={<GuestDemoLayout><GuestDashboard /></GuestDemoLayout>} />
+            <Route path="/demo/app/records" element={<GuestDemoLayout><RecordsList /></GuestDemoLayout>} />
+            <Route path="/demo/app/workflow" element={<GuestDemoLayout><WorkflowQueue /></GuestDemoLayout>} />
+            <Route path="/demo/app/audit" element={<GuestDemoLayout><AuditTrail /></GuestDemoLayout>} />
+            <Route path="/demo/app/verify" element={<GuestDemoLayout><PublicVerifier /></GuestDemoLayout>} />
+            <Route path="/demo/app/disputes" element={<GuestDemoLayout><DisputesConsole /></GuestDemoLayout>} />
+            <Route path="/demo/app/reports" element={<GuestDemoLayout><Reports /></GuestDemoLayout>} />
+            <Route path="/demo/app/demo" element={<GuestDemoLayout><GuidedDemo /></GuestDemoLayout>} />
+
             {/* Public Verifier (standalone) */}
             <Route path="/verify" element={<PublicVerifier />} />
             {/* One-page home */}
