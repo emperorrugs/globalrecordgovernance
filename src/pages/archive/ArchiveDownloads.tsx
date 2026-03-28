@@ -1,398 +1,306 @@
-import { Link } from "react-router-dom";
-import { Download, FileText, Users, Building2, Handshake, Lock, CheckCircle, ArrowLeft, Globe, BookOpen, GraduationCap, ShieldCheck } from "lucide-react";
+import { useState } from "react";
+import { Download, FileText, Printer, Eye, X, Search, BookOpen, Shield, GraduationCap, Building2, Briefcase, BarChart3, FileSpreadsheet, Globe, Landmark } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
-interface VolumePack {
-  icon: React.ElementType;
-  title: string;
-  audience: string;
-  access: string;
-  level: number;
-  pages: string;
-  sections: string[];
-  coverNote: string;
-  contents: string[];
-  downloadUrl?: string;
-  frenchUrl?: string;
-  arabicUrl?: string;
-  restricted?: boolean;
-  restrictedReason?: string;
+interface PDFDocument {
+  name: string;
+  path: string;
+  description?: string;
 }
 
-const volumes: VolumePack[] = [
+const categories: { id: string; label: string; icon: React.ElementType; docs: PDFDocument[] }[] = [
   {
-    icon: Users,
-    title: "Volume I — Master Complete Edition",
-    audience: "Public, media, academia, civil society, multilateral reviewers",
-    access: "OPEN",
-    level: 1,
-    pages: "438+ pages",
-    sections: ["Vision & Mission", "Six-Layer Architecture", "Economic Value Model", "Anti-Capture Clauses", "Deployment Roadmap", "Operational Toolkit", "Risk & Security", "Appendices"],
-    coverNote: "The definitive consolidated reference for the Global Record Governance Framework. Includes core framework, 10-year ROI analysis ($27.1B net benefit), anti-capture legal clauses (AC-01 to AC-05), sovereign deployment roadmap, and complete operational toolkit.",
-    contents: [
-      "GRGF Vision, Mission & Strategic Framework",
-      "Six-Layer Deterministic Architecture (Full Deep-Dive)",
-      "10-Year Economic Value & ROI Model",
-      "Anti-Capture Clauses (AC-01 through AC-05)",
-      "Sovereign Deployment Roadmap (4-Phase)",
-      "International Standards Compliance (ISO, OECD, ITU, UN)",
-      "Complete Training Manual — 6 Certification Modules",
-      "Operational Toolkit — 8 Implementation Tools",
-      "Glossary, Schema References & Appendices A–J",
+    id: "volumes",
+    label: "Core Volumes",
+    icon: BookOpen,
+    docs: [
+      { name: "Vol I — Master Complete Edition (EN)", path: "/documents/GRGF_Vol1_Master_Complete_Edition.pdf", description: "438+ pages — Definitive consolidated reference" },
+      { name: "Vol I — Édition Complète (FR)", path: "/documents/GRGF_Vol1_Master_Complete_Edition_FR.pdf" },
+      { name: "Vol I — الطبعة الكاملة (AR)", path: "/documents/GRGF_Vol1_Master_Complete_Edition_AR.pdf" },
+      { name: "Vol II — Technical & Architecture Blueprints (EN)", path: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf", description: "566+ pages — Six-Layer Deterministic Architecture" },
+      { name: "Vol II — Modèles Techniques (FR)", path: "/documents/GRGF_Vol2_Technical_and_Architecture_Blueprints_FR.pdf" },
+      { name: "Vol II — المخططات التقنية (AR)", path: "/documents/GRGF_Vol2_Technical_and_Architecture_Blueprints_AR.pdf" },
+      { name: "Vol III — Academy, Training & Certification (EN)", path: "/documents/GRGF_Vol3_Academy_Training_Certification.pdf", description: "702+ pages — 4-Tier Certification Model" },
+      { name: "Vol III — Académie et Formation (FR)", path: "/documents/GRGF_Vol3_Academy_Training_and_Certification_FR.pdf" },
+      { name: "Vol III — الأكاديمية والتدريب (AR)", path: "/documents/GRGF_Vol3_Academy_Training_and_Certification_AR.pdf" },
+      { name: "Vol IV — Standards & Compliance Reference (EN)", path: "/documents/GRGF_Vol4_Standards_Compliance_Reference.pdf", description: "878+ pages — 12+ International Standards" },
+      { name: "Vol IV — Normes et Conformité (FR)", path: "/documents/GRGF_Vol4_Standards_and_Compliance_Reference_FR.pdf" },
+      { name: "Vol IV — المعايير والامتثال (AR)", path: "/documents/GRGF_Vol4_Standards_and_Compliance_Reference_AR.pdf" },
     ],
-    downloadUrl: "/documents/GRGF_Vol1_Master_Complete_Edition.pdf",
-    frenchUrl: "/documents/GRGF_Vol1_Master_Complete_Edition_FR.pdf",
-    arabicUrl: "/documents/GRGF_Vol1_Master_Complete_Edition_AR.pdf",
   },
   {
+    id: "sovereign",
+    label: "Sovereign Editions",
+    icon: Landmark,
+    docs: [
+      { name: "Sovereign Authority Edition 2026 (EN)", path: "/documents/GRGF_Sovereign_Authority_Edition_2026.pdf", description: "Inventor-Controlled Stewardship Model" },
+      { name: "Édition Autorité Souveraine (FR)", path: "/documents/GRGF_Sovereign_Authority_Edition_2026_FR.pdf" },
+      { name: "طبعة السلطة السيادية (AR)", path: "/documents/GRGF_Sovereign_Authority_Edition_2026_AR.pdf" },
+      { name: "Complete Proposal 2026 Expanded (EN)", path: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf", description: "Full expanded institutional proposal" },
+      { name: "Proposition Complète (FR)", path: "/documents/GRGF_Complete_Proposal_2026_Expanded_FR.pdf" },
+      { name: "الاقتراح الكامل (AR)", path: "/documents/GRGF_Complete_Proposal_2026_Expanded_AR.pdf" },
+      { name: "Value Proposition Complete 2026 (EN)", path: "/documents/GRGF_Value_Proposition_Complete_2026.pdf", description: "$18.3B–$96.2B projections across 6 stakeholder categories" },
+      { name: "Proposition de Valeur (FR)", path: "/documents/GRGF_Value_Proposition_Complete_2026_FR.pdf" },
+      { name: "عرض القيمة (AR)", path: "/documents/GRGF_Value_Proposition_Complete_2026_AR.pdf" },
+      { name: "126 Applications Catalog (EN)", path: "/documents/GRGF_126_Applications_Complete_2026.pdf", description: "126 apps across 12 sectors — $61.7B annual value" },
+      { name: "Catalogue 126 Applications (FR)", path: "/documents/GRGF_126_Applications_Complete_2026_FR.pdf" },
+      { name: "كتالوج 126 تطبيق (AR)", path: "/documents/GRGF_126_Applications_Complete_2026_AR.pdf" },
+    ],
+  },
+  {
+    id: "executive",
+    label: "Executive & Institutional",
+    icon: Briefcase,
+    docs: [
+      { name: "Executive Decision Memo", path: "/documents/Executive_Decision_Memo.pdf", description: "APPROVE PILOT & PHASED SCALE recommendation" },
+      { name: "Executive Summary — LinkedIn Brief", path: "/documents/GRGF_Executive_Summary_LinkedIn_Brief.pdf" },
+      { name: "Résumé Exécutif LinkedIn (FR)", path: "/documents/GRGF_Resume_Executif_LinkedIn_FR.pdf" },
+      { name: "One Pager (EN)", path: "/documents/GRGF_One_Pager.pdf", description: "Single-page overview for rapid briefing" },
+      { name: "Une Page (FR)", path: "/documents/GRGF_Une_Page_FR.pdf" },
+      { name: "Public Overview", path: "/documents/GRGF_Public_Overview.pdf" },
+      { name: "Level 1 — Public Overview (MaxDepth)", path: "/documents/GRGF_Level1_Public_Overview_MaxDepth.pdf" },
+      { name: "Niveau 1 — Aperçu Public (FR)", path: "/documents/GRGF_Niveau1_Apercu_Public_MaxDepth_FR.pdf" },
+      { name: "Level 2 — Institutional Review (MaxDepth)", path: "/documents/GRGF_Level2_Institutional_Review_MaxDepth.pdf" },
+      { name: "Niveau 2 — Examen Institutionnel (FR)", path: "/documents/GRGF_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf" },
+      { name: "Oral Defense Briefing Deck", path: "/documents/Oral_Defense_Briefing_Deck.pdf", description: "Problem → Solution → Value → Ask" },
+      { name: "Phase 3 Visual Operating Model", path: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf" },
+      { name: "Vision and Purpose", path: "/documents/GRGF_Vision_and_Purpose.pdf" },
+      { name: "FAQ", path: "/documents/GRGF_FAQ.pdf" },
+      { name: "Master Binder v1", path: "/documents/GRGF_Master_Binder_v1.pdf" },
+    ],
+  },
+  {
+    id: "technical",
+    label: "Technical Architecture",
+    icon: Shield,
+    docs: [
+      { name: "Data Flow Architecture", path: "/documents/1_Data_Flow_Architecture.pdf", description: "Core data flow and processing architecture" },
+      { name: "Threat Model (STRIDE)", path: "/documents/2_Threat_Model_STRIDE.pdf", description: "Comprehensive threat modeling analysis" },
+      { name: "Connector Minimization Standard", path: "/documents/3_Connector_Minimization_Standard.pdf", description: "Least-collection-by-default enforcement" },
+      { name: "Chain of Custody OPS", path: "/documents/4_Chain_of_Custody_OPS.pdf", description: "Evidence custody and court survivability" },
+      { name: "Interoperability Profile", path: "/documents/5_Interoperability_Profile.pdf", description: "Canonical schemas, APIs, versioning" },
+      { name: "Resilience & Disaster Recovery (RTO/RPO)", path: "/documents/6_Resilience_RTO_RPO_DR.pdf", description: "Recovery time/point objectives and DR" },
+      { name: "Pilot SOW & Acceptance Criteria", path: "/documents/7_Pilot_SOW_Acceptance.pdf", description: "Scope, milestones, security gates" },
+      { name: "Independent Assurance Plan", path: "/documents/8_Independent_Assurance_Plan.pdf", description: "External audits and SOC-equivalent assurance" },
+      { name: "High Level Architecture", path: "/documents/High_Level_Architecture.pdf" },
+      { name: "System Architecture & Catalog", path: "/documents/System_Architecture_and_Catalog.pdf" },
+      { name: "Verification Hooks", path: "/documents/Verification_Hooks.pdf" },
+      { name: "Functional Modules Overview", path: "/documents/Functional_Modules_Overview.pdf" },
+      { name: "Deployment Models", path: "/documents/Deployment_Models.pdf" },
+      { name: "DPI Integration Guide", path: "/documents/DPI_Integration_Guide.pdf" },
+    ],
+  },
+  {
+    id: "governance",
+    label: "Governance & Policy",
     icon: Building2,
-    title: "Volume II — Technical & Architecture Blueprints",
-    audience: "Governments, system architects, security auditors, World Bank DPI teams",
-    access: "INSTITUTIONAL",
-    level: 2,
-    pages: "566+ pages",
-    sections: ["Deterministic Architecture", "Merkle Protocols", "API Surfaces", "OPA/Rego Policies", "HSM Integration", "Federation Specs", "Cryptographic Proofs"],
-    coverNote: "Deep-dive technical specifications for the Six-Layer Deterministic Architecture. Includes Merkle transparency log protocols, OPA/Rego policy samples, HSM-backed cryptographic specifications, and complete API reference (Public, Institutional, Admin).",
-    contents: [
-      "Six-Layer Deterministic Architecture Specifications",
-      "Merkle Transparency Log Protocols (3 Proof Types)",
-      "Open Policy Agent (OPA) Integration with Rego Samples",
-      "HSM-Backed Cryptographic Key Management",
-      "API Reference — Public, Institutional & Admin Surfaces",
-      "OpenAPI 3.1 Specification Documents",
-      "Federation Protocol & Inter-Jurisdictional Architecture",
-      "Record Lifecycle Logic & Schema Definitions",
+    docs: [
+      { name: "Governance Authority Model", path: "/documents/Governance_Authority_Model.pdf" },
+      { name: "Governance Record Definition", path: "/documents/Governance_Record_Definition.pdf" },
+      { name: "Record Lifecycle Logic", path: "/documents/Record_Lifecycle_Logic.pdf" },
+      { name: "Records Retention Schedule", path: "/documents/Records_Retention_Schedule.pdf" },
+      { name: "Authoritative Master Record (FREEZE)", path: "/documents/Authoritative_Master_Record_FREEZE.pdf" },
+      { name: "Actions & Omissions Framework", path: "/documents/Actions_and_Omissions_Framework.pdf" },
+      { name: "Auditability & Verification Logic", path: "/documents/Auditability_Verification_Logic.pdf" },
+      { name: "Risk Safeguards & Oversight", path: "/documents/Risk_Safeguards_Oversight.pdf" },
+      { name: "Incident Response Plan", path: "/documents/Incident_Response_Plan.pdf" },
+      { name: "Data Protection & Access Control Policy", path: "/documents/Data_Protection_and_Access_Control_Policy.pdf" },
+      { name: "Privacy Impact Assessment", path: "/documents/Privacy_Impact_Assessment.pdf" },
+      { name: "IP Scope & Attribution", path: "/documents/IP_Scope_and_Attribution.pdf" },
     ],
-    downloadUrl: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
-    frenchUrl: "/documents/GRGF_Vol2_Technical_and_Architecture_Blueprints_FR.pdf",
-    arabicUrl: "/documents/GRGF_Vol2_Technical_and_Architecture_Blueprints_AR.pdf",
   },
   {
+    id: "strategy",
+    label: "Strategy & Valuation",
+    icon: BarChart3,
+    docs: [
+      { name: "Feasibility Study", path: "/documents/Feasibility_Study.pdf" },
+      { name: "Public Value & ROI", path: "/documents/Public_Value_ROI.pdf" },
+      { name: "Valuation — 5yr Scenarios", path: "/documents/Valuation_5yr_Scenarios.pdf" },
+      { name: "Procurement Strategy (PSPC)", path: "/documents/Procurement_Strategy_PSPC.pdf" },
+      { name: "Training & Capacity Building", path: "/documents/Training_Capacity_Building.pdf" },
+      { name: "Public Use Case Narratives", path: "/documents/Public_Use_Case_Narratives.pdf" },
+      { name: "SHA-256 Manifest", path: "/documents/SHA256_MANIFEST_v4.pdf" },
+      { name: "Two-Week Backlog (Optimum)", path: "/documents/optimum_two_week_backlog.pdf" },
+    ],
+  },
+  {
+    id: "data",
+    label: "Data & Analytics",
+    icon: FileSpreadsheet,
+    docs: [
+      { name: "DPI Value Breakdown — Expected", path: "/documents/dpi_value_breakdown_expected.pdf" },
+      { name: "DPI Value — Canada & World Totals", path: "/documents/dpi_value_canada_world_totals.pdf" },
+      { name: "DPI Value Common Breakdown — Expected", path: "/documents/dpi_value_common_breakdown_expected.pdf" },
+      { name: "DPI Value Common Totals", path: "/documents/dpi_value_common_totals.pdf" },
+    ],
+  },
+  {
+    id: "templates",
+    label: "Templates",
     icon: GraduationCap,
-    title: "Volume III — Academy, Training & Certification",
-    audience: "Implementers, vendors, system integrators (NDA required)",
-    access: "NDA REQUIRED",
-    level: 3,
-    pages: "702+ pages",
-    sections: ["4-Tier Certification Syllabus", "76+ Training Hours", "10 Simulation Labs", "Professional Ethics", "Assessment Frameworks", "Exam Guides", "Governance Glossary"],
-    coverNote: "Complete professional development handbook establishing a 4-tier certification model (Foundations through Architect) totaling 76+ structured training hours. Includes simulation lab exercises, professional code of ethics, and assessment frameworks. NDA required for access.",
-    contents: [
-      "Level 1: Foundations Certification (16 hours)",
-      "Level 2: Practitioner Certification (24 hours)",
-      "Level 3: Specialist Certification (20 hours)",
-      "Level 4: Architect Certification (16 hours)",
-      "10 Simulation Lab Exercises",
-      "Professional Code of Ethics (5 Articles)",
-      "Assessment & Examination Frameworks",
-      "Governance Glossary (200+ Terms)",
+    docs: [
+      { name: "NDA Template", path: "/documents/templates/GRGF_NDA_Template.pdf" },
+      { name: "Pilot MOU Template", path: "/documents/templates/GRGF_Pilot_MOU_Template.pdf" },
+      { name: "Licensing Agreement Template", path: "/documents/templates/GRGF_Licensing_Agreement_Template.pdf" },
+      { name: "Partnership Agreement Template", path: "/documents/templates/GRGF_Partnership_Agreement_Template.pdf" },
+      { name: "Data Processing Agreement", path: "/documents/templates/GRGF_Data_Processing_Agreement.pdf" },
+      { name: "SLA Template", path: "/documents/templates/GRGF_SLA_Template.pdf" },
+      { name: "RFP Template", path: "/documents/templates/GRGF_RFP_Template.pdf" },
+      { name: "Project Charter Template", path: "/documents/templates/GRGF_Project_Charter_Template.pdf" },
+      { name: "Budget Template", path: "/documents/templates/GRGF_Budget_Template.pdf" },
+      { name: "Risk Assessment Form", path: "/documents/templates/GRGF_Risk_Assessment_Form.pdf" },
+      { name: "Compliance Checklist", path: "/documents/templates/GRGF_Compliance_Checklist.pdf" },
+      { name: "Communication Plan", path: "/documents/templates/GRGF_Communication_Plan.pdf" },
+      { name: "Change Management Plan", path: "/documents/templates/GRGF_Change_Management_Plan.pdf" },
+      { name: "Stakeholder Engagement Plan", path: "/documents/templates/GRGF_Stakeholder_Engagement_Plan.pdf" },
+      { name: "Evaluation Scorecard", path: "/documents/templates/GRGF_Evaluation_Scorecard.pdf" },
+      { name: "Incident Report Form", path: "/documents/templates/GRGF_Incident_Report_Form.pdf" },
+      { name: "Institutional Brochure", path: "/documents/templates/GRGF_Institutional_Brochure.pdf" },
+      { name: "Training Manual Template", path: "/documents/templates/GRGF_Training_Manual_Template.pdf" },
     ],
-    downloadUrl: "/documents/GRGF_Vol3_Academy_Training_Certification.pdf",
-    frenchUrl: "/documents/GRGF_Vol3_Academy_Training_and_Certification_FR.pdf",
-    arabicUrl: "/documents/GRGF_Vol3_Academy_Training_and_Certification_AR.pdf",
-    restricted: true,
-    restrictedReason: "This volume contains proprietary certification curricula, assessment methodologies, and professional development frameworks protected under Canadian Patent No. CA 3,300,102. Access requires a signed Non-Disclosure Agreement (NDA) to protect intellectual property and ensure responsible use by authorized training providers only.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Volume IV — Standards & Compliance Reference",
-    audience: "Controlled — government authorization required",
-    access: "CONTROLLED",
-    level: 4,
-    pages: "878+ pages",
-    sections: ["ISO Standards Mapping", "GDPR & Privacy", "OECD DGPF Alignment", "EU AI Act Assessment", "Canadian Compliance", "UN SDG Alignment", "World Bank DPI"],
-    coverNote: "Comprehensive mapping to 12+ international standards including ISO 15489, ISO 27001, ISO 37000, GDPR, OECD Privacy Guidelines, and the EU AI Act. Includes formal non-applicability certification for the EU AI Act due to deterministic design. Government authorization required.",
-    contents: [
-      "ISO 15489 (Records Management) — Full Alignment",
-      "ISO 27001 (Information Security) — Certifiable Compliance",
-      "ISO 37000 (Governance of Organizations) — Guiding Principles",
-      "GDPR (EU) — Data Protection & Rights Mapping",
-      "OECD Privacy Guidelines — Complete Compliance Matrix",
-      "EU AI Act — Non-Applicability Certification",
-      "Canadian PIPEDA & PSPC Federal Compliance",
-      "UN SDG 16 Alignment & World Bank DPI Framework",
-    ],
-    restricted: true,
-    restrictedReason: "This volume contains classified sovereign compliance mappings, national regulatory alignment procedures, and controlled government authorization protocols. Access is restricted to authorized government officials and accredited compliance auditors to protect sovereign deployment integrity.",
   },
 ];
 
-const VolumeCard = ({ pack }: { pack: VolumePack }) => {
-  const { icon: Icon, title, audience, access, level, pages, sections, coverNote, contents, restricted, restrictedReason, downloadUrl, frenchUrl, arabicUrl } = pack;
+const PDFCard = ({ doc, onPreview }: { doc: PDFDocument; onPreview: (doc: PDFDocument) => void }) => (
+  <div className="group flex items-center justify-between gap-3 p-3 rounded-lg border border-border/50 bg-card hover:border-primary/30 hover:shadow-sm transition-all">
+    <div className="flex items-center gap-3 min-w-0 flex-1">
+      <FileText className="h-5 w-5 text-[#F25022] shrink-0" />
+      <div className="min-w-0">
+        <p className="text-sm font-medium truncate">{doc.name}</p>
+        {doc.description && <p className="text-xs text-muted-foreground truncate">{doc.description}</p>}
+      </div>
+    </div>
+    <div className="flex items-center gap-1.5 shrink-0">
+      <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => onPreview(doc)} title="Preview">
+        <Eye className="h-4 w-4 text-[#7FBA00]" />
+      </Button>
+      <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => window.open(doc.path, '_blank')} title="Print">
+        <Printer className="h-4 w-4 text-[#00A4EF]" />
+      </Button>
+      <a href={doc.path} download>
+        <Button variant="ghost" size="icon" className="h-8 w-8" title="Download">
+          <Download className="h-4 w-4 text-[#FFB900]" />
+        </Button>
+      </a>
+    </div>
+  </div>
+);
+
+const PDFViewer = ({ doc, onClose }: { doc: PDFDocument; onClose: () => void }) => (
+  <div className="fixed inset-0 z-50 bg-black/80 flex flex-col animate-fade-in">
+    <div className="flex items-center justify-between px-4 py-3 bg-background border-b border-border">
+      <div className="flex items-center gap-3 min-w-0">
+        <FileText className="h-5 w-5 text-[#F25022] shrink-0" />
+        <span className="text-sm font-medium truncate">{doc.name}</span>
+      </div>
+      <div className="flex items-center gap-2 shrink-0">
+        <Button variant="outline" size="sm" className="gap-1.5" onClick={() => window.open(doc.path, '_blank')}>
+          <Printer className="h-3.5 w-3.5" /> Print
+        </Button>
+        <a href={doc.path} download>
+          <Button variant="outline" size="sm" className="gap-1.5">
+            <Download className="h-3.5 w-3.5" /> Download
+          </Button>
+        </a>
+        <Button variant="ghost" size="icon" className="h-8 w-8" onClick={onClose}>
+          <X className="h-4 w-4" />
+        </Button>
+      </div>
+    </div>
+    <div className="flex-1">
+      <iframe src={doc.path} className="w-full h-full" title={doc.name} />
+    </div>
+  </div>
+);
+
+const ArchiveDownloads = () => {
+  const [previewDoc, setPreviewDoc] = useState<PDFDocument | null>(null);
+  const [search, setSearch] = useState("");
+
+  const totalDocs = categories.reduce((sum, c) => sum + c.docs.length, 0);
+
+  const filterDocs = (docs: PDFDocument[]) => {
+    if (!search.trim()) return docs;
+    const q = search.toLowerCase();
+    return docs.filter(d => d.name.toLowerCase().includes(q) || d.description?.toLowerCase().includes(q));
+  };
 
   return (
-    <div className="governance-card">
-      <div className="flex items-start gap-4 mb-5">
-        <Icon className={`h-6 w-6 shrink-0 mt-0.5 ${restricted ? "text-muted-foreground" : "text-accent"}`} />
-        <div className="flex-1 min-w-0">
-          <h2 className="font-serif text-lg font-semibold">{title}</h2>
-          <p className="text-xs text-muted-foreground mt-1">{audience}</p>
-          <div className="flex items-center gap-3 mt-2">
-            <p className={`text-[10px] font-mono tracking-wider ${restricted ? "text-destructive" : "text-accent"}`}>
-              {restricted && "🔒 "}{access} ACCESS
-            </p>
-            <span className="text-[10px] font-mono text-muted-foreground/50 bg-muted px-2 py-0.5 rounded-sm">{pages}</span>
-            <span className="text-[10px] font-mono text-muted-foreground/50 bg-muted px-2 py-0.5 rounded-sm">LEVEL {level}</span>
+    <div className="animate-fade-in">
+      {previewDoc && <PDFViewer doc={previewDoc} onClose={() => setPreviewDoc(null)} />}
+
+      <header className="border-b border-border bg-card/50 px-6 py-10 md:px-12">
+        <div className="max-w-6xl">
+          <p className="text-[10px] font-mono text-[#00A4EF] uppercase tracking-[0.2em] mb-2">Document Library</p>
+          <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">
+            Complete PDF Archive
+          </h1>
+          <p className="mt-3 text-sm text-muted-foreground max-w-3xl">
+            {totalDocs} documents across {categories.length} categories — all viewable, printable, and downloadable. Trilingual editions (EN/FR/AR) included.
+          </p>
+          <div className="relative mt-5 max-w-md">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search documents..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="pl-9"
+            />
           </div>
         </div>
-      </div>
+      </header>
 
-      <div className="border-l-2 border-accent/30 pl-4 mb-5">
-        <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-1.5">Cover Note</p>
-        <p className="text-xs text-muted-foreground leading-relaxed">{coverNote}</p>
-      </div>
+      <div className="px-6 py-6 md:px-12">
+        <div className="max-w-6xl">
+          <Tabs defaultValue="volumes">
+            <ScrollArea className="w-full">
+              <TabsList className="inline-flex h-auto p-1 bg-muted/50 flex-wrap gap-1">
+                {categories.map((cat) => {
+                  const Icon = cat.icon;
+                  const count = filterDocs(cat.docs).length;
+                  return (
+                    <TabsTrigger key={cat.id} value={cat.id} className="gap-1.5 text-xs px-3 py-2 data-[state=active]:bg-background">
+                      <Icon className="h-3.5 w-3.5" />
+                      <span className="hidden sm:inline">{cat.label}</span>
+                      <span className="text-[10px] text-muted-foreground ml-1">({count})</span>
+                    </TabsTrigger>
+                  );
+                })}
+              </TabsList>
+            </ScrollArea>
 
-      <div className="mb-5">
-        <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-2">Sections Included</p>
-        <div className="flex flex-wrap gap-2">
-          {sections.map((s) => (
-            <span key={s} className="text-[10px] font-mono bg-muted px-2.5 py-1 rounded-sm text-muted-foreground">{s}</span>
-          ))}
+            {categories.map((cat) => {
+              const filtered = filterDocs(cat.docs);
+              return (
+                <TabsContent key={cat.id} value={cat.id} className="mt-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-lg font-semibold flex items-center gap-2">
+                      <cat.icon className="h-5 w-5 text-[#00A4EF]" />
+                      {cat.label}
+                    </h2>
+                    <span className="text-xs text-muted-foreground font-mono">{filtered.length} documents</span>
+                  </div>
+                  {filtered.length === 0 ? (
+                    <p className="text-sm text-muted-foreground py-8 text-center">No documents match your search.</p>
+                  ) : (
+                    <div className="grid gap-2">
+                      {filtered.map((doc) => (
+                        <PDFCard key={doc.path} doc={doc} onPreview={setPreviewDoc} />
+                      ))}
+                    </div>
+                  )}
+                </TabsContent>
+              );
+            })}
+          </Tabs>
         </div>
-      </div>
-
-      <div className="mb-5">
-        <p className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider mb-2">Contents Checklist</p>
-        <div className="grid gap-1.5 sm:grid-cols-2">
-          {contents.map((item) => (
-            <div key={item} className="flex items-center gap-2">
-              <CheckCircle className="h-3 w-3 text-accent/60 shrink-0" />
-              <span className="text-xs text-muted-foreground">{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {restricted && restrictedReason && (
-        <div className="bg-destructive/5 border border-destructive/20 rounded-sm px-4 py-3 mb-1">
-          <div className="flex items-start gap-2">
-            <Lock className="h-3.5 w-3.5 text-destructive mt-0.5 shrink-0" />
-            <div>
-              <p className="text-[10px] font-mono text-destructive uppercase tracking-wider mb-1">Access Restricted</p>
-              <p className="text-xs text-muted-foreground leading-relaxed">{restrictedReason}</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="flex items-center gap-3 pt-3 border-t border-border/50 flex-wrap">
-        {restricted ? (
-          <Link
-            to="/controlled-access"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary text-xs font-medium rounded-sm hover:bg-primary/20 transition-colors"
-          >
-            <Lock className="h-3.5 w-3.5" />
-            Request Controlled Access
-          </Link>
-        ) : (
-          <>
-            <a href={downloadUrl} download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Download (English)
-            </a>
-            {frenchUrl && (
-              <a href={frenchUrl} download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-                <Globe className="h-3.5 w-3.5" />
-                Français
-              </a>
-            )}
-            {arabicUrl && (
-              <a href={arabicUrl} download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-                <Globe className="h-3.5 w-3.5" />
-                العربية
-              </a>
-            )}
-          </>
-        )}
-        <span className="text-[10px] text-muted-foreground/50 font-mono">PDF · CRP v1.0 · HASH-SEALED</span>
       </div>
     </div>
   );
 };
-
-const ArchiveDownloads = () => (
-  <div className="animate-fade-in">
-    <header className="border-b border-border bg-card/50 px-8 py-12 md:px-12 lg:px-16">
-      <div className="max-w-4xl">
-        <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Sovereign Publication Suite</p>
-        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">
-          GRGF Digital Book Collection
-        </h1>
-        <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Four-volume institutional publication suite with trilingual editions (English, French, Arabic). Volumes I–II are publicly accessible. Volumes III–IV require institutional authorization per the Controlled Distribution Protocol (CRP v1.0).
-        </p>
-        <div className="section-divider mt-6" />
-      </div>
-    </header>
-
-    <div className="px-8 md:px-12 lg:px-16 pt-6">
-      <div className="max-w-5xl bg-muted/50 border border-border rounded-sm px-4 py-2.5 flex items-center justify-between flex-wrap gap-2">
-        <span className="text-[10px] font-mono text-muted-foreground/70 tracking-wider">
-          AWARD EDITION · TRILINGUAL (EN/FR/AR) · EVIDENCE-FIRST · CRP v1.0
-        </span>
-        <span className="text-[10px] font-mono text-accent/60 tracking-wider">v3.0 · MARCH 2026</span>
-      </div>
-    </div>
-
-    <section className="px-8 py-8 md:px-12 lg:px-16">
-      <div className="max-w-5xl space-y-8">
-        {volumes.map((pack) => (
-          <VolumeCard key={pack.title} pack={pack} />
-        ))}
-
-        <div className="governance-card">
-          <div className="flex items-start gap-4 mb-4">
-            <BookOpen className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
-            <div>
-              <h2 className="font-serif text-lg font-semibold">Sovereign Authority Edition — 2026</h2>
-              <p className="text-xs text-muted-foreground mt-1">Definitive inventor-controlled presentation — public interest stewardship model</p>
-              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
-            The optimal institutional presentation featuring the Inventor-Controlled Stewardship Model, Six-Layer Deterministic Architecture, Anti-Capture Clauses (AC-01 to AC-05), 10-year ROI modeling, and enterprise valuation scenarios.
-          </p>
-          <div className="flex items-center gap-3 flex-wrap">
-            <a href="/documents/GRGF_Sovereign_Authority_Edition_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Download (English)
-            </a>
-            <a href="/documents/GRGF_Sovereign_Authority_Edition_2026_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Français
-            </a>
-            <a href="/documents/GRGF_Sovereign_Authority_Edition_2026_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              العربية
-            </a>
-          </div>
-        </div>
-
-        <div className="governance-card">
-          <div className="flex items-start gap-4 mb-4">
-            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
-            <div>
-              <h2 className="font-serif text-lg font-semibold">Comprehensive Value Proposition &amp; Stakeholder Analysis</h2>
-              <p className="text-xs text-muted-foreground mt-1">Full maximum-depth economic analysis — all scenarios, all stakeholders, all horizons</p>
-              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
-            Complete value proposition across 6 stakeholder categories, 120+ applications, $18.3B–$96.2B projections, 5 historical what-if cases ($113.2B documented losses), and future projections to 2040.
-          </p>
-          <div className="flex items-center gap-3 flex-wrap">
-            <a href="/documents/GRGF_Value_Proposition_Complete_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Download (English)
-            </a>
-            <a href="/documents/GRGF_Value_Proposition_Complete_2026_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Français
-            </a>
-            <a href="/documents/GRGF_Value_Proposition_Complete_2026_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              العربية
-            </a>
-          </div>
-        </div>
-
-        <div className="governance-card">
-          <div className="flex items-start gap-4 mb-4">
-            <ShieldCheck className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
-            <div>
-              <h2 className="font-serif text-lg font-semibold">126 Applications — Complete Implementation Catalog</h2>
-              <p className="text-xs text-muted-foreground mt-1">Full-depth catalog of 126 applications across 12 sectors with blueprints, techniques & value projections</p>
-              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
-            Comprehensive mapping of 126 governance record-keeping applications spanning Government, Justice, Healthcare, Finance, Education, Environment, Infrastructure, Trade, Human Rights, Digital, Energy, and Defense sectors. Includes $61.7B annual value projections, Six-Layer Architecture blueprints, and alignment with 47 international standards.
-          </p>
-          <div className="flex items-center gap-3 flex-wrap">
-            <a href="/documents/GRGF_126_Applications_Complete_2026.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Download (English)
-            </a>
-            <a href="/documents/GRGF_126_Applications_Complete_2026_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Français
-            </a>
-            <a href="/documents/GRGF_126_Applications_Complete_2026_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              العربية
-            </a>
-          </div>
-        </div>
-
-        <div className="governance-card">
-          <div className="flex items-start gap-4 mb-4">
-            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
-            <div>
-              <h2 className="font-serif text-lg font-semibold">Complete Project Proposal — Expanded Edition</h2>
-              <p className="text-xs text-muted-foreground mt-1">28-page institutional proposal with case studies, sensitivity analysis, charts & visualizations</p>
-              <span className="text-[10px] font-mono text-accent mt-1 block">OPEN ACCESS · TRILINGUAL · LEVEL 1</span>
-            </div>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed mb-4 border-l-2 border-accent/30 pl-4">
-            Full expanded proposal featuring 5 sectoral case studies, 10-year sensitivity analysis ($27.1B–$206.8B), historical counterfactuals ($113.2B documented losses), Six-Layer Architecture radar, risk mitigation heatmaps, and enterprise valuation scenarios.
-          </p>
-          <div className="flex items-center gap-3 flex-wrap">
-            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Download (English)
-            </a>
-            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Français
-            </a>
-            <a href="/documents/GRGF_Complete_Proposal_2026_Expanded_AR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              العربية
-            </a>
-          </div>
-        </div>
-
-        <div className="governance-card">
-          <div className="flex items-start gap-4 mb-4">
-            <FileText className="h-6 w-6 shrink-0 mt-0.5 text-accent" />
-            <div>
-              <h2 className="font-serif text-lg font-semibold">Quick Reference Materials</h2>
-              <p className="text-xs text-muted-foreground mt-1">Executive summaries for institutional distribution and outreach</p>
-            </div>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <a href="/documents/GRGF_Executive_Summary_LinkedIn_Brief.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Executive Summary (LinkedIn Brief)
-            </a>
-            <a href="/documents/GRGF_One_Pager.pdf" download className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
-              <Download className="h-3.5 w-3.5" />
-              Marketing One-Pager
-            </a>
-            <a href="/documents/GRGF_Resume_Executif_LinkedIn_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Résumé exécutif (Français)
-            </a>
-            <a href="/documents/GRGF_Une_Page_FR.pdf" download className="inline-flex items-center gap-2 px-4 py-2.5 bg-muted text-muted-foreground text-xs font-medium rounded-sm hover:bg-muted/80 transition-colors border border-border">
-              <Globe className="h-3.5 w-3.5" />
-              Une page (Français)
-            </a>
-          </div>
-        </div>
-
-        <div className="governance-card border-l-2 border-l-accent">
-          <p className="text-sm text-foreground leading-relaxed">
-            All digital books follow the Controlled Distribution Protocol (CRP v1.0). Documents are hash-sealed, version-controlled, and subject to no silent edits. Canadian Patent No. CA 3,300,102 — Invented and Owned by Tarek Wahid.
-          </p>
-        </div>
-
-        <div className="flex items-center justify-between text-[10px] font-mono text-muted-foreground/40">
-          <span>GRGF SOVEREIGN PUBLICATION SUITE · TRILINGUAL · v3.0</span>
-          <Link to="/archive" className="text-accent hover:underline flex items-center gap-1">
-            <ArrowLeft className="h-3 w-3" /> Back to Archive
-          </Link>
-        </div>
-      </div>
-    </section>
-  </div>
-);
 
 export default ArchiveDownloads;
