@@ -148,6 +148,10 @@ import CreateRecord from "./pages/platform/CreateRecord";
 import RecordDetail from "./pages/platform/RecordDetail";
 import AuditTrail from "./pages/platform/AuditTrail";
 import PublicVerifier from "./pages/platform/PublicVerifier";
+import WorkflowQueue from "./pages/platform/WorkflowQueue";
+import DisputesConsole from "./pages/platform/DisputesConsole";
+import Reports from "./pages/platform/Reports";
+import GuidedDemo from "./pages/platform/GuidedDemo";
 
 const queryClient = new QueryClient();
 
@@ -172,7 +176,10 @@ const App = () => (
             <Route path="/app/records/:id" element={<PlatformLayout><RecordDetail /></PlatformLayout>} />
             <Route path="/app/audit" element={<PlatformLayout><AuditTrail /></PlatformLayout>} />
             <Route path="/app/verify" element={<PlatformLayout><PublicVerifier /></PlatformLayout>} />
-            <Route path="/app/disputes" element={<PlatformLayout><div className="text-center py-12 text-muted-foreground">Disputes console — coming soon</div></PlatformLayout>} />
+            <Route path="/app/workflow" element={<PlatformLayout><WorkflowQueue /></PlatformLayout>} />
+            <Route path="/app/disputes" element={<PlatformLayout><DisputesConsole /></PlatformLayout>} />
+            <Route path="/app/reports" element={<PlatformLayout><Reports /></PlatformLayout>} />
+            <Route path="/app/demo" element={<PlatformLayout><GuidedDemo /></PlatformLayout>} />
 
             {/* Public Verifier (standalone) */}
             <Route path="/verify" element={<PublicVerifier />} />

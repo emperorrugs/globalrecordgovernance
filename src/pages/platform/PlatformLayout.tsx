@@ -6,6 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   LayoutDashboard, FileText, Plus, Activity, Shield, AlertTriangle,
   Users, Settings, LogOut, ChevronLeft, Menu, Search,
+  ListChecks, BarChart3, Play,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -13,9 +14,12 @@ const navItems = [
   { label: 'Dashboard', path: '/app', icon: LayoutDashboard },
   { label: 'Records', path: '/app/records', icon: FileText },
   { label: 'Create Record', path: '/app/records/create', icon: Plus },
+  { label: 'Workflow Queue', path: '/app/workflow', icon: ListChecks },
   { label: 'Audit Trail', path: '/app/audit', icon: Activity },
   { label: 'Verification', path: '/app/verify', icon: Shield },
   { label: 'Disputes', path: '/app/disputes', icon: AlertTriangle },
+  { label: 'Reports', path: '/app/reports', icon: BarChart3 },
+  { label: 'Guided Demo', path: '/app/demo', icon: Play },
 ];
 
 export default function PlatformLayout({ children }: { children: ReactNode }) {
