@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { Download, FileText, Printer, Eye, X, Search, BookOpen, Shield, GraduationCap, Building2, Briefcase, BarChart3, FileSpreadsheet, Globe, Landmark } from "lucide-react";
+import { Download, FileText, Printer, Eye, X, Search, BookOpen, Shield, GraduationCap, Building2, Briefcase, BarChart3, FileSpreadsheet, Globe, Landmark, PackageOpen, Loader2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 
 interface PDFDocument {
   name: string;
@@ -220,6 +222,28 @@ const PDFViewer = ({ doc, onClose }: { doc: PDFDocument; onClose: () => void }) 
 const ArchiveDownloads = () => {
   const [previewDoc, setPreviewDoc] = useState<PDFDocument | null>(null);
   const [search, setSearch] = useState("");
+  const [zipping, setZipping] = useState<string | null>(null);
+
+  const handleBulkDownload = async (catId: string, label: string, docs: PDFDocument[]) => {
+    setZipping(catId);
+    try {
+      const zip = new JSZip();
+      await Promise.all(
+        docs.map(async (doc) => {
+          const res = await fetch(doc.path);
+          const blob = await res.blob();
+          const filename = doc.path.split("/").pop() || "document.pdf";
+          zip.file(filename, blob);
+        })
+      );
+      const content = await zip.generateAsync({ type: "blob" });
+      saveAs(content, `GRGF_${label.replace(/[^a-zA-Z0-9]/g, "_")}.zip`);
+    } catch {
+      console.error("Bulk download failed");
+    } finally {
+      setZipping(null);
+    }
+  };
 
   const totalDocs = categories.reduce((sum, c) => sum + c.docs.length, 0);
 
@@ -277,12 +301,24 @@ const ArchiveDownloads = () => {
               const filtered = filterDocs(cat.docs);
               return (
                 <TabsContent key={cat.id} value={cat.id} className="mt-4">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
                     <h2 className="text-lg font-semibold flex items-center gap-2">
                       <cat.icon className="h-5 w-5 text-[#00A4EF]" />
                       {cat.label}
                     </h2>
-                    <span className="text-xs text-muted-foreground font-mono">{filtered.length} documents</span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs text-muted-foreground font-mono">{filtered.length} documents</span>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-1.5 text-xs"
+                        disabled={zipping === cat.id || filtered.length === 0}
+                        onClick={() => handleBulkDownload(cat.id, cat.label, filtered)}
+                      >
+                        {zipping === cat.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <PackageOpen className="h-3.5 w-3.5" />}
+                        Download All (.zip)
+                      </Button>
+                    </div>
                   </div>
                   {filtered.length === 0 ? (
                     <p className="text-sm text-muted-foreground py-8 text-center">No documents match your search.</p>
