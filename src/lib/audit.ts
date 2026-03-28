@@ -21,7 +21,7 @@ export async function createAuditLog(params: {
   });
   const integrityHash = await sha256(payload);
 
-  await supabase.from('audit_logs').insert({
+  await (supabase.from('audit_logs').insert as Function)({
     tenant_id: params.tenantId,
     user_id: user.id,
     action_type: params.actionType,
@@ -30,5 +30,5 @@ export async function createAuditLog(params: {
     before_json: params.beforeJson,
     after_json: params.afterJson,
     integrity_hash: integrityHash,
-  } as Record<string, unknown>);
+  });
 }
