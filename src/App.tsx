@@ -53,6 +53,7 @@ import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
 import TechnicalBlueprints from "./pages/TechnicalBlueprints";
 import PilotEvaluation from "./pages/PilotEvaluation";
+import PilotResults from "./pages/PilotResults";
 import AcademyPage from "./pages/AcademyPage";
 import DPIComparison from "./pages/DPIComparison";
 import Sitemap from "./pages/Sitemap";
