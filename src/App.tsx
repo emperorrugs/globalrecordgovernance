@@ -139,6 +139,8 @@ import AnchorChain from "./pages/AnchorChain";
 import AnchorChainPrototype from "./pages/AnchorChainPrototype";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
+import BeforeAfter from "./pages/BeforeAfter";
+import AdvisoryBoard from "./pages/AdvisoryBoard";
 
 // Platform pages
 import AuthPage from "./pages/platform/AuthPage";
@@ -153,6 +155,8 @@ import WorkflowQueue from "./pages/platform/WorkflowQueue";
 import DisputesConsole from "./pages/platform/DisputesConsole";
 import Reports from "./pages/platform/Reports";
 import GuidedDemo from "./pages/platform/GuidedDemo";
+import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
+import GuestDashboard from "./pages/platform/GuestDashboard";
 
 const queryClient = new QueryClient();
 
