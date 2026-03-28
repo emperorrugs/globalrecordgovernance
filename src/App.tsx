@@ -134,6 +134,8 @@ import AdminDashboard from "./pages/AdminDashboard";
 import Accessibility from "./pages/Accessibility";
 import IPStatus from "./pages/IPStatus";
 import AnchorChain from "./pages/AnchorChain";
+import AnchorChainPrototype from "./pages/AnchorChainPrototype";
+import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -243,6 +245,8 @@ const App = () => (
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
             <Route path="/admin" element={<AppLayout><AdminDashboard /></AppLayout>} />
             <Route path="/anchor-chain" element={<AppLayout><AnchorChain /></AppLayout>} />
+            <Route path="/anchor-chain-prototype" element={<AppLayout><AnchorChainPrototype /></AppLayout>} />
+            <Route path="/pricing" element={<AppLayout><Pricing /></AppLayout>} />
 
             {/* Submission Hub */}
             <Route path="/submission-hub" element={<AppLayout><SubmissionHub /></AppLayout>} />
