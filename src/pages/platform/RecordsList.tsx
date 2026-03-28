@@ -37,7 +37,7 @@ export default function RecordsList() {
       .limit(100);
 
     if (statusFilter !== 'all') {
-      query = query.eq('status', statusFilter);
+      query = query.eq('status', statusFilter as any);
     }
 
     const { data } = await query;
