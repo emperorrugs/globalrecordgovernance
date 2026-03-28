@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider } from "@/lib/auth-context";
 import { ViewModeProvider } from "@/contexts/ViewModeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ScrollToTop } from "@/components/ScrollToTop";
@@ -138,6 +139,16 @@ import AnchorChainPrototype from "./pages/AnchorChainPrototype";
 import Pricing from "./pages/Pricing";
 import NotFound from "./pages/NotFound";
 
+// Platform pages
+import AuthPage from "./pages/platform/AuthPage";
+import PlatformLayout from "./pages/platform/PlatformLayout";
+import PlatformDashboard from "./pages/platform/PlatformDashboard";
+import RecordsList from "./pages/platform/RecordsList";
+import CreateRecord from "./pages/platform/CreateRecord";
+import RecordDetail from "./pages/platform/RecordDetail";
+import AuditTrail from "./pages/platform/AuditTrail";
+import PublicVerifier from "./pages/platform/PublicVerifier";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -146,10 +157,25 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AuthProvider>
         <LanguageProvider>
         <ViewModeProvider>
           <ScrollToTop />
           <Routes>
+            {/* Auth */}
+            <Route path="/auth" element={<AuthPage />} />
+
+            {/* Platform App */}
+            <Route path="/app" element={<PlatformLayout><PlatformDashboard /></PlatformLayout>} />
+            <Route path="/app/records" element={<PlatformLayout><RecordsList /></PlatformLayout>} />
+            <Route path="/app/records/create" element={<PlatformLayout><CreateRecord /></PlatformLayout>} />
+            <Route path="/app/records/:id" element={<PlatformLayout><RecordDetail /></PlatformLayout>} />
+            <Route path="/app/audit" element={<PlatformLayout><AuditTrail /></PlatformLayout>} />
+            <Route path="/app/verify" element={<PlatformLayout><PublicVerifier /></PlatformLayout>} />
+            <Route path="/app/disputes" element={<PlatformLayout><div className="text-center py-12 text-muted-foreground">Disputes console — coming soon</div></PlatformLayout>} />
+
+            {/* Public Verifier (standalone) */}
+            <Route path="/verify" element={<PublicVerifier />} />
             {/* One-page home */}
             <Route path="/" element={<AppLayout><Index /></AppLayout>} />
 
@@ -303,6 +329,7 @@ const App = () => (
           </Routes>
         </ViewModeProvider>
         </LanguageProvider>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
