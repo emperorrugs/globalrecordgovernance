@@ -273,6 +273,8 @@ const App = () => (
             <Route path="/pilot" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-results" element={<AppLayout><PilotResults /></AppLayout>} />
+            <Route path="/before-after" element={<AppLayout><BeforeAfter /></AppLayout>} />
+            <Route path="/advisory-board" element={<AppLayout><AdvisoryBoard /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
