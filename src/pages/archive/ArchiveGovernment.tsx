@@ -49,7 +49,7 @@ const documents: DocEntry[] = [
   // Section 02
   {
     id: "GOV-001", title: "GRGF DPI Architecture (Full)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/High_Level_Architecture.md",
+    downloadPath: "/documents/High_Level_Architecture.pdf",
     content: (
       <>
         <p>The Global Record Governance Framework (GRGF) is architected as a foundational, horizontal Digital Public Infrastructure (DPI) that operates independently of sectoral systems while remaining interoperable with them.</p>
@@ -67,7 +67,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-002", title: "Governance & Authority Model", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Governance_Authority_Model.md",
+    downloadPath: "/documents/Governance_Authority_Model.pdf",
     content: (
       <>
         <p>GRGF explicitly distinguishes between institutional authority, individual actors, and delegated mandates. Authority is treated as a recordable attribute, not an assumption.</p>
@@ -79,7 +79,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-003", title: "Decision, Action & Omission Framework", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Actions_and_Omissions_Framework.md",
+    downloadPath: "/documents/Actions_and_Omissions_Framework.pdf",
     content: (
       <>
         <p>GRGF enables accountability by preserving chain of authority, temporal responsibility, and jurisdictional scope.</p>
@@ -102,7 +102,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-004", title: "Auditability & Verification Logic", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/Auditability_Verification_Logic.md",
+    downloadPath: "/documents/Auditability_Verification_Logic.pdf",
     content: (
       <>
         <p>GRGF supports negative and positive verification:</p>
@@ -118,7 +118,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-005", title: "Deployment Models (National / Incremental)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/Deployment_Models.md",
+    downloadPath: "/documents/Deployment_Models.pdf",
     content: (
       <>
         <p>A typical national deployment follows three stages:</p>
@@ -134,7 +134,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-006", title: "Integration with Existing Systems", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/DPI_Integration_Guide.md",
+    downloadPath: "/documents/DPI_Integration_Guide.pdf",
     content: (
       <>
         <p>GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
@@ -146,7 +146,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-007", title: "Risk, Safeguards & Oversight", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/Risk_Safeguards_Oversight.md",
+    downloadPath: "/documents/Risk_Safeguards_Oversight.pdf",
     content: (
       <>
         <p><strong>Primary risks addressed:</strong></p>
@@ -163,7 +163,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-008", title: "Public Value & ROI Logic", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Public_Value_ROI.md",
+    downloadPath: "/documents/Public_Value_ROI.pdf",
     content: (
       <>
         <p>GRGF creates public value by reducing ambiguity, increasing trust, strengthening institutions, and protecting lawful decision-makers. Value is systemic, not transactional.</p>
@@ -176,7 +176,7 @@ const documents: DocEntry[] = [
   // Uploaded governance documents
   {
     id: "GOV-009", title: "Data Protection & Access Control Policy", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Data_Protection_and_Access_Control_Policy.md",
+    downloadPath: "/documents/Data_Protection_and_Access_Control_Policy.pdf",
     content: (
       <>
         <p><strong>Security Model:</strong> Defense-in-depth with encryption at rest and in transit.</p>
@@ -189,7 +189,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-010", title: "Privacy Impact Assessment (PIA)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Privacy_Impact_Assessment.md",
+    downloadPath: "/documents/Privacy_Impact_Assessment.pdf",
     content: (
       <>
         <p>Assessment of personal data processing within GRGF. Only event metadata strictly required for evidentiary integrity is captured.</p>
@@ -205,7 +205,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-011", title: "Feasibility Study", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Feasibility_Study.md",
+    downloadPath: "/documents/Feasibility_Study.pdf",
     content: (
       <>
         <p>This feasibility study assesses the technical, legal, financial, and operational viability of GRGF as a sovereign-grade DPI.</p>
@@ -218,7 +218,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-012", title: "Incident Response Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Incident_Response_Plan.md",
+    downloadPath: "/documents/Incident_Response_Plan.pdf",
     content: (
       <>
         <p><strong>Severity Levels:</strong> Low, Medium, High, Critical.</p>
@@ -229,7 +229,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-013", title: "Procurement Strategy (PSPC)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/Procurement_Strategy_PSPC.md",
+    downloadPath: "/documents/Procurement_Strategy_PSPC.pdf",
     content: (
       <>
         <p>Enables compliant pilot procurement under Canadian federal rules.</p>
@@ -244,7 +244,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-014", title: "Records Retention Schedule", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Records_Retention_Schedule.md",
+    downloadPath: "/documents/Records_Retention_Schedule.pdf",
     content: (
       <>
         <p>Retention aligned with legal, fiscal, and historical value.</p>
@@ -259,7 +259,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-015", title: "System Data-Flow Architecture", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/1_Data_Flow_Architecture.md",
+    downloadPath: "/documents/1_Data_Flow_Architecture.pdf",
     content: (
       <>
         <p>End-to-end flow from source systems to GRGF custody, retention, access, and disclosure.</p>
@@ -269,7 +269,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-016", title: "Threat Model (STRIDE)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/2_Threat_Model_STRIDE.md",
+    downloadPath: "/documents/2_Threat_Model_STRIDE.pdf",
     content: (
       <>
         <p>Analyzes spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats against GRGF.</p>
@@ -279,7 +279,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-017", title: "Connector Minimization Standard", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/3_Connector_Minimization_Standard.md",
+    downloadPath: "/documents/3_Connector_Minimization_Standard.pdf",
     content: (
       <>
         <p>Defines mandatory exclusion rules for personal and operational data.</p>
@@ -289,7 +289,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-018", title: "Chain of Custody & Legal Hold", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/4_Chain_of_Custody_OPS.md",
+    downloadPath: "/documents/4_Chain_of_Custody_OPS.pdf",
     content: (
       <>
         <p>Defines evidence custody, integrity, disclosure, and court survivability procedures.</p>
@@ -299,7 +299,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-019", title: "Interoperability Profile", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/5_Interoperability_Profile.md",
+    downloadPath: "/documents/5_Interoperability_Profile.pdf",
     content: (
       <>
         <p>Canonical schemas, APIs, versioning, and conformance testing framework.</p>
@@ -309,7 +309,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-020", title: "Resilience & Disaster Recovery", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/6_Resilience_RTO_RPO_DR.md",
+    downloadPath: "/documents/6_Resilience_RTO_RPO_DR.pdf",
     content: (
       <>
         <p>Defines RTO/RPO targets, integrity recovery procedures, and offline survivability.</p>
@@ -319,7 +319,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-021", title: "Pilot SOW & Acceptance Criteria", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/7_Pilot_SOW_Acceptance.md",
+    downloadPath: "/documents/7_Pilot_SOW_Acceptance.pdf",
     content: (
       <>
         <p>Defines scope, milestones, security/privacy gates, and success metrics for the 90-day pilot engagement.</p>
@@ -329,7 +329,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-022", title: "Independent Assurance Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/8_Independent_Assurance_Plan.md",
+    downloadPath: "/documents/8_Independent_Assurance_Plan.pdf",
     content: (
       <>
         <p>External audits, penetration testing, SOC-equivalent assurance, and reporting cadence.</p>
@@ -339,7 +339,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-023", title: "Executive Decision Memo", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Executive_Decision_Memo.md",
+    downloadPath: "/documents/Executive_Decision_Memo.pdf",
     content: (
       <>
         <p><strong>Recommendation:</strong> APPROVE PILOT & PHASED SCALE</p>
@@ -349,7 +349,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-024", title: "Oral Defense Briefing Deck", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Oral_Defense_Briefing_Deck.md",
+    downloadPath: "/documents/Oral_Defense_Briefing_Deck.pdf",
     content: (
       <>
         <p>Structured briefing following the Problem → Solution → Value → Ask framework for institutional presentation and defense.</p>
@@ -359,7 +359,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-025", title: "Executive Visual Binder (PPTX)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Executive_Visual_Binder.pptx",
+    downloadPath: "/documents/Executive_Decision_Memo.pdf",
     content: (
       <>
         <p>10-slide board/ministerial briefing deck covering: What GRGF is, the governance gap, solution overview, Policy→Control→Evidence flow, system architecture, security & privacy, public value, risks & mitigations, and go-live recommendation.</p>
@@ -369,7 +369,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-026", title: "Executive Visual Binder (ZIP)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Executive_Visual_Binder_RESEND.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Complete executive visual binder package for board, ministerial, and multilateral briefing. ZIP archive with all supporting materials.</p>
@@ -389,7 +389,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-028", title: "DPI Deployment Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_deploy_kit_20260130_231918.zip",
+    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete deployment kit for institutional DPI rollout including configuration templates, integration guides, and operational checklists.</p>
@@ -399,7 +399,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-029", title: "DPI Pilot Starter Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_starter_20260130_231249.zip",
+    downloadPath: "/documents/7_Pilot_SOW_Acceptance.pdf",
     content: (
       <>
         <p>Starter package for 90-day pilot engagements including scope templates, milestone definitions, and initial configuration guides.</p>
@@ -409,7 +409,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-030", title: "DPI Pilot — Full Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_FULL_20260131_061641.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Comprehensive pilot package with all governance, technical, and operational materials for a complete 90-day pilot engagement.</p>
@@ -419,7 +419,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-031", title: "DPI Upgrades — Complete Archive", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "January 2026",
-    downloadPath: "/documents/dpi_upgrades_ALL_20260131_054630.zip",
+    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete archive of all DPI system upgrades, patches, and configuration changes applied through January 2026.</p>
@@ -429,7 +429,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-032", title: "GRGF DPI Final v4 — Hardest Tests Passed", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "January 2026",
-    downloadPath: "/documents/GRGF_DPI_FINAL_v4_Hardest_Tests_Passed_2026-01-30.zip",
+    downloadPath: "/documents/GRGF_Sovereign_Authority_Edition_2026.pdf",
     content: (
       <>
         <p>Final v4 release archive documenting successful completion of the most rigorous validation tests across security, integrity, and governance logic.</p>
@@ -439,7 +439,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-033", title: "Value Breakdown — Per-Organization Benefits (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_breakdown_expected.csv",
+    downloadPath: "/documents/dpi_value_breakdown_expected.pdf",
     content: (
       <>
         <p>Detailed per-organization benefit analysis across six categories: audit prep time saved, incident forensics speed, regulatory fines risk reduction, breach likelihood reduction, ops toil reduction, and faster partner onboarding.</p>
@@ -450,7 +450,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-034", title: "Value Breakdown — Segment Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_common_breakdown_expected.csv",
+    downloadPath: "/documents/dpi_value_common_breakdown_expected.pdf",
     content: (
       <>
         <p>Segment-level value analysis by organization size:</p>
@@ -462,7 +462,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-035", title: "GC Submission Pack", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GC_Submission_Pack_20260131_072144.zip",
+    downloadPath: "/documents/GRGF_Value_Proposition_Complete_2026.pdf",
     content: (
       <>
         <p>Government of Canada formal submission package for institutional review, procurement evaluation, and policy alignment assessment.</p>
@@ -472,7 +472,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-036", title: "Value Totals — Scenario Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_common_totals.csv",
+    downloadPath: "/documents/dpi_value_common_totals.pdf",
     content: (
       <>
         <p>Three-scenario value analysis (Conservative / Expected / Aggressive):</p>
@@ -484,7 +484,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-037", title: "Value Totals — Canada & World Per-Org (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_canada_world_totals.csv",
+    downloadPath: "/documents/dpi_value_canada_world_totals.pdf",
     content: (
       <>
         <p>Per-organization annual benefit across scenarios:</p>
@@ -506,7 +506,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-039", title: "Canvas Folder — Visual Assets", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/Canvas_Folder_20260131_124718.zip",
+    downloadPath: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf",
     content: (
       <>
         <p>Visual design assets and canvas materials for institutional presentations, reports, and stakeholder communications.</p>
@@ -516,7 +516,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-040", title: "Pilot Starter + Upgrades Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_starter_PLUS_upgrades_20260131_060829.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Combined pilot starter kit with all system upgrades applied through January 2026. Single package for rapid deployment.</p>
@@ -526,7 +526,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-041", title: "Optimum Two-Week Backlog (CSV)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/optimum_two_week_backlog.csv",
+    downloadPath: "/documents/optimum_two_week_backlog.pdf",
     content: (
       <>
         <p>15-item sprint backlog for two-week pilot build-out covering: landing zone & guardrails, network hardening, data plane (Aurora/S3), KMS/CloudHSM, Collector service, pseudonymization, OPA policies, observability, Merkle/proof builder, SSO/SCIM, Admin Console, Public Proof Portal, PIA/TRA & pen test, DR game-day, and cutover.</p>

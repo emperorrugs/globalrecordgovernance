@@ -62,7 +62,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "LIP-002", title: "Intellectual Property Scope", updated: "February 2026",
-    downloadPath: "/documents/IP_Scope_and_Attribution.md",
+    downloadPath: "/documents/IP_Scope_and_Attribution.pdf",
     content: (
       <>
         <p>Protected elements include:</p>
@@ -137,7 +137,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "LIP-008", title: "Authoritative Master Record — FREEZE (v3)", updated: "January 2026",
-    downloadPath: "/documents/Authoritative_Master_Record_FREEZE.md",
+    downloadPath: "/documents/Authoritative_Master_Record_FREEZE.pdf",
     content: (
       <>
         <p>Freezes RELEASE v3 as the authoritative master record for submission, audit, procurement, and investment review.</p>
@@ -167,7 +167,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "LIP-011", title: "5-Year Valuation & Inventor Return", updated: "February 2026",
-    downloadPath: "/documents/Valuation_5yr_Scenarios.md",
+    downloadPath: "/documents/Valuation_5yr_Scenarios.pdf",
     content: (
       <>
         <p><strong>Conservative EV:</strong> $960M · Inventor (40%): $384M</p>
