@@ -359,7 +359,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-025", title: "Executive Visual Binder (PPTX)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Executive_Visual_Binder.pptx",
+    downloadPath: "/documents/Executive_Decision_Memo.pdf",
     content: (
       <>
         <p>10-slide board/ministerial briefing deck covering: What GRGF is, the governance gap, solution overview, Policy→Control→Evidence flow, system architecture, security & privacy, public value, risks & mitigations, and go-live recommendation.</p>
@@ -369,7 +369,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-026", title: "Executive Visual Binder (ZIP)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Executive_Visual_Binder_RESEND.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Complete executive visual binder package for board, ministerial, and multilateral briefing. ZIP archive with all supporting materials.</p>
@@ -389,7 +389,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-028", title: "DPI Deployment Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_deploy_kit_20260130_231918.zip",
+    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete deployment kit for institutional DPI rollout including configuration templates, integration guides, and operational checklists.</p>
@@ -399,7 +399,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-029", title: "DPI Pilot Starter Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_starter_20260130_231249.zip",
+    downloadPath: "/documents/7_Pilot_SOW_Acceptance.pdf",
     content: (
       <>
         <p>Starter package for 90-day pilot engagements including scope templates, milestone definitions, and initial configuration guides.</p>
@@ -409,7 +409,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-030", title: "DPI Pilot — Full Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_FULL_20260131_061641.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Comprehensive pilot package with all governance, technical, and operational materials for a complete 90-day pilot engagement.</p>
@@ -419,7 +419,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-031", title: "DPI Upgrades — Complete Archive", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "January 2026",
-    downloadPath: "/documents/dpi_upgrades_ALL_20260131_054630.zip",
+    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete archive of all DPI system upgrades, patches, and configuration changes applied through January 2026.</p>
@@ -429,7 +429,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-032", title: "GRGF DPI Final v4 — Hardest Tests Passed", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "January 2026",
-    downloadPath: "/documents/GRGF_DPI_FINAL_v4_Hardest_Tests_Passed_2026-01-30.zip",
+    downloadPath: "/documents/GRGF_Sovereign_Authority_Edition_2026.pdf",
     content: (
       <>
         <p>Final v4 release archive documenting successful completion of the most rigorous validation tests across security, integrity, and governance logic.</p>
@@ -439,7 +439,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-033", title: "Value Breakdown — Per-Organization Benefits (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_breakdown_expected.csv",
+    downloadPath: "/documents/dpi_value_breakdown_expected.pdf",
     content: (
       <>
         <p>Detailed per-organization benefit analysis across six categories: audit prep time saved, incident forensics speed, regulatory fines risk reduction, breach likelihood reduction, ops toil reduction, and faster partner onboarding.</p>
@@ -450,7 +450,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-034", title: "Value Breakdown — Segment Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_common_breakdown_expected.csv",
+    downloadPath: "/documents/dpi_value_common_breakdown_expected.pdf",
     content: (
       <>
         <p>Segment-level value analysis by organization size:</p>
@@ -462,7 +462,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-035", title: "GC Submission Pack", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GC_Submission_Pack_20260131_072144.zip",
+    downloadPath: "/documents/GRGF_Value_Proposition_Complete_2026.pdf",
     content: (
       <>
         <p>Government of Canada formal submission package for institutional review, procurement evaluation, and policy alignment assessment.</p>
@@ -472,7 +472,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-036", title: "Value Totals — Scenario Analysis (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_common_totals.csv",
+    downloadPath: "/documents/dpi_value_common_totals.pdf",
     content: (
       <>
         <p>Three-scenario value analysis (Conservative / Expected / Aggressive):</p>
@@ -484,7 +484,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-037", title: "Value Totals — Canada & World Per-Org (CSV)", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/dpi_value_canada_world_totals.csv",
+    downloadPath: "/documents/dpi_value_canada_world_totals.pdf",
     content: (
       <>
         <p>Per-organization annual benefit across scenarios:</p>
@@ -506,7 +506,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-039", title: "Canvas Folder — Visual Assets", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/Canvas_Folder_20260131_124718.zip",
+    downloadPath: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf",
     content: (
       <>
         <p>Visual design assets and canvas materials for institutional presentations, reports, and stakeholder communications.</p>
@@ -516,7 +516,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-040", title: "Pilot Starter + Upgrades Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/dpi_pilot_starter_PLUS_upgrades_20260131_060829.zip",
+    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Combined pilot starter kit with all system upgrades applied through January 2026. Single package for rapid deployment.</p>
@@ -526,7 +526,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-041", title: "Optimum Two-Week Backlog (CSV)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/optimum_two_week_backlog.csv",
+    downloadPath: "/documents/optimum_two_week_backlog.pdf",
     content: (
       <>
         <p>15-item sprint backlog for two-week pilot build-out covering: landing zone & guardrails, network hardening, data plane (Aurora/S3), KMS/CloudHSM, Collector service, pseudonymization, OPA policies, observability, Merkle/proof builder, SSO/SCIM, Admin Console, Public Proof Portal, PIA/TRA & pen test, DR game-day, and cutover.</p>

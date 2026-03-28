@@ -89,10 +89,10 @@ const SubmissionHub = () => (
     <Section title="Supporting Documents">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { icon: FileText, title: "Master Binder v1", desc: "Definitive institutional edition — 11 sections", file: "/documents/GRGF_Master_Binder_v1.md" },
-          { icon: Shield, title: "Privacy Impact Assessment", desc: "Data minimization & residual risk analysis", file: "/documents/Privacy_Impact_Assessment.md" },
-          { icon: Lock, title: "Data Protection Policy", desc: "RBAC/ABAC, HSM key management, ISO 27001", file: "/documents/Data_Protection_and_Access_Control_Policy.md" },
-          { icon: BarChart3, title: "Valuation Scenarios", desc: "5-year conservative to aggressive EV model", file: "/documents/Valuation_5yr_Scenarios.md" },
+          { icon: FileText, title: "Master Binder v1", desc: "Definitive institutional edition — 11 sections", file: "/documents/GRGF_Master_Binder_v1.pdf" },
+          { icon: Shield, title: "Privacy Impact Assessment", desc: "Data minimization & residual risk analysis", file: "/documents/Privacy_Impact_Assessment.pdf" },
+          { icon: Lock, title: "Data Protection Policy", desc: "RBAC/ABAC, HSM key management, ISO 27001", file: "/documents/Data_Protection_and_Access_Control_Policy.pdf" },
+          { icon: BarChart3, title: "Valuation Scenarios", desc: "5-year conservative to aggressive EV model", file: "/documents/Valuation_5yr_Scenarios.pdf" },
         ].map(({ icon: Icon, title, desc, file }) => (
           <FadeIn key={title}>
             <a href={file} target="_blank" rel="noopener noreferrer" className="governance-card-elevated group hover:border-accent/30 transition-all duration-300 flex flex-col">
