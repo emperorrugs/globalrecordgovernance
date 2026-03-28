@@ -300,8 +300,8 @@ const Index = () => {
                     <Link2 className="h-8 w-8 text-primary-foreground" />
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="text-[11px] font-mono text-emerald-600 tracking-wider font-medium">ACTIVE</span>
+                    <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
+                    <span className="text-[11px] font-mono text-success tracking-wider font-medium">ACTIVE</span>
                   </div>
                 </div>
 

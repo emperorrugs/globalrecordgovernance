@@ -325,7 +325,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
           {/* Footer */}
           <div className="px-5 py-3 border-t border-border shrink-0">
             <div className="flex items-center gap-1.5 mb-1">
-              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
               <p className="text-[10px] text-muted-foreground">Active</p>
             </div>
             <p className="text-[9px] text-muted-foreground/60 leading-relaxed">
