@@ -48,7 +48,7 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
 const documents: DocEntry[] = [
   {
     id: "PTR-001", title: "Functional Modules Overview", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/Functional_Modules_Overview.md",
+    downloadPath: "/documents/Functional_Modules_Overview.pdf",
     content: (
       <>
         <p>GRGF's architecture comprises four core functional layers, each with clearly defined governance responsibilities:</p>
@@ -80,7 +80,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PTR-003", title: "Record Lifecycle Logic", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/Record_Lifecycle_Logic.md",
+    downloadPath: "/documents/Record_Lifecycle_Logic.pdf",
     content: (
       <>
         <p>Every GRGF record follows a defined lifecycle:</p>
@@ -98,7 +98,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PTR-004", title: "Verification Hooks", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/Verification_Hooks.md",
+    downloadPath: "/documents/Verification_Hooks.pdf",
     content: (
       <>
         <p>GRGF supports both positive and negative verification:</p>
@@ -161,7 +161,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PTR-008", title: "Service Partnership Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Service_Partnership_Send_Today.zip",
+    downloadPath: "/documents/Functional_Modules_Overview.pdf",
     content: (
       <>
         <p>Complete service partnership package for institutional partners and system integrators evaluating GRGF collaboration.</p>

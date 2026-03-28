@@ -45,7 +45,7 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
 const documents: DocEntry[] = [
   {
     id: "PUB-001", title: "GRGF Vision & Purpose", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Vision_and_Purpose.md",
+    downloadPath: "/documents/GRGF_Vision_and_Purpose.pdf",
     content: (
       <>
         <p>The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure designed to establish a verifiable, enduring record of institutional actions, decisions, and omissions.</p>
@@ -61,7 +61,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-002", title: "What Is a Governance Record", updated: "February 2026",
-    downloadPath: "/documents/Governance_Record_Definition.md",
+    downloadPath: "/documents/Governance_Record_Definition.pdf",
     content: (
       <>
         <p>A governance record is a structured, immutable representation of an institutional event — a decision taken, an action executed, or an omission formally recognized.</p>
@@ -81,7 +81,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-003", title: "Why Recording Actions & Omissions Matters", updated: "February 2026",
-    downloadPath: "/documents/Actions_and_Omissions_Framework.md",
+    downloadPath: "/documents/Actions_and_Omissions_Framework.pdf",
     content: (
       <>
         <p>In governance, omissions can be as consequential as actions.</p>
@@ -100,7 +100,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-004", title: "High-Level Architecture (Non-Technical)", updated: "February 2026",
-    downloadPath: "/documents/High_Level_Architecture.md",
+    downloadPath: "/documents/High_Level_Architecture.pdf",
     content: (
       <>
         <p>GRGF operates as a horizontal trust layer across government systems. It does not replace registries, workflow tools, or decision systems.</p>
@@ -117,7 +117,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-005", title: "Public Use-Case Narratives", updated: "February 2026",
-    downloadPath: "/documents/Public_Use_Case_Narratives.md",
+    downloadPath: "/documents/Public_Use_Case_Narratives.pdf",
     content: (
       <>
         <p><strong>Public Procurement</strong> — GRGF records tender issuance, bid evaluation milestones, approvals, denials, and missing approvals or delays. This enables anti-corruption oversight, post-award audits, and protection of compliant officials.</p>
@@ -129,7 +129,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-006", title: "Frequently Asked Questions", updated: "February 2026",
-    downloadPath: "/documents/GRGF_FAQ.md",
+    downloadPath: "/documents/GRGF_FAQ.pdf",
     content: (
       <>
         <div className="space-y-3">
@@ -143,7 +143,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-007", title: "GRGF Public Overview", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Public_Overview.md",
+    downloadPath: "/documents/GRGF_Public_Overview.pdf",
     content: (
       <>
         <p>GRGF is a neutral Digital Public Infrastructure that records institutional actions and omissions in real time, providing immutable evidence without interpretation.</p>
@@ -153,7 +153,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-008", title: "Phase 5 — Public Transparency Package", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Phase_5_Public_Transparency.zip",
+    downloadPath: "/documents/GRGF_Public_Overview.pdf",
     content: (
       <>
         <p>Complete public transparency package including dashboards, aggregate indicators, and public verification materials.</p>
@@ -163,7 +163,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "PUB-009", title: "Training & Capacity Building Framework", updated: "February 2026",
-    downloadPath: "/documents/Training_Capacity_Building.md",
+    downloadPath: "/documents/Training_Capacity_Building.pdf",
     content: (
       <>
         <p>Comprehensive capacity-building framework with role-based training modules for ministry staff, auditors, registry operators, and IT teams.</p>

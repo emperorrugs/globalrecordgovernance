@@ -49,7 +49,7 @@ const documents: DocEntry[] = [
   // Section 02
   {
     id: "GOV-001", title: "GRGF DPI Architecture (Full)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/High_Level_Architecture.md",
+    downloadPath: "/documents/High_Level_Architecture.pdf",
     content: (
       <>
         <p>The Global Record Governance Framework (GRGF) is architected as a foundational, horizontal Digital Public Infrastructure (DPI) that operates independently of sectoral systems while remaining interoperable with them.</p>
@@ -67,7 +67,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-002", title: "Governance & Authority Model", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Governance_Authority_Model.md",
+    downloadPath: "/documents/Governance_Authority_Model.pdf",
     content: (
       <>
         <p>GRGF explicitly distinguishes between institutional authority, individual actors, and delegated mandates. Authority is treated as a recordable attribute, not an assumption.</p>
@@ -79,7 +79,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-003", title: "Decision, Action & Omission Framework", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Actions_and_Omissions_Framework.md",
+    downloadPath: "/documents/Actions_and_Omissions_Framework.pdf",
     content: (
       <>
         <p>GRGF enables accountability by preserving chain of authority, temporal responsibility, and jurisdictional scope.</p>
@@ -102,7 +102,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-004", title: "Auditability & Verification Logic", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/Auditability_Verification_Logic.md",
+    downloadPath: "/documents/Auditability_Verification_Logic.pdf",
     content: (
       <>
         <p>GRGF supports negative and positive verification:</p>
@@ -118,7 +118,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-005", title: "Deployment Models (National / Incremental)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/Deployment_Models.md",
+    downloadPath: "/documents/Deployment_Models.pdf",
     content: (
       <>
         <p>A typical national deployment follows three stages:</p>
@@ -134,7 +134,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-006", title: "Integration with Existing Systems", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/DPI_Integration_Guide.md",
+    downloadPath: "/documents/DPI_Integration_Guide.pdf",
     content: (
       <>
         <p>GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
@@ -146,7 +146,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-007", title: "Risk, Safeguards & Oversight", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/Risk_Safeguards_Oversight.md",
+    downloadPath: "/documents/Risk_Safeguards_Oversight.pdf",
     content: (
       <>
         <p><strong>Primary risks addressed:</strong></p>
@@ -163,7 +163,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-008", title: "Public Value & ROI Logic", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Public_Value_ROI.md",
+    downloadPath: "/documents/Public_Value_ROI.pdf",
     content: (
       <>
         <p>GRGF creates public value by reducing ambiguity, increasing trust, strengthening institutions, and protecting lawful decision-makers. Value is systemic, not transactional.</p>
@@ -176,7 +176,7 @@ const documents: DocEntry[] = [
   // Uploaded governance documents
   {
     id: "GOV-009", title: "Data Protection & Access Control Policy", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Data_Protection_and_Access_Control_Policy.md",
+    downloadPath: "/documents/Data_Protection_and_Access_Control_Policy.pdf",
     content: (
       <>
         <p><strong>Security Model:</strong> Defense-in-depth with encryption at rest and in transit.</p>
@@ -189,7 +189,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-010", title: "Privacy Impact Assessment (PIA)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Privacy_Impact_Assessment.md",
+    downloadPath: "/documents/Privacy_Impact_Assessment.pdf",
     content: (
       <>
         <p>Assessment of personal data processing within GRGF. Only event metadata strictly required for evidentiary integrity is captured.</p>
@@ -205,7 +205,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-011", title: "Feasibility Study", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Feasibility_Study.md",
+    downloadPath: "/documents/Feasibility_Study.pdf",
     content: (
       <>
         <p>This feasibility study assesses the technical, legal, financial, and operational viability of GRGF as a sovereign-grade DPI.</p>
@@ -218,7 +218,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-012", title: "Incident Response Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/Incident_Response_Plan.md",
+    downloadPath: "/documents/Incident_Response_Plan.pdf",
     content: (
       <>
         <p><strong>Severity Levels:</strong> Low, Medium, High, Critical.</p>
@@ -229,7 +229,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-013", title: "Procurement Strategy (PSPC)", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/Procurement_Strategy_PSPC.md",
+    downloadPath: "/documents/Procurement_Strategy_PSPC.pdf",
     content: (
       <>
         <p>Enables compliant pilot procurement under Canadian federal rules.</p>
@@ -244,7 +244,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-014", title: "Records Retention Schedule", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/Records_Retention_Schedule.md",
+    downloadPath: "/documents/Records_Retention_Schedule.pdf",
     content: (
       <>
         <p>Retention aligned with legal, fiscal, and historical value.</p>
@@ -259,7 +259,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-015", title: "System Data-Flow Architecture", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/1_Data_Flow_Architecture.md",
+    downloadPath: "/documents/1_Data_Flow_Architecture.pdf",
     content: (
       <>
         <p>End-to-end flow from source systems to GRGF custody, retention, access, and disclosure.</p>
@@ -269,7 +269,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-016", title: "Threat Model (STRIDE)", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/2_Threat_Model_STRIDE.md",
+    downloadPath: "/documents/2_Threat_Model_STRIDE.pdf",
     content: (
       <>
         <p>Analyzes spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats against GRGF.</p>
@@ -279,7 +279,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-017", title: "Connector Minimization Standard", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/3_Connector_Minimization_Standard.md",
+    downloadPath: "/documents/3_Connector_Minimization_Standard.pdf",
     content: (
       <>
         <p>Defines mandatory exclusion rules for personal and operational data.</p>
@@ -289,7 +289,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-018", title: "Chain of Custody & Legal Hold", section: "SECTION 03 — GOVERNANCE & POLICY", updated: "February 2026",
-    downloadPath: "/documents/4_Chain_of_Custody_OPS.md",
+    downloadPath: "/documents/4_Chain_of_Custody_OPS.pdf",
     content: (
       <>
         <p>Defines evidence custody, integrity, disclosure, and court survivability procedures.</p>
@@ -299,7 +299,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-019", title: "Interoperability Profile", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
-    downloadPath: "/documents/5_Interoperability_Profile.md",
+    downloadPath: "/documents/5_Interoperability_Profile.pdf",
     content: (
       <>
         <p>Canonical schemas, APIs, versioning, and conformance testing framework.</p>
@@ -309,7 +309,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-020", title: "Resilience & Disaster Recovery", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/6_Resilience_RTO_RPO_DR.md",
+    downloadPath: "/documents/6_Resilience_RTO_RPO_DR.pdf",
     content: (
       <>
         <p>Defines RTO/RPO targets, integrity recovery procedures, and offline survivability.</p>
@@ -319,7 +319,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-021", title: "Pilot SOW & Acceptance Criteria", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
-    downloadPath: "/documents/7_Pilot_SOW_Acceptance.md",
+    downloadPath: "/documents/7_Pilot_SOW_Acceptance.pdf",
     content: (
       <>
         <p>Defines scope, milestones, security/privacy gates, and success metrics for the 90-day pilot engagement.</p>
@@ -329,7 +329,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-022", title: "Independent Assurance Plan", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "February 2026",
-    downloadPath: "/documents/8_Independent_Assurance_Plan.md",
+    downloadPath: "/documents/8_Independent_Assurance_Plan.pdf",
     content: (
       <>
         <p>External audits, penetration testing, SOC-equivalent assurance, and reporting cadence.</p>
@@ -339,7 +339,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-023", title: "Executive Decision Memo", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Executive_Decision_Memo.md",
+    downloadPath: "/documents/Executive_Decision_Memo.pdf",
     content: (
       <>
         <p><strong>Recommendation:</strong> APPROVE PILOT & PHASED SCALE</p>
@@ -349,7 +349,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-024", title: "Oral Defense Briefing Deck", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/Oral_Defense_Briefing_Deck.md",
+    downloadPath: "/documents/Oral_Defense_Briefing_Deck.pdf",
     content: (
       <>
         <p>Structured briefing following the Problem → Solution → Value → Ask framework for institutional presentation and defense.</p>
