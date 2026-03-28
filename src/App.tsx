@@ -258,6 +258,7 @@ const App = () => (
             <Route path="/blueprints" element={<AppLayout><TechnicalBlueprints /></AppLayout>} />
             <Route path="/pilot" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
+            <Route path="/pilot-results" element={<AppLayout><PilotResults /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
             <Route path="/executive-summary" element={<ExecutiveSummary />} />
