@@ -634,8 +634,9 @@ export default function ValueCalculator() {
           <div className="calculator-results space-y-8 animate-fade-in">
             {/* Export Buttons */}
             <div className="flex flex-wrap gap-2 print:hidden">
-              <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
-                <Printer className="h-3.5 w-3.5" /> Print / PDF
+              <Button variant="outline" size="sm" onClick={handlePrint} disabled={pdfLoading} className="gap-2">
+                {pdfLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Printer className="h-3.5 w-3.5" />}
+                {pdfLoading ? "Generating PDF..." : "Download PDF"}
               </Button>
               <Button variant="outline" size="sm" onClick={handleDownloadCSV} className="gap-2">
                 <Download className="h-3.5 w-3.5" /> Download CSV
