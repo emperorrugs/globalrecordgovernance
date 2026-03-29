@@ -111,10 +111,12 @@ export default function AppLogin() {
               <span className="text-[15px] font-bold">GRGF</span>
             </div>
             <h1 className="text-heading-1 font-bold text-foreground mb-2">
-              {isSignUp ? "Create Account" : "Sign In"}
+              {isForgot ? "Reset Password" : isSignUp ? "Create Account" : "Sign In"}
             </h1>
             <p className="text-body text-muted-foreground">
-              {isSignUp
+              {isForgot
+                ? "Enter your email and we'll send a secure reset link."
+                : isSignUp
                 ? "Register for authorized institutional access."
                 : "Authorized institutional users only."}
             </p>
