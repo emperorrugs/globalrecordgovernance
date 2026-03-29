@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { Shield } from 'lucide-react';
+import { Shield, ArrowLeft } from 'lucide-react';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
