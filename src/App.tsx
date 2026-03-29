@@ -188,6 +188,7 @@ const App = () => (
                 CORE SYSTEM — /app/* (Authenticated)
             ═══════════════════════════════════════════ */}
             <Route path="/app/login" element={<AppLogin />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/app" element={<PlatformLayout><PlatformDashboard /></PlatformLayout>} />
             <Route path="/app/dashboard" element={<PlatformLayout><PlatformDashboard /></PlatformLayout>} />
             <Route path="/app/records" element={<PlatformLayout><RecordsList /></PlatformLayout>} />
