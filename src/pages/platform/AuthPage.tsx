@@ -144,6 +144,7 @@ export default function AuthPage() {
               </form>
             </TabsContent>
           </Tabs>
+          )}
         </div>
 
         <p className="text-center text-xs text-muted-foreground">
