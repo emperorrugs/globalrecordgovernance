@@ -11,6 +11,7 @@ export default function AppLogin() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isForgot, setIsForgot] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   if (loading) {
@@ -27,7 +28,14 @@ export default function AppLogin() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      if (isSignUp) {
+      if (isForgot) {
+        const { error } = await supabase.auth.resetPasswordForEmail(email, {
+          redirectTo: `${window.location.origin}/reset-password`,
+        });
+        if (error) throw error;
+        toast.success("Check your email for a password reset link.");
+        setIsForgot(false);
+      } else if (isSignUp) {
         const { error } = await supabase.auth.signUp({
           email,
           password,
@@ -103,10 +111,12 @@ export default function AppLogin() {
               <span className="text-[15px] font-bold">GRGF</span>
             </div>
             <h1 className="text-heading-1 font-bold text-foreground mb-2">
-              {isSignUp ? "Create Account" : "Sign In"}
+              {isForgot ? "Reset Password" : isSignUp ? "Create Account" : "Sign In"}
             </h1>
             <p className="text-body text-muted-foreground">
-              {isSignUp
+              {isForgot
+                ? "Enter your email and we'll send a secure reset link."
+                : isSignUp
                 ? "Register for authorized institutional access."
                 : "Authorized institutional users only."}
             </p>
@@ -124,8 +134,16 @@ export default function AppLogin() {
                 placeholder="name@institution.gov"
               />
             </div>
+            {!isForgot && (
             <div>
-              <label className="block text-xs font-medium text-foreground mb-1.5">Password</label>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="block text-xs font-medium text-foreground">Password</label>
+                {!isSignUp && (
+                  <button type="button" onClick={() => setIsForgot(true)} className="text-[11px] text-primary hover:underline">
+                    Forgot password?
+                  </button>
+                )}
+              </div>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -145,17 +163,26 @@ export default function AppLogin() {
                 </button>
               </div>
             </div>
+            )}
             <button
               type="submit"
               disabled={submitting}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-all disabled:opacity-60"
             >
               <Lock className="h-4 w-4" />
-              {submitting ? "Processing…" : isSignUp ? "Create Account" : "Sign In"}
+              {submitting ? "Processing…" : isForgot ? "Send Reset Link" : isSignUp ? "Create Account" : "Sign In"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
+            {isForgot ? (
+              <button
+                onClick={() => setIsForgot(false)}
+                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+              >
+                ← Back to Sign In
+              </button>
+            ) : (
             <button
               onClick={() => setIsSignUp(!isSignUp)}
               className="text-xs text-muted-foreground hover:text-primary transition-colors"
@@ -164,6 +191,7 @@ export default function AppLogin() {
                 ? "Already have an account? Sign in"
                 : "Need an account? Request access"}
             </button>
+            )}
           </div>
 
           <div className="mt-10 pt-6 border-t border-border text-center">

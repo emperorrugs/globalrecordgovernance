@@ -6,13 +6,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
-import { Shield } from 'lucide-react';
+import { Shield, ArrowLeft } from 'lucide-react';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [loading, setLoading] = useState(false);
+  const [forgotMode, setForgotMode] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
 
@@ -25,6 +26,25 @@ export default function AuthPage() {
       toast({ title: 'Login failed', description: error.message, variant: 'destructive' });
     } else {
       navigate('/app');
+    }
+  };
+
+  const handleForgotPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      toast({ title: 'Email required', description: 'Please enter your email address.', variant: 'destructive' });
+      return;
+    }
+    setLoading(true);
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+    setLoading(false);
+    if (error) {
+      toast({ title: 'Request failed', description: error.message, variant: 'destructive' });
+    } else {
+      toast({ title: 'Reset link sent', description: 'Check your email for a password reset link.' });
+      setForgotMode(false);
     }
   };
 
@@ -63,6 +83,24 @@ export default function AuthPage() {
         </div>
 
         <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
+          {forgotMode ? (
+            <div>
+              <button type="button" onClick={() => setForgotMode(false)} className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground mb-4 transition-colors">
+                <ArrowLeft className="h-3.5 w-3.5" /> Back to Sign In
+              </button>
+              <h2 className="text-lg font-semibold mb-1">Reset Password</h2>
+              <p className="text-sm text-muted-foreground mb-4">Enter your email and we'll send a secure reset link.</p>
+              <form onSubmit={handleForgotPassword} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="reset-email">Email</Label>
+                  <Input id="reset-email" type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="you@institution.gov" />
+                </div>
+                <Button type="submit" className="w-full" disabled={loading}>
+                  {loading ? 'Sending…' : 'Send Reset Link'}
+                </Button>
+              </form>
+            </div>
+          ) : (
           <Tabs defaultValue="login">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="login">Sign In</TabsTrigger>
@@ -75,7 +113,10 @@ export default function AuthPage() {
                   <Input id="login-email" type="email" value={email} onChange={e => setEmail(e.target.value)} required placeholder="you@institution.gov" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="login-password">Password</Label>
+                  <div className="flex items-center justify-between">
+                    <Label htmlFor="login-password">Password</Label>
+                    <button type="button" onClick={() => setForgotMode(true)} className="text-xs text-primary hover:underline">Forgot password?</button>
+                  </div>
                   <Input id="login-password" type="password" value={password} onChange={e => setPassword(e.target.value)} required placeholder="••••••••" />
                 </div>
                 <Button type="submit" className="w-full" disabled={loading}>
@@ -103,6 +144,7 @@ export default function AuthPage() {
               </form>
             </TabsContent>
           </Tabs>
+          )}
         </div>
 
         <p className="text-center text-xs text-muted-foreground">

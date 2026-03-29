@@ -153,6 +153,7 @@ import TermsOfService from "./pages/TermsOfService";
 
 // ═══ CORE SYSTEM (APP) PAGES ═══
 import AppLogin from "./pages/app/AppLogin";
+import ResetPassword from "./pages/platform/ResetPassword";
 import PlatformLayout from "./pages/platform/PlatformLayout";
 import PlatformDashboard from "./pages/platform/PlatformDashboard";
 import RecordsList from "./pages/platform/RecordsList";
@@ -188,6 +189,7 @@ const App = () => (
                 CORE SYSTEM — /app/* (Authenticated)
             ═══════════════════════════════════════════ */}
             <Route path="/app/login" element={<AppLogin />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
             <Route path="/app" element={<PlatformLayout><PlatformDashboard /></PlatformLayout>} />
             <Route path="/app/dashboard" element={<PlatformLayout><PlatformDashboard /></PlatformLayout>} />
             <Route path="/app/records" element={<PlatformLayout><RecordsList /></PlatformLayout>} />
