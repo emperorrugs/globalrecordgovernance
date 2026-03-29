@@ -304,6 +304,34 @@ export default function ValueCalculator() {
   const [showMethodology, setShowMethodology] = useState(false);
   const [expandedDomains, setExpandedDomains] = useState<Set<string>>(new Set());
   const printRef = useRef<HTMLDivElement>(null);
+  const [researching, setResearching] = useState(false);
+  const [companyData, setCompanyData] = useState<CompanyResearch | null>(null);
+
+  const handleResearch = async () => {
+    if (!orgName.trim()) return;
+    setResearching(true);
+    setCompanyData(null);
+    setCalculated(false);
+    try {
+      const { data, error } = await supabase.functions.invoke('company-research', {
+        body: { companyName: orgName.trim() },
+      });
+      if (error) throw error;
+      if (!data?.success) throw new Error(data?.error || 'Research failed');
+
+      const info: CompanyResearch = data.data;
+      setCompanyData(info);
+      setOrgName(info.name);
+      if (info.sector && SECTOR_PROFILES[info.sector]) setSector(info.sector);
+      if (info.scale) setScale(info.scale);
+      toast.success(`Found: ${info.name}`, { description: `${info.employeeCount?.toLocaleString()} employees · ${info.country}` });
+    } catch (e: any) {
+      console.error('Research error:', e);
+      toast.error('Research failed', { description: e.message || 'Could not find organization data' });
+    } finally {
+      setResearching(false);
+    }
+  };
 
   const profile = SECTOR_PROFILES[sector];
 
