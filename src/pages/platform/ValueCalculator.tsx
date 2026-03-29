@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef } from 'react';
 import { Calculator, TrendingDown, TrendingUp, DollarSign, Building2, Search, Shield, BarChart3, Download, Printer, Info, ChevronDown, ChevronUp, BookOpen, FileText, Sparkles, Loader2, Globe, Users, Calendar, AlertTriangle } from 'lucide-react';
+import { exportElementToPDF } from '@/lib/pdf-export';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -378,8 +379,22 @@ export default function ValueCalculator() {
     });
   };
 
-  const handlePrint = () => {
-    window.print();
+  const [pdfLoading, setPdfLoading] = useState(false);
+
+  const handlePrint = async () => {
+    const el = document.querySelector('.calculator-results') as HTMLElement | null;
+    if (!el) {
+      window.print();
+      return;
+    }
+    setPdfLoading(true);
+    try {
+      await exportElementToPDF(el, `GRGF_Value_Analysis_${orgName.replace(/\s+/g, "_")}`);
+    } catch {
+      window.print();
+    } finally {
+      setPdfLoading(false);
+    }
   };
 
   const handleDownloadCSV = () => {
