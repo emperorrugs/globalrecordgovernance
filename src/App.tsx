@@ -153,6 +153,7 @@ import TermsOfService from "./pages/TermsOfService";
 
 // ═══ CORE SYSTEM (APP) PAGES ═══
 import AppLogin from "./pages/app/AppLogin";
+import ResetPassword from "./pages/platform/ResetPassword";
 import PlatformLayout from "./pages/platform/PlatformLayout";
 import PlatformDashboard from "./pages/platform/PlatformDashboard";
 import RecordsList from "./pages/platform/RecordsList";
