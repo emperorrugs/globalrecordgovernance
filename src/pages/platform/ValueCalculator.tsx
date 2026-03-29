@@ -631,7 +631,7 @@ export default function ValueCalculator() {
 
         {/* Results */}
         {calculated && results && (
-          <div className="space-y-8 animate-fade-in">
+          <div className="calculator-results space-y-8 animate-fade-in">
             {/* Export Buttons */}
             <div className="flex flex-wrap gap-2 print:hidden">
               <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
