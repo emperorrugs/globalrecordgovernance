@@ -134,8 +134,16 @@ export default function AppLogin() {
                 placeholder="name@institution.gov"
               />
             </div>
+            {!isForgot && (
             <div>
-              <label className="block text-xs font-medium text-foreground mb-1.5">Password</label>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="block text-xs font-medium text-foreground">Password</label>
+                {!isSignUp && (
+                  <button type="button" onClick={() => setIsForgot(true)} className="text-[11px] text-primary hover:underline">
+                    Forgot password?
+                  </button>
+                )}
+              </div>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -155,17 +163,26 @@ export default function AppLogin() {
                 </button>
               </div>
             </div>
+            )}
             <button
               type="submit"
               disabled={submitting}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg text-sm font-semibold hover:bg-primary/90 transition-all disabled:opacity-60"
             >
               <Lock className="h-4 w-4" />
-              {submitting ? "Processing…" : isSignUp ? "Create Account" : "Sign In"}
+              {submitting ? "Processing…" : isForgot ? "Send Reset Link" : isSignUp ? "Create Account" : "Sign In"}
             </button>
           </form>
 
           <div className="mt-6 text-center">
+            {isForgot ? (
+              <button
+                onClick={() => setIsForgot(false)}
+                className="text-xs text-muted-foreground hover:text-primary transition-colors"
+              >
+                ← Back to Sign In
+              </button>
+            ) : (
             <button
               onClick={() => setIsSignUp(!isSignUp)}
               className="text-xs text-muted-foreground hover:text-primary transition-colors"
@@ -173,6 +190,8 @@ export default function AppLogin() {
               {isSignUp
                 ? "Already have an account? Sign in"
                 : "Need an account? Request access"}
+            </button>
+            )}
             </button>
           </div>
 
