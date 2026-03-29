@@ -80,7 +80,6 @@ For keyRisks, provide 3-5 key governance risks this type of organization typical
                   },
                 },
                 required: ["name", "sector", "scale", "annualBudget", "employeeCount", "country", "description", "keyRisks"],
-                additionalProperties: false,
               },
             },
           },
