@@ -275,6 +275,7 @@ const App = () => (
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
             <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
+            <Route path="/value-calculator" element={<AppLayout><ValueCalculator /></AppLayout>} />
 
             {/* Academy */}
             <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
