@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef } from 'react';
 import { Calculator, TrendingDown, TrendingUp, DollarSign, Building2, Search, Shield, BarChart3, Download, Printer, Info, ChevronDown, ChevronUp, BookOpen, FileText, Sparkles, Loader2, Globe, Users, Calendar, AlertTriangle } from 'lucide-react';
+import { exportElementToPDF } from '@/lib/pdf-export';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -378,8 +379,22 @@ export default function ValueCalculator() {
     });
   };
 
-  const handlePrint = () => {
-    window.print();
+  const [pdfLoading, setPdfLoading] = useState(false);
+
+  const handlePrint = async () => {
+    const el = document.querySelector('.calculator-results') as HTMLElement | null;
+    if (!el) {
+      window.print();
+      return;
+    }
+    setPdfLoading(true);
+    try {
+      await exportElementToPDF(el, `GRGF_Value_Analysis_${orgName.replace(/\s+/g, "_")}`);
+    } catch {
+      window.print();
+    } finally {
+      setPdfLoading(false);
+    }
   };
 
   const handleDownloadCSV = () => {
@@ -616,11 +631,12 @@ export default function ValueCalculator() {
 
         {/* Results */}
         {calculated && results && (
-          <div className="space-y-8 animate-fade-in">
+          <div className="calculator-results space-y-8 animate-fade-in">
             {/* Export Buttons */}
             <div className="flex flex-wrap gap-2 print:hidden">
-              <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
-                <Printer className="h-3.5 w-3.5" /> Print / PDF
+              <Button variant="outline" size="sm" onClick={handlePrint} disabled={pdfLoading} className="gap-2">
+                {pdfLoading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Printer className="h-3.5 w-3.5" />}
+                {pdfLoading ? "Generating PDF..." : "Download PDF"}
               </Button>
               <Button variant="outline" size="sm" onClick={handleDownloadCSV} className="gap-2">
                 <Download className="h-3.5 w-3.5" /> Download CSV
