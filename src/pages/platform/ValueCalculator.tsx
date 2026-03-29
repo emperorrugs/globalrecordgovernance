@@ -1,11 +1,25 @@
 import { useState, useMemo, useRef } from 'react';
-import { Calculator, TrendingDown, TrendingUp, DollarSign, Building2, Search, Shield, BarChart3, Download, Printer, Info, ChevronDown, ChevronUp, BookOpen, FileText } from 'lucide-react';
+import { Calculator, TrendingDown, TrendingUp, DollarSign, Building2, Search, Shield, BarChart3, Download, Printer, Info, ChevronDown, ChevronUp, BookOpen, FileText, Sparkles, Loader2, Globe, Users, Calendar, AlertTriangle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { supabase } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
+
+interface CompanyResearch {
+  name: string;
+  sector: string;
+  scale: number;
+  annualBudget: number;
+  employeeCount: number;
+  country: string;
+  description: string;
+  founded?: number;
+  keyRisks: string[];
+}
 
 // ── Methodology descriptions keyed by domain area ──
 const METHODOLOGY: Record<string, string> = {
