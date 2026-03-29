@@ -6,7 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   LayoutDashboard, FileText, Plus, Activity, Shield, AlertTriangle,
   Users, Settings, LogOut, ChevronLeft, Menu, Search,
-  ListChecks, BarChart3, Play,
+  ListChecks, BarChart3, Play, Calculator,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -19,7 +19,7 @@ const navItems = [
   { label: 'Verification', path: '/app/verify', icon: Shield },
   { label: 'Disputes', path: '/app/disputes', icon: AlertTriangle },
   { label: 'Reports', path: '/app/reports', icon: BarChart3 },
-  { label: 'Value Calculator', path: '/app/calculator', icon: BarChart3 },
+  { label: 'Value Calculator', path: '/app/calculator', icon: Calculator },
   { label: 'Guided Demo', path: '/app/demo', icon: Play },
 ];
 
