@@ -419,6 +419,16 @@ export default function ValueCalculator() {
       sector: profile.label,
       scale,
       generatedAt: new Date().toISOString(),
+      ...(companyData && {
+        companyResearch: {
+          country: companyData.country,
+          employeeCount: companyData.employeeCount,
+          annualBudgetM: companyData.annualBudget,
+          founded: companyData.founded,
+          description: companyData.description,
+          keyRisks: companyData.keyRisks,
+        },
+      }),
       summary: {
         annualExposureBefore: results.totalBefore,
         annualExposureAfter: results.totalAfter,
