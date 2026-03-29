@@ -14,6 +14,7 @@ const navItems = [
   { label: "Architecture", path: "/architecture" },
   { label: "Applications", path: "/applications" },
   { label: "Sectors", path: "/sectors" },
+  { label: "Calculator", path: "/value-calculator" },
   { label: "Documents", path: "/documents" },
   { label: "Verification", path: "/verify" },
   { label: "Security & Trust", path: "/security-trust" },
