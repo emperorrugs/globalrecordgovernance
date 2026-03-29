@@ -468,10 +468,10 @@ export default function ValueCalculator() {
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-2">
             Before vs. After GRGF
           </h1>
-          <p className="text-sm text-muted-foreground max-w-2xl">
-            Enter any organization name and sector to instantly calculate the projected financial
-            impact of GRGF integration — modeled on real institutional cost structures.
-          </p>
+           <p className="text-sm text-muted-foreground max-w-2xl">
+              Enter any organization name and let the AI research agent automatically identify its sector,
+              scale, and risk profile — then calculate the projected financial impact of GRGF integration.
+            </p>
         </div>
       </div>
 
