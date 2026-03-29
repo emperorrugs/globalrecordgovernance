@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { exportElementToPDF } from "@/lib/pdf-export";
 import { SEOHead } from "@/components/SEOHead";
 import { FileText, Download, Globe, BarChart3, Shield, AlertTriangle, Cpu, CheckCircle } from "lucide-react";
 
@@ -54,8 +55,13 @@ const ExecutiveBrief = () => {
     setBrief(generateBriefContent(country.trim(), scenario, level));
   };
 
-  const handlePrint = () => {
-    window.print();
+  const handlePrint = async () => {
+    const el = document.querySelector("main") as HTMLElement;
+    if (el) {
+      await exportElementToPDF(el, `GRGF_Executive_Brief_${country.replace(/\s+/g, "_")}`);
+    } else {
+      window.print();
+    }
   };
 
   return (
