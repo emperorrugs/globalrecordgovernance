@@ -192,7 +192,6 @@ export default function AppLogin() {
                 : "Need an account? Request access"}
             </button>
             )}
-            </button>
           </div>
 
           <div className="mt-10 pt-6 border-t border-border text-center">
