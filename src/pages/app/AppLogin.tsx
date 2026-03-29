@@ -11,6 +11,7 @@ export default function AppLogin() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
+  const [isForgot, setIsForgot] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   if (loading) {
