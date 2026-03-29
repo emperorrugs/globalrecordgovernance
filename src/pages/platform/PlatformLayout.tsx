@@ -19,6 +19,7 @@ const navItems = [
   { label: 'Verification', path: '/app/verify', icon: Shield },
   { label: 'Disputes', path: '/app/disputes', icon: AlertTriangle },
   { label: 'Reports', path: '/app/reports', icon: BarChart3 },
+  { label: 'Value Calculator', path: '/app/calculator', icon: BarChart3 },
   { label: 'Guided Demo', path: '/app/demo', icon: Play },
 ];
 
