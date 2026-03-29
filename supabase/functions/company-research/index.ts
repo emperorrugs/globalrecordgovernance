@@ -51,7 +51,7 @@ For keyRisks, provide 3-5 key governance risks this type of organization typical
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-3-flash-preview",
+        model: "openai/gpt-5-mini",
         messages: [
           { role: "system", content: systemPrompt },
           { role: "user", content: `Research this organization: "${companyName}". Provide all available information.` },
