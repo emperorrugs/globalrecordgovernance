@@ -163,6 +163,7 @@ import PublicVerifier from "./pages/platform/PublicVerifier";
 import WorkflowQueue from "./pages/platform/WorkflowQueue";
 import DisputesConsole from "./pages/platform/DisputesConsole";
 import Reports from "./pages/platform/Reports";
+import ValueCalculator from "./pages/platform/ValueCalculator";
 import GuidedDemo from "./pages/platform/GuidedDemo";
 import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
 import GuestDashboard from "./pages/platform/GuestDashboard";
@@ -197,6 +198,7 @@ const App = () => (
             <Route path="/app/verifications" element={<PlatformLayout><PublicVerifier /></PlatformLayout>} />
             <Route path="/app/disputes" element={<PlatformLayout><DisputesConsole /></PlatformLayout>} />
             <Route path="/app/reports" element={<PlatformLayout><Reports /></PlatformLayout>} />
+            <Route path="/app/calculator" element={<PlatformLayout><ValueCalculator /></PlatformLayout>} />
             <Route path="/app/demo" element={<PlatformLayout><GuidedDemo /></PlatformLayout>} />
 
             {/* Guest Demo (no auth) */}
@@ -273,6 +275,7 @@ const App = () => (
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
             <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
             <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
+            <Route path="/value-calculator" element={<AppLayout><ValueCalculator /></AppLayout>} />
 
             {/* Academy */}
             <Route path="/academy" element={<AppLayout><AcademyPage /></AppLayout>} />
