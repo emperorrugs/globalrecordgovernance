@@ -478,8 +478,8 @@ export default function ValueCalculator() {
       <div className="max-w-5xl mx-auto px-6 py-8 space-y-8" ref={printRef}>
         {/* Input Section */}
         <Card className="border-2 border-primary/20 bg-card print:border print:border-border">
-          <CardContent className="pt-6">
-            <div className="grid gap-4 md:grid-cols-[1fr_200px_160px_auto] print:grid-cols-3">
+          <CardContent className="pt-6 space-y-4">
+            <div className="grid gap-4 md:grid-cols-[1fr_auto] print:grid-cols-1">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Organization Name</label>
                 <div className="relative">
@@ -487,12 +487,89 @@ export default function ValueCalculator() {
                   <Input
                     placeholder="e.g. Toronto Transit Commission, RBC, Service Canada…"
                     value={orgName}
-                    onChange={(e) => { setOrgName(e.target.value); setCalculated(false); }}
-                    className="pl-10 print:pl-3 print:border-0 print:shadow-none print:font-semibold"
-                    onKeyDown={(e) => e.key === "Enter" && handleCalculate()}
+                    onChange={(e) => { setOrgName(e.target.value); setCalculated(false); setCompanyData(null); }}
+                    className="pl-10 pr-4 print:pl-3 print:border-0 print:shadow-none print:font-semibold"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleResearch();
+                      }
+                    }}
                   />
                 </div>
               </div>
+              <div className="flex items-end print:hidden">
+                <Button
+                  onClick={handleResearch}
+                  disabled={!orgName.trim() || researching}
+                  variant="outline"
+                  className="w-full md:w-auto gap-2 border-primary/30 hover:bg-primary/5"
+                >
+                  {researching ? (
+                    <><Loader2 className="h-4 w-4 animate-spin" /> Researching…</>
+                  ) : (
+                    <><Sparkles className="h-4 w-4 text-primary" /> AI Research</>
+                  )}
+                </Button>
+              </div>
+            </div>
+
+            {/* Company Research Results Card */}
+            {companyData && (
+              <div className="border border-primary/20 rounded-lg bg-primary/5 p-4 animate-fade-in">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
+                      <Sparkles className="h-3.5 w-3.5 text-primary" />
+                      AI Research: {companyData.name}
+                    </h3>
+                    <p className="text-xs text-muted-foreground mt-0.5">{companyData.description}</p>
+                  </div>
+                  <Badge variant="outline" className="text-[10px] shrink-0">AI-Verified</Badge>
+                </div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <Globe className="h-3 w-3 text-muted-foreground" />
+                    <span className="text-muted-foreground">Country:</span>
+                    <span className="font-medium">{companyData.country}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <Users className="h-3 w-3 text-muted-foreground" />
+                    <span className="text-muted-foreground">Employees:</span>
+                    <span className="font-medium">{companyData.employeeCount?.toLocaleString()}</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <DollarSign className="h-3 w-3 text-muted-foreground" />
+                    <span className="text-muted-foreground">Budget:</span>
+                    <span className="font-medium">${companyData.annualBudget >= 1000 ? (companyData.annualBudget / 1000).toFixed(1) + 'B' : companyData.annualBudget.toFixed(0) + 'M'}</span>
+                  </div>
+                  {companyData.founded && (
+                    <div className="flex items-center gap-1.5">
+                      <Calendar className="h-3 w-3 text-muted-foreground" />
+                      <span className="text-muted-foreground">Founded:</span>
+                      <span className="font-medium">{companyData.founded}</span>
+                    </div>
+                  )}
+                </div>
+                {companyData.keyRisks && companyData.keyRisks.length > 0 && (
+                  <div className="mt-3 pt-3 border-t border-primary/10">
+                    <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                      <AlertTriangle className="h-3 w-3" /> Key Governance Risks Identified
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {companyData.keyRisks.map((risk, i) => (
+                        <Badge key={i} variant="secondary" className="text-[10px] font-normal">{risk}</Badge>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <p className="text-[10px] text-muted-foreground/60 mt-3 italic">
+                  Sector and scale auto-configured based on research. Review and adjust below if needed.
+                </p>
+              </div>
+            )}
+
+            <div className="grid gap-4 md:grid-cols-[200px_160px_auto] print:grid-cols-2">
               <div>
                 <label className="text-xs font-medium text-muted-foreground mb-1.5 block">Sector</label>
                 <Select value={sector} onValueChange={(v) => { setSector(v); setCalculated(false); }}>
