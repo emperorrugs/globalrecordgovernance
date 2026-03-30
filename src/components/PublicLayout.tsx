@@ -11,6 +11,7 @@ import { RouteSEO } from "@/components/RouteSEO";
 
 const navItems = [
   { label: "Framework", path: "/framework" },
+  { label: "Marketplace", path: "/marketplace" },
   { label: "Architecture", path: "/architecture" },
   { label: "Applications", path: "/applications" },
   { label: "Sectors", path: "/sectors" },
