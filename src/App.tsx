@@ -172,6 +172,7 @@ import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
 import GuestDashboard from "./pages/platform/GuestDashboard";
 import TamperSimulation from "./pages/platform/TamperSimulation";
 import UseCaseSimulations from "./pages/platform/UseCaseSimulations";
+import ChainIntegrity from "./pages/platform/ChainIntegrity";
 
 import NotFound from "./pages/NotFound";
 
