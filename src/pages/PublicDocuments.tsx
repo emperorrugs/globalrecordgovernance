@@ -99,7 +99,7 @@ export default function PublicDocuments() {
 
       <div className="mt-6 text-center">
         <p className="text-[10px] text-muted-foreground/60">
-          Global Record Governance Framework — Invented and Owned by Tarek Wahid · Canadian Patent No. CA 3,300,102
+          Global Record Governance Framework — Invented and Owned by Tarek Wahid · Canadian Patent Application No. CA 3,300,102
         </p>
       </div>
     </div>
