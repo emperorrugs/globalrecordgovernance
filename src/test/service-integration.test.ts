@@ -103,32 +103,37 @@ describe('Deterministic Record Hashing', () => {
 // ─── Chain Integrity ────────────────────────────────────────────────────────
 
 describe('Chain Integrity Validation', () => {
+  const makeLink = (id: string, hash: string, prevHash: string | null): ChainLink => ({
+    id, title: `Record ${id}`, status: 'sealed', current_hash: hash,
+    previous_hash: prevHash, recorded_at: '2024-01-01T00:00:00Z', sealed_at: null,
+  });
+
   it('validates a correct chain', async () => {
     const hash1 = await generateHash('record-1');
     const hash2 = await generateHash('record-2');
     const chain: ChainLink[] = [
-      { id: 'r1', hash: hash1, previousHash: null },
-      { id: 'r2', hash: hash2, previousHash: hash1 },
+      makeLink('r1', hash1, null),
+      makeLink('r2', hash2, hash1),
     ];
     const result = validateChain(chain);
     expect(result.valid).toBe(true);
-    expect(result.brokenLinks).toHaveLength(0);
+    expect(result.breakIndex).toBeNull();
   });
 
   it('detects broken chain link', async () => {
     const hash1 = await generateHash('record-1');
     const chain: ChainLink[] = [
-      { id: 'r1', hash: hash1, previousHash: null },
-      { id: 'r2', hash: 'abc123', previousHash: 'wrong-hash' },
+      makeLink('r1', hash1, null),
+      makeLink('r2', 'abc123', 'wrong-hash'),
     ];
     const result = validateChain(chain);
     expect(result.valid).toBe(false);
-    expect(result.brokenLinks.length).toBeGreaterThan(0);
+    expect(result.breakIndex).toBe(1);
   });
 
   it('validates single-record chain (genesis)', async () => {
     const hash = await generateHash('genesis');
-    const chain: ChainLink[] = [{ id: 'r1', hash, previousHash: null }];
+    const chain: ChainLink[] = [makeLink('r1', hash, null)];
     const result = validateChain(chain);
     expect(result.valid).toBe(true);
   });
