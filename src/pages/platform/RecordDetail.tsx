@@ -51,8 +51,11 @@ export default function RecordDetail() {
   if (!record) return <p className="text-sm text-muted-foreground py-12 text-center">Record not found.</p>;
 
   const status = record.status as RecordStatus;
+  const isOwner = user?.id === record.created_by;
+  const canSubmit = isOwner && status === 'draft';
   const canApprove = (hasRole('approver') || hasRole('tenant_admin') || hasRole('super_admin')) && ['submitted', 'under_review'].includes(status);
   const canSeal = (hasRole('approver') || hasRole('tenant_admin') || hasRole('super_admin')) && status === 'approved';
+  const isSealed = status === 'sealed';
   const sectors = record.sectors as { name: string; code: string } | null;
   const recordTypes = record.record_types as { name: string; code: string } | null;
 
@@ -127,11 +130,14 @@ export default function RecordDetail() {
       </Card>
 
       {/* Actions */}
-      {(canApprove || canSeal) && (
+      {(canSubmit || canApprove || canSeal) && (
         <Card className="p-5">
           <h2 className="text-sm font-semibold mb-3 flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-[#FFB900]" /> Workflow Actions</h2>
           <Textarea placeholder="Optional action notes…" value={actionNote} onChange={e => setActionNote(e.target.value)} rows={2} className="mb-3" />
           <div className="flex items-center gap-3 flex-wrap">
+            {canSubmit && (
+              <Button onClick={() => handleStatusChange('submitted')} className="gap-2 bg-blue-600 hover:bg-blue-700"><CheckCircle className="h-4 w-4" /> Submit for Review</Button>
+            )}
             {canApprove && status === 'submitted' && (
               <Button variant="outline" onClick={() => handleStatusChange('under_review')} className="gap-2"><Clock className="h-4 w-4" /> Begin Review</Button>
             )}
@@ -145,6 +151,15 @@ export default function RecordDetail() {
               <Button onClick={() => handleStatusChange('sealed')} className="gap-2 bg-emerald-700 hover:bg-emerald-800"><ShieldCheck className="h-4 w-4" /> Seal Record</Button>
             )}
           </div>
+        </Card>
+      )}
+
+      {/* Sealed Record Immutability Notice */}
+      {isSealed && (
+        <Card className="p-4 border-emerald-200 bg-emerald-50/50">
+          <p className="text-sm text-emerald-800 flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4" /> This record is permanently sealed. No modifications are permitted. Corrections must be issued as a superseding record.
+          </p>
         </Card>
       )}
 
