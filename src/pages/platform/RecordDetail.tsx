@@ -154,12 +154,17 @@ export default function RecordDetail() {
         </Card>
       )}
 
-      {/* Sealed Record Immutability Notice */}
+      {/* Sealed Record Immutability Notice + Supersede Action */}
       {isSealed && (
         <Card className="p-4 border-emerald-200 bg-emerald-50/50">
           <p className="text-sm text-emerald-800 flex items-center gap-2">
             <ShieldCheck className="h-4 w-4" /> This record is permanently sealed. No modifications are permitted. Corrections must be issued as a superseding record.
           </p>
+          <Link to={`/app/records/new?supersedes=${record.id}&prev_hash=${record.current_hash || ''}&prev_title=${encodeURIComponent(record.title as string)}`}>
+            <Button variant="outline" size="sm" className="mt-3 gap-2 border-emerald-300 text-emerald-700 hover:bg-emerald-100">
+              <FileText className="h-3 w-3" /> Create Superseding Record
+            </Button>
+          </Link>
         </Card>
       )}
 
