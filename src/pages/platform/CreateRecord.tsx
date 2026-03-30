@@ -38,12 +38,12 @@ export default function CreateRecord() {
   const [submissionResult, setSubmissionResult] = useState<SubmissionResult | null>(null);
 
   const [form, setForm] = useState({
-    title: '',
-    description: '',
+    title: supersedesId ? `Correction — ${prevTitle || 'Superseding Record'}` : '',
+    description: supersedesId ? `This record supersedes record ${supersedesId?.slice(0, 8)}… and corrects its content.` : '',
     sector_id: '',
     record_type_id: '',
     jurisdiction_id: '',
-    event_type: '',
+    event_type: supersedesId ? 'correction' : '',
     actor_ref: '',
     subject_ref: '',
     occurred_at: '',
