@@ -51,6 +51,7 @@ import InternationalCooperation from "./pages/InternationalCooperation";
 
 // Deployment (public)
 import DeploymentScenarios from "./pages/DeploymentScenarios";
+import SectorIntegrationExamples from "./pages/SectorIntegrationExamples";
 import CanadaDeployment from "./pages/CanadaDeployment";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import DeploymentPlanner from "./pages/DeploymentPlanner";
@@ -260,6 +261,7 @@ const App = () => (
 
             {/* Deployment */}
             <Route path="/deployment-scenarios" element={<AppLayout><DeploymentScenarios /></AppLayout>} />
+            <Route path="/sector-integration" element={<AppLayout><SectorIntegrationExamples /></AppLayout>} />
             <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
             <Route path="/canada" element={<AppLayout><CanadaDeployment /></AppLayout>} />
             <Route path="/sovereign-deployment" element={<AppLayout><SovereignDeployment /></AppLayout>} />
