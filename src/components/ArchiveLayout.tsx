@@ -105,7 +105,7 @@ export function ArchiveLayout({ children }: { children: React.ReactNode }) {
                     Global Record Governance Framework — Digital Archive
                   </p>
                   <p className="text-[10px] text-primary-foreground/40 mt-1">
-                    Invented and Owned by Tarek Wahid · No personal data collected · Reference only
+                    Invented and Owned by Tarek Wahid · Canadian Patent Application No. CA 3,300,102 · Reference only
                   </p>
                 </div>
                 <Link to="/" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">

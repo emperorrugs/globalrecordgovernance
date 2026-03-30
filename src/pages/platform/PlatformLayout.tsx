@@ -107,9 +107,12 @@ export default function PlatformLayout({ children }: { children: ReactNode }) {
         <main className="flex-1 p-6 overflow-auto">
           {children}
         </main>
-        <footer className="h-8 border-t border-border flex items-center justify-center shrink-0">
+        <footer className="border-t border-border flex flex-col items-center justify-center py-2 shrink-0 gap-0.5">
           <p className="text-[10px] font-mono text-muted-foreground/40 tracking-wide">
             GRGF does not interpret reality. It records it — immutably.
+          </p>
+          <p className="text-[9px] font-mono text-muted-foreground/30 tracking-wide">
+            Global Record Governance Framework — Invented and Owned by Tarek Wahid · Canadian Patent Application No. CA 3,300,102
           </p>
         </footer>
       </div>

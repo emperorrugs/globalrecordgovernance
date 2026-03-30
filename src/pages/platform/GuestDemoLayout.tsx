@@ -98,6 +98,11 @@ export default function GuestDemoLayout({ children }: { children: ReactNode }) {
         <main className="flex-1 p-6 overflow-auto">
           {children}
         </main>
+        <footer className="border-t border-border flex items-center justify-center py-2 shrink-0">
+          <p className="text-[9px] font-mono text-muted-foreground/30 tracking-wide text-center">
+            Global Record Governance Framework — Invented and Owned by Tarek Wahid · Canadian Patent Application No. CA 3,300,102
+          </p>
+        </footer>
       </div>
     </div>
   );
