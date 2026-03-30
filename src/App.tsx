@@ -51,6 +51,7 @@ import InternationalCooperation from "./pages/InternationalCooperation";
 
 // Deployment (public)
 import DeploymentScenarios from "./pages/DeploymentScenarios";
+import SectorIntegrationExamples from "./pages/SectorIntegrationExamples";
 import CanadaDeployment from "./pages/CanadaDeployment";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import DeploymentPlanner from "./pages/DeploymentPlanner";
