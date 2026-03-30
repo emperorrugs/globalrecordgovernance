@@ -1,63 +1,26 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/lib/auth-context';
+import { fetchDashboardData, type DashboardStats, type RecentRecord } from '@/services/dashboard';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { STATUS_COLORS, STATUS_LABELS, type RecordStatus } from '@/lib/types';
 import { FileText, ShieldCheck, Clock, AlertTriangle, CheckCircle, Plus, Activity, BarChart3 } from 'lucide-react';
 
-interface DashboardStats {
-  total: number;
-  sealed: number;
-  pending: number;
-  verifications: number;
-  disputes: number;
-  byStatus: Record<string, number>;
-}
-
 export default function PlatformDashboard() {
-  const { profile, organization, roles } = useAuth();
+  const { profile, organization } = useAuth();
   const [stats, setStats] = useState<DashboardStats>({ total: 0, sealed: 0, pending: 0, verifications: 0, disputes: 0, byStatus: {} });
-  const [recentRecords, setRecentRecords] = useState<Array<{ id: string; title: string; status: RecordStatus; created_at: string; sector: { name: string } | null }>>([]);
+  const [recentRecords, setRecentRecords] = useState<RecentRecord[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadDashboard();
-  }, []);
-
-  async function loadDashboard() {
-    const [recordsRes, verificationsRes, disputesRes, recentRes] = await Promise.all([
-      supabase.from('records').select('status', { count: 'exact' }),
-      supabase.from('verification_logs').select('id', { count: 'exact' }),
-      supabase.from('disputes').select('id', { count: 'exact' }).eq('status', 'open'),
-      supabase.from('records').select('id, title, status, created_at, sectors(name)').order('created_at', { ascending: false }).limit(8),
-    ]);
-
-    const records = (recordsRes.data || []) as unknown as Array<{ status: string }>;
-    const byStatus: Record<string, number> = {};
-    records.forEach(r => { byStatus[r.status] = (byStatus[r.status] || 0) + 1; });
-
-    setStats({
-      total: recordsRes.count || 0,
-      sealed: byStatus['sealed'] || 0,
-      pending: (byStatus['submitted'] || 0) + (byStatus['under_review'] || 0),
-      verifications: verificationsRes.count || 0,
-      disputes: disputesRes.count || 0,
-      byStatus,
+    fetchDashboardData().then(data => {
+      setStats(data.stats);
+      setRecentRecords(data.recentRecords);
+      setLoading(false);
     });
-
-    setRecentRecords((recentRes.data || []).map((r: Record<string, unknown>) => ({
-      id: r.id as string,
-      title: r.title as string,
-      status: r.status as RecordStatus,
-      created_at: r.created_at as string,
-      sector: r.sectors as { name: string } | null,
-    })));
-
-    setLoading(false);
-  }
+  }, []);
 
   const statCards = [
     { label: 'Total Records', value: stats.total, icon: FileText, color: 'text-[#00A4EF]' },

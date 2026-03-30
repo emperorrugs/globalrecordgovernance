@@ -1,43 +1,15 @@
 import { useEffect, useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { fetchReportStats, type ReportStats } from '@/services/dashboard';
 import { Card } from '@/components/ui/card';
 import { BarChart3, TrendingUp, Shield, AlertTriangle, FileText, Activity } from 'lucide-react';
-
-interface ReportStats {
-  bySector: Array<{ name: string; count: number }>;
-  byStatus: Record<string, number>;
-  total: number;
-  sealed: number;
-  disputed: number;
-  verifications: number;
-}
 
 export default function Reports() {
   const [stats, setStats] = useState<ReportStats>({ bySector: [], byStatus: {}, total: 0, sealed: 0, disputed: 0, verifications: 0 });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    Promise.all([
-      supabase.from('records').select('status, sectors(name)'),
-      supabase.from('verification_logs').select('id', { count: 'exact' }),
-    ]).then(([recRes, verRes]) => {
-      const records = (recRes.data || []) as unknown as Array<{ status: string; sectors: { name: string } | null }>;
-      const byStatus: Record<string, number> = {};
-      const sectorMap: Record<string, number> = {};
-      records.forEach(r => {
-        byStatus[r.status] = (byStatus[r.status] || 0) + 1;
-        const sn = r.sectors?.name || 'Unknown';
-        sectorMap[sn] = (sectorMap[sn] || 0) + 1;
-      });
-      const bySector = Object.entries(sectorMap).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
-      setStats({
-        bySector,
-        byStatus,
-        total: records.length,
-        sealed: byStatus['sealed'] || 0,
-        disputed: byStatus['disputed'] || 0,
-        verifications: verRes.count || 0,
-      });
+    fetchReportStats().then(data => {
+      setStats(data);
       setLoading(false);
     });
   }, []);
