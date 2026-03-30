@@ -45,7 +45,7 @@ export default function CreateRecord() {
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     confidentiality_level: 'internal' as string,
     retention_class: 'medium_term' as string,
-    public_verifiable: false,
+    public_verifiable: true,
   });
 
   useEffect(() => {
