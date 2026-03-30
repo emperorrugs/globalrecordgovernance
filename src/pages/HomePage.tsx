@@ -247,9 +247,12 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/applications" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
                 View Full Applications Catalog <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/sector-integration" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
+                <Zap className="h-4 w-4" /> Sector Integration Examples
               </Link>
             </div>
           </FadeIn>
