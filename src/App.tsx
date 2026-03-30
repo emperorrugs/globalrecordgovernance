@@ -117,6 +117,7 @@ import InternationalWhitepaper from "./pages/InternationalWhitepaper";
 import AnchorChain from "./pages/AnchorChain";
 import AnchorChainPrototype from "./pages/AnchorChainPrototype";
 import Pricing from "./pages/Pricing";
+import Marketplace from "./pages/Marketplace";
 import Membership from "./pages/Membership";
 import BeforeAfter from "./pages/BeforeAfter";
 import AdvisoryBoard from "./pages/AdvisoryBoard";
