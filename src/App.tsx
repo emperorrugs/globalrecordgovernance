@@ -238,6 +238,8 @@ const App = () => (
             <Route path="/sectors" element={<PublicLayout><PublicSectors /></PublicLayout>} />
             <Route path="/documents" element={<PublicLayout><PublicDocuments /></PublicLayout>} />
             <Route path="/verify" element={<PublicLayout><PublicVerifier /></PublicLayout>} />
+            <Route path="/verify/public/:token" element={<PublicVerifyPage />} />
+            <Route path="/modules" element={<PublicLayout><ProductModules /></PublicLayout>} />
             <Route path="/security-trust" element={<PublicLayout><SecurityTrust /></PublicLayout>} />
             <Route path="/about" element={<PublicLayout><PublicAbout /></PublicLayout>} />
             <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
