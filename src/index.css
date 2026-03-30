@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 /* ── RTL Support ── */
 [dir="rtl"] {
@@ -14,81 +14,87 @@
 
 @layer base {
   :root {
-    /* ═══ Sovereign Infrastructure — Light ═══ */
-    --background: 220 20% 97%;
-    --foreground: 222 47% 11%;
+    /* ═══ Enterprise Infrastructure — Light ═══ */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 220 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 220 20% 12%;
 
-    /* Primary — Deep Navy */
-    --primary: 222 47% 14%;
-    --primary-foreground: 45 100% 60%;
+    /* Primary — Microsoft Blue */
+    --primary: 212 100% 40%;
+    --primary-foreground: 0 0% 100%;
 
     /* Secondary */
-    --secondary: 220 14% 92%;
-    --secondary-foreground: 222 20% 25%;
+    --secondary: 220 14% 93%;
+    --secondary-foreground: 220 15% 25%;
 
     /* Muted */
-    --muted: 220 14% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 8% 46%;
 
-    /* Accent — Gold */
-    --accent: 45 93% 47%;
-    --accent-foreground: 222 47% 11%;
+    /* Accent — Sovereign Gold */
+    --accent: 42 88% 50%;
+    --accent-foreground: 220 20% 12%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 222 47% 14%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 212 100% 40%;
 
     --radius: 0.5rem;
 
     /* ── Sidebar ── */
-    --sidebar-background: 222 47% 11%;
+    --sidebar-background: 220 20% 10%;
     --sidebar-foreground: 220 14% 70%;
-    --sidebar-primary: 45 93% 47%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 222 30% 18%;
+    --sidebar-primary: 212 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 18% 16%;
     --sidebar-accent-foreground: 220 14% 90%;
-    --sidebar-border: 222 20% 20%;
-    --sidebar-ring: 45 93% 47%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 212 100% 50%;
 
     /* ── Extended Palette ── */
-    --gold: 45 93% 47%;
-    --gold-light: 45 80% 65%;
-    --gold-hover: 45 100% 40%;
-    --navy-deep: 222 47% 11%;
-    --navy: 222 35% 18%;
-    --sovereign-green: 160 60% 40%;
+    --gold: 42 88% 50%;
+    --gold-light: 42 70% 65%;
+    --gold-hover: 42 95% 42%;
+    --navy-deep: 220 20% 10%;
+    --navy: 220 18% 16%;
+    --sovereign-green: 152 60% 38%;
     --slate-inst: 220 10% 55%;
-    --surface: 220 14% 95%;
-    --surface2: 220 14% 92%;
-    --emerald-trust: 160 60% 40%;
-    --link: 222 47% 14%;
-    --link-hover: 222 47% 20%;
-    --info: 210 80% 50%;
-    --warning: 45 93% 47%;
-    --success: 160 60% 40%;
+    --surface: 220 14% 96%;
+    --surface2: 220 14% 93%;
+    --emerald-trust: 152 60% 38%;
+    --link: 212 100% 40%;
+    --link-hover: 212 100% 32%;
+    --info: 212 100% 50%;
+    --warning: 42 88% 50%;
+    --success: 152 60% 38%;
     --gc-red: 0 72% 51%;
     --wb-blue: 210 80% 50%;
 
+    /* Microsoft Fluent accents */
+    --ms-red: 4 80% 52%;
+    --ms-green: 152 60% 38%;
+    --ms-blue: 212 100% 50%;
+    --ms-yellow: 42 88% 50%;
+
     /* Glow System */
-    --glow-accent: 45 93% 47%;
-    --glow-soft: 45 60% 60%;
+    --glow-accent: 212 100% 50%;
+    --glow-soft: 212 60% 60%;
 
     /* Semantic */
-    --interactive: 222 47% 14%;
-    --highlight: 45 93% 47%;
+    --interactive: 212 100% 40%;
+    --highlight: 42 88% 50%;
     --support-error: 0 72% 51%;
-    --support-success: 160 60% 40%;
-    --support-warning: 45 93% 47%;
-    --support-info: 210 80% 50%;
+    --support-success: 152 60% 38%;
+    --support-warning: 42 88% 50%;
+    --support-info: 212 100% 50%;
 
     /* Typography */
     --serif: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -97,54 +103,59 @@
   }
 
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 220 14% 90%;
+    --background: 220 18% 7%;
+    --foreground: 220 14% 92%;
 
-    --card: 222 35% 10%;
-    --card-foreground: 220 14% 90%;
+    --card: 220 16% 10%;
+    --card-foreground: 220 14% 92%;
 
-    --popover: 222 35% 10%;
-    --popover-foreground: 220 14% 90%;
+    --popover: 220 16% 10%;
+    --popover-foreground: 220 14% 92%;
 
-    --primary: 45 93% 50%;
-    --primary-foreground: 222 47% 8%;
+    --primary: 212 100% 52%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 20% 16%;
+    --secondary: 220 14% 15%;
     --secondary-foreground: 220 14% 80%;
 
-    --muted: 222 20% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 14% 13%;
+    --muted-foreground: 220 8% 52%;
 
-    --accent: 45 93% 50%;
-    --accent-foreground: 222 47% 8%;
+    --accent: 42 88% 52%;
+    --accent-foreground: 220 20% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 222 15% 18%;
-    --input: 222 15% 18%;
-    --ring: 45 93% 50%;
+    --border: 220 12% 17%;
+    --input: 220 12% 17%;
+    --ring: 212 100% 52%;
 
-    --sidebar-background: 222 47% 6%;
+    --sidebar-background: 220 20% 5%;
     --sidebar-foreground: 220 14% 60%;
-    --sidebar-primary: 45 93% 50%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 25% 14%;
+    --sidebar-primary: 212 100% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 16% 12%;
     --sidebar-accent-foreground: 220 14% 80%;
-    --sidebar-border: 222 15% 15%;
-    --sidebar-ring: 45 93% 50%;
+    --sidebar-border: 220 12% 14%;
+    --sidebar-ring: 212 100% 52%;
 
-    --gold: 45 93% 50%;
-    --gold-light: 45 80% 60%;
-    --gold-hover: 45 100% 42%;
-    --navy-deep: 222 47% 6%;
-    --navy: 222 35% 12%;
-    --surface: 222 20% 10%;
-    --surface2: 222 20% 13%;
-    --link: 45 93% 50%;
-    --link-hover: 45 93% 60%;
-    --glow-accent: 45 93% 50%;
-    --glow-soft: 45 60% 50%;
+    --gold: 42 88% 52%;
+    --gold-light: 42 70% 58%;
+    --gold-hover: 42 95% 44%;
+    --navy-deep: 220 20% 5%;
+    --navy: 220 16% 10%;
+    --surface: 220 14% 9%;
+    --surface2: 220 14% 12%;
+    --link: 212 100% 55%;
+    --link-hover: 212 100% 65%;
+    --glow-accent: 212 100% 52%;
+    --glow-soft: 212 50% 50%;
+
+    --ms-red: 4 80% 55%;
+    --ms-green: 152 55% 45%;
+    --ms-blue: 212 100% 55%;
+    --ms-yellow: 42 85% 55%;
   }
 }
 
@@ -219,7 +230,7 @@
     -webkit-backdrop-filter: blur(60px);
   }
 
-  /* ═══ AZURE CARDS ═══ */
+  /* ═══ FLUENT TILES ═══ */
   .carbon-tile {
     background: hsl(var(--card));
     @apply border border-border transition-all duration-300;
@@ -321,7 +332,7 @@
 
   .surface-elevated { background: hsl(var(--surface2)); }
 
-  /* ═══ TYPOGRAPHY (Azure-Clean) ═══ */
+  /* ═══ ENTERPRISE TYPOGRAPHY ═══ */
   .productive-heading-01 {
     font-family: var(--sans);
     font-size: 0.875rem;
@@ -435,9 +446,9 @@
     background: hsl(var(--border));
   }
 
-  /* ═══ GLOW EFFECTS (subtle on light) ═══ */
-  .glow-accent { box-shadow: 0 0 40px -15px hsl(var(--primary) / 0.12); }
-  .glow-accent-sm { box-shadow: 0 0 20px -8px hsl(var(--primary) / 0.08); }
+  /* ═══ GLOW EFFECTS ═══ */
+  .glow-accent { box-shadow: 0 0 40px -15px hsl(var(--primary) / 0.15); }
+  .glow-accent-sm { box-shadow: 0 0 20px -8px hsl(var(--primary) / 0.1); }
 
   /* ═══ REVEAL BORDER ═══ */
   .reveal-border {
@@ -449,7 +460,7 @@
     position: absolute;
     inset: -1px;
     border-radius: inherit;
-    background: conic-gradient(from var(--angle, 0deg), transparent 20%, hsl(var(--primary) / 0.1) 50%, transparent 80%);
+    background: conic-gradient(from var(--angle, 0deg), transparent 20%, hsl(var(--primary) / 0.12) 50%, transparent 80%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: -1;
@@ -459,12 +470,7 @@
     opacity: 1;
   }
 
-  /* ═══ GRAIN TEXTURE (disabled on white) ═══ */
-  .grain::after {
-    display: none;
-  }
-
-  /* ═══ KINETIC REVEAL ═══ */
+  /* ═══ REVEAL ANIMATION ═══ */
   .reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -475,7 +481,7 @@
     transform: translateY(0);
   }
 
-  /* ═══ ACCENT LINES ═══ */
+  /* ═══ ACCENT LINE ═══ */
   .accent-line-left { position: relative; }
   .accent-line-left::before {
     content: '';
@@ -545,7 +551,7 @@
   }
   .marquee-track:hover { animation-play-state: paused; }
 
-  /* ═══ AZURE BUTTON ═══ */
+  /* ═══ ENTERPRISE BUTTON ═══ */
   .apple-button {
     @apply inline-flex items-center justify-center gap-2 font-semibold transition-all;
     border-radius: 6px;
@@ -553,6 +559,29 @@
   }
   .apple-button:active {
     transform: scale(0.98);
+  }
+
+  /* ═══ ENTERPRISE STAT CARD ═══ */
+  .stat-card {
+    @apply relative overflow-hidden rounded-lg border border-border bg-card p-5 transition-all duration-300;
+  }
+  .stat-card:hover {
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.08);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--ms-blue)));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .stat-card:hover::before {
+    opacity: 1;
   }
 }
 
