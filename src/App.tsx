@@ -347,6 +347,8 @@ const App = () => (
             <Route path="/verification" element={<AppLayout><Verification /></AppLayout>} />
             <Route path="/systems" element={<AppLayout><Systems /></AppLayout>} />
             <Route path="/processes" element={<AppLayout><Processes /></AppLayout>} />
+            <Route path="/tamper-test" element={<AppLayout><TamperSimulation /></AppLayout>} />
+            <Route path="/use-cases-demo" element={<AppLayout><UseCaseSimulations /></AppLayout>} />
 
             {/* Insights */}
             <Route path="/insights" element={<AppLayout><InsightsIndex /></AppLayout>} />
