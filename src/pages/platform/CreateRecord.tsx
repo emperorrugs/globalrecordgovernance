@@ -24,7 +24,12 @@ interface SubmissionResult {
 export default function CreateRecord() {
   const { user, organization } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
+
+  const supersedesId = searchParams.get('supersedes');
+  const prevHash = searchParams.get('prev_hash');
+  const prevTitle = searchParams.get('prev_title');
 
   const [sectors, setSectors] = useState<Array<{ id: string; name: string }>>([]);
   const [recordTypes, setRecordTypes] = useState<Array<{ id: string; name: string; sector_id: string }>>([]);
