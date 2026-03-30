@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { STATUS_COLORS, STATUS_LABELS, type RecordStatus } from '@/lib/types';
-import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, AlertTriangle, CheckCircle, XCircle, Copy, ExternalLink, QrCode } from 'lucide-react';
 
 export default function RecordDetail() {
   const { id } = useParams<{ id: string }>();
