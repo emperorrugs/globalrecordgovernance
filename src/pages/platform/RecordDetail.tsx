@@ -51,8 +51,11 @@ export default function RecordDetail() {
   if (!record) return <p className="text-sm text-muted-foreground py-12 text-center">Record not found.</p>;
 
   const status = record.status as RecordStatus;
+  const isOwner = user?.id === record.created_by;
+  const canSubmit = isOwner && status === 'draft';
   const canApprove = (hasRole('approver') || hasRole('tenant_admin') || hasRole('super_admin')) && ['submitted', 'under_review'].includes(status);
   const canSeal = (hasRole('approver') || hasRole('tenant_admin') || hasRole('super_admin')) && status === 'approved';
+  const isSealed = status === 'sealed';
   const sectors = record.sectors as { name: string; code: string } | null;
   const recordTypes = record.record_types as { name: string; code: string } | null;
 
