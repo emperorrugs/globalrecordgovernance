@@ -173,6 +173,9 @@ import GuestDashboard from "./pages/platform/GuestDashboard";
 import TamperSimulation from "./pages/platform/TamperSimulation";
 import UseCaseSimulations from "./pages/platform/UseCaseSimulations";
 import ChainIntegrity from "./pages/platform/ChainIntegrity";
+import PublicVerifyPage from "./pages/platform/PublicVerifyPage";
+import ProductModules from "./pages/platform/ProductModules";
+import DemoScript from "./pages/platform/DemoScript";
 
 import NotFound from "./pages/NotFound";
 
@@ -210,6 +213,7 @@ const App = () => (
             <Route path="/app/tamper-test" element={<PlatformLayout><TamperSimulation /></PlatformLayout>} />
             <Route path="/app/use-cases" element={<PlatformLayout><UseCaseSimulations /></PlatformLayout>} />
             <Route path="/app/chain" element={<PlatformLayout><ChainIntegrity /></PlatformLayout>} />
+            <Route path="/app/demo-script" element={<PlatformLayout><DemoScript /></PlatformLayout>} />
 
             {/* Guest Demo (no auth) */}
             <Route path="/demo/app" element={<GuestDemoLayout><GuestDashboard /></GuestDemoLayout>} />
@@ -234,6 +238,8 @@ const App = () => (
             <Route path="/sectors" element={<PublicLayout><PublicSectors /></PublicLayout>} />
             <Route path="/documents" element={<PublicLayout><PublicDocuments /></PublicLayout>} />
             <Route path="/verify" element={<PublicLayout><PublicVerifier /></PublicLayout>} />
+            <Route path="/verify/public/:token" element={<PublicVerifyPage />} />
+            <Route path="/modules" element={<PublicLayout><ProductModules /></PublicLayout>} />
             <Route path="/security-trust" element={<PublicLayout><SecurityTrust /></PublicLayout>} />
             <Route path="/about" element={<PublicLayout><PublicAbout /></PublicLayout>} />
             <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />

@@ -23,6 +23,7 @@ const navItems = [
   { label: 'Tamper Test', path: '/app/tamper-test', icon: ShieldAlert },
   { label: 'Use Cases', path: '/app/use-cases', icon: Workflow },
   { label: 'Value Calculator', path: '/app/calculator', icon: Calculator },
+  { label: 'Demo Script', path: '/app/demo-script', icon: Play },
   { label: 'Guided Demo', path: '/app/demo', icon: Play },
 ];
 

@@ -10,7 +10,7 @@ import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { STATUS_COLORS, STATUS_LABELS, type RecordStatus } from '@/lib/types';
-import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, AlertTriangle, CheckCircle, XCircle, Copy, ExternalLink, QrCode } from 'lucide-react';
 
 export default function RecordDetail() {
   const { id } = useParams<{ id: string }>();
@@ -134,6 +134,37 @@ export default function RecordDetail() {
           <div><span className="text-muted-foreground text-xs">Verification Token</span><p className="font-mono text-xs mt-1">{(record.verification_token as string) || '—'}</p></div>
           {record.sealed_at && <div><span className="text-muted-foreground text-xs">Sealed At</span><p className="mt-1">{new Date(record.sealed_at as string).toLocaleString()}</p></div>}
         </div>
+
+        {/* Public Verification Link (sealed records) */}
+        {status === 'sealed' && record.verification_token && (record.public_verifiable as boolean) && (
+          <div className="mt-4 pt-4 border-t border-border">
+            <div className="flex items-center gap-2 mb-2">
+              <CheckCircle className="h-4 w-4 text-green-600" />
+              <span className="text-sm font-medium">Sealed ✓ — Public Verification Available</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <code className="text-xs font-mono bg-muted px-2 py-1 rounded flex-1 truncate">
+                {window.location.origin}/verify/public/{record.verification_token as string}
+              </code>
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-1 shrink-0"
+                onClick={() => {
+                  navigator.clipboard.writeText(`${window.location.origin}/verify/public/${record.verification_token as string}`);
+                  toast({ title: 'Copied', description: 'Public verification link copied to clipboard.' });
+                }}
+              >
+                <Copy className="h-3 w-3" /> Copy
+              </Button>
+              <a href={`/verify/public/${record.verification_token as string}`} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="sm" className="gap-1">
+                  <ExternalLink className="h-3 w-3" /> Open
+                </Button>
+              </a>
+            </div>
+          </div>
+        )}
       </Card>
 
       {/* Actions */}
