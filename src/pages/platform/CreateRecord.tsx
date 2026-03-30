@@ -14,6 +14,14 @@ import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Save, SendHorizonal } from 'lucide-react';
 import RecordSubmissionAnimation from '@/components/platform/RecordSubmissionAnimation';
 
+interface SubmissionResult {
+  recordId: string;
+  hash: string;
+  timestamp: string;
+  anchorBatchId: string;
+  title: string;
+}
+
 export default function CreateRecord() {
   const { user, organization } = useAuth();
   const navigate = useNavigate();
@@ -23,6 +31,7 @@ export default function CreateRecord() {
   const [recordTypes, setRecordTypes] = useState<Array<{ id: string; name: string; sector_id: string }>>([]);
   const [jurisdictions, setJurisdictions] = useState<Array<{ id: string; name: string }>>([]);
   const [loading, setLoading] = useState(false);
+  const [submissionResult, setSubmissionResult] = useState<SubmissionResult | null>(null);
 
   const [form, setForm] = useState({
     title: '',
