@@ -127,11 +127,11 @@ const Index = () => {
               </FadeIn>
 
               <FadeIn delay={60}>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold tracking-tight leading-[1.08] text-white">
-                  Global Infrastructure
-                  <br />
+                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] font-bold tracking-tight leading-[1.12] text-white">
+                  Global Infrastructure{" "}
+                  <br className="hidden md:block" />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[hsl(212,100%,60%)] to-[hsl(212,100%,75%)]">
-                    for Truth & Governance
+                    for Truth &amp; Governance
                   </span>
                 </h1>
               </FadeIn>
