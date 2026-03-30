@@ -143,8 +143,14 @@ export default function CreateRecord() {
           <ArrowLeft className="h-4 w-4" />
         </Button>
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Create Governance Record</h1>
-          <p className="text-sm text-muted-foreground">Capture an institutional action, decision, or event</p>
+          <h1 className="text-2xl font-semibold tracking-tight">
+            {supersedesId ? 'Create Superseding Record' : 'Create Governance Record'}
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            {supersedesId
+              ? `Correction for record ${supersedesId.slice(0, 8)}… — original remains sealed and unchanged`
+              : 'Capture an institutional action, decision, or event'}
+          </p>
         </div>
       </div>
 
