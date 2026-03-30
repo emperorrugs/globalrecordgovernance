@@ -200,8 +200,8 @@ describe('Payload Canonicalization', () => {
       confidentiality_level: 'internal', status: 'draft',
     });
     const parsed = JSON.parse(payload);
-    expect(parsed.description).toBeUndefined();
-    expect(parsed.event_type).toBeUndefined();
+    expect(parsed.description).toBe('');
+    expect(parsed.event_type).toBe('');
   });
 
   it('includes optional fields when provided', () => {
