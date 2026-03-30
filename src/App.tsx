@@ -325,6 +325,7 @@ const App = () => (
             <Route path="/anchor-chain" element={<AppLayout><AnchorChain /></AppLayout>} />
             <Route path="/anchor-chain-prototype" element={<AppLayout><AnchorChainPrototype /></AppLayout>} />
             <Route path="/pricing" element={<AppLayout><Pricing /></AppLayout>} />
+            <Route path="/marketplace" element={<PublicLayout><Marketplace /></PublicLayout>} />
             <Route path="/membership" element={<AppLayout><Membership /></AppLayout>} />
             <Route path="/before-after" element={<AppLayout><BeforeAfter /></AppLayout>} />
             <Route path="/advisory-board" element={<AppLayout><AdvisoryBoard /></AppLayout>} />
