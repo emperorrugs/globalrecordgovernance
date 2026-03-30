@@ -183,6 +183,21 @@ export default function CreateRecord() {
     }
   }
 
+  if (submissionResult) {
+    return (
+      <div className="space-y-6 max-w-3xl">
+        <RecordSubmissionAnimation
+          result={submissionResult}
+          onViewRecord={() => navigate(`/app/records/${submissionResult.recordId}`)}
+          onCreateAnother={() => {
+            setSubmissionResult(null);
+            setForm({ title: '', description: '', sector_id: '', record_type_id: '', jurisdiction_id: '', event_type: '', actor_ref: '', subject_ref: '', occurred_at: '', timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, confidentiality_level: 'internal', retention_class: 'medium_term', public_verifiable: false });
+          }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6 max-w-3xl">
       <div className="flex items-center gap-3">
