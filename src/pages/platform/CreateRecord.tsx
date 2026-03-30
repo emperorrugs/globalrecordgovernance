@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/lib/auth-context';
 import { createRecord, validateRecordInput, type CreateRecordInput } from '@/services/records';
@@ -24,7 +24,12 @@ interface SubmissionResult {
 export default function CreateRecord() {
   const { user, organization } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { toast } = useToast();
+
+  const supersedesId = searchParams.get('supersedes');
+  const prevHash = searchParams.get('prev_hash');
+  const prevTitle = searchParams.get('prev_title');
 
   const [sectors, setSectors] = useState<Array<{ id: string; name: string }>>([]);
   const [recordTypes, setRecordTypes] = useState<Array<{ id: string; name: string; sector_id: string }>>([]);
@@ -33,19 +38,19 @@ export default function CreateRecord() {
   const [submissionResult, setSubmissionResult] = useState<SubmissionResult | null>(null);
 
   const [form, setForm] = useState({
-    title: '',
-    description: '',
+    title: supersedesId ? `Correction — ${prevTitle || 'Superseding Record'}` : '',
+    description: supersedesId ? `This record supersedes record ${supersedesId?.slice(0, 8)}… and corrects its content.` : '',
     sector_id: '',
     record_type_id: '',
     jurisdiction_id: '',
-    event_type: '',
+    event_type: supersedesId ? 'correction' : '',
     actor_ref: '',
     subject_ref: '',
     occurred_at: '',
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     confidentiality_level: 'internal' as string,
     retention_class: 'medium_term' as string,
-    public_verifiable: false,
+    public_verifiable: true,
   });
 
   useEffect(() => {
@@ -138,8 +143,14 @@ export default function CreateRecord() {
           <ArrowLeft className="h-4 w-4" />
         </Button>
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Create Governance Record</h1>
-          <p className="text-sm text-muted-foreground">Capture an institutional action, decision, or event</p>
+          <h1 className="text-2xl font-semibold tracking-tight">
+            {supersedesId ? 'Create Superseding Record' : 'Create Governance Record'}
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            {supersedesId
+              ? `Correction for record ${supersedesId.slice(0, 8)}… — original remains sealed and unchanged`
+              : 'Capture an institutional action, decision, or event'}
+          </p>
         </div>
       </div>
 
