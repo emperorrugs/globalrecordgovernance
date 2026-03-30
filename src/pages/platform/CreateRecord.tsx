@@ -167,9 +167,20 @@ export default function CreateRecord() {
       afterJson: { title: form.title, status },
     });
 
-    toast({ title: submitAfter ? 'Record Submitted' : 'Draft Saved', description: `Record "${form.title}" has been ${submitAfter ? 'submitted for review' : 'saved as draft'}.` });
     setLoading(false);
-    navigate(`/app/records/${recordId}`);
+
+    if (submitAfter) {
+      setSubmissionResult({
+        recordId: recordId,
+        hash: currentHash,
+        timestamp: new Date().toISOString(),
+        anchorBatchId: `GRGF-ANCHOR-${Date.now().toString(36).toUpperCase()}`,
+        title: form.title,
+      });
+    } else {
+      toast({ title: 'Draft Saved', description: `Record "${form.title}" has been saved as draft.` });
+      navigate(`/app/records/${recordId}`);
+    }
   }
 
   return (
