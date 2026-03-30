@@ -152,7 +152,7 @@ describe('Sealed Record Immutability', () => {
       id: 'rec-001', title: 'Sealed Record', status: 'sealed',
       current_hash: 'abc123def456', sealed_at: '2024-06-15T00:00:00Z',
     });
-    const parsed = JSON.parse(manifest);
+    const parsed = JSON.parse(manifest as string);
     expect(parsed.status).toBe('sealed');
     expect(parsed.sealed_at).toBe('2024-06-15T00:00:00Z');
     expect(parsed.current_hash).toBe('abc123def456');
@@ -164,7 +164,7 @@ describe('Sealed Record Immutability', () => {
       id: 'rec-002', title: 'Linked Record', status: 'sealed',
       current_hash: 'hash2', previous_hash: 'hash1', sealed_at: '2024-06-15T00:00:00Z',
     });
-    const parsed = JSON.parse(manifest);
+    const parsed = JSON.parse(manifest as string);
     expect(parsed.previous_hash).toBe('hash1');
   });
 });
