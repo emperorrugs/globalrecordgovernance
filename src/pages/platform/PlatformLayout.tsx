@@ -6,7 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   LayoutDashboard, FileText, Plus, Activity, Shield, AlertTriangle,
   Users, Settings, LogOut, ChevronLeft, Menu, Search,
-  ListChecks, BarChart3, Play, Calculator, ShieldAlert, Workflow,
+  ListChecks, BarChart3, Play, Calculator, ShieldAlert, Workflow, Link,
 } from 'lucide-react';
 import { useState } from 'react';
 
