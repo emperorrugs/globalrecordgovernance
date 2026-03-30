@@ -261,6 +261,7 @@ const App = () => (
 
             {/* Deployment */}
             <Route path="/deployment-scenarios" element={<AppLayout><DeploymentScenarios /></AppLayout>} />
+            <Route path="/sector-integration" element={<AppLayout><SectorIntegrationExamples /></AppLayout>} />
             <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
             <Route path="/canada" element={<AppLayout><CanadaDeployment /></AppLayout>} />
             <Route path="/sovereign-deployment" element={<AppLayout><SovereignDeployment /></AppLayout>} />
