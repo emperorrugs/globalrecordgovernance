@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/lib/auth-context';
-import { sha256, buildRecordPayload } from '@/lib/hash';
-import { createAuditLog } from '@/lib/audit';
+import { createRecord, validateRecordInput, type CreateRecordInput } from '@/services/records';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -66,120 +65,54 @@ export default function CreateRecord() {
   const update = (field: string, value: string | boolean) => setForm(f => ({ ...f, [field]: value }));
 
   async function handleSave(submitAfter = false) {
-    if (!form.title.trim() || !form.sector_id || !form.record_type_id) {
-      toast({ title: 'Missing fields', description: 'Title, sector, and record type are required.', variant: 'destructive' });
-      return;
-    }
     if (!user || !organization) {
       toast({ title: 'Not authenticated', description: 'Please log in.', variant: 'destructive' });
       return;
     }
 
-    setLoading(true);
-    const status = submitAfter ? 'submitted' : 'draft';
-
-    // Get previous hash for chain
-    const { data: lastRecord } = await supabase
-      .from('records')
-      .select('current_hash')
-      .eq('tenant_id', organization.id)
-      .order('created_at', { ascending: false })
-      .limit(1)
-      .single();
-
-    const previousHash = (lastRecord as Record<string, unknown>)?.current_hash as string || '';
-
-    const insertPayload: Record<string, unknown> = {
-      tenant_id: organization.id,
+    const input: CreateRecordInput = {
+      title: form.title,
+      description: form.description,
       sector_id: form.sector_id,
       record_type_id: form.record_type_id,
-      jurisdiction_id: form.jurisdiction_id || null,
-      title: form.title.trim(),
-      description: form.description.trim(),
-      event_type: form.event_type,
-      actor_ref: form.actor_ref,
-      subject_ref: form.subject_ref,
-      occurred_at: form.occurred_at || null,
+      jurisdiction_id: form.jurisdiction_id || undefined,
+      event_type: form.event_type || undefined,
+      actor_ref: form.actor_ref || undefined,
+      subject_ref: form.subject_ref || undefined,
+      occurred_at: form.occurred_at || undefined,
       timezone: form.timezone,
       confidentiality_level: form.confidentiality_level,
       retention_class: form.retention_class,
       public_verifiable: form.public_verifiable,
-      status,
-      previous_hash: previousHash,
-      created_by: user.id,
     };
 
-    const { data, error } = await (supabase.from('records').insert as Function)(insertPayload).select('id, title, status, sector_id, record_type_id, tenant_id, confidentiality_level, recorded_at, occurred_at, previous_hash').single();
-
-    if (error || !data) {
-      toast({ title: 'Error creating record', description: error?.message || 'Unknown error', variant: 'destructive' });
-      setLoading(false);
+    const validation = validateRecordInput(input);
+    if (!validation.valid) {
+      toast({ title: 'Missing fields', description: validation.errors.join('. '), variant: 'destructive' });
       return;
     }
 
-    const record = data as Record<string, unknown>;
-    const recordId = record.id as string;
+    setLoading(true);
 
-    // Generate hash
-    const payload = buildRecordPayload({
-      id: recordId,
-      title: form.title,
-      description: form.description,
-      event_type: form.event_type,
-      actor_ref: form.actor_ref,
-      subject_ref: form.subject_ref,
-      occurred_at: form.occurred_at,
-      recorded_at: record.recorded_at as string,
-      sector_id: form.sector_id,
-      record_type_id: form.record_type_id,
-      tenant_id: organization.id,
-      confidentiality_level: form.confidentiality_level,
-      status,
-      previous_hash: previousHash,
-    });
+    try {
+      const result = await createRecord(input, user.id, organization.id, submitAfter);
 
-    const currentHash = await sha256(payload);
-
-    await (supabase.from('records').update as Function)({ current_hash: currentHash }).eq('id', recordId);
-
-    // Store hash
-    await (supabase.from('record_hashes').insert as Function)({
-      record_id: recordId,
-      hash_value: currentHash,
-      previous_hash: previousHash,
-      payload_snapshot: JSON.parse(payload),
-    });
-
-    // Record event
-    await (supabase.from('record_events').insert as Function)({
-      record_id: recordId,
-      event_type: submitAfter ? 'submitted' : 'created',
-      actor_id: user.id,
-      description: submitAfter ? 'Record created and submitted for review' : 'Record created as draft',
-    });
-
-    // Audit log
-    await createAuditLog({
-      tenantId: organization.id,
-      actionType: submitAfter ? 'submit' : 'create',
-      entityType: 'record',
-      entityId: recordId,
-      afterJson: { title: form.title, status },
-    });
-
-    setLoading(false);
-
-    if (submitAfter) {
-      setSubmissionResult({
-        recordId: recordId,
-        hash: currentHash,
-        timestamp: new Date().toISOString(),
-        anchorBatchId: `GRGF-ANCHOR-${Date.now().toString(36).toUpperCase()}`,
-        title: form.title,
-      });
-    } else {
-      toast({ title: 'Draft Saved', description: `Record "${form.title}" has been saved as draft.` });
-      navigate(`/app/records/${recordId}`);
+      if (submitAfter) {
+        setSubmissionResult({
+          recordId: result.recordId,
+          hash: result.hash,
+          timestamp: result.timestamp,
+          anchorBatchId: result.anchorBatchId,
+          title: result.title,
+        });
+      } else {
+        toast({ title: 'Draft Saved', description: `Record "${result.title}" has been saved as draft.` });
+        navigate(`/app/records/${result.recordId}`);
+      }
+    } catch (err) {
+      toast({ title: 'Error creating record', description: (err as Error).message, variant: 'destructive' });
+    } finally {
+      setLoading(false);
     }
   }
 

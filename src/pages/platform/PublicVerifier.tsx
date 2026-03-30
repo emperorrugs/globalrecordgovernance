@@ -1,27 +1,17 @@
 import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { verifyByToken, logVerification } from '@/services/verification';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Shield, CheckCircle, XCircle, AlertTriangle, Search } from 'lucide-react';
 import { STATUS_COLORS, STATUS_LABELS, type RecordStatus } from '@/lib/types';
-
-interface VerificationResult {
-  valid: boolean;
-  status: RecordStatus;
-  title: string;
-  sector: string;
-  recorded_at: string;
-  sealed_at: string | null;
-  current_hash: string;
-  message: string;
-}
+import type { PublicVerificationResult } from '@/services/verification';
 
 export default function PublicVerifier() {
   const [token, setToken] = useState('');
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<VerificationResult | null>(null);
+  const [result, setResult] = useState<PublicVerificationResult | null>(null);
   const [error, setError] = useState('');
 
   async function handleVerify(e: React.FormEvent) {
@@ -32,56 +22,15 @@ export default function PublicVerifier() {
     setResult(null);
     setError('');
 
-    const { data, error: err } = await supabase
-      .from('records')
-      .select('id, title, status, current_hash, sealed_at, recorded_at, verification_token, sectors(name)')
-      .eq('verification_token', token.trim())
-      .eq('public_verifiable', true)
-      .single();
+    const verificationResult = await verifyByToken(token.trim());
 
-    if (err || !data) {
+    if (!verificationResult) {
       setError('No verifiable record found with this token. The record may not exist, may not be publicly verifiable, or the token may be invalid.');
       setLoading(false);
-
-      // Log failed verification
-      await (supabase.from('verification_logs').insert as Function)({
-        record_id: null,
-        verification_result: 'not_found',
-        metadata: { token: token.trim() },
-      });
       return;
     }
 
-    const rec = data as Record<string, unknown>;
-    const status = rec.status as RecordStatus;
-    const sealedStatuses: RecordStatus[] = ['sealed', 'disputed', 'superseded', 'revoked'];
-    const valid = sealedStatuses.includes(status) && !!(rec.current_hash);
-
-    let message = '';
-    if (status === 'sealed') message = 'This record has been cryptographically sealed and its integrity is verified.';
-    else if (status === 'disputed') message = 'This record is sealed but currently under dispute. Integrity is maintained.';
-    else if (status === 'superseded') message = 'This record has been superseded by a newer version. The original integrity is maintained.';
-    else if (status === 'revoked') message = 'This record has been revoked. The integrity of the original record is maintained for audit purposes.';
-    else message = 'This record has not yet been sealed.';
-
-    setResult({
-      valid,
-      status,
-      title: rec.title as string,
-      sector: (rec.sectors as { name: string })?.name || 'Unknown',
-      recorded_at: rec.recorded_at as string,
-      sealed_at: rec.sealed_at as string | null,
-      current_hash: rec.current_hash as string,
-      message,
-    });
-
-    // Log verification
-    await (supabase.from('verification_logs').insert as Function)({
-      record_id: rec.id,
-      verification_result: valid ? 'valid' : 'invalid',
-      metadata: { token: token.trim() },
-    });
-
+    setResult(verificationResult);
     setLoading(false);
   }
 

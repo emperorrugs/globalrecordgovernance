@@ -2,15 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/lib/auth-context';
-import { sha256, buildRecordPayload, buildManifest } from '@/lib/hash';
-import { createAuditLog } from '@/lib/audit';
+import { updateRecordStatus } from '@/services/records';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { STATUS_COLORS, STATUS_LABELS, type RecordStatus } from '@/lib/types';
-import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, AlertTriangle, CheckCircle, XCircle, Copy, ExternalLink, QrCode } from 'lucide-react';
+import { ArrowLeft, ShieldCheck, Clock, Hash, FileText, CheckCircle, XCircle, Copy, ExternalLink } from 'lucide-react';
 
 export default function RecordDetail() {
   const { id } = useParams<{ id: string }>();
@@ -35,57 +34,17 @@ export default function RecordDetail() {
     setLoading(false);
   }
 
-  async function updateStatus(newStatus: RecordStatus) {
-    if (!record || !user) return;
-    const oldStatus = record.status;
+  async function handleStatusChange(newStatus: RecordStatus) {
+    if (!record || !user || !id) return;
 
-    const updates: Record<string, unknown> = { status: newStatus, updated_by: user.id };
-    if (newStatus === 'sealed') {
-      updates.sealed_at = new Date().toISOString();
-      // Generate verification receipt
-      const manifest = buildManifest({
-        id: record.id as string,
-        title: record.title as string,
-        status: newStatus,
-        current_hash: record.current_hash as string,
-        previous_hash: record.previous_hash as string | undefined,
-        sealed_at: updates.sealed_at as string,
-      });
-      updates.manifest_json = manifest;
+    try {
+      await updateRecordStatus(id, record, newStatus, user.id, actionNote || undefined);
+      setActionNote('');
+      toast({ title: `Record ${STATUS_LABELS[newStatus]}`, description: `Status updated to ${STATUS_LABELS[newStatus]}.` });
+      loadRecord();
+    } catch (err) {
+      toast({ title: 'Action failed', description: (err as Error).message, variant: 'destructive' });
     }
-
-    await (supabase.from('records').update as Function)(updates).eq('id', id!);
-
-    // Record event
-    await (supabase.from('record_events').insert as Function)({
-      record_id: id,
-      event_type: newStatus,
-      actor_id: user.id,
-      description: `Status changed from ${oldStatus} to ${newStatus}${actionNote ? ': ' + actionNote : ''}`,
-    });
-
-    // If sealed, create verification receipt
-    if (newStatus === 'sealed') {
-      await (supabase.from('verification_receipts').insert as Function)({
-        record_id: id,
-        hash_at_seal: record.current_hash,
-        manifest_at_seal: updates.manifest_json,
-        issued_by: user.id,
-      });
-    }
-
-    await createAuditLog({
-      tenantId: record.tenant_id as string,
-      actionType: newStatus === 'approved' ? 'approve' : newStatus === 'sealed' ? 'seal' : newStatus,
-      entityType: 'record',
-      entityId: id,
-      beforeJson: { status: oldStatus },
-      afterJson: { status: newStatus },
-    });
-
-    setActionNote('');
-    toast({ title: `Record ${STATUS_LABELS[newStatus]}`, description: `Status updated to ${STATUS_LABELS[newStatus]}.` });
-    loadRecord();
   }
 
   if (loading) return <p className="text-sm text-muted-foreground py-12 text-center">Loading…</p>;
@@ -174,16 +133,16 @@ export default function RecordDetail() {
           <Textarea placeholder="Optional action notes…" value={actionNote} onChange={e => setActionNote(e.target.value)} rows={2} className="mb-3" />
           <div className="flex items-center gap-3 flex-wrap">
             {canApprove && status === 'submitted' && (
-              <Button variant="outline" onClick={() => updateStatus('under_review')} className="gap-2"><Clock className="h-4 w-4" /> Begin Review</Button>
+              <Button variant="outline" onClick={() => handleStatusChange('under_review')} className="gap-2"><Clock className="h-4 w-4" /> Begin Review</Button>
             )}
             {canApprove && (
               <>
-                <Button onClick={() => updateStatus('approved')} className="gap-2 bg-green-600 hover:bg-green-700"><CheckCircle className="h-4 w-4" /> Approve</Button>
-                <Button variant="destructive" onClick={() => updateStatus('draft')} className="gap-2"><XCircle className="h-4 w-4" /> Return to Draft</Button>
+                <Button onClick={() => handleStatusChange('approved')} className="gap-2 bg-green-600 hover:bg-green-700"><CheckCircle className="h-4 w-4" /> Approve</Button>
+                <Button variant="destructive" onClick={() => handleStatusChange('draft')} className="gap-2"><XCircle className="h-4 w-4" /> Return to Draft</Button>
               </>
             )}
             {canSeal && (
-              <Button onClick={() => updateStatus('sealed')} className="gap-2 bg-emerald-700 hover:bg-emerald-800"><ShieldCheck className="h-4 w-4" /> Seal Record</Button>
+              <Button onClick={() => handleStatusChange('sealed')} className="gap-2 bg-emerald-700 hover:bg-emerald-800"><ShieldCheck className="h-4 w-4" /> Seal Record</Button>
             )}
           </div>
         </Card>
