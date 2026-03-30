@@ -213,6 +213,7 @@ const App = () => (
             <Route path="/app/tamper-test" element={<PlatformLayout><TamperSimulation /></PlatformLayout>} />
             <Route path="/app/use-cases" element={<PlatformLayout><UseCaseSimulations /></PlatformLayout>} />
             <Route path="/app/chain" element={<PlatformLayout><ChainIntegrity /></PlatformLayout>} />
+            <Route path="/app/demo-script" element={<PlatformLayout><DemoScript /></PlatformLayout>} />
 
             {/* Guest Demo (no auth) */}
             <Route path="/demo/app" element={<GuestDemoLayout><GuestDashboard /></GuestDemoLayout>} />
