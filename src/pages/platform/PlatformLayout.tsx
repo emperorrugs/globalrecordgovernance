@@ -6,7 +6,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import {
   LayoutDashboard, FileText, Plus, Activity, Shield, AlertTriangle,
   Users, Settings, LogOut, ChevronLeft, Menu, Search,
-  ListChecks, BarChart3, Play, Calculator,
+  ListChecks, BarChart3, Play, Calculator, ShieldAlert, Workflow,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -19,6 +19,8 @@ const navItems = [
   { label: 'Verification', path: '/app/verify', icon: Shield },
   { label: 'Disputes', path: '/app/disputes', icon: AlertTriangle },
   { label: 'Reports', path: '/app/reports', icon: BarChart3 },
+  { label: 'Tamper Test', path: '/app/tamper-test', icon: ShieldAlert },
+  { label: 'Use Cases', path: '/app/use-cases', icon: Workflow },
   { label: 'Value Calculator', path: '/app/calculator', icon: Calculator },
   { label: 'Guided Demo', path: '/app/demo', icon: Play },
 ];
@@ -103,6 +105,11 @@ export default function PlatformLayout({ children }: { children: ReactNode }) {
         <main className="flex-1 p-6 overflow-auto">
           {children}
         </main>
+        <footer className="h-8 border-t border-border flex items-center justify-center shrink-0">
+          <p className="text-[10px] font-mono text-muted-foreground/40 tracking-wide">
+            GRGF does not interpret reality. It records it — immutably.
+          </p>
+        </footer>
       </div>
     </div>
   );

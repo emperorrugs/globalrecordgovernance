@@ -12,6 +12,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Save, SendHorizonal } from 'lucide-react';
+import RecordSubmissionAnimation from '@/components/platform/RecordSubmissionAnimation';
+
+interface SubmissionResult {
+  recordId: string;
+  hash: string;
+  timestamp: string;
+  anchorBatchId: string;
+  title: string;
+}
 
 export default function CreateRecord() {
   const { user, organization } = useAuth();
@@ -22,6 +31,7 @@ export default function CreateRecord() {
   const [recordTypes, setRecordTypes] = useState<Array<{ id: string; name: string; sector_id: string }>>([]);
   const [jurisdictions, setJurisdictions] = useState<Array<{ id: string; name: string }>>([]);
   const [loading, setLoading] = useState(false);
+  const [submissionResult, setSubmissionResult] = useState<SubmissionResult | null>(null);
 
   const [form, setForm] = useState({
     title: '',
@@ -157,9 +167,35 @@ export default function CreateRecord() {
       afterJson: { title: form.title, status },
     });
 
-    toast({ title: submitAfter ? 'Record Submitted' : 'Draft Saved', description: `Record "${form.title}" has been ${submitAfter ? 'submitted for review' : 'saved as draft'}.` });
     setLoading(false);
-    navigate(`/app/records/${recordId}`);
+
+    if (submitAfter) {
+      setSubmissionResult({
+        recordId: recordId,
+        hash: currentHash,
+        timestamp: new Date().toISOString(),
+        anchorBatchId: `GRGF-ANCHOR-${Date.now().toString(36).toUpperCase()}`,
+        title: form.title,
+      });
+    } else {
+      toast({ title: 'Draft Saved', description: `Record "${form.title}" has been saved as draft.` });
+      navigate(`/app/records/${recordId}`);
+    }
+  }
+
+  if (submissionResult) {
+    return (
+      <div className="space-y-6 max-w-3xl">
+        <RecordSubmissionAnimation
+          result={submissionResult}
+          onViewRecord={() => navigate(`/app/records/${submissionResult.recordId}`)}
+          onCreateAnother={() => {
+            setSubmissionResult(null);
+            setForm({ title: '', description: '', sector_id: '', record_type_id: '', jurisdiction_id: '', event_type: '', actor_ref: '', subject_ref: '', occurred_at: '', timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, confidentiality_level: 'internal', retention_class: 'medium_term', public_verifiable: false });
+          }}
+        />
+      </div>
+    );
   }
 
   return (
