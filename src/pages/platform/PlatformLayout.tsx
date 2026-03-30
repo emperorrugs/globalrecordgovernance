@@ -19,6 +19,7 @@ const navItems = [
   { label: 'Verification', path: '/app/verify', icon: Shield },
   { label: 'Disputes', path: '/app/disputes', icon: AlertTriangle },
   { label: 'Reports', path: '/app/reports', icon: BarChart3 },
+  { label: 'Chain Integrity', path: '/app/chain', icon: Link },
   { label: 'Tamper Test', path: '/app/tamper-test', icon: ShieldAlert },
   { label: 'Use Cases', path: '/app/use-cases', icon: Workflow },
   { label: 'Value Calculator', path: '/app/calculator', icon: Calculator },
