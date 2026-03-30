@@ -173,6 +173,9 @@ import GuestDashboard from "./pages/platform/GuestDashboard";
 import TamperSimulation from "./pages/platform/TamperSimulation";
 import UseCaseSimulations from "./pages/platform/UseCaseSimulations";
 import ChainIntegrity from "./pages/platform/ChainIntegrity";
+import PublicVerifyPage from "./pages/platform/PublicVerifyPage";
+import ProductModules from "./pages/platform/ProductModules";
+import DemoScript from "./pages/platform/DemoScript";
 
 import NotFound from "./pages/NotFound";
 
