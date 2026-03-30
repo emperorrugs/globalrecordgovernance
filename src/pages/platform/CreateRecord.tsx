@@ -12,6 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft, Save, SendHorizonal } from 'lucide-react';
+import RecordSubmissionAnimation from '@/components/platform/RecordSubmissionAnimation';
 
 export default function CreateRecord() {
   const { user, organization } = useAuth();
