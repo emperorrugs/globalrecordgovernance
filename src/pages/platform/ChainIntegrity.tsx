@@ -3,7 +3,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Link, Hash, ShieldCheck, ShieldAlert, ArrowDown, RefreshCw } from 'lucide-react';
+import { Link2, Hash, ShieldCheck, ShieldAlert, ArrowDown, RefreshCw } from 'lucide-react';
 
 interface ChainRecord {
   id: string;
