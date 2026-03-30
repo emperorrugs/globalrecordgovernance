@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { submitAccessRequest } from "@/services/access";
 
 const levels = [
   {
@@ -157,23 +157,21 @@ const ControlledAccess = () => {
     setSubmitting(true);
 
     try {
-      const { error } = await supabase.from("access_requests").insert({
-        full_name: formData.fullName,
+      const result = await submitAccessRequest({
+        fullName: formData.fullName,
         organization: formData.organization,
-        title_role: formData.titleRole,
+        titleRole: formData.titleRole,
         email: formData.email,
         country: formData.country,
-        requested_level: formData.requestedLevel,
-        evaluation_purpose: formData.purpose,
-        purpose_detail: formData.purposeDetail || null,
-        jurisdiction: formData.jurisdiction || null,
-        department_type: formData.departmentType || null,
-        document_categories: selectedCategories.length > 0 ? selectedCategories : null,
-        crp_acknowledged: true,
-        nda_required: formData.requestedLevel === "Level 3" || formData.requestedLevel === "Level 4",
+        requestedLevel: formData.requestedLevel,
+        purpose: formData.purpose,
+        purposeDetail: formData.purposeDetail,
+        jurisdiction: formData.jurisdiction,
+        departmentType: formData.departmentType,
+        documentCategories: selectedCategories.length > 0 ? selectedCategories : undefined,
       });
 
-      if (error) throw error;
+      if (!result.success) throw new Error(result.error);
 
       setSubmitted(true);
       toast({
