@@ -596,6 +596,12 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
 /* ═══ PRINT ═══ */
 @media print {
   body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
