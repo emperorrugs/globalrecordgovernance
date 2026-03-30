@@ -172,6 +172,7 @@ import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
 import GuestDashboard from "./pages/platform/GuestDashboard";
 import TamperSimulation from "./pages/platform/TamperSimulation";
 import UseCaseSimulations from "./pages/platform/UseCaseSimulations";
+import ChainIntegrity from "./pages/platform/ChainIntegrity";
 
 import NotFound from "./pages/NotFound";
 
@@ -208,6 +209,7 @@ const App = () => (
             <Route path="/app/demo" element={<PlatformLayout><GuidedDemo /></PlatformLayout>} />
             <Route path="/app/tamper-test" element={<PlatformLayout><TamperSimulation /></PlatformLayout>} />
             <Route path="/app/use-cases" element={<PlatformLayout><UseCaseSimulations /></PlatformLayout>} />
+            <Route path="/app/chain" element={<PlatformLayout><ChainIntegrity /></PlatformLayout>} />
 
             {/* Guest Demo (no auth) */}
             <Route path="/demo/app" element={<GuestDemoLayout><GuestDashboard /></GuestDemoLayout>} />
