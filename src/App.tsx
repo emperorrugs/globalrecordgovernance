@@ -170,6 +170,8 @@ import ValueCalculator from "./pages/platform/ValueCalculator";
 import GuidedDemo from "./pages/platform/GuidedDemo";
 import GuestDemoLayout from "./pages/platform/GuestDemoLayout";
 import GuestDashboard from "./pages/platform/GuestDashboard";
+import TamperSimulation from "./pages/platform/TamperSimulation";
+import UseCaseSimulations from "./pages/platform/UseCaseSimulations";
 
 import NotFound from "./pages/NotFound";
 
