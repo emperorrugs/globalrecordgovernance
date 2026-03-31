@@ -184,6 +184,57 @@ const badgeStyles: Record<string, string> = {
 };
 
 /* ────────────────────────────────────────────────────────────
+   DOWNLOAD ALL BUTTON
+   ──────────────────────────────────────────────────────────── */
+function DownloadAllButton({ category }: { category: MediaCategory }) {
+  const [loading, setLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleDownloadAll = useCallback(async () => {
+    setLoading(true);
+    toast({ title: "Preparing ZIP", description: `Bundling ${category.files.length} files from "${category.title}"…` });
+
+    try {
+      const zip = new JSZip();
+      const results = await Promise.allSettled(
+        category.files.map(async (file) => {
+          const res = await fetch(file.path);
+          if (!res.ok) throw new Error(`Failed: ${file.path}`);
+          const blob = await res.blob();
+          const fileName = file.path.split("/").pop() || file.name;
+          zip.file(fileName, blob);
+        })
+      );
+
+      const failed = results.filter((r) => r.status === "rejected").length;
+      if (failed > 0) {
+        toast({ title: "Partial download", description: `${failed} file(s) could not be fetched. The rest are included.`, variant: "destructive" });
+      }
+
+      const content = await zip.generateAsync({ type: "blob" });
+      const safeName = category.title.replace(/[^a-zA-Z0-9]+/g, "_");
+      saveAs(content, `GRGF_${safeName}.zip`);
+      toast({ title: "Download complete", description: `GRGF_${safeName}.zip saved.` });
+    } catch {
+      toast({ title: "Download failed", description: "Could not generate ZIP. Please try again.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
+  }, [category, toast]);
+
+  return (
+    <button
+      onClick={handleDownloadAll}
+      disabled={loading}
+      className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-background/80 border border-border text-xs font-medium text-foreground hover:bg-background hover:border-primary/30 transition-colors shrink-0 disabled:opacity-50"
+    >
+      {loading ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <FolderDown className="h-3.5 w-3.5" />}
+      <span className="hidden sm:inline">{loading ? "Zipping…" : "Download All"}</span>
+    </button>
+  );
+}
+
+/* ────────────────────────────────────────────────────────────
    PAGE COMPONENT
    ──────────────────────────────────────────────────────────── */
 export default function MediaRoom() {
