@@ -133,6 +133,8 @@ import APIMock from "./pages/APIMock";
 import Verification from "./pages/Verification";
 import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
+import TRLTracker from "./pages/TRLTracker";
+import CertificationReadiness from "./pages/CertificationReadiness";
 
 // Insights
 import InsightsIndex from "./pages/InsightsIndex";
@@ -345,6 +347,8 @@ const App = () => (
             <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
+            <Route path="/trl-tracker" element={<AppLayout><TRLTracker /></AppLayout>} />
+            <Route path="/certification-readiness" element={<AppLayout><CertificationReadiness /></AppLayout>} />
 
             {/* Simulation / demo pages */}
             <Route path="/simulator" element={<AppLayout><Simulator /></AppLayout>} />
