@@ -140,6 +140,7 @@ import SDKDeveloperHub from "./pages/SDKDeveloperHub";
 import StandardsSubmission from "./pages/StandardsSubmission";
 import LimitationsTransparency from "./pages/LimitationsTransparency";
 import PartnerCertification from "./pages/PartnerCertification";
+import MediaRoom from "./pages/MediaRoom";
 
 // Insights
 import InsightsIndex from "./pages/InsightsIndex";
@@ -358,6 +359,7 @@ const App = () => (
             <Route path="/standards-submission" element={<AppLayout><StandardsSubmission /></AppLayout>} />
             <Route path="/limitations" element={<AppLayout><LimitationsTransparency /></AppLayout>} />
             <Route path="/partner-certification" element={<AppLayout><PartnerCertification /></AppLayout>} />
+            <Route path="/media-room" element={<AppLayout><MediaRoom /></AppLayout>} />
             <Route path="/certification-readiness" element={<AppLayout><CertificationReadiness /></AppLayout>} />
 
             {/* Simulation / demo pages */}
