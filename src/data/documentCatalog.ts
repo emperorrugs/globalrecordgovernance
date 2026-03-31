@@ -83,6 +83,7 @@ export const documentCategories: DocCategory[] = [
     icon: Database,
     files: [
       { name: "126 Applications Complete 2026", path: "/documents/GRGF_126_Applications_Complete_2026.pdf" },
+      { name: "126 Applications Complete 2026 — EN", path: "/documents/GRGF_126_Applications_Complete_2026_EN.pdf" },
       { name: "126 Applications — FR", path: "/documents/GRGF_126_Applications_Complete_2026_FR.pdf" },
       { name: "126 Applications — AR", path: "/documents/GRGF_126_Applications_Complete_2026_AR.pdf" },
       { name: "126 Applications — Professional Proposal", path: "/documents/GRGF_126_Applications_Professional_Proposal_2026.pdf" },
