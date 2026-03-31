@@ -204,6 +204,7 @@ export const documentCategories: DocCategory[] = [
       { name: "Resilience — RTO / RPO / DR", path: "/documents/6_Resilience_RTO_RPO_DR.pdf" },
       { name: "Privacy Impact Assessment", path: "/documents/Privacy_Impact_Assessment.pdf" },
       { name: "SHA-256 Manifest", path: "/documents/SHA256_MANIFEST.txt" },
+      { name: "SHA-256 Manifest v4", path: "/documents/SHA256_MANIFEST_v4.pdf" },
     ],
   },
   {
