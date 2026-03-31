@@ -384,12 +384,8 @@ export default function MediaRoom() {
                 {/* File List */}
                 <div className="divide-y divide-border/50">
                   {cat.files.map((file) => (
-                    <a
+                    <div
                       key={file.path}
-                      href={file.path}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      {...(file.type !== "pdf" ? { download: true } : {})}
                       className="flex items-center justify-between px-6 lg:px-8 py-3.5 hover:bg-muted/40 transition-colors group/file"
                     >
                       <div className="flex items-center gap-3 min-w-0">
@@ -411,11 +407,26 @@ export default function MediaRoom() {
                           </span>
                         )}
                       </div>
-                      <div className="flex items-center gap-2 shrink-0 ml-4">
-                        <Printer className="h-3.5 w-3.5 text-muted-foreground/50 group-hover/file:text-muted-foreground transition-colors hidden sm:block" />
-                        <Download className="h-4 w-4 text-muted-foreground group-hover/file:text-primary transition-colors" />
+                      <div className="flex items-center gap-1 shrink-0 ml-4">
+                        <a
+                          href={file.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1.5 rounded-md hover:bg-primary/10 transition-colors"
+                          title="View"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5 text-muted-foreground hover:text-primary transition-colors" />
+                        </a>
+                        <a
+                          href={file.path}
+                          download
+                          className="p-1.5 rounded-md hover:bg-primary/10 transition-colors"
+                          title="Download"
+                        >
+                          <Download className="h-3.5 w-3.5 text-muted-foreground hover:text-primary transition-colors" />
+                        </a>
                       </div>
-                    </a>
+                    </div>
                   ))}
                 </div>
               </div>
