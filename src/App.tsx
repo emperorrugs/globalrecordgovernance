@@ -359,6 +359,7 @@ const App = () => (
             <Route path="/standards-submission" element={<AppLayout><StandardsSubmission /></AppLayout>} />
             <Route path="/limitations" element={<AppLayout><LimitationsTransparency /></AppLayout>} />
             <Route path="/partner-certification" element={<AppLayout><PartnerCertification /></AppLayout>} />
+            <Route path="/media-room" element={<AppLayout><MediaRoom /></AppLayout>} />
             <Route path="/certification-readiness" element={<AppLayout><CertificationReadiness /></AppLayout>} />
 
             {/* Simulation / demo pages */}
