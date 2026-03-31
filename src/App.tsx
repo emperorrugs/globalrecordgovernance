@@ -347,6 +347,8 @@ const App = () => (
             <Route path="/accessibility" element={<AppLayout><Accessibility /></AppLayout>} />
             <Route path="/ip-status" element={<AppLayout><IPStatus /></AppLayout>} />
             <Route path="/sitemap" element={<AppLayout><Sitemap /></AppLayout>} />
+            <Route path="/trl-tracker" element={<AppLayout><TRLTracker /></AppLayout>} />
+            <Route path="/certification-readiness" element={<AppLayout><CertificationReadiness /></AppLayout>} />
 
             {/* Simulation / demo pages */}
             <Route path="/simulator" element={<AppLayout><Simulator /></AppLayout>} />
