@@ -1,12 +1,15 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { Link } from "react-router-dom";
 import {
   Search, Download, FileText, Presentation, Megaphone, Mail,
   BookOpen, Newspaper, Image, Video, Globe, Building2,
-  ArrowRight, Printer, ExternalLink, Filter,
+  ArrowRight, Printer, ExternalLink, Filter, Loader2, FolderDown,
 } from "lucide-react";
 import { SEOHead } from "@/components/SEOHead";
 import { PatentNotice } from "@/components/PatentNotice";
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
+import { useToast } from "@/hooks/use-toast";
 
 /* ────────────────────────────────────────────────────────────
    MEDIA ROOM DATA
