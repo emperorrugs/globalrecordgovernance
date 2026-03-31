@@ -135,6 +135,11 @@ import Systems from "./pages/Systems";
 import Processes from "./pages/Processes";
 import TRLTracker from "./pages/TRLTracker";
 import CertificationReadiness from "./pages/CertificationReadiness";
+import VerificationAPIProduct from "./pages/VerificationAPIProduct";
+import SDKDeveloperHub from "./pages/SDKDeveloperHub";
+import StandardsSubmission from "./pages/StandardsSubmission";
+import LimitationsTransparency from "./pages/LimitationsTransparency";
+import PartnerCertification from "./pages/PartnerCertification";
 
 // Insights
 import InsightsIndex from "./pages/InsightsIndex";
