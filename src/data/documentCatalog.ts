@@ -23,6 +23,8 @@ export const documentCategories: DocCategory[] = [
     desc: "Complete institutional framework — master edition with all volumes.",
     icon: BookOpen,
     files: [
+      { name: "GRGF Master Manual Suite 2026 (PDF)", path: "/documents/GRGF_Master_Manual_Suite_2026.pdf" },
+      { name: "GRGF Master Manual Suite 2026 (DOCX)", path: "/documents/GRGF_Master_Manual_Suite_2026.docx" },
       { name: "GRGF Master Binder v1", path: "/documents/GRGF_Master_Binder_v1.pdf" },
       { name: "Sovereign Authority Edition 2026", path: "/documents/GRGF_Sovereign_Authority_Edition_2026.pdf" },
       { name: "Complete Proposal 2026 (Expanded)", path: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf" },
