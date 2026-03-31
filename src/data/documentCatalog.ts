@@ -66,6 +66,7 @@ export const documentCategories: DocCategory[] = [
     desc: "Stakeholder-ready project catalog, investor decks, and institutional proposals.",
     icon: Award,
     files: [
+      { name: "Marketplace Product Catalog 2026 (PDF)", path: "/documents/GRGF_Marketplace_Catalog_2026.pdf" },
       { name: "Project Catalog & Proposal 2026 (PDF)", path: "/documents/GRGF_Project_Catalog_Proposal_2026.pdf" },
       { name: "Project Catalog Deck 2026 (PPTX)", path: "/documents/GRGF_Project_Catalog_Deck_2026.pptx" },
       { name: "Project Catalog Deck 2026 (PDF)", path: "/documents/GRGF_Project_Catalog_Deck_2026.pdf" },
