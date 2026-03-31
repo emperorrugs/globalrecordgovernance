@@ -159,6 +159,7 @@ export const documentCategories: DocCategory[] = [
       { name: "Feasibility Study", path: "/documents/Feasibility_Study.pdf" },
       { name: "Oral Defense Briefing Deck", path: "/documents/Oral_Defense_Briefing_Deck.pdf" },
       { name: "Executive Briefing Booklet", path: "/documents/GRGF_Executive_Briefing_Booklet.pdf" },
+      { name: "GovTech Executive Committee Review & Valuation 2026", path: "/documents/GRGF_GovTech_Executive_Committee_Review_2026.pdf" },
     ],
   },
   {
