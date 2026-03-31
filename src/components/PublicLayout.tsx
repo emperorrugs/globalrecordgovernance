@@ -32,6 +32,7 @@ const navGroups = [
     label: "Resources",
     items: [
       { label: "Documents", path: "/documents", icon: FileText },
+      { label: "Media Room", path: "/media-room", icon: Image },
       { label: "Academy", path: "/academy", icon: GraduationCap },
       { label: "Developer", path: "/developer", icon: Code2 },
       { label: "Verification", path: "/verify", icon: Eye },
