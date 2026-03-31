@@ -314,16 +314,19 @@ export default function MediaRoom() {
               >
                 {/* Category Header */}
                 <div className={`bg-gradient-to-r ${cat.color} px-6 lg:px-8 py-5 border-b border-border/50`}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-background/80 border border-border flex items-center justify-center shrink-0">
-                      <cat.icon className="h-5 w-5 text-foreground" />
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-start gap-4 min-w-0">
+                      <div className="w-10 h-10 rounded-xl bg-background/80 border border-border flex items-center justify-center shrink-0">
+                        <cat.icon className="h-5 w-5 text-foreground" />
+                      </div>
+                      <div>
+                        <h2 className="text-lg font-bold text-foreground">{cat.title}</h2>
+                        <p className="text-sm text-muted-foreground mt-0.5">
+                          {cat.desc} · {cat.files.length} files
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h2 className="text-lg font-bold text-foreground">{cat.title}</h2>
-                      <p className="text-sm text-muted-foreground mt-0.5">
-                        {cat.desc} · {cat.files.length} files
-                      </p>
-                    </div>
+                    <DownloadAllButton category={cat} />
                   </div>
                 </div>
 
