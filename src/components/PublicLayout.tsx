@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shield, ChevronRight, ChevronDown, Lock, Globe, Layers, BarChart3, FileText, Cpu, Scale, GraduationCap, Store, Calculator, BookOpen, Database, Eye, Code2, Briefcase } from "lucide-react";
+import { Menu, X, Shield, ChevronRight, ChevronDown, Lock, Globe, Layers, BarChart3, FileText, Cpu, Scale, GraduationCap, Store, Calculator, BookOpen, Database, Eye, Code2, Briefcase, Image } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { InstitutionalFooter } from "@/components/InstitutionalFooter";
 import { PageTransition } from "@/components/PageTransition";
