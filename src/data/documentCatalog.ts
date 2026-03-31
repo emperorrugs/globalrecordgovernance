@@ -33,6 +33,7 @@ export const documentCategories: DocCategory[] = [
       { name: "Premium Institutional Edition", path: "/documents/GRGF_Premium_Institutional_Edition.pdf" },
       { name: "Complete Award Edition", path: "/documents/GRGF_Complete_Award_Edition.pdf" },
       { name: "Digital Book 2026", path: "/documents/GRGF_Digital_Book_2026.pdf" },
+      { name: "Expanded Digital Book 2026", path: "/documents/GRGF_Expanded_Digital_Book_2026.pdf" },
       { name: "Visual Edition", path: "/documents/GRGF_Visual_Edition.pdf" },
       { name: "GRGF Vision and Purpose", path: "/documents/GRGF_Vision_and_Purpose.pdf" },
       { name: "Executive Decision Memo", path: "/documents/Executive_Decision_Memo.pdf" },
