@@ -332,7 +332,7 @@ export default function MediaRoom() {
                       href={file.path}
                       target="_blank"
                       rel="noopener noreferrer"
-                      download
+                      {...(file.type !== "pdf" ? { download: true } : {})}
                       className="flex items-center justify-between px-6 lg:px-8 py-3.5 hover:bg-muted/40 transition-colors group/file"
                     >
                       <div className="flex items-center gap-3 min-w-0">
