@@ -1,6 +1,7 @@
 import { PageHeader, Section } from "@/components/PageComponents";
 import { Code, Terminal, BookOpen, Package, GitBranch, CheckCircle2, ArrowRight, Shield } from "lucide-react";
 import { PatentNotice } from "@/components/PatentNotice";
+import { APIPlayground } from "@/components/APIPlayground";
 
 const SDKDeveloperHub = () => {
   const sdks = [
