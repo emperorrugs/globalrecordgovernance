@@ -84,20 +84,19 @@ export default function HomePage() {
               </div>
             </div>
           </FadeIn>
-          <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[300px]">
-            <div className="space-y-3 opacity-40">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="flex items-center gap-3 animate-fade-in" style={{ animationDelay: `${i * 200}ms` }}>
-                  <div className="w-8 h-8 rounded border border-primary-foreground/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary-foreground/40" />
-                  </div>
-                  <div className="flex-1 h-px bg-primary-foreground/15" />
-                  <span className="font-mono text-[10px] text-primary-foreground/30">
-                    {`0x${Array.from({length:8},()=>Math.floor(Math.random()*16).toString(16)).join('')}`}
+          <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[380px]">
+            <FadeIn delay={200}>
+              <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 backdrop-blur-sm">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-mono text-primary-foreground/40">LIVE GOVERNANCE FLOW</span>
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                   </span>
                 </div>
-              ))}
-            </div>
+                <CinematicHeroFlow />
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
