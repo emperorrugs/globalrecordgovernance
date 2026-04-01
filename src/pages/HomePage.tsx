@@ -72,11 +72,11 @@ export default function HomePage() {
                 GRGF records institutional actions, decisions, and omissions into an immutable, cryptographic evidence layer — creating a system of record for reality.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/framework" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
-                  Explore the Framework <ArrowRight className="h-4 w-4" />
+                <Link to="/deploy" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
+                  <Server className="h-4 w-4" /> Deploy System <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/value-calculator" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-foreground/15 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/25 transition-all border border-primary-foreground/20">
-                  <Scale className="h-4 w-4" /> Calculate Your Value
+                <Link to="/marketplace" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-foreground/15 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/25 transition-all border border-primary-foreground/20">
+                  <Store className="h-4 w-4" /> Marketplace
                 </Link>
                 <Link to="/app/login" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-primary-foreground/25 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/10 transition-all">
                   <Lock className="h-4 w-4" /> Access Core System
