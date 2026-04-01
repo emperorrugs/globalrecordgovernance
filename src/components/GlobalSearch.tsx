@@ -66,6 +66,7 @@ const searchItems: SearchItem[] = [
   { label: "Sector Integration", route: "/sector-integration", group: "Intelligence", icon: HardHat, keywords: "sector integration healthcare finance government" },
   { label: "Impact & ROI Modeling", route: "/impact", group: "Intelligence", icon: BarChart3, keywords: "impact roi cost benefit analysis" },
   { label: "Global Peer Comparison", route: "/comparison", group: "Intelligence", icon: Scale, keywords: "comparison benchmark govstack x-road mosip" },
+  { label: "Competitive Landscape", route: "/competitive-landscape", group: "Intelligence", icon: Eye, keywords: "competitive landscape analysis patent unique positioning" },
   { label: "Limitations & Transparency", route: "/limitations", group: "Intelligence", icon: Eye, keywords: "limitations trl disclosure transparency" },
 
   // Archive
