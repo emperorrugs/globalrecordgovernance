@@ -175,11 +175,8 @@ export default function CompetitiveLandscape() {
   return (
     <div className="min-h-screen bg-background">
       <PageHeader
-        classification="Public"
-        version="1.0.0"
         title="International Competitive Landscape"
         subtitle="Comprehensive global analysis confirming GRGF occupies a unique, uncontested category in the governance technology landscape. No direct equivalent exists."
-        badge="Strategic Intelligence"
       >
         <div className="mt-4 flex flex-wrap gap-3">
           <PDFExportButton filename="GRGF_Competitive_Landscape" label="Export as PDF" />
