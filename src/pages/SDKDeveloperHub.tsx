@@ -1,6 +1,7 @@
 import { PageHeader, Section } from "@/components/PageComponents";
 import { Code, Terminal, BookOpen, Package, GitBranch, CheckCircle2, ArrowRight, Shield } from "lucide-react";
 import { PatentNotice } from "@/components/PatentNotice";
+import { APIPlayground } from "@/components/APIPlayground";
 
 const SDKDeveloperHub = () => {
   const sdks = [
@@ -101,6 +102,16 @@ System.out.println(result.getIntegrity().getHash());`,
               </pre>
             </div>
           ))}
+        </div>
+      </Section>
+
+      {/* Interactive API Playground */}
+      <Section title="API Playground" className="border-t border-border">
+        <div className="max-w-5xl">
+          <p className="text-sm text-muted-foreground mb-6">
+            Test GRGF API endpoints directly in the browser. All responses use real SHA-256 hash computation in simulation mode.
+          </p>
+          <APIPlayground />
         </div>
       </Section>
 
