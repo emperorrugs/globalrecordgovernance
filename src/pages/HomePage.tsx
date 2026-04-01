@@ -3,11 +3,14 @@ import {
   Shield, Lock, ArrowRight, Globe, FileCheck, Search,
   Scale, Landmark, Building2, Stethoscope, Banknote,
   GraduationCap, Gavel, HardHat, Zap, BookOpen, Users,
-  ShieldCheck, Database, Network, Eye
+  ShieldCheck, Database, Network, Eye, Server, Store
 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { LiveRecordDemo } from "@/components/LiveRecordDemo";
 import { DashboardPreview } from "@/components/DashboardPreview";
+import { CinematicHeroFlow } from "@/components/CinematicHeroFlow";
+import { InteractiveArchitecturePipeline } from "@/components/InteractiveArchitecturePipeline";
+import { LiveDashboardCharts } from "@/components/LiveDashboardCharts";
 
 const sectors = [
   { icon: Landmark, name: "Government", count: 18 },
