@@ -110,8 +110,8 @@ describe('truncateHash — Edge Cases', () => {
     expect(truncateHash('abcdef')).toBe('abcdef');
   });
 
-  it('handles empty string', () => {
-    expect(truncateHash('')).toBe('');
+  it('handles empty string (falsy → em-dash)', () => {
+    expect(truncateHash('')).toBe('—');
   });
 
   it('custom prefix/suffix lengths', () => {
