@@ -201,31 +201,22 @@ const Index = () => {
                   ))}
                 </div>
 
-                {/* Live integrity chain */}
-                <div className="bg-white/5 rounded-lg p-3 border border-white/5">
+                {/* Cinematic Record Flow */}
+                <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono text-white/40">INTEGRITY CHAIN</span>
+                    <span className="text-[10px] font-mono text-white/40">LIVE GOVERNANCE FLOW</span>
                     <PulseDot color="bg-emerald-400" />
                   </div>
-                  <div className="flex items-center gap-1 overflow-hidden">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="flex items-center gap-1">
-                        <div className="w-8 h-8 rounded border border-white/10 bg-white/5 flex items-center justify-center hover:border-primary/40 transition-colors">
-                          <span className="text-[8px] font-mono text-white/30">#{String(i + 1).padStart(2, '0')}</span>
-                        </div>
-                        {i < 7 && <div className="w-2 h-px bg-white/15" />}
-                      </div>
-                    ))}
-                  </div>
+                  <CinematicHeroFlow />
                 </div>
 
                 {/* Entry points */}
                 <div className="grid grid-cols-2 gap-2 mt-4">
                   {[
                     { label: "Dashboard", path: "/dashboard", icon: BarChart3 },
-                    { label: "Deploy System", path: "/marketplace", icon: Server },
+                    { label: "Deploy System", path: "/deploy", icon: Server },
                     { label: "Verify Records", path: "/verify", icon: Fingerprint },
-                    { label: "Calculator", path: "/value-calculator", icon: Calculator },
+                    { label: "Marketplace", path: "/marketplace", icon: Store },
                   ].map((ep) => (
                     <Link
                       key={ep.label}
