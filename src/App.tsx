@@ -141,6 +141,7 @@ import StandardsSubmission from "./pages/StandardsSubmission";
 import LimitationsTransparency from "./pages/LimitationsTransparency";
 import PartnerCertification from "./pages/PartnerCertification";
 import MediaRoom from "./pages/MediaRoom";
+import DeploymentEngine from "./pages/DeploymentEngine";
 
 // Insights
 import InsightsIndex from "./pages/InsightsIndex";
