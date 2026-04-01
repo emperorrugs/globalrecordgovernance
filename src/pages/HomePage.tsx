@@ -61,7 +61,7 @@ export default function HomePage() {
                 GLOBAL INFRASTRUCTURE LAYER
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-display-xl font-bold tracking-tight mb-6 leading-[0.95]">
-                The Infrastructure
+                The Infrastructure{" "}
                 <br className="hidden sm:block" />
                 of Truth
               </h1>
