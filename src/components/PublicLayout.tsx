@@ -7,6 +7,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { BackToTop } from "@/components/BackToTop";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { CookieConsent } from "@/components/CookieConsent";
+import { GlobalSearch } from "@/components/GlobalSearch";
 import { RouteSEO } from "@/components/RouteSEO";
 
 const navGroups = [
