@@ -136,6 +136,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ PERSONA ONBOARDING ═══ */}
+      <PersonaOnboarding />
+
       {/* ═══ EXECUTIVE THESIS ═══ */}
       <section className="py-24 lg:py-28 border-t border-border">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">

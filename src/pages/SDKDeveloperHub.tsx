@@ -105,6 +105,16 @@ System.out.println(result.getIntegrity().getHash());`,
         </div>
       </Section>
 
+      {/* Interactive API Playground */}
+      <Section title="API Playground" className="border-t border-border">
+        <div className="max-w-5xl">
+          <p className="text-sm text-muted-foreground mb-6">
+            Test GRGF API endpoints directly in the browser. All responses use real SHA-256 hash computation in simulation mode.
+          </p>
+          <APIPlayground />
+        </div>
+      </Section>
+
       {/* API Versioning Policy */}
       <Section title="API Versioning Policy" className="border-t border-border">
         <div className="max-w-3xl">

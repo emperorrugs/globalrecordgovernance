@@ -169,8 +169,9 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
               ))}
             </nav>
 
-            {/* CTAs */}
+            {/* Search + CTAs */}
             <div className="flex items-center gap-2 shrink-0">
+              <GlobalSearch />
               <Link
                 to="/app/login"
                 className="inline-flex items-center gap-2 px-4 py-2 text-[13px] font-semibold bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-all shadow-sm"
