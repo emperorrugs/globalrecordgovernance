@@ -53,6 +53,7 @@ import InternationalCooperation from "./pages/InternationalCooperation";
 import DeploymentScenarios from "./pages/DeploymentScenarios";
 import SectorIntegrationExamples from "./pages/SectorIntegrationExamples";
 import CanadaDeployment from "./pages/CanadaDeployment";
+import CanadaPilotSimulation from "./pages/CanadaPilotSimulation";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import DeploymentPlanner from "./pages/DeploymentPlanner";
 import NationalDeployment from "./pages/NationalDeployment";
