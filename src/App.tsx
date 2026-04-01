@@ -53,6 +53,7 @@ import InternationalCooperation from "./pages/InternationalCooperation";
 import DeploymentScenarios from "./pages/DeploymentScenarios";
 import SectorIntegrationExamples from "./pages/SectorIntegrationExamples";
 import CanadaDeployment from "./pages/CanadaDeployment";
+import CanadaPilotSimulation from "./pages/CanadaPilotSimulation";
 import SovereignDeployment from "./pages/SovereignDeployment";
 import DeploymentPlanner from "./pages/DeploymentPlanner";
 import NationalDeployment from "./pages/NationalDeployment";
@@ -286,6 +287,7 @@ const App = () => (
             <Route path="/sector-integration" element={<AppLayout><SectorIntegrationExamples /></AppLayout>} />
             <Route path="/deployment" element={<AppLayout><NationalDeployment /></AppLayout>} />
             <Route path="/canada" element={<AppLayout><CanadaDeployment /></AppLayout>} />
+            <Route path="/canada-pilot" element={<AppLayout><CanadaPilotSimulation /></AppLayout>} />
             <Route path="/sovereign-deployment" element={<AppLayout><SovereignDeployment /></AppLayout>} />
             <Route path="/deployment-planner" element={<AppLayout><DeploymentPlanner /></AppLayout>} />
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
