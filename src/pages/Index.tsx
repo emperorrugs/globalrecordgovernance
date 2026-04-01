@@ -10,6 +10,9 @@ import {
 import { SEOHead } from "@/components/SEOHead";
 import { FadeIn } from "@/components/FadeIn";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { CinematicHeroFlow } from "@/components/CinematicHeroFlow";
+import { InteractiveArchitecturePipeline } from "@/components/InteractiveArchitecturePipeline";
+import { LiveDashboardCharts } from "@/components/LiveDashboardCharts";
 
 /* ── Animated Counter ── */
 const AnimNum = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
@@ -198,31 +201,22 @@ const Index = () => {
                   ))}
                 </div>
 
-                {/* Live integrity chain */}
-                <div className="bg-white/5 rounded-lg p-3 border border-white/5">
+                {/* Cinematic Record Flow */}
+                <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-mono text-white/40">INTEGRITY CHAIN</span>
+                    <span className="text-[10px] font-mono text-white/40">LIVE GOVERNANCE FLOW</span>
                     <PulseDot color="bg-emerald-400" />
                   </div>
-                  <div className="flex items-center gap-1 overflow-hidden">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="flex items-center gap-1">
-                        <div className="w-8 h-8 rounded border border-white/10 bg-white/5 flex items-center justify-center hover:border-primary/40 transition-colors">
-                          <span className="text-[8px] font-mono text-white/30">#{String(i + 1).padStart(2, '0')}</span>
-                        </div>
-                        {i < 7 && <div className="w-2 h-px bg-white/15" />}
-                      </div>
-                    ))}
-                  </div>
+                  <CinematicHeroFlow />
                 </div>
 
                 {/* Entry points */}
                 <div className="grid grid-cols-2 gap-2 mt-4">
                   {[
                     { label: "Dashboard", path: "/dashboard", icon: BarChart3 },
-                    { label: "Deploy System", path: "/marketplace", icon: Server },
+                    { label: "Deploy System", path: "/deploy", icon: Server },
                     { label: "Verify Records", path: "/verify", icon: Fingerprint },
-                    { label: "Calculator", path: "/value-calculator", icon: Calculator },
+                    { label: "Marketplace", path: "/marketplace", icon: Store },
                   ].map((ep) => (
                     <Link
                       key={ep.label}
@@ -297,7 +291,39 @@ const Index = () => {
               icon={Scale} title="GRGF Standards" desc="ISO, OECD, UN, and World Bank alignment with comprehensive compliance verification."
               path="/compliance" accent="bg-primary/10 text-primary" tag="Compliance" delay={420}
             />
+            <ModuleCard
+              icon={Server} title="Deploy System" desc="Interactive deployment engine — select jurisdiction, choose modules, and activate in minutes."
+              path="/deploy" accent="bg-destructive/10 text-destructive" tag="Deploy" delay={480}
+            />
           </div>
+        </div>
+      </section>
+
+      {/* ═══ INTERACTIVE ARCHITECTURE ═══ */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-[1440px] mx-auto">
+          <FadeIn>
+            <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.12em] mb-1.5">Deterministic Architecture</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Six-Layer Governance Engine</h2>
+            <p className="text-sm text-muted-foreground mb-8 max-w-xl">
+              From raw institutional events to independently verifiable, sovereign-grade governance records.
+            </p>
+          </FadeIn>
+          <InteractiveArchitecturePipeline />
+        </div>
+      </section>
+
+      {/* ═══ LIVE DASHBOARD ═══ */}
+      <section className="px-6 lg:px-8 pb-20 bg-muted/20">
+        <div className="max-w-[1440px] mx-auto py-16">
+          <FadeIn>
+            <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.12em] mb-1.5">Operational Intelligence</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Global Control Dashboard</h2>
+            <p className="text-sm text-muted-foreground mb-4 max-w-xl">
+              Real-time visibility into governance integrity across institutions, jurisdictions, and sectors.
+            </p>
+          </FadeIn>
+          <LiveDashboardCharts />
         </div>
       </section>
 

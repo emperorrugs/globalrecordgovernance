@@ -3,11 +3,14 @@ import {
   Shield, Lock, ArrowRight, Globe, FileCheck, Search,
   Scale, Landmark, Building2, Stethoscope, Banknote,
   GraduationCap, Gavel, HardHat, Zap, BookOpen, Users,
-  ShieldCheck, Database, Network, Eye
+  ShieldCheck, Database, Network, Eye, Server, Store
 } from "lucide-react";
 import { FadeIn } from "@/components/FadeIn";
 import { LiveRecordDemo } from "@/components/LiveRecordDemo";
 import { DashboardPreview } from "@/components/DashboardPreview";
+import { CinematicHeroFlow } from "@/components/CinematicHeroFlow";
+import { InteractiveArchitecturePipeline } from "@/components/InteractiveArchitecturePipeline";
+import { LiveDashboardCharts } from "@/components/LiveDashboardCharts";
 
 const sectors = [
   { icon: Landmark, name: "Government", count: 18 },
@@ -69,11 +72,11 @@ export default function HomePage() {
                 GRGF records institutional actions, decisions, and omissions into an immutable, cryptographic evidence layer — creating a system of record for reality.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link to="/framework" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
-                  Explore the Framework <ArrowRight className="h-4 w-4" />
+                <Link to="/deploy" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
+                  <Server className="h-4 w-4" /> Deploy System <ArrowRight className="h-4 w-4" />
                 </Link>
-                <Link to="/value-calculator" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-foreground/15 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/25 transition-all border border-primary-foreground/20">
-                  <Scale className="h-4 w-4" /> Calculate Your Value
+                <Link to="/marketplace" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary-foreground/15 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/25 transition-all border border-primary-foreground/20">
+                  <Store className="h-4 w-4" /> Marketplace
                 </Link>
                 <Link to="/app/login" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-primary-foreground/25 text-primary-foreground text-sm font-semibold rounded-md hover:bg-primary-foreground/10 transition-all">
                   <Lock className="h-4 w-4" /> Access Core System
@@ -81,20 +84,19 @@ export default function HomePage() {
               </div>
             </div>
           </FadeIn>
-          <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[300px]">
-            <div className="space-y-3 opacity-40">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="flex items-center gap-3 animate-fade-in" style={{ animationDelay: `${i * 200}ms` }}>
-                  <div className="w-8 h-8 rounded border border-primary-foreground/20 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-primary-foreground/40" />
-                  </div>
-                  <div className="flex-1 h-px bg-primary-foreground/15" />
-                  <span className="font-mono text-[10px] text-primary-foreground/30">
-                    {`0x${Array.from({length:8},()=>Math.floor(Math.random()*16).toString(16)).join('')}`}
+          <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2 w-[380px]">
+            <FadeIn delay={200}>
+              <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 backdrop-blur-sm">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-[10px] font-mono text-primary-foreground/40">LIVE GOVERNANCE FLOW</span>
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
                   </span>
                 </div>
-              ))}
-            </div>
+                <CinematicHeroFlow />
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -162,44 +164,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ ARCHITECTURE ═══ */}
+      {/* ═══ INTERACTIVE ARCHITECTURE ═══ */}
       <section className="py-24 lg:py-28 bg-card border-t border-border">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <FadeIn>
             <div className="text-center mb-14">
               <div className="carbon-tag mx-auto mb-4 w-fit">DETERMINISTIC ARCHITECTURE</div>
               <h2 className="text-heading-1 font-bold text-foreground mb-4">Six-Layer Governance Engine</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { step: "01", label: "Event Normalization", desc: "Raw institutional events normalized into canonical schema" },
-                { step: "02", label: "Authority Context", desc: "Legal basis and delegation chain cryptographically bound" },
-                { step: "03", label: "Immutable Record", desc: "SHA-256 hash-sealed into append-only evidence ledger" },
-                { step: "04", label: "Verification Engine", desc: "Independent proof generation and integrity validation" },
-                { step: "05", label: "Federation Protocol", desc: "Cross-jurisdiction interoperability and Merkle witnessing" },
-                { step: "06", label: "Audit Intelligence", desc: "Anomaly detection, omission alerts, and compliance reporting" },
-              ].map((layer) => (
-                <div key={layer.step} className="governance-card group">
-                  <span className="text-overline text-accent font-bold">LAYER {layer.step}</span>
-                  <h3 className="text-heading-3 font-semibold text-foreground mt-2 mb-2">{layer.label}</h3>
-                  <p className="text-caption text-muted-foreground">{layer.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/architecture" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
-                View Full Architecture <ArrowRight className="h-4 w-4" />
-              </Link>
+              <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+                From raw institutional events to independently verifiable, sovereign-grade governance records.
+              </p>
             </div>
           </FadeIn>
+          <InteractiveArchitecturePipeline />
+          <div className="text-center mt-8">
+            <Link to="/architecture" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
+              View Full Architecture <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ═══ LIVE DEMO ═══ */}
       <LiveRecordDemo />
 
-      {/* ═══ DASHBOARD PREVIEW ═══ */}
+      {/* ═══ DASHBOARD WITH CHARTS ═══ */}
       <DashboardPreview />
+      <section className="pb-16 -mt-8">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
+          <LiveDashboardCharts />
+        </div>
+      </section>
 
       {/* ═══ PRODUCT SUITE ═══ */}
       <section className="py-24 lg:py-28 border-t border-border">

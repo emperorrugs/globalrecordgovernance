@@ -141,6 +141,7 @@ import StandardsSubmission from "./pages/StandardsSubmission";
 import LimitationsTransparency from "./pages/LimitationsTransparency";
 import PartnerCertification from "./pages/PartnerCertification";
 import MediaRoom from "./pages/MediaRoom";
+import DeploymentEngine from "./pages/DeploymentEngine";
 
 // Insights
 import InsightsIndex from "./pages/InsightsIndex";
@@ -290,6 +291,7 @@ const App = () => (
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-results" element={<AppLayout><PilotResults /></AppLayout>} />
             <Route path="/procurement" element={<AppLayout><Procurement /></AppLayout>} />
+            <Route path="/deploy" element={<PublicLayout><DeploymentEngine /></PublicLayout>} />
 
             {/* Intelligence */}
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
