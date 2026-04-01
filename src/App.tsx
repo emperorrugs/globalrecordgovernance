@@ -303,6 +303,7 @@ const App = () => (
             <Route path="/maturity" element={<AppLayout><Maturity /></AppLayout>} />
             <Route path="/stress-test" element={<AppLayout><StressTest /></AppLayout>} />
             <Route path="/dpi-comparison" element={<AppLayout><DPIComparison /></AppLayout>} />
+            <Route path="/competitive-landscape" element={<AppLayout><CompetitiveLandscape /></AppLayout>} />
             <Route path="/case-studies" element={<AppLayout><CaseStudies /></AppLayout>} />
             <Route path="/impact" element={<AppLayout><ImpactROI /></AppLayout>} />
             <Route path="/value-calculator" element={<AppLayout><ValueCalculator /></AppLayout>} />
