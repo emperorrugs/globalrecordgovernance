@@ -36,6 +36,9 @@ const peers: PeerSystem[] = [
   { id: "mosip", name: "MOSIP", origin: "India / IIIT-B", type: "Digital Identity Platform", color: "text-muted-foreground" },
   { id: "dpga", name: "DPGA", origin: "UN / Norway", type: "DPG Registry & Advocacy", color: "text-muted-foreground" },
   { id: "opencrvs", name: "OpenCRVS", origin: "Plan International", type: "Civil Registration", color: "text-muted-foreground" },
+  { id: "opengov", name: "OpenGovChain", origin: "Philippines", type: "Blockchain Procurement", color: "text-muted-foreground" },
+  { id: "palantir", name: "Palantir Foundry", origin: "United States", type: "Data Intelligence", color: "text-muted-foreground" },
+  { id: "servicenow", name: "ServiceNow", origin: "United States", type: "Workflow Automation", color: "text-muted-foreground" },
 ];
 
 /* ── Comparison Data ── */
