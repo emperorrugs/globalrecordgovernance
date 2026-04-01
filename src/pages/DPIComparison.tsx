@@ -44,44 +44,46 @@ const peers: PeerSystem[] = [
 /* ── Comparison Data ── */
 const data: ComparisonRow[] = [
   // Record Integrity
-  { category: "Record Integrity", capability: "Append-only immutable storage", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "partial", dpga: "none", opencrvs: "partial" } },
-  { category: "Record Integrity", capability: "Cryptographic hash-chain sealing (SHA-256)", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "none" } },
-  { category: "Record Integrity", capability: "Proof-of-absence (omission detection)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Record Integrity", capability: "Tamper-evident audit backbone", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial" } },
-  { category: "Record Integrity", capability: "External anchor compatibility (blockchain / CA)", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "none", dpga: "none", opencrvs: "none" } },
+  { category: "Record Integrity", capability: "Append-only immutable storage", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "partial", dpga: "none", opencrvs: "partial", opengov: "partial", palantir: "none", servicenow: "none" } },
+  { category: "Record Integrity", capability: "Cryptographic hash-chain sealing (SHA-256)", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "none", opengov: "full", palantir: "none", servicenow: "none" } },
+  { category: "Record Integrity", capability: "Proof-of-absence (omission detection)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Record Integrity", capability: "Tamper-evident audit backbone", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial", opengov: "full", palantir: "partial", servicenow: "partial" } },
+  { category: "Record Integrity", capability: "External anchor compatibility (blockchain / CA)", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "none", dpga: "none", opencrvs: "none", opengov: "full", palantir: "none", servicenow: "none" } },
 
   // Governance Model
-  { category: "Governance Model", capability: "Deterministic policy enforcement", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Governance Model", capability: "Anti-capture clauses (AC-01 to AC-05)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Governance Model", capability: "Custodial neutrality (no operator override)", ratings: { grgf: "full", govstack: "partial", xroad: "none", mosip: "none", dpga: "partial", opencrvs: "none" } },
-  { category: "Governance Model", capability: "No super-admin backdoor", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "partial", dpga: "n/a", opencrvs: "none" } },
-  { category: "Governance Model", capability: "Multi-stakeholder oversight board", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "full", opencrvs: "partial" } },
+  { category: "Governance Model", capability: "Deterministic policy enforcement", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "partial", servicenow: "partial" } },
+  { category: "Governance Model", capability: "Anti-capture clauses (AC-01 to AC-05)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Governance Model", capability: "Custodial neutrality (no operator override)", ratings: { grgf: "full", govstack: "partial", xroad: "none", mosip: "none", dpga: "partial", opencrvs: "none", opengov: "partial", palantir: "none", servicenow: "none" } },
+  { category: "Governance Model", capability: "No super-admin backdoor", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "partial", dpga: "n/a", opencrvs: "none", opengov: "partial", palantir: "none", servicenow: "none" } },
+  { category: "Governance Model", capability: "Multi-stakeholder oversight board", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "full", opencrvs: "partial", opengov: "partial", palantir: "none", servicenow: "none" } },
+  { category: "Governance Model", capability: "Record-of-omission framework", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Governance Model", capability: "Authority binding at record level", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
 
   // Federation & Interoperability
-  { category: "Federation", capability: "Cross-border sovereign federation protocol", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Federation", capability: "Multi-tier trust levels (Observer / Participant / Full)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Federation", capability: "Voluntary participation (no mandatory data sharing)", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "partial", dpga: "full", opencrvs: "partial" } },
-  { category: "Federation", capability: "Canonical event schema (JSON-LD)", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "partial", dpga: "none", opencrvs: "partial" } },
-  { category: "Federation", capability: "API-first verification endpoints", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "none", opencrvs: "partial" } },
+  { category: "Federation", capability: "Cross-border sovereign federation protocol", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Federation", capability: "Multi-tier trust levels (Observer / Participant / Full)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Federation", capability: "Voluntary participation (no mandatory data sharing)", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "partial", dpga: "full", opencrvs: "partial", opengov: "full", palantir: "none", servicenow: "n/a" } },
+  { category: "Federation", capability: "Canonical event schema (JSON-LD)", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "partial", dpga: "none", opencrvs: "partial", opengov: "partial", palantir: "partial", servicenow: "partial" } },
+  { category: "Federation", capability: "API-first verification endpoints", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "none", opencrvs: "partial", opengov: "partial", palantir: "full", servicenow: "full" } },
 
   // Audit & Verification
-  { category: "Audit & Verification", capability: "Full event trace reconstruction", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial" } },
-  { category: "Audit & Verification", capability: "Deterministic denial explanation", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Audit & Verification", capability: "Real-time integrity validation", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "none" } },
-  { category: "Audit & Verification", capability: "Zero-knowledge proof verification", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Audit & Verification", capability: "Read-only auditor access (scoped)", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial" } },
+  { category: "Audit & Verification", capability: "Full event trace reconstruction", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial", opengov: "partial", palantir: "full", servicenow: "partial" } },
+  { category: "Audit & Verification", capability: "Deterministic denial explanation", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Audit & Verification", capability: "Real-time integrity validation", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "none", opengov: "partial", palantir: "partial", servicenow: "none" } },
+  { category: "Audit & Verification", capability: "Zero-knowledge proof verification", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Audit & Verification", capability: "Read-only auditor access (scoped)", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "partial", dpga: "none", opencrvs: "partial", opengov: "partial", palantir: "full", servicenow: "partial" } },
 
   // Security & Trust
-  { category: "Security & Trust", capability: "Zero Trust architecture", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "partial", dpga: "n/a", opencrvs: "partial" } },
-  { category: "Security & Trust", capability: "Role separation enforcement", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "full", dpga: "n/a", opencrvs: "partial" } },
-  { category: "Security & Trust", capability: "Post-quantum readiness roadmap", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "Security & Trust", capability: "HSM key management", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "full", dpga: "none", opencrvs: "none" } },
+  { category: "Security & Trust", capability: "Zero Trust architecture", ratings: { grgf: "full", govstack: "partial", xroad: "full", mosip: "partial", dpga: "n/a", opencrvs: "partial", opengov: "partial", palantir: "full", servicenow: "partial" } },
+  { category: "Security & Trust", capability: "Role separation enforcement", ratings: { grgf: "full", govstack: "partial", xroad: "partial", mosip: "full", dpga: "n/a", opencrvs: "partial", opengov: "none", palantir: "full", servicenow: "full" } },
+  { category: "Security & Trust", capability: "Post-quantum readiness roadmap", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "Security & Trust", capability: "HSM key management", ratings: { grgf: "full", govstack: "none", xroad: "partial", mosip: "full", dpga: "none", opencrvs: "none", opengov: "none", palantir: "full", servicenow: "partial" } },
 
   // DPI Layer Positioning
-  { category: "DPI Positioning", capability: "Governance integrity layer (Layer 3)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none" } },
-  { category: "DPI Positioning", capability: "Non-invasive integration with existing DPI", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "partial", dpga: "full", opencrvs: "partial" } },
-  { category: "DPI Positioning", capability: "Sovereignty-preserving architecture", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "full", opencrvs: "full" } },
-  { category: "DPI Positioning", capability: "Standards alignment (ISO / OECD / ITU)", ratings: { grgf: "full", govstack: "full", xroad: "partial", mosip: "partial", dpga: "full", opencrvs: "partial" } },
+  { category: "DPI Positioning", capability: "Governance integrity layer (Layer 3)", ratings: { grgf: "full", govstack: "none", xroad: "none", mosip: "none", dpga: "none", opencrvs: "none", opengov: "none", palantir: "none", servicenow: "none" } },
+  { category: "DPI Positioning", capability: "Non-invasive integration with existing DPI", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "partial", dpga: "full", opencrvs: "partial", opengov: "partial", palantir: "partial", servicenow: "partial" } },
+  { category: "DPI Positioning", capability: "Sovereignty-preserving architecture", ratings: { grgf: "full", govstack: "full", xroad: "full", mosip: "full", dpga: "full", opencrvs: "full", opengov: "full", palantir: "none", servicenow: "none" } },
+  { category: "DPI Positioning", capability: "Standards alignment (ISO / OECD / ITU)", ratings: { grgf: "full", govstack: "full", xroad: "partial", mosip: "partial", dpga: "full", opencrvs: "partial", opengov: "partial", palantir: "partial", servicenow: "partial" } },
 ];
 
 const categoryIcons: Record<string, React.ReactNode> = {
