@@ -164,44 +164,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ ARCHITECTURE ═══ */}
+      {/* ═══ INTERACTIVE ARCHITECTURE ═══ */}
       <section className="py-24 lg:py-28 bg-card border-t border-border">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <FadeIn>
             <div className="text-center mb-14">
               <div className="carbon-tag mx-auto mb-4 w-fit">DETERMINISTIC ARCHITECTURE</div>
               <h2 className="text-heading-1 font-bold text-foreground mb-4">Six-Layer Governance Engine</h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                { step: "01", label: "Event Normalization", desc: "Raw institutional events normalized into canonical schema" },
-                { step: "02", label: "Authority Context", desc: "Legal basis and delegation chain cryptographically bound" },
-                { step: "03", label: "Immutable Record", desc: "SHA-256 hash-sealed into append-only evidence ledger" },
-                { step: "04", label: "Verification Engine", desc: "Independent proof generation and integrity validation" },
-                { step: "05", label: "Federation Protocol", desc: "Cross-jurisdiction interoperability and Merkle witnessing" },
-                { step: "06", label: "Audit Intelligence", desc: "Anomaly detection, omission alerts, and compliance reporting" },
-              ].map((layer) => (
-                <div key={layer.step} className="governance-card group">
-                  <span className="text-overline text-accent font-bold">LAYER {layer.step}</span>
-                  <h3 className="text-heading-3 font-semibold text-foreground mt-2 mb-2">{layer.label}</h3>
-                  <p className="text-caption text-muted-foreground">{layer.desc}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/architecture" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
-                View Full Architecture <ArrowRight className="h-4 w-4" />
-              </Link>
+              <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
+                From raw institutional events to independently verifiable, sovereign-grade governance records.
+              </p>
             </div>
           </FadeIn>
+          <InteractiveArchitecturePipeline />
+          <div className="text-center mt-8">
+            <Link to="/architecture" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
+              View Full Architecture <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ═══ LIVE DEMO ═══ */}
       <LiveRecordDemo />
 
-      {/* ═══ DASHBOARD PREVIEW ═══ */}
+      {/* ═══ DASHBOARD WITH CHARTS ═══ */}
       <DashboardPreview />
+      <section className="pb-16 -mt-8">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
+          <LiveDashboardCharts />
+        </div>
+      </section>
 
       {/* ═══ PRODUCT SUITE ═══ */}
       <section className="py-24 lg:py-28 border-t border-border">
