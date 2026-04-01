@@ -291,6 +291,10 @@ const Index = () => {
               icon={Scale} title="GRGF Standards" desc="ISO, OECD, UN, and World Bank alignment with comprehensive compliance verification."
               path="/compliance" accent="bg-primary/10 text-primary" tag="Compliance" delay={420}
             />
+            <ModuleCard
+              icon={Server} title="Deploy System" desc="Interactive deployment engine — select jurisdiction, choose modules, and activate in minutes."
+              path="/deploy" accent="bg-destructive/10 text-destructive" tag="Deploy" delay={480}
+            />
           </div>
         </div>
       </section>
