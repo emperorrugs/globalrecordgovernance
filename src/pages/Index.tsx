@@ -10,6 +10,9 @@ import {
 import { SEOHead } from "@/components/SEOHead";
 import { FadeIn } from "@/components/FadeIn";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { CinematicHeroFlow } from "@/components/CinematicHeroFlow";
+import { InteractiveArchitecturePipeline } from "@/components/InteractiveArchitecturePipeline";
+import { LiveDashboardCharts } from "@/components/LiveDashboardCharts";
 
 /* ── Animated Counter ── */
 const AnimNum = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
