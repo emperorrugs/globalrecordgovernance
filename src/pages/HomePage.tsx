@@ -11,6 +11,7 @@ import { DashboardPreview } from "@/components/DashboardPreview";
 import { CinematicHeroFlow } from "@/components/CinematicHeroFlow";
 import { InteractiveArchitecturePipeline } from "@/components/InteractiveArchitecturePipeline";
 import { LiveDashboardCharts } from "@/components/LiveDashboardCharts";
+import { PersonaOnboarding } from "@/components/PersonaOnboarding";
 
 const sectors = [
   { icon: Landmark, name: "Government", count: 18 },
