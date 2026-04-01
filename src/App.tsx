@@ -291,6 +291,7 @@ const App = () => (
             <Route path="/pilot-evaluation" element={<AppLayout><PilotEvaluation /></AppLayout>} />
             <Route path="/pilot-results" element={<AppLayout><PilotResults /></AppLayout>} />
             <Route path="/procurement" element={<AppLayout><Procurement /></AppLayout>} />
+            <Route path="/deploy" element={<PublicLayout><DeploymentEngine /></PublicLayout>} />
 
             {/* Intelligence */}
             <Route path="/impact-modeling" element={<AppLayout><ImpactModeling /></AppLayout>} />
