@@ -295,6 +295,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══ INTERACTIVE ARCHITECTURE ═══ */}
+      <section className="px-6 lg:px-8 pb-20">
+        <div className="max-w-[1440px] mx-auto">
+          <FadeIn>
+            <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.12em] mb-1.5">Deterministic Architecture</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Six-Layer Governance Engine</h2>
+            <p className="text-sm text-muted-foreground mb-8 max-w-xl">
+              From raw institutional events to independently verifiable, sovereign-grade governance records.
+            </p>
+          </FadeIn>
+          <InteractiveArchitecturePipeline />
+        </div>
+      </section>
+
+      {/* ═══ LIVE DASHBOARD ═══ */}
+      <section className="px-6 lg:px-8 pb-20 bg-muted/20">
+        <div className="max-w-[1440px] mx-auto py-16">
+          <FadeIn>
+            <p className="text-[11px] font-semibold text-primary uppercase tracking-[0.12em] mb-1.5">Operational Intelligence</p>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-2">Global Control Dashboard</h2>
+            <p className="text-sm text-muted-foreground mb-4 max-w-xl">
+              Real-time visibility into governance integrity across institutions, jurisdictions, and sectors.
+            </p>
+          </FadeIn>
+          <LiveDashboardCharts />
+        </div>
+      </section>
+
       {/* ═══ ANCHOR CHAIN HERO ═══ */}
       <section className="px-6 lg:px-8 pb-20">
         <div className="max-w-[1440px] mx-auto">
