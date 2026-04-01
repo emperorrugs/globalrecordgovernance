@@ -68,6 +68,7 @@ import RiskAssessment from "./pages/RiskAssessment";
 import Maturity from "./pages/Maturity";
 import StressTest from "./pages/StressTest";
 import DPIComparison from "./pages/DPIComparison";
+import CompetitiveLandscape from "./pages/CompetitiveLandscape";
 import CaseStudies from "./pages/CaseStudies";
 import ImpactROI from "./pages/ImpactROI";
 
