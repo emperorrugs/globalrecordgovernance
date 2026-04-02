@@ -28,7 +28,7 @@ interface SectorProfile {
   integrationMethod: string;
   protocol: string;
   annualExposure: number;
-  postGRGF™: number;
+  postGRGF: number;
   reductionPct: number;
   fiveYearBenefit: number;
   roi: number;
@@ -52,7 +52,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "REST API Connector + OPA/Rego Policy Engine",
     protocol: "HTTPS + mTLS / SAML 2.0",
     annualExposure: 850_000_000,
-    postGRGF™: 212_500_000,
+    postGRGF: 212_500_000,
     reductionPct: 75,
     fiveYearBenefit: 2_550_000_000,
     roi: 4250,
@@ -90,7 +90,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "HL7 FHIR R4 Event Stream + Webhook Listener",
     protocol: "HTTPS / FHIR RESTful API / OAuth 2.0",
     annualExposure: 420_000_000,
-    postGRGF™: 105_000_000,
+    postGRGF: 105_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_260_000_000,
     roi: 3934,
@@ -128,7 +128,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "ISO 20022 Event Stream + Core Banking API",
     protocol: "HTTPS / ISO 20022 XML / SWIFT gpi",
     annualExposure: 1_200_000_000,
-    postGRGF™: 300_000_000,
+    postGRGF: 300_000_000,
     reductionPct: 75,
     fiveYearBenefit: 3_600_000_000,
     roi: 5142,
@@ -166,7 +166,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "IoT Gateway + BIM Event Connector + REST API",
     protocol: "MQTT / OPC-UA / HTTPS",
     annualExposure: 650_000_000,
-    postGRGF™: 162_500_000,
+    postGRGF: 162_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_950_000_000,
     roi: 3900,
@@ -204,7 +204,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Case Management API + Evidence Custody Connector",
     protocol: "HTTPS + mTLS / SAML 2.0",
     annualExposure: 380_000_000,
-    postGRGF™: 95_000_000,
+    postGRGF: 95_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_140_000_000,
     roi: 3800,
@@ -242,7 +242,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "SIS API Connector + W3C Verifiable Credentials",
     protocol: "HTTPS / OpenID4VC / JSON-LD",
     annualExposure: 180_000_000,
-    postGRGF™: 45_000_000,
+    postGRGF: 45_000_000,
     reductionPct: 75,
     fiveYearBenefit: 540_000_000,
     roi: 3600,
@@ -280,7 +280,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "CAD/RMS API + Body Camera Metadata Connector",
     protocol: "NIEM / HTTPS / RTSP metadata",
     annualExposure: 290_000_000,
-    postGRGF™: 72_500_000,
+    postGRGF: 72_500_000,
     reductionPct: 75,
     fiveYearBenefit: 870_000_000,
     roi: 3480,
@@ -318,7 +318,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "e-Procurement API + ERP Webhook Connector",
     protocol: "HTTPS / OCDS (Open Contracting) / SAP RFC",
     annualExposure: 520_000_000,
-    postGRGF™: 130_000_000,
+    postGRGF: 130_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_560_000_000,
     roi: 4457,
@@ -356,7 +356,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Case Management API + Benefits System Connector",
     protocol: "HTTPS / SCIM / OAuth 2.0",
     annualExposure: 310_000_000,
-    postGRGF™: 77_500_000,
+    postGRGF: 77_500_000,
     reductionPct: 75,
     fiveYearBenefit: 930_000_000,
     roi: 3720,
@@ -394,7 +394,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "IoT Sensor Gateway + Environmental Registry API",
     protocol: "MQTT / OPC-UA / HTTPS",
     annualExposure: 240_000_000,
-    postGRGF™: 60_000_000,
+    postGRGF: 60_000_000,
     reductionPct: 75,
     fiveYearBenefit: 720_000_000,
     roi: 3600,
@@ -432,7 +432,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "SCADA Connector + OPC-UA Gateway + REST API",
     protocol: "OPC-UA / MQTT / HTTPS / IEC 61850",
     annualExposure: 350_000_000,
-    postGRGF™: 87_500_000,
+    postGRGF: 87_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_050_000_000,
     roi: 3500,
@@ -470,7 +470,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Trade Single Window API + Diplomatic Registry Connector",
     protocol: "HTTPS / WCO Data Model / UN/CEFACT",
     annualExposure: 450_000_000,
-    postGRGF™: 112_500_000,
+    postGRGF: 112_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_350_000_000,
     roi: 3857,
@@ -542,7 +542,7 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
           </div>
           <div className="text-right">
             <p className="text-[10px] font-mono text-muted-foreground uppercase">Post-GRGF™</p>
-            <p className="text-sm font-semibold text-primary">{fmtCurrency(sector.postGRGF™)}</p>
+            <p className="text-sm font-semibold text-primary">{fmtCurrency(sector.postGRGF)}</p>
           </div>
           <div className="text-right">
             <p className="text-[10px] font-mono text-muted-foreground uppercase">5-Year Benefit</p>
@@ -561,7 +561,7 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
         <ArrowRight className="w-3 h-3 text-muted-foreground" />
         <div>
           <p className="text-[9px] font-mono text-muted-foreground">POST-GRGF™</p>
-          <p className="text-xs font-semibold text-primary">{fmtCurrency(sector.postGRGF™)}</p>
+          <p className="text-xs font-semibold text-primary">{fmtCurrency(sector.postGRGF)}</p>
         </div>
         <div className="ml-auto">
           <p className="text-[9px] font-mono text-muted-foreground">5YR BENEFIT</p>
@@ -707,7 +707,7 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
    ──────────────────────────────────────────────────────────── */
 export default function SectorIntegrationExamples() {
   const totalExposure = sectors.reduce((s, x) => s + x.annualExposure, 0);
-  const totalPostGRGF™ = sectors.reduce((s, x) => s + x.postGRGF™, 0);
+  const totalPostGRGF = sectors.reduce((s, x) => s + x.postGRGF, 0);
   const totalBenefit = sectors.reduce((s, x) => s + x.fiveYearBenefit, 0);
   const avgReduction = Math.round(sectors.reduce((s, x) => s + x.reductionPct, 0) / sectors.length);
 
@@ -723,7 +723,7 @@ export default function SectorIntegrationExamples() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Total Annual Governance Exposure", value: fmtCurrency(totalExposure), sub: "Across 12 sectors", color: "text-destructive" },
-            { label: "Post-GRGF™ Annual Cost", value: fmtCurrency(totalPostGRGF™), sub: `${avgReduction}% avg reduction`, color: "text-primary" },
+            { label: "Post-GRGF™ Annual Cost", value: fmtCurrency(totalPostGRGF), sub: `${avgReduction}% avg reduction`, color: "text-primary" },
             { label: "Combined 5-Year Net Benefit", value: fmtCurrency(totalBenefit), sub: "Evidence-based projection", color: "text-accent" },
             { label: "Sectors Analyzed", value: "12", sub: "Full integration profiles", color: "text-foreground" },
           ].map(c => (

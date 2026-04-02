@@ -1,7 +1,7 @@
 import { PageHeader, Section } from "@/components/PageComponents";
 import { BookOpen, FileSearch, AlertTriangle, Scale, ShieldCheck } from "lucide-react";
 
-const WhatIsGRGF™ = () => {
+const WhatIsGRGF = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader
@@ -130,4 +130,4 @@ const WhatIsGRGF™ = () => {
   );
 };
 
-export default WhatIsGRGF™;
+export default WhatIsGRGF;

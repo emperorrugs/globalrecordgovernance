@@ -14,7 +14,7 @@ interface CaseProps {
   sector: string;
   icon: React.ComponentType<{ className?: string }>;
   realFailure: { headline: string; details: string[]; cost: string; source: string };
-  withGRGF™: { headline: string; mechanisms: string[]; outcome: string };
+  withGRGF: { headline: string; mechanisms: string[]; outcome: string };
   metrics: { label: string; before: string; after: string }[];
 }
 
@@ -35,7 +35,7 @@ const cases: CaseProps[] = [
       cost: "$50M+ in public funds, plus $12M investigation costs",
       source: "Based on patterns documented in OECD Anti-Corruption Reports and World Bank Integrity Vice Presidency findings",
     },
-    withGRGF™: {
+    withGRGF: {
       headline: "The procurement decision is recorded at execution time, bound to the approving official's role and mandate, sealed with SHA-256 hash, and made independently verifiable.",
       mechanisms: [
         "Record created at decision time — not days or weeks later",
@@ -71,7 +71,7 @@ const cases: CaseProps[] = [
       cost: "Patient safety incident, $8M settlement, loss of institutional trust",
       source: "Based on patterns from WHO Patient Safety reports and national healthcare governance audits",
     },
-    withGRGF™: {
+    withGRGF: {
       headline: "The inspection record is created at the time of inspection, sealed with evidence attachments, and stored in an append-only ledger that survives administrative transitions.",
       mechanisms: [
         "Inspection finding recorded in real-time during site visit",
@@ -107,7 +107,7 @@ const cases: CaseProps[] = [
       cost: "$200M+ infrastructure remediation, 4 years of litigation, 3 fatalities",
       source: "Based on patterns from infrastructure governance failures documented in World Bank Independent Evaluation Group reports",
     },
-    withGRGF™: {
+    withGRGF: {
       headline: "The permit approval is recorded with exact conditions, sealed at the moment of issuance, and both parties receive verification receipts linked to the same immutable record.",
       mechanisms: [
         "Permit conditions recorded as structured metadata at approval time",
@@ -175,9 +175,9 @@ const BeforeAfter = () => (
               <CheckCircle className="h-4 w-4 text-emerald-500" />
               <p className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-semibold">With GRGF™</p>
             </div>
-            <p className="text-sm text-foreground leading-relaxed mb-4">{c.withGRGF™.headline}</p>
+            <p className="text-sm text-foreground leading-relaxed mb-4">{c.withGRGF.headline}</p>
             <div className="space-y-2 mb-4">
-              {c.withGRGF™.mechanisms.map((m) => (
+              {c.withGRGF.mechanisms.map((m) => (
                 <div key={m} className="flex items-start gap-2">
                   <ShieldCheck className="h-3 w-3 text-emerald-500 shrink-0 mt-0.5" />
                   <p className="text-xs text-muted-foreground">{m}</p>
@@ -185,7 +185,7 @@ const BeforeAfter = () => (
               ))}
             </div>
             <div className="bg-emerald-100/50 dark:bg-emerald-900/20 rounded px-3 py-2">
-              <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300">{c.withGRGF™.outcome}</p>
+              <p className="text-xs font-medium text-emerald-700 dark:text-emerald-300">{c.withGRGF.outcome}</p>
             </div>
           </Card>
         </div>
