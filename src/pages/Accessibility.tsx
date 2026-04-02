@@ -5,13 +5,13 @@ const Accessibility = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="Accessibility Statement"
-      subtitle="GRGF is committed to providing an accessible website experience consistent with WCAG 2.2 Level AA."
+      subtitle="GRGF™ is committed to providing an accessible website experience consistent with WCAG 2.2 Level AA."
     />
 
     <Section>
       <div className="governance-card border-l-2 border-l-accent max-w-3xl">
         <p className="text-sm text-muted-foreground leading-relaxed">
-          The Global Record Governance Framework (GRGF) is committed to ensuring that its digital platform is accessible to all users, including those with disabilities. We design, develop, and maintain our platform to conform with the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA.
+          The Global Record Governance Framework (GRGF™) is committed to ensuring that its digital platform is accessible to all users, including those with disabilities. We design, develop, and maintain our platform to conform with the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA.
         </p>
       </div>
     </Section>

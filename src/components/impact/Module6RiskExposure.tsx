@@ -20,7 +20,7 @@ export function Module6RiskExposure() {
 
     const totalExposure = procurementExposure + auditCost + litigationCost + complianceCost + overrideCost;
 
-    // With GRGF: model 40-70% reduction
+    // With GRGF™: model 40-70% reduction
     const reductionRate = 0.55;
     const reducedExposure = totalExposure * (1 - reductionRate);
 
@@ -71,7 +71,7 @@ export function Module6RiskExposure() {
       </div>
 
       <div className="governance-card">
-        <h4 className="font-serif text-sm font-semibold mb-4">Risk Exposure: Current vs With GRGF</h4>
+        <h4 className="font-serif text-sm font-semibold mb-4">Risk Exposure: Current vs With GRGF™</h4>
         <div className="h-56">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData}>
@@ -80,7 +80,7 @@ export function Module6RiskExposure() {
               <YAxis tickFormatter={(v) => fmt(v)} tick={{ fontSize: 10, fontFamily: "var(--mono)" }} stroke="hsl(var(--muted-foreground))" />
               <Tooltip formatter={(v: number) => fmt(v)} contentStyle={{ fontSize: 11, fontFamily: "var(--mono)", background: "hsl(var(--card))", border: "1px solid hsl(var(--border))" }} />
               <Bar dataKey="current" name="Current Exposure" fill="hsl(var(--muted-foreground))" radius={[2, 2, 0, 0]} />
-              <Bar dataKey="reduced" name="With GRGF" fill="hsl(var(--accent))" radius={[2, 2, 0, 0]} />
+              <Bar dataKey="reduced" name="With GRGF™" fill="hsl(var(--accent))" radius={[2, 2, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>

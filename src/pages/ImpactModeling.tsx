@@ -22,7 +22,7 @@ const ImpactModeling = () => {
         subtitle="Sovereign-grade decision-support system for structured pilot evaluation. Conservative modeling. Transparent assumptions."
       >
         <div className="mt-4">
-          <PDFExportButton filename="GRGF-Impact-Model" label="Export Briefing" />
+          <PDFExportButton filename="GRGF™-Impact-Model" label="Export Briefing" />
         </div>
       </PageHeader>
 

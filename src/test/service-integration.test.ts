@@ -1,5 +1,5 @@
 /**
- * GRGF Service Layer Integration Tests
+ * GRGF™ Service Layer Integration Tests
  * Tests the complete record lifecycle through service APIs.
  */
 
@@ -155,7 +155,7 @@ describe('Sealed Record Immutability', () => {
     expect(manifest.status).toBe('sealed');
     expect(manifest.sealed_at).toBe('2024-06-15T00:00:00Z');
     expect((manifest.integrity as Record<string, unknown>).record_hash).toBe('abc123def456');
-    expect(manifest.framework).toBe('GRGF');
+    expect(manifest.framework).toBe('GRGF™');
   });
 
   it('manifest includes previous_hash when present', () => {
@@ -175,9 +175,9 @@ describe('Anchor Batch Generation', () => {
     expect(ids.size).toBe(100);
   });
 
-  it('follows GRGF-ANCHOR prefix convention', () => {
+  it('follows GRGF™-ANCHOR prefix convention', () => {
     const id = generateAnchorBatchId();
-    expect(id).toMatch(/^GRGF-ANCHOR-/);
+    expect(id).toMatch(/^GRGF™-ANCHOR-/);
   });
 });
 

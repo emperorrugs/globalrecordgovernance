@@ -34,7 +34,7 @@ export const marketplaceProducts: MarketplaceProduct[] = [
     id: "anchor-chain-engine",
     name: "Anchor Chain™ Engine",
     tagline: "The cryptographic backbone of institutional truth",
-    description: "Core governance record engine with SHA-256 hash-chaining, authority binding, and append-only evidence logs. The foundational layer for all GRGF deployments.",
+    description: "Core governance record engine with SHA-256 hash-chaining, authority binding, and append-only evidence logs. The foundational layer for all GRGF™ deployments.",
     category: "public-sector",
     icon: "Link",
     tier: "core",
@@ -60,7 +60,7 @@ export const marketplaceProducts: MarketplaceProduct[] = [
   },
   {
     id: "grgf-verify",
-    name: "GRGF Verify",
+    name: "GRGF™ Verify",
     tagline: "Public verification without confidential exposure",
     description: "Enable citizens, auditors, and institutions to independently verify the integrity and provenance of sealed governance records — without revealing confidential content.",
     category: "public-sector",
@@ -334,7 +334,7 @@ export const marketplaceProducts: MarketplaceProduct[] = [
   },
   {
     id: "grgf-api-gateway",
-    name: "GRGF API Gateway",
+    name: "GRGF™ API Gateway",
     tagline: "Integrate governance integrity into any system",
     description: "RESTful API gateway for developers building governance-aware applications. Submit records, verify integrity, query audit trails, and embed verification widgets.",
     category: "developer",

@@ -24,7 +24,7 @@ const articles = [
     title: "Anti-Capture Governance Mechanisms",
     category: "Safeguards",
     date: "February 2026",
-    excerpt: "How do you prevent a neutral governance infrastructure from being captured by vendors, governments, or interest groups? A structural analysis of GRGF's five Anti-Capture Clauses (AC-01–05).",
+    excerpt: "How do you prevent a neutral governance infrastructure from being captured by vendors, governments, or interest groups? A structural analysis of GRGF™'s five Anti-Capture Clauses (AC-01–05).",
   },
   {
     slug: "append-only-records",
@@ -45,12 +45,12 @@ const articles = [
 const InsightsIndex = () => (
   <div className="animate-fade-in">
     <SEOHead
-      title="Institutional Insights — GRGF"
+      title="Institutional Insights — GRGF™"
       description="Research, analysis, and thought leadership from the Global Record Governance Framework. Institutional governance, DPI architecture, and digital trust."
     />
     <PageHeader
       title="Institutional Insights"
-      subtitle="Research and analysis from the GRGF knowledge base on governance integrity, digital trust architecture, and institutional accountability."
+      subtitle="Research and analysis from the GRGF™ knowledge base on governance integrity, digital trust architecture, and institutional accountability."
     />
 
     <Section>

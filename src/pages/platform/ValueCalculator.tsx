@@ -25,102 +25,102 @@ interface CompanyResearch {
 // ── Methodology descriptions keyed by domain area ──
 const METHODOLOGY: Record<string, string> = {
   // Transit
-  "Safety Incident Liability": "Based on average transit incident rates per 100M passenger-km from FTA National Transit Database, multiplied by average settlement cost per incident ($420K–$1.2M). GRGF reduces exposure through real-time event hash-sealing, deterministic proof of safety protocol compliance, and accelerated investigation timelines (40+ hours → <4 hours).",
-  "Workers' Compensation Claims": "Modeled on sector average lost-time injury rates (WSIB/WCB data) × average claim cost. GRGF contribution: verifiable proof of training completion, PPE compliance records, and incident response adherence reduces claim frequency and dispute costs.",
-  "Service Disruption Costs": "Quantified using revenue-per-hour lost during unplanned outages, emergency response mobilization, and cascading delay costs. GRGF enables cross-system event correlation and maintenance compliance verification to prevent failures before they cascade.",
-  "Maintenance Accountability Gaps": "Based on deferred maintenance cost multipliers (1:4 to 1:10 ratio) from infrastructure engineering literature. GRGF's chain-of-custody records prove maintenance execution, flag deferrals, and assign accountability for every decision.",
-  "Procurement Irregularities": "Uses Transparency International's 5–15% public procurement leakage benchmark applied to annual procurement budget. GRGF records every procurement decision with authority binding and detects omissions in required approval workflows.",
-  "Regulatory Non-Compliance": "Estimated from historical fine patterns (provincial/federal regulators) and compliance remediation costs. GRGF provides continuous compliance evidence, reducing audit cycles and preventing repeat violations.",
-  "Insurance Premium Overcharges": "Based on actuarial studies showing governance-verified risk reduction yields 8–15% premium savings. GRGF provides insurers with verifiable operational evidence, lowering perceived risk profiles.",
-  "Legal Defense & Settlements": "Modeled on sector litigation frequency × average defense cost. GRGF transforms legal proceedings by providing cryptographically verified evidence, reducing discovery costs by 60–80% and strengthening institutional defense positions.",
-  "Audit & Investigation Costs": "Calculated from average external audit firm engagement rates and internal investigation FTE costs. GRGF's continuous compliance evidence model reduces audit prep time by 70–85% and shortens cycle duration.",
-  "Fleet Asset Mismanagement": "Based on asset lifecycle cost variance between well-managed and poorly-tracked fleets. GRGF provides complete chain-of-custody from acquisition through every maintenance event to disposition.",
-  "Contractor Oversight Failures": "Uses contract dispute frequency and cost data. GRGF records every milestone, inspection, and change order with verifiable authority binding.",
-  "Public Complaint Resolution": "Modeled on complaint volume × average resolution cost including staff time, investigation, and remediation. GRGF provides instant access to verified event history, reducing investigation time by 80%.",
+  "Safety Incident Liability": "Based on average transit incident rates per 100M passenger-km from FTA National Transit Database, multiplied by average settlement cost per incident ($420K–$1.2M). GRGF™ reduces exposure through real-time event hash-sealing, deterministic proof of safety protocol compliance, and accelerated investigation timelines (40+ hours → <4 hours).",
+  "Workers' Compensation Claims": "Modeled on sector average lost-time injury rates (WSIB/WCB data) × average claim cost. GRGF™ contribution: verifiable proof of training completion, PPE compliance records, and incident response adherence reduces claim frequency and dispute costs.",
+  "Service Disruption Costs": "Quantified using revenue-per-hour lost during unplanned outages, emergency response mobilization, and cascading delay costs. GRGF™ enables cross-system event correlation and maintenance compliance verification to prevent failures before they cascade.",
+  "Maintenance Accountability Gaps": "Based on deferred maintenance cost multipliers (1:4 to 1:10 ratio) from infrastructure engineering literature. GRGF™'s chain-of-custody records prove maintenance execution, flag deferrals, and assign accountability for every decision.",
+  "Procurement Irregularities": "Uses Transparency International's 5–15% public procurement leakage benchmark applied to annual procurement budget. GRGF™ records every procurement decision with authority binding and detects omissions in required approval workflows.",
+  "Regulatory Non-Compliance": "Estimated from historical fine patterns (provincial/federal regulators) and compliance remediation costs. GRGF™ provides continuous compliance evidence, reducing audit cycles and preventing repeat violations.",
+  "Insurance Premium Overcharges": "Based on actuarial studies showing governance-verified risk reduction yields 8–15% premium savings. GRGF™ provides insurers with verifiable operational evidence, lowering perceived risk profiles.",
+  "Legal Defense & Settlements": "Modeled on sector litigation frequency × average defense cost. GRGF™ transforms legal proceedings by providing cryptographically verified evidence, reducing discovery costs by 60–80% and strengthening institutional defense positions.",
+  "Audit & Investigation Costs": "Calculated from average external audit firm engagement rates and internal investigation FTE costs. GRGF™'s continuous compliance evidence model reduces audit prep time by 70–85% and shortens cycle duration.",
+  "Fleet Asset Mismanagement": "Based on asset lifecycle cost variance between well-managed and poorly-tracked fleets. GRGF™ provides complete chain-of-custody from acquisition through every maintenance event to disposition.",
+  "Contractor Oversight Failures": "Uses contract dispute frequency and cost data. GRGF™ records every milestone, inspection, and change order with verifiable authority binding.",
+  "Public Complaint Resolution": "Modeled on complaint volume × average resolution cost including staff time, investigation, and remediation. GRGF™ provides instant access to verified event history, reducing investigation time by 80%.",
   // Healthcare
-  "Patient Safety Incidents": "Based on CIHI patient safety event rates and associated costs (extended stays, remediation, settlements). GRGF enables real-time clinical event tracking with hash-sealed records, reducing investigation time from days to minutes.",
-  "Malpractice & Liability": "Modeled on CMPA/HIROC claims data: frequency × average indemnity + defense costs. GRGF provides deterministic proof of clinical protocol adherence, transforming malpractice defense from narrative-based to evidence-based.",
-  "Medication Error Costs": "Calculated using ISMP Canada adverse drug event rates × cost-per-event (treatment, extended stay, liability). GRGF captures medication administration events with authority binding and omission detection for missed doses.",
-  "Dietary / Care Compliance Gaps": "Based on care plan deviation rates and associated adverse outcomes. GRGF detects when required actions (e.g., NPO diet verification, 24-hour dietitian assessment) are not executed within mandatory windows.",
-  "Regulatory Non-Compliance Fines": "Estimated from Accreditation Canada standards violations and provincial health authority penalty histories. GRGF provides continuous compliance evidence for 100% of surveyed standards.",
-  "Insurance Premium Exposure": "Based on HIROC risk-rated premium models. GRGF's verifiable governance records demonstrate risk management maturity, qualifying institutions for preferred premium tiers.",
-  "Audit & Accreditation Costs": "Calculated from accreditation preparation FTE hours and external surveyor engagement costs. GRGF reduces prep time by 75% through always-available compliance evidence.",
-  "Supply Chain Irregularities": "Uses healthcare supply chain benchmark data for procurement leakage and waste. GRGF records every purchase order, receipt, and inventory decision with authority context.",
-  "Staff Credentialing Gaps": "Based on credentialing verification costs and liability from lapsed credentials. GRGF provides real-time credentialing status with hash-sealed verification receipts.",
-  "Records Reconciliation Labour": "Modeled on HIM department FTE costs for manual record reconciliation. GRGF's structured event model eliminates 85–90% of manual reconciliation through automated integrity verification.",
-  "Incident Investigation Time": "Based on average investigation duration × investigator hourly cost. GRGF reduces investigation time by 85–96% through instant access to verified event timelines.",
+  "Patient Safety Incidents": "Based on CIHI patient safety event rates and associated costs (extended stays, remediation, settlements). GRGF™ enables real-time clinical event tracking with hash-sealed records, reducing investigation time from days to minutes.",
+  "Malpractice & Liability": "Modeled on CMPA/HIROC claims data: frequency × average indemnity + defense costs. GRGF™ provides deterministic proof of clinical protocol adherence, transforming malpractice defense from narrative-based to evidence-based.",
+  "Medication Error Costs": "Calculated using ISMP Canada adverse drug event rates × cost-per-event (treatment, extended stay, liability). GRGF™ captures medication administration events with authority binding and omission detection for missed doses.",
+  "Dietary / Care Compliance Gaps": "Based on care plan deviation rates and associated adverse outcomes. GRGF™ detects when required actions (e.g., NPO diet verification, 24-hour dietitian assessment) are not executed within mandatory windows.",
+  "Regulatory Non-Compliance Fines": "Estimated from Accreditation Canada standards violations and provincial health authority penalty histories. GRGF™ provides continuous compliance evidence for 100% of surveyed standards.",
+  "Insurance Premium Exposure": "Based on HIROC risk-rated premium models. GRGF™'s verifiable governance records demonstrate risk management maturity, qualifying institutions for preferred premium tiers.",
+  "Audit & Accreditation Costs": "Calculated from accreditation preparation FTE hours and external surveyor engagement costs. GRGF™ reduces prep time by 75% through always-available compliance evidence.",
+  "Supply Chain Irregularities": "Uses healthcare supply chain benchmark data for procurement leakage and waste. GRGF™ records every purchase order, receipt, and inventory decision with authority context.",
+  "Staff Credentialing Gaps": "Based on credentialing verification costs and liability from lapsed credentials. GRGF™ provides real-time credentialing status with hash-sealed verification receipts.",
+  "Records Reconciliation Labour": "Modeled on HIM department FTE costs for manual record reconciliation. GRGF™'s structured event model eliminates 85–90% of manual reconciliation through automated integrity verification.",
+  "Incident Investigation Time": "Based on average investigation duration × investigator hourly cost. GRGF™ reduces investigation time by 85–96% through instant access to verified event timelines.",
   // Government
-  "Procurement Fraud & Leakage": "Uses World Bank/OECD estimate of 5–15% procurement leakage in public sector, applied to annual procurement expenditure. GRGF detects omitted approvals, unauthorized changes, and process bypasses through deterministic workflow verification.",
-  "Audit Cycle Costs": "Calculated from Auditor General published audit costs and departmental preparation overhead. GRGF's continuous compliance model reduces audit cycle time by 40% and preparation labour by 75%.",
-  "Regulatory Compliance Gaps": "Based on historical non-compliance findings and remediation costs from Treasury Board reports. GRGF provides real-time compliance dashboards with verifiable evidence for every policy requirement.",
-  "Legal & Litigation Costs": "Modeled on Department of Justice case volume and average cost-per-case. GRGF reduces discovery costs and strengthens crown positions through tamper-evident governance records.",
-  "Contract Mismanagement": "Uses PSPC contract amendment frequency and associated cost overrun data. GRGF records every contract modification with authority binding and detects unauthorized scope changes.",
-  "IT System Duplication": "Based on GC IT spending analysis showing 30–40% duplication across departments. GRGF's federated model enables cross-departmental record sharing, reducing redundant system investments.",
-  "Inter-Agency Reconciliation": "Calculated from FTE costs of manual inter-departmental data reconciliation. GRGF's standardized governance records enable automated cross-agency verification.",
-  "Freedom of Information Costs": "Modeled on ATIP request volume × average processing cost. GRGF's structured records reduce search and retrieval time by 70–80% per request.",
-  "Internal Investigation Costs": "Based on internal affairs/IG investigation frequency and duration. GRGF provides instant access to verified event histories, reducing investigation timelines by 75%.",
-  "Staff Accountability Gaps": "Uses public sector grievance and disciplinary action costs. GRGF provides verifiable evidence of performance expectations, decisions, and outcomes.",
-  "Public Trust Erosion Costs": "Estimated from public opinion research correlation between governance failures and program participation rates. GRGF's verification portal enables public trust through transparency.",
-  "Records Management Overhead": "Based on records management compliance costs and FTE overhead. GRGF automates 85–90% of retention scheduling, disposition authorization, and chain-of-custody verification.",
+  "Procurement Fraud & Leakage": "Uses World Bank/OECD estimate of 5–15% procurement leakage in public sector, applied to annual procurement expenditure. GRGF™ detects omitted approvals, unauthorized changes, and process bypasses through deterministic workflow verification.",
+  "Audit Cycle Costs": "Calculated from Auditor General published audit costs and departmental preparation overhead. GRGF™'s continuous compliance model reduces audit cycle time by 40% and preparation labour by 75%.",
+  "Regulatory Compliance Gaps": "Based on historical non-compliance findings and remediation costs from Treasury Board reports. GRGF™ provides real-time compliance dashboards with verifiable evidence for every policy requirement.",
+  "Legal & Litigation Costs": "Modeled on Department of Justice case volume and average cost-per-case. GRGF™ reduces discovery costs and strengthens crown positions through tamper-evident governance records.",
+  "Contract Mismanagement": "Uses PSPC contract amendment frequency and associated cost overrun data. GRGF™ records every contract modification with authority binding and detects unauthorized scope changes.",
+  "IT System Duplication": "Based on GC IT spending analysis showing 30–40% duplication across departments. GRGF™'s federated model enables cross-departmental record sharing, reducing redundant system investments.",
+  "Inter-Agency Reconciliation": "Calculated from FTE costs of manual inter-departmental data reconciliation. GRGF™'s standardized governance records enable automated cross-agency verification.",
+  "Freedom of Information Costs": "Modeled on ATIP request volume × average processing cost. GRGF™'s structured records reduce search and retrieval time by 70–80% per request.",
+  "Internal Investigation Costs": "Based on internal affairs/IG investigation frequency and duration. GRGF™ provides instant access to verified event histories, reducing investigation timelines by 75%.",
+  "Staff Accountability Gaps": "Uses public sector grievance and disciplinary action costs. GRGF™ provides verifiable evidence of performance expectations, decisions, and outcomes.",
+  "Public Trust Erosion Costs": "Estimated from public opinion research correlation between governance failures and program participation rates. GRGF™'s verification portal enables public trust through transparency.",
+  "Records Management Overhead": "Based on records management compliance costs and FTE overhead. GRGF™ automates 85–90% of retention scheduling, disposition authorization, and chain-of-custody verification.",
   // Finance
-  "Compliance & Regulatory Fines": "Based on OSFI/SEC/FCA enforcement action history and average penalty amounts. GRGF provides continuous compliance evidence for regulatory examinations, reducing finding rates by 80%.",
-  "Fraud Detection Gaps": "Uses industry fraud loss benchmarks (ACFE Report to the Nations: 5% of revenue). GRGF's omission detection identifies when required controls are bypassed or approval workflows are circumvented.",
-  "AML/KYC Non-Compliance": "Modeled on AML remediation program costs and regulatory penalty data. GRGF provides tamper-evident customer due diligence records with complete audit trails.",
-  "Audit & Reporting Costs": "Calculated from Big 4 engagement rates and internal audit FTE costs. GRGF reduces audit preparation by 75% through always-available, integrity-verified evidence.",
-  "Operational Risk Losses": "Based on Basel III operational risk loss data and internal loss event databases. GRGF reduces operational risk through deterministic event recording and authority binding.",
-  "Contract Dispute Costs": "Uses commercial arbitration frequency and cost data. GRGF provides cryptographically verified contract execution evidence, reducing dispute resolution time and costs.",
-  "Data Breach Liability": "Modeled on IBM Cost of a Data Breach Report sector averages. GRGF's privacy-by-design architecture (PII minimization, pseudonymization) reduces breach scope and liability.",
-  "Insurance Premiums": "Based on insurance premium benchmarks. GRGF's verifiable governance maturity qualifies institutions for preferred premium tiers.",
-  "Legal Defense": "Calculated from litigation frequency and average defense cost. GRGF transforms legal proceedings with tamper-evident evidence chains.",
-  "Internal Investigation": "Based on compliance investigation duration and FTE costs. GRGF reduces investigation time by 85% through instant verified event access.",
-  "Reconciliation Labour": "Uses back-office FTE costs for manual transaction and record reconciliation. GRGF automates 90% of reconciliation through structured, integrity-verified records.",
-  "Reputational Risk Costs": "Estimated from brand value impact studies and customer attrition rates following governance failures. GRGF enables proactive governance demonstration.",
+  "Compliance & Regulatory Fines": "Based on OSFI/SEC/FCA enforcement action history and average penalty amounts. GRGF™ provides continuous compliance evidence for regulatory examinations, reducing finding rates by 80%.",
+  "Fraud Detection Gaps": "Uses industry fraud loss benchmarks (ACFE Report to the Nations: 5% of revenue). GRGF™'s omission detection identifies when required controls are bypassed or approval workflows are circumvented.",
+  "AML/KYC Non-Compliance": "Modeled on AML remediation program costs and regulatory penalty data. GRGF™ provides tamper-evident customer due diligence records with complete audit trails.",
+  "Audit & Reporting Costs": "Calculated from Big 4 engagement rates and internal audit FTE costs. GRGF™ reduces audit preparation by 75% through always-available, integrity-verified evidence.",
+  "Operational Risk Losses": "Based on Basel III operational risk loss data and internal loss event databases. GRGF™ reduces operational risk through deterministic event recording and authority binding.",
+  "Contract Dispute Costs": "Uses commercial arbitration frequency and cost data. GRGF™ provides cryptographically verified contract execution evidence, reducing dispute resolution time and costs.",
+  "Data Breach Liability": "Modeled on IBM Cost of a Data Breach Report sector averages. GRGF™'s privacy-by-design architecture (PII minimization, pseudonymization) reduces breach scope and liability.",
+  "Insurance Premiums": "Based on insurance premium benchmarks. GRGF™'s verifiable governance maturity qualifies institutions for preferred premium tiers.",
+  "Legal Defense": "Calculated from litigation frequency and average defense cost. GRGF™ transforms legal proceedings with tamper-evident evidence chains.",
+  "Internal Investigation": "Based on compliance investigation duration and FTE costs. GRGF™ reduces investigation time by 85% through instant verified event access.",
+  "Reconciliation Labour": "Uses back-office FTE costs for manual transaction and record reconciliation. GRGF™ automates 90% of reconciliation through structured, integrity-verified records.",
+  "Reputational Risk Costs": "Estimated from brand value impact studies and customer attrition rates following governance failures. GRGF™ enables proactive governance demonstration.",
   // Infrastructure
-  "Safety & Environmental Liability": "Based on construction/infrastructure incident rates and average liability per event. GRGF provides real-time safety compliance verification and environmental monitoring records.",
-  "Permit & Licensing Delays": "Modeled on permit processing delays × daily project cost. GRGF accelerates permit verification through pre-validated compliance evidence packages.",
-  "Asset Lifecycle Mismanagement": "Based on infrastructure asset depreciation variance between managed and unmanaged portfolios. GRGF provides complete asset chain-of-custody from commissioning to decommissioning.",
-  "Environmental Incident Costs": "Modeled on environmental remediation costs and regulatory penalties. GRGF's omission detection identifies when required environmental assessments are missed.",
-  "Insurance & Bonding Costs": "Based on construction insurance and performance bond premium benchmarks. GRGF's verified project governance records reduce insurer risk assessments.",
-  "Legal & Arbitration": "Uses construction arbitration frequency and average cost. GRGF provides tamper-evident project records for dispute resolution.",
-  "Audit & Inspection Costs": "Calculated from regulatory inspection frequency and preparation costs. GRGF's continuous compliance evidence reduces preparation time by 75%.",
-  "Change Order Fraud": "Based on construction industry change order fraud detection rates. GRGF records every change order with authority binding and detects unauthorized modifications.",
-  "Public Compensation Claims": "Modeled on public liability claim frequency and average settlement. GRGF provides instant verified evidence for claim investigation.",
+  "Safety & Environmental Liability": "Based on construction/infrastructure incident rates and average liability per event. GRGF™ provides real-time safety compliance verification and environmental monitoring records.",
+  "Permit & Licensing Delays": "Modeled on permit processing delays × daily project cost. GRGF™ accelerates permit verification through pre-validated compliance evidence packages.",
+  "Asset Lifecycle Mismanagement": "Based on infrastructure asset depreciation variance between managed and unmanaged portfolios. GRGF™ provides complete asset chain-of-custody from commissioning to decommissioning.",
+  "Environmental Incident Costs": "Modeled on environmental remediation costs and regulatory penalties. GRGF™'s omission detection identifies when required environmental assessments are missed.",
+  "Insurance & Bonding Costs": "Based on construction insurance and performance bond premium benchmarks. GRGF™'s verified project governance records reduce insurer risk assessments.",
+  "Legal & Arbitration": "Uses construction arbitration frequency and average cost. GRGF™ provides tamper-evident project records for dispute resolution.",
+  "Audit & Inspection Costs": "Calculated from regulatory inspection frequency and preparation costs. GRGF™'s continuous compliance evidence reduces preparation time by 75%.",
+  "Change Order Fraud": "Based on construction industry change order fraud detection rates. GRGF™ records every change order with authority binding and detects unauthorized modifications.",
+  "Public Compensation Claims": "Modeled on public liability claim frequency and average settlement. GRGF™ provides instant verified evidence for claim investigation.",
   // Education
-  "Research Integrity Incidents": "Based on ORI/research misconduct investigation costs and institutional remediation. GRGF provides tamper-evident research data governance records.",
-  "Accreditation Compliance Costs": "Modeled on institutional accreditation preparation FTE hours and consultant costs. GRGF reduces preparation by 75% through continuous compliance evidence.",
-  "Student Records Mismanagement": "Based on FERPA violation penalties and records remediation costs. GRGF provides integrity-verified student record management with complete audit trails.",
-  "Grant Accountability Gaps": "Uses research grant audit finding rates and remediation costs. GRGF records every grant expenditure decision with authority binding and compliance verification.",
-  "HR/Labour Disputes": "Based on academic institution grievance frequency and resolution costs. GRGF provides verified evidence of employment decisions and institutional processes.",
-  "Data Protection Violations": "Modeled on PIPEDA/GDPR penalty benchmarks for educational institutions. GRGF's privacy-by-design architecture reduces violation scope.",
-  "Facility Management Gaps": "Uses campus facility incident rates and associated costs. GRGF provides chain-of-custody records for maintenance and safety compliance.",
-  "Administrative Overhead": "Based on institutional administration cost benchmarks. GRGF automates 85% of governance record management, freeing administrative capacity.",
+  "Research Integrity Incidents": "Based on ORI/research misconduct investigation costs and institutional remediation. GRGF™ provides tamper-evident research data governance records.",
+  "Accreditation Compliance Costs": "Modeled on institutional accreditation preparation FTE hours and consultant costs. GRGF™ reduces preparation by 75% through continuous compliance evidence.",
+  "Student Records Mismanagement": "Based on FERPA violation penalties and records remediation costs. GRGF™ provides integrity-verified student record management with complete audit trails.",
+  "Grant Accountability Gaps": "Uses research grant audit finding rates and remediation costs. GRGF™ records every grant expenditure decision with authority binding and compliance verification.",
+  "HR/Labour Disputes": "Based on academic institution grievance frequency and resolution costs. GRGF™ provides verified evidence of employment decisions and institutional processes.",
+  "Data Protection Violations": "Modeled on PIPEDA/GDPR penalty benchmarks for educational institutions. GRGF™'s privacy-by-design architecture reduces violation scope.",
+  "Facility Management Gaps": "Uses campus facility incident rates and associated costs. GRGF™ provides chain-of-custody records for maintenance and safety compliance.",
+  "Administrative Overhead": "Based on institutional administration cost benchmarks. GRGF™ automates 85% of governance record management, freeing administrative capacity.",
   // Justice
-  "Evidence Chain-of-Custody Failures": "Based on case dismissal rates due to chain-of-custody challenges and associated costs. GRGF provides cryptographic chain-of-custody verification with tamper-evident evidence records.",
-  "Case Management Delays": "Modeled on court backlog costs and average delay duration. GRGF accelerates case processing through instant access to verified governance records.",
-  "Wrongful Conviction Liability": "Uses wrongful conviction compensation data and litigation costs. GRGF's tamper-evident records reduce evidence manipulation risk by 92%.",
-  "Records Tampering Exposure": "Based on documented evidence tampering incidents and institutional remediation costs. GRGF's append-only, hash-chained architecture makes tampering detectable and provable.",
-  "Inter-Agency Data Gaps": "Modeled on cross-jurisdictional information sharing failure costs. GRGF's federated model enables verified record sharing across justice agencies.",
-  "Compliance & Oversight Costs": "Uses justice sector oversight body costs and compliance program budgets. GRGF reduces compliance evidence preparation by 76%.",
-  "Legal Challenge Costs": "Based on procedural challenge frequency and associated defense costs. GRGF provides verifiable evidence of procedural compliance.",
-  "Public Trust Deficits": "Estimated from justice sector public confidence surveys and program participation impacts. GRGF's public verification portal enables transparency.",
+  "Evidence Chain-of-Custody Failures": "Based on case dismissal rates due to chain-of-custody challenges and associated costs. GRGF™ provides cryptographic chain-of-custody verification with tamper-evident evidence records.",
+  "Case Management Delays": "Modeled on court backlog costs and average delay duration. GRGF™ accelerates case processing through instant access to verified governance records.",
+  "Wrongful Conviction Liability": "Uses wrongful conviction compensation data and litigation costs. GRGF™'s tamper-evident records reduce evidence manipulation risk by 92%.",
+  "Records Tampering Exposure": "Based on documented evidence tampering incidents and institutional remediation costs. GRGF™'s append-only, hash-chained architecture makes tampering detectable and provable.",
+  "Inter-Agency Data Gaps": "Modeled on cross-jurisdictional information sharing failure costs. GRGF™'s federated model enables verified record sharing across justice agencies.",
+  "Compliance & Oversight Costs": "Uses justice sector oversight body costs and compliance program budgets. GRGF™ reduces compliance evidence preparation by 76%.",
+  "Legal Challenge Costs": "Based on procedural challenge frequency and associated defense costs. GRGF™ provides verifiable evidence of procedural compliance.",
+  "Public Trust Deficits": "Estimated from justice sector public confidence surveys and program participation impacts. GRGF™'s public verification portal enables transparency.",
   // Municipal
-  "Procurement & Tendering Irregularities": "Based on municipal audit findings for procurement non-compliance × remediation costs. GRGF detects omitted approvals and bid irregularities through deterministic workflow verification.",
-  "Building Permit Accountability": "Modeled on permit-related liability incidents and inspection failure costs. GRGF provides hash-sealed inspection records with verifiable authority binding.",
-  "Infrastructure Project Overruns": "Uses municipal project cost overrun benchmarks (average 25–40% over budget). GRGF records every project decision and change order with authority context.",
-  "Bylaw Enforcement Gaps": "Based on bylaw enforcement complaint resolution costs and litigation. GRGF provides verifiable enforcement action records for legal proceedings.",
-  "Public Complaint Costs": "Modeled on complaint volume × average investigation and resolution cost. GRGF reduces investigation time by 72% through instant verified record access.",
-  "Council Decision Accountability": "Uses municipal governance challenge costs and remediation. GRGF provides tamper-evident records of council decisions, delegations, and approvals.",
-  "Audit & Oversight Costs": "Based on municipal audit engagement costs and preparation overhead. GRGF reduces audit preparation by 78% through continuous compliance evidence.",
-  "Contractor Mismanagement": "Uses municipal contract performance deviation rates and remediation costs. GRGF records every contractor milestone and payment with authority verification.",
-  "Environmental Compliance": "Based on municipal environmental violation penalties and remediation costs. GRGF provides verifiable environmental monitoring and compliance records.",
-  "Legal & Liability Exposure": "Modeled on municipal litigation frequency and average defense cost. GRGF strengthens legal positions through tamper-evident governance evidence.",
-  "Legal & Liability Costs": "Calculated from litigation frequency and average defense cost. GRGF transforms legal proceedings with tamper-evident evidence chains.",
+  "Procurement & Tendering Irregularities": "Based on municipal audit findings for procurement non-compliance × remediation costs. GRGF™ detects omitted approvals and bid irregularities through deterministic workflow verification.",
+  "Building Permit Accountability": "Modeled on permit-related liability incidents and inspection failure costs. GRGF™ provides hash-sealed inspection records with verifiable authority binding.",
+  "Infrastructure Project Overruns": "Uses municipal project cost overrun benchmarks (average 25–40% over budget). GRGF™ records every project decision and change order with authority context.",
+  "Bylaw Enforcement Gaps": "Based on bylaw enforcement complaint resolution costs and litigation. GRGF™ provides verifiable enforcement action records for legal proceedings.",
+  "Public Complaint Costs": "Modeled on complaint volume × average investigation and resolution cost. GRGF™ reduces investigation time by 72% through instant verified record access.",
+  "Council Decision Accountability": "Uses municipal governance challenge costs and remediation. GRGF™ provides tamper-evident records of council decisions, delegations, and approvals.",
+  "Audit & Oversight Costs": "Based on municipal audit engagement costs and preparation overhead. GRGF™ reduces audit preparation by 78% through continuous compliance evidence.",
+  "Contractor Mismanagement": "Uses municipal contract performance deviation rates and remediation costs. GRGF™ records every contractor milestone and payment with authority verification.",
+  "Environmental Compliance": "Based on municipal environmental violation penalties and remediation costs. GRGF™ provides verifiable environmental monitoring and compliance records.",
+  "Legal & Liability Exposure": "Modeled on municipal litigation frequency and average defense cost. GRGF™ strengthens legal positions through tamper-evident governance evidence.",
+  "Legal & Liability Costs": "Calculated from litigation frequency and average defense cost. GRGF™ transforms legal proceedings with tamper-evident evidence chains.",
 };
 
 // ── General methodology for calculations ──
 const GENERAL_METHODOLOGY = {
-  beforeCalc: "Before GRGF = Base sector cost × Organization scale multiplier. Base costs derived from sector-specific public data sources, audit reports, and international benchmarks.",
-  afterCalc: "After GRGF = Before GRGF × (1 − Reduction%). Reduction rates based on GRGF's demonstrated capabilities: hash-sealed records, omission detection, authority binding, and continuous compliance evidence.",
+  beforeCalc: "Before GRGF™ = Base sector cost × Organization scale multiplier. Base costs derived from sector-specific public data sources, audit reports, and international benchmarks.",
+  afterCalc: "After GRGF™ = Before GRGF™ × (1 − Reduction%). Reduction rates based on GRGF™'s demonstrated capabilities: hash-sealed records, omission detection, authority binding, and continuous compliance evidence.",
   savingsCalc: "Annual Savings = Before − After. Represents annualized risk-adjusted cost reduction.",
   projectionCalc: "5-Year Projection uses phased adoption multipliers: Year 1 (40%), Year 2 (70%), Year 3 (90%), Years 4–5 (100%). Deployment costs are front-loaded and decline as system matures.",
   roiCalc: "ROI = (Cumulative Net Benefit ÷ Total Deployment Cost) × 100. Year 1 ROI uses first-year savings minus first-year deployment cost.",
@@ -389,7 +389,7 @@ export default function ValueCalculator() {
     }
     setPdfLoading(true);
     try {
-      await exportElementToPDF(el, `GRGF_Value_Analysis_${orgName.replace(/\s+/g, "_")}`);
+      await exportElementToPDF(el, `GRGF™_Value_Analysis_${orgName.replace(/\s+/g, "_")}`);
     } catch {
       window.print();
     } finally {
@@ -400,10 +400,10 @@ export default function ValueCalculator() {
   const handleDownloadCSV = () => {
     if (!results) return;
     const lines = [
-      `GRGF Value Calculator — ${orgName}`,
+      `GRGF™ Value Calculator — ${orgName}`,
       `Sector: ${profile.label} | Scale: ${scale}x | Date: ${new Date().toLocaleDateString()}`,
       "",
-      "Operational Domain,Before GRGF ($M),After GRGF ($M),Savings ($M),Reduction %",
+      "Operational Domain,Before GRGF™ ($M),After GRGF™ ($M),Savings ($M),Reduction %",
       ...results.domains.map(d => `"${d.area}",${d.before.toFixed(2)},${d.after.toFixed(2)},${d.saved.toFixed(2)},${d.reduction}`),
       `TOTAL,${results.totalBefore.toFixed(2)},${results.totalAfter.toFixed(2)},${results.totalSaved.toFixed(2)},${pct(results.totalBefore, results.totalAfter)}`,
       "",
@@ -421,7 +421,7 @@ export default function ValueCalculator() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `GRGF_Value_Analysis_${orgName.replace(/\s+/g, "_")}.csv`;
+    a.download = `GRGF™_Value_Analysis_${orgName.replace(/\s+/g, "_")}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -429,7 +429,7 @@ export default function ValueCalculator() {
   const handleDownloadJSON = () => {
     if (!results) return;
     const data = {
-      report: "GRGF Before vs. After Value Analysis",
+      report: "GRGF™ Before vs. After Value Analysis",
       organization: orgName,
       sector: profile.label,
       scale,
@@ -474,7 +474,7 @@ export default function ValueCalculator() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `GRGF_Value_Analysis_${orgName.replace(/\s+/g, "_")}.json`;
+    a.download = `GRGF™_Value_Analysis_${orgName.replace(/\s+/g, "_")}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -485,17 +485,17 @@ export default function ValueCalculator() {
       <div className="border-b border-border bg-card/50 px-6 py-8 print:bg-transparent print:border-0">
         <div className="max-w-5xl mx-auto">
           <Badge variant="outline" className="mb-3 text-xs print:hidden">
-            <Calculator className="h-3 w-3 mr-1" /> GRGF Value Calculator
+            <Calculator className="h-3 w-3 mr-1" /> GRGF™ Value Calculator
           </Badge>
           <div className="hidden print:block mb-4">
-            <p className="text-xs text-muted-foreground">GRGF — Global Record Governance Framework</p>
+            <p className="text-xs text-muted-foreground">GRGF™ — Global Record Governance Framework</p>
           </div>
           <h1 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-2">
-            Before vs. After GRGF
+            Before vs. After GRGF™
           </h1>
            <p className="text-sm text-muted-foreground max-w-2xl">
               Enter any organization name and let the AI research agent automatically identify its sector,
-              scale, and risk profile — then calculate the projected financial impact of GRGF integration.
+              scale, and risk profile — then calculate the projected financial impact of GRGF™ integration.
             </p>
         </div>
       </div>
@@ -656,8 +656,8 @@ export default function ValueCalculator() {
               </p>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  { label: "Before GRGF", value: fmt(results.totalBefore), icon: TrendingDown, color: "text-destructive" },
-                  { label: "After GRGF", value: fmt(results.totalAfter), icon: TrendingUp, color: "text-accent" },
+                  { label: "Before GRGF™", value: fmt(results.totalBefore), icon: TrendingDown, color: "text-destructive" },
+                  { label: "After GRGF™", value: fmt(results.totalAfter), icon: TrendingUp, color: "text-accent" },
                   { label: "Annual Savings", value: fmt(results.totalSaved), icon: DollarSign, color: "text-primary" },
                   { label: "5-Year Net Benefit", value: fmt(results.cumNet[4]), icon: BarChart3, color: "text-primary" },
                 ].map(m => (
@@ -841,8 +841,8 @@ export default function ValueCalculator() {
                 <Card className="mt-3">
                   <CardContent className="pt-6 space-y-4">
                     {Object.entries({
-                      "Before GRGF Calculation": GENERAL_METHODOLOGY.beforeCalc,
-                      "After GRGF Calculation": GENERAL_METHODOLOGY.afterCalc,
+                      "Before GRGF™ Calculation": GENERAL_METHODOLOGY.beforeCalc,
+                      "After GRGF™ Calculation": GENERAL_METHODOLOGY.afterCalc,
                       "Savings Calculation": GENERAL_METHODOLOGY.savingsCalc,
                       "5-Year Projection": GENERAL_METHODOLOGY.projectionCalc,
                       "ROI Calculation": GENERAL_METHODOLOGY.roiCalc,
@@ -875,8 +875,8 @@ export default function ValueCalculator() {
             <div className="hidden print:block border-t border-border pt-4 mt-4">
               <h3 className="text-sm font-semibold mb-2">Calculation Methodology</h3>
               {Object.entries({
-                "Before GRGF": GENERAL_METHODOLOGY.beforeCalc,
-                "After GRGF": GENERAL_METHODOLOGY.afterCalc,
+                "Before GRGF™": GENERAL_METHODOLOGY.beforeCalc,
+                "After GRGF™": GENERAL_METHODOLOGY.afterCalc,
                 "Savings": GENERAL_METHODOLOGY.savingsCalc,
                 "Projection": GENERAL_METHODOLOGY.projectionCalc,
                 "ROI": GENERAL_METHODOLOGY.roiCalc,

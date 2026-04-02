@@ -7,7 +7,7 @@ const Simulation = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Simulation"
-        subtitle="Interactive demonstration and training environment for the GRGF governance workflow."
+        subtitle="Interactive demonstration and training environment for the GRGF™ governance workflow."
       />
 
       {/* Purpose */}
@@ -31,7 +31,7 @@ const Simulation = () => {
       <Section title="Purpose" className="border-t border-border">
         <div className="space-y-3 max-w-2xl">
           {[
-            "Demonstrate how the GRGF governance workflow operates end-to-end",
+            "Demonstrate how the GRGF™ governance workflow operates end-to-end",
             "Train practitioners on record submission, review, and verification processes",
             "Support institutional review and audit evaluation of the framework",
             "Provide a safe environment for exploring governance concepts without risk",

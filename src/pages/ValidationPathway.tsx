@@ -78,7 +78,7 @@ const ValidationPathway = () => (
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-8">
         <p className="text-sm text-foreground leading-relaxed font-medium">
-          GRGF is prepared for third-party audit prior to sovereign deployment. Independent validation is a prerequisite — not an afterthought.
+          GRGF™ is prepared for third-party audit prior to sovereign deployment. Independent validation is a prerequisite — not an afterthought.
         </p>
       </div>
 

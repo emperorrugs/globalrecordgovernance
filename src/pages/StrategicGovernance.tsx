@@ -12,14 +12,14 @@ const StrategicGovernance = () => (
     <Section title="Governance Charter">
       <div className="governance-card border-l-2 border-l-accent mb-6">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF operates under a formal Governance Charter that defines custodial neutrality, separation of powers, and the boundaries between operational authority and governance oversight. The framework does not interpret policy, modify authority structures, or override institutional decisions.
+          GRGF™ operates under a formal Governance Charter that defines custodial neutrality, separation of powers, and the boundaries between operational authority and governance oversight. The framework does not interpret policy, modify authority structures, or override institutional decisions.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
         {[
           { title: "Custodial Neutrality", desc: "Policy decisions are encoded, not interpreted. The framework executes governance rules as defined by institutional authorities — deterministically, without discretion." },
-          { title: "Non-Override Principle", desc: "No component of GRGF can override institutional authority. Governance remains with human decision-makers at all times." },
-          { title: "Non-Modification Principle", desc: "Authority structures, legal frameworks, and institutional hierarchies remain unchanged. GRGF operates within them." },
+          { title: "Non-Override Principle", desc: "No component of GRGF™ can override institutional authority. Governance remains with human decision-makers at all times." },
+          { title: "Non-Modification Principle", desc: "Authority structures, legal frameworks, and institutional hierarchies remain unchanged. GRGF™ operates within them." },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card">
             <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
@@ -55,7 +55,7 @@ const StrategicGovernance = () => (
     {/* Multi-Stakeholder Advisory */}
     <Section title="Multi-Stakeholder Advisory Council" className="border-t border-border">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF governance incorporates structured multi-stakeholder input, aligned with OECD recommendation for collaborative DPI governance.
+        GRGF™ governance incorporates structured multi-stakeholder input, aligned with OECD recommendation for collaborative DPI governance.
       </p>
       <div className="grid gap-4 sm:grid-cols-2">
         {[
@@ -99,7 +99,7 @@ const StrategicGovernance = () => (
     <Section title="Regulatory Alignment Framework" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4">
-          GRGF is designed to operate within — not above — existing regulatory frameworks. Each national deployment maps governance rules to local legal authority.
+          GRGF™ is designed to operate within — not above — existing regulatory frameworks. Each national deployment maps governance rules to local legal authority.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           {[

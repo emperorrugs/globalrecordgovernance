@@ -37,7 +37,7 @@ export default function PlatformLayout({ children }: { children: ReactNode }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <Shield className="h-8 w-8 text-primary animate-pulse mx-auto mb-3" />
-          <p className="text-sm text-muted-foreground">Loading GRGF Platform…</p>
+          <p className="text-sm text-muted-foreground">Loading GRGF™ Platform…</p>
         </div>
       </div>
     );
@@ -52,7 +52,7 @@ export default function PlatformLayout({ children }: { children: ReactNode }) {
         <div className="p-4 border-b border-border">
           <Link to="/app" className="flex items-center gap-2">
             <Shield className="h-5 w-5 text-[#00A4EF]" />
-            <span className="text-sm font-semibold tracking-tight">GRGF Platform</span>
+            <span className="text-sm font-semibold tracking-tight">GRGF™ Platform</span>
           </Link>
           {organization && (
             <p className="text-[10px] text-muted-foreground mt-1 truncate">{organization.name}</p>
@@ -102,14 +102,14 @@ export default function PlatformLayout({ children }: { children: ReactNode }) {
             {sidebarOpen ? <ChevronLeft className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </Button>
           <div className="flex-1" />
-          <p className="text-[10px] font-mono text-muted-foreground/50">GRGF v1.0 · Sovereign-Grade Governance Infrastructure</p>
+          <p className="text-[10px] font-mono text-muted-foreground/50">GRGF™ v1.0 · Sovereign-Grade Governance Infrastructure</p>
         </header>
         <main className="flex-1 p-6 overflow-auto">
           {children}
         </main>
         <footer className="border-t border-border flex flex-col items-center justify-center py-2 shrink-0 gap-0.5">
           <p className="text-[10px] font-mono text-muted-foreground/40 tracking-wide">
-            GRGF does not interpret reality. It records it — immutably.
+            GRGF™ does not interpret reality. It records it — immutably.
           </p>
           <p className="text-[9px] font-mono text-muted-foreground/30 tracking-wide">
             Global Record Governance Framework — Invented and Owned by Tarek Wahid · Canadian Patent Application No. CA 3,300,102

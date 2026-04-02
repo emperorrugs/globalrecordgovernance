@@ -50,7 +50,7 @@ export default function GuestDashboard() {
           <div>
             <p className="text-sm font-medium text-foreground">You are viewing a live simulation</p>
             <p className="text-xs text-muted-foreground mt-1">
-              This dashboard displays real data from the GRGF Pilot Node v0.1 — Republic of Novaris deployment. 
+              This dashboard displays real data from the GRGF™ Pilot Node v0.1 — Republic of Novaris deployment. 
               All 24 governance records, audit trails, and verification receipts are functional. 
               Guest mode is read-only. <Link to="/auth" className="text-primary underline">Sign up</Link> for full access.
             </p>

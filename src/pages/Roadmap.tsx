@@ -8,7 +8,7 @@ const Roadmap = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="12-Month Institutional Ascent Roadmap"
-      subtitle="A structured, evidence-driven pathway transforming GRGF from conceptual framework to globally credible pre-standard governance infrastructure."
+      subtitle="A structured, evidence-driven pathway transforming GRGF™ from conceptual framework to globally credible pre-standard governance infrastructure."
     />
 
     {/* Overview */}

@@ -44,18 +44,18 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
 
 const documents: DocEntry[] = [
   {
-    id: "PUB-001", title: "GRGF Vision & Purpose", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Vision_and_Purpose.pdf",
+    id: "PUB-001", title: "GRGF™ Vision & Purpose", updated: "February 2026",
+    downloadPath: "/documents/GRGF™_Vision_and_Purpose.pdf",
     content: (
       <>
-        <p>The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure designed to establish a verifiable, enduring record of institutional actions, decisions, and omissions.</p>
+        <p>The Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public Infrastructure designed to establish a verifiable, enduring record of institutional actions, decisions, and omissions.</p>
         <p>Modern governance depends not only on what decisions are made, but on the ability to prove:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>What occurred</li>
           <li>Who had authority</li>
           <li>What did not occur when it should have</li>
         </ul>
-        <p className="font-medium text-foreground">GRGF exists to make governance provable, not rhetorical.</p>
+        <p className="font-medium text-foreground">GRGF™ exists to make governance provable, not rhetorical.</p>
       </>
     ),
   },
@@ -65,7 +65,7 @@ const documents: DocEntry[] = [
     content: (
       <>
         <p>A governance record is a structured, immutable representation of an institutional event — a decision taken, an action executed, or an omission formally recognized.</p>
-        <p>GRGF recognizes multiple classes of governance events:</p>
+        <p>GRGF™ recognizes multiple classes of governance events:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Decisions taken</li>
           <li>Actions executed</li>
@@ -75,7 +75,7 @@ const documents: DocEntry[] = [
           <li>Authority absent or exceeded</li>
         </ul>
         <p>Each event is normalized into: event type, time context, institutional context, authority context, and status (occurred / not occurred).</p>
-        <p className="font-medium text-foreground">GRGF does not assess correctness or legality — only factual existence.</p>
+        <p className="font-medium text-foreground">GRGF™ does not assess correctness or legality — only factual existence.</p>
       </>
     ),
   },
@@ -85,7 +85,7 @@ const documents: DocEntry[] = [
     content: (
       <>
         <p>In governance, omissions can be as consequential as actions.</p>
-        <p>GRGF formally recognizes:</p>
+        <p>GRGF™ formally recognizes:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Recorded actions</li>
           <li>Recorded decisions</li>
@@ -94,7 +94,7 @@ const documents: DocEntry[] = [
           <li>Recorded absences of authority</li>
         </ul>
         <p>This distinction is essential for accountability, oversight, and judicial review.</p>
-        <p>GRGF strengthens institutions by protecting honest actors, clarifying responsibility, reducing ambiguity, and preserving institutional memory. It supports democracy, rule of law, and administrative continuity without politicization.</p>
+        <p>GRGF™ strengthens institutions by protecting honest actors, clarifying responsibility, reducing ambiguity, and preserving institutional memory. It supports democracy, rule of law, and administrative continuity without politicization.</p>
       </>
     ),
   },
@@ -103,7 +103,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/High_Level_Architecture.pdf",
     content: (
       <>
-        <p>GRGF operates as a horizontal trust layer across government systems. It does not replace registries, workflow tools, or decision systems.</p>
+        <p>GRGF™ operates as a horizontal trust layer across government systems. It does not replace registries, workflow tools, or decision systems.</p>
         <p>Instead, it records that they acted — or failed to act — within a defined governance context.</p>
         <p>The architecture comprises three layers:</p>
         <ol className="list-decimal pl-5 space-y-2">
@@ -120,40 +120,40 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Public_Use_Case_Narratives.pdf",
     content: (
       <>
-        <p><strong>Public Procurement</strong> — GRGF records tender issuance, bid evaluation milestones, approvals, denials, and missing approvals or delays. This enables anti-corruption oversight, post-award audits, and protection of compliant officials.</p>
+        <p><strong>Public Procurement</strong> — GRGF™ records tender issuance, bid evaluation milestones, approvals, denials, and missing approvals or delays. This enables anti-corruption oversight, post-award audits, and protection of compliant officials.</p>
         <p><strong>Regulatory Decisions</strong> — Regulators may record licensing decisions, enforcement actions, and failure to act within statutory timelines, protecting both regulators and regulated entities.</p>
         <p><strong>Courts & Oversight</strong> — Courts benefit from independent verification of administrative actions, proof of omission, and non-repudiable timelines.</p>
-        <p><strong>Crisis Governance</strong> — In emergencies, GRGF records emergency powers invoked, decisions taken, and decisions not taken — preserving democratic accountability without slowing response.</p>
+        <p><strong>Crisis Governance</strong> — In emergencies, GRGF™ records emergency powers invoked, decisions taken, and decisions not taken — preserving democratic accountability without slowing response.</p>
       </>
     ),
   },
   {
     id: "PUB-006", title: "Frequently Asked Questions", updated: "February 2026",
-    downloadPath: "/documents/GRGF_FAQ.pdf",
+    downloadPath: "/documents/GRGF™_FAQ.pdf",
     content: (
       <>
         <div className="space-y-3">
           <div><p className="font-medium text-foreground">Is this a live system?</p><p>No. This website and its simulation are reference and demonstration tools only. No live governance records are created, stored, or modified.</p></div>
           <div><p className="font-medium text-foreground">Does it store records?</p><p>No. The website does not store any governance records. Authoritative records exist only in sealed governance archives maintained outside this platform.</p></div>
-          <div><p className="font-medium text-foreground">Can governments use it?</p><p>Yes. Governments and institutions may reference GRGF as a governance standard, align policies to its principles, and use the simulation for training and review.</p></div>
+          <div><p className="font-medium text-foreground">Can governments use it?</p><p>Yes. Governments and institutions may reference GRGF™ as a governance standard, align policies to its principles, and use the simulation for training and review.</p></div>
           <div><p className="font-medium text-foreground">Is it auditable?</p><p>Yes, by design. The framework is built to support independent audit and verification at every level.</p></div>
         </div>
       </>
     ),
   },
   {
-    id: "PUB-007", title: "GRGF Public Overview", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Public_Overview.pdf",
+    id: "PUB-007", title: "GRGF™ Public Overview", updated: "February 2026",
+    downloadPath: "/documents/GRGF™_Public_Overview.pdf",
     content: (
       <>
-        <p>GRGF is a neutral Digital Public Infrastructure that records institutional actions and omissions in real time, providing immutable evidence without interpretation.</p>
+        <p>GRGF™ is a neutral Digital Public Infrastructure that records institutional actions and omissions in real time, providing immutable evidence without interpretation.</p>
         <p className="font-medium text-foreground">It supports transparency, accountability, and trust at national and global scale.</p>
       </>
     ),
   },
   {
     id: "PUB-008", title: "Phase 5 — Public Transparency Package", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Public_Overview.pdf",
+    downloadPath: "/documents/GRGF™_Public_Overview.pdf",
     content: (
       <>
         <p>Complete public transparency package including dashboards, aggregate indicators, and public verification materials.</p>
@@ -201,7 +201,7 @@ const ArchivePublic = () => (
       </div>
 
       <div className="max-w-5xl mt-8 text-[10px] font-mono text-muted-foreground/40 text-right">
-        GRGF DIGITAL ARCHIVE · PUBLIC SECTION · REFERENCE ONLY
+        GRGF™ DIGITAL ARCHIVE · PUBLIC SECTION · REFERENCE ONLY
       </div>
     </section>
   </div>

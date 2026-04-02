@@ -39,14 +39,14 @@ const mediaCategories: MediaCategory[] = [
     icon: Newspaper,
     color: "from-blue-500/20 to-blue-600/10",
     files: [
-      { name: "GRGF One Pager", path: "/documents/GRGF_One_Pager.pdf", type: "pdf", badge: "Essential" },
-      { name: "Executive Summary — LinkedIn Brief", path: "/documents/GRGF_Executive_Summary_LinkedIn_Brief.pdf", type: "pdf" },
-      { name: "GRGF Public Overview", path: "/documents/GRGF_Public_Overview.pdf", type: "pdf" },
-      { name: "Institutional Brochure", path: "/documents/templates/GRGF_Institutional_Brochure.pdf", type: "pdf", badge: "Template" },
-      { name: "GRGF FAQ", path: "/documents/GRGF_FAQ.pdf", type: "pdf" },
-      { name: "Vision and Purpose", path: "/documents/GRGF_Vision_and_Purpose.pdf", type: "pdf" },
-      { name: "Une Page — FR", path: "/documents/GRGF_Une_Page_FR.pdf", type: "pdf" },
-      { name: "Résumé Exécutif LinkedIn — FR", path: "/documents/GRGF_Resume_Executif_LinkedIn_FR.pdf", type: "pdf" },
+      { name: "GRGF™ One Pager", path: "/documents/GRGF™_One_Pager.pdf", type: "pdf", badge: "Essential" },
+      { name: "Executive Summary — LinkedIn Brief", path: "/documents/GRGF™_Executive_Summary_LinkedIn_Brief.pdf", type: "pdf" },
+      { name: "GRGF™ Public Overview", path: "/documents/GRGF™_Public_Overview.pdf", type: "pdf" },
+      { name: "Institutional Brochure", path: "/documents/templates/GRGF™_Institutional_Brochure.pdf", type: "pdf", badge: "Template" },
+      { name: "GRGF™ FAQ", path: "/documents/GRGF™_FAQ.pdf", type: "pdf" },
+      { name: "Vision and Purpose", path: "/documents/GRGF™_Vision_and_Purpose.pdf", type: "pdf" },
+      { name: "Une Page — FR", path: "/documents/GRGF™_Une_Page_FR.pdf", type: "pdf" },
+      { name: "Résumé Exécutif LinkedIn — FR", path: "/documents/GRGF™_Resume_Executif_LinkedIn_FR.pdf", type: "pdf" },
     ],
   },
   {
@@ -56,13 +56,13 @@ const mediaCategories: MediaCategory[] = [
     icon: BookOpen,
     color: "from-emerald-500/20 to-emerald-600/10",
     files: [
-      { name: "Marketplace Product Catalog 2026", path: "/documents/GRGF_Marketplace_Catalog_2026.pdf", type: "pdf", badge: "New" },
-      { name: "Project Catalog & Proposal 2026", path: "/documents/GRGF_Project_Catalog_Proposal_2026.pdf", type: "pdf" },
-      { name: "Project Catalog Deck 2026 (PPTX)", path: "/documents/GRGF_Project_Catalog_Deck_2026.pptx", type: "pptx" },
-      { name: "Project Catalog Deck 2026 (PDF)", path: "/documents/GRGF_Project_Catalog_Deck_2026.pdf", type: "pdf" },
-      { name: "Commercial Architecture & Pricing Strategy", path: "/documents/GRGF_Commercial_Architecture_Pricing_Strategy.pdf", type: "pdf" },
-      { name: "Value Proposition 2026", path: "/documents/GRGF_Value_Proposition_Complete_2026.pdf", type: "pdf" },
-      { name: "126 Applications Professional Proposal", path: "/documents/GRGF_126_Applications_Professional_Proposal_2026.pdf", type: "pdf" },
+      { name: "Marketplace Product Catalog 2026", path: "/documents/GRGF™_Marketplace_Catalog_2026.pdf", type: "pdf", badge: "New" },
+      { name: "Project Catalog & Proposal 2026", path: "/documents/GRGF™_Project_Catalog_Proposal_2026.pdf", type: "pdf" },
+      { name: "Project Catalog Deck 2026 (PPTX)", path: "/documents/GRGF™_Project_Catalog_Deck_2026.pptx", type: "pptx" },
+      { name: "Project Catalog Deck 2026 (PDF)", path: "/documents/GRGF™_Project_Catalog_Deck_2026.pdf", type: "pdf" },
+      { name: "Commercial Architecture & Pricing Strategy", path: "/documents/GRGF™_Commercial_Architecture_Pricing_Strategy.pdf", type: "pdf" },
+      { name: "Value Proposition 2026", path: "/documents/GRGF™_Value_Proposition_Complete_2026.pdf", type: "pdf" },
+      { name: "126 Applications Professional Proposal", path: "/documents/GRGF™_126_Applications_Professional_Proposal_2026.pdf", type: "pdf" },
     ],
   },
   {
@@ -72,11 +72,11 @@ const mediaCategories: MediaCategory[] = [
     icon: Presentation,
     color: "from-violet-500/20 to-violet-600/10",
     files: [
-      { name: "Investor Deck 2026 (PPTX)", path: "/documents/GRGF_Investor_Deck_2026.pptx", type: "pptx", badge: "Essential" },
-      { name: "Investor Pitch Deck 2026 (PPTX)", path: "/documents/GRGF_Investor_Pitch_Deck_2026.pptx", type: "pptx" },
-      { name: "Executive Visual Binder (PPTX)", path: "/documents/GRGF_Executive_Visual_Binder.pptx", type: "pptx" },
-      { name: "Enterprise Joint Presentation 2026", path: "/documents/GRGF_Enterprise_Joint_Presentation_2026.pdf", type: "pdf" },
-      { name: "Executive Briefing Booklet", path: "/documents/GRGF_Executive_Briefing_Booklet.pdf", type: "pdf" },
+      { name: "Investor Deck 2026 (PPTX)", path: "/documents/GRGF™_Investor_Deck_2026.pptx", type: "pptx", badge: "Essential" },
+      { name: "Investor Pitch Deck 2026 (PPTX)", path: "/documents/GRGF™_Investor_Pitch_Deck_2026.pptx", type: "pptx" },
+      { name: "Executive Visual Binder (PPTX)", path: "/documents/GRGF™_Executive_Visual_Binder.pptx", type: "pptx" },
+      { name: "Enterprise Joint Presentation 2026", path: "/documents/GRGF™_Enterprise_Joint_Presentation_2026.pdf", type: "pdf" },
+      { name: "Executive Briefing Booklet", path: "/documents/GRGF™_Executive_Briefing_Booklet.pdf", type: "pdf" },
       { name: "Oral Defense Briefing Deck", path: "/documents/Oral_Defense_Briefing_Deck.pdf", type: "pdf" },
     ],
   },
@@ -87,11 +87,11 @@ const mediaCategories: MediaCategory[] = [
     icon: Mail,
     color: "from-amber-500/20 to-amber-600/10",
     files: [
-      { name: "Outreach Templates", path: "/documents/GRGF_Outreach_Templates.pdf", type: "pdf" },
-      { name: "Communication Plan", path: "/documents/templates/GRGF_Communication_Plan.pdf", type: "pdf", badge: "Template" },
-      { name: "Stakeholder Engagement Plan", path: "/documents/templates/GRGF_Stakeholder_Engagement_Plan.pdf", type: "pdf", badge: "Template" },
-      { name: "Change Management Plan", path: "/documents/templates/GRGF_Change_Management_Plan.pdf", type: "pdf", badge: "Template" },
-      { name: "Video Walkthrough Script", path: "/documents/GRGF_Video_Walkthrough_Script.pdf", type: "pdf" },
+      { name: "Outreach Templates", path: "/documents/GRGF™_Outreach_Templates.pdf", type: "pdf" },
+      { name: "Communication Plan", path: "/documents/templates/GRGF™_Communication_Plan.pdf", type: "pdf", badge: "Template" },
+      { name: "Stakeholder Engagement Plan", path: "/documents/templates/GRGF™_Stakeholder_Engagement_Plan.pdf", type: "pdf", badge: "Template" },
+      { name: "Change Management Plan", path: "/documents/templates/GRGF™_Change_Management_Plan.pdf", type: "pdf", badge: "Template" },
+      { name: "Video Walkthrough Script", path: "/documents/GRGF™_Video_Walkthrough_Script.pdf", type: "pdf" },
     ],
   },
   {
@@ -101,14 +101,14 @@ const mediaCategories: MediaCategory[] = [
     icon: Building2,
     color: "from-red-500/20 to-red-600/10",
     files: [
-      { name: "Canada Government Submission 2026", path: "/documents/GRGF_Canada_Government_Submission_2026.pdf", type: "pdf", badge: "Official" },
-      { name: "Complete Proposal 2026 (Expanded)", path: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf", type: "pdf" },
-      { name: "Complete Project Proposal 2026", path: "/documents/GRGF_Complete_Project_Proposal_2026.pdf", type: "pdf" },
-      { name: "Institutional Application Package", path: "/documents/GRGF_Institutional_Application_Package.pdf", type: "pdf" },
+      { name: "Canada Government Submission 2026", path: "/documents/GRGF™_Canada_Government_Submission_2026.pdf", type: "pdf", badge: "Official" },
+      { name: "Complete Proposal 2026 (Expanded)", path: "/documents/GRGF™_Complete_Proposal_2026_Expanded.pdf", type: "pdf" },
+      { name: "Complete Project Proposal 2026", path: "/documents/GRGF™_Complete_Project_Proposal_2026.pdf", type: "pdf" },
+      { name: "Institutional Application Package", path: "/documents/GRGF™_Institutional_Application_Package.pdf", type: "pdf" },
       { name: "Procurement Strategy (PSPC)", path: "/documents/Procurement_Strategy_PSPC.pdf", type: "pdf" },
       { name: "Executive Decision Memo", path: "/documents/Executive_Decision_Memo.pdf", type: "pdf" },
-      { name: "Proposition complète 2026 — FR", path: "/documents/GRGF_Complete_Proposal_2026_Expanded_FR.pdf", type: "pdf" },
-      { name: "الاقتراح الكامل 2026 — AR", path: "/documents/GRGF_Complete_Proposal_2026_Expanded_AR.pdf", type: "pdf" },
+      { name: "Proposition complète 2026 — FR", path: "/documents/GRGF™_Complete_Proposal_2026_Expanded_FR.pdf", type: "pdf" },
+      { name: "الاقتراح الكامل 2026 — AR", path: "/documents/GRGF™_Complete_Proposal_2026_Expanded_AR.pdf", type: "pdf" },
     ],
   },
   {
@@ -118,13 +118,13 @@ const mediaCategories: MediaCategory[] = [
     icon: Megaphone,
     color: "from-cyan-500/20 to-cyan-600/10",
     files: [
-      { name: "Economic Case Study — World Bank Edition", path: "/documents/GRGF_Economic_Case_Study_World_Bank_Edition.pdf", type: "pdf" },
-      { name: "Evidence-Based Economic Study 2026", path: "/documents/GRGF_Evidence_Based_Economic_Study_2026.pdf", type: "pdf" },
-      { name: "Canadian Case Studies & Value Analysis", path: "/documents/GRGF_Canadian_Case_Studies_Value_Analysis.pdf", type: "pdf" },
-      { name: "Financial Model Summary", path: "/documents/GRGF_Financial_Model_Summary.pdf", type: "pdf" },
+      { name: "Economic Case Study — World Bank Edition", path: "/documents/GRGF™_Economic_Case_Study_World_Bank_Edition.pdf", type: "pdf" },
+      { name: "Evidence-Based Economic Study 2026", path: "/documents/GRGF™_Evidence_Based_Economic_Study_2026.pdf", type: "pdf" },
+      { name: "Canadian Case Studies & Value Analysis", path: "/documents/GRGF™_Canadian_Case_Studies_Value_Analysis.pdf", type: "pdf" },
+      { name: "Financial Model Summary", path: "/documents/GRGF™_Financial_Model_Summary.pdf", type: "pdf" },
       { name: "Public Value & ROI", path: "/documents/Public_Value_ROI.pdf", type: "pdf" },
-      { name: "TTC Value — Before & After", path: "/documents/GRGF_TTC_Value_Before_After.pdf", type: "pdf" },
-      { name: "UHN Value — Before & After", path: "/documents/GRGF_UHN_Value_Before_After.pdf", type: "pdf" },
+      { name: "TTC Value — Before & After", path: "/documents/GRGF™_TTC_Value_Before_After.pdf", type: "pdf" },
+      { name: "UHN Value — Before & After", path: "/documents/GRGF™_UHN_Value_Before_After.pdf", type: "pdf" },
       { name: "Valuation — 5-Year Scenarios", path: "/documents/Valuation_5yr_Scenarios.pdf", type: "pdf" },
     ],
   },
@@ -137,9 +137,9 @@ const mediaCategories: MediaCategory[] = [
     files: [
       { name: "DPI Integration Guide", path: "/documents/DPI_Integration_Guide.pdf", type: "pdf" },
       { name: "Feasibility Study", path: "/documents/Feasibility_Study.pdf", type: "pdf" },
-      { name: "GovTech Executive Committee Review 2026", path: "/documents/GRGF_GovTech_Executive_Committee_Review_2026.pdf", type: "pdf" },
-      { name: "Service Canada Pilot Complete", path: "/documents/GRGF_Service_Canada_Pilot_Complete.pdf", type: "pdf" },
-      { name: "Pilot Results — Republic of Novaris", path: "/documents/GRGF_Pilot_Results_Republic_of_Novaris.pdf", type: "pdf" },
+      { name: "GovTech Executive Committee Review 2026", path: "/documents/GRGF™_GovTech_Executive_Committee_Review_2026.pdf", type: "pdf" },
+      { name: "Service Canada Pilot Complete", path: "/documents/GRGF™_Service_Canada_Pilot_Complete.pdf", type: "pdf" },
+      { name: "Pilot Results — Republic of Novaris", path: "/documents/GRGF™_Pilot_Results_Republic_of_Novaris.pdf", type: "pdf" },
       { name: "Interoperability Profile", path: "/documents/5_Interoperability_Profile.pdf", type: "pdf" },
     ],
   },
@@ -150,14 +150,14 @@ const mediaCategories: MediaCategory[] = [
     icon: FileText,
     color: "from-slate-500/20 to-slate-600/10",
     files: [
-      { name: "NDA Template", path: "/documents/GRGF_NDA_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "Pilot MOU Template", path: "/documents/templates/GRGF_Pilot_MOU_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "Partnership Agreement", path: "/documents/templates/GRGF_Partnership_Agreement_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "Licensing Agreement", path: "/documents/templates/GRGF_Licensing_Agreement_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "Data Processing Agreement", path: "/documents/templates/GRGF_Data_Processing_Agreement.pdf", type: "pdf", badge: "Template" },
-      { name: "RFP Template", path: "/documents/templates/GRGF_RFP_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "SLA Template", path: "/documents/templates/GRGF_SLA_Template.pdf", type: "pdf", badge: "Template" },
-      { name: "Pilot Agreement Template", path: "/documents/GRGF_Pilot_Agreement_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "NDA Template", path: "/documents/GRGF™_NDA_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "Pilot MOU Template", path: "/documents/templates/GRGF™_Pilot_MOU_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "Partnership Agreement", path: "/documents/templates/GRGF™_Partnership_Agreement_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "Licensing Agreement", path: "/documents/templates/GRGF™_Licensing_Agreement_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "Data Processing Agreement", path: "/documents/templates/GRGF™_Data_Processing_Agreement.pdf", type: "pdf", badge: "Template" },
+      { name: "RFP Template", path: "/documents/templates/GRGF™_RFP_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "SLA Template", path: "/documents/templates/GRGF™_SLA_Template.pdf", type: "pdf", badge: "Template" },
+      { name: "Pilot Agreement Template", path: "/documents/GRGF™_Pilot_Agreement_Template.pdf", type: "pdf", badge: "Template" },
       { name: "IP Scope and Attribution", path: "/documents/IP_Scope_and_Attribution.pdf", type: "pdf" },
     ],
   },
@@ -213,8 +213,8 @@ function DownloadAllButton({ category }: { category: MediaCategory }) {
 
       const content = await zip.generateAsync({ type: "blob" });
       const safeName = category.title.replace(/[^a-zA-Z0-9]+/g, "_");
-      saveAs(content, `GRGF_${safeName}.zip`);
-      toast({ title: "Download complete", description: `GRGF_${safeName}.zip saved.` });
+      saveAs(content, `GRGF™_${safeName}.zip`);
+      toast({ title: "Download complete", description: `GRGF™_${safeName}.zip saved.` });
     } catch {
       toast({ title: "Download failed", description: "Could not generate ZIP. Please try again.", variant: "destructive" });
     } finally {
@@ -270,8 +270,8 @@ export default function MediaRoom() {
   return (
     <>
       <SEOHead
-        title="Media Room — GRGF"
-        description="Download GRGF marketing materials, brochures, catalogs, presentations, outreach templates, and institutional communication documents."
+        title="Media Room — GRGF™"
+        description="Download GRGF™ marketing materials, brochures, catalogs, presentations, outreach templates, and institutional communication documents."
       />
 
       <div className="min-h-screen">
@@ -297,7 +297,7 @@ export default function MediaRoom() {
               Media Room
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mb-2">
-              The official distribution hub for GRGF marketing materials, institutional
+              The official distribution hub for GRGF™ marketing materials, institutional
               brochures, product catalogs, presentation decks, and communication documents.
             </p>
             <p className="text-sm text-muted-foreground/70">

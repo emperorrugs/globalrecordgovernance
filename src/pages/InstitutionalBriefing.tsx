@@ -40,7 +40,7 @@ const InstitutionalBriefing = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Request Institutional Briefing"
-        subtitle="Controlled access to GRGF architecture, security, deployment, and governance documentation under the Controlled Distribution Protocol."
+        subtitle="Controlled access to GRGF™ architecture, security, deployment, and governance documentation under the Controlled Distribution Protocol."
       />
 
       {/* CRP Notice */}
@@ -50,7 +50,7 @@ const InstitutionalBriefing = () => {
           <div>
             <p className="text-sm font-medium text-foreground mb-1">Controlled Distribution Protocol Active</p>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              GRGF documentation is distributed under the Controlled Distribution Protocol (CRP v1.0). Access to Level 2+ materials requires formal institutional request and identity verification. Level 3+ materials require executed NDA.
+              GRGF™ documentation is distributed under the Controlled Distribution Protocol (CRP v1.0). Access to Level 2+ materials requires formal institutional request and identity verification. Level 3+ materials require executed NDA.
             </p>
           </div>
         </div>
@@ -113,7 +113,7 @@ const InstitutionalBriefing = () => {
               <div>
                 <h4 className="font-serif text-base font-semibold mb-2">Request Received</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Your request is under review in accordance with the GRGF Controlled Distribution Protocol. You will receive a response at the provided institutional email address within 5–10 business days.
+                  Your request is under review in accordance with the GRGF™ Controlled Distribution Protocol. You will receive a response at the provided institutional email address within 5–10 business days.
                 </p>
                 <p className="mt-3 text-[10px] font-mono text-muted-foreground/50 tracking-wider">
                   CRP v1.0 · INSTITUTIONAL REVIEW · ACCESS LOGGED
@@ -229,7 +229,7 @@ const InstitutionalBriefing = () => {
       <Section title="Intellectual Property Notice" className="border-t border-border">
         <div className="governance-card border-l-2 border-l-accent">
           <p className="text-xs text-muted-foreground leading-relaxed">
-            GRGF documentation, including architectural models, governance schemas, cryptographic integrity structures, and deployment methodologies, remains the intellectual property of the inventor and designated custodial entity. The Controlled Distribution Protocol does not transfer intellectual property rights. All access is granted for institutional evaluation purposes only.
+            GRGF™ documentation, including architectural models, governance schemas, cryptographic integrity structures, and deployment methodologies, remains the intellectual property of the inventor and designated custodial entity. The Controlled Distribution Protocol does not transfer intellectual property rights. All access is granted for institutional evaluation purposes only.
           </p>
           <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
             Canadian Patent Application No. 3,300,102 — "Global Record Governance Framework for Tamper-Evident Logging" — Filed January 28, 2026 (publication pending).

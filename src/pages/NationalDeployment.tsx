@@ -183,7 +183,7 @@ const NationalDeployment = () => (
     <Section title="Reversibility & Exit Policy" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4">
-          GRGF is designed for reversible deployment. Institutions can exit at any phase without data loss, vendor lock-in, or operational disruption.
+          GRGF™ is designed for reversible deployment. Institutions can exit at any phase without data loss, vendor lock-in, or operational disruption.
         </p>
         <div className="space-y-2">
           {[

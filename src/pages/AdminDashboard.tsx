@@ -41,20 +41,20 @@ const statusColors: Record<string, string> = {
 
 const levelDownloadLinks: Record<string, { en: string; fr: string }> = {
   "Level 1": {
-    en: "/documents/GRGF_Level1_Public_Overview_MaxDepth.pdf",
-    fr: "/documents/GRGF_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
+    en: "/documents/GRGF™_Level1_Public_Overview_MaxDepth.pdf",
+    fr: "/documents/GRGF™_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
   },
   "Level 2": {
-    en: "/documents/GRGF_Level2_Institutional_Review_MaxDepth.pdf",
-    fr: "/documents/GRGF_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
+    en: "/documents/GRGF™_Level2_Institutional_Review_MaxDepth.pdf",
+    fr: "/documents/GRGF™_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
   },
   "Level 3": {
-    en: "/documents/GRGF_Level3_Restricted_Technical_MaxDepth.pdf",
-    fr: "/documents/GRGF_Niveau3_Detail_Technique_MaxDepth_FR.pdf",
+    en: "/documents/GRGF™_Level3_Restricted_Technical_MaxDepth.pdf",
+    fr: "/documents/GRGF™_Niveau3_Detail_Technique_MaxDepth_FR.pdf",
   },
   "Level 4": {
-    en: "/documents/GRGF_Level4_Sovereign_Deployment_MaxDepth.pdf",
-    fr: "/documents/GRGF_Niveau4_Deploiement_Souverain_MaxDepth_FR.pdf",
+    en: "/documents/GRGF™_Level4_Sovereign_Deployment_MaxDepth.pdf",
+    fr: "/documents/GRGF™_Niveau4_Deploiement_Souverain_MaxDepth_FR.pdf",
   },
 };
 
@@ -131,13 +131,13 @@ const AdminDashboard = () => {
 
     if (action === "approved" && links) {
       return {
-        subject: `GRGF Access Approved — ${req.requested_level} Documents Ready`,
-        body: `Dear ${req.full_name},\n\nYour institutional access request for ${req.requested_level} documentation under the Global Record Governance Framework (GRGF) Controlled Distribution Protocol has been APPROVED.\n\n— Access Level: ${req.requested_level}\n— Organization: ${req.organization}\n— Request ID: ${req.id}\n\nYou may download your authorized documents using the links below:\n\n📄 English Edition:\n${siteUrl}${links.en}\n\n📄 French Edition:\n${siteUrl}${links.fr}\n\n${req.nda_required ? "IMPORTANT: Your access is subject to the executed Non-Disclosure Agreement (NDA). Distribution of these materials outside your authorized evaluation scope is strictly prohibited under CRP v1.0.\n\n" : ""}These links are time-limited and tied to your institutional verification. Do not share them outside your authorized evaluation scope.\n\nFor questions, contact: governance@grgf.org\n\nBest regards,\nGRGF Document Control Office\nControlled Distribution Protocol v1.0\nCanadian Patent No. CA 3,300,102`,
+        subject: `GRGF™ Access Approved — ${req.requested_level} Documents Ready`,
+        body: `Dear ${req.full_name},\n\nYour institutional access request for ${req.requested_level} documentation under the Global Record Governance Framework (GRGF™) Controlled Distribution Protocol has been APPROVED.\n\n— Access Level: ${req.requested_level}\n— Organization: ${req.organization}\n— Request ID: ${req.id}\n\nYou may download your authorized documents using the links below:\n\n📄 English Edition:\n${siteUrl}${links.en}\n\n📄 French Edition:\n${siteUrl}${links.fr}\n\n${req.nda_required ? "IMPORTANT: Your access is subject to the executed Non-Disclosure Agreement (NDA). Distribution of these materials outside your authorized evaluation scope is strictly prohibited under CRP v1.0.\n\n" : ""}These links are time-limited and tied to your institutional verification. Do not share them outside your authorized evaluation scope.\n\nFor questions, contact: governance@grgf.org\n\nBest regards,\nGRGF Document Control Office\nControlled Distribution Protocol v1.0\nCanadian Patent No. CA 3,300,102`,
       };
     }
 
     return {
-      subject: `GRGF Access Request — Status Update`,
+      subject: `GRGF™ Access Request — Status Update`,
       body: `Dear ${req.full_name},\n\nYour institutional access request for ${req.requested_level} documentation has been reviewed.\n\nStatus: ${action.toUpperCase()}\nRequest ID: ${req.id}\n\n${action === "rejected" ? "Your request did not meet the current criteria for institutional access. If you believe this is in error, you may submit a new request with additional institutional verification.\n\n" : ""}For questions, contact: governance@grgf.org\n\nBest regards,\nGRGF Document Control Office`,
     };
   };

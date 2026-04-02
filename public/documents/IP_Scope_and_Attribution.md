@@ -9,7 +9,7 @@
 
 ## Inventor Attribution
 
-The Global Record Governance Framework (GRGF) was conceived, designed, and architected by **Tarek Wahid**.
+The Global Record Governance Framework (GRGF™) was conceived, designed, and architected by **Tarek Wahid**.
 
 **Canadian Patent No. CA 3,300,102**
 
@@ -34,11 +34,11 @@ Inventorship encompasses:
 
 ## Originality
 
-GRGF introduces a novel category: **governance record-of-record infrastructure**. It is not a registry, workflow engine, or analytics system. It occupies a unique position in the governance technology landscape with no direct equivalent.
+GRGF™ introduces a novel category: **governance record-of-record infrastructure**. It is not a registry, workflow engine, or analytics system. It occupies a unique position in the governance technology landscape with no direct equivalent.
 
 ## Licensing Principles
 
-GRGF may be licensed for public interest use under terms that preserve:
+GRGF™ may be licensed for public interest use under terms that preserve:
 - Governance neutrality
 - Inventor attribution
 - Institutional integrity

@@ -15,7 +15,7 @@ const cards = [
     to: "/archive/downloads",
     icon: Download,
     title: "Publication Suite & Downloads",
-    desc: "All 4 GRGF volumes, Sovereign Authority Edition, Value Proposition, and Complete Proposal — trilingual (EN/FR/AR). Printable PDFs.",
+    desc: "All 4 GRGF™ volumes, Sovereign Authority Edition, Value Proposition, and Complete Proposal — trilingual (EN/FR/AR). Printable PDFs.",
     access: "TRILINGUAL · DOWNLOADABLE",
     docCount: 47,
     highlight: true,
@@ -60,9 +60,9 @@ const ArchiveOverview = () => (
     <header className="border-b border-border bg-card/50 px-8 py-12 md:px-12 lg:px-16">
       <div className="max-w-4xl">
         <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Digital Archive</p>
-        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">GRGF Digital Archive</h1>
+        <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">GRGF™ Digital Archive</h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          This archive contains the authoritative records, architectures, policies, and governance materials of the Global Record Governance Framework (GRGF). Documents are organized by stakeholder role and deployment context to ensure clarity, integrity, and responsible access.
+          This archive contains the authoritative records, architectures, policies, and governance materials of the Global Record Governance Framework (GRGF™). Documents are organized by stakeholder role and deployment context to ensure clarity, integrity, and responsible access.
         </p>
         <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-3xl">
           Materials herein are evidence-first, neutral, and suitable for audit, evaluation, and institutional reference.
@@ -148,7 +148,7 @@ const ArchiveOverview = () => (
               <div className="space-y-3">
                 <div>
                   <p className="font-serif text-sm font-semibold">Authority Statement</p>
-                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">This archive is issued under the authority of the GRGF inventor and steward. Documents contained herein represent the definitive reference materials for evaluation, adoption, and institutional use.</p>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">This archive is issued under the authority of the GRGF™ inventor and steward. Documents contained herein represent the definitive reference materials for evaluation, adoption, and institutional use.</p>
                 </div>
                 <div>
                   <p className="font-serif text-sm font-semibold">Versioning Principles</p>

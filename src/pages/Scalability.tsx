@@ -48,7 +48,7 @@ const ARCH_LAYERS = [
 const Scalability = () => (
   <div className="animate-fade-in">
     <SEOHead
-      title="Scalability & Performance Model — GRGF"
+      title="Scalability & Performance Model — GRGF™"
       description="Engineering scalability framework for federated governance infrastructure. User scaling models, throughput projections, and cost-per-transaction estimates."
     />
     <PageHeader
@@ -126,7 +126,7 @@ const Scalability = () => (
           <h4 className="font-serif text-lg font-semibold mb-4">Consensus & Verification Model</h4>
           <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
             <p>
-              GRGF uses a <strong className="text-foreground">deterministic verification model</strong> rather than probabilistic consensus.
+              GRGF™ uses a <strong className="text-foreground">deterministic verification model</strong> rather than probabilistic consensus.
               Each governance event is anchored with a SHA-256 hash and timestamped independently. Verification is a mathematical proof, not a vote.
             </p>
             <p>

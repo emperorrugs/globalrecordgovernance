@@ -7,11 +7,11 @@ const PrivacyPolicy = () => {
     <div className="animate-fade-in">
       <SEOHead
         title="Privacy Policy"
-        description="Privacy Policy for the Global Record Governance Framework (GRGF). Comprehensive data protection commitments aligned with GDPR, ISO 27701, and OECD Privacy Guidelines."
+        description="Privacy Policy for the Global Record Governance Framework (GRGF™). Comprehensive data protection commitments aligned with GDPR, ISO 27701, and OECD Privacy Guidelines."
       />
       <PageHeader
         title="Privacy Policy"
-        subtitle="Data protection commitments of the Global Record Governance Framework (GRGF), aligned with international privacy standards."
+        subtitle="Data protection commitments of the Global Record Governance Framework (GRGF™), aligned with international privacy standards."
       />
 
       <Section>
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
                   This Privacy Policy applies to all visitors, users, and institutional parties accessing
                   <span className="font-medium text-foreground"> globalrecordgovernance.com</span> and
                   all associated services, platforms, and digital resources operated by the Global Record
-                  Governance Framework (&quot;GRGF&quot;, &quot;the Framework&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;).
+                  Governance Framework (&quot;GRGF™&quot;, &quot;the Framework&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;).
                 </p>
                 <p className="mt-2">
                   This policy is drafted in alignment with the <span className="font-medium text-foreground">EU General Data Protection Regulation (GDPR)</span>,
@@ -48,11 +48,11 @@ const PrivacyPolicy = () => {
             icon={<UserCheck className="h-4 w-4" />}
           >
             <p>
-              The Global Record Governance Framework (&quot;GRGF&quot;) is the data controller responsible
+              The Global Record Governance Framework (&quot;GRGF™&quot;) is the data controller responsible
               for the processing of personal data collected through this website and associated services.
             </p>
             <p className="mt-3">
-              GRGF operates as a sovereign-grade Digital Public Infrastructure trust layer. It does not
+              GRGF™ operates as a sovereign-grade Digital Public Infrastructure trust layer. It does not
               act as a data processor on behalf of third parties unless a formal Data Processing Agreement
               (DPA) is executed with an institutional partner under the Controlled Distribution Protocol.
             </p>
@@ -71,7 +71,7 @@ const PrivacyPolicy = () => {
             icon={<Database className="h-4 w-4" />}
           >
             <p>
-              GRGF adheres to the principle of <span className="font-medium text-foreground">data minimization</span> (GDPR Article 5(1)(c); OECD Collection Limitation Principle).
+              GRGF™ adheres to the principle of <span className="font-medium text-foreground">data minimization</span> (GDPR Article 5(1)(c); OECD Collection Limitation Principle).
               We collect only the minimum personal data necessary for legitimate institutional purposes.
             </p>
 
@@ -252,7 +252,7 @@ const PrivacyPolicy = () => {
             icon={<Lock className="h-4 w-4" />}
           >
             <p>
-              GRGF implements technical and organizational measures appropriate to the risk,
+              GRGF™ implements technical and organizational measures appropriate to the risk,
               in accordance with GDPR Article 32 and ISO/IEC 27001:2022:
             </p>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -418,7 +418,7 @@ const PrivacyPolicy = () => {
           {/* Section 11 */}
           <PolicySection number="11" title="Children's Privacy">
             <p>
-              GRGF services are directed exclusively at institutional parties, government entities,
+              GRGF™ services are directed exclusively at institutional parties, government entities,
               and professional stakeholders. They are not intended for individuals under the age of 18.
               We do not knowingly collect, store, or process personal data from minors.
             </p>
@@ -433,7 +433,7 @@ const PrivacyPolicy = () => {
           <PolicySection number="12" title="Data Breach Notification">
             <p>
               In the event of a personal data breach likely to result in a risk to the rights
-              and freedoms of individuals, GRGF will:
+              and freedoms of individuals, GRGF™ will:
             </p>
             <ul className="mt-3 space-y-2">
               {[

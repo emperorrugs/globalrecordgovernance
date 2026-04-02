@@ -92,7 +92,7 @@ const FinancialModel = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Financial & Economic Evaluation Engine — GRGF"
+        title="Financial & Economic Evaluation Engine — GRGF™"
         description="Interactive sovereign-grade financial modeling tool for governance infrastructure deployment. NPV analysis, sensitivity projections, and ROI scenarios."
       />
       <PageHeader

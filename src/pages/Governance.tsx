@@ -25,7 +25,7 @@ const authorityModel = [
     icon: Building2,
     tier: "TIER 2",
     scope: "National",
-    desc: "Designated authorities within each deploying jurisdiction responsible for local GRGF operations, compliance, and institutional alignment.",
+    desc: "Designated authorities within each deploying jurisdiction responsible for local GRGF™ operations, compliance, and institutional alignment.",
     accountability: "Certified through the 3-tier institutional recognition process. Subject to periodic renewal.",
   },
   {
@@ -191,7 +191,7 @@ export default function GovernancePage() {
               <div className="flex-1 h-px bg-border" />
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
-              Every governance action within GRGF is traceable to a responsible human authority. 
+              Every governance action within GRGF™ is traceable to a responsible human authority. 
               The framework structurally rejects anonymous or automated governance decisions.
             </p>
             <div className="grid sm:grid-cols-5 gap-3">

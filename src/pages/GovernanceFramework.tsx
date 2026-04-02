@@ -12,7 +12,7 @@ const GovernanceFramework = () => (
     {/* ── SECTION 1: Foundational Principles ── */}
     <Section title="Foundational Charter Principles">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF's operational mandate is grounded in six non-negotiable principles. These are not
+        GRGF™'s operational mandate is grounded in six non-negotiable principles. These are not
         aspirational values — they are structural constraints encoded into the framework's architecture,
         governance rules, and operational protocols. Violation of any principle constitutes a governance failure.
       </p>
@@ -20,7 +20,7 @@ const GovernanceFramework = () => (
         {[
           {
             num: "01", icon: Scale, title: "Neutrality",
-            desc: "GRGF does not interpret policy, modify authority structures, or override institutional decisions. It records what occurs — without judgment, evaluation, or interference. No political, commercial, or ideological influence is permitted in framework operations.",
+            desc: "GRGF™ does not interpret policy, modify authority structures, or override institutional decisions. It records what occurs — without judgment, evaluation, or interference. No political, commercial, or ideological influence is permitted in framework operations.",
           },
           {
             num: "02", icon: CheckCircle, title: "Verifiability",
@@ -111,15 +111,15 @@ const GovernanceFramework = () => (
     <Section title="Custodial Neutrality" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent mb-6">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF does not interpret policy, modify authority structures, or override institutions.
+          GRGF™ does not interpret policy, modify authority structures, or override institutions.
           It enforces what is encoded in governance rules — deterministically, transparently, and without discretion.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
         {[
           { title: "Does Not Interpret", desc: "Policy decisions are encoded, not interpreted. The framework executes rules as defined by governance authorities. No probabilistic or AI-based decision logic." },
-          { title: "Does Not Override", desc: "No component of the framework can override institutional authority. Governance remains with human decision-makers. GRGF records — it does not decide." },
-          { title: "Does Not Modify", desc: "Authority structures, legal frameworks, and institutional hierarchies remain unchanged. GRGF operates within them as an additional integrity layer." },
+          { title: "Does Not Override", desc: "No component of the framework can override institutional authority. Governance remains with human decision-makers. GRGF™ records — it does not decide." },
+          { title: "Does Not Modify", desc: "Authority structures, legal frameworks, and institutional hierarchies remain unchanged. GRGF™ operates within them as an additional integrity layer." },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card">
             <h4 className="font-serif text-sm font-semibold mb-2">{title}</h4>
@@ -242,9 +242,9 @@ const GovernanceFramework = () => (
       </p>
       <div className="grid gap-4 sm:grid-cols-3">
         {[
-          { icon: Globe, title: "Legal Sovereignty", desc: "Each nation retains its legal framework, judicial authority, and policy-making autonomy. GRGF does not require legislative change for deployment." },
+          { icon: Globe, title: "Legal Sovereignty", desc: "Each nation retains its legal framework, judicial authority, and policy-making autonomy. GRGF™ does not require legislative change for deployment." },
           { icon: Building2, title: "Operational Autonomy", desc: "National nodes operate independently. Data residency is preserved. No external authority can access, modify, or override national records." },
-          { icon: Scale, title: "Policy Definition Authority", desc: "Governance rules are defined by national authorities according to their institutional requirements. GRGF enforces — it does not prescribe." },
+          { icon: Scale, title: "Policy Definition Authority", desc: "Governance rules are defined by national authorities according to their institutional requirements. GRGF™ enforces — it does not prescribe." },
         ].map(({ icon: Icon, title, desc }) => (
           <div key={title} className="governance-card">
             <Icon className="h-5 w-5 text-accent mb-3" />
@@ -276,8 +276,8 @@ const GovernanceFramework = () => (
     <Section title="Institutional Onboarding Process" className="border-t border-border">
       <div className="space-y-3">
         {[
-          { step: "01", title: "Initial Assessment", desc: "Evaluation of institutional readiness, legal compatibility, and digital maturity against GRGF deployment criteria." },
-          { step: "02", title: "Governance Alignment", desc: "Mapping of existing governance rules to GRGF encoding requirements. Gap analysis and remediation planning." },
+          { step: "01", title: "Initial Assessment", desc: "Evaluation of institutional readiness, legal compatibility, and digital maturity against GRGF™ deployment criteria." },
+          { step: "02", title: "Governance Alignment", desc: "Mapping of existing governance rules to GRGF™ encoding requirements. Gap analysis and remediation planning." },
           { step: "03", title: "Node Configuration", desc: "Technical deployment and integration with existing national infrastructure. Non-invasive — strengthens existing systems." },
           { step: "04", title: "Pilot Validation", desc: "Controlled 90-day pilot deployment with defined KPIs: 100% policy determinism, <30 min audit reconstruction, full omission detection." },
           { step: "05", title: "Full Activation", desc: "Production deployment with ongoing monitoring, compliance reporting, and federation integration. Reversible at every stage." },

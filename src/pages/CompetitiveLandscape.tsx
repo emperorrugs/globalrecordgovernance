@@ -120,13 +120,13 @@ const uniqueCapabilities: UniqueCapability[] = [
   },
   {
     name: "Governance Record-of-Record Architecture",
-    description: "Not a registry, not a workflow tool, not an analytics system. The evidence backbone that sits beneath all of them. This category did not exist before GRGF.",
+    description: "Not a registry, not a workflow tool, not an analytics system. The evidence backbone that sits beneath all of them. This category did not exist before GRGF™.",
     competitors: "0 of 9 systems found globally — new category",
     icon: <Database className="h-5 w-5 text-ms-blue" />,
   },
   {
     name: "Deterministic Denial Explanation",
-    description: "When verification fails, GRGF explains why cryptographically — not just 'invalid.' Provides structured, machine-readable denial reasons.",
+    description: "When verification fails, GRGF™ explains why cryptographically — not just 'invalid.' Provides structured, machine-readable denial reasons.",
     competitors: "0 of 9 systems found globally",
     icon: <FileCheck className="h-5 w-5 text-ms-blue" />,
   },
@@ -154,9 +154,9 @@ const patentLandscape: PatentEntry[] = [
 ];
 
 const dimensionVerdict = [
-  { dimension: "Direct Competitor", status: "none" as const, detail: "No system found globally that replicates GRGF's governance record-of-record architecture" },
-  { dimension: "Omission Detection", status: "sole" as const, detail: "GRGF is the only system in the world that formally records institutional omissions" },
-  { dimension: "Governance Record-of-Record", status: "sole" as const, detail: "New category created by GRGF — no predecessor or equivalent exists" },
+  { dimension: "Direct Competitor", status: "none" as const, detail: "No system found globally that replicates GRGF™'s governance record-of-record architecture" },
+  { dimension: "Omission Detection", status: "sole" as const, detail: "GRGF™ is the only system in the world that formally records institutional omissions" },
+  { dimension: "Governance Record-of-Record", status: "sole" as const, detail: "New category created by GRGF™ — no predecessor or equivalent exists" },
   { dimension: "Authority Binding", status: "sole" as const, detail: "No system ties governance events to legal mandate and delegation chains at the record level" },
   { dimension: "Patent Protection", status: "sole" as const, detail: "Canadian Patent CA 3,300,102 occupies uncontested territory in governance integrity space" },
   { dimension: "Partial Overlap", status: "adjacent" as const, detail: "X-Road (data exchange) and OpenCRVS (civil records) solve different problems in adjacent categories" },
@@ -164,7 +164,7 @@ const dimensionVerdict = [
 
 function VerdictBadge({ status }: { status: "none" | "sole" | "adjacent" }) {
   if (status === "none") return <span className="px-2 py-0.5 rounded-full bg-ms-green/10 text-ms-green text-[10px] font-semibold">NONE FOUND</span>;
-  if (status === "sole") return <span className="px-2 py-0.5 rounded-full bg-ms-blue/10 text-ms-blue text-[10px] font-semibold">GRGF ONLY</span>;
+  if (status === "sole") return <span className="px-2 py-0.5 rounded-full bg-ms-blue/10 text-ms-blue text-[10px] font-semibold">GRGF™ ONLY</span>;
   return <span className="px-2 py-0.5 rounded-full bg-ms-yellow/10 text-ms-yellow text-[10px] font-semibold">ADJACENT</span>;
 }
 
@@ -176,10 +176,10 @@ export default function CompetitiveLandscape() {
     <div className="min-h-screen bg-background">
       <PageHeader
         title="International Competitive Landscape"
-        subtitle="Comprehensive global analysis confirming GRGF occupies a unique, uncontested category in the governance technology landscape. No direct equivalent exists."
+        subtitle="Comprehensive global analysis confirming GRGF™ occupies a unique, uncontested category in the governance technology landscape. No direct equivalent exists."
       >
         <div className="mt-4 flex flex-wrap gap-3">
-          <PDFExportButton filename="GRGF_Competitive_Landscape" label="Export as PDF" />
+          <PDFExportButton filename="GRGF™_Competitive_Landscape" label="Export as PDF" />
         </div>
       </PageHeader>
 
@@ -193,8 +193,8 @@ export default function CompetitiveLandscape() {
                 <h3 className="font-semibold text-sm">No Direct Competitor Exists Globally</h3>
                 <p className="text-xs text-muted-foreground mt-2 leading-relaxed">
                   After comprehensive international search across DPI ecosystems, blockchain governance platforms, GovTech systems,
-                  enterprise platforms, patent databases, and academic research — <strong>no system replicates GRGF's governance
-                  record-of-record architecture</strong>. GRGF invented a category that has adjacent systems solving different problems,
+                  enterprise platforms, patent databases, and academic research — <strong>no system replicates GRGF™'s governance
+                  record-of-record architecture</strong>. GRGF™ invented a category that has adjacent systems solving different problems,
                   but no competitors solving the same problem.
                 </p>
               </div>
@@ -216,7 +216,7 @@ export default function CompetitiveLandscape() {
       </Section>
 
       {/* Five Unique Capabilities */}
-      <Section title="Five Capabilities Unique to GRGF — Found Nowhere Else" className="border-b border-border bg-muted/30">
+      <Section title="Five Capabilities Unique to GRGF™ — Found Nowhere Else" className="border-b border-border bg-muted/30">
         <FadeIn>
           <div className="grid gap-4 max-w-5xl md:grid-cols-2 lg:grid-cols-3">
             {uniqueCapabilities.map((cap) => (
@@ -236,7 +236,7 @@ export default function CompetitiveLandscape() {
       </Section>
 
       {/* Systems Analyzed */}
-      <Section title="Systems Analyzed — Why They Are Not GRGF" className="border-b border-border">
+      <Section title="Systems Analyzed — Why They Are Not GRGF™" className="border-b border-border">
         <FadeIn>
           <div className="space-y-4 max-w-5xl">
             {competitors.map((c) => (
@@ -251,7 +251,7 @@ export default function CompetitiveLandscape() {
                     </div>
                     <p className="text-xs text-muted-foreground mt-2 leading-relaxed"><strong>What it does:</strong> {c.what}</p>
                     <p className="text-xs mt-2 leading-relaxed">
-                      <span className="text-ms-red font-semibold">Why it's not GRGF:</span>{" "}
+                      <span className="text-ms-red font-semibold">Why it's not GRGF™:</span>{" "}
                       <span className="text-muted-foreground">{c.whyNot}</span>
                     </p>
                   </div>
@@ -270,7 +270,7 @@ export default function CompetitiveLandscape() {
               <TableHeader>
                 <TableRow className="border-border">
                   <TableHead className="text-[10px] font-bold w-56">Capability</TableHead>
-                  <TableHead className="text-[10px] font-bold text-center text-ms-blue">GRGF</TableHead>
+                  <TableHead className="text-[10px] font-bold text-center text-ms-blue">GRGF™</TableHead>
                   <TableHead className="text-[10px] text-center">X-Road</TableHead>
                   <TableHead className="text-[10px] text-center">MOSIP</TableHead>
                   <TableHead className="text-[10px] text-center">GovStack</TableHead>
@@ -328,7 +328,7 @@ export default function CompetitiveLandscape() {
                 <p className="text-[11px] text-muted-foreground mt-1 leading-relaxed">
                   Comprehensive patent search across Google Patents, USPTO, EPO, and WIPO databases confirms that no existing
                   patent addresses governance omission detection, authority binding at the record level, or record-of-record
-                  infrastructure for institutional accountability. GRGF's patent occupies genuinely uncontested IP space.
+                  infrastructure for institutional accountability. GRGF™'s patent occupies genuinely uncontested IP space.
                 </p>
               </div>
             </div>
@@ -360,14 +360,14 @@ export default function CompetitiveLandscape() {
       </Section>
 
       {/* Category Positioning */}
-      <Section title="Category Positioning — Where GRGF Sits" className="border-b border-border bg-muted/30">
+      <Section title="Category Positioning — Where GRGF™ Sits" className="border-b border-border bg-muted/30">
         <FadeIn>
           <div className="max-w-4xl space-y-6">
             <div className="grid gap-4 md:grid-cols-3">
               {[
                 { label: "Layer 1 — Identity", systems: "MOSIP, National eID", grgf: false, desc: "Who you are" },
                 { label: "Layer 2 — Data Exchange", systems: "X-Road, GovStack", grgf: false, desc: "Moving data between systems" },
-                { label: "Layer 3 — Governance Integrity", systems: "GRGF (sole occupant)", grgf: true, desc: "Proving what institutions did or failed to do" },
+                { label: "Layer 3 — Governance Integrity", systems: "GRGF™ (sole occupant)", grgf: true, desc: "Proving what institutions did or failed to do" },
               ].map((layer) => (
                 <Card key={layer.label} className={`p-5 ${layer.grgf ? "border-ms-blue/40 bg-ms-blue/5" : "border-border"}`}>
                   <h4 className={`text-xs font-bold ${layer.grgf ? "text-ms-blue" : ""}`}>{layer.label}</h4>
@@ -375,7 +375,7 @@ export default function CompetitiveLandscape() {
                   <p className="text-[10px] font-mono mt-3 text-muted-foreground/70">{layer.systems}</p>
                   {layer.grgf && (
                     <div className="mt-3 pt-3 border-t border-ms-blue/20">
-                      <span className="text-[10px] text-ms-blue font-semibold">★ New category — created by GRGF</span>
+                      <span className="text-[10px] text-ms-blue font-semibold">★ New category — created by GRGF™</span>
                     </div>
                   )}
                 </Card>
@@ -386,10 +386,10 @@ export default function CompetitiveLandscape() {
               <h4 className="text-xs font-bold mb-3">Adjacent Systems — Not Competitors</h4>
               <div className="grid gap-2 md:grid-cols-2">
                 {[
-                  { system: "X-Road", relationship: "Complementary — GRGF can sit atop X-Road as the integrity layer for data exchanges" },
-                  { system: "MOSIP", relationship: "Complementary — GRGF records governance events from identity processes without replacing them" },
-                  { system: "GovStack", relationship: "Complementary — GRGF could serve as a GovStack building block for governance integrity" },
-                  { system: "OpenCRVS", relationship: "Complementary — GRGF could provide evidence backbone for civil registration decisions" },
+                  { system: "X-Road", relationship: "Complementary — GRGF™ can sit atop X-Road as the integrity layer for data exchanges" },
+                  { system: "MOSIP", relationship: "Complementary — GRGF™ records governance events from identity processes without replacing them" },
+                  { system: "GovStack", relationship: "Complementary — GRGF™ could serve as a GovStack building block for governance integrity" },
+                  { system: "OpenCRVS", relationship: "Complementary — GRGF™ could provide evidence backbone for civil registration decisions" },
                 ].map((r) => (
                   <div key={r.system} className="flex items-start gap-2 p-2 rounded bg-muted/50">
                     <Check className="h-3.5 w-3.5 text-ms-green mt-0.5 flex-shrink-0" />
@@ -434,7 +434,7 @@ export default function CompetitiveLandscape() {
                 This analysis evaluates structural architectural capabilities, not product quality, deployment maturity, or organizational
                 effectiveness. Assessments are based on publicly available documentation, technical specifications, published architecture
                 documents, and patent filings as of Q1 2026. The analysis was conducted to identify whether any existing system globally
-                replicates the governance record-of-record architecture invented by GRGF. Findings confirm no direct equivalent exists.
+                replicates the governance record-of-record architecture invented by GRGF™. Findings confirm no direct equivalent exists.
                 This document is provided for institutional evaluation, investor review, and government submission purposes.
               </p>
             </Card>
@@ -448,7 +448,7 @@ export default function CompetitiveLandscape() {
           Global Record Governance Framework — Invented and Owned by Tarek Wahid — Canadian Patent No. CA 3,300,102
         </p>
         <p className="text-[10px] text-muted-foreground/30 mt-1">
-          Competitive Landscape Analysis Report No. GRGF-CLA-2026-001 · Classification: Public · Date: April 2026
+          Competitive Landscape Analysis Report No. GRGF™-CLA-2026-001 · Classification: Public · Date: April 2026
         </p>
       </div>
     </div>

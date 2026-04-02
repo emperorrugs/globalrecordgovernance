@@ -136,7 +136,7 @@ const SystemArchitecture = () => (
     {/* Evidence Object Schema */}
     <Section title="Evidence Object Schema" className="border-t border-border">
       <p className="text-sm text-muted-foreground mb-4 max-w-3xl">
-        Every governance event captured by GRGF is normalized into a structured evidence object with the following fields. This schema ensures cross-system compatibility and independent verifiability.
+        Every governance event captured by GRGF™ is normalized into a structured evidence object with the following fields. This schema ensures cross-system compatibility and independent verifiability.
       </p>
       <div className="governance-card overflow-x-auto">
         <table className="w-full text-xs font-mono">
@@ -181,7 +181,7 @@ const SystemArchitecture = () => (
             <h3 className="font-serif text-sm font-semibold">Append-Only Rule</h3>
           </div>
           <div className="space-y-2 text-xs text-muted-foreground leading-relaxed">
-            <p>GRGF does not allow update-in-place. Corrections are appended as new records referencing prior evidence. Historical truth remains inspectable.</p>
+            <p>GRGF™ does not allow update-in-place. Corrections are appended as new records referencing prior evidence. Historical truth remains inspectable.</p>
             <p><span className="font-semibold text-foreground">Correction record:</span> A new evidence object is created with <code className="text-accent">event_type: "correction"</code> and a reference to the original <code className="text-accent">record_id</code>. The original record is never modified or deleted.</p>
             <p><span className="font-semibold text-foreground">Tamper detection:</span> Any modification to a sealed record invalidates its hash and breaks the chain, making tampering immediately detectable by any verifier.</p>
           </div>
@@ -211,10 +211,10 @@ const SystemArchitecture = () => (
       </div>
     </Section>
 
-    {/* What GRGF Does NOT Do */}
-    <Section title="What GRGF Does NOT Do" className="border-t border-border">
+    {/* What GRGF™ Does NOT Do */}
+    <Section title="What GRGF™ Does NOT Do" className="border-t border-border">
       <p className="text-sm text-muted-foreground mb-4 max-w-3xl">
-        Clear boundaries are essential for institutional credibility. GRGF is deliberately constrained in scope.
+        Clear boundaries are essential for institutional credibility. GRGF™ is deliberately constrained in scope.
       </p>
       <div className="grid gap-3 sm:grid-cols-2">
         {[

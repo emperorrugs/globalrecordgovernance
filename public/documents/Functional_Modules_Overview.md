@@ -9,7 +9,7 @@
 
 ## Architecture Overview
 
-GRGF's architecture comprises four core functional layers, each with clearly defined governance responsibilities:
+GRGF™'s architecture comprises four core functional layers, each with clearly defined governance responsibilities:
 
 ### 1. Event Normalization Layer
 Translates real-world institutional actions and omissions into structured governance events. Supports multiple ingestion patterns (API, webhook, batch, manual).

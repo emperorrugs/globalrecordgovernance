@@ -6,7 +6,7 @@ const stages = [
   {
     stage: 0,
     title: "Awareness",
-    plain: "The country learns about GRGF and begins exploring how it works.",
+    plain: "The country learns about GRGF™ and begins exploring how it works.",
     tech: "Initial stakeholder engagement. Assessment of existing governance infrastructure, legal frameworks, and institutional readiness.",
     keeps: "Full sovereignty. No changes to existing systems.",
     deploys: "Information materials, stakeholder briefings",
@@ -26,9 +26,9 @@ const stages = [
   {
     stage: 2,
     title: "Institutional",
-    plain: "Multiple departments start using GRGF. Governance rules are adapted to local laws.",
+    plain: "Multiple departments start using GRGF™. Governance rules are adapted to local laws.",
     tech: "Multi-departmental deployment with localized governance protocols. Integration with existing national record systems. Stewardship authority designated.",
-    keeps: "Existing record systems. GRGF supplements, doesn't replace.",
+    keeps: "Existing record systems. GRGF™ supplements, doesn't replace.",
     deploys: "Full archive, GOS rules, certification programme",
     time: "6–18 months",
     depth: "Cross-departmental",
@@ -36,17 +36,17 @@ const stages = [
   {
     stage: 3,
     title: "National",
-    plain: "GRGF becomes a standard part of national governance. All key institutions use it.",
+    plain: "GRGF™ becomes a standard part of national governance. All key institutions use it.",
     tech: "National-scale deployment with full governance operating system. Cross-institutional record integrity. Federation readiness achieved.",
     keeps: "Sovereign control. All data stays in-country.",
-    deploys: "Complete GRGF infrastructure, academy, audit tools",
+    deploys: "Complete GRGF™ infrastructure, academy, audit tools",
     time: "18–36 months",
     depth: "National infrastructure",
   },
   {
     stage: 4,
     title: "Federated",
-    plain: "The country joins the global GRGF network, enabling cross-border record verification.",
+    plain: "The country joins the global GRGF™ network, enabling cross-border record verification.",
     tech: "Federation-tier integration enabling cross-jurisdictional verification while maintaining sovereign data boundaries. Interoperability protocols activated.",
     keeps: "Full sovereignty. Data never leaves jurisdiction.",
     deploys: "Federation protocols, cross-border verification layer",
@@ -65,7 +65,7 @@ const Countries = () => {
       <PageHeader
         title="Country Deployment"
         subtitle={isPlain
-          ? "How any country can adopt GRGF — step by step, at their own pace, keeping full control."
+          ? "How any country can adopt GRGF™ — step by step, at their own pace, keeping full control."
           : "Sovereign deployment model with progressive adoption stages adapted to each jurisdiction's digital maturity."
         }
       />
@@ -112,7 +112,7 @@ const Countries = () => {
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="bg-background border border-border rounded-sm p-4">
-              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">What GRGF Deploys</p>
+              <p className="text-[10px] font-mono text-accent uppercase tracking-wider mb-1">What GRGF™ Deploys</p>
               <p className="text-sm text-foreground">{s.deploys}</p>
             </div>
             <div className="bg-background border border-border rounded-sm p-4">
@@ -137,8 +137,8 @@ const Countries = () => {
           <h3 className="font-serif text-lg font-semibold mb-3">No Fear. No Replacement.</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
             {isPlain
-              ? "GRGF doesn't replace any existing system. Countries keep everything they have. GRGF adds a trust layer on top — and can be reversed at any time."
-              : "GRGF operates as supplementary infrastructure. Sovereign exit is guaranteed at any stage without penalty, lock-in, or loss of previously sealed records."}
+              ? "GRGF™ doesn't replace any existing system. Countries keep everything they have. GRGF™ adds a trust layer on top — and can be reversed at any time."
+              : "GRGF™ operates as supplementary infrastructure. Sovereign exit is guaranteed at any stage without penalty, lock-in, or loss of previously sealed records."}
           </p>
         </div>
       </Section>

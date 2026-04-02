@@ -55,7 +55,7 @@ const boardPositions = [
 const partnerCategories = [
   {
     category: "Institutional Evaluation Partners",
-    description: "Government bodies, multilateral organizations, and regulatory agencies invited to conduct structured evaluation of the GRGF Pilot Node.",
+    description: "Government bodies, multilateral organizations, and regulatory agencies invited to conduct structured evaluation of the GRGF™ Pilot Node.",
     targets: ["National digital transformation agencies", "Treasury and public administration ministries", "Multilateral development organizations"],
     status: "Engagement in progress",
   },
@@ -73,7 +73,7 @@ const partnerCategories = [
   },
   {
     category: "Pilot Implementation Partners",
-    description: "Municipal, regional, or institutional entities willing to participate in a structured 90-day pilot deployment of the GRGF system.",
+    description: "Municipal, regional, or institutional entities willing to participate in a structured 90-day pilot deployment of the GRGF™ system.",
     targets: ["Municipal governments", "University administrative offices", "Regional regulatory bodies"],
     status: "Engagement in progress",
   },
@@ -99,7 +99,7 @@ const AdvisoryBoard = () => (
     <Section title="Governance Statement" className="border-b border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4">
-          GRGF is designed as neutral, sovereign-grade infrastructure. To ensure institutional credibility, independence, and anti-capture compliance (AC-01 through AC-05), the framework is governed by an independent Advisory Board composed of recognized experts from governance, security, law, academia, and public sector implementation.
+          GRGF™ is designed as neutral, sovereign-grade infrastructure. To ensure institutional credibility, independence, and anti-capture compliance (AC-01 through AC-05), the framework is governed by an independent Advisory Board composed of recognized experts from governance, security, law, academia, and public sector implementation.
         </p>
         <p className="text-sm text-foreground leading-relaxed">
           The Advisory Board provides strategic oversight, technical validation, and institutional endorsement. Board members serve in an advisory capacity and do not hold operational authority over the framework's architecture or deployment decisions.
@@ -110,7 +110,7 @@ const AdvisoryBoard = () => (
     {/* Advisory Board */}
     <Section title="Advisory Board Positions" className="border-b border-border">
       <p className="text-xs text-muted-foreground mb-6">
-        The following positions define the composition of the GRGF Advisory Board. Recruitment is conducted through formal institutional outreach.
+        The following positions define the composition of the GRGF™ Advisory Board. Recruitment is conducted through formal institutional outreach.
       </p>
       <div className="grid gap-4 lg:grid-cols-2">
         {boardPositions.map((p) => (
@@ -138,7 +138,7 @@ const AdvisoryBoard = () => (
     {/* Institutional Partners */}
     <Section title="Institutional Partner Programme" className="border-b border-border">
       <p className="text-xs text-muted-foreground mb-6">
-        GRGF institutional partnerships are structured to ensure independent validation without compromising the framework's neutrality or anti-capture principles.
+        GRGF™ institutional partnerships are structured to ensure independent validation without compromising the framework's neutrality or anti-capture principles.
       </p>
       <div className="space-y-4">
         {partnerCategories.map((pc) => (
@@ -182,7 +182,7 @@ const AdvisoryBoard = () => (
     <Section title="Express Interest">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4">
-          If you represent a government body, academic institution, standards organization, or security firm and are interested in contributing to the GRGF Advisory Board or Institutional Partner Programme, we welcome formal expressions of interest.
+          If you represent a government body, academic institution, standards organization, or security firm and are interested in contributing to the GRGF™ Advisory Board or Institutional Partner Programme, we welcome formal expressions of interest.
         </p>
         <div className="flex flex-wrap gap-2">
           <Link to="/contact" className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-primary text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">
@@ -194,7 +194,7 @@ const AdvisoryBoard = () => (
         </div>
       </div>
       <p className="mt-6 text-[10px] font-mono text-muted-foreground/40 tracking-wider text-center">
-        ADVISORY BOARD COMPOSITION ALIGNED WITH GRGF ANTI-CAPTURE CLAUSES AC-01 THROUGH AC-05
+        ADVISORY BOARD COMPOSITION ALIGNED WITH GRGF™ ANTI-CAPTURE CLAUSES AC-01 THROUGH AC-05
       </p>
     </Section>
   </div>

@@ -1,5 +1,5 @@
 
-# Executive Decision Memo — GRGF DPI
+# Executive Decision Memo — GRGF™ DPI
 Recommendation: APPROVE PILOT & PHASED SCALE
 
 Decision:

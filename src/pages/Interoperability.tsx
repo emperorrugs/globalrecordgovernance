@@ -29,7 +29,7 @@ const Interoperability = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Interoperability Impact Simulator — GRGF"
+        title="Interoperability Impact Simulator — GRGF™"
         description="Model the efficiency impact of cross-ministry and cross-border governance interoperability through federated digital public infrastructure."
       />
       <PageHeader

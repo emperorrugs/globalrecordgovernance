@@ -85,7 +85,7 @@ const DeploymentPlanner = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Deployment Scenario Builder — GRGF"
+        title="Deployment Scenario Builder — GRGF™"
         description="Interactive deployment planning tool. Select sector, scale, and timeline to generate a phased roadmap with budget estimates and stakeholder mapping."
       />
       <PageHeader

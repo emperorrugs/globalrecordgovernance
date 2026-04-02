@@ -5,30 +5,30 @@ const WhatIsGRGF = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="What Is GRGF"
+        title="What Is GRGF™"
         subtitle="A global governance infrastructure for recording verifiable institutional facts — not a product, platform, or service."
       />
 
       {/* Canonical Definition */}
       <Section title="Definition">
         <div className="canonical-quote text-base md:text-lg leading-relaxed max-w-3xl">
-          "Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public
+          "Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public
           Infrastructure trust layer for recording, preserving, and verifying institutional
           actions, decisions, and omissions over time — without interpretation, enforcement,
           or decision authority."
         </div>
         <p className="mt-6 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          GRGF is the world's first unified global Digital Public Infrastructure (DPI) trust layer.
+          GRGF™ is the world's first unified global Digital Public Infrastructure (DPI) trust layer.
           It operates as neutral governance infrastructure that can exist in every country under one
           common name and structure, while adapting to each country's level of digital maturity.
-          GRGF integrates with national DPI initiatives — it does not replace them.
+          GRGF™ integrates with national DPI initiatives — it does not replace them.
         </p>
       </Section>
 
       {/* Records vs Evidence vs Trust */}
       <Section title="Records, Evidence, and Trust" className="border-t border-border">
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          GRGF distinguishes between three concepts that are often conflated in governance systems.
+          GRGF™ distinguishes between three concepts that are often conflated in governance systems.
           This distinction is foundational to the framework's architecture.
         </p>
         <div className="grid gap-4 sm:grid-cols-3">
@@ -41,7 +41,7 @@ const WhatIsGRGF = () => {
               Verifiable, immutable accounts of what occurred, what was decided, what was transacted,
               and what was omitted. Records are facts — they carry no interpretation or judgment.
             </p>
-            <p className="hash-text mt-3">GRGF FUNCTION: RECORD</p>
+            <p className="hash-text mt-3">GRGF™ FUNCTION: RECORD</p>
           </div>
           <div className="governance-card border-l-2 border-l-accent">
             <div className="flex items-center gap-3 mb-3">
@@ -50,10 +50,10 @@ const WhatIsGRGF = () => {
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">
               Records become evidence when presented in a legal, regulatory, or audit context.
-              GRGF does not determine evidentiary value — it preserves records with sufficient
+              GRGF™ does not determine evidentiary value — it preserves records with sufficient
               integrity for external parties to make that determination.
             </p>
-            <p className="hash-text mt-3">GRGF FUNCTION: PRESERVE</p>
+            <p className="hash-text mt-3">GRGF™ FUNCTION: PRESERVE</p>
           </div>
           <div className="governance-card border-l-2 border-l-accent">
             <div className="flex items-center gap-3 mb-3">
@@ -61,11 +61,11 @@ const WhatIsGRGF = () => {
               <h3 className="font-serif text-sm font-semibold">Trust</h3>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Trust is the outcome of verifiable integrity over time. GRGF builds institutional
+              Trust is the outcome of verifiable integrity over time. GRGF™ builds institutional
               trust by ensuring records are tamper-proof, independently verifiable, and
               consistently governed across jurisdictions.
             </p>
-            <p className="hash-text mt-3">GRGF FUNCTION: VERIFY</p>
+            <p className="hash-text mt-3">GRGF™ FUNCTION: VERIFY</p>
           </div>
         </div>
       </Section>
@@ -77,7 +77,7 @@ const WhatIsGRGF = () => {
             <AlertTriangle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
             <div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                Most governance systems record only what happened. GRGF also records what
+                Most governance systems record only what happened. GRGF™ also records what
                 <span className="font-semibold text-foreground"> did not happen</span> — actions
                 that were required but not taken, decisions that were deferred, and obligations
                 that expired without fulfilment.
@@ -89,7 +89,7 @@ const WhatIsGRGF = () => {
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 By treating omissions as first-class governance records — with the same integrity,
-                immutability, and verifiability as positive actions — GRGF enables auditors,
+                immutability, and verifiability as positive actions — GRGF™ enables auditors,
                 courts, and oversight bodies to assess institutional performance comprehensively.
               </p>
             </div>
@@ -97,14 +97,14 @@ const WhatIsGRGF = () => {
         </div>
       </Section>
 
-      {/* What GRGF Is Not */}
-      <Section title="What GRGF Is Not" className="border-t border-border">
+      {/* What GRGF™ Is Not */}
+      <Section title="What GRGF™ Is Not" className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            { label: "Not a database product", desc: "GRGF is governance infrastructure, not commercial software. Its value derives from institutional integrity, not features." },
-            { label: "Not a compliance tool", desc: "GRGF does not enforce regulations or monitor adherence. It records institutional facts for independent verification." },
-            { label: "Not a ranking system", desc: "GRGF does not evaluate, score, or compare institutions. It rejects league tables, indices, and performance rankings." },
-            { label: "Not an enforcement mechanism", desc: "GRGF has no decision authority. It preserves the factual record — interpretation and action belong to sovereign institutions." },
+            { label: "Not a database product", desc: "GRGF™ is governance infrastructure, not commercial software. Its value derives from institutional integrity, not features." },
+            { label: "Not a compliance tool", desc: "GRGF™ does not enforce regulations or monitor adherence. It records institutional facts for independent verification." },
+            { label: "Not a ranking system", desc: "GRGF™ does not evaluate, score, or compare institutions. It rejects league tables, indices, and performance rankings." },
+            { label: "Not an enforcement mechanism", desc: "GRGF™ has no decision authority. It preserves the factual record — interpretation and action belong to sovereign institutions." },
           ].map((item) => (
             <div key={item.label} className="governance-card">
               <div className="flex items-start gap-3">

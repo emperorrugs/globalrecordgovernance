@@ -7,7 +7,7 @@ const ExecutiveSummary = () => (
     <header className="border-b border-border px-8 py-4 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
         <div>
-          <h1 className="font-serif text-sm font-semibold tracking-wide text-foreground">GRGF</h1>
+          <h1 className="font-serif text-sm font-semibold tracking-wide text-foreground">GRGF™</h1>
           <p className="text-[10px] text-muted-foreground/60">Executive Summary</p>
         </div>
         <Link to="/" className="text-xs text-accent hover:underline font-mono">
@@ -26,7 +26,7 @@ const ExecutiveSummary = () => (
           A Global Governance<br />Integrity Engine
         </h2>
         <p className="text-base text-foreground/80 leading-relaxed max-w-3xl mb-8">
-          GRGF is a deterministic Governance Operating Layer that turns institutional action into cryptographically verifiable event. Append-only. Independently auditable. No override.
+          GRGF™ is a deterministic Governance Operating Layer that turns institutional action into cryptographically verifiable event. Append-only. Independently auditable. No override.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link to="/pilot" className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-accent-foreground text-sm font-medium rounded-sm hover:bg-accent/90 transition-colors">
@@ -179,7 +179,7 @@ const ExecutiveSummary = () => (
         </div>
         <div className="text-center">
           <p className="text-base font-serif text-foreground leading-relaxed mb-2">
-            GRGF is a deterministic governance infrastructure layer that makes institutional actions structurally verifiable.
+            GRGF™ is a deterministic governance infrastructure layer that makes institutional actions structurally verifiable.
           </p>
           <p className="text-sm text-muted-foreground italic">
             This is the missing operating system for public trust.

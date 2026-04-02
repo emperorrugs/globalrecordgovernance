@@ -17,7 +17,7 @@ const ENDPOINTS = [
     },
     response: {
       status: "CREATED",
-      record_id: "GRGF-SIM-0042",
+      record_id: "GRGF™-SIM-0042",
       hash: "a7f3c2d8e9b1f4a6c3d7e8f2a5b9c1d4e7f0a3b6c9d2e5f8a1b4c7d0e3f6a8",
       sealed_at: "2024-06-15T14:30:00Z",
       authority: "Ministry of Finance",
@@ -31,7 +31,7 @@ const ENDPOINTS = [
     description: "Retrieve a specific governance record by ID",
     request: null,
     response: {
-      record_id: "GRGF-SIM-0042",
+      record_id: "GRGF™-SIM-0042",
       record_type: "Government Decision",
       status: "APPROVED",
       institution: "Ministry of Finance",
@@ -39,7 +39,7 @@ const ENDPOINTS = [
       hash: "a7f3c2d8e9b1f4a6c3d7e8f2a5b9c1d4e7f0a3b6c9d2e5f8a1b4c7d0e3f6a8",
       sealed_at: "2024-06-15T14:30:00Z",
       version: 1,
-      verification_url: "/verify/GRGF-SIM-0042",
+      verification_url: "/verify/GRGF™-SIM-0042",
     },
   },
   {
@@ -50,9 +50,9 @@ const ENDPOINTS = [
     response: {
       total_entries: 5,
       entries: [
-        { timestamp: "2024-06-01T09:14:22Z", actor: "J. Okafor", action: "RECORD_CREATED", record_id: "GRGF-SIM-0042" },
-        { timestamp: "2024-06-02T14:30:05Z", actor: "M. Chen", action: "REVIEW_INITIATED", record_id: "GRGF-SIM-0042" },
-        { timestamp: "2024-06-04T16:45:11Z", actor: "Dr. A. Nkosi", action: "APPROVED_SEALED", record_id: "GRGF-SIM-0042" },
+        { timestamp: "2024-06-01T09:14:22Z", actor: "J. Okafor", action: "RECORD_CREATED", record_id: "GRGF™-SIM-0042" },
+        { timestamp: "2024-06-02T14:30:05Z", actor: "M. Chen", action: "REVIEW_INITIATED", record_id: "GRGF™-SIM-0042" },
+        { timestamp: "2024-06-04T16:45:11Z", actor: "Dr. A. Nkosi", action: "APPROVED_SEALED", record_id: "GRGF™-SIM-0042" },
       ],
     },
   },
@@ -80,8 +80,8 @@ const APIMock = () => {
         title="API Reference (Mock)"
         subtitle={
           isPlain
-            ? "See how GRGF could integrate with other systems — these are example API formats, not live endpoints."
-            : "Mock API specification for GRGF record operations. No backend, no live data. For technical review and integration planning."
+            ? "See how GRGF™ could integrate with other systems — these are example API formats, not live endpoints."
+            : "Mock API specification for GRGF™ record operations. No backend, no live data. For technical review and integration planning."
         }
       >
         <div className="mt-4 flex items-center gap-2 text-xs font-mono bg-destructive/10 text-destructive px-3 py-2 rounded-sm w-fit border border-destructive/20">

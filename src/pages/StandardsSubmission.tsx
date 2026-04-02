@@ -10,7 +10,7 @@ const StandardsSubmission = () => {
       status: "In Preparation",
       target: "Q3 2026",
       scope: "Canonical schema for governance event records, hash-chain integrity proofs, and cross-jurisdiction verification protocols.",
-      relevance: "Positions GRGF canonical format as the international standard for governance record interoperability.",
+      relevance: "Positions GRGF™ canonical format as the international standard for governance record interoperability.",
     },
     {
       body: "ITU-T SG17",
@@ -18,14 +18,14 @@ const StandardsSubmission = () => {
       status: "Drafting",
       target: "Q4 2026",
       scope: "Cryptographic verification framework for institutional governance records. Includes threat model, proof artifacts, and federation checkpoint witnessing.",
-      relevance: "Establishes GRGF verification methodology as a recognized telecommunications security standard.",
+      relevance: "Establishes GRGF™ verification methodology as a recognized telecommunications security standard.",
     },
     {
       body: "ISO/IEC 27001",
       title: "Annex A — Governance Record Controls",
       status: "Alignment Complete",
       target: "Certification Q2 2027",
-      scope: "Mapping of GRGF security controls to ISO 27001 Annex A requirements. Covers access control, cryptographic controls, and audit logging.",
+      scope: "Mapping of GRGF™ security controls to ISO 27001 Annex A requirements. Covers access control, cryptographic controls, and audit logging.",
       relevance: "Enables institutional procurement by meeting mandatory security certification requirements.",
     },
     {
@@ -34,7 +34,7 @@ const StandardsSubmission = () => {
       status: "Submitted for Review",
       target: "Q1 2027",
       scope: "Formal alignment with OECD Digital Government Policy Framework principles. Governance integrity as DPI Layer 3.",
-      relevance: "Embeds GRGF into OECD policy recommendations for member state governance modernization.",
+      relevance: "Embeds GRGF™ into OECD policy recommendations for member state governance modernization.",
     },
   ];
 
@@ -57,7 +57,7 @@ const StandardsSubmission = () => {
       <Section>
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <p className="text-sm text-foreground leading-relaxed">
-            Whoever sets the standard owns the market. GRGF's standardization strategy targets four international bodies 
+            Whoever sets the standard owns the market. GRGF™'s standardization strategy targets four international bodies 
             to establish its canonical schema and verification methodology as the global reference for governance record integrity.
           </p>
         </div>
@@ -128,8 +128,8 @@ const StandardsSubmission = () => {
           {[
             { title: "Network Effects", desc: "Every new jurisdiction node increases the verification network's value exponentially. Federation creates mutual dependency." },
             { title: "Switching Costs", desc: "Sealed records cannot be migrated without breaking hash chains. Integrity continuity locks institutions to the framework." },
-            { title: "Standards Capture", desc: "Once GRGF's canonical schema becomes an ISO/ITU standard, competitors must conform to it — not compete with it." },
-            { title: "Data Gravity", desc: "Governance truth accumulates. The more records exist, the more records are attracted. GRGF becomes the system of record." },
+            { title: "Standards Capture", desc: "Once GRGF™'s canonical schema becomes an ISO/ITU standard, competitors must conform to it — not compete with it." },
+            { title: "Data Gravity", desc: "Governance truth accumulates. The more records exist, the more records are attracted. GRGF™ becomes the system of record." },
           ].map((m) => (
             <div key={m.title} className="governance-card">
               <Shield className="h-4 w-4 text-accent mb-2" />

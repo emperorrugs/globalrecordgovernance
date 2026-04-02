@@ -9,7 +9,7 @@
 
 ## Overview
 
-GRGF operates as a horizontal trust layer across government systems. It does not replace registries, workflow tools, or decision systems.
+GRGF™ operates as a horizontal trust layer across government systems. It does not replace registries, workflow tools, or decision systems.
 
 Instead, it records that they acted — or failed to act — within a defined governance context.
 
@@ -56,7 +56,7 @@ For technical audiences, the architecture decomposes into:
 
 ## Fundamental Constraint
 
-**Authority never resides in software execution.** GRGF records governance events; it does not make governance decisions. Human authority and institutional mandate remain supreme.
+**Authority never resides in software execution.** GRGF™ records governance events; it does not make governance decisions. Human authority and institutional mandate remain supreme.
 
 ---
 

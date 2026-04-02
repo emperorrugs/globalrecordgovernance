@@ -243,7 +243,7 @@ export default function Security() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="border-l-2 border-accent pl-6 space-y-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  GRGF is structurally owner-controlled. The framework's governance rules, access policies,
+                  GRGF™ is structurally owner-controlled. The framework's governance rules, access policies,
                   and stewardship mandates are defined and maintained by the framework's governance authority — 
                   not by technology vendors, hosting providers, or third-party service operators.
                 </p>

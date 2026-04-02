@@ -29,7 +29,7 @@ const MODULES: ModuleData[] = [
     id: 1,
     title: "Legitimacy Architecture",
     icon: Building,
-    objective: "Transition GRGF from founder-origin initiative to independently governed institutional entity with transparent authority separation and anti-capture safeguards.",
+    objective: "Transition GRGF™ from founder-origin initiative to independently governed institutional entity with transparent authority separation and anti-capture safeguards.",
     actions: [
       "Establish independent foundation (Swiss Verein or Canadian not-for-profit)",
       "Draft and publish founding governance charter with authority separation model",
@@ -85,7 +85,7 @@ const MODULES: ModuleData[] = [
     id: 3,
     title: "Independent Validation System",
     icon: Shield,
-    objective: "Establish external verification of GRGF's technical integrity through independent third-party assessment, removing reliance on self-asserted credibility.",
+    objective: "Establish external verification of GRGF™'s technical integrity through independent third-party assessment, removing reliance on self-asserted credibility.",
     actions: [
       "Commission architecture review by ISO 27001-certified firm",
       "Execute four-phase validation: Architecture → Penetration → Policy Logic → Ethics",
@@ -96,7 +96,7 @@ const MODULES: ModuleData[] = [
     ],
     artifacts: ["Validation Terms of Reference", "Architecture Conformance Report", "Security Assessment Report", "Policy Logic Conformance Report", "Governance Ethics Assessment"],
     stakeholders: ["Accredited cybersecurity firms", "Academic governance labs", "Independent policy auditors", "Standards conformance bodies"],
-    psychologyImpact: "Removes the primary institutional objection — lack of external scrutiny — and positions GRGF alongside audited multilateral systems.",
+    psychologyImpact: "Removes the primary institutional objection — lack of external scrutiny — and positions GRGF™ alongside audited multilateral systems.",
     legitimacyContribution: "Independent validation is the single most impactful credibility accelerator. Evaluators treat audited systems fundamentally differently.",
     ipContribution: "Validated architecture documentation strengthens patent defensibility and licensing authority for certified implementations.",
     risks: [
@@ -141,7 +141,7 @@ const MODULES: ModuleData[] = [
     id: 5,
     title: "Operational Proof-of-Function",
     icon: Activity,
-    objective: "Generate measurable evidence that GRGF produces governance outputs — immutable audit chains, certification lifecycles, and verification dashboards.",
+    objective: "Generate measurable evidence that GRGF™ produces governance outputs — immutable audit chains, certification lifecycles, and verification dashboards.",
     actions: [
       "Execute full record lifecycle with measurable KPIs",
       "Generate demonstration datasets with hash-sealed records and audit trails",
@@ -170,7 +170,7 @@ const MODULES: ModuleData[] = [
     icon: Scale,
     objective: "Create explicit compliance mapping against governance, records management, cybersecurity, interoperability, and privacy standards.",
     actions: [
-      "Map GRGF to ISO/IEC 27001 (information security), ISO 15489 (records management)",
+      "Map GRGF™ to ISO/IEC 27001 (information security), ISO 15489 (records management)",
       "Align with OECD Digital Government Policy Framework principles",
       "Document GDPR and PIPEDA privacy-by-design compliance",
       "Create ITU-T alignment matrix (X.509, X.1252, X.1500)",
@@ -223,13 +223,13 @@ const MODULES: ModuleData[] = [
     id: 8,
     title: "Academic Legitimacy Program",
     icon: BookOpen,
-    objective: "Establish GRGF within academic discourse through peer-reviewed publications, research collaborations, and conference presentations.",
+    objective: "Establish GRGF™ within academic discourse through peer-reviewed publications, research collaborations, and conference presentations.",
     actions: [
       "Publish 2–3 governance working papers (SSRN, arXiv)",
       "Submit peer-reviewed article to governance journal (Government Information Quarterly)",
       "Establish research collaboration with 2+ university departments",
       "Present at international governance conferences (ICEGOV, OECD GovTech)",
-      "Launch GRGF Working Paper Series with DOI registration",
+      "Launch GRGF™ Working Paper Series with DOI registration",
       "Define research themes: governance integrity, append-only records, anti-capture",
     ],
     artifacts: ["Working Paper Series (2–3 papers)", "Journal Submission", "Conference Presentations", "Research MOUs", "Citation Guidelines"],
@@ -357,7 +357,7 @@ const MODULES: ModuleData[] = [
     id: 13,
     title: "IP Value Maximization",
     icon: Target,
-    objective: "Engineer perception of GRGF as infrastructure-class intellectual property with defensible methodology, modular architecture, and certification network effects.",
+    objective: "Engineer perception of GRGF™ as infrastructure-class intellectual property with defensible methodology, modular architecture, and certification network effects.",
     actions: [
       "Articulate proprietary methodology as defensible IP asset",
       "Map modular architecture ownership (6-layer model, policy engine, federation protocol)",
@@ -368,7 +368,7 @@ const MODULES: ModuleData[] = [
     ],
     artifacts: ["IP Asset Map", "Defensibility Narrative", "Modular Architecture Ownership Document", "Network Effects Model", "IP Positioning Paper"],
     stakeholders: ["IP legal counsel", "Valuation specialists", "Institutional licensing team"],
-    psychologyImpact: "Infrastructure-class IP is valued differently from application-level IP. Positioning GRGF as foundational infrastructure shifts valuation paradigms.",
+    psychologyImpact: "Infrastructure-class IP is valued differently from application-level IP. Positioning GRGF™ as foundational infrastructure shifts valuation paradigms.",
     legitimacyContribution: "IP defensibility signals institutional permanence — frameworks with protected IP are perceived as more serious and sustainable.",
     ipContribution: "Direct IP valuation maximization through defensibility documentation, network effect modeling, and licensing architecture design.",
     risks: [
@@ -422,7 +422,7 @@ const MODULES: ModuleData[] = [
     artifacts: ["Monthly Execution Checklist", "Milestone Tracker", "Credibility Score Dashboard", "Adoption Probability Model", "Quarterly Progress Reports"],
     stakeholders: ["Executive leadership", "Advisory Council", "Standards Committee", "External evaluators"],
     psychologyImpact: "A documented execution timeline demonstrates institutional seriousness. Evaluators assess timeline discipline as a proxy for operational maturity.",
-    legitimacyContribution: "The roadmap itself is a credibility signal — it demonstrates that GRGF has a structured path to institutional status.",
+    legitimacyContribution: "The roadmap itself is a credibility signal — it demonstrates that GRGF™ has a structured path to institutional status.",
     ipContribution: "Milestone-driven execution creates documented value accretion, supporting progressive IP valuation increases.",
     risks: [
       { risk: "Timeline slippage", mitigation: "90-day review cycles with published adjustment rationale" },
@@ -436,9 +436,9 @@ const MODULES: ModuleData[] = [
     id: 16,
     title: "Valuation Optimization Model",
     icon: TrendingUp,
-    objective: "Position GRGF as infrastructure-class IP with governance layer economics, certification ecosystem revenue, and long-horizon institutional platform scaling.",
+    objective: "Position GRGF™ as infrastructure-class IP with governance layer economics, certification ecosystem revenue, and long-horizon institutional platform scaling.",
     actions: [
-      "Model GRGF as governance infrastructure layer (not application)",
+      "Model GRGF™ as governance infrastructure layer (not application)",
       "Quantify certification ecosystem revenue potential (per-institution licensing)",
       "Calculate network effects: each certified institution increases platform value",
       "Project 5-year scaling scenarios: conservative, base, optimistic",
@@ -477,7 +477,7 @@ const UnifiedTransformation = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="Unified Institutional Transformation Framework"
-      subtitle="16-module execution system transforming GRGF from governance concept into internationally credible Digital Public Infrastructure demonstration and emerging global standard initiative."
+      subtitle="16-module execution system transforming GRGF™ from governance concept into internationally credible Digital Public Infrastructure demonstration and emerging global standard initiative."
     />
 
     {/* Perception Shift */}
@@ -650,7 +650,7 @@ const UnifiedTransformation = () => (
         </p>
         <blockquote className="border-l-2 border-accent/50 pl-4 py-2 bg-card/50 rounded-r-sm">
           <p className="text-sm font-serif font-semibold text-foreground italic">
-            "GRGF appears institutionally credible, operationally demonstrable, standards-aligned, and ready for pilot engagement."
+            "GRGF™ appears institutionally credible, operationally demonstrable, standards-aligned, and ready for pilot engagement."
           </p>
         </blockquote>
         <div className="mt-6 bg-background border border-border rounded-sm p-3">

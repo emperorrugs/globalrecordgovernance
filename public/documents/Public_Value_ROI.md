@@ -9,7 +9,7 @@
 
 ## Value Creation Model
 
-GRGF creates public value by:
+GRGF™ creates public value by:
 
 - **Reducing ambiguity** in institutional decision-making
 - **Increasing trust** through verifiable governance records
@@ -27,9 +27,9 @@ Value is systemic, not transactional. By making governance actions provable:
 
 ## Cost-Benefit Analysis
 
-GRGF's cost profile is modest relative to:
+GRGF™'s cost profile is modest relative to:
 
-| Comparison | Typical Cost | GRGF Cost |
+| Comparison | Typical Cost | GRGF™ Cost |
 |------------|-------------|-----------|
 | Anti-corruption programs | $50–500M/year | Fraction |
 | Failed IT reforms | $100M–2B per project | Incremental |
@@ -57,7 +57,7 @@ Benefits compound over time as institutional memory accumulates:
 
 ## Trust Principle
 
-**Trust increases when records exist, omissions are visible, and authority is explicit. GRGF restores trust by design, not messaging.**
+**Trust increases when records exist, omissions are visible, and authority is explicit. GRGF™ restores trust by design, not messaging.**
 
 ---
 

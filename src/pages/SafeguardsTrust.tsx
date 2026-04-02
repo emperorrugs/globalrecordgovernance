@@ -11,7 +11,7 @@ const SafeguardsTrust = () => (
     {/* Privacy-by-Design */}
     <Section title="Privacy-by-Design">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF enforces privacy at the architectural level. Personal data is never stored within the governance record layer. Only event metadata strictly required for evidentiary integrity is captured.
+        GRGF™ enforces privacy at the architectural level. Personal data is never stored within the governance record layer. Only event metadata strictly required for evidentiary integrity is captured.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[

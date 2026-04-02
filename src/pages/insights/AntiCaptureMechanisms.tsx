@@ -6,10 +6,10 @@ import { ArrowLeft, ArrowRight, Shield } from "lucide-react";
 
 const AntiCaptureMechanisms = () => (
   <div className="animate-fade-in">
-    <SEOHead title="Anti-Capture Governance Mechanisms — GRGF" description="Structural analysis of GRGF's five Anti-Capture Clauses (AC-01–05) and how they prevent vendor, government, or interest group capture of neutral governance infrastructure." />
+    <SEOHead title="Anti-Capture Governance Mechanisms — GRGF™" description="Structural analysis of GRGF™'s five Anti-Capture Clauses (AC-01–05) and how they prevent vendor, government, or interest group capture of neutral governance infrastructure." />
     <PageHeader title="Anti-Capture Governance Mechanisms" subtitle="Safeguards Analysis · February 2026">
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Anti-Capture" label="Export PDF" />
+        <PDFExportButton filename="GRGF™-Anti-Capture" label="Export PDF" />
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"><ArrowLeft className="h-3 w-3" /> All Insights</Link>
       </div>
     </PageHeader>
@@ -25,9 +25,9 @@ const AntiCaptureMechanisms = () => (
           <h2 className="font-serif text-xl font-semibold text-foreground mb-3">The Five Anti-Capture Clauses</h2>
           <div className="space-y-4 mt-4">
             {[
-              { id: "AC-01", title: "Vendor Independence", severity: "Critical", desc: "No single vendor, technology provider, or commercial entity may hold a controlling interest, exclusive license, or preferential access to GRGF standards, assessment criteria, or governance decisions. Technology choices must remain interchangeable." },
-              { id: "AC-02", title: "Government Non-Interference", severity: "Critical", desc: "No individual government or bloc of governments may direct, override, or suppress GRGF standards or assessment outcomes. Sovereign participation is voluntary and non-hierarchical." },
-              { id: "AC-03", title: "Financial Independence", severity: "High", desc: "GRGF funding must be diversified across multiple independent sources. No single funder may contribute more than 25% of operational budget. Financial influence cannot translate to governance influence." },
+              { id: "AC-01", title: "Vendor Independence", severity: "Critical", desc: "No single vendor, technology provider, or commercial entity may hold a controlling interest, exclusive license, or preferential access to GRGF™ standards, assessment criteria, or governance decisions. Technology choices must remain interchangeable." },
+              { id: "AC-02", title: "Government Non-Interference", severity: "Critical", desc: "No individual government or bloc of governments may direct, override, or suppress GRGF™ standards or assessment outcomes. Sovereign participation is voluntary and non-hierarchical." },
+              { id: "AC-03", title: "Financial Independence", severity: "High", desc: "GRGF™ funding must be diversified across multiple independent sources. No single funder may contribute more than 25% of operational budget. Financial influence cannot translate to governance influence." },
               { id: "AC-04", title: "Standards Integrity", severity: "High", desc: "Assessment criteria and recognition standards are developed through transparent, documented processes with mandatory public comment periods. Retroactive modification of active standards is prohibited." },
               { id: "AC-05", title: "Personnel Rotation", severity: "Medium", desc: "Governance Board members, Standards Committee chairs, and Technical Review Panel leads serve fixed terms with mandatory cooling-off periods. No individual may serve more than two consecutive terms in any governance role." },
             ].map(({ id, title, severity, desc }) => (
@@ -50,8 +50,8 @@ const AntiCaptureMechanisms = () => (
           <h2 className="font-serif text-xl font-semibold text-foreground mb-3">Enforcement Architecture</h2>
           <p>Anti-capture clauses are structurally enforced through three mechanisms:</p>
           <ul className="mt-3 space-y-2">
-            <li className="flex gap-2"><span className="text-accent font-bold">1.</span> <span><strong className="text-foreground">Transparent governance logs:</strong> All governance decisions, votes, and rationale are recorded in the same append-only architecture that GRGF applies to its members — ensuring the framework's own governance is independently verifiable.</span></li>
-            <li className="flex gap-2"><span className="text-accent font-bold">2.</span> <span><strong className="text-foreground">Independent audit triggers:</strong> Any stakeholder may request an independent review of governance decisions for potential capture violations. Reviews are conducted by external parties with no existing GRGF relationship.</span></li>
+            <li className="flex gap-2"><span className="text-accent font-bold">1.</span> <span><strong className="text-foreground">Transparent governance logs:</strong> All governance decisions, votes, and rationale are recorded in the same append-only architecture that GRGF™ applies to its members — ensuring the framework's own governance is independently verifiable.</span></li>
+            <li className="flex gap-2"><span className="text-accent font-bold">2.</span> <span><strong className="text-foreground">Independent audit triggers:</strong> Any stakeholder may request an independent review of governance decisions for potential capture violations. Reviews are conducted by external parties with no existing GRGF™ relationship.</span></li>
             <li className="flex gap-2"><span className="text-accent font-bold">3.</span> <span><strong className="text-foreground">Charter amendment threshold:</strong> Modification of anti-capture clauses requires a supermajority (75%) of the Governance Board plus public consultation, ensuring these protections cannot be quietly weakened.</span></li>
           </ul>
         </div>

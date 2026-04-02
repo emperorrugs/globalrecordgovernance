@@ -14,7 +14,7 @@ const gtmiDimensions = [
   {
     dimension: "Core Government Systems",
     score: "Advanced",
-    grgfAlignment: "GRGF provides the integrity layer that makes core government systems auditable and verifiable — complementing existing e-procurement, HRMIS, and financial management systems.",
+    grgfAlignment: "GRGF™ provides the integrity layer that makes core government systems auditable and verifiable — complementing existing e-procurement, HRMIS, and financial management systems.",
     indicators: ["Financial Management Information Systems", "Human Resource Management", "e-Procurement", "Tax Administration"],
   },
   {

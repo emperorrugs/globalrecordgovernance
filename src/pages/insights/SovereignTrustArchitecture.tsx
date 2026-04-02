@@ -6,10 +6,10 @@ import { ArrowLeft } from "lucide-react";
 
 const SovereignTrustArchitecture = () => (
   <div className="animate-fade-in">
-    <SEOHead title="Sovereign Digital Trust Architecture — GRGF" description="How nations can build sovereign trust layers that preserve independence while participating in global verification networks. A framework for digital governance sovereignty." />
+    <SEOHead title="Sovereign Digital Trust Architecture — GRGF™" description="How nations can build sovereign trust layers that preserve independence while participating in global verification networks. A framework for digital governance sovereignty." />
     <PageHeader title="Sovereign Digital Trust Architecture" subtitle="Strategic Analysis · February 2026">
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Sovereign-Trust" label="Export PDF" />
+        <PDFExportButton filename="GRGF™-Sovereign-Trust" label="Export PDF" />
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"><ArrowLeft className="h-3 w-3" /> All Insights</Link>
       </div>
     </PageHeader>
@@ -23,10 +23,10 @@ const SovereignTrustArchitecture = () => (
 
         <div>
           <h2 className="font-serif text-xl font-semibold text-foreground mb-3">The Federation Model</h2>
-          <p>GRGF resolves this paradox through a federation architecture that separates participation from dependency:</p>
+          <p>GRGF™ resolves this paradox through a federation architecture that separates participation from dependency:</p>
           <div className="my-4 space-y-3">
             {[
-              { tier: "Sovereign Node", desc: "Each participating nation operates its own GRGF node on sovereign infrastructure. All governance data remains under national jurisdiction. No external party has access to raw records." },
+              { tier: "Sovereign Node", desc: "Each participating nation operates its own GRGF™ node on sovereign infrastructure. All governance data remains under national jurisdiction. No external party has access to raw records." },
               { tier: "Verification Protocol", desc: "Nodes publish cryptographic proofs (hashes, not data) to a shared verification layer. Any participating nation can verify the integrity of another's governance records without accessing the records themselves." },
               { tier: "Federation Network", desc: "Cross-border verification enables multilateral trust without centralized control. Each node can disconnect at any time without data loss or operational disruption." },
             ].map(({ tier, desc }) => (
@@ -51,7 +51,7 @@ const SovereignTrustArchitecture = () => (
 
         <div>
           <h2 className="font-serif text-xl font-semibold text-foreground mb-3">The 5-Stage Sovereign Deployment Model</h2>
-          <p>GRGF's deployment pathway is designed for progressive sovereignty:</p>
+          <p>GRGF™'s deployment pathway is designed for progressive sovereignty:</p>
           <div className="my-4 space-y-2">
             {[
               { stage: "Stage 0", title: "Assessment", desc: "Governance maturity evaluation. No infrastructure deployment. No commitment." },

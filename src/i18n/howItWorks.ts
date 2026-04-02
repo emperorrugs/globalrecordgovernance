@@ -3,9 +3,9 @@ import type { Language } from "@/contexts/LanguageContext";
 export const howItWorksTranslations: Record<string, Record<Language, string>> = {
   "hiw.title": { en: "How It Works", fr: "Comment ça fonctionne", ar: "كيف يعمل" },
   "hiw.subtitle_plain": {
-    en: "A clear guide to GRGF's three-layer architecture.",
-    fr: "Un guide clair de l'architecture à trois couches du GRGF.",
-    ar: "دليل واضح لهندسة GRGF ذات الطبقات الثلاث.",
+    en: "A clear guide to GRGF™'s three-layer architecture.",
+    fr: "Un guide clair de l'architecture à trois couches du GRGF™.",
+    ar: "دليل واضح لهندسة GRGF™ ذات الطبقات الثلاث.",
   },
   "hiw.subtitle_tech": {
     en: "Three interdependent layers: Authoritative Governance, Simulation & Demonstration, and Transparency & Insight.",

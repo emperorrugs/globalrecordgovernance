@@ -30,7 +30,7 @@ interface ComparisonRow {
 
 /* ── Peer Systems ── */
 const peers: PeerSystem[] = [
-  { id: "grgf", name: "GRGF Anchor Chain™", origin: "Canada", type: "Governance Integrity Layer", color: "text-ms-blue" },
+  { id: "grgf", name: "GRGF™ Anchor Chain™", origin: "Canada", type: "Governance Integrity Layer", color: "text-ms-blue" },
   { id: "govstack", name: "GovStack", origin: "ITU / Estonia / Germany", type: "DPI Building Blocks", color: "text-ms-green" },
   { id: "xroad", name: "X-Road", origin: "Estonia / Finland", type: "Data Exchange Layer", color: "text-muted-foreground" },
   { id: "mosip", name: "MOSIP", origin: "India / IIIT-B", type: "Digital Identity Platform", color: "text-muted-foreground" },
@@ -194,15 +194,15 @@ export default function DPIComparison() {
   return (
     <div>
       <PageHeader
-        title="GRGF Anchor Chain™ vs Global Peers"
+        title="GRGF™ Anchor Chain™ vs Global Peers"
         subtitle={
           isPlain
-            ? "How GRGF compares against the world's leading Digital Public Infrastructure systems across 28 governance capabilities."
+            ? "How GRGF™ compares against the world's leading Digital Public Infrastructure systems across 28 governance capabilities."
             : "Structural capability matrix evaluating governance integrity, federation architecture, audit-readiness, and security posture across 6 global DPI frameworks."
         }
       >
         <div className="mt-4 flex flex-wrap gap-3">
-          <PDFExportButton filename="GRGF_Global_Peer_Comparison" label="Export as PDF" />
+          <PDFExportButton filename="GRGF™_Global_Peer_Comparison" label="Export as PDF" />
         </div>
       </PageHeader>
 
@@ -222,12 +222,12 @@ export default function DPIComparison() {
         </FadeIn>
       </Section>
 
-      {/* ── Unique to GRGF ── */}
+      {/* ── Unique to GRGF™ ── */}
       <Section className="border-t border-border/30">
         <FadeIn>
           <div className="flex items-center gap-2 mb-2">
             <Award className="h-5 w-5 text-ms-blue" />
-            <h2 className="text-lg font-bold">Capabilities Unique to GRGF</h2>
+            <h2 className="text-lg font-bold">Capabilities Unique to GRGF™</h2>
           </div>
           <p className="text-sm text-muted-foreground/50 mb-6">
             These capabilities exist in no other assessed DPI framework globally.
@@ -278,7 +278,7 @@ export default function DPIComparison() {
                     <TableHead className="min-w-[200px] text-xs">Capability</TableHead>
                     {peers.map(p => (
                       <TableHead key={p.id} className={`text-center text-[10px] min-w-[90px] ${p.id === "grgf" ? "text-ms-blue font-bold" : ""}`}>
-                        {p.id === "grgf" ? "GRGF" : p.name}
+                        {p.id === "grgf" ? "GRGF™" : p.name}
                       </TableHead>
                     ))}
                   </TableRow>
@@ -308,14 +308,14 @@ export default function DPIComparison() {
             <div className="flex items-start gap-4">
               <Globe className="h-6 w-6 text-ms-blue shrink-0 mt-1" />
               <div>
-                <h3 className="font-bold text-lg mb-3">Why GRGF Occupies a Unique Position</h3>
+                <h3 className="font-bold text-lg mb-3">Why GRGF™ Occupies a Unique Position</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Existing DPI systems solve identity (MOSIP), data exchange (X-Road), service delivery specifications (GovStack),
                   and standards advocacy (DPGA). None address the <strong>governance integrity gap</strong> — the structural
                   ability to prove what institutions did, decided, and failed to do.
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  GRGF Anchor Chain™ is the world's first <strong>Governance Integrity Layer</strong> — a missing Layer 3
+                  GRGF™ Anchor Chain™ is the world's first <strong>Governance Integrity Layer</strong> — a missing Layer 3
                   in the DPI stack that makes institutional behavior verifiable, tamper-evident, and independently auditable
                   without replacing any existing system.
                 </p>

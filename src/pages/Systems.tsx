@@ -33,12 +33,12 @@ const Systems = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Systems"
-        subtitle="The core infrastructure components of GRGF: archive, governance, platforms, and processing engines."
+        subtitle="The core infrastructure components of GRGF™: archive, governance, platforms, and processing engines."
       />
 
       <Section>
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          GRGF comprises four interdependent systems, each serving a distinct function within
+          GRGF™ comprises four interdependent systems, each serving a distinct function within
           the overall architecture. Together, they form a complete infrastructure for sovereign
           record governance.
         </p>
@@ -63,7 +63,7 @@ const Systems = () => {
 
       <Section className="border-t border-border bg-card/30">
         <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
-          <span className="font-semibold text-foreground">Design Note.</span> GRGF systems are governance
+          <span className="font-semibold text-foreground">Design Note.</span> GRGF™ systems are governance
           infrastructure — not software products. They are described in terms of institutional function,
           not commercial capability. No component of this architecture is marketed, licensed as SaaS,
           or positioned as a technology solution. The value of these systems derives from governance

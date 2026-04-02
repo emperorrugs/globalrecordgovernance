@@ -28,19 +28,19 @@ const OECDAlignment = () => (
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-6">
         <p className="text-sm text-foreground leading-relaxed">
-          <strong>Reference:</strong> "Digital Public Infrastructure for Digital Governments" — OECD Public Governance Policy Papers No. 68, 2024. This alignment checklist maps GRGF capabilities to the specific requirements, principles, and recommendations defined in the OECD DPI doctrine.
+          <strong>Reference:</strong> "Digital Public Infrastructure for Digital Governments" — OECD Public Governance Policy Papers No. 68, 2024. This alignment checklist maps GRGF™ capabilities to the specific requirements, principles, and recommendations defined in the OECD DPI doctrine.
         </p>
       </div>
     </Section>
 
     {/* Alignment Table */}
-    <Section title="OECD Requirement → GRGF Component → Implementation Evidence" className="border-t border-border">
+    <Section title="OECD Requirement → GRGF™ Component → Implementation Evidence" className="border-t border-border">
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
               <TableHead className="text-xs font-mono">OECD Requirement</TableHead>
-              <TableHead className="text-xs font-mono">GRGF Component</TableHead>
+              <TableHead className="text-xs font-mono">GRGF™ Component</TableHead>
               <TableHead className="text-xs font-mono">Implementation Evidence</TableHead>
             </TableRow>
           </TableHeader>

@@ -11,7 +11,7 @@ const InternationalCooperation = () => (
     {/* Cross-Border Interoperability */}
     <Section title="Cross-Border Governance Interoperability">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF enables cross-border governance verification without requiring nations to cede sovereignty, share raw data, or negotiate bilateral agreements for each verification type.
+        GRGF™ enables cross-border governance verification without requiring nations to cede sovereignty, share raw data, or negotiate bilateral agreements for each verification type.
       </p>
       <div className="grid gap-4 sm:grid-cols-3">
         {[
@@ -32,7 +32,7 @@ const InternationalCooperation = () => (
     <Section title="Federation Participation Model" className="border-t border-border">
       <div className="space-y-3">
         {[
-          { tier: "Tier 1 — Full Federation", desc: "Full cross-border verification capability. National node operates complete GRGF stack with federation protocol enabled. Mutual verification agreements in place.", requirements: ["Complete national deployment", "Independent security audit passed", "Federation protocol compliance certified", "Governance charter ratified"] },
+          { tier: "Tier 1 — Full Federation", desc: "Full cross-border verification capability. National node operates complete GRGF™ stack with federation protocol enabled. Mutual verification agreements in place.", requirements: ["Complete national deployment", "Independent security audit passed", "Federation protocol compliance certified", "Governance charter ratified"] },
           { tier: "Tier 2 — Bilateral Federation", desc: "Selective cross-border verification with specific partner nations. Reduced scope, focused on priority governance domains.", requirements: ["National deployment (minimum pilot stage)", "Bilateral verification agreement", "Domain-specific connector configuration", "Mutual assurance framework"] },
           { tier: "Observer", desc: "Monitoring and evaluation participation without operational deployment. Access to technical documentation and peer-learning activities.", requirements: ["Institutional expression of interest", "Designated technical liaison", "Participation in review sessions", "No operational requirements"] },
         ].map(({ tier, desc, requirements }) => (
@@ -56,14 +56,14 @@ const InternationalCooperation = () => (
     <Section title="Digital Public Good Alignment" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent mb-6">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF is architecturally compatible with the Digital Public Goods concept as defined by the UN Secretary-General's Roadmap for Digital Cooperation and the OECD DPI framework.
+          GRGF™ is architecturally compatible with the Digital Public Goods concept as defined by the UN Secretary-General's Roadmap for Digital Cooperation and the OECD DPI framework.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {[
           { title: "Open-Source Architecture", desc: "Technology stack designed for open-source deployment. No proprietary components required for core functionality." },
           { title: "Vendor-Neutral Design", desc: "All infrastructure components are replaceable. No single vendor can create lock-in at any layer of the stack." },
-          { title: "Freely Deployable", desc: "Any sovereign nation can deploy and operate a national GRGF node without licensing fees for the core platform." },
+          { title: "Freely Deployable", desc: "Any sovereign nation can deploy and operate a national GRGF™ node without licensing fees for the core platform." },
           { title: "Community Governance", desc: "Long-term stewardship via nonprofit consortium model, ensuring governance decisions serve public interest." },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card">
@@ -95,7 +95,7 @@ const InternationalCooperation = () => (
     <Section title="Global DPI Stack Compatibility" className="border-t border-border bg-surface2/30">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-xs text-muted-foreground leading-relaxed">
-          <strong className="text-foreground">Compatibility Statement:</strong> GRGF is designed to operate alongside any national DPI stack configuration — whether based on MOSIP (identity), Mojaloop (payments), X-Road (data exchange), or proprietary national systems. No specific DPI vendor or platform is required. Integration is achieved through standardized connectors and event normalization, not platform coupling.
+          <strong className="text-foreground">Compatibility Statement:</strong> GRGF™ is designed to operate alongside any national DPI stack configuration — whether based on MOSIP (identity), Mojaloop (payments), X-Road (data exchange), or proprietary national systems. No specific DPI vendor or platform is required. Integration is achieved through standardized connectors and event normalization, not platform coupling.
         </p>
       </div>
     </Section>

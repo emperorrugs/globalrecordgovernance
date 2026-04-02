@@ -17,9 +17,9 @@ const g20Principles = [
 ];
 
 const coDevAreas = [
-  { area: "Digital Identity Layer", grgf: "Complement — GRGF records governance events about identity decisions without duplicating identity infrastructure. Integrity layer for identity governance.", icon: Users },
-  { area: "Digital Payments Layer", grgf: "Complement — GRGF provides auditable governance oversight for payment authorization, disbursement verification, and omission detection in benefit delivery.", icon: Database },
-  { area: "Data Exchange Layer", grgf: "Interoperate — GRGF's verification API and JSON-LD schema integrate with data exchange platforms. Federation protocol enables cross-system governance verification.", icon: Network },
+  { area: "Digital Identity Layer", grgf: "Complement — GRGF™ records governance events about identity decisions without duplicating identity infrastructure. Integrity layer for identity governance.", icon: Users },
+  { area: "Digital Payments Layer", grgf: "Complement — GRGF™ provides auditable governance oversight for payment authorization, disbursement verification, and omission detection in benefit delivery.", icon: Database },
+  { area: "Data Exchange Layer", grgf: "Interoperate — GRGF™'s verification API and JSON-LD schema integrate with data exchange platforms. Federation protocol enables cross-system governance verification.", icon: Network },
   { area: "Consent & Privacy Layer", grgf: "Strengthen — Privacy-by-design architecture and role-based disclosure complement consent management. No PII stored. Content-blind verification.", icon: Shield },
 ];
 
@@ -64,17 +64,17 @@ const G20DPIFramework = () => {
         </FadeIn>
       </Sec>
 
-      {/* GRGF as Layer 3 */}
+      {/* GRGF™ as Layer 3 */}
       <Sec className="border-b border-border bg-muted/40">
         <FadeIn>
           <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("g20.stack")}</p>
           <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("g20.stack_title")}</h2>
           <div className="governance-card-elevated border-l-4 border-l-accent max-w-3xl mb-8">
             <p className="text-body text-muted-foreground leading-relaxed mb-4">
-              In the emerging DPI architecture, GRGF occupies a unique position as <strong className="text-foreground">Layer 3: Governance Integrity Registry</strong> — the trust verification layer that sits between foundational identity/payment infrastructure and application-level services.
+              In the emerging DPI architecture, GRGF™ occupies a unique position as <strong className="text-foreground">Layer 3: Governance Integrity Registry</strong> — the trust verification layer that sits between foundational identity/payment infrastructure and application-level services.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed">
-              Unlike existing DPI layers that <em>process</em> transactions, GRGF <em>verifies governance integrity</em> — making it the only infrastructure that records institutional omissions alongside actions, enabling complete accountability reconstruction.
+              Unlike existing DPI layers that <em>process</em> transactions, GRGF™ <em>verifies governance integrity</em> — making it the only infrastructure that records institutional omissions alongside actions, enabling complete accountability reconstruction.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ const G20DPIFramework = () => {
             {[
               { layer: "Layer 5", name: "Application Services", desc: "e-Procurement, Service Portals, Benefit Delivery", accent: false },
               { layer: "Layer 4", name: "Data Exchange", desc: "Interoperability, Consent Management, Data Sharing", accent: false },
-              { layer: "Layer 3", name: "Governance Integrity Registry", desc: "GRGF — Record verification, omission detection, audit reconstruction", accent: true },
+              { layer: "Layer 3", name: "Governance Integrity Registry", desc: "GRGF™ — Record verification, omission detection, audit reconstruction", accent: true },
               { layer: "Layer 2", name: "Digital Payments", desc: "Payment rails, disbursement, financial settlement", accent: false },
               { layer: "Layer 1", name: "Digital Identity", desc: "Authentication, authorization, credential management", accent: false },
             ].map(({ layer, name, desc, accent }) => (
@@ -93,7 +93,7 @@ const G20DPIFramework = () => {
                   <h4 className={`font-serif text-body font-semibold ${accent ? "text-accent" : ""}`}>{name}</h4>
                   <p className="text-caption text-muted-foreground">{desc}</p>
                 </div>
-                {accent && <span className="ml-auto px-2 py-0.5 bg-accent text-accent-foreground text-xs font-mono shrink-0">GRGF</span>}
+                {accent && <span className="ml-auto px-2 py-0.5 bg-accent text-accent-foreground text-xs font-mono shrink-0">GRGF™</span>}
               </div>
             ))}
           </div>
@@ -106,7 +106,7 @@ const G20DPIFramework = () => {
           <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">{t("g20.codevelop")}</p>
           <h2 className="institutional-heading text-heading-1 font-semibold mb-8">{t("g20.codevelop_title")}</h2>
           <p className="text-body text-muted-foreground mb-8 max-w-3xl">
-            GRGF is designed to complement, not replace, existing DPI layers. Each integration point strengthens overall governance infrastructure without duplicating functionality.
+            GRGF™ is designed to complement, not replace, existing DPI layers. Each integration point strengthens overall governance infrastructure without duplicating functionality.
           </p>
           <div className="grid gap-5 md:grid-cols-2">
             {coDevAreas.map(({ area, grgf, icon: Icon }, i) => (
@@ -134,7 +134,7 @@ const G20DPIFramework = () => {
               <thead>
                 <tr className="border-b-2 border-accent/30">
                   <th className="text-left py-4 px-4 font-serif font-semibold">Dimension</th>
-                  <th className="text-left py-4 px-4 font-serif font-semibold text-accent">GRGF</th>
+                  <th className="text-left py-4 px-4 font-serif font-semibold text-accent">GRGF™</th>
                   <th className="text-left py-4 px-4 font-serif font-semibold text-muted-foreground">India Stack</th>
                 </tr>
               </thead>

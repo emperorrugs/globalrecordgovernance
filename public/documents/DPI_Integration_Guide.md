@@ -9,13 +9,13 @@
 
 ## Integration Philosophy
 
-GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.
+GRGF™ is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.
 
 **Integration is non-intrusive. Systems do not change how they work — they gain verifiability.**
 
 ## Compatible System Types
 
-| System Type | Integration Pattern | GRGF Function |
+| System Type | Integration Pattern | GRGF™ Function |
 |-------------|-------------------|---------------|
 | Digital Identity (eID) | Event subscription | Record identity-related governance events |
 | Procurement Platforms | API webhook | Record tender, evaluation, and award events |
@@ -25,7 +25,7 @@ GRGF is designed to integrate with identity systems, procurement platforms, regu
 
 ## DPI Alignment
 
-GRGF aligns with core DPI principles:
+GRGF™ aligns with core DPI principles:
 
 - **Universality** — applicable across all governance domains
 - **Interoperability** — standards-based APIs and canonical schemas
@@ -43,13 +43,13 @@ GRGF aligns with core DPI principles:
                    │ Governance Events
                    ▼
 ┌──────────────────────────────────────────────┐
-│            GRGF Event Normalization          │
+│            GRGF™ Event Normalization          │
 │     (Structured, contextualized events)      │
 └──────────────────┬───────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────┐
-│         GRGF Evidence Backbone               │
+│         GRGF™ Evidence Backbone               │
 │   (Append-only, hash-chained, verifiable)    │
 └──────────────────┬───────────────────────────┘
                    │
@@ -62,7 +62,7 @@ GRGF aligns with core DPI principles:
 
 ## Non-Intrusive Guarantee
 
-GRGF functions as shared civic infrastructure, not a vendor platform. No data flows back to alter operational systems. Systems emit governance events; GRGF records and preserves them.
+GRGF™ functions as shared civic infrastructure, not a vendor platform. No data flows back to alter operational systems. Systems emit governance events; GRGF™ records and preserves them.
 
 ---
 

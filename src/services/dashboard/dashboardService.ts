@@ -1,5 +1,5 @@
 /**
- * GRGF Dashboard Service
+ * GRGF™ Dashboard Service
  * Centralized data fetching for dashboard and reporting views.
  * Pages consume typed models — no Supabase calls in UI components.
  */

@@ -7,7 +7,7 @@ const TermsOfService = () => {
     <div className="animate-fade-in">
       <SEOHead
         title="Terms of Service"
-        description="Terms of Service for the Global Record Governance Framework (GRGF). Comprehensive conditions governing institutional access, intellectual property, and use of sovereign-grade DPI resources."
+        description="Terms of Service for the Global Record Governance Framework (GRGF™). Comprehensive conditions governing institutional access, intellectual property, and use of sovereign-grade DPI resources."
       />
       <PageHeader
         title="Terms of Service"
@@ -28,7 +28,7 @@ const TermsOfService = () => {
                 <p className="mt-2">
                   By accessing, browsing, or using <span className="font-medium text-foreground">globalrecordgovernance.com</span> or
                   any associated services, platforms, or digital resources operated by the Global Record Governance
-                  Framework (&quot;GRGF&quot;, &quot;the Framework&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;),
+                  Framework (&quot;GRGF™&quot;, &quot;the Framework&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;),
                   you acknowledge that you have read, understood, and agree to be bound by these Terms of Service
                   (&quot;Terms&quot;). If you do not agree, you must discontinue use immediately.
                 </p>
@@ -46,7 +46,7 @@ const TermsOfService = () => {
             <p>In these Terms, the following definitions apply:</p>
             <div className="mt-3 space-y-2">
               {[
-                { term: "\"GRGF\" or \"the Framework\"", def: "The Global Record Governance Framework, including its platform, documentation, specifications, methodologies, and associated intellectual property." },
+                { term: "\"GRGF™\" or \"the Framework\"", def: "The Global Record Governance Framework, including its platform, documentation, specifications, methodologies, and associated intellectual property." },
                 { term: "\"Platform\"", def: "The website at globalrecordgovernance.com and all associated digital services, APIs, tools, and resources." },
                 { term: "\"User\" or \"you\"", def: "Any individual, institution, government entity, or organization accessing the Platform." },
                 { term: "\"Controlled Materials\"", def: "Technical documentation, pilot kits, deployment packages, and restricted resources subject to the Controlled Distribution Protocol (CRP)." },
@@ -117,14 +117,14 @@ const TermsOfService = () => {
               </div>
             </div>
             <p className="mt-4">
-              No licence, right, title, or interest in any GRGF intellectual property is granted by
+              No licence, right, title, or interest in any GRGF™ intellectual property is granted by
               access to this Platform, except as explicitly stated in a written agreement signed by
-              an authorized representative of GRGF.
+              an authorized representative of GRGF™.
             </p>
             <p className="mt-2">
               <span className="font-medium text-foreground">Prohibited without authorization:</span> reproduction,
               distribution, modification, adaptation, translation, reverse engineering, decompilation,
-              or creation of derivative works from any GRGF materials.
+              or creation of derivative works from any GRGF™ materials.
             </p>
           </TermsSection>
 
@@ -153,7 +153,7 @@ const TermsOfService = () => {
                 "Copy, reproduce, distribute, or publicly display Platform content without written authorization",
                 "Use automated systems (bots, scrapers, crawlers) to extract data beyond standard search engine indexing",
                 "Attempt to gain unauthorized access to restricted areas, systems, or Controlled Materials",
-                "Misrepresent your affiliation with, endorsement by, or authorization from GRGF",
+                "Misrepresent your affiliation with, endorsement by, or authorization from GRGF™",
                 "Use Platform content to develop competing frameworks, products, or services",
                 "Remove, alter, or obscure any copyright, patent, or proprietary notices",
                 "Interfere with Platform security, integrity, or availability through technical means",
@@ -170,7 +170,7 @@ const TermsOfService = () => {
           {/* Section 5 */}
           <TermsSection number="5" title="Controlled Distribution Protocol (CRP)">
             <p>
-              Certain materials are classified under the GRGF Controlled Distribution Protocol
+              Certain materials are classified under the GRGF™ Controlled Distribution Protocol
               and are available only through formal institutional authorization:
             </p>
             <div className="mt-4 overflow-x-auto">
@@ -241,7 +241,7 @@ const TermsOfService = () => {
                 <span className="font-semibold text-foreground">&quot;AS AVAILABLE&quot;</span> without
                 warranties of any kind, whether express, implied, statutory, or otherwise.
               </p>
-              <p>GRGF expressly disclaims all implied warranties, including without limitation:</p>
+              <p>GRGF™ expressly disclaims all implied warranties, including without limitation:</p>
               <ul className="space-y-1.5 ml-2">
                 {[
                   "Warranties of merchantability and fitness for a particular purpose",
@@ -262,7 +262,7 @@ const TermsOfService = () => {
           {/* Section 8 */}
           <TermsSection number="8" title="Limitation of Liability">
             <p>
-              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, GRGF, ITS FOUNDER, OFFICERS, ADVISORS,
+              TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, GRGF™, ITS FOUNDER, OFFICERS, ADVISORS,
               AND AFFILIATES SHALL NOT BE LIABLE FOR:
             </p>
             <ul className="mt-3 space-y-1.5">
@@ -280,15 +280,15 @@ const TermsOfService = () => {
               ))}
             </ul>
             <p className="mt-3">
-              In no event shall GRGF&apos;s total aggregate liability exceed the amount paid by you
-              to GRGF in the twelve (12) months preceding the claim, or CAD $100, whichever is greater.
+              In no event shall GRGF™&apos;s total aggregate liability exceed the amount paid by you
+              to GRGF™ in the twelve (12) months preceding the claim, or CAD $100, whichever is greater.
             </p>
           </TermsSection>
 
           {/* Section 9 */}
           <TermsSection number="9" title="Indemnification">
             <p>
-              You agree to indemnify, defend, and hold harmless GRGF, its founder, officers, advisors,
+              You agree to indemnify, defend, and hold harmless GRGF™, its founder, officers, advisors,
               and affiliates from and against any and all claims, liabilities, damages, losses, costs,
               and expenses (including reasonable legal fees) arising from or related to:
             </p>
@@ -297,7 +297,7 @@ const TermsOfService = () => {
                 "Your use of the Platform in violation of these Terms",
                 "Your violation of any applicable law, regulation, or third-party right",
                 "Your unauthorized distribution of Controlled Materials",
-                "Any misrepresentation of your affiliation with or endorsement by GRGF",
+                "Any misrepresentation of your affiliation with or endorsement by GRGF™",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-xs">
                   <span className="text-accent mt-0.5 shrink-0">▸</span>
@@ -311,7 +311,7 @@ const TermsOfService = () => {
           <TermsSection number="10" title="Third-Party Links & Resources">
             <p>
               The Platform may contain links to external websites, resources, or services operated by
-              third parties. GRGF:
+              third parties. GRGF™:
             </p>
             <ul className="mt-3 space-y-1.5">
               {[
@@ -330,14 +330,14 @@ const TermsOfService = () => {
           {/* Section 11 */}
           <TermsSection number="11" title="Termination">
             <p>
-              GRGF reserves the right to suspend or terminate your access to the Platform,
+              GRGF™ reserves the right to suspend or terminate your access to the Platform,
               without notice, for any reason, including but not limited to:
             </p>
             <ul className="mt-3 space-y-1.5">
               {[
                 "Breach of these Terms or the Privacy Policy",
                 "Unauthorized access to or distribution of Controlled Materials",
-                "Conduct that GRGF reasonably believes may expose it to legal liability",
+                "Conduct that GRGF™ reasonably believes may expose it to legal liability",
                 "Requests by law enforcement or government authorities",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2 text-xs">
@@ -356,7 +356,7 @@ const TermsOfService = () => {
           {/* Section 12 */}
           <TermsSection number="12" title="Modifications to Terms">
             <p>
-              GRGF reserves the right to modify these Terms at any time. When material changes are made:
+              GRGF™ reserves the right to modify these Terms at any time. When material changes are made:
             </p>
             <ul className="mt-3 space-y-1.5">
               {[
@@ -395,7 +395,7 @@ const TermsOfService = () => {
               <div className="border-l-2 border-border pl-3">
                 <p className="text-xs font-semibold text-foreground">Jurisdiction</p>
                 <p className="text-xs text-muted-foreground">
-                  Notwithstanding the foregoing, GRGF retains the right to seek injunctive or
+                  Notwithstanding the foregoing, GRGF™ retains the right to seek injunctive or
                   other equitable relief in any court of competent jurisdiction to prevent
                   infringement of intellectual property rights or breach of confidentiality obligations.
                 </p>
@@ -412,7 +412,7 @@ const TermsOfService = () => {
             </p>
             <p className="mt-3">
               These Terms, together with the Privacy Policy and any applicable CRP agreements,
-              constitute the entire agreement between you and GRGF regarding your use of the Platform
+              constitute the entire agreement between you and GRGF™ regarding your use of the Platform
               and supersede all prior or contemporaneous communications, proposals, and representations.
             </p>
           </TermsSection>

@@ -11,7 +11,7 @@ const Sec = ({ children, className = "" }: { children: React.ReactNode; classNam
 
 const consultations = [
   {
-    id: "GRGF-CON-2026-001",
+    id: "GRGF™-CON-2026-001",
     title: "Recognition Framework Criteria — Public Review",
     status: "Open",
     opens: "2026-01-15",
@@ -19,7 +19,7 @@ const consultations = [
     description: "Public consultation on the three-tier recognition criteria, assessment methodology, and re-certification requirements. Input welcomed from governments, auditors, and institutional stakeholders.",
   },
   {
-    id: "GRGF-CON-2026-002",
+    id: "GRGF™-CON-2026-002",
     title: "Federation Protocol Specification v1.0",
     status: "Open",
     opens: "2026-02-01",
@@ -27,7 +27,7 @@ const consultations = [
     description: "Technical specification review for the cross-border federation protocol. Seeking feedback on sovereign node requirements, verification handshake, and data portability guarantees.",
   },
   {
-    id: "GRGF-CON-2026-003",
+    id: "GRGF™-CON-2026-003",
     title: "Environmental Sustainability Targets",
     status: "Planned",
     opens: "2026-04-01",

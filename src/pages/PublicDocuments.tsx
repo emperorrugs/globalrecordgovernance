@@ -25,7 +25,7 @@ export default function PublicDocuments() {
     <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-16 lg:py-24">
       <div className="max-w-2xl mb-10">
         <p className="text-overline font-semibold text-primary tracking-widest uppercase mb-4">Resources</p>
-        <h1 className="text-display font-bold text-foreground mb-4">Official GRGF Documents</h1>
+        <h1 className="text-display font-bold text-foreground mb-4">Official GRGF™ Documents</h1>
         <p className="text-body-lg text-muted-foreground leading-relaxed">
           Access the complete institutional document library — {totalFiles} documents
           across {documentCategories.length} categories. All files are downloadable and printable.

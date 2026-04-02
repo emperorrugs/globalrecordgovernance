@@ -27,7 +27,7 @@ interface Mod {
 const MODULES: Mod[] = [
   {
     id: 1, title: "Legitimacy & Institutional Architecture", icon: Building,
-    objective: "Establish GRGF as an independently governed institutional entity with transparent authority separation, advisory councils, and anti-capture safeguards — the foundation for all downstream credibility.",
+    objective: "Establish GRGF™ as an independently governed institutional entity with transparent authority separation, advisory councils, and anti-capture safeguards — the foundation for all downstream credibility.",
     steps: [
       "Constitute independent foundation (Swiss Verein or Canadian not-for-profit) with published articles",
       "Draft governance charter with authority separation: Executive Director, Standards Committee, Advisory Council, Compliance Oversight",
@@ -55,7 +55,7 @@ const MODULES: Mod[] = [
   },
   {
     id: 2, title: "Global Coalition Formation", icon: Users,
-    objective: "Build a diverse, multi-regional coalition of academic, policy, and civil society participants — transforming GRGF from single-origin project into consensus-backed initiative.",
+    objective: "Build a diverse, multi-regional coalition of academic, policy, and civil society participants — transforming GRGF™ from single-origin project into consensus-backed initiative.",
     steps: [
       "Recruit academic partners from governance faculties across Americas, Europe, and Asia-Pacific",
       "Engage 2–3 governance think tanks (Chatham House, CIGI, Brookings equivalent) as review partners",
@@ -109,7 +109,7 @@ const MODULES: Mod[] = [
   },
   {
     id: 4, title: "Global DPI Demonstration Environment", icon: Globe,
-    objective: "Transform the platform into a live simulation of a national DPI ecosystem — digital identity, registries, ministries, public services, and audit authorities operating within the GRGF governance layer.",
+    objective: "Transform the platform into a live simulation of a national DPI ecosystem — digital identity, registries, ministries, public services, and audit authorities operating within the GRGF™ governance layer.",
     steps: [
       "Deploy sandbox with simulated sovereign state (Kaledonia) including ministry profiles",
       "Simulate full governance event lifecycle: Draft → Review → Approved → Closed with hash-sealing",
@@ -164,7 +164,7 @@ const MODULES: Mod[] = [
   },
   {
     id: 6, title: "International Standards Alignment", icon: Scale,
-    objective: "Map GRGF against governance, records, cybersecurity, privacy, and interoperability standards with audit-ready crosswalk documentation.",
+    objective: "Map GRGF™ against governance, records, cybersecurity, privacy, and interoperability standards with audit-ready crosswalk documentation.",
     steps: [
       "Map to ISO/IEC 27001, ISO 15489, ISO 37000, ISO/IEC 27701",
       "Align with OECD Digital Government Policy Framework and DPI Safeguards",
@@ -245,7 +245,7 @@ const MODULES: Mod[] = [
   },
   {
     id: 9, title: "Intellectual Property Maximization", icon: TrendingUp,
-    objective: "Position GRGF as infrastructure-class IP with defensible methodology, modular architecture ownership, certification network effects, and long-horizon scaling.",
+    objective: "Position GRGF™ as infrastructure-class IP with defensible methodology, modular architecture ownership, certification network effects, and long-horizon scaling.",
     steps: [
       "Articulate proprietary methodology: 6-layer deterministic architecture, policy engine, federation protocol",
       "Map modular architecture ownership: each layer as independently licensable component",
@@ -274,7 +274,7 @@ const MODULES: Mod[] = [
     objective: "Design role-based training curriculum for ministry staff, registry operators, auditors, IT support teams, and governance officers — enabling institutional adoption readiness.",
     steps: [
       "Develop role-based training tracks: Governance Officer, Registry Operator, Auditor, IT Support",
-      "Create curriculum modules: GRGF fundamentals, record lifecycle, verification procedures, federation",
+      "Create curriculum modules: GRGF™ fundamentals, record lifecycle, verification procedures, federation",
       "Design simulation exercises: record creation, review workflows, audit reconstruction, integrity checks",
       "Build certification assessment framework with competency rubrics per role",
       "Produce training materials: instructor guides, participant workbooks, quick-reference cards",
@@ -284,7 +284,7 @@ const MODULES: Mod[] = [
     stakeholders: ["Ministry training departments", "Public service academies", "IT capacity building units", "Governance education providers"],
     perceptionShift: "From 'system without adoption support' to 'complete institutional deployment package with training infrastructure.'",
     credibilityImpact: "Training readiness signals operational maturity. Institutions assess training availability as a deployment prerequisite.",
-    ipImpact: "Certification training creates recurring revenue streams and deepens institutional dependency on the GRGF ecosystem.",
+    ipImpact: "Certification training creates recurring revenue streams and deepens institutional dependency on the GRGF™ ecosystem.",
     standardsAlignment: "ISO 10015 (Training guidelines), OECD Public Governance capacity building, World Bank institutional development frameworks.",
     risks: [
       { risk: "Training perceived as premature", mitigation: "Frame as 'pilot training program'; align with sandbox deployment" },
@@ -374,7 +374,7 @@ const SovereignDeployment = () => (
         <h3 className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-3">Success Criteria</h3>
         <blockquote className="border-l-2 border-accent/50 pl-4 py-2 bg-card/50 rounded-r-sm mb-4">
           <p className="text-sm font-serif font-semibold text-foreground italic">
-            "GRGF is fully operational, standards-aligned, institutionally credible, sovereign-ready, and submission-ready."
+            "GRGF™ is fully operational, standards-aligned, institutionally credible, sovereign-ready, and submission-ready."
           </p>
         </blockquote>
         <div className="grid sm:grid-cols-2 gap-3">

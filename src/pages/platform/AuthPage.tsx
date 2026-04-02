@@ -78,7 +78,7 @@ export default function AuthPage() {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-4">
             <Shield className="h-7 w-7 text-primary" />
           </div>
-          <h1 className="text-2xl font-semibold tracking-tight">GRGF Platform</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">GRGF™ Platform</h1>
           <p className="text-sm text-muted-foreground mt-1">Global Record Governance Framework</p>
         </div>
 
@@ -148,7 +148,7 @@ export default function AuthPage() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground">
-          Protected by enterprise-grade encryption · GRGF v1.0
+          Protected by enterprise-grade encryption · GRGF™ v1.0
         </p>
       </div>
     </div>

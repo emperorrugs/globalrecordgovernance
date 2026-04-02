@@ -1,4 +1,4 @@
-# GRGF DPI – Data Protection & Access Control Policy
+# GRGF™ DPI – Data Protection & Access Control Policy
 ## Security Model
 Defense-in-depth with encryption at rest and in transit.
 

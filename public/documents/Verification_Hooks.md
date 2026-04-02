@@ -9,7 +9,7 @@
 
 ## Verification Capabilities
 
-GRGF supports both positive and negative verification:
+GRGF™ supports both positive and negative verification:
 
 - **Positive verification:** confirming a record exists for a claimed governance event
 - **Negative verification:** confirming no record exists for a claimed event

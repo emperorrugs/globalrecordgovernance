@@ -6,12 +6,12 @@ const outreachMessages = [
   {
     target: "Canada Treasury Board Secretariat",
     icon: Building2,
-    subject: "GRGF — Governance Integrity Infrastructure: Structured Pilot Evaluation Proposal",
+    subject: "GRGF™ — Governance Integrity Infrastructure: Structured Pilot Evaluation Proposal",
     body: `To the Office of the Chief Information Officer,
 
-I am writing to introduce the Global Record Governance Framework (GRGF) — a deterministic governance infrastructure layer designed to enforce policy compliance and cryptographic record integrity across institutional systems.
+I am writing to introduce the Global Record Governance Framework (GRGF™) — a deterministic governance infrastructure layer designed to enforce policy compliance and cryptographic record integrity across institutional systems.
 
-GRGF addresses a structural gap in current governance infrastructure: the absence of a deterministic, verifiable mechanism for recording institutional actions, decisions, and omissions. It is not a transparency tool, compliance dashboard, or blockchain experiment. It is a Governance Operating Layer.
+GRGF™ addresses a structural gap in current governance infrastructure: the absence of a deterministic, verifiable mechanism for recording institutional actions, decisions, and omissions. It is not a transparency tool, compliance dashboard, or blockchain experiment. It is a Governance Operating Layer.
 
 Relevance to GC priorities:
 · Aligns with GC Digital Standards and Zero Trust Architecture Strategy
@@ -31,9 +31,9 @@ Economic rationale:
 · Modeled net annual benefit: $1.51B CAD (conservative scenario)
 · Year 1 payback period with 100% IRR (modeled)
 
-GRGF is protected under Canadian Patent Application No. 3,300,102 (filed January 28, 2026; publication pending).
+GRGF™ is protected under Canadian Patent Application No. 3,300,102 (filed January 28, 2026; publication pending).
 
-I am requesting a structured 30-minute briefing to present the technical architecture, pilot evaluation framework, and deployment model. All materials are available under the GRGF Controlled Distribution Protocol.
+I am requesting a structured 30-minute briefing to present the technical architecture, pilot evaluation framework, and deployment model. All materials are available under the GRGF™ Controlled Distribution Protocol.
 
 Respectfully,
 Tarek Wahid
@@ -43,12 +43,12 @@ Global Record Governance Framework`,
   {
     target: "World Bank — Digital Development Global Practice",
     icon: Globe,
-    subject: "GRGF — Sovereign Governance Infrastructure for Digital Public Infrastructure Programs",
+    subject: "GRGF™ — Sovereign Governance Infrastructure for Digital Public Infrastructure Programs",
     body: `To the Digital Development Practice Lead,
 
-The Global Record Governance Framework (GRGF) is a sovereign-grade Governance Operating Layer designed to provide deterministic policy enforcement, cryptographic record integrity, and independent verification for national governance systems.
+The Global Record Governance Framework (GRGF™) is a sovereign-grade Governance Operating Layer designed to provide deterministic policy enforcement, cryptographic record integrity, and independent verification for national governance systems.
 
-GRGF addresses a gap in current DPI stack architectures: while digital ID, payments, and data exchange layers exist, no equivalent infrastructure exists for governance integrity — the verifiable recording of institutional actions and omissions.
+GRGF™ addresses a gap in current DPI stack architectures: while digital ID, payments, and data exchange layers exist, no equivalent infrastructure exists for governance integrity — the verifiable recording of institutional actions and omissions.
 
 Alignment with World Bank DPI principles:
 · Interoperability — standardized event schemas and RESTful APIs
@@ -73,7 +73,7 @@ Global impact potential:
 · Reduces sovereign corruption risk premium through structural verification
 · Creates new trust primitives for development finance
 
-GRGF Pilot Node v0.1 is available for controlled institutional evaluation. I am requesting a 30-minute technical briefing with the appropriate practice team.
+GRGF™ Pilot Node v0.1 is available for controlled institutional evaluation. I am requesting a 30-minute technical briefing with the appropriate practice team.
 
 Respectfully,
 Tarek Wahid
@@ -83,12 +83,12 @@ Global Record Governance Framework`,
   {
     target: "OECD — Directorate for Public Governance",
     icon: FileText,
-    subject: "GRGF — Governance Integrity Infrastructure: Alignment with OECD Public Governance Standards",
+    subject: "GRGF™ — Governance Integrity Infrastructure: Alignment with OECD Public Governance Standards",
     body: `To the Public Governance Directorate,
 
-The Global Record Governance Framework (GRGF) is a deterministic governance infrastructure layer that structurally enforces institutional accountability through policy-driven record creation, cryptographic sealing, and independent verification.
+The Global Record Governance Framework (GRGF™) is a deterministic governance infrastructure layer that structurally enforces institutional accountability through policy-driven record creation, cryptographic sealing, and independent verification.
 
-GRGF directly addresses challenges identified in OECD governance frameworks — specifically the gap between policy intent and verifiable institutional execution.
+GRGF™ directly addresses challenges identified in OECD governance frameworks — specifically the gap between policy intent and verifiable institutional execution.
 
 OECD alignment:
 · Transparency & Explainability — all policy decisions produce machine-readable and human-readable explanations
@@ -103,7 +103,7 @@ Structural characteristics:
 · Federation model for cross-border governance validation
 · Sovereign deployment with full reversibility
 
-GRGF is positioned as a Governance Operating Layer — a new category of digital public infrastructure that operates alongside existing governance systems without replacing them.
+GRGF™ is positioned as a Governance Operating Layer — a new category of digital public infrastructure that operates alongside existing governance systems without replacing them.
 
 The framework is available for structured institutional review. I am requesting a technical briefing to discuss alignment with OECD governance modernization objectives.
 

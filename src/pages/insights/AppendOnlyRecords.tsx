@@ -6,10 +6,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const AppendOnlyRecords = () => (
   <div className="animate-fade-in">
-    <SEOHead title="Append-Only Records vs Traditional Databases — GRGF" description="Why governance integrity requires append-only architectures. Technical comparison of CRUD databases vs immutable record systems for institutional trust." />
+    <SEOHead title="Append-Only Records vs Traditional Databases — GRGF™" description="Why governance integrity requires append-only architectures. Technical comparison of CRUD databases vs immutable record systems for institutional trust." />
     <PageHeader title="Append-Only Records vs Traditional Databases" subtitle="Technology Analysis · February 2026">
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Append-Only" label="Export PDF" />
+        <PDFExportButton filename="GRGF™-Append-Only" label="Export PDF" />
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"><ArrowLeft className="h-3 w-3" /> All Insights</Link>
       </div>
     </PageHeader>
@@ -29,7 +29,7 @@ const AppendOnlyRecords = () => (
                 <tr className="border-b-2 border-accent/30 bg-muted/50">
                   <th className="text-left py-3 px-4 font-serif font-semibold">Dimension</th>
                   <th className="text-left py-3 px-4 font-serif font-semibold">Traditional CRUD</th>
-                  <th className="text-left py-3 px-4 font-serif font-semibold text-accent">Append-Only (GRGF)</th>
+                  <th className="text-left py-3 px-4 font-serif font-semibold text-accent">Append-Only (GRGF™)</th>
                 </tr>
               </thead>
               <tbody>

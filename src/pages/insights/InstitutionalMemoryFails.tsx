@@ -6,10 +6,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const InstitutionalMemoryFails = () => (
   <div className="animate-fade-in">
-    <SEOHead title="Why Institutional Memory Fails — GRGF" description="Political transitions erase governance continuity. Analysis of institutional memory loss mechanisms and architectural solutions for perpetual governance memory." />
+    <SEOHead title="Why Institutional Memory Fails — GRGF™" description="Political transitions erase governance continuity. Analysis of institutional memory loss mechanisms and architectural solutions for perpetual governance memory." />
     <PageHeader title="Why Institutional Memory Fails" subtitle="Governance Analysis · January 2026">
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Institutional-Memory" label="Export PDF" />
+        <PDFExportButton filename="GRGF™-Institutional-Memory" label="Export PDF" />
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"><ArrowLeft className="h-3 w-3" /> All Insights</Link>
       </div>
     </PageHeader>

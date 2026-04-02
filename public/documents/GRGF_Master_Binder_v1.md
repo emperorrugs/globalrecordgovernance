@@ -1,4 +1,4 @@
-# GRGF MASTER BINDER — AUTHORITATIVE SUBMISSION EDITION
+# GRGF™ MASTER BINDER — AUTHORITATIVE SUBMISSION EDITION
 
 **Document ID:** MB-2026-001  
 **Version:** 1.0  
@@ -36,7 +36,7 @@
 
 ## 1.1 Definition
 
-Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
+Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
 
 ## 1.2 Problem Statement
 
@@ -44,7 +44,7 @@ Governments, courts, and multilateral institutions lack a neutral, interoperable
 
 ## 1.3 Solution
 
-GRGF provides a deterministic governance engine that:
+GRGF™ provides a deterministic governance engine that:
 
 - Captures structured governance events at the point of institutional action
 - Enforces encoded policy rules without human override capability
@@ -54,7 +54,7 @@ GRGF provides a deterministic governance engine that:
 
 ## 1.4 Strategic Position
 
-GRGF is **not** a startup product, blockchain experiment, or political transparency campaign. It is a sovereign infrastructure layer designed for 20–50 year institutional deployment, aligned with World Bank GovTech guidance, OECD Digital Government principles, and ISO governance standards.
+GRGF™ is **not** a startup product, blockchain experiment, or political transparency campaign. It is a sovereign infrastructure layer designed for 20–50 year institutional deployment, aligned with World Bank GovTech guidance, OECD Digital Government principles, and ISO governance standards.
 
 ## 1.5 Current Status
 
@@ -66,7 +66,7 @@ GRGF is **not** a startup product, blockchain experiment, or political transpare
 
 ## 1.6 Readiness Statement
 
-GRGF is prepared for structured pilot evaluation, independent technical review, and institutional validation prior to national deployment.
+GRGF™ is prepared for structured pilot evaluation, independent technical review, and institutional validation prior to national deployment.
 
 ---
 
@@ -187,7 +187,7 @@ All unauthorized actions generate machine-readable denial codes. No silent failu
 
 ## 4.1 Governance Authority Model
 
-GRGF operates as a Governance Operating System — it enforces rules but does not create, interpret, or adjudicate them. Authority flows from:
+GRGF™ operates as a Governance Operating System — it enforces rules but does not create, interpret, or adjudicate them. Authority flows from:
 
 - Institutional charters and mandates
 - Encoded policy rules (deterministic, not discretionary)
@@ -369,7 +369,7 @@ Primary economic value derived from:
 | Phase 3 | Policy Logic Audit | Weeks 9–12 |
 | Phase 4 | Governance Ethics Review | Weeks 13–16 |
 
-**Status:** GRGF is prepared for third-party audit prior to sovereign deployment.
+**Status:** GRGF™ is prepared for third-party audit prior to sovereign deployment.
 
 ## 7.3 Records Retention Schedule
 
@@ -410,7 +410,7 @@ This attribution is mandatory and must appear in all institutional documents, UI
 
 ## 8.4 Originality & Non-Substitutability
 
-The Global Reform Declaration certifies GRGF as the first verifiable, omission-aware global governance system. No existing system replicates the combination of:
+The Global Reform Declaration certifies GRGF™ as the first verifiable, omission-aware global governance system. No existing system replicates the combination of:
 
 - Deterministic policy enforcement
 - Omission-aware evidentiary recording
@@ -492,7 +492,7 @@ All institutional access requires:
 
 ## 10.3 Canadian Federal Alignment
 
-GRGF aligns with:
+GRGF™ aligns with:
 
 - GC Digital Standards (interoperability, security, accessibility)
 - Treasury Board Policy on Service and Digital
@@ -503,7 +503,7 @@ GRGF aligns with:
 
 ## 10.4 Positioning
 
-GRGF is positioned as sovereign infrastructure, not a vendor product. Engagement language must:
+GRGF™ is positioned as sovereign infrastructure, not a vendor product. Engagement language must:
 
 - Avoid promotional or marketing tone
 - Reference structural safeguards, not aspirational claims

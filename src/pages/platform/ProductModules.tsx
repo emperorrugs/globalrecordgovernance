@@ -11,7 +11,7 @@ import {
 const modules = [
   {
     id: 'core-ledger',
-    name: 'GRGF Core Ledger',
+    name: 'GRGF™ Core Ledger',
     tagline: 'The Append-Only Evidence Backbone',
     description: 'Immutable record storage with SHA-256 hash chaining, Merkle proofs, and deterministic event capture. The foundational truth layer for all governance operations.',
     icon: Database,
@@ -25,7 +25,7 @@ const modules = [
   },
   {
     id: 'verification-api',
-    name: 'GRGF Verification API',
+    name: 'GRGF™ Verification API',
     tagline: 'Public Validation Endpoint',
     description: 'Enable any external party to independently verify record integrity, provenance, and status without system access. The trust bridge between institutions and the public.',
     icon: Search,
@@ -39,9 +39,9 @@ const modules = [
   },
   {
     id: 'institutional-node',
-    name: 'GRGF Institutional Node',
+    name: 'GRGF™ Institutional Node',
     tagline: 'Multi-Tenant Deployment Unit',
-    description: 'Deploy GRGF within a single institution with complete tenant isolation, role-based access, workflow automation, and jurisdiction-specific configuration.',
+    description: 'Deploy GRGF™ within a single institution with complete tenant isolation, role-based access, workflow automation, and jurisdiction-specific configuration.',
     icon: Building2,
     color: '#FFB900',
     users: ['Ministries', 'Agencies', 'Regulators', 'Hospitals'],
@@ -53,7 +53,7 @@ const modules = [
   },
   {
     id: 'federation-node',
-    name: 'GRGF Federation Node',
+    name: 'GRGF™ Federation Node',
     tagline: 'Cross-Jurisdiction Interoperability',
     description: 'Enable sovereign interoperability between institutions and jurisdictions through cross-witnessed Merkle roots, preventing split-view attacks while maintaining data sovereignty.',
     icon: Globe,
@@ -67,7 +67,7 @@ const modules = [
   },
   {
     id: 'compliance-suite',
-    name: 'GRGF Compliance Suite',
+    name: 'GRGF™ Compliance Suite',
     tagline: 'Standards Alignment Engine',
     description: 'Automated compliance checking against OECD, World Bank, UN, and national governance standards. Policy-as-code evaluation with real-time gap analysis.',
     icon: FileCheck,
@@ -81,7 +81,7 @@ const modules = [
   },
   {
     id: 'integrity-monitor',
-    name: 'GRGF Integrity Monitor',
+    name: 'GRGF™ Integrity Monitor',
     tagline: 'Real-Time System Health',
     description: 'Continuous monitoring of chain integrity, hash consistency, and system health. Instant detection of anomalies, tampering attempts, and integrity degradation.',
     icon: Activity,
@@ -95,7 +95,7 @@ const modules = [
   },
   {
     id: 'public-gateway',
-    name: 'GRGF Public Verification Gateway',
+    name: 'GRGF™ Public Verification Gateway',
     tagline: 'Citizen-Facing Trust Portal',
     description: 'A branded, white-label public interface allowing citizens, journalists, and oversight bodies to verify governance records independently.',
     icon: Eye,
@@ -139,7 +139,7 @@ export default function ProductModules() {
       <div className="border-b border-border bg-gradient-to-b from-card to-background">
         <div className="max-w-6xl mx-auto px-6 py-16 text-center">
           <Badge variant="outline" className="mb-4 text-xs font-mono">SOVEREIGN INFRASTRUCTURE MODULES</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">GRGF Product Modules</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">GRGF™ Product Modules</h1>
           <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
             Deployable governance infrastructure. Each module is a production-ready component of the Global Record Governance Framework — built for sovereign institutions.
           </p>
@@ -261,7 +261,7 @@ export default function ProductModules() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center border-t border-border pt-12">
           <p className="text-xs text-muted-foreground">
-            GRGF does not interpret reality. It records it — immutably.
+            GRGF™ does not interpret reality. It records it — immutably.
           </p>
           <p className="text-[10px] font-mono text-muted-foreground/50 mt-2">
             Canadian Patent No. CA 3,300,102 · Invented by Tarek Wahid

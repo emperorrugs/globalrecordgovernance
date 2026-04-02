@@ -12,7 +12,7 @@ import { useState } from "react";
 /* ═══════════════════ DATA ═══════════════════ */
 
 const SIX_LAYERS = [
-  { num: "L1", title: "Event Capture & Normalization", desc: "Canonical event envelopes with jurisdiction, authority, classification, and retention metadata. All events normalized to GRGF-CA schema.", icon: Database },
+  { num: "L1", title: "Event Capture & Normalization", desc: "Canonical event envelopes with jurisdiction, authority, classification, and retention metadata. All events normalized to GRGF™-CA schema.", icon: Database },
   { num: "L2", title: "Policy Decision Engine", desc: "Versioned policy-as-code. Deterministic evaluation — identical inputs always produce identical outputs. No discretionary override.", icon: Gavel },
   { num: "L3", title: "Append-Only Evidence Backbone", desc: "Merkle transparency log. Events are append-only leaves. No deletion, no modification. Structural immutability enforced.", icon: GitBranch },
   { num: "L4", title: "Cryptographic Anchoring", desc: "SHA-256/512 payload commitments. Every event sealed with hash chain linking to predecessor. Tamper-evident by construction.", icon: Hash },
@@ -21,29 +21,29 @@ const SIX_LAYERS = [
 ];
 
 const FEDERATION_NODES = [
-  { id: "GRGF-CA-FED", label: "Federal", jurisdiction: "Government of Canada", departments: ["TBS", "SSC", "PSPC", "ISED"], color: "accent" },
-  { id: "GRGF-ON", label: "Ontario", jurisdiction: "Province of Ontario", departments: ["Digital Service", "Treasury Board", "MGCS"], color: "primary" },
-  { id: "GRGF-QC", label: "Québec", jurisdiction: "Province du Québec", departments: ["MCN", "SCT", "Secrétariat du Conseil du trésor"], color: "primary" },
+  { id: "GRGF™-CA-FED", label: "Federal", jurisdiction: "Government of Canada", departments: ["TBS", "SSC", "PSPC", "ISED"], color: "accent" },
+  { id: "GRGF™-ON", label: "Ontario", jurisdiction: "Province of Ontario", departments: ["Digital Service", "Treasury Board", "MGCS"], color: "primary" },
+  { id: "GRGF™-QC", label: "Québec", jurisdiction: "Province du Québec", departments: ["MCN", "SCT", "Secrétariat du Conseil du trésor"], color: "primary" },
 ];
 
 const WORKFLOWS = [
   {
     id: "WF-001",
     title: "Federal Benefit Decision Lifecycle",
-    jurisdiction: "GRGF-CA-FED",
+    jurisdiction: "GRGF™-CA-FED",
     steps: [
       "Application received → Event captured (L1)",
       "Eligibility policy evaluated → Deterministic decision (L2)",
       "Decision event sealed → Merkle leaf appended (L3)",
       "Payload hash committed → SHA-256 anchoring (L4)",
       "Signed receipt issued → Inclusion proof generated (L5)",
-      "Checkpoint cross-witnessed by GRGF-ON, GRGF-QC (L6)",
+      "Checkpoint cross-witnessed by GRGF™-ON, GRGF™-QC (L6)",
     ],
   },
   {
     id: "WF-002",
     title: "Federal Procurement Award Lifecycle",
-    jurisdiction: "GRGF-CA-FED",
+    jurisdiction: "GRGF™-CA-FED",
     steps: [
       "Procurement event submitted → Canonical envelope created (L1)",
       "Procurement policy v3.2 applied → Award/Denial determined (L2)",
@@ -56,20 +56,20 @@ const WORKFLOWS = [
   {
     id: "WF-003",
     title: "Provincial Licensing Decision Lifecycle",
-    jurisdiction: "GRGF-ON",
+    jurisdiction: "GRGF™-ON",
     steps: [
       "License application normalized → Ontario schema applied (L1)",
       "Provincial licensing policy evaluated → Deterministic output (L2)",
-      "Decision appended to GRGF-ON log → Merkle tree updated (L3)",
+      "Decision appended to GRGF™-ON log → Merkle tree updated (L3)",
       "License hash commitment → SHA-256 chain integrity (L4)",
       "Applicant receives signed receipt with inclusion proof (L5)",
-      "GRGF-ON checkpoint cross-witnessed by GRGF-CA-FED, GRGF-QC (L6)",
+      "GRGF™-ON checkpoint cross-witnessed by GRGF™-CA-FED, GRGF™-QC (L6)",
     ],
   },
 ];
 
 const EVENT_SCHEMA = {
-  event_id: "GRGF-CA-FED-2026-00847",
+  event_id: "GRGF™-CA-FED-2026-00847",
   jurisdiction: "CA-FED",
   issuing_authority: "Treasury Board Secretariat",
   authority_scope: "NATIONAL",
@@ -94,7 +94,7 @@ const PROOF_ARTIFACTS = [
     desc: "Issued to the submitting authority after event is appended.",
     json: {
       receipt_id: "RCPT-CA-FED-2026-00847",
-      event_id: "GRGF-CA-FED-2026-00847",
+      event_id: "GRGF™-CA-FED-2026-00847",
       tree_size: 12847,
       leaf_index: 12846,
       root_hash: "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4",
@@ -106,7 +106,7 @@ const PROOF_ARTIFACTS = [
     title: "Inclusion Proof",
     desc: "Proves the event exists within the current Merkle tree.",
     json: {
-      event_id: "GRGF-CA-FED-2026-00847",
+      event_id: "GRGF™-CA-FED-2026-00847",
       leaf_index: 12846,
       tree_size: 12847,
       hashes: [
@@ -135,25 +135,25 @@ const PROOF_ARTIFACTS = [
     title: "Signed Checkpoint",
     desc: "Periodic commitment of tree state, signed by node operator.",
     json: {
-      node_id: "GRGF-CA-FED",
+      node_id: "GRGF™-CA-FED",
       checkpoint_id: "CKP-CA-FED-2026-0302-1430",
       tree_size: 12847,
       root_hash: "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4",
       timestamp: "2026-03-02T14:30:05.000Z",
       signature: "MEQCIAbc…base64…==",
-      signing_key_id: "GRGF-CA-FED-SIGN-2026-Q1",
+      signing_key_id: "GRGF™-CA-FED-SIGN-2026-Q1",
     },
   },
   {
     title: "Witness Signature",
     desc: "Cross-node attestation of another node's checkpoint validity.",
     json: {
-      witness_node: "GRGF-ON",
+      witness_node: "GRGF™-ON",
       witnessed_checkpoint: "CKP-CA-FED-2026-0302-1430",
       witnessed_root: "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4",
       witness_timestamp: "2026-03-02T14:30:12.000Z",
       witness_signature: "MEYCIQCxyz…base64…==",
-      witness_key_id: "GRGF-ON-WITNESS-2026-Q1",
+      witness_key_id: "GRGF™-ON-WITNESS-2026-Q1",
     },
   },
 ];
@@ -168,9 +168,9 @@ const VERIFICATION_API = [
 ];
 
 const AUDITOR_CHECKLIST = [
-  { step: 1, action: "Verify checkpoint signature", detail: "Validate Ed25519 signature on CKP-CA-FED-2026-0302-1430 using GRGF-CA-FED-SIGN-2026-Q1 public key.", result: "PASS" },
-  { step: 2, action: "Verify witness signatures", detail: "Validate GRGF-ON and GRGF-QC witness signatures against the same checkpoint root hash.", result: "PASS" },
-  { step: 3, action: "Validate inclusion proof", detail: "Recompute Merkle root from leaf GRGF-CA-FED-2026-00847 at index 12846 using inclusion proof hashes.", result: "PASS" },
+  { step: 1, action: "Verify checkpoint signature", detail: "Validate Ed25519 signature on CKP-CA-FED-2026-0302-1430 using GRGF™-CA-FED-SIGN-2026-Q1 public key.", result: "PASS" },
+  { step: 2, action: "Verify witness signatures", detail: "Validate GRGF™-ON and GRGF™-QC witness signatures against the same checkpoint root hash.", result: "PASS" },
+  { step: 3, action: "Validate inclusion proof", detail: "Recompute Merkle root from leaf GRGF™-CA-FED-2026-00847 at index 12846 using inclusion proof hashes.", result: "PASS" },
   { step: 4, action: "Validate consistency proof", detail: "Verify log grew from tree_size 12800 to 12847 without modifying existing entries.", result: "PASS" },
   { step: 5, action: "Confirm policy hash integrity", detail: "Hash GOC-BENEFIT-POLICY-v3.2 content and compare to policy_hash in event envelope.", result: "PASS" },
   { step: 6, action: "Confirm payload privacy boundary", detail: "Verify payload_hash is a commitment only — no sensitive data exposed in verification flow.", result: "PASS" },
@@ -198,7 +198,7 @@ const PILOT_PHASES = [
   {
     phase: "Phase 1", days: "Days 1–30", title: "Technical Simulation & Internal Validation",
     milestones: [
-      "Deploy GRGF-CA-FED simulation node",
+      "Deploy GRGF™-CA-FED simulation node",
       "Configure canonical event schema for GC context",
       "Run 500+ simulated governance events through 6-layer pipeline",
       "Generate first signed checkpoint and inclusion proofs",
@@ -210,7 +210,7 @@ const PILOT_PHASES = [
   {
     phase: "Phase 2", days: "Days 31–60", title: "Controlled Pilot Workflow Logging",
     milestones: [
-      "Deploy GRGF-ON and GRGF-QC simulation nodes",
+      "Deploy GRGF™-ON and GRGF™-QC simulation nodes",
       "Execute three core workflow scenarios end-to-end",
       "Demonstrate cross-node checkpoint witnessing",
       "Generate consistency proofs across 3 checkpoints",
@@ -285,7 +285,7 @@ const CanadaDeployment = () => {
             <Shield className="h-3.5 w-3.5" />
             <span>SOVEREIGN READY — Submission Package</span>
           </div>
-          <PDFExportButton filename="GRGF-Canada-Sovereign-Deployment" />
+          <PDFExportButton filename="GRGF™-Canada-Sovereign-Deployment" />
         </div>
       </PageHeader>
 
@@ -310,7 +310,7 @@ const CanadaDeployment = () => {
       {/* ── 01 Architecture ── */}
       <Section id="architecture" title="01 — Six-Layer Deterministic Architecture" className="scroll-mt-20 border-t border-border">
         <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          GRGF implements a six-layer deterministic model. Each layer enforces structural guarantees — no deletion, no central override, no discretionary bypass. The architecture is sovereignty-preserving by construction.
+          GRGF™ implements a six-layer deterministic model. Each layer enforces structural guarantees — no deletion, no central override, no discretionary bypass. The architecture is sovereignty-preserving by construction.
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {SIX_LAYERS.map(({ num, title, desc, icon: Icon }) => (
@@ -362,7 +362,7 @@ const CanadaDeployment = () => {
       {/* ── 03 Workflows ── */}
       <Section id="workflows" title="03 — Core Canada Workflows" className="scroll-mt-20 border-t border-border">
         <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          Three primary governance workflows demonstrate GRGF's end-to-end pipeline from event capture through federated witnessing.
+          Three primary governance workflows demonstrate GRGF™'s end-to-end pipeline from event capture through federated witnessing.
         </p>
         <div className="flex gap-2 mb-6 flex-wrap">
           {WORKFLOWS.map((wf, i) => (
@@ -403,9 +403,9 @@ const CanadaDeployment = () => {
       {/* ── 04 Event Schema ── */}
       <Section id="event-schema" title="04 — Canonical Event Envelope" className="scroll-mt-20 border-t border-border">
         <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          Standardized event envelope for all Canadian GRGF nodes. Sensitive data is encrypted and referenced — never exposed in verification flows.
+          Standardized event envelope for all Canadian GRGF™ nodes. Sensitive data is encrypted and referenced — never exposed in verification flows.
         </p>
-        <JsonBlock data={EVENT_SCHEMA} title="GRGF-CA Event Envelope Schema" />
+        <JsonBlock data={EVENT_SCHEMA} title="GRGF™-CA Event Envelope Schema" />
         <div className="mt-4 governance-card bg-muted/30">
           <p className="text-xs text-muted-foreground leading-relaxed">
             <span className="font-semibold text-foreground">Privacy Boundary.</span> The <code className="text-accent">payload_hash</code> field is a SHA-256 commitment only. The underlying decision content remains encrypted and under the custody of the issuing authority. Verification flows prove integrity without exposing sensitive data.
@@ -488,14 +488,14 @@ const CanadaDeployment = () => {
       {/* ── 08 Standards ── */}
       <Section id="standards" title="08 — Standards Compliance Matrix" className="scroll-mt-20 border-t border-border">
         <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl mb-6">
-          GRGF Canada deployment mapped against international governance, records, security, and privacy standards.
+          GRGF™ Canada deployment mapped against international governance, records, security, and privacy standards.
         </p>
         <div className="overflow-x-auto governance-card">
           <table className="w-full text-xs border-collapse">
             <thead>
               <tr className="border-b-2 border-accent/30">
                 <th className="text-left py-3 px-3 font-serif font-semibold">Standard</th>
-                <th className="text-left py-3 px-3 font-serif font-semibold">GRGF Mapping</th>
+                <th className="text-left py-3 px-3 font-serif font-semibold">GRGF™ Mapping</th>
                 <th className="text-left py-3 px-3 font-serif font-semibold">Risk</th>
                 <th className="text-left py-3 px-3 font-serif font-semibold">Mitigation</th>
               </tr>
@@ -538,11 +538,11 @@ const CanadaDeployment = () => {
       <Section title="Sovereignty Safeguards" className="border-t border-border">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { icon: Shield, title: "No Enforcement Authority", desc: "GRGF exercises no enforcement capability. It records, preserves, and verifies — it does not adjudicate or override." },
+            { icon: Shield, title: "No Enforcement Authority", desc: "GRGF™ exercises no enforcement capability. It records, preserves, and verifies — it does not adjudicate or override." },
             { icon: Scale, title: "No Regulatory Override", desc: "No mechanism exists to override provincial or federal regulatory authority. Sovereignty is structurally guaranteed." },
             { icon: Building2, title: "Provincial Independence", desc: "Each provincial node operates autonomously. No centralized authority can compel log modification or deletion." },
-            { icon: Users, title: "Voluntary Participation", desc: "Participation is voluntary. No jurisdiction is required to adopt, operate, or maintain a GRGF node." },
-            { icon: Lock, title: "Jurisdictional Boundaries", desc: "Clear jurisdictional separation. Federal events stay in GRGF-CA-FED. Provincial events stay in their respective nodes." },
+            { icon: Users, title: "Voluntary Participation", desc: "Participation is voluntary. No jurisdiction is required to adopt, operate, or maintain a GRGF™ node." },
+            { icon: Lock, title: "Jurisdictional Boundaries", desc: "Clear jurisdictional separation. Federal events stay in GRGF™-CA-FED. Provincial events stay in their respective nodes." },
             { icon: Fingerprint, title: "Canadian Patent Protection", desc: "Canadian Patent Application No. 3,300,102 — filed January 28, 2026. Canadian-origin sovereign infrastructure IP." },
           ].map(({ icon: Icon, title, desc }) => (
             <div key={title} className="governance-card">

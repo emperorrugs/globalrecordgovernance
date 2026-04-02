@@ -1,5 +1,5 @@
 /**
- * GRGF Audit Service
+ * GRGF™ Audit Service
  * Append-only audit trail for all governance actions.
  * Every entry carries its own integrity hash.
  */

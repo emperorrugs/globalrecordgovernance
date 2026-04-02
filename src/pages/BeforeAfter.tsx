@@ -131,14 +131,14 @@ const cases: CaseProps[] = [
 const BeforeAfter = () => (
   <div className="animate-fade-in">
     <PageHeader
-      title="Before & After — Why GRGF Exists"
+      title="Before & After — Why GRGF™ Exists"
       subtitle="Three real governance failure patterns and how execution-time truth prevents them."
     />
 
     <Section title="The Problem Pattern" className="border-b border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed">
-          Governance failures rarely result from malice alone. They result from <strong>systems that allow records to be created after the fact, modified without detection, lost during transitions, or disputed without resolution</strong>. GRGF addresses the structural root cause: the absence of execution-time, authority-bound, verifiable governance records.
+          Governance failures rarely result from malice alone. They result from <strong>systems that allow records to be created after the fact, modified without detection, lost during transitions, or disputed without resolution</strong>. GRGF™ addresses the structural root cause: the absence of execution-time, authority-bound, verifiable governance records.
         </p>
       </div>
     </Section>
@@ -152,7 +152,7 @@ const BeforeAfter = () => (
           <Card className="p-5 border-red-200 dark:border-red-900/50 bg-red-50/30 dark:bg-red-950/10">
             <div className="flex items-center gap-2 mb-3">
               <XCircle className="h-4 w-4 text-red-500" />
-              <p className="text-[10px] font-mono text-red-600 dark:text-red-400 uppercase tracking-wider font-semibold">Without GRGF</p>
+              <p className="text-[10px] font-mono text-red-600 dark:text-red-400 uppercase tracking-wider font-semibold">Without GRGF™</p>
             </div>
             <p className="text-sm text-foreground leading-relaxed mb-4">{c.realFailure.headline}</p>
             <div className="space-y-2 mb-4">
@@ -173,7 +173,7 @@ const BeforeAfter = () => (
           <Card className="p-5 border-emerald-200 dark:border-emerald-900/50 bg-emerald-50/30 dark:bg-emerald-950/10">
             <div className="flex items-center gap-2 mb-3">
               <CheckCircle className="h-4 w-4 text-emerald-500" />
-              <p className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-semibold">With GRGF</p>
+              <p className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider font-semibold">With GRGF™</p>
             </div>
             <p className="text-sm text-foreground leading-relaxed mb-4">{c.withGRGF.headline}</p>
             <div className="space-y-2 mb-4">
@@ -218,10 +218,10 @@ const BeforeAfter = () => (
     <Section title="The Structural Insight">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4">
-          These three cases share a common structural failure: <strong>governance actions were not recorded at execution time, not bound to authority, and not independently verifiable</strong>. GRGF does not prevent bad decisions — it prevents the structural conditions that allow bad decisions to be hidden, denied, or disputed without resolution.
+          These three cases share a common structural failure: <strong>governance actions were not recorded at execution time, not bound to authority, and not independently verifiable</strong>. GRGF™ does not prevent bad decisions — it prevents the structural conditions that allow bad decisions to be hidden, denied, or disputed without resolution.
         </p>
         <p className="text-sm text-foreground leading-relaxed mb-6">
-          The difference between trust-based governance and proof-based governance is not philosophical — it is architectural. GRGF provides the missing execution-time truth layer.
+          The difference between trust-based governance and proof-based governance is not philosophical — it is architectural. GRGF™ provides the missing execution-time truth layer.
         </p>
         <div className="flex flex-wrap gap-2">
           <Link to="/demo/app" className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-primary text-xs font-medium rounded-sm hover:bg-accent/90 transition-colors">

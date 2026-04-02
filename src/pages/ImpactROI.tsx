@@ -44,7 +44,7 @@ const ImpactROI = () => (
                 <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Scenario</th>
                 <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Leakage Rate</th>
                 <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium">Annual Loss</th>
-                <th className="text-left py-2 text-muted-foreground/70 font-medium">GRGF Mitigation</th>
+                <th className="text-left py-2 text-muted-foreground/70 font-medium">GRGF™ Mitigation</th>
               </tr>
             </thead>
             <tbody className="text-muted-foreground">
@@ -76,7 +76,7 @@ const ImpactROI = () => (
           <Clock className="h-5 w-5 text-accent mb-3" />
           <h4 className="font-serif text-sm font-semibold mb-2">Audit Cycle Reduction</h4>
           <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-            Traditional audit cycles require extensive manual reconciliation. GRGF's continuous compliance evidence model reduces cycle time by 20–40% through:
+            Traditional audit cycles require extensive manual reconciliation. GRGF™'s continuous compliance evidence model reduces cycle time by 20–40% through:
           </p>
           <ul className="space-y-1.5 text-xs text-muted-foreground">
             {[
@@ -168,14 +168,14 @@ const ImpactROI = () => (
         <div className="governance-card border-l-2 border-l-accent">
           <h4 className="font-serif text-sm font-semibold mb-3">Fiscal Risk Mitigation Framing</h4>
           <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-            GRGF should be evaluated not as a technology investment but as fiscal risk mitigation infrastructure. The threshold for value creation is exceptionally low:
+            GRGF™ should be evaluated not as a technology investment but as fiscal risk mitigation infrastructure. The threshold for value creation is exceptionally low:
           </p>
           <div className="bg-card border border-border rounded-sm p-4 text-center mb-3">
             <p className="text-2xl font-serif font-semibold text-accent">0.3%</p>
             <p className="text-xs text-muted-foreground mt-1">Integrity improvement sufficient to offset full deployment cost</p>
           </div>
           <p className="text-xs text-muted-foreground leading-relaxed">
-            Even marginal improvements in procurement integrity, omission detection, or audit efficiency generate returns that exceed the total cost of deployment. This positions GRGF as a fiscally conservative investment with asymmetric upside potential.
+            Even marginal improvements in procurement integrity, omission detection, or audit efficiency generate returns that exceed the total cost of deployment. This positions GRGF™ as a fiscally conservative investment with asymmetric upside potential.
           </p>
         </div>
       </div>

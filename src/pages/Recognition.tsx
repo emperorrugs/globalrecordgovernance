@@ -13,7 +13,7 @@ const Recognition = () => (
       <div className="max-w-5xl mx-auto">
         <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Standards & Recognition</p>
         <h1 className="institutional-heading text-display font-semibold text-primary-foreground mb-4">
-          GRGF DPI Recognition Framework™
+          GRGF™ DPI Recognition Framework™
         </h1>
         <p className="text-body-lg text-primary-foreground/60 max-w-2xl">
           A structured, tiered accreditation pathway for institutions seeking verified governance integrity certification. Independent, procedural, and internationally aligned.
@@ -97,8 +97,8 @@ const Recognition = () => (
       <h2 className="institutional-heading text-heading-1 font-semibold mb-10">How to Engage</h2>
       <div className="space-y-4 max-w-3xl">
         {[
-          { step: "01", title: "Initial Inquiry", desc: "Contact GRGF to express interest in institutional evaluation. Provide organizational context, jurisdiction, and scope of interest." },
-          { step: "02", title: "Scope Definition", desc: "GRGF works with the applicant to define certification scope, applicable systems, and expected evidence requirements." },
+          { step: "01", title: "Initial Inquiry", desc: "Contact GRGF™ to express interest in institutional evaluation. Provide organizational context, jurisdiction, and scope of interest." },
+          { step: "02", title: "Scope Definition", desc: "GRGF™ works with the applicant to define certification scope, applicable systems, and expected evidence requirements." },
           { step: "03", title: "Documentation Submission", desc: "Submit architecture documentation, governance charter, security controls summary, and operational procedures for review." },
           { step: "04", title: "Technical Review", desc: "Independent reviewers assess cryptographic integrity, policy determinism, append-only enforcement, and verification capability." },
           { step: "05", title: "Evidence Testing", desc: "Structured evidence sampling validates that records, proofs, retention controls, and audit trails meet the target certification level." },
@@ -123,7 +123,7 @@ const Recognition = () => (
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Begin the Recognition Process</h2>
         <p className="text-body text-primary-foreground/60 mb-8">
-          Institutional recognition applications are reviewed by the GRGF Technical Review Panel. The assessment process is structured, independent, and aligned with international governance standards.
+          Institutional recognition applications are reviewed by the GRGF™ Technical Review Panel. The assessment process is structured, independent, and aligned with international governance standards.
         </p>
         <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all duration-200 hover:shadow-lg hover:shadow-accent/20">
           Submit Recognition Application <ArrowRight className="h-4 w-4" />

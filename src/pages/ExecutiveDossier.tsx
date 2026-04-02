@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FileText, Lock, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Building2, Scale, Eye } from "lucide-react";
 
 const binderSections = [
-  { num: "I", title: "Executive Overview", route: "/", classification: "Level 1 — Public", desc: "Strategic positioning, problem statement, and GRGF solution overview for institutional decision-makers." },
+  { num: "I", title: "Executive Overview", route: "/", classification: "Level 1 — Public", desc: "Strategic positioning, problem statement, and GRGF™ solution overview for institutional decision-makers." },
   { num: "II", title: "System Architecture", route: "/architecture", classification: "Level 2 — Institutional", desc: "Six-layer architecture with event schemas, policy logic, federation model, and data flow diagrams." },
   { num: "III", title: "Security & Trust Whitepaper", route: "/security-trust", classification: "Level 2 — Institutional", desc: "Threat model, cryptographic integrity, zero-trust architecture, and incident response framework." },
   { num: "IV", title: "Governance Framework", route: "/governance-framework", classification: "Level 2 — Institutional", desc: "Custodial neutrality, sovereign interoperability, federation tiers, and oversight structure." },
@@ -20,7 +20,7 @@ const binderSections = [
 const revenueModel = [
   { stream: "Sovereign Licensing", desc: "National node licensing for government deployments with sovereignty-preserving terms." },
   { stream: "Professional Services", desc: "Policy encoding, integration engineering, security architecture, and deployment support." },
-  { stream: "Certification & Training", desc: "GRGF Academy professional certification (Foundations, Practitioner, Steward/Architect tiers)." },
+  { stream: "Certification & Training", desc: "GRGF™ Academy professional certification (Foundations, Practitioner, Steward/Architect tiers)." },
   { stream: "Federation Services", desc: "Cross-border interoperability services, trust validation, and compliance monitoring." },
   { stream: "Institutional Support", desc: "Ongoing governance oversight, security monitoring, and policy schema maintenance." },
 ];
@@ -32,7 +32,7 @@ const ExecutiveDossier = () => (
       subtitle="Investor-grade institutional positioning with master binder structure, revenue model, and strategic roadmap."
     >
       <div className="mt-4">
-        <PDFExportButton filename="GRGF_Executive_Dossier" label="Export Dossier as PDF" />
+        <PDFExportButton filename="GRGF™_Executive_Dossier" label="Export Dossier as PDF" />
       </div>
     </PageHeader>
 
@@ -40,7 +40,7 @@ const ExecutiveDossier = () => (
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-8">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF is positioned as a sovereign-grade governance integrity infrastructure layer — not a startup product, blockchain experiment, or political transparency tool. Its value derives from structural governance integrity through deterministic enforcement, cryptographic sealing, and independent verification.
+          GRGF™ is positioned as a sovereign-grade governance integrity infrastructure layer — not a startup product, blockchain experiment, or political transparency tool. Its value derives from structural governance integrity through deterministic enforcement, cryptographic sealing, and independent verification.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
@@ -60,7 +60,7 @@ const ExecutiveDossier = () => (
     {/* Master Binder */}
     <Section title="Master Binder — Authoritative Structure" className="border-t border-border">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        The GRGF Master Binder is the frozen authoritative edition containing all governance, architecture, security, deployment, and legal documentation. Each section is versioned, dated, classified, and hash-sealed.
+        The GRGF™ Master Binder is the frozen authoritative edition containing all governance, architecture, security, deployment, and legal documentation. Each section is versioned, dated, classified, and hash-sealed.
       </p>
       <div className="space-y-2">
         {binderSections.map((s) => (

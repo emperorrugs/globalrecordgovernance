@@ -131,7 +131,7 @@ function DocumentNavigator() {
                 <p className="text-xs text-muted-foreground leading-relaxed mb-2">{doc.summary}</p>
                 {doc.classification.includes("Level 3") ? (
                   <p className="text-[10px] font-mono text-destructive/70 tracking-wider">
-                    CLASSIFIED UNDER GRGF CONTROLLED DISTRIBUTION PROTOCOL — INSTITUTIONAL REQUEST REQUIRED
+                    CLASSIFIED UNDER GRGF™ CONTROLLED DISTRIBUTION PROTOCOL — INSTITUTIONAL REQUEST REQUIRED
                   </p>
                 ) : (
                   <Link
@@ -185,7 +185,7 @@ const stakeholderBriefs = [
     riskExposure: "Incomplete audit coverage, undetectable record gaps, and inability to verify evidence integrity.",
     mechanism: "Pre-verified, cryptographically sealed audit trails with continuous compliance evidence.",
     outcome: "20–40% audit cycle reduction, 100% audit trail completeness, independent verification capability.",
-    entryStep: "Conduct parallel audit trial: verify one governance process through both traditional and GRGF-assisted methods.",
+    entryStep: "Conduct parallel audit trial: verify one governance process through both traditional and GRGF™-assisted methods.",
   },
   {
     role: "Treasury / Fiscal Authority",
@@ -245,7 +245,7 @@ function StakeholderBriefing() {
             {[
               { label: "INSTITUTIONAL CHALLENGE", value: brief.challenge, color: "text-muted-foreground/60" },
               { label: "GOVERNANCE RISK EXPOSURE", value: brief.riskExposure, color: "text-destructive/60" },
-              { label: "GRGF STRUCTURAL MECHANISM", value: brief.mechanism, color: "text-accent/70" },
+              { label: "GRGF™ STRUCTURAL MECHANISM", value: brief.mechanism, color: "text-accent/70" },
               { label: "MEASURABLE OUTCOME", value: brief.outcome, color: "text-accent/70" },
               { label: "DEPLOYMENT ENTRY STEP", value: brief.entryStep, color: "text-accent/70" },
             ].map((field) => (
@@ -285,9 +285,9 @@ const complianceData = [
   {
     standard: "ISO 42001",
     mappings: [
-      { domain: "Context (4.1)", mechanism: "GRGF uses no AI for governance decisions. All logic is deterministic.", note: "Explicit non-AI positioning" },
+      { domain: "Context (4.1)", mechanism: "GRGF™ uses no AI for governance decisions. All logic is deterministic.", note: "Explicit non-AI positioning" },
       { domain: "Risk Assessment (6.1)", mechanism: "Six-vector threat model with documented mitigations.", note: "Full structural alignment" },
-      { domain: "AI Operation (8.4)", mechanism: "Not applicable — GRGF rejects probabilistic decision logic.", note: "Explicit exclusion documented" },
+      { domain: "AI Operation (8.4)", mechanism: "Not applicable — GRGF™ rejects probabilistic decision logic.", note: "Explicit exclusion documented" },
     ],
   },
   {
@@ -343,7 +343,7 @@ function ComplianceMapping() {
           <thead>
             <tr className="border-b border-border">
               <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium w-1/4">Standard Domain</th>
-              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium w-1/2">GRGF Mechanism</th>
+              <th className="text-left py-2 pr-4 text-muted-foreground/70 font-medium w-1/2">GRGF™ Mechanism</th>
               <th className="text-left py-2 text-muted-foreground/70 font-medium w-1/4">Notes</th>
             </tr>
           </thead>
@@ -405,7 +405,7 @@ function PolicySimulation() {
     const rule = policyRules[ruleKey];
     setResult({
       allow: rule.allow,
-      policy_id: `GRGF-POL-${String(Math.floor(Math.random() * 9000) + 1000)}`,
+      policy_id: `GRGF™-POL-${String(Math.floor(Math.random() * 9000) + 1000)}`,
       machine_reason: rule.machine_reason,
       human_reason: rule.human_reason,
       event_normalized: eventInput.trim(),
@@ -482,7 +482,7 @@ const GovernanceInterface = () => (
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-2">
         <p className="text-sm text-foreground leading-relaxed">
-          The GRGF Governance Interface provides structured navigation and explanatory summaries of GRGF documentation and system design. It does not replace formal institutional review, legal interpretation, or policy authority.
+          The GRGF™ Governance Interface provides structured navigation and explanatory summaries of GRGF™ documentation and system design. It does not replace formal institutional review, legal interpretation, or policy authority.
         </p>
       </div>
     </Section>

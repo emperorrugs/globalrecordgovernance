@@ -9,7 +9,7 @@
 
 ## Overview
 
-GRGF includes a comprehensive capacity-building framework designed to prepare institutional staff for governance record infrastructure adoption.
+GRGF™ includes a comprehensive capacity-building framework designed to prepare institutional staff for governance record infrastructure adoption.
 
 ## Role-Based Training Modules
 
@@ -51,14 +51,14 @@ GRGF includes a comprehensive capacity-building framework designed to prepare in
 
 | Tier | Requirement | Scope |
 |------|------------|-------|
-| GRGF Aware | Briefing completion | Conceptual understanding |
-| GRGF Operator | Workshop + assessment | Operational proficiency |
-| GRGF Auditor | Deep-dive + examination | Verification competence |
-| GRGF Architect | Full program + practicum | Deployment capability |
+| GRGF™ Aware | Briefing completion | Conceptual understanding |
+| GRGF™ Operator | Workshop + assessment | Operational proficiency |
+| GRGF™ Auditor | Deep-dive + examination | Verification competence |
+| GRGF™ Architect | Full program + practicum | Deployment capability |
 
 ## Simulation Exercises
 
-All training includes hands-on simulation using the GRGF demonstration environment:
+All training includes hands-on simulation using the GRGF™ demonstration environment:
 - Governance event creation and recording
 - Verification proof generation and validation
 - Audit reconstruction from sealed records

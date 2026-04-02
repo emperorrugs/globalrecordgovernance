@@ -1,5 +1,5 @@
 /**
- * GRGF Record Service
+ * GRGF™ Record Service
  * Core business logic for governance record lifecycle management.
  * Enforces: create → validate → hash → commit → seal → supersede
  */

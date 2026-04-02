@@ -9,9 +9,9 @@
 
 ## Lifecycle Stages
 
-Every GRGF record follows a defined lifecycle:
+Every GRGF™ record follows a defined lifecycle:
 
-1. **Event asserted** — a governance event is reported to GRGF
+1. **Event asserted** — a governance event is reported to GRGF™
 2. **Context normalized** — event is structured into canonical format
 3. **Authority captured** — mandate, delegation, and scope are recorded
 4. **Record created** — or explicitly *not* created (with reason)

@@ -41,7 +41,7 @@ const Dashboard = () => {
         subtitle={
           isPlain
             ? "Visual overview of simulated governance activity — for demonstration and training only."
-            : "Aggregate analytics over simulated GRGF record data. Non-authoritative. No real institutional data."
+            : "Aggregate analytics over simulated GRGF™ record data. Non-authoritative. No real institutional data."
         }
       />
 

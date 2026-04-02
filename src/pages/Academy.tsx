@@ -8,9 +8,9 @@ const certifications = [
     icon: <Users className="h-6 w-6" />,
     duration: "3–6 months",
     who: "Institutional staff, records officers, policy analysts",
-    plain: "Learn the fundamentals of GRGF — what it records, why, and how integrity is maintained.",
-    tech: "Conceptual competence in GRGF principles, governance logic, record integrity. No deployment authority.",
-    outcome: "GRGF Foundations Practitioner Certificate",
+    plain: "Learn the fundamentals of GRGF™ — what it records, why, and how integrity is maintained.",
+    tech: "Conceptual competence in GRGF™ principles, governance logic, record integrity. No deployment authority.",
+    outcome: "GRGF™ Foundations Practitioner Certificate",
   },
   {
     title: "Verifier",
@@ -19,16 +19,16 @@ const certifications = [
     who: "Governance auditors, compliance officers, DPI specialists",
     plain: "Qualified to verify records, support institutional deployment, and conduct compliance assessments.",
     tech: "Institutional deployment support, country-specific configuration, risk assessment and safeguard implementation under steward oversight.",
-    outcome: "GRGF Practitioner Certificate",
+    outcome: "GRGF™ Practitioner Certificate",
   },
   {
     title: "Auditor",
     icon: <BookOpen className="h-6 w-6" />,
     duration: "12–24 months",
     who: "Senior governance officers, judicial bodies, national audit offices",
-    plain: "Qualified to audit GRGF deployments and assess governance integrity across institutions.",
+    plain: "Qualified to audit GRGF™ deployments and assess governance integrity across institutions.",
     tech: "Cross-institutional integrity assurance, audit protocol execution, governance review authority with formal assessment panel.",
-    outcome: "GRGF Auditor Certificate",
+    outcome: "GRGF™ Auditor Certificate",
   },
   {
     title: "Policy Architect",
@@ -37,7 +37,7 @@ const certifications = [
     who: "Stewardship authorities, succession planners, multilateral coordination leads",
     plain: "The highest level — responsible for protecting the framework's long-term integrity and guiding its evolution.",
     tech: "Cross-country coherence, anti-capture vigilance, succession planning, federation governance. Stewards preserve — they do not own.",
-    outcome: "GRGF Steward / Architect Designation",
+    outcome: "GRGF™ Steward / Architect Designation",
   },
 ];
 
@@ -49,8 +49,8 @@ const Academy = () => {
       <PageHeader
         title="Academy"
         subtitle={isPlain
-          ? "Professional training and certification for people who work with GRGF."
-          : "Professional standards body for GRGF training, credentialing, and stewardship of correct, neutral, and ethical framework application."
+          ? "Professional training and certification for people who work with GRGF™."
+          : "Professional standards body for GRGF™ training, credentialing, and stewardship of correct, neutral, and ethical framework application."
         }
       />
 

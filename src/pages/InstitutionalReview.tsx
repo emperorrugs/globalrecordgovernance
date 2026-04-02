@@ -61,7 +61,7 @@ const DOCUMENTS = [
 const InstitutionalReview = () => (
   <div className="animate-fade-in">
     <SEOHead
-      title="Institutional Due Diligence Room — GRGF"
+      title="Institutional Due Diligence Room — GRGF™"
       description="Structured repository of executive briefs, technical documentation, economic models, and compliance evidence for institutional review."
     />
     <PageHeader
@@ -97,7 +97,7 @@ const InstitutionalReview = () => (
         <p className="text-xs text-muted-foreground leading-relaxed">
           <span className="font-semibold text-foreground">Access Note.</span>{" "}
           All documents listed are available through the public transparency interface. For institutional-grade document packs with hash verification,
-          contact GRGF through the{" "}
+          contact GRGF™ through the{" "}
           <Link to="/controlled-access" className="text-accent hover:underline">Controlled Access Protocol</Link>.
         </p>
       </div>

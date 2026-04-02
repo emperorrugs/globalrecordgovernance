@@ -22,7 +22,7 @@ const documents: DocItem[] = [
   { name: "System Architecture & Catalog", file: "System_Architecture_and_Catalog.pdf", type: "diagram", category: "Architecture & Technical", description: "End-to-end system architecture diagrams and component catalog." },
   { name: "Data Flow Architecture", file: "1_Data_Flow_Architecture.md", type: "diagram", category: "Architecture & Technical", description: "Source-to-custody data flows including minimization and boundary controls." },
   { name: "Interoperability Profile", file: "5_Interoperability_Profile.md", type: "diagram", category: "Architecture & Technical", description: "Canonical schemas, APIs, versioning, and conformance testing." },
-  { name: "Phase 3 Visual Operating Model", file: "GRGF_Phase_3_Visual_Operating_Model.pdf", type: "diagram", category: "Architecture & Technical", description: "Visual representation of the operational governance model." },
+  { name: "Phase 3 Visual Operating Model", file: "GRGF™_Phase_3_Visual_Operating_Model.pdf", type: "diagram", category: "Architecture & Technical", description: "Visual representation of the operational governance model." },
   { name: "High-Level Architecture", file: "High_Level_Architecture.md", type: "diagram", category: "Architecture & Technical", description: "Three-layer model and six-layer technical stack overview for non-technical audiences." },
   { name: "Functional Modules Overview", file: "Functional_Modules_Overview.md", type: "diagram", category: "Architecture & Technical", description: "Four core functional layers with integration points and module interaction model." },
 
@@ -43,19 +43,19 @@ const documents: DocItem[] = [
   { name: "Actions & Omissions Framework", file: "Actions_and_Omissions_Framework.md", type: "policy", category: "Governance & Policy", description: "Why recording actions and omissions matters for institutional accountability." },
 
   // Executive & Institutional
-  { name: "Master Binder v1", file: "GRGF_Master_Binder_v1.md", type: "report", category: "Executive & Institutional", description: "Definitive frozen edition for institutional submission (11 sections)." },
+  { name: "Master Binder v1", file: "GRGF™_Master_Binder_v1.md", type: "report", category: "Executive & Institutional", description: "Definitive frozen edition for institutional submission (11 sections)." },
   { name: "Executive Decision Memo", file: "Executive_Decision_Memo.md", type: "report", category: "Executive & Institutional", description: "Formal decision memorandum for executive governance approval." },
   { name: "Oral Defense Briefing Deck", file: "Oral_Defense_Briefing_Deck.md", type: "report", category: "Executive & Institutional", description: "Structured briefing for oral defense and committee presentation." },
-  { name: "Public Overview", file: "GRGF_Public_Overview.md", type: "report", category: "Executive & Institutional", description: "Public-facing overview of the GRGF framework and mission." },
+  { name: "Public Overview", file: "GRGF™_Public_Overview.md", type: "report", category: "Executive & Institutional", description: "Public-facing overview of the GRGF™ framework and mission." },
   { name: "Authoritative Master Record", file: "Authoritative_Master_Record_FREEZE.md", type: "report", category: "Executive & Institutional", description: "Frozen authoritative record with SHA-256 integrity verification." },
-  { name: "GRGF Vision & Purpose", file: "GRGF_Vision_and_Purpose.md", type: "report", category: "Executive & Institutional", description: "Core vision, strategic DPI positioning, and design philosophy." },
-  { name: "Frequently Asked Questions", file: "GRGF_FAQ.md", type: "report", category: "Executive & Institutional", description: "General, technical, governance, and adoption questions answered." },
+  { name: "GRGF™ Vision & Purpose", file: "GRGF™_Vision_and_Purpose.md", type: "report", category: "Executive & Institutional", description: "Core vision, strategic DPI positioning, and design philosophy." },
+  { name: "Frequently Asked Questions", file: "GRGF™_FAQ.md", type: "report", category: "Executive & Institutional", description: "General, technical, governance, and adoption questions answered." },
 
   // Deployment & Pilot
   { name: "Pilot SOW & Acceptance Criteria", file: "7_Pilot_SOW_Acceptance.md", type: "report", category: "Deployment & Pilot", description: "Scope, milestones, security/privacy gates, and success metrics." },
-  { name: "Full Pilot Kit (ZIP)", file: "GRGF_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip", type: "kit", category: "Deployment & Pilot", description: "Institution-ready pilot deployment package v0.1." },
+  { name: "Full Pilot Kit (ZIP)", file: "GRGF™_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip", type: "kit", category: "Deployment & Pilot", description: "Institution-ready pilot deployment package v0.1." },
   { name: "DPI Deploy Kit", file: "dpi_deploy_kit_20260130_231918.zip", type: "kit", category: "Deployment & Pilot", description: "Deployment automation package with configuration templates." },
-  { name: "Phase 5 Public Transparency", file: "GRGF_Phase_5_Public_Transparency.zip", type: "kit", category: "Deployment & Pilot", description: "Public transparency and disclosure package." },
+  { name: "Phase 5 Public Transparency", file: "GRGF™_Phase_5_Public_Transparency.zip", type: "kit", category: "Deployment & Pilot", description: "Public transparency and disclosure package." },
   { name: "Deployment Models", file: "Deployment_Models.md", type: "report", category: "Deployment & Pilot", description: "National and incremental adoption stages with 90-day pilot framework." },
   { name: "DPI Integration Guide", file: "DPI_Integration_Guide.md", type: "report", category: "Deployment & Pilot", description: "Non-intrusive integration patterns for identity, procurement, and regulatory systems." },
   { name: "Training & Capacity Building", file: "Training_Capacity_Building.md", type: "report", category: "Deployment & Pilot", description: "Role-based training modules and certification tiers for institutional staff." },
@@ -116,7 +116,7 @@ export default function ReportsStudies() {
           </h1>
           <p className="text-muted-foreground max-w-3xl leading-relaxed">
             {isPlain
-              ? "All official reports, feasibility studies, architecture diagrams, and policy documents produced under the GRGF framework — available for download and review."
+              ? "All official reports, feasibility studies, architecture diagrams, and policy documents produced under the GRGF™ framework — available for download and review."
               : "Comprehensive repository of institutional-grade deliverables including STRIDE threat models, PIA assessments, SHA-256 integrity manifests, and deployment SOWs. All documents maintain chain-of-custody provenance."}
           </p>
         </header>

@@ -45,7 +45,7 @@ export default function PublicFramework() {
           Global Record Governance Framework
         </h1>
         <p className="text-body-lg text-muted-foreground leading-relaxed">
-          GRGF is a sovereign-grade Digital Public Infrastructure trust layer for recording,
+          GRGF™ is a sovereign-grade Digital Public Infrastructure trust layer for recording,
           preserving, and verifying institutional actions, decisions, and omissions over time —
           without interpretation, enforcement, or decision authority.
         </p>

@@ -10,7 +10,7 @@ const TechnicalBlueprints = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Technical Blueprints"
-        subtitle="Detailed architecture documentation for System A (Evidence Backbone) and System B (Document Processing Pipeline) — the two technical pillars underpinning GRGF."
+        subtitle="Detailed architecture documentation for System A (Evidence Backbone) and System B (Document Processing Pipeline) — the two technical pillars underpinning GRGF™."
       />
 
       {/* System A */}
@@ -83,7 +83,7 @@ const TechnicalBlueprints = () => {
           {[
             { icon: <FileText className="h-5 w-5" />, title: "Document Ingestion", description: "Accepts institutional documents in multiple formats. Documents are processed locally and never leave institutional custody.", meta: "MODE: AIR-GAPPED · LOCAL CUSTODY" },
             { icon: <Cpu className="h-5 w-5" />, title: "Content Extraction & NER", description: "Extracts text, performs Named Entity Recognition, and classifies content according to governance taxonomy.", meta: "PROCESSING: NLP · CLASSIFICATION · NER" },
-            { icon: <AlertTriangle className="h-5 w-5" />, title: "Omission Detection", description: "Identifies expected governance actions that are absent from the record — a unique GRGF capability that provides evidence for governance gaps.", meta: "CAPABILITY: OMISSION-AWARE · GAP DETECTION" },
+            { icon: <AlertTriangle className="h-5 w-5" />, title: "Omission Detection", description: "Identifies expected governance actions that are absent from the record — a unique GRGF™ capability that provides evidence for governance gaps.", meta: "CAPABILITY: OMISSION-AWARE · GAP DETECTION" },
             { icon: <GitBranch className="h-5 w-5" />, title: "Metadata Emission", description: "Emits only hashed metadata and audit events to System A. No document content crosses the air gap — preserving sovereignty and confidentiality.", meta: "OUTPUT: HASHES ONLY · NO CONTENT TRANSFER" },
           ].map((item) => (
             <InfoCard key={item.title} {...item} />

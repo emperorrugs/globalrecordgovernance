@@ -62,7 +62,7 @@ const Sustainability = () => (
         </div>
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <p className="text-caption text-muted-foreground leading-relaxed">
-            <strong className="text-foreground">Methodology note:</strong> Carbon estimates are based on the Shift Project's Lean ICT methodology and Website Carbon Calculator standards. GRGF's architecture deliberately avoids energy-intensive consensus mechanisms (proof-of-work/stake), reducing per-transaction energy costs by approximately 99.9% compared to blockchain-based governance solutions.
+            <strong className="text-foreground">Methodology note:</strong> Carbon estimates are based on the Shift Project's Lean ICT methodology and Website Carbon Calculator standards. GRGF™'s architecture deliberately avoids energy-intensive consensus mechanisms (proof-of-work/stake), reducing per-transaction energy costs by approximately 99.9% compared to blockchain-based governance solutions.
           </p>
         </div>
       </FadeIn>
@@ -97,7 +97,7 @@ const Sustainability = () => (
           <Leaf className="h-8 w-8 text-accent mx-auto mb-4" />
           <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Continuous Improvement</h2>
           <p className="text-body text-primary-foreground/60 mb-4">
-            The Global Record Governance Framework (GRGF) commits to annual sustainability reporting, progressive carbon reduction targets, and transparent disclosure of environmental impact metrics.
+            The Global Record Governance Framework (GRGF™) commits to annual sustainability reporting, progressive carbon reduction targets, and transparent disclosure of environmental impact metrics.
           </p>
           <p className="text-overline text-primary-foreground/30">Sustainability report published annually · Next report: Q4 2026</p>
         </div>

@@ -7,7 +7,7 @@ import { jsPDF } from "jspdf";
  */
 export async function exportElementToPDF(
   element: HTMLElement,
-  filename: string = "GRGF-Document"
+  filename: string = "GRGF™-Document"
 ): Promise<void> {
   try {
     // Temporarily expand the element for full capture

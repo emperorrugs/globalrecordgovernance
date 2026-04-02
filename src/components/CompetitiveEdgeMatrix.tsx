@@ -28,7 +28,7 @@ export function CompetitiveEdgeMatrix() {
           <thead>
             <tr className="border-b-2 border-accent/30">
               <th className="text-left py-4 px-4 font-serif font-semibold text-foreground">Capability</th>
-              <th className="text-center py-4 px-4 font-serif font-semibold text-accent">GRGF</th>
+              <th className="text-center py-4 px-4 font-serif font-semibold text-accent">GRGF™</th>
               <th className="text-center py-4 px-4 font-serif font-semibold text-muted-foreground/60">Traditional GovTech</th>
               <th className="text-center py-4 px-4 font-serif font-semibold text-muted-foreground/60">Other DPI Layers</th>
             </tr>

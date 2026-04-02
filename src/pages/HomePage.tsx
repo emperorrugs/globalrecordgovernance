@@ -27,10 +27,10 @@ const sectors = [
 ];
 
 const products = [
-  { title: "GRGF Core Engine", desc: "Capture, seal, and manage institutional evidence with deterministic authority binding.", icon: Database },
-  { title: "GRGF Verify", desc: "Public validation portal for verifying the integrity of sealed governance records.", icon: Search },
-  { title: "GRGF API", desc: "Developer-grade RESTful interface for integrating governance integrity.", icon: Zap },
-  { title: "GRGF Federation", desc: "Multi-jurisdiction interoperability layer for cross-border governance transparency.", icon: Network },
+  { title: "GRGF™ Core Engine", desc: "Capture, seal, and manage institutional evidence with deterministic authority binding.", icon: Database },
+  { title: "GRGF™ Verify", desc: "Public validation portal for verifying the integrity of sealed governance records.", icon: Search },
+  { title: "GRGF™ API", desc: "Developer-grade RESTful interface for integrating governance integrity.", icon: Zap },
+  { title: "GRGF™ Federation", desc: "Multi-jurisdiction interoperability layer for cross-border governance transparency.", icon: Network },
 ];
 
 const standards = [
@@ -70,7 +70,7 @@ export default function HomePage() {
                 Neutral. Verifiable. Permanent.
               </p>
               <p className="text-base text-primary-foreground/55 max-w-xl mb-10 leading-relaxed">
-                GRGF records institutional actions, decisions, and omissions into an immutable, cryptographic evidence layer — creating a system of record for reality.
+                GRGF™ records institutional actions, decisions, and omissions into an immutable, cryptographic evidence layer — creating a system of record for reality.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link to="/deploy" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent text-accent-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">
@@ -146,7 +146,7 @@ export default function HomePage() {
             <div className="max-w-3xl mx-auto text-center mb-12">
               <h2 className="text-heading-1 font-bold text-foreground mb-6">A New Category of Governance Infrastructure</h2>
               <p className="text-body-lg text-muted-foreground leading-relaxed">
-                GRGF introduces an infrastructure layer where governance actions are recorded, verified, and auditable at execution time — bridging the gap between institutional decision-making and verifiable truth.
+                GRGF™ introduces an infrastructure layer where governance actions are recorded, verified, and auditable at execution time — bridging the gap between institutional decision-making and verifiable truth.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -264,7 +264,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="text-center mb-14">
               <div className="carbon-tag mx-auto mb-4 w-fit">GOVERNMENT USE CASES</div>
-              <h2 className="text-heading-1 font-bold text-foreground mb-4">Before GRGF vs. After GRGF</h2>
+              <h2 className="text-heading-1 font-bold text-foreground mb-4">Before GRGF™ vs. After GRGF™</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {[
@@ -395,7 +395,7 @@ export default function HomePage() {
       <section className="py-24 lg:py-28 border-t border-border">
         <div className="max-w-[800px] mx-auto px-6 lg:px-10 text-center">
           <FadeIn>
-            <h2 className="text-heading-1 font-bold text-foreground mb-4">Deploy GRGF in Your Institution</h2>
+            <h2 className="text-heading-1 font-bold text-foreground mb-4">Deploy GRGF™ in Your Institution</h2>
             <p className="text-body-lg text-muted-foreground mb-8">Join the institutions building verifiable governance infrastructure.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground text-sm font-semibold rounded-md hover:opacity-90 transition-all">

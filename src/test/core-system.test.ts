@@ -3,7 +3,7 @@ import { generateHash, compareHash, verifyPayloadIntegrity } from '@/core/crypto
 import { buildRecordPayload, buildManifest } from '@/core/crypto/payload';
 import { validateChain, generateAnchorBatchId, truncateHash, type ChainLink } from '@/core/chain/chainService';
 
-describe('GRGF Core Crypto — SHA-256', () => {
+describe('GRGF™ Core Crypto — SHA-256', () => {
   it('produces deterministic output for identical inputs', async () => {
     const hash1 = await generateHash('test payload');
     const hash2 = await generateHash('test payload');
@@ -48,7 +48,7 @@ describe('GRGF Core Crypto — SHA-256', () => {
   });
 });
 
-describe('GRGF Core Crypto — Canonical Payload', () => {
+describe('GRGF™ Core Crypto — Canonical Payload', () => {
   const baseRecord = {
     id: 'rec-001',
     title: 'Test Record',
@@ -89,13 +89,13 @@ describe('GRGF Core Crypto — Canonical Payload', () => {
       sealed_at: '2026-03-30T15:00:00Z',
     });
     expect(manifest.version).toBe('1.0');
-    expect(manifest.framework).toBe('GRGF');
+    expect(manifest.framework).toBe('GRGF™');
     expect(manifest.record_id).toBe('rec-001');
     expect((manifest.integrity as Record<string, unknown>).algorithm).toBe('SHA-256');
   });
 });
 
-describe('GRGF Chain Validation', () => {
+describe('GRGF™ Chain Validation', () => {
   it('validates an empty chain', () => {
     const result = validateChain([]);
     expect(result.valid).toBe(true);
@@ -137,7 +137,7 @@ describe('GRGF Chain Validation', () => {
 
   it('generateAnchorBatchId produces valid format', () => {
     const id = generateAnchorBatchId();
-    expect(id).toMatch(/^GRGF-ANCHOR-[A-Z0-9]{8}$/);
+    expect(id).toMatch(/^GRGF™-ANCHOR-[A-Z0-9]{8}$/);
   });
 
   it('truncateHash handles null', () => {

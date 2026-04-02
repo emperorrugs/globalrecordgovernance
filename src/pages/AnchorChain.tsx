@@ -50,7 +50,7 @@ const AnchorChain = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="GRGF Anchor Chain™ — Core Governance Verification System"
+        title="GRGF™ Anchor Chain™ — Core Governance Verification System"
         description="The complete six-layer deterministic architecture with 126 sovereign applications across 12 sectors. Real-time cryptographic verification of institutional governance records."
       />
 
@@ -73,7 +73,7 @@ const AnchorChain = () => {
             </div>
           </div>
           <h1 className="institutional-heading text-3xl md:text-5xl font-semibold leading-tight">
-            GRGF Anchor Chain™
+            GRGF™ Anchor Chain™
           </h1>
           <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-3xl">
             The world's first sovereign-grade governance verification system. {totalApplications} applications across 12 sectors, 
@@ -291,7 +291,7 @@ const AnchorChain = () => {
               <FadeIn>
                 <h2 className="font-serif text-xl font-semibold mb-2">{totalApplications} Sovereign Applications</h2>
                 <p className="text-sm text-muted-foreground mb-8">
-                  Click any module to expand and explore all applications with problem definitions, GRGF mechanisms, quantified impact, and economic value.
+                  Click any module to expand and explore all applications with problem definitions, GRGF™ mechanisms, quantified impact, and economic value.
                 </p>
               </FadeIn>
               <div className="space-y-4">
@@ -400,7 +400,7 @@ const AnchorChain = () => {
       {/* Footer */}
       <div className="border-t border-border px-8 py-6 md:px-12">
         <p className="text-[10px] text-muted-foreground/60 italic">
-          GRGF Anchor Chain™ — Core Governance Verification System · Invented and Owned by Tarek Wahid · Canadian Patent No. CA 3,300,102
+          GRGF™ Anchor Chain™ — Core Governance Verification System · Invented and Owned by Tarek Wahid · Canadian Patent No. CA 3,300,102
         </p>
         <p className="text-[9px] text-muted-foreground/40 mt-1">
           SIMULATION ONLY — No live governance records are created, stored, or modified through this interface.

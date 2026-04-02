@@ -13,7 +13,7 @@ A governance record is a structured, immutable representation of an institutiona
 
 ## Event Classes
 
-GRGF recognizes multiple classes of governance events:
+GRGF™ recognizes multiple classes of governance events:
 
 - **Decisions taken** — formal approvals, denials, policy changes
 - **Actions executed** — procurement awards, license issuances, regulatory enforcement
@@ -34,13 +34,13 @@ Each event is normalized into five contextual dimensions:
 
 ## Fundamental Principle
 
-**GRGF does not assess correctness or legality — only factual existence.**
+**GRGF™ does not assess correctness or legality — only factual existence.**
 
 The framework records *that* something happened or *that* something did not happen. Interpretation, judgment, and legal consequence remain the domain of human institutions and judicial processes.
 
 ## Record Properties
 
-Every GRGF governance record exhibits:
+Every GRGF™ governance record exhibits:
 
 - **Immutability** — once created, records cannot be modified or deleted
 - **Verifiability** — any authorized party can independently confirm record existence

@@ -29,7 +29,7 @@ const OperationalModel = () => (
     {/* Funding Structures */}
     <Section title="Funding Structures" className="border-t border-border">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF supports multiple sustainable funding models, ensuring no single revenue dependency can compromise governance integrity.
+        GRGF™ supports multiple sustainable funding models, ensuring no single revenue dependency can compromise governance integrity.
       </p>
       <div className="space-y-3">
         {[
@@ -50,7 +50,7 @@ const OperationalModel = () => (
     {/* Lifecycle Management */}
     <Section title="Lifecycle Management" className="border-t border-border">
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        GRGF follows a structured lifecycle model aligned with OECD guidance on sustainable DPI investment.
+        GRGF™ follows a structured lifecycle model aligned with OECD guidance on sustainable DPI investment.
       </p>
       <div className="space-y-4">
         {[

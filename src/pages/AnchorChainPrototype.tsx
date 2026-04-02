@@ -163,7 +163,7 @@ const AnchorChainPrototype = () => {
   const generateCertificate = (record: GovernanceRecord) => {
     const cert = `
 ╔══════════════════════════════════════════════════════════════╗
-║              GRGF ANCHOR CHAIN™ — PROOF CERTIFICATE         ║
+║              GRGF™ ANCHOR CHAIN™ — PROOF CERTIFICATE         ║
 ║              Governance Record Verification Report           ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
@@ -193,11 +193,11 @@ const AnchorChainPrototype = () => {
 ║  Authority Binding:   ✓ CONFIRMED                            ║
 ║  Tamper Detection:    ✓ NO ANOMALIES                         ║
 ║                                                              ║
-║  Certificate ID: GRGF-CERT-${record.id.slice(0, 8).toUpperCase().padEnd(30)}║
+║  Certificate ID: GRGF™-CERT-${record.id.slice(0, 8).toUpperCase().padEnd(30)}║
 ║  Issued: ${new Date().toISOString().padEnd(52)}║
 ║                                                              ║
 ║  Canadian Patent No. CA 3,300,102                            ║
-║  © ${new Date().getFullYear()} GRGF — Global Record Governance Framework       ║
+║  © ${new Date().getFullYear()} GRGF™ — Global Record Governance Framework       ║
 ╚══════════════════════════════════════════════════════════════╝`;
     return cert;
   };
@@ -208,7 +208,7 @@ const AnchorChainPrototype = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `GRGF-CERT-${record.hash.slice(0, 12)}.txt`;
+    a.download = `GRGF™-CERT-${record.hash.slice(0, 12)}.txt`;
     a.click();
     URL.revokeObjectURL(url);
     toast({ title: "Certificate Downloaded", description: "Proof certificate saved." });
@@ -223,7 +223,7 @@ const AnchorChainPrototype = () => {
     <div className="animate-fade-in">
       <SEOHead
         title="Anchor Chain™ Live Prototype — Record → Hash → Verify → Certify"
-        description="Functional demonstration of the GRGF Anchor Chain: submit governance records, generate SHA-256 hashes, verify integrity, and download proof certificates."
+        description="Functional demonstration of the GRGF™ Anchor Chain: submit governance records, generate SHA-256 hashes, verify integrity, and download proof certificates."
       />
 
       {/* Hero */}

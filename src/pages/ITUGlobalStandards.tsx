@@ -12,15 +12,15 @@ const mappingRows = [
   {
     standard: "X.509",
     concept: "Public-key & attribute certificate frameworks; PKI/PMI foundations for certificates, CRLs, and authentication.",
-    capability: "GRGF Verification API can accept certificate-based signers; certificate chain evidence stored as append-only records.",
+    capability: "GRGF™ Verification API can accept certificate-based signers; certificate chain evidence stored as append-only records.",
     artifacts: "Certificate fingerprints, signature verification logs, trust-store policy record, revocation status record (if applicable).",
     status: "Planned",
-    notes: "GRGF does not mandate X.509 but supports integration where institutional systems use certificate-based signatures.",
+    notes: "GRGF™ does not mandate X.509 but supports integration where institutional systems use certificate-based signatures.",
   },
   {
     standard: "X.1252",
     concept: "Baseline identity management terms and definitions for consistent vocabulary across systems.",
-    capability: "GRGF evidence object schema uses consistent identity terms (actor_role, institution_id) mapped to X.1252 definitions.",
+    capability: "GRGF™ evidence object schema uses consistent identity terms (actor_role, institution_id) mapped to X.1252 definitions.",
     artifacts: "Identity vocabulary annex, evidence schema glossary, role-definition registry.",
     status: "Prototype",
     notes: "Vocabulary alignment documented; formal cross-reference annex in preparation.",
@@ -28,7 +28,7 @@ const mappingRows = [
   {
     standard: "X.1500",
     concept: "Overview of cybersecurity information exchange techniques and structured data formats.",
-    capability: "GRGF security incident evidence package can export structured cyber event metadata for institutional exchange.",
+    capability: "GRGF™ security incident evidence package can export structured cyber event metadata for institutional exchange.",
     artifacts: "Incident evidence template, export schema (JSON), cybersecurity event metadata record.",
     status: "Planned",
     notes: "High-level structural alignment; detailed implementation depends on institutional deployment context.",
@@ -44,24 +44,24 @@ const statusColor = (s: string) => {
 
 const faqs = [
   {
-    q: "Does this mean ITU endorses GRGF?",
-    a: "No. GRGF is an independent framework. References to ITU-T Recommendations are for interoperability mapping only. GRGF does not claim ITU endorsement, certification, or affiliation.",
+    q: "Does this mean ITU endorses GRGF™?",
+    a: "No. GRGF™ is an independent framework. References to ITU-T Recommendations are for interoperability mapping only. GRGF™ does not claim ITU endorsement, certification, or affiliation.",
   },
   {
     q: "Why reference X.509?",
-    a: "X.509 defines public-key certificate frameworks that are globally used for identity-to-key binding and secure protocols (TLS/SSL). GRGF supports optional integration with certificate-based verification where institutional systems already use PKI.",
+    a: "X.509 defines public-key certificate frameworks that are globally used for identity-to-key binding and secure protocols (TLS/SSL). GRGF™ supports optional integration with certificate-based verification where institutional systems already use PKI.",
   },
   {
     q: "What is X.1252 used for in this context?",
-    a: "X.1252 provides baseline identity management terminology. GRGF maps its evidence schema field names (actor_role, institution_id) to X.1252 definitions to ensure vocabulary consistency across governance systems.",
+    a: "X.1252 provides baseline identity management terminology. GRGF™ maps its evidence schema field names (actor_role, institution_id) to X.1252 definitions to ensure vocabulary consistency across governance systems.",
   },
   {
     q: "What is X.1500 used for?",
-    a: "X.1500 provides an overview of cybersecurity information exchange. GRGF references it as a structural guide for exporting security incident evidence in interoperable formats.",
+    a: "X.1500 provides an overview of cybersecurity information exchange. GRGF™ references it as a structural guide for exporting security incident evidence in interoperable formats.",
   },
   {
     q: "Is personal data required for ITU alignment?",
-    a: "No. GRGF follows data minimization principles. Evidence objects store institutional roles and hashed metadata — not personal identifiers. Sovereignty and privacy by design are enforced at the architecture level.",
+    a: "No. GRGF™ follows data minimization principles. Evidence objects store institutional roles and hashed metadata — not personal identifiers. Sovereignty and privacy by design are enforced at the architecture level.",
   },
   {
     q: "What evidence can an auditor verify?",
@@ -86,7 +86,7 @@ const ITUGlobalStandards = () => (
           ITU Global Standards Alignment Hub
         </h1>
         <p className="text-body-lg text-primary-foreground/60 max-w-3xl">
-          Mapping GRGF to ITU-T identity, certificate, and cybersecurity information-exchange recommendations
+          Mapping GRGF™ to ITU-T identity, certificate, and cybersecurity information-exchange recommendations
         </p>
       </div>
     </header>
@@ -96,7 +96,7 @@ const ITUGlobalStandards = () => (
       <FadeIn>
         <div className="max-w-3xl">
           <p className="text-body text-muted-foreground leading-relaxed mb-4">
-            GRGF is designed to support interoperable, verifiable institutional trust layers that can integrate with globally adopted telecommunications and security standards. This page documents how GRGF maps to selected ITU-T Recommendations relevant to identity terminology, certificate frameworks, and cybersecurity information exchange.
+            GRGF™ is designed to support interoperable, verifiable institutional trust layers that can integrate with globally adopted telecommunications and security standards. This page documents how GRGF™ maps to selected ITU-T Recommendations relevant to identity terminology, certificate frameworks, and cybersecurity information exchange.
           </p>
           <p className="text-body text-muted-foreground leading-relaxed">
             <span className="font-semibold text-foreground">Important:</span> This is a technical mapping document for review. It does not imply ITU endorsement.
@@ -115,7 +115,7 @@ const ITUGlobalStandards = () => (
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <ul className="space-y-3">
             {[
-              "GRGF is an independent framework and does not claim endorsement by ITU.",
+              "GRGF™ is an independent framework and does not claim endorsement by ITU.",
               "References to ITU-T Recommendations are for interoperability mapping and technical alignment support.",
               '"Alignment" means "designed to support compatibility," not "certified by ITU."',
               "Implementation status is stated per item: Planned, Prototype, Implemented, or Verified.",
@@ -229,9 +229,9 @@ const ITUGlobalStandards = () => (
     <Sec className="border-b border-border">
       <FadeIn>
         <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Core Deliverable</p>
-        <h2 className="institutional-heading text-heading-1 font-semibold mb-4">Mapping Table — ITU-T → GRGF Capabilities → Evidence Artifacts</h2>
+        <h2 className="institutional-heading text-heading-1 font-semibold mb-4">Mapping Table — ITU-T → GRGF™ Capabilities → Evidence Artifacts</h2>
         <p className="text-sm text-muted-foreground mb-8 max-w-3xl">
-          Each row maps an ITU-T Recommendation to specific GRGF capabilities, the evidence artifacts produced, and the current implementation status. Statuses are disclosed honestly.
+          Each row maps an ITU-T Recommendation to specific GRGF™ capabilities, the evidence artifacts produced, and the current implementation status. Statuses are disclosed honestly.
         </p>
         <div className="governance-card overflow-x-auto">
           <table className="w-full text-xs" role="table">
@@ -239,7 +239,7 @@ const ITUGlobalStandards = () => (
               <tr className="border-b border-border bg-muted/50">
                 <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium whitespace-nowrap">ITU-T Rec.</th>
                 <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium">Core Concept</th>
-                <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium">GRGF Capability</th>
+                <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium">GRGF™ Capability</th>
                 <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium">Evidence Artifacts</th>
                 <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium whitespace-nowrap">Status</th>
                 <th className="text-left py-3 px-3 font-mono text-foreground/70 font-medium">Notes / Limits</th>
@@ -272,7 +272,7 @@ const ITUGlobalStandards = () => (
         <p className="text-overline font-mono text-accent uppercase tracking-widest mb-4">Technical Detail</p>
         <h2 className="institutional-heading text-heading-1 font-semibold mb-4">Certificate-Aware Verification Pattern</h2>
         <p className="text-sm text-muted-foreground mb-6 max-w-3xl">
-          GRGF does not mandate X.509, but supports optional integration where institutional systems use certificate-based signatures. The pattern below shows how certificate context flows through the evidence pipeline.
+          GRGF™ does not mandate X.509, but supports optional integration where institutional systems use certificate-based signatures. The pattern below shows how certificate context flows through the evidence pipeline.
         </p>
 
         {/* Flow Diagram */}
@@ -315,7 +315,7 @@ const ITUGlobalStandards = () => (
             <h3 className="font-serif text-sm font-semibold mb-2">When X.509 Is Not Used</h3>
             <ul className="space-y-1.5 text-xs text-muted-foreground">
               {[
-                "GRGF still provides SHA-256/512 hash integrity",
+                "GRGF™ still provides SHA-256/512 hash integrity",
                 "Actor role and institution_id provide governance context",
                 "Merkle-based batch proofs ensure chain integrity",
                 "Verification API operates on hash proofs alone",
@@ -339,7 +339,7 @@ const ITUGlobalStandards = () => (
         <div className="grid gap-4 md:grid-cols-2 max-w-3xl">
           {[
             {
-              title: "GRGF–ITU Mapping Note v1.0",
+              title: "GRGF™–ITU Mapping Note v1.0",
               desc: "Complete mapping table, scope and non-endorsement disclaimer, implementation status, evidence artifacts, and X.1252 vocabulary annex.",
               status: "Draft",
               hash: "e4a7c1d9f2b8e5a3c7d1f9b4e8a2c6d0f4b8e2a6c0d4f8b2e6a0c4d8f2b6a0",

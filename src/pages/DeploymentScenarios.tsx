@@ -5,10 +5,10 @@ const scenarios = [
   {
     id: "DS-01",
     title: "Procurement Approval Verification",
-    actors: ["Procurement Officer", "Contracting Authority", "Audit Committee", "GRGF Policy Engine"],
+    actors: ["Procurement Officer", "Contracting Authority", "Audit Committee", "GRGF™ Policy Engine"],
     workflow: [
       "Procurement officer initiates contract award action via departmental system",
-      "GRGF connector captures event with actor, scope, and legal reference",
+      "GRGF™ connector captures event with actor, scope, and legal reference",
       "Policy engine evaluates against encoded procurement rules (threshold, authority, dual sign-off)",
       "Decision recorded: ALLOW or DENY with machine-readable and human-readable justification",
       "Governance record sealed with SHA-256 hash and appended to evidence backbone",
@@ -20,10 +20,10 @@ const scenarios = [
   {
     id: "DS-02",
     title: "Cross-Ministry Policy Authorization",
-    actors: ["Policy Originator (Ministry A)", "Reviewing Authority (Ministry B)", "Central Policy Office", "GRGF Policy Engine"],
+    actors: ["Policy Originator (Ministry A)", "Reviewing Authority (Ministry B)", "Central Policy Office", "GRGF™ Policy Engine"],
     workflow: [
       "Ministry A submits policy action requiring cross-ministry authorization",
-      "GRGF captures submission event and routes to encoded authorization workflow",
+      "GRGF™ captures submission event and routes to encoded authorization workflow",
       "Ministry B review action captured with decision and justification",
       "Central Policy Office final authorization recorded",
       "Complete authorization chain sealed as single governance evidence package",
@@ -35,7 +35,7 @@ const scenarios = [
   {
     id: "DS-03",
     title: "Regulatory Compliance Audit Trail",
-    actors: ["Regulated Entity", "Regulatory Authority", "Independent Auditor", "GRGF Evidence Backbone"],
+    actors: ["Regulated Entity", "Regulatory Authority", "Independent Auditor", "GRGF™ Evidence Backbone"],
     workflow: [
       "Regulated entity actions captured through source system connectors",
       "Each action evaluated against encoded compliance rules",
@@ -50,7 +50,7 @@ const scenarios = [
   {
     id: "DS-04",
     title: "Social Benefit Eligibility Validation",
-    actors: ["Applicant (via agency)", "Eligibility Officer", "Review Authority", "GRGF Policy Engine"],
+    actors: ["Applicant (via agency)", "Eligibility Officer", "Review Authority", "GRGF™ Policy Engine"],
     workflow: [
       "Eligibility determination action captured (pseudonymized applicant reference)",
       "Policy engine evaluates against encoded eligibility criteria",
@@ -65,12 +65,12 @@ const scenarios = [
   {
     id: "DS-05",
     title: "Cross-Border Institutional Recognition",
-    actors: ["Issuing Authority (Country A)", "Verifying Authority (Country B)", "Federation Protocol", "GRGF Verification API"],
+    actors: ["Issuing Authority (Country A)", "Verifying Authority (Country B)", "Federation Protocol", "GRGF™ Verification API"],
     workflow: [
       "Country A issues governance credential (e.g., professional license, regulatory clearance)",
-      "Credential recorded and sealed in Country A's national GRGF node",
+      "Credential recorded and sealed in Country A's national GRGF™ node",
       "Country B requests verification via federation protocol",
-      "GRGF Verification API confirms credential integrity and issuing authority",
+      "GRGF™ Verification API confirms credential integrity and issuing authority",
       "Country B receives verified credential status without accessing Country A's raw records",
     ],
     record: "Federated verification request, credential hash, issuing authority attestation, verification result",
@@ -83,7 +83,7 @@ const DeploymentScenarios = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="National Deployment Scenarios"
-      subtitle="Structured case studies demonstrating GRGF governance record capabilities across institutional contexts."
+      subtitle="Structured case studies demonstrating GRGF™ governance record capabilities across institutional contexts."
     />
 
     {scenarios.map((s) => (

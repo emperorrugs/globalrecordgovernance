@@ -23,7 +23,7 @@ export default function PublicSectors() {
         <p className="text-overline font-semibold text-primary tracking-widest uppercase mb-4">Sectors</p>
         <h1 className="text-display font-bold text-foreground mb-4">Governance Across Every Sector</h1>
         <p className="text-body-lg text-muted-foreground leading-relaxed">
-          GRGF provides a unified governance architecture that adapts to the specific requirements
+          GRGF™ provides a unified governance architecture that adapts to the specific requirements
           of each sector while maintaining consistent integrity, verification, and audit standards.
         </p>
       </div>

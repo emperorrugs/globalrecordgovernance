@@ -1,5 +1,5 @@
 /**
- * GRGF Core Cryptographic Module
+ * GRGF™ Core Cryptographic Module
  * Deterministic SHA-256 hashing for governance record integrity.
  * No randomness. No interpretation. Pure deterministic output.
  */

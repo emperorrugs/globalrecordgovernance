@@ -15,10 +15,10 @@ const levels = [
     tag: "PUBLIC",
     tagClass: "text-success",
     documents: [
-      "GRGF Public Overview",
+      "GRGF™ Public Overview",
       "Executive Summary",
       "Public Use Case Narratives",
-      "GRGF FAQ",
+      "GRGF™ FAQ",
       "Public Value & ROI Summary",
     ],
   },
@@ -30,7 +30,7 @@ const levels = [
     tag: "APPROVAL",
     tagClass: "text-accent",
     documents: [
-      "GRGF Master Binder (Full Framework)",
+      "GRGF™ Master Binder (Full Framework)",
       "System Architecture & Catalog",
       "Data Flow Architecture",
       "Threat Model (STRIDE Analysis)",
@@ -194,7 +194,7 @@ const ControlledAccess = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Institutional Document Access — Controlled Distribution"
-        subtitle="Access to GRGF framework documentation is governed by the Controlled Distribution Protocol (CRP). All requests are subject to institutional verification and classification-level review."
+        subtitle="Access to GRGF™ framework documentation is governed by the Controlled Distribution Protocol (CRP). All requests are subject to institutional verification and classification-level review."
       />
 
       {/* Classification Levels with Document Lists */}
@@ -408,7 +408,7 @@ const ControlledAccess = () => {
                     <input id="crp" type="checkbox" checked={acknowledged} onChange={e => setAcknowledged(e.target.checked)}
                       className="mt-1 shrink-0" required />
                     <label htmlFor="crp" className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
-                      I acknowledge the GRGF Controlled Distribution Protocol (CRP) and agree not to publicly redistribute restricted artifacts. 
+                      I acknowledge the GRGF™ Controlled Distribution Protocol (CRP) and agree not to publicly redistribute restricted artifacts. 
                       I confirm that access is sought for legitimate institutional evaluation purposes only.
                     </label>
                   </div>
@@ -451,7 +451,7 @@ const ControlledAccess = () => {
             { step: "1", title: "Email Verification", desc: "A verification link is sent to the institutional email address provided. Personal email addresses (Gmail, Yahoo, etc.) are not accepted for Level 3+ access." },
             { step: "2", title: "Institutional Intake Review", desc: "Validation of identity, organizational affiliation, jurisdictional context, and stated evaluation purpose against CRP requirements." },
             { step: "3", title: "Classification Compliance Check", desc: "Requested materials are assessed against the classification level. Level 3+ requests trigger NDA execution workflow." },
-            { step: "4", title: "NDA Execution (if required)", desc: "For Level 3 and Level 4 access, a mutual Non-Disclosure Agreement is executed between GRGF and the requesting institution." },
+            { step: "4", title: "NDA Execution (if required)", desc: "For Level 3 and Level 4 access, a mutual Non-Disclosure Agreement is executed between GRGF™ and the requesting institution." },
             { step: "5", title: "Controlled Distribution", desc: "Approved reviewers receive time-limited access links, evaluation instructions, and document integrity verification hashes (SHA-256)." },
           ].map((s, i, arr) => (
             <div key={s.step}>
@@ -498,7 +498,7 @@ const ControlledAccess = () => {
             <div>
               <p className="text-sm text-foreground font-medium mb-2">No public signups. No open registration. No self-service access.</p>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                GRGF operates under a controlled distribution model aligned with international best practices for sovereign-grade infrastructure documentation. 
+                GRGF™ operates under a controlled distribution model aligned with international best practices for sovereign-grade infrastructure documentation. 
                 Access is granted exclusively to verified institutional representatives with documented evaluation purposes. 
                 This ensures the integrity and appropriate use of governance infrastructure documentation.
               </p>

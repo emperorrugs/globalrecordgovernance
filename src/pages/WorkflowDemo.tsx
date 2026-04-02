@@ -55,7 +55,7 @@ const WorkflowDemo = () => {
         subtitle={
           isPlain
             ? "Follow a governance record through its full lifecycle — from creation to permanent archive."
-            : "Visual demonstration of the GRGF record lifecycle: Draft → Review → Approved → Closed, with role assignments and governance rules."
+            : "Visual demonstration of the GRGF™ record lifecycle: Draft → Review → Approved → Closed, with role assignments and governance rules."
         }
       />
 

@@ -6,10 +6,10 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const MissingTrustLayer = () => (
   <div className="animate-fade-in">
-    <SEOHead title="The Missing Trust Layer in DPI — GRGF" description="Current DPI focuses on identity, payments, and data exchange but ignores governance integrity. Analysis of the structural gap and GRGF's Layer 3 solution." />
+    <SEOHead title="The Missing Trust Layer in DPI — GRGF™" description="Current DPI focuses on identity, payments, and data exchange but ignores governance integrity. Analysis of the structural gap and GRGF™'s Layer 3 solution." />
     <PageHeader title="The Missing Trust Layer in Digital Public Infrastructure" subtitle="Architecture Analysis · January 2026">
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Missing-Trust-Layer" label="Export PDF" />
+        <PDFExportButton filename="GRGF™-Missing-Trust-Layer" label="Export PDF" />
         <Link to="/insights" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-accent transition-colors"><ArrowLeft className="h-3 w-3" /> All Insights</Link>
       </div>
     </PageHeader>
@@ -56,8 +56,8 @@ const MissingTrustLayer = () => (
         </div>
 
         <div>
-          <h2 className="font-serif text-xl font-semibold text-foreground mb-3">GRGF as Layer 3</h2>
-          <p>The Global Record Governance Framework is architected specifically to fill this gap. Positioned as the Governance Integrity Registry Layer within the national DPI stack, GRGF provides the structural trust backbone that existing DPI components lack.</p>
+          <h2 className="font-serif text-xl font-semibold text-foreground mb-3">GRGF™ as Layer 3</h2>
+          <p>The Global Record Governance Framework is architected specifically to fill this gap. Positioned as the Governance Integrity Registry Layer within the national DPI stack, GRGF™ provides the structural trust backbone that existing DPI components lack.</p>
           <p className="mt-3">It does not compete with identity systems, payment rails, or data exchange platforms. It <em>governs the governance</em> — ensuring that institutional decisions across all these systems are verifiable, immutable, and independently auditable.</p>
         </div>
 

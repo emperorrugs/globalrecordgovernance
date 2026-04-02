@@ -48,7 +48,7 @@ const documents: DocEntry[] = [
     id: "LIP-001", title: "Inventor Attribution (Tarek Wahid)", updated: "February 2026",
     content: (
       <>
-        <p>The Global Record Governance Framework (GRGF) was conceived, designed, and architected by <strong>Tarek Wahid</strong>.</p>
+        <p>The Global Record Governance Framework (GRGF™) was conceived, designed, and architected by <strong>Tarek Wahid</strong>.</p>
         <p>Inventorship refers to:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Conceptual architecture</li>
@@ -73,7 +73,7 @@ const documents: DocEntry[] = [
           <li>Verification and audit concepts</li>
           <li>Evidence Backbone design</li>
         </ul>
-        <p>GRGF may be licensed for public interest use under defined terms. Commercialization does not compromise governance neutrality.</p>
+        <p>GRGF™ may be licensed for public interest use under defined terms. Commercialization does not compromise governance neutrality.</p>
       </>
     ),
   },
@@ -81,7 +81,7 @@ const documents: DocEntry[] = [
     id: "LIP-003", title: "Originality & Non-Substitutability", updated: "February 2026",
     content: (
       <>
-        <p>GRGF introduces a novel category: <strong>governance record-of-record infrastructure</strong>.</p>
+        <p>GRGF™ introduces a novel category: <strong>governance record-of-record infrastructure</strong>.</p>
         <p>It is not a registry, workflow engine, or analytics system. It occupies a unique position in the governance technology landscape that has no direct equivalent.</p>
         <p className="font-medium text-foreground">This originality is documented and preserved as part of the intellectual property record.</p>
       </>
@@ -121,7 +121,7 @@ const documents: DocEntry[] = [
           <li>Institutional integrity</li>
           <li>Sovereign control</li>
         </ul>
-        <p>Institutions may reference, adopt, and align to GRGF under terms that preserve governance neutrality and inventor attribution.</p>
+        <p>Institutions may reference, adopt, and align to GRGF™ under terms that preserve governance neutrality and inventor attribution.</p>
       </>
     ),
   },
@@ -150,7 +150,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/SHA256_MANIFEST.txt",
     content: (
       <>
-        <p>Complete cryptographic manifest containing SHA-256 hashes for all 250+ documents in the GRGF archive.</p>
+        <p>Complete cryptographic manifest containing SHA-256 hashes for all 250+ documents in the GRGF™ archive.</p>
         <p className="font-medium text-foreground">Enables independent integrity verification of every document in the sealed archive.</p>
       </>
     ),
@@ -214,12 +214,12 @@ const ArchiveLegalIP = () => (
 
         <div className="mt-8 governance-card border-l-2 border-l-accent">
           <p className="text-sm text-foreground leading-relaxed">
-            Access to controlled documents requires formal institutional authorization. For access requests, please contact the GRGF governance office through official institutional channels.
+            Access to controlled documents requires formal institutional authorization. For access requests, please contact the GRGF™ governance office through official institutional channels.
           </p>
         </div>
       </div>
       <div className="max-w-5xl mt-8 text-[10px] font-mono text-muted-foreground/40 text-right">
-        GRGF DIGITAL ARCHIVE · LEGAL & IP SECTION · CONTROLLED
+        GRGF™ DIGITAL ARCHIVE · LEGAL & IP SECTION · CONTROLLED
       </div>
     </section>
   </div>

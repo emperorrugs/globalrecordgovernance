@@ -32,7 +32,7 @@ const STANDARDS = [
 const Developer = () => (
   <div className="animate-fade-in">
     <SEOHead
-      title="Developer & Integration Portal — GRGF"
+      title="Developer & Integration Portal — GRGF™"
       description="API documentation, SDK concepts, and integration patterns for governance infrastructure developers and system integrators."
     />
     <PageHeader
@@ -78,9 +78,9 @@ const Developer = () => (
           <h4 className="font-serif text-lg font-semibold mb-4">Record Verification Flow</h4>
           <pre className="bg-primary text-primary-foreground p-6 text-sm font-mono overflow-x-auto leading-relaxed rounded-sm">
 {`// 1. Initialize client
-const grgf = new GRGFClient({
+const grgf = new GRGF™Client({
   nodeUrl: "https://node.ca.grgf.gov",
-  apiKey: process.env.GRGF_API_KEY,
+  apiKey: process.env.GRGF™_API_KEY,
 });
 
 // 2. Submit governance event
