@@ -41,7 +41,7 @@ export function DPIAlignmentPanel() {
     <div className="space-y-8">
       <div>
         <h3 className="institutional-heading text-xl font-semibold mb-1">World Bank DPI Alignment Panel</h3>
-        <p className="text-xs text-muted-foreground">Structured mapping of GRGF capabilities to World Bank Digital Public Infrastructure principles.</p>
+        <p className="text-xs text-muted-foreground">Structured mapping of GRGF™ capabilities to World Bank Digital Public Infrastructure principles.</p>
       </div>
 
       <div className="overflow-x-auto">
@@ -49,7 +49,7 @@ export function DPIAlignmentPanel() {
           <thead>
             <tr className="border-b border-border">
               <th className="text-left py-3 px-4 font-mono text-muted-foreground w-1/5">DPI Principle</th>
-              <th className="text-left py-3 px-4 font-mono text-muted-foreground w-3/5">GRGF Structural Alignment</th>
+              <th className="text-left py-3 px-4 font-mono text-muted-foreground w-3/5">GRGF™ Structural Alignment</th>
               <th className="text-left py-3 px-4 font-mono text-muted-foreground w-1/5">Alignment</th>
             </tr>
           </thead>
@@ -75,7 +75,7 @@ export function DPIAlignmentPanel() {
 
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-xs text-muted-foreground leading-relaxed">
-          <span className="font-semibold text-foreground">Positioning.</span> GRGF addresses a gap in the current DPI stack: while digital ID, payments, and data exchange layers exist, no equivalent infrastructure exists for governance integrity — the verifiable recording of institutional actions and omissions.
+          <span className="font-semibold text-foreground">Positioning.</span> GRGF™ addresses a gap in the current DPI stack: while digital ID, payments, and data exchange layers exist, no equivalent infrastructure exists for governance integrity — the verifiable recording of institutional actions and omissions.
         </p>
       </div>
 

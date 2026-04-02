@@ -48,12 +48,12 @@ const risks = [
   },
   {
     id: "RISK-05", category: "System Dependence & Resilience", level: "Medium",
-    description: "Over-reliance on GRGF creating single points of failure in national governance processes, or inability to operate during system outages.",
+    description: "Over-reliance on GRGF™ creating single points of failure in national governance processes, or inability to operate during system outages.",
     mitigations: [
       "Offline fallback procedures — governance processes continue without system",
       "Multi-region deployment with active-active failover",
       "Exit and reversibility guaranteed at every deployment phase",
-      "No existing system replaced — GRGF operates as additional integrity layer",
+      "No existing system replaced — GRGF™ operates as additional integrity layer",
       "Disaster recovery: RTO < 4 hours, RPO < 1 hour",
     ],
   },

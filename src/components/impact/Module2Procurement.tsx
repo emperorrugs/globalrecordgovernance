@@ -40,7 +40,7 @@ export function Module2Procurement() {
         <InputField label="Annual Procurement Volume" value={volume} onChange={setVolume} prefix="$" />
         <SliderField label="Leakage Estimate (Low)" value={leakageLow} onChange={setLeakageLow} min={0.5} max={10} step={0.5} />
         <SliderField label="Leakage Estimate (High)" value={leakageHigh} onChange={setLeakageHigh} min={1} max={15} step={0.5} />
-        <SliderField label="Modeled GRGF Reduction" value={reduction} onChange={setReduction} min={5} max={50} step={1} />
+        <SliderField label="Modeled GRGF™ Reduction" value={reduction} onChange={setReduction} min={5} max={50} step={1} />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">

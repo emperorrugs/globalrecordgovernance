@@ -42,7 +42,7 @@ export default function GuestDemoLayout({ children }: { children: ReactNode }) {
         <div className="p-4 border-b border-border">
           <Link to="/demo/app" className="flex items-center gap-2">
             <Shield className="h-5 w-5 text-primary" />
-            <span className="text-sm font-semibold tracking-tight">GRGF Platform</span>
+            <span className="text-sm font-semibold tracking-tight">GRGF™ Platform</span>
           </Link>
           <p className="text-[10px] text-muted-foreground mt-1">Ministry of Public Administration</p>
         </div>
@@ -93,7 +93,7 @@ export default function GuestDemoLayout({ children }: { children: ReactNode }) {
           </Button>
           <Badge variant="outline" className="text-[10px] font-mono">SIMULATION ENVIRONMENT</Badge>
           <div className="flex-1" />
-          <p className="text-[10px] font-mono text-muted-foreground/50">GRGF v1.0 · Guest Demo</p>
+          <p className="text-[10px] font-mono text-muted-foreground/50">GRGF™ v1.0 · Guest Demo</p>
         </header>
         <main className="flex-1 p-6 overflow-auto">
           {children}

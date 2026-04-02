@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 
 const sections = [
-  { num: "01", title: "Executive Brief", desc: "2-page institutional summary of the GRGF value proposition, problem statement, and strategic positioning for committee-level review.", link: "/executive-summary" },
+  { num: "01", title: "Executive Brief", desc: "2-page institutional summary of the GRGF™ value proposition, problem statement, and strategic positioning for committee-level review.", link: "/executive-summary" },
   { num: "02", title: "Problem Statement", desc: "Structured analysis of the $2.6T annual governance loss, the absence of institutional memory protection, and the DPI trust gap.", link: "/the-problem" },
   { num: "03", title: "Architecture Overview", desc: "Six-layer deterministic architecture: Event Capture → Policy Engine → Evidence Backbone → Cryptographic Anchoring → Verification API → Federation.", link: "/architecture" },
   { num: "04", title: "Governance Framework", desc: "Charter principles, anti-capture clauses (AC-01–05), governance board structure, appeals mechanism, and accountability pathways.", link: "/governance-framework" },
@@ -22,7 +22,7 @@ const sections = [
 const SubmissionHub = () => (
   <div className="animate-fade-in">
     <SEOHead
-      title="International Submission Hub — GRGF"
+      title="International Submission Hub — GRGF™"
       description="Complete submission pack for OECD, World Bank, and UN review of the Global Record Governance Framework. Download consolidated institutional documentation."
     />
     <PageHeader
@@ -30,7 +30,7 @@ const SubmissionHub = () => (
       subtitle="Consolidated documentation for OECD, World Bank, and UN institutional review."
     >
       <div className="mt-4 flex gap-3">
-        <PDFExportButton filename="GRGF-Submission-Pack" label="Export Full Submission PDF" />
+        <PDFExportButton filename="GRGF™-Submission-Pack" label="Export Full Submission PDF" />
       </div>
     </PageHeader>
 
@@ -89,7 +89,7 @@ const SubmissionHub = () => (
     <Section title="Supporting Documents">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { icon: FileText, title: "Master Binder v1", desc: "Definitive institutional edition — 11 sections", file: "/documents/GRGF_Master_Binder_v1.pdf" },
+          { icon: FileText, title: "Master Binder v1", desc: "Definitive institutional edition — 11 sections", file: "/documents/GRGF™_Master_Binder_v1.pdf" },
           { icon: Shield, title: "Privacy Impact Assessment", desc: "Data minimization & residual risk analysis", file: "/documents/Privacy_Impact_Assessment.pdf" },
           { icon: Lock, title: "Data Protection Policy", desc: "RBAC/ABAC, HSM key management, ISO 27001", file: "/documents/Data_Protection_and_Access_Control_Policy.pdf" },
           { icon: BarChart3, title: "Valuation Scenarios", desc: "5-year conservative to aggressive EV model", file: "/documents/Valuation_5yr_Scenarios.pdf" },

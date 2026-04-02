@@ -108,7 +108,7 @@ export default function PublicVerifyPage() {
     if (!result) return;
     const receipt = [
       '═══════════════════════════════════════',
-      '  GRGF VERIFICATION RECEIPT',
+      '  GRGF™ VERIFICATION RECEIPT',
       '═══════════════════════════════════════',
       `  Status: ${result.valid ? 'VERIFIED ✓' : 'NOT SEALED'}`,
       `  Record: ${result.title}`,
@@ -119,7 +119,7 @@ export default function PublicVerifyPage() {
       `  Hash (SHA-256): ${result.current_hash || 'N/A'}`,
       `  Verified: ${result.verificationTimestamp}`,
       '═══════════════════════════════════════',
-      '  GRGF v1.0 · Append-Only Chain',
+      '  GRGF™ v1.0 · Append-Only Chain',
       '  Canadian Patent No. CA 3,300,102',
       '═══════════════════════════════════════',
     ].filter(Boolean).join('\n');
@@ -134,7 +134,7 @@ export default function PublicVerifyPage() {
         <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-sm font-semibold tracking-tight hover:opacity-80 transition-opacity">
             <Shield className="h-5 w-5 text-primary" />
-            <span>GRGF</span>
+            <span>GRGF™</span>
           </Link>
           <div className="flex items-center gap-2">
             <Badge variant="outline" className="text-[10px] font-mono tracking-wider">PUBLIC VERIFICATION PORTAL</Badge>
@@ -151,7 +151,7 @@ export default function PublicVerifyPage() {
           </div>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">Independent Record Verification</h1>
           <p className="text-sm text-muted-foreground mt-3 max-w-lg mx-auto leading-relaxed">
-            Verify the integrity, provenance, and current status of any publicly verifiable GRGF governance record — without requiring system access or authentication.
+            Verify the integrity, provenance, and current status of any publicly verifiable GRGF™ governance record — without requiring system access or authentication.
           </p>
           <div className="flex items-center justify-center gap-4 mt-4 text-[10px] text-muted-foreground/60">
             <span className="flex items-center gap-1"><Lock className="h-3 w-3" /> No Login Required</span>
@@ -331,7 +331,7 @@ export default function PublicVerifyPage() {
         <footer className="mt-16 text-center space-y-4 pb-8">
           <div className="inline-flex items-center gap-2 text-xs text-muted-foreground bg-muted/30 px-5 py-2.5 rounded-full">
             <Shield className="h-3.5 w-3.5" />
-            GRGF does not interpret reality. It records it — immutably.
+            GRGF™ does not interpret reality. It records it — immutably.
           </div>
           <p className="text-[10px] text-muted-foreground/50 max-w-md mx-auto leading-relaxed">
             Global Record Governance Framework · Public Verification Portal · 

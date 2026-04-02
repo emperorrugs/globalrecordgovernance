@@ -14,7 +14,7 @@ export function InstitutionalFooter() {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground text-xs font-bold">G</span>
               </div>
-              <h4 className="text-sm font-semibold text-foreground">GRGF</h4>
+              <h4 className="text-sm font-semibold text-foreground">GRGF™</h4>
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed">
               {t("footer.tagline")}
@@ -62,7 +62,7 @@ export function InstitutionalFooter() {
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground">
-            GRGF · Governance Integrity Infrastructure
+            GRGF™ · Governance Integrity Infrastructure
           </p>
           <div className="flex items-center gap-4 flex-wrap">
             {[

@@ -35,7 +35,7 @@ const Procurement = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Procurement Readiness Checklist — GRGF"
+        title="Procurement Readiness Checklist — GRGF™"
         description="Interactive procurement readiness assessment for DPI evaluation. Check open standards, modularity, vendor neutrality, and data portability compliance."
       />
       <PageHeader

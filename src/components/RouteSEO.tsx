@@ -2,29 +2,29 @@ import { useLocation } from "react-router-dom";
 import { SEOHead } from "./SEOHead";
 
 const seoMap: Record<string, { title: string; description: string }> = {
-  "/": { title: "GRGF — Global Record Governance Framework | Digital Public Infrastructure Standards Authority", description: "Independent global framework for Digital Public Infrastructure governance, validation, and institutional recognition." },
-  "/about": { title: "About GRGF", description: "Why record governance matters and what the Global Record Governance Framework is designed to solve." },
+  "/": { title: "GRGF™ — Global Record Governance Framework | Digital Public Infrastructure Standards Authority", description: "Independent global framework for Digital Public Infrastructure governance, validation, and institutional recognition." },
+  "/about": { title: "About GRGF™", description: "Why record governance matters and what the Global Record Governance Framework is designed to solve." },
   "/architecture": { title: "System Architecture", description: "Three interdependent layers: Immutable Archive, Governance Operating System, and Digital Platform." },
   "/recognition": { title: "DPI Recognition Framework", description: "Structured, tiered accreditation pathway for institutions seeking verified governance integrity certification." },
   "/transparency": { title: "Transparency & Governance", description: "Public accountability documentation, governance charter, and institutional transparency commitments." },
   "/membership": { title: "Membership & Advisory", description: "Institutional membership tiers, advisory services, and strategic partnership engagement pathways." },
   "/contact": { title: "Contact", description: "Reach the Global Record Governance Framework for institutional inquiries and partnership discussions." },
-  "/oecd-alignment": { title: "OECD Institutional Alignment", description: "How GRGF aligns with OECD Digital Public Infrastructure standards and multilateral governance frameworks." },
-  "/ethics": { title: "Governance Ethics", description: "Anti-capture clauses, risk controls, and the institutional neutrality framework governing GRGF operations." },
+  "/oecd-alignment": { title: "OECD Institutional Alignment", description: "How GRGF™ aligns with OECD Digital Public Infrastructure standards and multilateral governance frameworks." },
+  "/ethics": { title: "Governance Ethics", description: "Anti-capture clauses, risk controls, and the institutional neutrality framework governing GRGF™ operations." },
   "/compliance": { title: "Standards Compliance", description: "Regulatory compliance documentation, audit methodologies, and governance integrity verification standards." },
   "/dpi-stack": { title: "DPI Stack Architecture", description: "Technical architecture of the six-layer Digital Public Infrastructure governance stack." },
   "/safeguards-trust": { title: "Safeguards & Trust", description: "Privacy-by-design, zero-trust security, and high-availability resilience architecture for governance integrity." },
   "/deployment-scenarios": { title: "Deployment Scenarios", description: "National and international deployment models for sovereign governance infrastructure implementation." },
-  "/academy": { title: "GRGF Academy", description: "Professional certification programs and governance integrity training for institutional practitioners." },
+  "/academy": { title: "GRGF™ Academy", description: "Professional certification programs and governance integrity training for institutional practitioners." },
   "/archive": { title: "Digital Archive", description: "Authoritative document archive with hash-verified integrity proofs for all governance framework materials." },
-  "/research": { title: "Research & Publications", description: "Academic publications, technical papers, and governance research from the GRGF standards body." },
+  "/research": { title: "Research & Publications", description: "Academic publications, technical papers, and governance research from the GRGF™ standards body." },
   "/partnerships": { title: "Global Partnerships", description: "Strategic partnership framework for multilateral collaboration and federation node participation." },
   "/controlled-access": { title: "Controlled Access", description: "Request governance assessment, submit recognition applications, or access restricted institutional materials." },
-  "/privacy-policy": { title: "Privacy Policy", description: "GRGF privacy policy covering data protection, GDPR compliance, and institutional privacy commitments." },
-  "/terms-of-service": { title: "Terms of Service", description: "Terms governing use of the GRGF digital platform and institutional governance services." },
-  "/sitemap": { title: "Site Map", description: "Complete navigation index of all GRGF platform pages and institutional resources." },
-  "/what-is-grgf": { title: "What Is GRGF?", description: "Introduction to the Global Record Governance Framework and its role in Digital Public Infrastructure." },
-  "/how-it-works": { title: "How It Works", description: "Step-by-step guide to how GRGF processes governance events and creates verifiable records." },
+  "/privacy-policy": { title: "Privacy Policy", description: "GRGF™ privacy policy covering data protection, GDPR compliance, and institutional privacy commitments." },
+  "/terms-of-service": { title: "Terms of Service", description: "Terms governing use of the GRGF™ digital platform and institutional governance services." },
+  "/sitemap": { title: "Site Map", description: "Complete navigation index of all GRGF™ platform pages and institutional resources." },
+  "/what-is-grgf": { title: "What Is GRGF™?", description: "Introduction to the Global Record Governance Framework and its role in Digital Public Infrastructure." },
+  "/how-it-works": { title: "How It Works", description: "Step-by-step guide to how GRGF™ processes governance events and creates verifiable records." },
   "/the-problem": { title: "The Problem", description: "Understanding the $2.6 trillion annual cost of governance failures and institutional accountability gaps." },
   "/governance": { title: "Governance Model", description: "Institutional governance architecture including board structure, standards committees, and oversight mechanisms." },
   "/governance-framework": { title: "Governance Framework", description: "Detailed governance framework documentation for institutional record integrity standards." },
@@ -35,7 +35,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/simulation": { title: "Governance Simulation", description: "Interactive simulation environment for governance event processing and policy enforcement testing." },
   "/pilot-programme": { title: "Pilot Programme", description: "National pilot implementation programme for sovereign governance infrastructure deployment." },
   "/pilot-evaluation": { title: "Pilot Evaluation", description: "Evaluation criteria and assessment methodology for governance pilot deployments." },
-  "/canada-deployment": { title: "Canada Deployment", description: "Canadian national deployment strategy for GRGF governance infrastructure pilot programme." },
+  "/canada-deployment": { title: "Canada Deployment", description: "Canadian national deployment strategy for GRGF™ governance infrastructure pilot programme." },
   "/international-cooperation": { title: "International Cooperation", description: "Cross-border federation protocol and regional strategic frameworks for multilateral governance." },
   "/countries": { title: "Country Profiles", description: "Regional deployment readiness assessments and institutional governance maturity profiles." },
   "/use-cases": { title: "Use Cases", description: "Real-world governance integrity use cases across procurement, social benefits, and regulatory compliance." },
@@ -44,7 +44,7 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/future-proofing": { title: "Future Proofing", description: "Post-quantum readiness roadmap and long-term architectural resilience planning." },
   "/source-of-truth": { title: "Source of Truth", description: "Authoritative master record architecture and cryptographic chain-of-custody documentation." },
   "/records": { title: "Governance Records", description: "Record management framework for institutional governance events, decisions, and omissions." },
-  "/dpi-comparison": { title: "DPI Comparison", description: "Comparative analysis of GRGF against traditional GovTech and other Digital Public Infrastructure layers." },
+  "/dpi-comparison": { title: "DPI Comparison", description: "Comparative analysis of GRGF™ against traditional GovTech and other Digital Public Infrastructure layers." },
   "/processes": { title: "Operational Processes", description: "Standard operating procedures and institutional process documentation for governance operations." },
   "/systems": { title: "System Components", description: "Technical component catalogue for the governance infrastructure operating system." },
   "/executive-summary": { title: "Executive Summary", description: "High-level institutional overview of the Global Record Governance Framework for decision-makers." },
@@ -76,17 +76,17 @@ const seoMap: Record<string, { title: string; description: string }> = {
   "/world-bank-alignment": { title: "World Bank GovTech Alignment", description: "GovTech Maturity Index mapping and Digital Development Principles alignment for governance infrastructure." },
   "/un-alignment": { title: "UN SDG & Digital Public Goods", description: "Sustainable Development Goals impact assessment and Digital Public Goods Alliance standard compliance." },
   "/g20-dpi-framework": { title: "G20 DPI Framework Alignment", description: "G20 Digital Public Infrastructure principles alignment and Layer 3 governance integrity positioning." },
-  "/itu-global-standards": { title: "ITU Global Standards Alignment | GRGF (X.509, X.1252, Cybersecurity Exchange)", description: "How GRGF maps to ITU-T security and identity recommendations (X.509, X.1252, X.1500) to support PKI-based verification, identity terminology consistency, and cybersecurity information exchange — with evidence artifacts and downloadable mappings." },
+  "/itu-global-standards": { title: "ITU Global Standards Alignment | GRGF™ (X.509, X.1252, Cybersecurity Exchange)", description: "How GRGF™ maps to ITU-T security and identity recommendations (X.509, X.1252, X.1500) to support PKI-based verification, identity terminology consistency, and cybersecurity information exchange — with evidence artifacts and downloadable mappings." },
   "/international-compliance": { title: "International Compliance Hub", description: "Comprehensive multilateral alignment dashboard across OECD, World Bank, UN, G20, ITU, and regional frameworks." },
   "/unesco-alignment": { title: "UNESCO Digital Governance Standards", description: "Alignment with UNESCO ROAM-X Indicators, AI Ethics Recommendation, IFAP Programme, and documentary heritage standards." },
-  "/accessibility": { title: "Accessibility Statement", description: "GRGF accessibility commitment consistent with WCAG 2.2 Level AA, keyboard navigation, contrast, and semantic HTML." },
-  "/ip-status": { title: "Intellectual Property Status", description: "Legal clarity on GRGF patent application status, IP ownership, and institutional licensing terms." },
+  "/accessibility": { title: "Accessibility Statement", description: "GRGF™ accessibility commitment consistent with WCAG 2.2 Level AA, keyboard navigation, contrast, and semantic HTML." },
+  "/ip-status": { title: "Intellectual Property Status", description: "Legal clarity on GRGF™ patent application status, IP ownership, and institutional licensing terms." },
   "/roadmap": { title: "Strategic Roadmap", description: "Three-phase deployment pathway from publication and validation through pilots to international federation." },
 };
 
 export function RouteSEO() {
   const { pathname } = useLocation();
   const seo = seoMap[pathname];
-  if (!seo) return <SEOHead title="GRGF" description="Global Record Governance Framework — Digital Public Infrastructure Standards Authority." />;
+  if (!seo) return <SEOHead title="GRGF™" description="Global Record Governance Framework — Digital Public Infrastructure Standards Authority." />;
   return <SEOHead title={seo.title} description={seo.description} />;
 }

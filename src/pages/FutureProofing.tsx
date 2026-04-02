@@ -16,7 +16,7 @@ const FutureProofing = () => (
           Infrastructure that serves institutions for decades cannot depend on any single vendor, algorithm, or political cycle.
         </p>
         <p className="text-xs text-muted-foreground leading-relaxed">
-          GRGF is designed as a protocol layer — not a product. Every architectural decision prioritizes interoperability over proprietary advantage, standards over custom implementations, and institutional sovereignty over operational convenience.
+          GRGF™ is designed as a protocol layer — not a product. Every architectural decision prioritizes interoperability over proprietary advantage, standards over custom implementations, and institutional sovereignty over operational convenience.
         </p>
       </div>
     </Section>
@@ -24,7 +24,7 @@ const FutureProofing = () => (
     {/* Cryptographic Agility */}
     <Section title="Cryptographic Agility Roadmap" className="border-t border-border">
       <p className="text-xs text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        Cryptographic algorithms have finite lifespans. GRGF architecture separates cryptographic operations from governance logic, enabling algorithm upgrades without disrupting sealed records or institutional workflows.
+        Cryptographic algorithms have finite lifespans. GRGF™ architecture separates cryptographic operations from governance logic, enabling algorithm upgrades without disrupting sealed records or institutional workflows.
       </p>
       <div className="space-y-3 max-w-3xl">
         {[
@@ -58,7 +58,7 @@ const FutureProofing = () => (
       </p>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[
-          { icon: Globe, title: "Sovereign Node Architecture", desc: "Each nation operates an independent GRGF node under its own governance authority. No external entity controls policy or data." },
+          { icon: Globe, title: "Sovereign Node Architecture", desc: "Each nation operates an independent GRGF™ node under its own governance authority. No external entity controls policy or data." },
           { icon: Layers, title: "Federation Protocol", desc: "Standardized verification protocol enables cross-border integrity checks without exposing underlying records or governance rules." },
           { icon: Shield, title: "Trust Without Dependency", desc: "Verification requires no trust in the counterparty's operator. Cryptographic proof replaces institutional reputation." },
           { icon: GitBranch, title: "Schema Interoperability", desc: "Canonical event schemas enable cross-system normalization. Institutions retain local schemas with federation-compatible mappings." },
@@ -94,7 +94,7 @@ const FutureProofing = () => (
     {/* Long-Term Governance Stewardship */}
     <Section title="Long-Term Governance Stewardship" className="border-t border-border">
       <p className="text-xs text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-        Infrastructure that outlasts its creators requires formalized stewardship structures. GRGF governance is designed for institutional succession, not founder dependency.
+        Infrastructure that outlasts its creators requires formalized stewardship structures. GRGF™ governance is designed for institutional succession, not founder dependency.
       </p>
       <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
         {[
@@ -159,7 +159,7 @@ const FutureProofing = () => (
           Designed for evolution, not dependence.
         </p>
         <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-          GRGF architecture ensures that institutional integrity infrastructure can evolve across technological generations without compromising the integrity of existing records or governance commitments.
+          GRGF™ architecture ensures that institutional integrity infrastructure can evolve across technological generations without compromising the integrity of existing records or governance commitments.
         </p>
         <Link to="/architecture" className="inline-flex items-center gap-2 text-sm text-accent hover:underline">
           View System Architecture <ArrowRight className="h-3 w-3" />

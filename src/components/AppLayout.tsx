@@ -109,7 +109,7 @@ const sections: NavSectionType[] = [
   {
     id: "academy", label: "Academy", icon: GraduationCap,
     items: [
-      { title: "GRGF Academy", path: "/academy" },
+      { title: "GRGF™ Academy", path: "/academy" },
       { title: "Institutional Readiness", path: "/readiness" },
       { title: "Simulation Engine", path: "/simulation" },
       { title: "Roadmap", path: "/roadmap" },
@@ -302,7 +302,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 <span className="text-primary-foreground text-sm font-bold">G</span>
               </div>
               <div>
-                <h1 className="text-[14px] font-bold tracking-tight text-foreground">GRGF</h1>
+                <h1 className="text-[14px] font-bold tracking-tight text-foreground">GRGF™</h1>
                 <p className="text-[10px] text-muted-foreground tracking-wide">Governance Framework</p>
               </div>
             </Link>
@@ -345,7 +345,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
                 <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                   <span className="text-primary-foreground text-sm font-bold">G</span>
                 </div>
-                <h1 className="text-[14px] font-bold tracking-tight">GRGF</h1>
+                <h1 className="text-[14px] font-bold tracking-tight">GRGF™</h1>
               </div>
               <button onClick={() => setMobileOpen(false)} className="p-1.5 hover:bg-muted rounded-md transition-colors">
                 <X className="h-4 w-4 text-muted-foreground" />

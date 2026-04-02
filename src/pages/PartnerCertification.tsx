@@ -10,15 +10,15 @@ const PartnerCertification = () => {
       color: "text-muted-foreground",
       borderColor: "border-l-muted-foreground",
       requirements: [
-        "Complete GRGF Academy Foundation course",
+        "Complete GRGF™ Academy Foundation course",
         "Pass basic competency assessment",
         "Sign partner agreement",
       ],
       benefits: [
         "Access to SDK and developer documentation",
-        "Listed in GRGF partner directory",
+        "Listed in GRGF™ partner directory",
         "Community support channel",
-        "Use of 'GRGF Registered Partner' designation",
+        "Use of 'GRGF™ Registered Partner' designation",
       ],
       fee: "$5,000 / year",
     },
@@ -34,7 +34,7 @@ const PartnerCertification = () => {
         "Demonstrate institutional deployment capability",
       ],
       benefits: [
-        "Authorized to deploy GRGF institutional nodes",
+        "Authorized to deploy GRGF™ institutional nodes",
         "Access to pre-release features and APIs",
         "Co-branded deployment documentation",
         "Priority support with SLA",
@@ -57,7 +57,7 @@ const PartnerCertification = () => {
       benefits: [
         "Authorized for sovereign national deployments",
         "Federation node management rights",
-        "Joint go-to-market with GRGF",
+        "Joint go-to-market with GRGF™",
         "Architectural review access",
         "Seat on Partner Advisory Council",
         "Premium revenue share",
@@ -67,9 +67,9 @@ const PartnerCertification = () => {
   ];
 
   const certificationLevels = [
-    { name: "GRGF Analyst", hours: 20, scope: "Framework concepts, record lifecycle, verification principles", prereq: "None" },
-    { name: "GRGF Practitioner", hours: 40, scope: "Deployment, configuration, SDK integration, policy-as-code", prereq: "Analyst certification" },
-    { name: "GRGF Lead", hours: 80, scope: "Architecture design, federation setup, institutional governance, HSM integration", prereq: "Practitioner + 1 deployment" },
+    { name: "GRGF™ Analyst", hours: 20, scope: "Framework concepts, record lifecycle, verification principles", prereq: "None" },
+    { name: "GRGF™ Practitioner", hours: 40, scope: "Deployment, configuration, SDK integration, policy-as-code", prereq: "Analyst certification" },
+    { name: "GRGF™ Lead", hours: 80, scope: "Architecture design, federation setup, institutional governance, HSM integration", prereq: "Practitioner + 1 deployment" },
   ];
 
   const targetPartners = [
@@ -83,14 +83,14 @@ const PartnerCertification = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Partner Certification Program"
-        subtitle="Structured program for integrators, consultants, and institutional deployers to become authorized GRGF implementation partners."
+        subtitle="Structured program for integrators, consultants, and institutional deployers to become authorized GRGF™ implementation partners."
       />
 
       {/* Program Overview */}
       <Section>
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <p className="text-sm text-foreground leading-relaxed">
-            GRGF's partner certification program creates a controlled ecosystem of qualified deployers. 
+            GRGF™'s partner certification program creates a controlled ecosystem of qualified deployers. 
             Partners earn certification through demonstrated competency, not commercial agreements alone. 
             This ensures every institutional deployment meets sovereign-grade quality standards.
           </p>
@@ -183,7 +183,7 @@ const PartnerCertification = () => {
             {[
               { item: "Referred institutional deployment", share: "15–25% of license value" },
               { item: "Partner-led implementation services", share: "Partner retains 100%" },
-              { item: "Certification training delivery", share: "60/40 (Partner/GRGF)" },
+              { item: "Certification training delivery", share: "60/40 (Partner/GRGF™)" },
               { item: "Annual node management", share: "20% of recurring revenue" },
             ].map((r) => (
               <div key={r.item} className="flex items-center justify-between">

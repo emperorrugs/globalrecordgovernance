@@ -51,7 +51,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Functional_Modules_Overview.pdf",
     content: (
       <>
-        <p>GRGF's architecture comprises four core functional layers, each with clearly defined governance responsibilities:</p>
+        <p>GRGF™'s architecture comprises four core functional layers, each with clearly defined governance responsibilities:</p>
         <ol className="list-decimal pl-5 space-y-2">
           <li><strong>Event Normalization Layer</strong> — Translates real-world institutional actions and omissions into structured governance events.</li>
           <li><strong>Authority Context Layer</strong> — Captures who acted, under what mandate, at what time, and with what scope.</li>
@@ -66,15 +66,15 @@ const documents: DocEntry[] = [
     id: "PTR-002", title: "System Interaction Diagrams", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
     content: (
       <>
-        <p>GRGF sits above operational systems, beside registries and workflows, and outside political or organizational control.</p>
+        <p>GRGF™ sits above operational systems, beside registries and workflows, and outside political or organizational control.</p>
         <p>Conceptual interaction model:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>External systems generate governance events</li>
-          <li>GRGF normalizes and records those events</li>
+          <li>GRGF™ normalizes and records those events</li>
           <li>Verification interfaces allow independent confirmation</li>
           <li>No data flows back to alter operational systems</li>
         </ul>
-        <p className="font-medium text-foreground">GRGF is non-intrusive by design. Systems do not change how they work — they gain verifiability.</p>
+        <p className="font-medium text-foreground">GRGF™ is non-intrusive by design. Systems do not change how they work — they gain verifiability.</p>
       </>
     ),
   },
@@ -83,7 +83,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Record_Lifecycle_Logic.pdf",
     content: (
       <>
-        <p>Every GRGF record follows a defined lifecycle:</p>
+        <p>Every GRGF™ record follows a defined lifecycle:</p>
         <ol className="list-decimal pl-5 space-y-1">
           <li>Event asserted</li>
           <li>Context normalized</li>
@@ -101,7 +101,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Verification_Hooks.pdf",
     content: (
       <>
-        <p>GRGF supports both positive and negative verification:</p>
+        <p>GRGF™ supports both positive and negative verification:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li><strong>Positive verification:</strong> confirming a record exists</li>
           <li><strong>Negative verification:</strong> confirming no record exists for a claimed event</li>
@@ -115,7 +115,7 @@ const documents: DocEntry[] = [
     id: "PTR-005", title: "Interoperability Principles", section: "SECTION 04 — DPI & STANDARDS ALIGNMENT", updated: "February 2026",
     content: (
       <>
-        <p>GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
+        <p>GRGF™ is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
         <p>Design principles:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>System-agnostic — no vendor lock-in</li>
@@ -123,7 +123,7 @@ const documents: DocEntry[] = [
           <li>Standards-compatible without being standards-dependent</li>
           <li>Sovereignty-preserving</li>
         </ul>
-        <p>GRGF aligns with core DPI principles: universality, interoperability, public value orientation, long-term sustainability, and institutional neutrality.</p>
+        <p>GRGF™ aligns with core DPI principles: universality, interoperability, public value orientation, long-term sustainability, and institutional neutrality.</p>
       </>
     ),
   },
@@ -147,7 +147,7 @@ const documents: DocEntry[] = [
     id: "PTR-007", title: "Sandbox & Pilot References", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "February 2026",
     content: (
       <>
-        <p>Institutions evaluating GRGF may use the simulation environment for:</p>
+        <p>Institutions evaluating GRGF™ may use the simulation environment for:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li>Workflow demonstration and staff training</li>
           <li>Governance logic validation</li>
@@ -164,7 +164,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Functional_Modules_Overview.pdf",
     content: (
       <>
-        <p>Complete service partnership package for institutional partners and system integrators evaluating GRGF collaboration.</p>
+        <p>Complete service partnership package for institutional partners and system integrators evaluating GRGF™ collaboration.</p>
         <p className="font-medium text-foreground">Includes engagement terms, scope definitions, and partnership framework. (ZIP archive)</p>
       </>
     ),
@@ -197,7 +197,7 @@ const ArchivePartners = () => (
         {documents.map((doc) => <ExpandableDoc key={doc.id} doc={doc} />)}
       </div>
       <div className="max-w-5xl mt-8 text-[10px] font-mono text-muted-foreground/40 text-right">
-        GRGF DIGITAL ARCHIVE · PARTNER SECTION · REFERENCE ONLY
+        GRGF™ DIGITAL ARCHIVE · PARTNER SECTION · REFERENCE ONLY
       </div>
     </section>
   </div>

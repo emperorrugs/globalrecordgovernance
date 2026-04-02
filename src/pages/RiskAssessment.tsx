@@ -80,7 +80,7 @@ const RiskAssessment = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="National Risk Assessment Tool — GRGF"
+        title="National Risk Assessment Tool — GRGF™"
         description="Interactive governance deployment risk evaluation tool. Assess legal, cyber, data governance, and institutional readiness for DPI integration."
       />
       <PageHeader
@@ -172,7 +172,7 @@ const RiskAssessment = () => {
           <AlertTriangle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
           <p className="text-xs text-muted-foreground leading-relaxed">
             <span className="font-semibold text-foreground">Assessment Disclaimer.</span>{" "}
-            This is a self-assessment tool for preliminary planning. Formal deployment readiness requires independent institutional evaluation through the GRGF Recognition Framework.
+            This is a self-assessment tool for preliminary planning. Formal deployment readiness requires independent institutional evaluation through the GRGF™ Recognition Framework.
           </p>
         </div>
       </Section>

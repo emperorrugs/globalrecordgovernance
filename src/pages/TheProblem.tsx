@@ -62,7 +62,7 @@ const TheProblem = () => {
         </div>
       </Section>
 
-      {/* What GRGF Changes */}
+      {/* What GRGF™ Changes */}
       <Section title={t("problem.what_changes")} className="border-t border-border bg-surface2/30">
         <div className="governance-card border-l-2 border-l-accent max-w-3xl">
           <p className="text-sm text-foreground font-medium leading-relaxed mb-4">{t("problem.changes_intro")}</p>

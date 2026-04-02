@@ -88,7 +88,7 @@ const InstitutionalBlueprint = () => {
   return (
     <div>
       <SEOHead
-        title="Institutional Gap-Closure Blueprint — GRGF"
+        title="Institutional Gap-Closure Blueprint — GRGF™"
         description="Complete execution framework eliminating institutional credibility gaps for Global Record Governance Framework. 10-module blueprint for legitimacy, validation, coalition formation, and standards-track positioning."
       />
 
@@ -105,7 +105,7 @@ const InstitutionalBlueprint = () => {
               Institutional Gap-Closure Blueprint
             </h1>
             <p className="mt-4 text-body-lg text-primary-foreground/60 max-w-3xl leading-relaxed">
-              A 10-module execution framework transforming GRGF from founder-origin initiative into a globally credible, institutionally adoptable pre-standard governance infrastructure — ready for Government of Canada and World Bank review.
+              A 10-module execution framework transforming GRGF™ from founder-origin initiative into a globally credible, institutionally adoptable pre-standard governance infrastructure — ready for Government of Canada and World Bank review.
             </p>
           </FadeIn>
 
@@ -142,14 +142,14 @@ const InstitutionalBlueprint = () => {
 
       {/* ═══════ MODULE 1 — LEGITIMACY ARCHITECTURE ═══════ */}
       <Sec id="m1" className="border-b border-border">
-        <ModuleHeader number="01" title="Legitimacy Architecture" subtitle="Transition GRGF from individual initiative to institutionally governed entity with independent oversight, anti-capture governance, and decision transparency." icon={Landmark} />
+        <ModuleHeader number="01" title="Legitimacy Architecture" subtitle="Transition GRGF™ from individual initiative to institutionally governed entity with independent oversight, anti-capture governance, and decision transparency." icon={Landmark} />
         
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <div className="space-y-4">
-            <ActionItem title="Independent Foundation Structure" description="Establish GRGF as a registered non-profit foundation under Canadian federal incorporation. Board composition: minimum 7 members, majority independent, geographic diversity across 3+ regions. Founder retains inventor/architect role with no Board voting majority." />
+            <ActionItem title="Independent Foundation Structure" description="Establish GRGF™ as a registered non-profit foundation under Canadian federal incorporation. Board composition: minimum 7 members, majority independent, geographic diversity across 3+ regions. Founder retains inventor/architect role with no Board voting majority." />
             <ActionItem title="Charter Governance Framework" description="Publish Governance Charter v3.0 with codified anti-capture clauses (AC-01 through AC-05), term limits (3-year renewable once), mandatory independence disclosures, and conflict-of-interest protocols aligned with OECD governance standards." />
             <ActionItem title="Advisory Council Architecture" description="Multi-stakeholder advisory body: 5–7 members spanning former government CDOs, ISO/W3C standards veterans, academic governance researchers, and multilateral digital policy experts. Quarterly reporting cycle with published proceedings." />
-            <ActionItem title="Decision Transparency Model" description="All governance decisions published within 30 days. Board minutes (redacted for privilege) publicly accessible. Annual Governance Transparency Report with independent verification. Decision audit trail maintained in GRGF's own append-only ledger." />
+            <ActionItem title="Decision Transparency Model" description="All governance decisions published within 30 days. Board minutes (redacted for privilege) publicly accessible. Annual Governance Transparency Report with independent verification. Decision audit trail maintained in GRGF™'s own append-only ledger." />
             <ActionItem title="Anti-Capture Governance Mechanics" description="Five codified clauses: AC-01 (No single entity >20% Board representation), AC-02 (Vendor independence mandate), AC-03 (Government non-interference guarantee), AC-04 (Standards process separation), AC-05 (Financial independence requirement). Independent compliance audit annually." />
           </div>
           <div className="space-y-4">
@@ -269,7 +269,7 @@ const InstitutionalBlueprint = () => {
 
         <div className="grid md:grid-cols-2 gap-8 mb-10">
           <div className="space-y-4">
-            <ActionItem title="Sandbox Deployment" description="Deploy controlled sandbox environment demonstrating core GRGF capabilities: event capture, policy enforcement, audit reconstruction, omission detection, and verification API. Enable external evaluators to interact without production data." />
+            <ActionItem title="Sandbox Deployment" description="Deploy controlled sandbox environment demonstrating core GRGF™ capabilities: event capture, policy enforcement, audit reconstruction, omission detection, and verification API. Enable external evaluators to interact without production data." />
             <ActionItem title="Country Simulation Models" description="Design 3 realistic national deployment simulations: (1) Mid-sized parliamentary democracy (Canadian model), (2) Federal developing nation (e.g., Nigerian model), (3) Small island developing state (SIDS model). Each includes governance context, deployment timeline, cost projections, and institutional impact analysis." />
             <ActionItem title="Verification Case Studies" description="Produce 3 detailed case studies: (1) Cross-ministry record integrity during political transition, (2) Audit reconstruction under regulatory time pressure, (3) Omission detection in policy implementation tracking. Include datasets, example records, and certification scenarios." />
           </div>
@@ -316,7 +316,7 @@ const InstitutionalBlueprint = () => {
               {[
                 { principle: "National Data Sovereignty", desc: "All governance data remains under national jurisdiction. No cross-border data transfer without explicit sovereign consent." },
                 { principle: "Voluntary Adoption", desc: "No nation is evaluated, ranked, or penalised for non-adoption. Participation is entirely elective and reversible." },
-                { principle: "National Ownership Guarantee", desc: "Deploying nations own their infrastructure nodes, data, and configurations. GRGF provides architecture, not operations." },
+                { principle: "National Ownership Guarantee", desc: "Deploying nations own their infrastructure nodes, data, and configurations. GRGF™ provides architecture, not operations." },
                 { principle: "Opt-In Federation", desc: "International verification requires mutual consent. No nation's data is visible to federation without explicit authorization." },
                 { principle: "Jurisdiction Neutrality", desc: "Framework governance is neutral to national legal systems. Compliance with local law always takes precedence." },
               ].map(({ principle, desc }) => (
@@ -363,7 +363,7 @@ const InstitutionalBlueprint = () => {
 
       {/* ═══════ MODULE 6 — STANDARDS-FORMATION PATHWAY ═══════ */}
       <Sec id="m6" className="border-b border-border bg-muted/30">
-        <ModuleHeader number="06" title="Standards-Formation Pathway" subtitle="Map GRGF's evolution into an emerging global standard based on historical patterns of successful international standards emergence (ISO, W3C, ITU-T models)." icon={Award} />
+        <ModuleHeader number="06" title="Standards-Formation Pathway" subtitle="Map GRGF™'s evolution into an emerging global standard based on historical patterns of successful international standards emergence (ISO, W3C, ITU-T models)." icon={Award} />
 
         <div className="mb-10">
           <div className="governance-card-elevated mb-8">
@@ -506,7 +506,7 @@ const InstitutionalBlueprint = () => {
             <h4 className="font-serif text-sm font-semibold mb-4">Adoption Pathway Visualization</h4>
             <div className="space-y-3">
               {[
-                { step: "01", title: "Discover", desc: "Institutional problem articulation → evidence of governance gaps → GRGF positioning" },
+                { step: "01", title: "Discover", desc: "Institutional problem articulation → evidence of governance gaps → GRGF™ positioning" },
                 { step: "02", title: "Evaluate", desc: "Architecture review → compliance mapping → independent validation results → risk assessment" },
                 { step: "03", title: "Engage", desc: "Readiness assessment → institutional briefing → controlled access due diligence" },
                 { step: "04", title: "Pilot", desc: "Sandbox deployment → controlled evaluation → measurable outcomes → certification" },

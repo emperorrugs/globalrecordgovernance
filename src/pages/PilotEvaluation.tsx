@@ -20,9 +20,9 @@ const timeline = [
 ];
 
 const publicDocs = [
-  { title: "Pilot Kit (Institution-Ready)", version: "0.1", date: "2026-01-31", file: "GRGF_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip" },
-  { title: "Phase 3 Visual Operating Model", version: "1.0", date: "2026-01-31", file: "GRGF_Phase_3_Visual_Operating_Model.pdf" },
-  { title: "Executive Slide Deck", version: "1.0", date: "2026-01-31", file: "GRGF_Executive_Visual_Binder.pptx" },
+  { title: "Pilot Kit (Institution-Ready)", version: "0.1", date: "2026-01-31", file: "GRGF™_DPI_Pilot_Kit_v0.1_INSTITUTION_READY.zip" },
+  { title: "Phase 3 Visual Operating Model", version: "1.0", date: "2026-01-31", file: "GRGF™_Phase_3_Visual_Operating_Model.pdf" },
+  { title: "Executive Slide Deck", version: "1.0", date: "2026-01-31", file: "GRGF™_Executive_Visual_Binder.pptx" },
 ];
 
 const controlledDocs = [
@@ -34,7 +34,7 @@ const controlledDocs = [
 const PilotEvaluation = () => (
   <div className="animate-fade-in">
     <PageHeader
-      title="GRGF Pilot Evaluation — v0.1"
+      title="GRGF™ Pilot Evaluation — v0.1"
       subtitle="Controlled evaluation package for institutional stakeholders. Public-safe materials are available below. Controlled technical materials and operational access are available through the Controlled Access process."
     >
       <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 border border-accent/30 rounded-sm">

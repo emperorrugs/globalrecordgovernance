@@ -1,6 +1,6 @@
-# GRGF DPI – Privacy Impact Assessment (PIA)
+# GRGF™ DPI – Privacy Impact Assessment (PIA)
 ## Scope
-Assessment of personal data processing within GRGF.
+Assessment of personal data processing within GRGF™.
 
 ## Data Minimization
 Only event metadata strictly required for evidentiary integrity is captured.

@@ -72,7 +72,7 @@ const StressTest = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Governance Stress-Test Simulator — GRGF"
+        title="Governance Stress-Test Simulator — GRGF™"
         description="Model governance system resilience under crisis scenarios. Evaluate load handling, audit reliability, and institutional continuity."
       />
       <PageHeader

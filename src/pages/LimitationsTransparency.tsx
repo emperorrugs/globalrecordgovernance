@@ -62,7 +62,7 @@ const LimitationsTransparency = () => {
           <div className="flex items-start gap-3">
             <Eye className="h-5 w-5 text-accent shrink-0 mt-0.5" />
             <p className="text-sm text-foreground leading-relaxed">
-              Institutional trust is earned through transparency, not concealment. This page documents what GRGF can do today, 
+              Institutional trust is earned through transparency, not concealment. This page documents what GRGF™ can do today, 
               what it cannot yet do, and the specific steps required to close each gap. 
               Every claim on this platform is bounded by these acknowledged limitations.
             </p>
@@ -121,8 +121,8 @@ const LimitationsTransparency = () => {
       <Section title="What This Means for Evaluators" className="border-t border-border">
         <div className="space-y-3 max-w-3xl">
           {[
-            { q: "Can GRGF be deployed in production today?", a: "Not yet. GRGF is a functional proof-of-concept that demonstrates the complete governance record lifecycle. Production deployment requires HSM integration, independent security audits, and formal compliance certification." },
-            { q: "Are the institutional evaluation reports official endorsements?", a: "No. They are framework-aligned analyses that demonstrate how GRGF would be assessed by these institutions. They are structured using official evaluation methodologies but are not endorsed by the named organizations." },
+            { q: "Can GRGF™ be deployed in production today?", a: "Not yet. GRGF™ is a functional proof-of-concept that demonstrates the complete governance record lifecycle. Production deployment requires HSM integration, independent security audits, and formal compliance certification." },
+            { q: "Are the institutional evaluation reports official endorsements?", a: "No. They are framework-aligned analyses that demonstrate how GRGF™ would be assessed by these institutions. They are structured using official evaluation methodologies but are not endorsed by the named organizations." },
             { q: "Is the $61.7B valuation real?", a: "It represents the total addressable market based on documented institutional inefficiency costs. It is an economic model, not a revenue projection. The methodology is published and independently verifiable." },
             { q: "What is needed for a government pilot?", a: "A sovereign deployment requires: (1) formal institutional partnership, (2) HSM/KMS key management, (3) SOC 2 Type II certification, (4) penetration testing, and (5) bilateral deployment agreement." },
           ].map((item) => (

@@ -40,7 +40,7 @@ const DataEntry = () => {
         subtitle={
           isPlain
             ? "See how a governance record would be entered into the system."
-            : "Demonstration of the GRGF record submission interface. No authoritative records are created."
+            : "Demonstration of the GRGF™ record submission interface. No authoritative records are created."
         }
       />
 
@@ -63,7 +63,7 @@ const DataEntry = () => {
                   <div className="flex gap-2"><dt className="text-muted-foreground font-mono text-xs min-w-[80px]">Type:</dt><dd>{form.type}</dd></div>
                   <div className="flex gap-2"><dt className="text-muted-foreground font-mono text-xs min-w-[80px]">Actor:</dt><dd>{form.actor || "—"}</dd></div>
                   <div className="flex gap-2"><dt className="text-muted-foreground font-mono text-xs min-w-[80px]">Date:</dt><dd>{form.date}</dd></div>
-                  <div className="flex gap-2"><dt className="text-muted-foreground font-mono text-xs min-w-[80px]">ID:</dt><dd className="font-mono text-accent">GRGF-SIM-{Math.floor(Math.random() * 9000 + 1000)}</dd></div>
+                  <div className="flex gap-2"><dt className="text-muted-foreground font-mono text-xs min-w-[80px]">ID:</dt><dd className="font-mono text-accent">GRGF™-SIM-{Math.floor(Math.random() * 9000 + 1000)}</dd></div>
                 </dl>
               </div>
               <button onClick={handleReset} className="px-6 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-sm hover:bg-primary/90 transition-colors">

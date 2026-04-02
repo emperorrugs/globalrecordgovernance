@@ -109,7 +109,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
                 <span className="text-primary-foreground text-sm font-bold">G</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold tracking-tight text-foreground leading-none">GRGF</span>
+                <span className="text-sm font-bold tracking-tight text-foreground leading-none">GRGF™</span>
                 <span className="hidden sm:block text-[9px] text-muted-foreground tracking-wide leading-none mt-0.5">
                   Enterprise Platform
                 </span>

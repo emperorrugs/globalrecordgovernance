@@ -52,7 +52,7 @@ const archiveDocs = [
 const PilotProgramme = () => (
   <div className="animate-fade-in">
     <PageHeader
-      title="GRGF Pilot Node v0.1 — Controlled Evaluation Edition"
+      title="GRGF™ Pilot Node v0.1 — Controlled Evaluation Edition"
       subtitle="A minimal viable governance engine designed for structured institutional evaluation prior to national deployment."
     />
 
@@ -115,7 +115,7 @@ const PilotProgramme = () => (
         </div>
         <div className="mt-4 bg-muted/50 border border-border rounded-sm px-4 py-3">
           <p className="text-[10px] font-mono text-accent/70 tracking-wider">
-            THIS ENVIRONMENT OPERATES UNDER THE GRGF CONTROLLED DISTRIBUTION PROTOCOL (CRP)
+            THIS ENVIRONMENT OPERATES UNDER THE GRGF™ CONTROLLED DISTRIBUTION PROTOCOL (CRP)
           </p>
         </div>
       </div>
@@ -211,7 +211,7 @@ const PilotProgramme = () => (
       <div className="governance-card">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { label: "Version", value: "GRGF Pilot Node v0.1" },
+            { label: "Version", value: "GRGF™ Pilot Node v0.1" },
             { label: "Status", value: "Controlled Evaluation" },
             { label: "Deployment Model", value: "Cloud-hosted (Private)" },
             { label: "Audit Status", value: "Pending Third-Party Review" },
@@ -263,7 +263,7 @@ const PilotProgramme = () => (
         </p>
         <div className="section-divider" />
         <p className="text-sm text-foreground leading-relaxed mt-4 font-serif">
-          GRGF Pilot Node v0.1 marks the transition from architectural framework to operational governance engine. Structured pilot validation is the next step toward sovereign deployment.
+          GRGF™ Pilot Node v0.1 marks the transition from architectural framework to operational governance engine. Structured pilot validation is the next step toward sovereign deployment.
         </p>
       </div>
       <p className="mt-6 text-[10px] font-mono text-muted-foreground/40 tracking-wider text-center">

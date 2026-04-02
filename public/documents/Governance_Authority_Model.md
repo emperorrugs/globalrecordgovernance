@@ -9,7 +9,7 @@
 
 ## Authority Separation
 
-GRGF explicitly distinguishes between:
+GRGF™ explicitly distinguishes between:
 
 - **Institutional authority** — the formal mandate of an organization
 - **Individual actors** — persons exercising delegated authority
@@ -19,7 +19,7 @@ Authority is treated as a recordable attribute, not an assumption. This prevents
 
 ## Decision–Action–Omission Separation
 
-GRGF formally separates:
+GRGF™ formally separates:
 
 | Category | Definition | Governance Implication |
 |----------|------------|----------------------|
@@ -31,7 +31,7 @@ Each is recorded differently, because each carries different governance implicat
 
 ## Accountability Framework
 
-GRGF enables accountability by preserving:
+GRGF™ enables accountability by preserving:
 
 - **Chain of authority** — who delegated what to whom
 - **Temporal responsibility** — when obligations arose and when they were (or were not) met

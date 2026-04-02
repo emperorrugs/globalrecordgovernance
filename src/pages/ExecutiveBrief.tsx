@@ -58,7 +58,7 @@ const ExecutiveBrief = () => {
   const handlePrint = async () => {
     const el = document.querySelector("main") as HTMLElement;
     if (el) {
-      await exportElementToPDF(el, `GRGF_Executive_Brief_${country.replace(/\s+/g, "_")}`);
+      await exportElementToPDF(el, `GRGF™_Executive_Brief_${country.replace(/\s+/g, "_")}`);
     } else {
       window.print();
     }
@@ -67,7 +67,7 @@ const ExecutiveBrief = () => {
   return (
     <div>
       <SEOHead
-        title="Executive Brief Generator — Global Record Governance Framework (GRGF)"
+        title="Executive Brief Generator — Global Record Governance Framework (GRGF™)"
         description="Generate a tailored executive brief for national DPI deployment evaluation. Includes financial projections, risk overview, deployment roadmap, and compliance summary."
       />
 
@@ -79,7 +79,7 @@ const ExecutiveBrief = () => {
             Executive Brief Generator
           </h1>
           <p className="text-body-lg text-primary-foreground/60 max-w-2xl">
-            Generate a tailored institutional brief for the Global Record Governance Framework (GRGF) deployment evaluation. All projections are modeled estimates with transparent assumptions.
+            Generate a tailored institutional brief for the Global Record Governance Framework (GRGF™) deployment evaluation. All projections are modeled estimates with transparent assumptions.
           </p>
         </div>
       </header>
@@ -171,7 +171,7 @@ const ExecutiveBrief = () => {
               <div>
                 <p className="text-overline font-mono text-accent uppercase tracking-widest mb-1">Executive Brief</p>
                 <h2 className="institutional-heading text-heading-1 font-semibold">
-                  GRGF Deployment Assessment — {brief.country}
+                  GRGF™ Deployment Assessment — {brief.country}
                 </h2>
               </div>
               <button
@@ -192,10 +192,10 @@ const ExecutiveBrief = () => {
                   <h3 className="font-serif text-heading-2 font-semibold">1. Overview</h3>
                 </div>
                 <p className="text-body text-muted-foreground leading-relaxed mb-3">
-                  This brief provides a preliminary assessment of the Global Record Governance Framework (GRGF) deployment for <strong className="text-foreground">{brief.country}</strong>, focused on <strong className="text-foreground">{brief.scenario.label}</strong> at <strong className="text-foreground">{brief.deployment.label}</strong> scale.
+                  This brief provides a preliminary assessment of the Global Record Governance Framework (GRGF™) deployment for <strong className="text-foreground">{brief.country}</strong>, focused on <strong className="text-foreground">{brief.scenario.label}</strong> at <strong className="text-foreground">{brief.deployment.label}</strong> scale.
                 </p>
                 <p className="text-body text-muted-foreground leading-relaxed">
-                  The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
+                  The Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority.
                 </p>
                 <div className="mt-4 grid grid-cols-3 gap-4">
                   <div className="border border-border p-3">
@@ -312,8 +312,8 @@ const ExecutiveBrief = () => {
                     { standard: "OECD Digital Government (Policy Paper 68)", status: "Aligned", note: "Trust, transparency, and data governance pillars addressed" },
                     { standard: "ISO 37000 / ISO 31000", status: "Aligned", note: "Governance and risk management framework compatibility" },
                     { standard: "UN SDGs (16, 16.5, 16.6)", status: "Aligned", note: "Institutional accountability, anti-corruption, transparency" },
-                    { standard: "EU AI Act", status: "Partial", note: "GRGF is non-AI; provides governance layer for AI oversight" },
-                    { standard: "ISO/IEC 42001", status: "Complementary", note: "AI management system standard — GRGF provides audit trail infrastructure" },
+                    { standard: "EU AI Act", status: "Partial", note: "GRGF™ is non-AI; provides governance layer for AI oversight" },
+                    { standard: "ISO/IEC 42001", status: "Complementary", note: "AI management system standard — GRGF™ provides audit trail infrastructure" },
                   ].map(({ standard, status, note }) => (
                     <div key={standard} className="flex items-start gap-3 p-3 border border-border">
                       <CheckCircle className={`h-4 w-4 shrink-0 mt-0.5 ${status === "Aligned" ? "text-accent" : "text-muted-foreground"}`} />
@@ -334,7 +334,7 @@ const ExecutiveBrief = () => {
               {/* Attribution */}
               <div className="text-center pt-8 border-t border-border">
                 <p className="text-overline font-mono text-muted-foreground/40 uppercase tracking-widest mb-1">
-                  Global Record Governance Framework (GRGF)
+                  Global Record Governance Framework (GRGF™)
                 </p>
                 <p className="text-xs text-muted-foreground/30">
                   Global Record Governance Framework — Invented and Owned by Tarek Wahid

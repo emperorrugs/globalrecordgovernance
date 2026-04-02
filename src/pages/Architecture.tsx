@@ -125,7 +125,7 @@ export default function Architecture() {
           </h1>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed max-w-3xl">
             {isPlain
-              ? "A visual guide to how GRGF processes governance events — from capture through sealing to independent verification."
+              ? "A visual guide to how GRGF™ processes governance events — from capture through sealing to independent verification."
               : "Six interdependent layers forming a sovereign-grade evidence backbone. Two physically separated systems ensuring integrity through architectural isolation."}
           </p>
           <div className="flex items-center gap-6 mt-8">

@@ -50,7 +50,7 @@ export function HashVerifier({ records }: HashVerifierProps) {
             setResult(null);
           }}
           onKeyDown={(e) => e.key === "Enter" && handleVerify()}
-          placeholder="Enter hash or record ID (e.g. GRGF-2024-0001)"
+          placeholder="Enter hash or record ID (e.g. GRGF™-2024-0001)"
           maxLength={128}
           className="flex-1 min-w-0 px-3 py-2 text-sm font-mono bg-background border border-input rounded-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-ring"
         />

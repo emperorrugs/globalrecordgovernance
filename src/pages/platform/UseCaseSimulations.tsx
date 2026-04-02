@@ -30,7 +30,7 @@ const CASES: UseCase[] = [
     icon: ClipboardCheck,
     category: 'Government',
     before: {
-      title: 'Before GRGF',
+      title: 'Before GRGF™',
       problems: [
         'Approval recorded in email chains — no single source of truth',
         'No cryptographic proof of when decision was made',
@@ -59,7 +59,7 @@ const CASES: UseCase[] = [
     icon: FileText,
     category: 'Infrastructure',
     before: {
-      title: 'Before GRGF',
+      title: 'Before GRGF™',
       problems: [
         'Inspection reports filed as PDFs with no integrity guarantee',
         'Inspector findings altered after submission in 12% of cases',
@@ -88,7 +88,7 @@ const CASES: UseCase[] = [
     icon: Gavel,
     category: 'Justice',
     before: {
-      title: 'Before GRGF',
+      title: 'Before GRGF™',
       problems: [
         'Court decisions recorded in unstructured document management systems',
         'No tamper-proof timestamp for ruling issuance',
@@ -119,7 +119,7 @@ export default function UseCaseSimulations() {
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Governance Use Case Simulations</h1>
         <p className="text-sm text-muted-foreground mt-1">
-          See how GRGF transforms real governance scenarios — from unverifiable processes to deterministic, tamper-proof evidence.
+          See how GRGF™ transforms real governance scenarios — from unverifiable processes to deterministic, tamper-proof evidence.
         </p>
       </div>
 
@@ -167,7 +167,7 @@ function CaseSimulation({ useCase }: { useCase: UseCase }) {
       {/* Before */}
       <Card className={`p-6 transition-opacity duration-300 ${stage !== 'before' ? 'opacity-60' : ''}`}>
         <div className="flex items-center gap-2 mb-3">
-          <Badge variant="destructive" className="text-xs">BEFORE GRGF</Badge>
+          <Badge variant="destructive" className="text-xs">BEFORE GRGF™</Badge>
           <span className="text-sm font-medium text-muted-foreground">{useCase.category}</span>
         </div>
         <ul className="space-y-2">
@@ -180,7 +180,7 @@ function CaseSimulation({ useCase }: { useCase: UseCase }) {
         </ul>
         {stage === 'before' && (
           <Button onClick={simulate} className="mt-5 gap-2">
-            Record Event with GRGF <ArrowRight className="h-4 w-4" />
+            Record Event with GRGF™ <ArrowRight className="h-4 w-4" />
           </Button>
         )}
       </Card>
@@ -206,7 +206,7 @@ function CaseSimulation({ useCase }: { useCase: UseCase }) {
           <Card className="p-6 border-green-500/30 bg-green-500/5 animate-fade-in">
             <div className="flex items-center gap-2 mb-4">
               <Badge className="bg-green-500/20 text-green-600 border-green-500/30 text-xs">
-                <Shield className="h-3 w-3 mr-1" /> AFTER GRGF
+                <Shield className="h-3 w-3 mr-1" /> AFTER GRGF™
               </Badge>
               <Badge variant="outline" className="text-xs">✅ VERIFIED</Badge>
             </div>

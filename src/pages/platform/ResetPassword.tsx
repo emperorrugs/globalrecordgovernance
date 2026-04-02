@@ -87,7 +87,7 @@ export default function ResetPassword() {
             <Shield className="h-7 w-7 text-primary" />
           </div>
           <h1 className="text-2xl font-semibold tracking-tight">Set New Password</h1>
-          <p className="text-sm text-muted-foreground mt-1">GRGF Platform · Secure Password Reset</p>
+          <p className="text-sm text-muted-foreground mt-1">GRGF™ Platform · Secure Password Reset</p>
         </div>
 
         <div className="bg-card border border-border rounded-xl p-6 shadow-sm">
@@ -107,7 +107,7 @@ export default function ResetPassword() {
         </div>
 
         <p className="text-center text-xs text-muted-foreground">
-          Protected by enterprise-grade encryption · GRGF v1.0
+          Protected by enterprise-grade encryption · GRGF™ v1.0
         </p>
       </div>
     </div>

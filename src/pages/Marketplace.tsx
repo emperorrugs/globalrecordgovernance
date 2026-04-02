@@ -301,7 +301,7 @@ function ProductDetail({ product, onClose }: { product: MarketplaceProduct; onCl
           {activeTab === "evidence" && (
             <div className="space-y-6">
               <h3 className="text-lg font-semibold text-foreground">Evidence Backbone Integration</h3>
-              <p className="text-sm text-muted-foreground">Every action in {product.name} is captured by the GRGF Evidence Backbone.</p>
+              <p className="text-sm text-muted-foreground">Every action in {product.name} is captured by the GRGF™ Evidence Backbone.</p>
 
               <div className="space-y-3">
                 {[
@@ -383,7 +383,7 @@ export default function Marketplace() {
             <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto mb-8">
               Discover, deploy, and verify sovereign-grade governance systems.
               From anti-corruption engines to AI governance modules — built on the
-              GRGF Evidence Backbone.
+              GRGF™ Evidence Backbone.
             </p>
             <div className="max-w-xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -483,7 +483,7 @@ export default function Marketplace() {
             <Code className="w-10 h-10 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-foreground mb-3">Developer Ecosystem</h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-6">
-              Build governance-aware applications with the GRGF API. Access SDKs, submit certified modules, and join the governance infrastructure developer community.
+              Build governance-aware applications with the GRGF™ API. Access SDKs, submit certified modules, and join the governance infrastructure developer community.
             </p>
             <div className="flex items-center justify-center gap-3">
               <Button variant="outline" asChild>

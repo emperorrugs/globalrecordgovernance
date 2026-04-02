@@ -15,7 +15,7 @@ const useCases = [
   {
     icon: <ShoppingCart className="h-5 w-5" />,
     title: "Procurement",
-    description: "End-to-end procurement governance from tender publication to contract award. GRGF records each stage with cryptographic integrity, enabling post-award audit and dispute resolution.",
+    description: "End-to-end procurement governance from tender publication to contract award. GRGF™ records each stage with cryptographic integrity, enabling post-award audit and dispute resolution.",
     examples: [
       "Tender publication and bid receipt records",
       "Evaluation criteria application and scoring rationale",
@@ -36,7 +36,7 @@ const useCases = [
   {
     icon: <Gavel className="h-5 w-5" />,
     title: "Courts & Oversight",
-    description: "Supporting judicial proceedings and institutional oversight with verifiable records. GRGF does not interpret or adjudicate — it provides the factual substrate for independent assessment.",
+    description: "Supporting judicial proceedings and institutional oversight with verifiable records. GRGF™ does not interpret or adjudicate — it provides the factual substrate for independent assessment.",
     examples: [
       "Institutional audit trails for judicial review",
       "Evidence preservation for anti-corruption investigations",
@@ -61,12 +61,12 @@ const UseCases = () => {
     <div className="animate-fade-in">
       <PageHeader
         title="Use Cases"
-        subtitle="Institutional applications of GRGF across government, regulatory, judicial, and multilateral contexts."
+        subtitle="Institutional applications of GRGF™ across government, regulatory, judicial, and multilateral contexts."
       />
 
       <Section>
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          GRGF is designed for institutional environments where the integrity, immutability,
+          GRGF™ is designed for institutional environments where the integrity, immutability,
           and verifiability of governance records is a legal, regulatory, or operational requirement.
           The following use cases illustrate — they do not constitute endorsement or deployment claims.
         </p>
@@ -104,8 +104,8 @@ const UseCases = () => {
       <Section className="border-t border-border bg-card/30">
         <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
           <span className="font-semibold text-foreground">Note.</span> The use cases described above
-          are illustrative of GRGF's design intent. They do not imply current deployment, government
-          endorsement, or operational status in any jurisdiction. GRGF does not claim live government
+          are illustrative of GRGF™'s design intent. They do not imply current deployment, government
+          endorsement, or operational status in any jurisdiction. GRGF™ does not claim live government
           deployment or fabricate implementation references.
         </p>
       </Section>

@@ -4,9 +4,9 @@ import { useState } from "react";
 import { useViewMode } from "@/contexts/ViewModeContext";
 
 const DEMO_RECORDS: Record<string, { timestamp: string; scope: string; title: string }> = {
-  "GRGF-2024-0001": { timestamp: "2024-01-15T00:00:00Z", scope: "Framework Constitution", title: "Framework Constitution v1.0" },
-  "GRGF-2024-0002": { timestamp: "2024-02-01T00:00:00Z", scope: "Governance Protocol", title: "Governance Protocol — Stewardship Rules" },
-  "GRGF-2024-0003": { timestamp: "2024-03-10T00:00:00Z", scope: "Record Classification", title: "Record Classification Taxonomy v1.0" },
+  "GRGF™-2024-0001": { timestamp: "2024-01-15T00:00:00Z", scope: "Framework Constitution", title: "Framework Constitution v1.0" },
+  "GRGF™-2024-0002": { timestamp: "2024-02-01T00:00:00Z", scope: "Governance Protocol", title: "Governance Protocol — Stewardship Rules" },
+  "GRGF™-2024-0003": { timestamp: "2024-03-10T00:00:00Z", scope: "Record Classification", title: "Record Classification Taxonomy v1.0" },
   "DEMO-001": { timestamp: "2024-06-15T14:30:00Z", scope: "Government Decision", title: "Sample Decision Record" },
 };
 
@@ -35,7 +35,7 @@ const Verification = () => {
         title="Verification Portal"
         subtitle={isPlain
           ? "Check whether a governance record exists and whether it's been changed."
-          : "Independent record integrity verification against the GRGF sealed archive."
+          : "Independent record integrity verification against the GRGF™ sealed archive."
         }
       />
 
@@ -45,8 +45,8 @@ const Verification = () => {
             <h3 className="font-serif text-lg font-semibold mb-2">Verify a Record</h3>
             <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
               {isPlain
-                ? "Enter a reference ID to check if a record exists in the archive. Try GRGF-2024-0001 or DEMO-001."
-                : "Enter a Record ID or SHA-256 hash to verify against the sealed manifest. Demo IDs: GRGF-2024-0001, DEMO-001."}
+                ? "Enter a reference ID to check if a record exists in the archive. Try GRGF™-2024-0001 or DEMO-001."
+                : "Enter a Record ID or SHA-256 hash to verify against the sealed manifest. Demo IDs: GRGF™-2024-0001, DEMO-001."}
             </p>
 
             <div className="space-y-4">
@@ -57,7 +57,7 @@ const Verification = () => {
                   value={refId}
                   onChange={(e) => { setRefId(e.target.value); setResult(null); }}
                   onKeyDown={(e) => e.key === "Enter" && handleVerify()}
-                  placeholder="e.g. GRGF-2024-0001"
+                  placeholder="e.g. GRGF™-2024-0001"
                   maxLength={128}
                   className="w-full px-3 py-2.5 text-sm font-mono bg-background border border-input rounded-sm placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-ring"
                 />
@@ -124,7 +124,7 @@ const Verification = () => {
           <AlertTriangle className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
           <p className="text-xs text-muted-foreground leading-relaxed max-w-3xl">
             This verification portal uses demo data for illustration. In a live deployment,
-            verification queries run against the sealed GRGF archive.
+            verification queries run against the sealed GRGF™ archive.
           </p>
         </div>
       </Section>

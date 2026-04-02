@@ -17,7 +17,7 @@ const MODULES = [
     num: 1,
     title: "Website Transformation & DPI Demonstration",
     icon: <Cpu className="h-5 w-5" />,
-    objective: "Convert GRGF from informational website into a live, interactive Digital Public Infrastructure demonstration platform capable of simulating a national governance ecosystem.",
+    objective: "Convert GRGF™ from informational website into a live, interactive Digital Public Infrastructure demonstration platform capable of simulating a national governance ecosystem.",
     actions: [
       "Deploy interactive governance event lifecycle simulator",
       "Simulate digital identity, civil registries, ministry workflows, audit authorities",
@@ -77,7 +77,7 @@ const MODULES = [
     num: 3,
     title: "Standards & Compliance Alignment",
     icon: <Scale className="h-5 w-5" />,
-    objective: "Map all GRGF workflows against ISO governance, records management, cybersecurity, privacy-by-design, and DPI interoperability standards to produce audit-ready compliance documentation.",
+    objective: "Map all GRGF™ workflows against ISO governance, records management, cybersecurity, privacy-by-design, and DPI interoperability standards to produce audit-ready compliance documentation.",
     actions: [
       "Complete standards crosswalk against ISO 15489, ISO 27001, ISO 27701",
       "Map to OECD DPI Safeguards Framework and Privacy Guidelines",
@@ -193,7 +193,7 @@ const MODULES = [
     num: 7,
     title: "IP & Infrastructure Valuation",
     icon: <TrendingUp className="h-5 w-5" />,
-    objective: "Position GRGF as infrastructure-class intellectual property with defensible valuation narrative based on modular architecture, certification network effects, and long-horizon scaling assumptions.",
+    objective: "Position GRGF™ as infrastructure-class intellectual property with defensible valuation narrative based on modular architecture, certification network effects, and long-horizon scaling assumptions.",
     actions: [
       "Articulate proprietary methodology across 6 architectural layers",
       "Map certification ecosystem network effects and revenue logic",
@@ -265,7 +265,7 @@ export default function SubmissionReady() {
   return (
     <div>
       <SEOHead
-        title="GRGF — Institutional Submission-Ready Package | All-in-One Execution Dashboard"
+        title="GRGF™ — Institutional Submission-Ready Package | All-in-One Execution Dashboard"
         description="Complete 8-module institutional submission package: DPI demonstration, credibility signals, standards alignment, sovereign deployment, stakeholder engagement, training, IP valuation, and final submission materials."
       />
 
@@ -274,7 +274,7 @@ export default function SubmissionReady() {
         subtitle="Complete 8-module execution framework consolidating operational demonstration, institutional credibility, standards alignment, and sovereign deployment readiness into a unified submission-ready package for governments, multilateral institutions, regulators, and investors."
       >
         <div className="mt-4 flex flex-wrap gap-3 items-center">
-          <PDFExportButton filename="GRGF-Submission-Ready-Package" />
+          <PDFExportButton filename="GRGF™-Submission-Ready-Package" />
           <span className="text-xs font-mono text-muted-foreground">Classification: Institutional — Level 2</span>
         </div>
       </PageHeader>
@@ -442,7 +442,7 @@ export default function SubmissionReady() {
           </p>
           <blockquote className="border-l-4 border-accent pl-4 py-2">
             <p className="text-base font-serif font-semibold text-foreground italic">
-              "GRGF is fully operational, institutionally credible, standards-aligned, pilot-ready, sovereign-ready, and submission-ready."
+              "GRGF™ is fully operational, institutionally credible, standards-aligned, pilot-ready, sovereign-ready, and submission-ready."
             </p>
           </blockquote>
           <div className="mt-6 grid sm:grid-cols-3 gap-4">

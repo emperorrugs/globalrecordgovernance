@@ -1,4 +1,4 @@
-# GRGF Vision & Purpose
+# GRGF™ Vision & Purpose
 
 **Classification:** Public  
 **Version:** 1.0.0  
@@ -9,7 +9,7 @@
 
 ## Purpose
 
-The Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure designed to establish a verifiable, enduring record of institutional actions, decisions, and omissions.
+The Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public Infrastructure designed to establish a verifiable, enduring record of institutional actions, decisions, and omissions.
 
 ## The Governance Gap
 
@@ -23,7 +23,7 @@ Without a trust layer that preserves this evidence independently, governance cla
 
 ## Core Principle
 
-**GRGF exists to make governance provable, not rhetorical.**
+**GRGF™ exists to make governance provable, not rhetorical.**
 
 It does not interpret, score, or rank governance quality. It preserves factual records of institutional behavior — actions taken, decisions made, and obligations unmet — in a format that is:
 
@@ -34,16 +34,16 @@ It does not interpret, score, or rank governance quality. It preserves factual r
 
 ## Strategic Positioning
 
-GRGF occupies a unique position in the Digital Public Infrastructure landscape:
+GRGF™ occupies a unique position in the Digital Public Infrastructure landscape:
 
 | Layer | Function | Examples |
 |-------|----------|----------|
 | Layer 1 | Digital Identity | National ID, eID systems |
 | Layer 2 | Data Exchange | X-Road, MOSIP, registries |
-| **Layer 3** | **Governance Integrity** | **GRGF** |
+| **Layer 3** | **Governance Integrity** | **GRGF™** |
 | Layer 4 | Service Delivery | e-Government portals |
 
-GRGF is the missing **Layer 3** — the governance integrity registry that ensures institutional actions are recorded, preserved, and verifiable across time and administrations.
+GRGF™ is the missing **Layer 3** — the governance integrity registry that ensures institutional actions are recorded, preserved, and verifiable across time and administrations.
 
 ## Design Philosophy
 

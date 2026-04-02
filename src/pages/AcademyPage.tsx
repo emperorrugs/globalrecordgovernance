@@ -10,7 +10,7 @@ const certificationTiers = [
   {
     title: "Foundations Practitioner",
     icon: <BookOpen className="h-5 w-5" />,
-    description: "Entry-level certification for professionals seeking foundational understanding of GRGF governance principles, record lifecycle, and institutional integrity models.",
+    description: "Entry-level certification for professionals seeking foundational understanding of GRGF™ governance principles, record lifecycle, and institutional integrity models.",
     prerequisites: "None",
     assessment: "Written examination + practical case study",
     renewal: "Every 2 years",
@@ -19,7 +19,7 @@ const certificationTiers = [
   {
     title: "Practitioner",
     icon: <Award className="h-5 w-5" />,
-    description: "Mid-level certification for professionals implementing or auditing GRGF deployments. Requires demonstrated competency in governance operations and integrity verification.",
+    description: "Mid-level certification for professionals implementing or auditing GRGF™ deployments. Requires demonstrated competency in governance operations and integrity verification.",
     prerequisites: "Foundations Practitioner + 6 months institutional experience",
     assessment: "Practical examination + portfolio review + oral defense",
     renewal: "Every 2 years",
@@ -28,7 +28,7 @@ const certificationTiers = [
   {
     title: "Steward / Architect",
     icon: <Shield className="h-5 w-5" />,
-    description: "Senior-level certification for professionals responsible for institutional stewardship, system architecture, or governance oversight of GRGF deployments.",
+    description: "Senior-level certification for professionals responsible for institutional stewardship, system architecture, or governance oversight of GRGF™ deployments.",
     prerequisites: "Practitioner + 2 years institutional experience",
     assessment: "Architectural review + governance case study + institutional panel",
     renewal: "Every 3 years",
@@ -40,7 +40,7 @@ const AcademyPage = () => {
   return (
     <div className="animate-fade-in">
       <PageHeader
-        title="GRGF Academy"
+        title="GRGF™ Academy"
         subtitle="Professional standards body for governance record practitioners. Multi-tier certification with mandatory renewal, human-reviewed assessments, and formal revocation protocols."
       />
 
@@ -48,7 +48,7 @@ const AcademyPage = () => {
       <Section title="Academy Mission" className="border-b border-border">
         <div className="governance-card border-l-2 border-l-accent mb-6">
           <p className="text-sm text-foreground leading-relaxed">
-            The GRGF Academy exists to build and maintain a global community of certified governance record professionals. It ensures that institutional stewardship of the framework meets rigorous, independently verified standards of competence and ethical conduct.
+            The GRGF™ Academy exists to build and maintain a global community of certified governance record professionals. It ensures that institutional stewardship of the framework meets rigorous, independently verified standards of competence and ethical conduct.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const AcademyPage = () => {
       {/* Glossary */}
       <Section title="Governance Glossary" className="border-b border-border">
         <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-          Key terms used across the GRGF framework and certification curriculum. Understanding these terms is essential for all certification levels.
+          Key terms used across the GRGF™ framework and certification curriculum. Understanding these terms is essential for all certification levels.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           {[
@@ -123,10 +123,10 @@ const AcademyPage = () => {
             { term: "Policy Engine (OPA)", def: "An Open Policy Agent instance that evaluates governance events against codified policy rules, producing deterministic, auditable policy decisions." },
             { term: "CICE", def: "Continuous Compliance Evidence — attestations that provide ongoing proof of governance compliance, generated automatically from sealed event data." },
             { term: "Merkle Proof", def: "A cryptographic proof structure using a tree of hashes that enables efficient verification that a specific record exists within a larger dataset." },
-            { term: "Omission", def: "A governance action that was expected but did not occur. GRGF uniquely records and verifies omissions as governance events." },
+            { term: "Omission", def: "A governance action that was expected but did not occur. GRGF™ uniquely records and verifies omissions as governance events." },
             { term: "WORM Storage", def: "Write-Once Read-Many storage. Records written to WORM storage cannot be modified or deleted, ensuring long-term integrity." },
             { term: "Air-Gapped Pipeline", def: "A processing system physically or logically isolated from external networks. System B operates air-gapped to preserve document custody." },
-            { term: "Federation Node", def: "A sovereign deployment of GRGF that interoperates with the global network. Nodes are classified as Tier 1, Tier 2, or Observer." },
+            { term: "Federation Node", def: "A sovereign deployment of GRGF™ that interoperates with the global network. Nodes are classified as Tier 1, Tier 2, or Observer." },
             { term: "Verifiable Credential", def: "A W3C-standard digital credential that can be cryptographically verified by any party without contacting the issuer." },
             { term: "Anti-Capture Clause", def: "Structural safeguards (AC-01 through AC-05) that prevent any single entity from controlling or subverting the governance framework." },
           ].map(({ term, def }) => (
@@ -142,10 +142,10 @@ const AcademyPage = () => {
       <Section title="Standards & External References" className="border-b border-border bg-card/30">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { title: "W3C Verifiable Credentials", desc: "Standard for cryptographically verifiable digital credentials used in GRGF proof issuance." },
+            { title: "W3C Verifiable Credentials", desc: "Standard for cryptographically verifiable digital credentials used in GRGF™ proof issuance." },
             { title: "Open Policy Agent (OPA)", desc: "Policy-as-code engine used for deterministic governance policy evaluation in System A." },
             { title: "SHA-256 Cryptographic Hash", desc: "Industry-standard hash function used for record sealing and integrity verification." },
-            { title: "WCAG 2.2", desc: "Web Content Accessibility Guidelines ensuring GRGF platforms meet accessibility standards." },
+            { title: "WCAG 2.2", desc: "Web Content Accessibility Guidelines ensuring GRGF™ platforms meet accessibility standards." },
             { title: "Merkle Tree Proofs", desc: "Data structure enabling efficient and secure verification of record integrity within large datasets." },
             { title: "SCIM/SSO", desc: "Identity management standards used for institutional user provisioning and authentication." },
           ].map(({ title, desc }) => (

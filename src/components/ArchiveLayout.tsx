@@ -23,7 +23,7 @@ export function ArchiveLayout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 h-12 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="h-4 w-4" />
-            <span className="font-serif font-semibold text-foreground">GRGF</span>
+            <span className="font-serif font-semibold text-foreground">GRGF™</span>
             <span className="text-muted-foreground/50">·</span>
             <span className="text-xs">Digital Archive</span>
           </Link>
@@ -109,7 +109,7 @@ export function ArchiveLayout({ children }: { children: React.ReactNode }) {
                   </p>
                 </div>
                 <Link to="/" className="text-[10px] text-accent hover:underline font-mono uppercase tracking-wider">
-                  Return to GRGF ↗
+                  Return to GRGF™ ↗
                 </Link>
               </div>
             </div>

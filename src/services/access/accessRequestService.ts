@@ -1,5 +1,5 @@
 /**
- * GRGF Access Request Service
+ * GRGF™ Access Request Service
  * Handles institutional document access request submission,
  * validation, and audit logging.
  */

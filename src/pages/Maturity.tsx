@@ -30,7 +30,7 @@ const maturityData: Record<MaturityLevel, { effort: string; prerequisites: strin
     effort: "Moderate — integration with existing infrastructure",
     prerequisites: [
       "Assess existing DPI stack interoperability",
-      "Align data governance policies with GRGF requirements",
+      "Align data governance policies with GRGF™ requirements",
       "Conduct cybersecurity gap analysis",
       "Establish governance integrity working group",
     ],
@@ -58,12 +58,12 @@ const Maturity = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="Digital Maturity Comparator — GRGF"
-        description="Assess GRGF adaptation requirements based on current digital governance maturity level. Understand prerequisites, complexity, and recommended implementation phase."
+        title="Digital Maturity Comparator — GRGF™"
+        description="Assess GRGF™ adaptation requirements based on current digital governance maturity level. Understand prerequisites, complexity, and recommended implementation phase."
       />
       <PageHeader
         title="Digital Maturity Comparator"
-        subtitle="Evaluate the adaptation effort required for GRGF deployment based on your current digital governance maturity level."
+        subtitle="Evaluate the adaptation effort required for GRGF™ deployment based on your current digital governance maturity level."
       />
 
       <Section title="Select Maturity Level" className="border-t border-border">
@@ -121,7 +121,7 @@ const Maturity = () => {
           <AlertTriangle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
           <p className="text-xs text-muted-foreground leading-relaxed">
             <span className="font-semibold text-foreground">Planning Disclaimer.</span>{" "}
-            Maturity assessment is indicative. Formal readiness evaluation requires institutional assessment through the GRGF Recognition Framework.
+            Maturity assessment is indicative. Formal readiness evaluation requires institutional assessment through the GRGF™ Recognition Framework.
           </p>
         </div>
       </Section>

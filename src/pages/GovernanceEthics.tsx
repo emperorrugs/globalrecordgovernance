@@ -27,7 +27,7 @@ const riskFramework = [
   {
     id: "GRE-03",
     title: "Human Oversight Model",
-    desc: "Mandatory human accountability for all governance decisions. GRGF enforces encoded rules but does not make autonomous governance decisions.",
+    desc: "Mandatory human accountability for all governance decisions. GRGF™ enforces encoded rules but does not make autonomous governance decisions.",
     controls: [
       "Every governance action traceable to identifiable human authority",
       "No AI-based or probabilistic decision-making in governance logic",
@@ -156,13 +156,13 @@ const GovernanceEthics = () => (
     <Section title="Ethical Positioning Statement" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-3 font-medium">
-          GRGF's governance ethics framework operates on three foundational principles:
+          GRGF™'s governance ethics framework operates on three foundational principles:
         </p>
         <div className="space-y-3">
           {[
             { principle: "Structural Integrity", desc: "Ethics are embedded in architecture — not dependent on operator goodwill or regulatory pressure." },
             { principle: "Human Primacy", desc: "All governance authority derives from identifiable human decision-makers. No autonomous governance is permitted." },
-            { principle: "Reversible Adoption", desc: "Institutions can adopt, scale, or withdraw from GRGF without data lock-in or operational dependency." },
+            { principle: "Reversible Adoption", desc: "Institutions can adopt, scale, or withdraw from GRGF™ without data lock-in or operational dependency." },
           ].map(({ principle, desc }) => (
             <div key={principle}>
               <h4 className="text-xs font-mono text-accent/70 uppercase tracking-wider">{principle}</h4>

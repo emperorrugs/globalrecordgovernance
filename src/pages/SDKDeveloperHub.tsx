@@ -8,10 +8,10 @@ const SDKDeveloperHub = () => {
     {
       lang: "TypeScript / JavaScript",
       install: "npm install @grgf/sdk",
-      snippet: `import { GRGFClient } from '@grgf/sdk';
+      snippet: `import { GRGF™Client } from '@grgf/sdk';
 
-const client = new GRGFClient({
-  apiKey: process.env.GRGF_API_KEY,
+const client = new GRGF™Client({
+  apiKey: process.env.GRGF™_API_KEY,
   endpoint: 'https://api.grgf.gov',
 });
 
@@ -23,10 +23,10 @@ console.log(result.integrity.hash); // sha256:...`,
     {
       lang: "Python",
       install: "pip install grgf-sdk",
-      snippet: `from grgf import GRGFClient
+      snippet: `from grgf import GRGF™Client
 
-client = GRGFClient(
-    api_key=os.environ["GRGF_API_KEY"],
+client = GRGF™Client(
+    api_key=os.environ["GRGF™_API_KEY"],
     endpoint="https://api.grgf.gov"
 )
 
@@ -38,8 +38,8 @@ print(f"Hash: {result.integrity.hash}")`,
     {
       lang: "Java",
       install: "implementation 'io.grgf:sdk:1.0.0'",
-      snippet: `GRGFClient client = GRGFClient.builder()
-    .apiKey(System.getenv("GRGF_API_KEY"))
+      snippet: `GRGF™Client client = GRGF™Client.builder()
+    .apiKey(System.getenv("GRGF™_API_KEY"))
     .endpoint("https://api.grgf.gov")
     .build();
 
@@ -60,7 +60,7 @@ System.out.println(result.getIntegrity().getHash());`,
     <div className="animate-fade-in">
       <PageHeader
         title="Developer Hub"
-        subtitle="Everything needed to integrate GRGF verification into your systems. SDKs, APIs, schemas, and guides."
+        subtitle="Everything needed to integrate GRGF™ verification into your systems. SDKs, APIs, schemas, and guides."
       />
 
       {/* Quick Start */}
@@ -109,7 +109,7 @@ System.out.println(result.getIntegrity().getHash());`,
       <Section title="API Playground" className="border-t border-border">
         <div className="max-w-5xl">
           <p className="text-sm text-muted-foreground mb-6">
-            Test GRGF API endpoints directly in the browser. All responses use real SHA-256 hash computation in simulation mode.
+            Test GRGF™ API endpoints directly in the browser. All responses use real SHA-256 hash computation in simulation mode.
           </p>
           <APIPlayground />
         </div>
@@ -119,7 +119,7 @@ System.out.println(result.getIntegrity().getHash());`,
       <Section title="API Versioning Policy" className="border-t border-border">
         <div className="max-w-3xl">
           <p className="text-sm text-muted-foreground mb-4">
-            GRGF follows strict semantic versioning with explicit deprecation timelines. Enterprise clients receive minimum 18-month migration windows.
+            GRGF™ follows strict semantic versioning with explicit deprecation timelines. Enterprise clients receive minimum 18-month migration windows.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs">

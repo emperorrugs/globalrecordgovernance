@@ -74,7 +74,7 @@ const InstitutionalReadinessBanner = () => (
             GC & World Bank Compliance Status
           </h2>
           <p className="text-sm text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-            GRGF is designed to support alignment with Government of Canada federal standards and World Bank
+            GRGF™ is designed to support alignment with Government of Canada federal standards and World Bank
             institutional governance requirements. All compliance mappings are publicly documented and independently verifiable.
           </p>
         </FadeIn>

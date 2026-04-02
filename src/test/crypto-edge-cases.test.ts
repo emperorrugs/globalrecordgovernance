@@ -1,5 +1,5 @@
 /**
- * GRGF Crypto Edge Case Tests
+ * GRGF™ Crypto Edge Case Tests
  * Tests boundary conditions, Unicode handling, large payloads,
  * and adversarial inputs for the cryptographic module.
  */

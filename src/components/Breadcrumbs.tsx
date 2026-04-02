@@ -70,7 +70,7 @@ export function Breadcrumbs() {
     <nav aria-label="Breadcrumb" className="text-xs text-muted-foreground">
       <ol className="flex items-center gap-1.5 font-mono tracking-wide">
         <li>
-          <Link to="/" className="hover:text-foreground transition-colors">GRGF</Link>
+          <Link to="/" className="hover:text-foreground transition-colors">GRGF™</Link>
         </li>
         <li><ChevronRight className="h-3 w-3" /></li>
         <li className="text-foreground font-medium truncate max-w-[200px]">{label}</li>

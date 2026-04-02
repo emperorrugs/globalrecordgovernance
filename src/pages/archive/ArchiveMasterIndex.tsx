@@ -29,7 +29,7 @@ const masterIndex: IndexSection[] = [
   {
     code: "01", title: "Vision & Foundations", link: "/archive/public",
     items: [
-      { id: "VF-001", title: "GRGF Vision & Purpose" },
+      { id: "VF-001", title: "GRGF™ Vision & Purpose" },
       { id: "VF-002", title: "Governance Philosophy" },
       { id: "VF-003", title: "DPI Trust Layer Concept" },
       { id: "VF-004", title: "Actions & Omissions Framework" },
@@ -169,10 +169,10 @@ const ArchiveMasterIndex = () => (
       <div className="max-w-4xl">
         <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Master Index</p>
         <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">
-          GRGF Digital Archive — Master Index
+          GRGF™ Digital Archive — Master Index
         </h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Complete index of all governance documents, architectures, policies, and reference materials within the GRGF Digital Archive. Click any document to view its full content in the relevant stakeholder section.
+          Complete index of all governance documents, architectures, policies, and reference materials within the GRGF™ Digital Archive. Click any document to view its full content in the relevant stakeholder section.
         </p>
         <div className="section-divider mt-6" />
       </div>

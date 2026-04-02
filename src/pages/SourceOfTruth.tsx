@@ -88,7 +88,7 @@ const SourceOfTruth = () => {
       <Section title="This Application Exists For" className="border-t border-border">
         <div className="space-y-3 max-w-2xl">
           {[
-            "Demonstration — showing how the GRGF framework operates",
+            "Demonstration — showing how the GRGF™ framework operates",
             "Training — helping practitioners understand governance workflows",
             "Review support — enabling auditors and institutions to evaluate the framework",
             "Public reference — providing clear, citable explanations of governance architecture",

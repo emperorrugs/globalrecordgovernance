@@ -125,7 +125,7 @@ export default function RecordSubmissionAnimation({ result, onViewRecord, onCrea
           </div>
 
           <p className="text-xs text-center text-muted-foreground mt-4 italic">
-            GRGF does not interpret reality. It records it — immutably.
+            GRGF™ does not interpret reality. It records it — immutably.
           </p>
 
           <div className="flex gap-3 justify-center mt-6">

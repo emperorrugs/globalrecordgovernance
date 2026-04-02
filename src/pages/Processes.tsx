@@ -14,7 +14,7 @@ const processes = [
   },
   {
     title: "Integrity & Hashing",
-    description: "Record integrity is maintained through SHA-256 cryptographic hashing. The resulting hash serves as a permanent, independently verifiable proof that the record has not been altered since sealing. Hash verification requires no access to GRGF systems — any party can verify independently.",
+    description: "Record integrity is maintained through SHA-256 cryptographic hashing. The resulting hash serves as a permanent, independently verifiable proof that the record has not been altered since sealing. Hash verification requires no access to GRGF™ systems — any party can verify independently.",
     icon: <ShieldCheck className="h-5 w-5" />,
   },
   {
@@ -24,7 +24,7 @@ const processes = [
   },
   {
     title: "Certification & Renewal",
-    description: "Institutional operators, auditors, and administrators undergo structured certification to ensure competent stewardship of GRGF deployments. Certifications are time-limited and require periodic renewal through re-assessment and continued professional development.",
+    description: "Institutional operators, auditors, and administrators undergo structured certification to ensure competent stewardship of GRGF™ deployments. Certifications are time-limited and require periodic renewal through re-assessment and continued professional development.",
     icon: <Award className="h-5 w-5" />,
   },
   {
@@ -44,7 +44,7 @@ const Processes = () => {
 
       <Section>
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          GRGF processes prioritize clarity, auditability, and institutional durability over
+          GRGF™ processes prioritize clarity, auditability, and institutional durability over
           automation. Each process is documented as a governance protocol — not a software workflow.
           The sequence and separation of these processes is deliberate: each stage must be
           independently verifiable and resistant to circumvention.

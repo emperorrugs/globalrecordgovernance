@@ -28,7 +28,7 @@ const stakeholders = [
     riskExposure: "Incomplete audit coverage, undetectable record gaps, and inability to verify evidence integrity without trusting the audited entity.",
     mechanism: "Pre-verified, cryptographically sealed audit trails with continuous compliance evidence, eliminating manual reconciliation.",
     outcome: "20–40% audit cycle reduction, 100% audit trail completeness, independent verification capability.",
-    entryAction: "Conduct parallel audit trial: verify one governance process through both traditional and GRGF-assisted methods.",
+    entryAction: "Conduct parallel audit trial: verify one governance process through both traditional and GRGF™-assisted methods.",
   },
   {
     icon: Landmark,
@@ -37,7 +37,7 @@ const stakeholders = [
     riskExposure: "5–15% systemic procurement leakage. Inability to detect omissions in financial governance processes.",
     mechanism: "Continuous omission detection and deterministic policy enforcement across procurement and financial governance workflows.",
     outcome: "Quantifiable fiscal risk mitigation. Even 0.3% integrity improvement offsets deployment cost.",
-    entryAction: "Commission fiscal impact assessment using national procurement expenditure data and GRGF mitigation modeling.",
+    entryAction: "Commission fiscal impact assessment using national procurement expenditure data and GRGF™ mitigation modeling.",
   },
   {
     icon: Scale,
@@ -104,7 +104,7 @@ const StakeholderSolutions = () => (
                     <p className="text-xs text-muted-foreground leading-relaxed">{s.riskExposure}</p>
                   </div>
                   <div>
-                    <p className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-1">GRGF Mechanism</p>
+                    <p className="text-[10px] font-mono text-accent/70 uppercase tracking-wider mb-1">GRGF™ Mechanism</p>
                     <p className="text-xs text-muted-foreground leading-relaxed">{s.mechanism}</p>
                   </div>
                   <div>

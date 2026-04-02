@@ -1,5 +1,5 @@
 /**
- * GRGF Verification Service Tests
+ * GRGF™ Verification Service Tests
  * Tests record integrity verification, public verification logic,
  * tamper detection, and status-based verification outcomes.
  */

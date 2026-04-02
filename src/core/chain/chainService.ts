@@ -1,5 +1,5 @@
 /**
- * GRGF Chain Validation Engine
+ * GRGF™ Chain Validation Engine
  * Validates append-only chain integrity by verifying hash linkage.
  */
 
@@ -60,7 +60,7 @@ export function validateChain(records: ChainLink[]): ChainValidationResult {
 /** Generate a Merkle-style anchor batch ID */
 export function generateAnchorBatchId(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  let id = 'GRGF-ANCHOR-';
+  let id = 'GRGF™-ANCHOR-';
   for (let i = 0; i < 8; i++) {
     id += chars.charAt(Math.floor(Math.random() * chars.length));
   }

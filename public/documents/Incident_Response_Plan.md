@@ -1,4 +1,4 @@
-# GRGF DPI – Incident Response Plan
+# GRGF™ DPI – Incident Response Plan
 ## Severity Levels
 Low, Medium, High, Critical.
 

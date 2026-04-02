@@ -24,42 +24,42 @@ const DEMO_RESULTS: Record<string, {
     reason: "The action was taken within mandated authority and within the required timeframe. Record sealed.",
     techReason: "Action validated against GOS Rule 4.2. Authority scope confirmed. Record hash-sealed with SHA-256 integrity proof.",
     evidence: "Record exists — SHA-256 integrity verified",
-    json: { record_id: "GRGF-SIM-0042", status: "APPROVED", hash: "a7f3c2...f6a8", sealed_at: "2024-06-15T14:30:00Z", authority: "Ministry of Finance", rule: "GOS-4.2" },
+    json: { record_id: "GRGF™-SIM-0042", status: "APPROVED", hash: "a7f3c2...f6a8", sealed_at: "2024-06-15T14:30:00Z", authority: "Ministry of Finance", rule: "GOS-4.2" },
   },
   "Procurement Action": {
     decision: "approved",
     reason: "Procurement request complied with governance requirements. Record created and sealed.",
     techReason: "Procurement validated against classification taxonomy. Dual-authority sign-off confirmed. Archive entry created.",
     evidence: "Record exists — SHA-256 integrity verified",
-    json: { record_id: "GRGF-SIM-0043", status: "APPROVED", hash: "b8e4d3...a3b5", sealed_at: "2024-06-15T14:32:00Z", category: "PROCUREMENT", compliance: true },
+    json: { record_id: "GRGF™-SIM-0043", status: "APPROVED", hash: "b8e4d3...a3b5", sealed_at: "2024-06-15T14:32:00Z", category: "PROCUREMENT", compliance: true },
   },
   "Regulatory Filing": {
     decision: "denied",
     reason: "The filing did not meet mandatory requirements. Non-compliance documented and sealed.",
     techReason: "Filing rejected per Section 7.3 — missing mandatory disclosure fields. Non-compliance record hash-sealed.",
     evidence: "Record exists — non-compliance documented",
-    json: { record_id: "GRGF-SIM-0044", status: "DENIED", hash: "c9f5e4...b4c6", sealed_at: "2024-06-15T14:35:00Z", violation: "Section 7.3", missing_fields: ["disclosure_statement", "authority_signature"] },
+    json: { record_id: "GRGF™-SIM-0044", status: "DENIED", hash: "c9f5e4...b4c6", sealed_at: "2024-06-15T14:35:00Z", violation: "Section 7.3", missing_fields: ["disclosure_statement", "authority_signature"] },
   },
   "Omission Event": {
     decision: "omission",
     reason: "A required action was not taken within the mandated timeframe. The absence itself has been recorded as an event.",
     techReason: "GOS Rule 6.1 deadline monitoring triggered. No action record filed by deadline. Omission event created and hash-sealed for audit trail.",
     evidence: "No verifiable action record exists — omission recorded",
-    json: { record_id: "GRGF-SIM-0045", status: "OMISSION", hash: "d0a6f5...c5d7", sealed_at: "2024-06-15T14:40:00Z", obligation: "Annual safety inspection", deadline: "2024-03-31", action_taken: false },
+    json: { record_id: "GRGF™-SIM-0045", status: "OMISSION", hash: "d0a6f5...c5d7", sealed_at: "2024-06-15T14:40:00Z", obligation: "Annual safety inspection", deadline: "2024-03-31", action_taken: false },
   },
   "Judicial Ruling": {
     decision: "approved",
     reason: "Judicial ruling recorded as an institutional action. Record preserved and sealed.",
     techReason: "Judicial action classified under institutional record taxonomy. Version lineage initiated. SHA-256 sealed.",
     evidence: "Record exists — SHA-256 integrity verified",
-    json: { record_id: "GRGF-SIM-0046", status: "APPROVED", hash: "e1b7g6...d6e8", sealed_at: "2024-06-15T14:45:00Z", court: "Federal Court", case_ref: "FC-2024-1182" },
+    json: { record_id: "GRGF™-SIM-0046", status: "APPROVED", hash: "e1b7g6...d6e8", sealed_at: "2024-06-15T14:45:00Z", court: "Federal Court", case_ref: "FC-2024-1182" },
   },
   "Audit Report": {
     decision: "approved",
     reason: "Audit report submitted within governance requirements. Record sealed.",
     techReason: "Audit record validated. Compliance with GOS Audit Protocol confirmed. Archive entry hash-sealed.",
     evidence: "Record exists — SHA-256 integrity verified",
-    json: { record_id: "GRGF-SIM-0047", status: "APPROVED", hash: "f2c8h7...e7f9", sealed_at: "2024-06-15T14:50:00Z", auditor: "OAG-National", scope: "FY2023-Q4" },
+    json: { record_id: "GRGF™-SIM-0047", status: "APPROVED", hash: "f2c8h7...e7f9", sealed_at: "2024-06-15T14:50:00Z", auditor: "OAG-National", scope: "FY2023-Q4" },
   },
 };
 
@@ -98,7 +98,7 @@ const Simulator = () => {
       <PageHeader
         title="Live Simulator"
         subtitle={isPlain
-          ? "See how GRGF processes a governance event — try it yourself with sample data."
+          ? "See how GRGF™ processes a governance event — try it yourself with sample data."
           : "Demonstration-only governance workflow visualisation. No real data is processed or recorded."
         }
       >
@@ -243,7 +243,7 @@ const Simulator = () => {
             <span className="font-semibold text-foreground">Disclaimer.</span> This simulator is
             provided for demonstration and educational purposes only. No data entered is
             recorded, transmitted, or stored. No governance action visualised here constitutes
-            an authoritative GRGF record.
+            an authoritative GRGF™ record.
           </p>
         </div>
       </Section>

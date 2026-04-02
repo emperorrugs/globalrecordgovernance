@@ -44,12 +44,12 @@ const pillars = [
     color: "border-l-accent",
     accent: "text-accent",
     bg: "bg-accent/5",
-    description: "Any party can independently verify record integrity without requiring trust in GRGF systems. Public hash manifests enable cryptographic proof of non-tampering.",
+    description: "Any party can independently verify record integrity without requiring trust in GRGF™ systems. Public hash manifests enable cryptographic proof of non-tampering.",
     details: [
       "SHA-256 cryptographic integrity proofs generated at seal time",
       "Public hash manifest published for independent verification",
       "Audit reconstruction achievable in under 30 minutes",
-      "No GRGF system access required for verification — fully independent",
+      "No GRGF™ system access required for verification — fully independent",
     ],
   },
   {
@@ -157,7 +157,7 @@ export default function Framework() {
             </div>
             <div className="space-y-4">
               <blockquote className="text-lg md:text-xl font-serif text-foreground leading-relaxed border-l-2 border-accent pl-6">
-                "GRGF exists to provide a durable, neutral infrastructure for the recording and preservation
+                "GRGF™ exists to provide a durable, neutral infrastructure for the recording and preservation
                 of institutional actions, decisions, and omissions — serving as a trust layer that institutions,
                 courts, and auditors can rely upon over decades."
               </blockquote>
@@ -265,7 +265,7 @@ export default function Framework() {
               </div>
               <div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Every institutional record exists within three governance dimensions. GRGF ensures
+                  Every institutional record exists within three governance dimensions. GRGF™ ensures
                   each is captured, preserved, and independently verifiable.
                 </p>
                 <div className="grid sm:grid-cols-3 gap-4">

@@ -107,7 +107,7 @@ const risks = [
   { risk: "Institutional resistance to governance transparency", likelihood: "Medium", impact: "High", mitigation: "Phased rollout with single ministry pilot. Executive sponsorship required before scaling.", residual: "Low" },
   { risk: "Policy misencoding leading to incorrect enforcement", likelihood: "Low", impact: "Critical", mitigation: "Dual review (legal + technical). Test environment validation. Periodic review cycles.", residual: "Very Low" },
   { risk: "Overcomplex rollout exceeding institutional capacity", likelihood: "Medium", impact: "Medium", mitigation: "Minimum viable pilot scope. 3–5 decision types only. 90-day bounded engagement.", residual: "Low" },
-  { risk: "Political misunderstanding of framework purpose", likelihood: "Medium", impact: "High", mitigation: "Clear positioning: GRGF records — it does not replace decision authority. Stakeholder briefings.", residual: "Medium" },
+  { risk: "Political misunderstanding of framework purpose", likelihood: "Medium", impact: "High", mitigation: "Clear positioning: GRGF™ records — it does not replace decision authority. Stakeholder briefings.", residual: "Medium" },
   { risk: "Security misconfiguration during deployment", likelihood: "Low", impact: "Critical", mitigation: "Security validation phase in pilot. Independent penetration testing pre-production.", residual: "Very Low" },
   { risk: "Vendor dependency or lock-in concerns", likelihood: "Low", impact: "Medium", mitigation: "Open standards. Exportable records. No proprietary formats. AC-02 enforcement.", residual: "Very Low" },
 ];
@@ -225,14 +225,14 @@ const InstitutionalReadiness = () => (
     <Section title="Exit & Reversibility Policy" className="border-t border-border">
       <div className="governance-card border-l-2 border-l-accent">
         <p className="text-sm text-foreground leading-relaxed mb-4 font-medium">
-          Institutions can adopt, scale, or withdraw from GRGF without data lock-in or operational dependency.
+          Institutions can adopt, scale, or withdraw from GRGF™ without data lock-in or operational dependency.
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
             { title: "Modular Architecture", desc: "Components can be independently adopted, replaced, or decommissioned without affecting other system layers." },
             { title: "Exportable Records", desc: "All governance records stored in standardized, non-proprietary formats. Full export capability is an architectural requirement." },
             { title: "No Vendor Lock-In", desc: "Open standards, documented APIs, and standardized schemas. No proprietary technology dependencies (AC-02)." },
-            { title: "Reversibility Pathway", desc: "Documented process for reverting to pre-GRGF governance workflows with complete data return." },
+            { title: "Reversibility Pathway", desc: "Documented process for reverting to pre-GRGF™ governance workflows with complete data return." },
             { title: "Controlled Decommissioning", desc: "Formal decommissioning process ensures record integrity, data portability, and audit trail preservation." },
             { title: "Sovereignty Preserved", desc: "National policy authority retained at all times. Withdrawal from federation permitted without data loss." },
           ].map(({ title, desc }) => (
@@ -250,7 +250,7 @@ const InstitutionalReadiness = () => (
       <div className="governance-card">
         <div className="grid gap-3 sm:grid-cols-2">
           {[
-            "GRGF does not inherently store personal data — it stores structured governance events",
+            "GRGF™ does not inherently store personal data — it stores structured governance events",
             "Privacy-by-design: public verification exposes no personal or classified information",
             "Data minimization: only governance-relevant metadata is captured",
             "Data sovereignty preserved: jurisdictional hosting under institutional control",

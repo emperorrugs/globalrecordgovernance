@@ -51,7 +51,7 @@ function AppCard({ app }: { app: ApplicationDetail }) {
               <p className="text-xs text-muted-foreground leading-relaxed">{app.problem}</p>
             </div>
             <div className="p-3 rounded-lg bg-primary/5 border border-primary/15">
-              <p className="text-[9px] font-mono text-primary uppercase mb-1.5">GRGF Mechanism</p>
+              <p className="text-[9px] font-mono text-primary uppercase mb-1.5">GRGF™ Mechanism</p>
               <p className="text-xs text-muted-foreground leading-relaxed">{app.mechanism}</p>
             </div>
           </div>
@@ -99,7 +99,7 @@ function AppCard({ app }: { app: ApplicationDetail }) {
                   </div>
                   <div className="p-2.5 rounded border border-primary/15 bg-primary/5">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="text-[8px] font-mono text-primary uppercase">After GRGF</span>
+                      <span className="text-[8px] font-mono text-primary uppercase">After GRGF™</span>
                       <span className="text-[8px] font-mono px-1 py-0.5 rounded bg-primary/10 text-primary">{w.timeAfter}</span>
                     </div>
                     <p className="text-[11px] text-foreground leading-relaxed">{w.after}</p>
@@ -223,7 +223,7 @@ export default function PublicApplications() {
         </h1>
         <p className="text-body-lg text-muted-foreground leading-relaxed">
           Each application includes detailed workflow transformations, integration architecture,
-          impact metrics, and financial value — all powered by the same GRGF core engine.
+          impact metrics, and financial value — all powered by the same GRGF™ core engine.
         </p>
       </div>
 

@@ -95,9 +95,9 @@ const complianceMatrix = [
     standard: "ISO 42001",
     title: "AI Management System",
     mappings: [
-      { control: "4.1 — Context of the Organization", alignment: "GRGF uses no AI for governance decisions. All logic is deterministic and rule-based." },
+      { control: "4.1 — Context of the Organization", alignment: "GRGF™ uses no AI for governance decisions. All logic is deterministic and rule-based." },
       { control: "6.1 — Risk Assessment", alignment: "Threat model addresses six primary attack vectors with documented mitigations." },
-      { control: "8.4 — AI System Operation", alignment: "Not applicable — GRGF explicitly rejects probabilistic or AI-based decision logic." },
+      { control: "8.4 — AI System Operation", alignment: "Not applicable — GRGF™ explicitly rejects probabilistic or AI-based decision logic." },
       { control: "9.1 — Monitoring & Measurement", alignment: "Continuous integrity monitoring with hash-chain validation and anomaly detection." },
     ],
   },
@@ -130,7 +130,7 @@ const complianceMatrix = [
       { control: "Transparency & Explainability", alignment: "All policy decisions produce machine-readable and human-readable explanations." },
       { control: "Robustness & Security", alignment: "Zero Trust architecture with no centralized override and tamper-evident sealing." },
       { control: "Accountability", alignment: "Every action, denial, and omission is logged, sealed, and independently verifiable." },
-      { control: "Human-Centred Values", alignment: "GRGF enforces human authority. No automated decision-making without human authorization." },
+      { control: "Human-Centred Values", alignment: "GRGF™ enforces human authority. No automated decision-making without human authorization." },
     ],
   },
   {
@@ -158,7 +158,7 @@ const complianceMatrix = [
     standard: "EU AI Act",
     title: "Artificial Intelligence Regulation",
     mappings: [
-      { control: "Art. 6 — Risk Classification", alignment: "GRGF uses no AI for governance decisions. Deterministic logic eliminates high-risk AI classification concerns." },
+      { control: "Art. 6 — Risk Classification", alignment: "GRGF™ uses no AI for governance decisions. Deterministic logic eliminates high-risk AI classification concerns." },
       { control: "Art. 13 — Transparency", alignment: "All policy decisions produce machine-readable explanations. No opaque algorithmic decision-making." },
       { control: "Art. 14 — Human Oversight", alignment: "Human authority required for all governance actions. No automated override capability." },
       { control: "Art. 15 — Accuracy & Robustness", alignment: "Deterministic enforcement ensures identical inputs always produce identical outputs. Cryptographically verifiable." },
@@ -186,7 +186,7 @@ const StandardsCompliance = () => (
     <Section>
       <div className="governance-card border-l-2 border-l-accent mb-8">
         <p className="text-sm text-foreground leading-relaxed">
-          GRGF is designed to align with established international standards for information security, records management, governance, AI management, and digital public infrastructure. The following mappings demonstrate conceptual alignment — not certification claims.
+          GRGF™ is designed to align with established international standards for information security, records management, governance, AI management, and digital public infrastructure. The following mappings demonstrate conceptual alignment — not certification claims.
         </p>
       </div>
       <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6 mb-8">
@@ -207,14 +207,14 @@ const StandardsCompliance = () => (
           <span className="text-xs font-mono font-semibold text-foreground">OECD Privacy Guidelines × GDPR × ISO/IEC 27001 × ISO 15489</span>
         </div>
         <p className="text-xs text-muted-foreground leading-relaxed">
-          This matrix maps each GRGF capability to four international regulatory and standards frameworks simultaneously, identifying the specific governance risk each alignment addresses.
+          This matrix maps each GRGF™ capability to four international regulatory and standards frameworks simultaneously, identifying the specific governance risk each alignment addresses.
         </p>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full text-xs border-collapse">
           <thead>
             <tr className="border-b-2 border-border">
-              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[180px]">GRGF Feature</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[180px]">GRGF™ Feature</th>
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[140px]">OECD Principle</th>
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[160px]">GDPR Article</th>
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[140px]">ISO/IEC 27001</th>

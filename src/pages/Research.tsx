@@ -27,9 +27,9 @@ const Research = () => (
       <h2 className="institutional-heading text-heading-1 font-semibold mb-10">Foundational Documents</h2>
       <div className="space-y-4">
         {[
-          { title: "GRGF Master Binder v1.0", type: "Authoritative Reference", date: "January 2026", desc: "Definitive institutional submission covering architecture, security, governance, deployment, financial, compliance, legal, and ethics frameworks.", classification: "Controlled Distribution" },
+          { title: "GRGF™ Master Binder v1.0", type: "Authoritative Reference", date: "January 2026", desc: "Definitive institutional submission covering architecture, security, governance, deployment, financial, compliance, legal, and ethics frameworks.", classification: "Controlled Distribution" },
           { title: "Data Flow Architecture — Technical Specification", type: "Technical Standard", date: "January 2026", desc: "Comprehensive data flow diagrams, event normalization schemas, and system integration specifications for institutional deployment.", classification: "Public" },
-          { title: "Threat Model — STRIDE Analysis", type: "Security Assessment", date: "January 2026", desc: "Full STRIDE-based threat modeling of the GRGF architecture including mitigation strategies and residual risk analysis.", classification: "Controlled Distribution" },
+          { title: "Threat Model — STRIDE Analysis", type: "Security Assessment", date: "January 2026", desc: "Full STRIDE-based threat modeling of the GRGF™ architecture including mitigation strategies and residual risk analysis.", classification: "Controlled Distribution" },
           { title: "Privacy Impact Assessment", type: "Compliance Document", date: "January 2026", desc: "Privacy-by-design analysis covering data minimization, role-based disclosure, and jurisdictional compliance requirements.", classification: "Public" },
           { title: "Feasibility Study — Global DPI Governance", type: "Policy Paper", date: "January 2026", desc: "Economic and institutional feasibility analysis for sovereign-grade governance integrity infrastructure at national and international scale.", classification: "Public" },
           { title: "Valuation Scenarios — 5-Year Projection", type: "Financial Analysis", date: "January 2026", desc: "Multi-scenario financial projection modelling institutional adoption pathways and federation economics over a 5-year horizon.", classification: "Controlled Distribution" },
@@ -71,7 +71,7 @@ const Research = () => (
           { title: "Governance Integrity Metrics", desc: "Developing quantitative frameworks for measuring institutional governance integrity, policy determinism rates, and audit reconstruction efficiency." },
           { title: "Cross-Border Federation Economics", desc: "Analysing the economic models and institutional incentives underlying international governance infrastructure federation." },
           { title: "Omission Detection Methodology", desc: "Advancing the theoretical and technical foundations for structurally detecting and recording institutional omissions." },
-          { title: "DPI Governance Standards Harmonization", desc: "Mapping GRGF standards to existing national and international DPI governance frameworks for interoperability alignment." },
+          { title: "DPI Governance Standards Harmonization", desc: "Mapping GRGF™ standards to existing national and international DPI governance frameworks for interoperability alignment." },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card-elevated">
             <BookOpen className="h-5 w-5 text-accent mb-3" />

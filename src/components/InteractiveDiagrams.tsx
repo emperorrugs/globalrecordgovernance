@@ -216,8 +216,8 @@ function PillarsDiagram() {
       <h3 className="font-serif text-lg font-semibold text-foreground">Six Framework Pillars</h3>
       <p className="text-xs text-muted-foreground">
         {isPlain
-          ? "The six foundational pillars that make up the GRGF architecture. Click any pillar for details."
-          : "Structural decomposition of the GRGF into six orthogonal capability domains. Each pillar is independently auditable."}
+          ? "The six foundational pillars that make up the GRGF™ architecture. Click any pillar for details."
+          : "Structural decomposition of the GRGF™ into six orthogonal capability domains. Each pillar is independently auditable."}
       </p>
 
       <div className="bg-card border border-border rounded-lg p-6">
@@ -317,7 +317,7 @@ export function InteractiveDiagrams() {
           <p className="text-overline font-mono text-accent tracking-widest">INTERACTIVE DIAGRAMS</p>
           <h2 className="font-serif text-2xl font-bold text-foreground">Architecture & Data Flow Visualizations</h2>
           <p className="text-xs text-muted-foreground max-w-2xl">
-            Interactive visual representations of the GRGF system architecture, data flows, and security model. Click elements to explore details.
+            Interactive visual representations of the GRGF™ system architecture, data flows, and security model. Click elements to explore details.
           </p>
         </div>
       </FadeIn>

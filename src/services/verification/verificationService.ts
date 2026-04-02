@@ -1,5 +1,5 @@
 /**
- * GRGF Verification Service
+ * GRGF™ Verification Service
  * Independent record verification — both internal and public.
  */
 

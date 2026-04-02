@@ -1,11 +1,11 @@
 import type { Language } from "@/contexts/LanguageContext";
 
 export const aboutTranslations: Record<string, Record<Language, string>> = {
-  "about.title": { en: "About GRGF", fr: "À propos du GRGF", ar: "حول GRGF" },
+  "about.title": { en: "About GRGF™", fr: "À propos du GRGF™", ar: "حول GRGF™" },
   "about.subtitle": {
-    en: "Why record governance matters — and what GRGF is designed to solve.",
-    fr: "Pourquoi la gouvernance des registres est importante — et ce que le GRGF est conçu pour résoudre.",
-    ar: "لماذا تهم حوكمة السجلات — وما الذي صُمم GRGF لحلّه.",
+    en: "Why record governance matters — and what GRGF™ is designed to solve.",
+    fr: "Pourquoi la gouvernance des registres est importante — et ce que le GRGF™ est conçu pour résoudre.",
+    ar: "لماذا تهم حوكمة السجلات — وما الذي صُمم GRGF™ لحلّه.",
   },
   "about.why_title": { en: "Why Record Governance Matters", fr: "Pourquoi la gouvernance des registres est importante", ar: "لماذا تهم حوكمة السجلات" },
   "about.why_p1": {
@@ -14,11 +14,11 @@ export const aboutTranslations: Record<string, Record<Language, string>> = {
     ar: "تعتمد الثقة المؤسسية على سجلات قابلة للتحقق. عندما لا تُسجَّل إجراءات الحوكمة وتُنسَّخ وتُدقَّق بشكل صحيح، تظهر فجوات المساءلة. القرارات لا تُوثَّق. الإغفالات لا تُلاحَظ. تصبح الرقابة العامة مستحيلة.",
   },
   "about.why_p2": {
-    en: "GRGF addresses this by defining a universal governance standard for how institutional records should be created, preserved, and independently verified — across jurisdictions, political cycles, and technological platforms.",
-    fr: "Le GRGF répond à cela en définissant une norme universelle de gouvernance pour la création, la préservation et la vérification indépendante des registres institutionnels — à travers les juridictions, les cycles politiques et les plateformes technologiques.",
-    ar: "يعالج GRGF هذا من خلال تحديد معيار حوكمة عالمي لكيفية إنشاء السجلات المؤسسية وحفظها والتحقق منها بشكل مستقل — عبر الولايات القضائية والدورات السياسية والمنصات التقنية.",
+    en: "GRGF™ addresses this by defining a universal governance standard for how institutional records should be created, preserved, and independently verified — across jurisdictions, political cycles, and technological platforms.",
+    fr: "Le GRGF™ répond à cela en définissant une norme universelle de gouvernance pour la création, la préservation et la vérification indépendante des registres institutionnels — à travers les juridictions, les cycles politiques et les plateformes technologiques.",
+    ar: "يعالج GRGF™ هذا من خلال تحديد معيار حوكمة عالمي لكيفية إنشاء السجلات المؤسسية وحفظها والتحقق منها بشكل مستقل — عبر الولايات القضائية والدورات السياسية والمنصات التقنية.",
   },
-  "about.problems_title": { en: "Problems GRGF Addresses", fr: "Problèmes que le GRGF traite", ar: "المشكلات التي يعالجها GRGF" },
+  "about.problems_title": { en: "Problems GRGF™ Addresses", fr: "Problèmes que le GRGF™ traite", ar: "المشكلات التي يعالجها GRGF™" },
   "about.fragmentation_title": { en: "Record Fragmentation", fr: "Fragmentation des registres", ar: "تجزئة السجلات" },
   "about.fragmentation_desc": {
     en: "Governance records scattered across incompatible systems, formats, and jurisdictions — making audit and verification difficult or impossible.",
@@ -43,7 +43,7 @@ export const aboutTranslations: Record<string, Record<Language, string>> = {
     fr: "La plupart des systèmes de gouvernance n'enregistrent que ce qui s'est passé. Les actions requises qui n'ont jamais été prises restent invisibles pour la responsabilité publique.",
     ar: "تسجل معظم أنظمة الحوكمة فقط ما حدث. الإجراءات المطلوبة التي لم تُتخذ أبداً تبقى غير مرئية للمساءلة العامة.",
   },
-  "about.who_title": { en: "Who GRGF Is Designed For", fr: "À qui s'adresse le GRGF", ar: "لمن صُمم GRGF" },
+  "about.who_title": { en: "Who GRGF™ Is Designed For", fr: "À qui s'adresse le GRGF™", ar: "لمن صُمم GRGF™" },
   "about.gov_title": { en: "Governments", fr: "Gouvernements", ar: "الحكومات" },
   "about.gov_desc": {
     en: "National and subnational administrations seeking auditable governance infrastructure.",
@@ -70,9 +70,9 @@ export const aboutTranslations: Record<string, Record<Language, string>> = {
   },
   "about.scope_title": { en: "Scope and Neutrality", fr: "Portée et neutralité", ar: "النطاق والحياد" },
   "about.scope_p1": {
-    en: "GRGF is designed to support, not replace, existing institutional systems.",
-    fr: "Le GRGF est conçu pour soutenir, et non remplacer, les systèmes institutionnels existants.",
-    ar: "صُمم GRGF لدعم الأنظمة المؤسسية القائمة وليس لاستبدالها.",
+    en: "GRGF™ is designed to support, not replace, existing institutional systems.",
+    fr: "Le GRGF™ est conçu pour soutenir, et non remplacer, les systèmes institutionnels existants.",
+    ar: "صُمم GRGF™ لدعم الأنظمة المؤسسية القائمة وليس لاستبدالها.",
   },
   "about.scope_p2": {
     en: "The framework operates as neutral governance infrastructure. It does not interpret record content, enforce compliance, evaluate institutional performance, or rank jurisdictions. Its value derives from structural integrity, not from features or enforcement capabilities.",

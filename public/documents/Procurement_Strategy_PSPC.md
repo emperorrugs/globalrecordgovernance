@@ -1,4 +1,4 @@
-# GRGF DPI – Procurement Strategy (PSPC)
+# GRGF™ DPI – Procurement Strategy (PSPC)
 ## Objective
 Enable compliant pilot procurement under Canadian federal rules.
 

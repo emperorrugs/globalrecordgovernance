@@ -33,9 +33,9 @@ const InternationalWhitepaper = () => (
           </p>
         </div>
         <div className="governance-card">
-          <h4 className="text-xs font-serif font-semibold text-foreground mb-2">The GRGF Solution</h4>
+          <h4 className="text-xs font-serif font-semibold text-foreground mb-2">The GRGF™ Solution</h4>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Global Record Governance Framework (GRGF) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority. It provides the evidentiary backbone that existing governance systems lack.
+            Global Record Governance Framework (GRGF™) is a sovereign-grade Digital Public Infrastructure trust layer for recording, preserving, and verifying institutional actions, decisions, and omissions over time — without interpretation, enforcement, or decision authority. It provides the evidentiary backbone that existing governance systems lack.
           </p>
         </div>
         <div className="governance-card border-l-2 border-l-accent">
@@ -66,7 +66,7 @@ const InternationalWhitepaper = () => (
             <tr className="border-b-2 border-border">
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[150px]">International Body</th>
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[180px]">Framework / Standard</th>
-              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[200px]">GRGF Alignment</th>
+              <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[200px]">GRGF™ Alignment</th>
               <th className="text-left py-3 px-2 font-serif font-semibold text-foreground min-w-[100px]">Detail</th>
             </tr>
           </thead>
@@ -205,7 +205,7 @@ const InternationalWhitepaper = () => (
             <div>
               <h4 className="text-xs font-serif font-semibold text-foreground">Global Reform Declaration</h4>
               <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
-                Certifies GRGF as the first verifiable, omission-aware global governance system. Serves as primary evidence of originality and inventorship.
+                Certifies GRGF™ as the first verifiable, omission-aware global governance system. Serves as primary evidence of originality and inventorship.
               </p>
             </div>
           </div>

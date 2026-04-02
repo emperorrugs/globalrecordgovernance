@@ -1,5 +1,5 @@
 /**
- * GRGF Record Lifecycle & Status Transition Tests
+ * GRGF™ Record Lifecycle & Status Transition Tests
  * Tests the complete governance record lifecycle, status transition rules,
  * sealed immutability enforcement, and multi-tenant isolation.
  */

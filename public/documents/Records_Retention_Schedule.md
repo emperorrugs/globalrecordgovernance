@@ -1,4 +1,4 @@
-# GRGF DPI – Records Retention Schedule
+# GRGF™ DPI – Records Retention Schedule
 ## Principles
 Retention aligned with legal, fiscal, and historical value.
 

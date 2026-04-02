@@ -1,5 +1,5 @@
 /* ────────────────────────────────────────────────────────────
-   GRGF — Full Application Workflow & Integration Data
+   GRGF™ — Full Application Workflow & Integration Data
    126 applications across 12 sectors with detailed workflows
    ──────────────────────────────────────────────────────────── */
 
@@ -1291,7 +1291,7 @@ export const sectorApplications: SectorData[] = [
         workflow: [
           { before: "Certificate issued as paper or PDF — verification requires contacting issuer", after: "Certification event sealed with authority attestation and public verification endpoint", timeBefore: "Days", timeAfter: "< 3 seconds" },
           { before: "Fraudulent certificates detected through random inspections", after: "Real-time certificate verification at any point in supply chain", timeBefore: "Random", timeAfter: "100% verifiable" },
-          { before: "Cross-border certificate recognition requires bilateral verification", after: "Federated certificate verification across trade partner GRGF nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
+          { before: "Cross-border certificate recognition requires bilateral verification", after: "Federated certificate verification across trade partner GRGF™ nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
         ],
         metrics: [
           { label: "Verification Time", before: "Days", after: "< 3 sec", unit: "" },

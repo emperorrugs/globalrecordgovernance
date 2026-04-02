@@ -48,13 +48,13 @@ function ExpandableDoc({ doc }: { doc: DocEntry }) {
 const documents: DocEntry[] = [
   // Section 02
   {
-    id: "GOV-001", title: "GRGF DPI Architecture (Full)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
+    id: "GOV-001", title: "GRGF™ DPI Architecture (Full)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
     downloadPath: "/documents/High_Level_Architecture.pdf",
     content: (
       <>
-        <p>The Global Record Governance Framework (GRGF) is architected as a foundational, horizontal Digital Public Infrastructure (DPI) that operates independently of sectoral systems while remaining interoperable with them.</p>
-        <p className="font-medium text-foreground">GRGF is not a transactional system. It is a record-of-record system.</p>
-        <p>GRGF sits above operational systems, beside registries and workflows, and outside political or organizational control. Its function is to record governance-relevant events, not to execute them.</p>
+        <p>The Global Record Governance Framework (GRGF™) is architected as a foundational, horizontal Digital Public Infrastructure (DPI) that operates independently of sectoral systems while remaining interoperable with them.</p>
+        <p className="font-medium text-foreground">GRGF™ is not a transactional system. It is a record-of-record system.</p>
+        <p>GRGF™ sits above operational systems, beside registries and workflows, and outside political or organizational control. Its function is to record governance-relevant events, not to execute them.</p>
         <p><strong>Core Architectural Layers:</strong></p>
         <ol className="list-decimal pl-5 space-y-2">
           <li><strong>Event Normalization Layer</strong> — Translates real-world institutional actions and omissions into structured governance events.</li>
@@ -70,9 +70,9 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Governance_Authority_Model.pdf",
     content: (
       <>
-        <p>GRGF explicitly distinguishes between institutional authority, individual actors, and delegated mandates. Authority is treated as a recordable attribute, not an assumption.</p>
+        <p>GRGF™ explicitly distinguishes between institutional authority, individual actors, and delegated mandates. Authority is treated as a recordable attribute, not an assumption.</p>
         <p>This prevents informal power misuse, post-hoc justification, and ambiguity in accountability.</p>
-        <p>GRGF formally separates decisions (intent), actions (execution), and omissions (failure to decide or act). Each is recorded differently, because each carries different governance implications.</p>
+        <p>GRGF™ formally separates decisions (intent), actions (execution), and omissions (failure to decide or act). Each is recorded differently, because each carries different governance implications.</p>
         <p className="font-medium text-foreground">Omissions are not inferred — they are explicitly recognized when conditions are met.</p>
       </>
     ),
@@ -82,7 +82,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Actions_and_Omissions_Framework.pdf",
     content: (
       <>
-        <p>GRGF enables accountability by preserving chain of authority, temporal responsibility, and jurisdictional scope.</p>
+        <p>GRGF™ enables accountability by preserving chain of authority, temporal responsibility, and jurisdictional scope.</p>
         <p>It does not assign blame. It preserves traceability. This allows accountability mechanisms to function without political distortion.</p>
         <p><strong>Oversight bodies may:</strong></p>
         <ul className="list-disc pl-5 space-y-1">
@@ -105,7 +105,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Auditability_Verification_Logic.pdf",
     content: (
       <>
-        <p>GRGF supports negative and positive verification:</p>
+        <p>GRGF™ supports negative and positive verification:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li><strong>Positive verification:</strong> confirming a record exists</li>
           <li><strong>Negative verification:</strong> confirming no record exists for a claimed event</li>
@@ -123,12 +123,12 @@ const documents: DocEntry[] = [
       <>
         <p>A typical national deployment follows three stages:</p>
         <ol className="list-decimal pl-5 space-y-2">
-          <li><strong>Foundational Stage</strong> — GRGF is introduced as an independent record layer attached to selected high-risk governance processes (e.g. procurement, licensing, approvals).</li>
+          <li><strong>Foundational Stage</strong> — GRGF™ is introduced as an independent record layer attached to selected high-risk governance processes (e.g. procurement, licensing, approvals).</li>
           <li><strong>Expansion Stage</strong> — Additional institutions and sectors begin recording governance events under a shared authority framework.</li>
-          <li><strong>Federation Stage</strong> — GRGF operates as a national governance memory layer, supporting audits, courts, and oversight bodies.</li>
+          <li><strong>Federation Stage</strong> — GRGF™ operates as a national governance memory layer, supporting audits, courts, and oversight bodies.</li>
         </ol>
-        <p className="font-medium text-foreground">At no stage does GRGF replace existing systems.</p>
-        <p>In low-capacity environments, GRGF can be deployed with minimal technical integration, using manual or semi-automated event capture, focused on high-impact governance risks.</p>
+        <p className="font-medium text-foreground">At no stage does GRGF™ replace existing systems.</p>
+        <p>In low-capacity environments, GRGF™ can be deployed with minimal technical integration, using manual or semi-automated event capture, focused on high-impact governance risks.</p>
       </>
     ),
   },
@@ -137,9 +137,9 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/DPI_Integration_Guide.pdf",
     content: (
       <>
-        <p>GRGF is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
+        <p>GRGF™ is designed to integrate with identity systems, procurement platforms, regulatory workflows, and case management systems.</p>
         <p className="font-medium text-foreground">Integration is non-intrusive. Systems do not change how they work — they gain verifiability.</p>
-        <p>GRGF aligns with core DPI principles: universality, interoperability, public value orientation, long-term sustainability, and institutional neutrality.</p>
+        <p>GRGF™ aligns with core DPI principles: universality, interoperability, public value orientation, long-term sustainability, and institutional neutrality.</p>
         <p>It functions as shared civic infrastructure, not a vendor platform.</p>
       </>
     ),
@@ -157,7 +157,7 @@ const documents: DocEntry[] = [
           <li>Retroactive narrative manipulation</li>
         </ul>
         <p className="font-medium text-foreground">Safeguards are architectural, not procedural.</p>
-        <p>Transparency is governed by legal context, privacy obligations, and institutional role. GRGF supports public verification without disclosure, and confidential records with public existence proofs.</p>
+        <p>Transparency is governed by legal context, privacy obligations, and institutional role. GRGF™ supports public verification without disclosure, and confidential records with public existence proofs.</p>
       </>
     ),
   },
@@ -166,10 +166,10 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Public_Value_ROI.pdf",
     content: (
       <>
-        <p>GRGF creates public value by reducing ambiguity, increasing trust, strengthening institutions, and protecting lawful decision-makers. Value is systemic, not transactional.</p>
+        <p>GRGF™ creates public value by reducing ambiguity, increasing trust, strengthening institutions, and protecting lawful decision-makers. Value is systemic, not transactional.</p>
         <p>By making governance actions provable: fraud becomes harder, cover-ups become harder, and honest behavior becomes safer.</p>
-        <p>GRGF's cost profile is modest relative to anti-corruption programs, failed IT reforms, and litigation costs. Benefits compound over time as institutional memory accumulates.</p>
-        <p className="font-medium text-foreground">Trust increases when records exist, omissions are visible, and authority is explicit. GRGF restores trust by design, not messaging.</p>
+        <p>GRGF™'s cost profile is modest relative to anti-corruption programs, failed IT reforms, and litigation costs. Benefits compound over time as institutional memory accumulates.</p>
+        <p className="font-medium text-foreground">Trust increases when records exist, omissions are visible, and authority is explicit. GRGF™ restores trust by design, not messaging.</p>
       </>
     ),
   },
@@ -192,7 +192,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Privacy_Impact_Assessment.pdf",
     content: (
       <>
-        <p>Assessment of personal data processing within GRGF. Only event metadata strictly required for evidentiary integrity is captured.</p>
+        <p>Assessment of personal data processing within GRGF™. Only event metadata strictly required for evidentiary integrity is captured.</p>
         <p><strong>Lawful Basis:</strong> Public interest, legal obligation, and consent where applicable.</p>
         <p><strong>Risk Mitigations:</strong></p>
         <ul className="list-disc pl-5 space-y-1">
@@ -208,11 +208,11 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Feasibility_Study.pdf",
     content: (
       <>
-        <p>This feasibility study assesses the technical, legal, financial, and operational viability of GRGF as a sovereign-grade DPI.</p>
+        <p>This feasibility study assesses the technical, legal, financial, and operational viability of GRGF™ as a sovereign-grade DPI.</p>
         <p><strong>Technical:</strong> Leverages mature technologies (event logging, cryptographic hashing, interoperability APIs) with novel governance-layer orchestration.</p>
         <p><strong>Legal:</strong> Aligned with ISO 23081, ISO/IEC 27701, OECD DPI principles, and World Bank GovTech guidance.</p>
         <p><strong>Financial:</strong> Projected ROI positive within 24–36 months under conservative assumptions.</p>
-        <p className="font-medium text-foreground">GRGF is technically, legally, and financially feasible for pilot and national-scale deployment.</p>
+        <p className="font-medium text-foreground">GRGF™ is technically, legally, and financially feasible for pilot and national-scale deployment.</p>
       </>
     ),
   },
@@ -262,7 +262,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/1_Data_Flow_Architecture.pdf",
     content: (
       <>
-        <p>End-to-end flow from source systems to GRGF custody, retention, access, and disclosure.</p>
+        <p>End-to-end flow from source systems to GRGF™ custody, retention, access, and disclosure.</p>
         <p className="font-medium text-foreground">Includes minimization, pseudonymization, and boundary controls.</p>
       </>
     ),
@@ -272,7 +272,7 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/2_Threat_Model_STRIDE.pdf",
     content: (
       <>
-        <p>Analyzes spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats against GRGF.</p>
+        <p>Analyzes spoofing, tampering, repudiation, information disclosure, denial of service, and elevation of privilege threats against GRGF™.</p>
         <p className="font-medium text-foreground">Includes risk treatment plan.</p>
       </>
     ),
@@ -333,7 +333,7 @@ const documents: DocEntry[] = [
     content: (
       <>
         <p>External audits, penetration testing, SOC-equivalent assurance, and reporting cadence.</p>
-        <p className="font-medium text-foreground">Ensures continuous third-party validation of GRGF integrity.</p>
+        <p className="font-medium text-foreground">Ensures continuous third-party validation of GRGF™ integrity.</p>
       </>
     ),
   },
@@ -362,14 +362,14 @@ const documents: DocEntry[] = [
     downloadPath: "/documents/Executive_Decision_Memo.pdf",
     content: (
       <>
-        <p>10-slide board/ministerial briefing deck covering: What GRGF is, the governance gap, solution overview, Policy→Control→Evidence flow, system architecture, security & privacy, public value, risks & mitigations, and go-live recommendation.</p>
+        <p>10-slide board/ministerial briefing deck covering: What GRGF™ is, the governance gap, solution overview, Policy→Control→Evidence flow, system architecture, security & privacy, public value, risks & mitigations, and go-live recommendation.</p>
         <p className="font-medium text-foreground">Recommendation: APPROVE PILOT@SCALE GO-LIVE. (PowerPoint format)</p>
       </>
     ),
   },
   {
     id: "GOV-026", title: "Executive Visual Binder (ZIP)", section: "SECTION 07 — VALUE & IMPACT", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
+    downloadPath: "/documents/GRGF™_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Complete executive visual binder package for board, ministerial, and multilateral briefing. ZIP archive with all supporting materials.</p>
@@ -379,7 +379,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-027", title: "Phase 3 — Visual Operating Model (PDF)", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "February 2026",
-    downloadPath: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf",
+    downloadPath: "/documents/GRGF™_Phase_3_Visual_Operating_Model.pdf",
     content: (
       <>
         <p>Single authoritative model for policy, legal, technical, audit, and partner alignment. Maps the full flow: Law/Policy → Control → Event → Evidence → Verification.</p>
@@ -389,7 +389,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-028", title: "DPI Deployment Kit", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
+    downloadPath: "/documents/GRGF™_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete deployment kit for institutional DPI rollout including configuration templates, integration guides, and operational checklists.</p>
@@ -409,7 +409,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-030", title: "DPI Pilot — Full Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
+    downloadPath: "/documents/GRGF™_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Comprehensive pilot package with all governance, technical, and operational materials for a complete 90-day pilot engagement.</p>
@@ -419,7 +419,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-031", title: "DPI Upgrades — Complete Archive", section: "SECTION 02 — SYSTEM ARCHITECTURE", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Vol2_Technical_Architecture_Blueprints.pdf",
+    downloadPath: "/documents/GRGF™_Vol2_Technical_Architecture_Blueprints.pdf",
     content: (
       <>
         <p>Complete archive of all DPI system upgrades, patches, and configuration changes applied through January 2026.</p>
@@ -428,8 +428,8 @@ const documents: DocEntry[] = [
     ),
   },
   {
-    id: "GOV-032", title: "GRGF DPI Final v4 — Hardest Tests Passed", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Sovereign_Authority_Edition_2026.pdf",
+    id: "GOV-032", title: "GRGF™ DPI Final v4 — Hardest Tests Passed", section: "SECTION 06 — SECURITY & COMPLIANCE", updated: "January 2026",
+    downloadPath: "/documents/GRGF™_Sovereign_Authority_Edition_2026.pdf",
     content: (
       <>
         <p>Final v4 release archive documenting successful completion of the most rigorous validation tests across security, integrity, and governance logic.</p>
@@ -462,7 +462,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-035", title: "GC Submission Pack", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Value_Proposition_Complete_2026.pdf",
+    downloadPath: "/documents/GRGF™_Value_Proposition_Complete_2026.pdf",
     content: (
       <>
         <p>Government of Canada formal submission package for institutional review, procurement evaluation, and policy alignment assessment.</p>
@@ -506,7 +506,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-039", title: "Canvas Folder — Visual Assets", section: "SECTION 07 — VALUE & IMPACT", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Phase_3_Visual_Operating_Model.pdf",
+    downloadPath: "/documents/GRGF™_Phase_3_Visual_Operating_Model.pdf",
     content: (
       <>
         <p>Visual design assets and canvas materials for institutional presentations, reports, and stakeholder communications.</p>
@@ -516,7 +516,7 @@ const documents: DocEntry[] = [
   },
   {
     id: "GOV-040", title: "Pilot Starter + Upgrades Package", section: "SECTION 05 — DEPLOYMENT MODELS", updated: "January 2026",
-    downloadPath: "/documents/GRGF_Complete_Proposal_2026_Expanded.pdf",
+    downloadPath: "/documents/GRGF™_Complete_Proposal_2026_Expanded.pdf",
     content: (
       <>
         <p>Combined pilot starter kit with all system upgrades applied through January 2026. Single package for rapid deployment.</p>
@@ -543,7 +543,7 @@ const ArchiveGovernment = () => (
         <p className="text-[10px] font-mono text-accent uppercase tracking-[0.2em] mb-3">Government Archive · Sections 02–07</p>
         <h1 className="institutional-heading text-3xl md:text-4xl font-semibold">Governments & Multilateral Institutions</h1>
         <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-3xl">
-          Evaluation, adoption, and DPI alignment materials. These documents are intended for governments, the World Bank, regulators, and multilateral institutions assessing GRGF for policy alignment or sovereign adoption.
+          Evaluation, adoption, and DPI alignment materials. These documents are intended for governments, the World Bank, regulators, and multilateral institutions assessing GRGF™ for policy alignment or sovereign adoption.
         </p>
         <p className="hash-text mt-4">ACCESS: INSTITUTIONAL · FORMAL · POLICY-GRADE</p>
         <div className="section-divider mt-6" />
@@ -562,7 +562,7 @@ const ArchiveGovernment = () => (
         {documents.map((doc) => <ExpandableDoc key={doc.id} doc={doc} />)}
       </div>
       <div className="max-w-5xl mt-8 text-[10px] font-mono text-muted-foreground/40 text-right">
-        GRGF DIGITAL ARCHIVE · GOVERNMENT SECTION · REFERENCE ONLY
+        GRGF™ DIGITAL ARCHIVE · GOVERNMENT SECTION · REFERENCE ONLY
       </div>
     </section>
   </div>

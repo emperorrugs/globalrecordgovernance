@@ -1,5 +1,5 @@
 /**
- * GRGF Federation & Security Protocol Tests
+ * GRGF™ Federation & Security Protocol Tests
  * Tests federation tier model, RBAC enforcement, confidentiality levels,
  * retention classification, and post-quantum readiness assertions.
  */
@@ -170,9 +170,9 @@ describe('Anchor Batch — ID Generation Robustness', () => {
     expect(ids.size).toBe(1000);
   });
 
-  it('all IDs match strict format GRGF-ANCHOR-[A-Z0-9]{8}', () => {
+  it('all IDs match strict format GRGF™-ANCHOR-[A-Z0-9]{8}', () => {
     for (let i = 0; i < 50; i++) {
-      expect(generateAnchorBatchId()).toMatch(/^GRGF-ANCHOR-[A-Z0-9]{8}$/);
+      expect(generateAnchorBatchId()).toMatch(/^GRGF™-ANCHOR-[A-Z0-9]{8}$/);
     }
   });
 

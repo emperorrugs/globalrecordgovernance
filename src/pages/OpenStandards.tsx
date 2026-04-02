@@ -29,13 +29,13 @@ const OpenStandards = () => (
         <h2 className="institutional-heading text-heading-1 font-semibold mb-8">Governance Event Schema</h2>
         <div className="governance-card-elevated mb-6">
           <p className="text-body text-muted-foreground mb-4">
-            All GRGF governance events conform to a standardized, machine-readable schema. The schema is published as JSON-LD with RDF compatibility for semantic web integration.
+            All GRGF™ governance events conform to a standardized, machine-readable schema. The schema is published as JSON-LD with RDF compatibility for semantic web integration.
           </p>
           <pre className="bg-primary text-primary-foreground p-4 text-xs font-mono overflow-x-auto rounded" role="code" aria-label="JSON-LD governance event schema">
 {`{
   "@context": "https://schema.grgf.org/v1",
   "@type": "GovernanceEvent",
-  "eventId": "GRGF-2024-0001",
+  "eventId": "GRGF™-2024-0001",
   "eventType": ["ACTION", "DECISION", "OMISSION"],
   "timestamp": "ISO 8601",
   "authorityScope": "INSTITUTIONAL | DEPARTMENTAL | MINISTERIAL",
@@ -48,7 +48,7 @@ const OpenStandards = () => (
   },
   "evidenceStatus": "SEALED | DENIED | OMISSION",
   "chainOfCustody": {
-    "previous": "GRGF-2024-0000",
+    "previous": "GRGF™-2024-0000",
     "sequence": 1
   }
 }`}
@@ -142,7 +142,7 @@ const OpenStandards = () => (
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="font-serif text-heading-1 font-semibold text-primary-foreground mb-4">Integration Support</h2>
         <p className="text-body text-primary-foreground/60 mb-8">
-          For technical integration guidance, schema documentation, or API access credentials, contact the GRGF Technical Review Panel.
+          For technical integration guidance, schema documentation, or API access credentials, contact the GRGF™ Technical Review Panel.
         </p>
         <Link to="/controlled-access" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide transition-all hover:shadow-lg hover:shadow-accent/20">
           Request API Access <ArrowRight className="h-4 w-4" />

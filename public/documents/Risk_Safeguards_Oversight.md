@@ -9,7 +9,7 @@
 
 ## Primary Risks Addressed
 
-| Risk | Impact | GRGF Mitigation |
+| Risk | Impact | GRGF™ Mitigation |
 |------|--------|-----------------|
 | Record tampering | Loss of institutional trust | Append-only log with cryptographic integrity |
 | Institutional memory loss | Policy regression, repeated failures | Permanent, verifiable governance record |
@@ -44,7 +44,7 @@ Transparency is governed by:
 - **Privacy obligations** — data protection requirements
 - **Institutional role** — access based on legitimate need
 
-GRGF supports:
+GRGF™ supports:
 - Public verification without disclosure of sensitive content
 - Confidential records with public existence proofs
 - Graduated access levels based on institutional authorization

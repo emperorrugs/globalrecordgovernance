@@ -40,7 +40,7 @@ const About = () => {
         </div>
       </Section>
 
-      {/* Who GRGF Is For */}
+      {/* Who GRGF™ Is For */}
       <Section title={t("about.who_title")} className="border-t border-border">
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
           {[

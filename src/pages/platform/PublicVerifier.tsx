@@ -41,9 +41,9 @@ export default function PublicVerifier() {
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#00A4EF]/10 mb-4">
             <Shield className="h-8 w-8 text-[#00A4EF]" />
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight">GRGF Record Verification</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">GRGF™ Record Verification</h1>
           <p className="text-sm text-muted-foreground mt-3 max-w-md mx-auto">
-            Independently verify the integrity, provenance, and current status of any publicly verifiable GRGF governance record.
+            Independently verify the integrity, provenance, and current status of any publicly verifiable GRGF™ governance record.
           </p>
         </div>
 
@@ -107,11 +107,11 @@ export default function PublicVerifier() {
 
         <div className="mt-10 text-center">
           <p className="text-xs text-muted-foreground max-w-md mx-auto">
-            GRGF verification confirms the cryptographic integrity, provenance, and current status of a governance record.
+            GRGF™ verification confirms the cryptographic integrity, provenance, and current status of a governance record.
             It does not expose protected confidential content. This verification is provided for transparency and independent
             audit purposes under the Global Record Governance Framework.
           </p>
-          <p className="text-[10px] font-mono text-muted-foreground/50 mt-4">GRGF v1.0 · SHA-256 · Append-Only Chain</p>
+          <p className="text-[10px] font-mono text-muted-foreground/50 mt-4">GRGF™ v1.0 · SHA-256 · Append-Only Chain</p>
         </div>
       </div>
     </div>

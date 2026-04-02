@@ -64,7 +64,7 @@ const IPStatus = () => (
         {[
           {
             title: "Filed ≠ Granted",
-            desc: "A patent application filing establishes a priority date and initiates the examination process. It does not imply that a patent has been granted. GRGF will update this page upon any change in status.",
+            desc: "A patent application filing establishes a priority date and initiates the examination process. It does not imply that a patent has been granted. GRGF™ will update this page upon any change in status.",
           },
           {
             title: "Scope of Protection",
@@ -72,7 +72,7 @@ const IPStatus = () => (
           },
           {
             title: "Institutional Licensing",
-            desc: "Sovereign institutions evaluating or piloting GRGF should contact contact@globalrecordgovernance.com to discuss licensing terms. Evaluation access to documentation and tools is provided under the Controlled Distribution Protocol.",
+            desc: "Sovereign institutions evaluating or piloting GRGF™ should contact contact@globalrecordgovernance.com to discuss licensing terms. Evaluation access to documentation and tools is provided under the Controlled Distribution Protocol.",
           },
         ].map(({ title, desc }) => (
           <div key={title} className="governance-card">
@@ -87,10 +87,10 @@ const IPStatus = () => (
       <div className="governance-card max-w-3xl">
         <ul className="space-y-2">
           {[
-            "All GRGF documentation, architecture diagrams, governance schemas, and operational playbooks are the intellectual property of Tarek Wahid.",
+            "All GRGF™ documentation, architecture diagrams, governance schemas, and operational playbooks are the intellectual property of Tarek Wahid.",
             "The Controlled Distribution Protocol (CRP) does not transfer intellectual property rights.",
             "Published materials are available for institutional evaluation purposes only unless otherwise agreed in writing.",
-            "The GRGF name and associated marks are used to identify the framework and its standards body.",
+            "The GRGF™ name and associated marks are used to identify the framework and its standards body.",
           ].map((item) => (
             <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground">
               <Scale className="h-3 w-3 text-accent shrink-0 mt-0.5" />{item}

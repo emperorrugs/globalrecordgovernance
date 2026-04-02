@@ -26,7 +26,7 @@ const MODULES: ModuleData[] = [
     signal: "Independent Validation Signal",
     icon: Shield,
     objective:
-      "Establish external verification of GRGF's technical integrity and governance soundness through independent third-party assessment, eliminating reliance on self-asserted credibility.",
+      "Establish external verification of GRGF™'s technical integrity and governance soundness through independent third-party assessment, eliminating reliance on self-asserted credibility.",
     actions: [
       "Commission independent architecture review by accredited cybersecurity firm (ISO 27001 certified)",
       "Engage governance stress-testing through academic policy laboratory (simulated adversarial scenarios)",
@@ -51,7 +51,7 @@ const MODULES: ModuleData[] = [
       "International standards conformance bodies",
     ],
     psychologyImpact:
-      "Shifts evaluator perception from 'unverified proposal' to 'independently assessed infrastructure.' Removes the primary objection — lack of external scrutiny — and positions GRGF alongside audited multilateral systems.",
+      "Shifts evaluator perception from 'unverified proposal' to 'independently assessed infrastructure.' Removes the primary objection — lack of external scrutiny — and positions GRGF™ alongside audited multilateral systems.",
     risks: [
       { risk: "Audit reveals architectural deficiencies", mitigation: "Pre-audit internal review; treat findings as improvement roadmap, not failure" },
       { risk: "Evaluator independence questioned", mitigation: "Publish conflict-of-interest declarations; rotate evaluators annually" },
@@ -64,7 +64,7 @@ const MODULES: ModuleData[] = [
     signal: "Multi-Stakeholder Coalition Signal",
     icon: Users,
     objective:
-      "Demonstrate that GRGF is supported by a diverse coalition of academic, policy, and civil society participants — not a single-origin initiative.",
+      "Demonstrate that GRGF™ is supported by a diverse coalition of academic, policy, and civil society participants — not a single-origin initiative.",
     actions: [
       "Establish Advisory Council with 9–15 members across governance, technology, and public administration",
       "Recruit academic partners from 3+ regions (governance faculties, public policy schools)",
@@ -102,7 +102,7 @@ const MODULES: ModuleData[] = [
     signal: "Operational Proof Signal",
     icon: Activity,
     objective:
-      "Provide demonstrable evidence that GRGF functions as designed through sandbox deployments and simulated institutional workflows — without requiring national adoption.",
+      "Provide demonstrable evidence that GRGF™ functions as designed through sandbox deployments and simulated institutional workflows — without requiring national adoption.",
     actions: [
       "Deploy sandbox environment with simulated country profile (Kaledonia — fictional sovereign state)",
       "Execute full governance record lifecycle: Draft → Review → Approved → Closed",
@@ -121,7 +121,7 @@ const MODULES: ModuleData[] = [
       "Certification Simulation Report",
     ],
     stakeholders: [
-      "GRGF Technical Review Committee",
+      "GRGF™ Technical Review Committee",
       "Sandbox deployment engineering team",
       "Independent evaluation observers",
       "Institutional pilot evaluation reviewers",
@@ -140,13 +140,13 @@ const MODULES: ModuleData[] = [
     signal: "Academic Legitimacy Signal",
     icon: BookOpen,
     objective:
-      "Establish GRGF within academic discourse through peer-reviewed publications, research collaborations, and conference presentations — building citation-based legitimacy.",
+      "Establish GRGF™ within academic discourse through peer-reviewed publications, research collaborations, and conference presentations — building citation-based legitimacy.",
     actions: [
       "Publish 2–3 governance working papers in open-access repositories (SSRN, arXiv)",
       "Submit peer-reviewed article to governance or DPI journal (Government Information Quarterly, Digital Government)",
       "Establish research collaboration with 2+ university governance departments",
       "Present at 1–2 international governance conferences (ICEGOV, OECD GovTech, IGF)",
-      "Launch 'GRGF Working Paper Series' with editorial governance and DOI registration",
+      "Launch 'GRGF™ Working Paper Series' with editorial governance and DOI registration",
       "Define research themes: governance integrity infrastructure, append-only institutional records, anti-capture mechanisms",
     ],
     artifacts: [
@@ -155,7 +155,7 @@ const MODULES: ModuleData[] = [
       "Peer-Reviewed Journal Submission (target: Government Information Quarterly)",
       "Conference Presentation Deck (ICEGOV / OECD format)",
       "Research Collaboration MOUs with university partners",
-      "GRGF Working Paper Series Editorial Policy",
+      "GRGF™ Working Paper Series Editorial Policy",
       "Citation & Attribution Guidelines",
     ],
     stakeholders: [
@@ -170,7 +170,7 @@ const MODULES: ModuleData[] = [
     risks: [
       { risk: "Peer review rejection", mitigation: "Target multiple journals; use working papers as pre-publication credibility builder" },
       { risk: "Academic neutrality questioned", mitigation: "Co-author with independent researchers; disclose all affiliations" },
-      { risk: "Research themes perceived as self-promotional", mitigation: "Frame as governance infrastructure research, not GRGF advocacy" },
+      { risk: "Research themes perceived as self-promotional", mitigation: "Frame as governance infrastructure research, not GRGF™ advocacy" },
     ],
     credibilityIncrease: { from: 72, to: 85, label: "+13 points" },
   },
@@ -179,14 +179,14 @@ const MODULES: ModuleData[] = [
     signal: "Neutral Institutional Identity Signal",
     icon: Building,
     objective:
-      "Transform GRGF from a founder-identified initiative into an independent institutional entity with transparent governance, role separation, and neutrality safeguards.",
+      "Transform GRGF™ from a founder-identified initiative into an independent institutional entity with transparent governance, role separation, and neutrality safeguards.",
     actions: [
       "Establish independent foundation structure (Swiss Verein or Canadian not-for-profit)",
       "Publish founding governance charter with authority separation model",
       "Define role separation: Executive Director, Standards Committee, Advisory Council, Compliance Oversight",
       "Implement transparency mechanisms: public meeting minutes, annual governance report, financial disclosure",
       "Apply institutional branding principles: remove founder-centric language; position as ecosystem",
-      "Publish authority minimization framework: GRGF verifies, does not govern; supports, does not enforce",
+      "Publish authority minimization framework: GRGF™ verifies, does not govern; supports, does not enforce",
     ],
     artifacts: [
       "Foundation Charter & Articles of Incorporation",
@@ -228,7 +228,7 @@ const CredibilitySignals = () => (
   <div className="animate-fade-in">
     <PageHeader
       title="Institutional Credibility Signal Generator"
-      subtitle="Five measurable credibility signals designed to transition GRGF from 'monitor initiative' to 'serious engagement candidate' in multilateral evaluator scoring."
+      subtitle="Five measurable credibility signals designed to transition GRGF™ from 'monitor initiative' to 'serious engagement candidate' in multilateral evaluator scoring."
     />
 
     {/* Credibility Score Progression Summary */}

@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 /**
- * GRGF International Standards Compliance Test Suite
+ * GRGF™ International Standards Compliance Test Suite
  * Tests against: ISO 15489, ISO 27001, OECD DGPF, World Bank GTMI,
  * UN SDG 16, WCAG 2.2 AA, GDPR/PIPEDA, CRP v1.0
  */
@@ -325,11 +325,11 @@ describe("Records Retention Schedule — ISO 15489 Aligned", () => {
 // ─── 18. DOCUMENT ARCHIVE INTEGRITY ──────────────────────────────────────────
 describe("Document Archive — PDF Assets Present", () => {
   const requiredDocuments = [
-    "GRGF_Level1_Public_Overview_MaxDepth.pdf",
-    "GRGF_Level2_Institutional_Review_MaxDepth.pdf",
-    "GRGF_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
-    "GRGF_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
-    "GRGF_Phase_3_Visual_Operating_Model.pdf",
+    "GRGF™_Level1_Public_Overview_MaxDepth.pdf",
+    "GRGF™_Level2_Institutional_Review_MaxDepth.pdf",
+    "GRGF™_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
+    "GRGF™_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
+    "GRGF™_Phase_3_Visual_Operating_Model.pdf",
     "System_Architecture_and_Catalog.pdf",
   ];
 
@@ -377,8 +377,8 @@ describe("Six-Layer Architecture — All Layers Defined", () => {
 describe("Official Languages Act — Bilingual Compliance", () => {
   it("Must provide French language editions", () => {
     const frenchDocs = [
-      "GRGF_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
-      "GRGF_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
+      "GRGF™_Niveau1_Apercu_Public_MaxDepth_FR.pdf",
+      "GRGF™_Niveau2_Examen_Institutionnel_MaxDepth_FR.pdf",
     ];
     expect(frenchDocs.length).toBeGreaterThanOrEqual(2);
   });

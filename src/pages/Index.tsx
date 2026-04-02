@@ -100,7 +100,7 @@ const Index = () => {
   return (
     <div>
       <SEOHead
-        title="GRGF — Global Infrastructure for Truth and Governance"
+        title="GRGF™ — Global Infrastructure for Truth and Governance"
         description="Enterprise-grade governance infrastructure platform. Sovereign record management, cryptographic verification, and institutional trust for digital public infrastructure."
       />
 
@@ -260,35 +260,35 @@ const Index = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             <ModuleCard
-              icon={Link2} title="GRGF Core Engine" desc="Six-layer deterministic architecture with append-only record anchoring and SHA-256 integrity."
+              icon={Link2} title="GRGF™ Core Engine" desc="Six-layer deterministic architecture with append-only record anchoring and SHA-256 integrity."
               path="/anchor-chain" accent="bg-primary/10 text-primary" tag="Engine" delay={0}
             />
             <ModuleCard
-              icon={Eye} title="GRGF Verify" desc="Public verification portal for independent record integrity validation without content exposure."
+              icon={Eye} title="GRGF™ Verify" desc="Public verification portal for independent record integrity validation without content exposure."
               path="/verify" accent="bg-success/10 text-success" tag="Verification" delay={60}
             />
             <ModuleCard
-              icon={Store} title="GRGF Marketplace" desc="Discover, install, and deploy governance solutions across anti-corruption, compliance, and more."
+              icon={Store} title="GRGF™ Marketplace" desc="Discover, install, and deploy governance solutions across anti-corruption, compliance, and more."
               path="/marketplace" accent="bg-accent/10 text-accent" tag="Marketplace" delay={120}
             />
             <ModuleCard
-              icon={Network} title="GRGF Federation" desc="Multi-jurisdiction governance network with Merkle cross-witnessing and sovereign data isolation."
+              icon={Network} title="GRGF™ Federation" desc="Multi-jurisdiction governance network with Merkle cross-witnessing and sovereign data isolation."
               path="/interoperability" accent="bg-info/10 text-info" tag="Federation" delay={180}
             />
             <ModuleCard
-              icon={Calculator} title="GRGF Value Engine" desc="Enterprise ROI calculator with real-time institutional impact modeling and fiscal projections."
+              icon={Calculator} title="GRGF™ Value Engine" desc="Enterprise ROI calculator with real-time institutional impact modeling and fiscal projections."
               path="/value-calculator" accent="bg-destructive/10 text-destructive" tag="Analytics" delay={240}
             />
             <ModuleCard
-              icon={Binary} title="GRGF Developer" desc="API marketplace, SDKs, integration guides, and sandbox environment for system builders."
+              icon={Binary} title="GRGF™ Developer" desc="API marketplace, SDKs, integration guides, and sandbox environment for system builders."
               path="/developer" accent="bg-muted-foreground/10 text-muted-foreground" tag="API" delay={300}
             />
             <ModuleCard
-              icon={GraduationCap} title="GRGF Academy" desc="Professional certification, training curricula, and institutional readiness assessment programs."
+              icon={GraduationCap} title="GRGF™ Academy" desc="Professional certification, training curricula, and institutional readiness assessment programs."
               path="/academy" accent="bg-success/10 text-success" tag="Training" delay={360}
             />
             <ModuleCard
-              icon={Scale} title="GRGF Standards" desc="ISO, OECD, UN, and World Bank alignment with comprehensive compliance verification."
+              icon={Scale} title="GRGF™ Standards" desc="ISO, OECD, UN, and World Bank alignment with comprehensive compliance verification."
               path="/compliance" accent="bg-primary/10 text-primary" tag="Compliance" delay={420}
             />
             <ModuleCard
@@ -347,7 +347,7 @@ const Index = () => {
                 </div>
 
                 <h2 className="text-2xl md:text-4xl font-bold tracking-tight mb-3">
-                  GRGF Anchor Chain<span className="text-primary">™</span>
+                  GRGF™ Anchor Chain<span className="text-primary">™</span>
                 </h2>
                 <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl mb-8">
                   The cryptographic governance verification engine — real-time immutable record anchoring,
@@ -427,7 +427,7 @@ const Index = () => {
               { icon: Globe, title: "Submission Hub", desc: "OECD, World Bank, and UN evaluation packages", path: "/submission-hub" },
               { icon: FileText, title: "Downloads", desc: "Publications, templates, and technical documentation", path: "/archive/downloads" },
               { icon: Lock, title: "Controlled Access", desc: "Institutional verification and assessment portal", path: "/controlled-access" },
-              { icon: BookOpen, title: "GRGF Academy", desc: "Professional training and certification programs", path: "/academy" },
+              { icon: BookOpen, title: "GRGF™ Academy", desc: "Professional training and certification programs", path: "/academy" },
             ].map((r, i) => (
               <FadeIn key={r.title} delay={i * 50}>
                 <Link

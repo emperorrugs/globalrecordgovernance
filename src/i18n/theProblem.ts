@@ -132,9 +132,9 @@ export const theProblemTranslations: Record<string, Record<Language, string>> = 
     ar: "النتيجة:",
   },
   "problem.what_changes": {
-    en: "What GRGF Changes",
-    fr: "Ce que GRGF change",
-    ar: "ما يغيّره GRGF",
+    en: "What GRGF™ Changes",
+    fr: "Ce que GRGF™ change",
+    ar: "ما يغيّره GRGF™",
   },
   "problem.changes_intro": {
     en: "Administrative action becomes a cryptographically verifiable event governed by deterministic rules.",

@@ -36,7 +36,7 @@ const steps = [
     duration: '30 sec',
     icon: Hash,
     color: '#FFB900',
-    script: '"As soon as we submit, GRGF does not interpret — it validates, normalizes, hashes, and locks the record into an append-only chain. No human can override this process."',
+    script: '"As soon as we submit, GRGF™ does not interpret — it validates, normalizes, hashes, and locks the record into an append-only chain. No human can override this process."',
     action: null,
     keyPoints: [
       'Point to the processing animation',
@@ -106,11 +106,11 @@ const steps = [
     duration: '20 sec',
     icon: Shield,
     color: '#00A4EF',
-    script: '"GRGF doesn\'t replace systems. It makes them accountable — permanently. This is the missing trust layer of Digital Public Infrastructure."',
+    script: '"GRGF™ doesn\'t replace systems. It makes them accountable — permanently. This is the missing trust layer of Digital Public Infrastructure."',
     action: null,
     keyPoints: [
       'Pause for effect',
-      'End with: "GRGF does not interpret reality. It records it — immutably."',
+      'End with: "GRGF™ does not interpret reality. It records it — immutably."',
       'Open for questions',
     ],
   },
@@ -125,7 +125,7 @@ export default function DemoScript() {
       {/* Header */}
       <div>
         <Badge variant="outline" className="mb-3 text-xs font-mono">PRESENTATION GUIDE</Badge>
-        <h1 className="text-2xl font-bold tracking-tight">GRGF Live Demo Script</h1>
+        <h1 className="text-2xl font-bold tracking-tight">GRGF™ Live Demo Script</h1>
         <p className="text-sm text-muted-foreground mt-2">
           A structured walkthrough for government officials, investors, and institutional evaluators.
           Total duration: <strong>{totalDuration}</strong>.
@@ -244,7 +244,7 @@ export default function DemoScript() {
       </Card>
 
       <div className="text-center pt-4">
-        <p className="text-xs text-muted-foreground">GRGF does not interpret reality. It records it — immutably.</p>
+        <p className="text-xs text-muted-foreground">GRGF™ does not interpret reality. It records it — immutably.</p>
       </div>
     </div>
   );

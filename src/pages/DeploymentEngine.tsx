@@ -91,8 +91,8 @@ export default function DeploymentEngine() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Deployment Engine — GRGF"
-        description="Deploy sovereign governance infrastructure in minutes. Select country, modules, and activate your GRGF instance."
+        title="Deployment Engine — GRGF™"
+        description="Deploy sovereign governance infrastructure in minutes. Select country, modules, and activate your GRGF™ instance."
       />
 
       {/* Hero */}
@@ -107,7 +107,7 @@ export default function DeploymentEngine() {
               Deploy Sovereign Infrastructure
             </h1>
             <p className="text-sm md:text-base text-white/50 max-w-xl mx-auto">
-              Select your jurisdiction, choose modules, and activate a full GRGF governance instance.
+              Select your jurisdiction, choose modules, and activate a full GRGF™ governance instance.
             </p>
           </FadeIn>
         </div>

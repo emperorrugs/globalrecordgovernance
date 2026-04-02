@@ -1,5 +1,5 @@
 /**
- * GRGF Canonical Payload Builder
+ * GRGF™ Canonical Payload Builder
  * Builds deterministic, reproducible payloads for hashing.
  * Field ordering is fixed — any change in order changes the hash.
  */
@@ -52,7 +52,7 @@ export function buildManifest(record: {
 }, attachmentHashes: string[] = []): Record<string, unknown> {
   return {
     version: '1.0',
-    framework: 'GRGF',
+    framework: 'GRGF™',
     record_id: record.id,
     title: record.title,
     status: record.status,

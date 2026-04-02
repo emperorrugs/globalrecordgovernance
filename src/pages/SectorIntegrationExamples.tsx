@@ -28,7 +28,7 @@ interface SectorProfile {
   integrationMethod: string;
   protocol: string;
   annualExposure: number;
-  postGRGF: number;
+  postGRGF™: number;
   reductionPct: number;
   fiveYearBenefit: number;
   roi: number;
@@ -52,7 +52,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "REST API Connector + OPA/Rego Policy Engine",
     protocol: "HTTPS + mTLS / SAML 2.0",
     annualExposure: 850_000_000,
-    postGRGF: 212_500_000,
+    postGRGF™: 212_500_000,
     reductionPct: 75,
     fiveYearBenefit: 2_550_000_000,
     roi: 4250,
@@ -90,7 +90,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "HL7 FHIR R4 Event Stream + Webhook Listener",
     protocol: "HTTPS / FHIR RESTful API / OAuth 2.0",
     annualExposure: 420_000_000,
-    postGRGF: 105_000_000,
+    postGRGF™: 105_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_260_000_000,
     roi: 3934,
@@ -99,7 +99,7 @@ const sectors: SectorProfile[] = [
     sourceSystem: "Epic / Cerner / CBORD / Meditech",
     workflow: [
       { before: "Clinical inspection logged in paper binder or local EMR notes", after: "Inspection event captured via FHIR, authority-bound, hash-sealed", timeBefore: "35 min", timeAfter: "3 min" },
-      { before: "Dietary compliance tracked on paper rotation sheets", after: "CBORD events streamed to GRGF with omission detection windows", timeBefore: "Manual audit", timeAfter: "Continuous" },
+      { before: "Dietary compliance tracked on paper rotation sheets", after: "CBORD events streamed to GRGF™ with omission detection windows", timeBefore: "Manual audit", timeAfter: "Continuous" },
       { before: "Incident investigation pulls records from 6+ systems", after: "Complete evidence chain available from single governance backbone", timeBefore: "72 hours", timeAfter: "3 hours" },
       { before: "Accreditation prep requires months of document assembly", after: "Accreditation evidence continuously assembled and verifiable", timeBefore: "3–6 months", timeAfter: "Real-time" },
       { before: "Patient safety events tracked inconsistently", after: "Every clinical governance action recorded with 24-hour omission alerts", timeBefore: "Variable", timeAfter: "< 1 second" },
@@ -114,10 +114,10 @@ const sectors: SectorProfile[] = [
     evidenceBase: [
       "WHO — Global Patient Safety Report (2024)",
       "Canadian Institute for Health Information (CIHI) — Hospital Spending Trends",
-      "UHN Toronto General Hospital — GRGF Integration Case Study (2026)",
+      "UHN Toronto General Hospital — GRGF™ Integration Case Study (2026)",
       "Accreditation Canada — Standards Compliance Cost Analysis",
     ],
-    realWorldExample: "University Health Network (UHN) hospitals spend $47.35M annually on governance-related activities including inspection documentation, incident investigation, and accreditation preparation. GRGF integration via HL7 FHIR projected to deliver 674% Year 1 ROI with 96% reduction in incident investigation time.",
+    realWorldExample: "University Health Network (UHN) hospitals spend $47.35M annually on governance-related activities including inspection documentation, incident investigation, and accreditation preparation. GRGF™ integration via HL7 FHIR projected to deliver 674% Year 1 ROI with 96% reduction in incident investigation time.",
   },
   {
     id: "FIN",
@@ -128,7 +128,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "ISO 20022 Event Stream + Core Banking API",
     protocol: "HTTPS / ISO 20022 XML / SWIFT gpi",
     annualExposure: 1_200_000_000,
-    postGRGF: 300_000_000,
+    postGRGF™: 300_000_000,
     reductionPct: 75,
     fiveYearBenefit: 3_600_000_000,
     roi: 5142,
@@ -140,7 +140,7 @@ const sectors: SectorProfile[] = [
       { before: "Regulatory reporting assembled quarterly from multiple sources", after: "Continuous compliance evidence backbone with real-time regulatory feeds", timeBefore: "6–8 weeks", timeAfter: "On-demand" },
       { before: "Transaction governance verified via post-hoc sampling", after: "100% transaction governance events captured and policy-evaluated", timeBefore: "Sample-based", timeAfter: "100% coverage" },
       { before: "Audit trail fragmented across core banking and compliance systems", after: "Unified governance record chain with cross-system hash verification", timeBefore: "4–12 weeks", timeAfter: "< 1 minute" },
-      { before: "Cross-border compliance verified manually per jurisdiction", after: "Federated verification across jurisdictional GRGF nodes", timeBefore: "2–4 weeks", timeAfter: "< 5 seconds" },
+      { before: "Cross-border compliance verified manually per jurisdiction", after: "Federated verification across jurisdictional GRGF™ nodes", timeBefore: "2–4 weeks", timeAfter: "< 5 seconds" },
     ],
     keyMetrics: [
       { label: "Regulatory Report Assembly", before: "42", after: "1", unit: "days" },
@@ -166,7 +166,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "IoT Gateway + BIM Event Connector + REST API",
     protocol: "MQTT / OPC-UA / HTTPS",
     annualExposure: 650_000_000,
-    postGRGF: 162_500_000,
+    postGRGF™: 162_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_950_000_000,
     roi: 3900,
@@ -204,7 +204,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Case Management API + Evidence Custody Connector",
     protocol: "HTTPS + mTLS / SAML 2.0",
     annualExposure: 380_000_000,
-    postGRGF: 95_000_000,
+    postGRGF™: 95_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_140_000_000,
     roi: 3800,
@@ -242,7 +242,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "SIS API Connector + W3C Verifiable Credentials",
     protocol: "HTTPS / OpenID4VC / JSON-LD",
     annualExposure: 180_000_000,
-    postGRGF: 45_000_000,
+    postGRGF™: 45_000_000,
     reductionPct: 75,
     fiveYearBenefit: 540_000_000,
     roi: 3600,
@@ -251,10 +251,10 @@ const sectors: SectorProfile[] = [
     sourceSystem: "Ellucian Banner / PeopleSoft Campus / Workday Student",
     workflow: [
       { before: "Degree conferred and recorded in local SIS only", after: "Credential issuance captured with institution authority binding and hash seal", timeBefore: "N/A", timeAfter: "Automatic" },
-      { before: "Credential verification via manual transcript requests", after: "Instant verification via public GRGF Verification API", timeBefore: "5–15 days", timeAfter: "< 3 seconds" },
+      { before: "Credential verification via manual transcript requests", after: "Instant verification via public GRGF™ Verification API", timeBefore: "5–15 days", timeAfter: "< 3 seconds" },
       { before: "Accreditation evidence assembled manually every cycle", after: "Continuous accreditation evidence backbone with real-time compliance", timeBefore: "6–12 months", timeAfter: "Continuous" },
       { before: "Academic integrity cases tracked in departmental files", after: "Every academic governance action recorded with decision chain", timeBefore: "Variable", timeAfter: "Real-time" },
-      { before: "International credential recognition requires embassy verification", after: "Federated credential verification across institutional GRGF nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
+      { before: "International credential recognition requires embassy verification", after: "Federated credential verification across institutional GRGF™ nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
     ],
     keyMetrics: [
       { label: "Credential Verification", before: "10", after: "0.001", unit: "days" },
@@ -269,7 +269,7 @@ const sectors: SectorProfile[] = [
       "World Education Services — International Credential Recognition Costs",
       "OECD — Education at a Glance — Governance Indicators",
     ],
-    realWorldExample: "Canadian universities process over 2.4 million credential verification requests annually. At an average cost of $75 per verification, GRGF integration could save the sector $180M per year while eliminating credential fraud.",
+    realWorldExample: "Canadian universities process over 2.4 million credential verification requests annually. At an average cost of $75 per verification, GRGF™ integration could save the sector $180M per year while eliminating credential fraud.",
   },
   {
     id: "SAFETY",
@@ -280,7 +280,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "CAD/RMS API + Body Camera Metadata Connector",
     protocol: "NIEM / HTTPS / RTSP metadata",
     annualExposure: 290_000_000,
-    postGRGF: 72_500_000,
+    postGRGF™: 72_500_000,
     reductionPct: 75,
     fiveYearBenefit: 870_000_000,
     roi: 3480,
@@ -318,7 +318,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "e-Procurement API + ERP Webhook Connector",
     protocol: "HTTPS / OCDS (Open Contracting) / SAP RFC",
     annualExposure: 520_000_000,
-    postGRGF: 130_000_000,
+    postGRGF™: 130_000_000,
     reductionPct: 75,
     fiveYearBenefit: 1_560_000_000,
     roi: 4457,
@@ -345,7 +345,7 @@ const sectors: SectorProfile[] = [
       "Open Contracting Partnership — Impact Evidence Base",
       "World Bank — Procurement Governance and Efficiency Study",
     ],
-    realWorldExample: "The Government of Canada processes $22B in procurement annually. ArriveCAN cost overruns ($54M for a $80K app) exemplify the catastrophic consequences of procurement governance failures that GRGF is designed to prevent.",
+    realWorldExample: "The Government of Canada processes $22B in procurement annually. ArriveCAN cost overruns ($54M for a $80K app) exemplify the catastrophic consequences of procurement governance failures that GRGF™ is designed to prevent.",
   },
   {
     id: "SOCIAL",
@@ -356,7 +356,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Case Management API + Benefits System Connector",
     protocol: "HTTPS / SCIM / OAuth 2.0",
     annualExposure: 310_000_000,
-    postGRGF: 77_500_000,
+    postGRGF™: 77_500_000,
     reductionPct: 75,
     fiveYearBenefit: 930_000_000,
     roi: 3720,
@@ -394,7 +394,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "IoT Sensor Gateway + Environmental Registry API",
     protocol: "MQTT / OPC-UA / HTTPS",
     annualExposure: 240_000_000,
-    postGRGF: 60_000_000,
+    postGRGF™: 60_000_000,
     reductionPct: 75,
     fiveYearBenefit: 720_000_000,
     roi: 3600,
@@ -432,7 +432,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "SCADA Connector + OPC-UA Gateway + REST API",
     protocol: "OPC-UA / MQTT / HTTPS / IEC 61850",
     annualExposure: 350_000_000,
-    postGRGF: 87_500_000,
+    postGRGF™: 87_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_050_000_000,
     roi: 3500,
@@ -470,7 +470,7 @@ const sectors: SectorProfile[] = [
     integrationMethod: "Trade Single Window API + Diplomatic Registry Connector",
     protocol: "HTTPS / WCO Data Model / UN/CEFACT",
     annualExposure: 450_000_000,
-    postGRGF: 112_500_000,
+    postGRGF™: 112_500_000,
     reductionPct: 75,
     fiveYearBenefit: 1_350_000_000,
     roi: 3857,
@@ -481,7 +481,7 @@ const sectors: SectorProfile[] = [
       { before: "Trade compliance verified through document inspection at border", after: "Pre-verified governance records enable trusted trader fast-track", timeBefore: "4–48 hours", timeAfter: "< 5 min" },
       { before: "Treaty obligation compliance tracked via diplomatic channels", after: "Treaty compliance events recorded with verifiable institutional evidence", timeBefore: "Annual", timeAfter: "Continuous" },
       { before: "Sanctions screening results stored in compliance system only", after: "Every screening event captured with regulatory basis and decision seal", timeBefore: "N/A", timeAfter: "Automatic" },
-      { before: "Cross-border credential recognition requires embassy verification", after: "Federated credential verification across national GRGF nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
+      { before: "Cross-border credential recognition requires embassy verification", after: "Federated credential verification across national GRGF™ nodes", timeBefore: "4–12 weeks", timeAfter: "< 5 seconds" },
       { before: "Trade dispute evidence assembled from bilateral records", after: "Complete trade governance chain available for WTO/ICSID proceedings", timeBefore: "6–18 months", timeAfter: "< 1 week" },
     ],
     keyMetrics: [
@@ -497,7 +497,7 @@ const sectors: SectorProfile[] = [
       "WCO — Single Window Implementation Studies",
       "OECD — Trade Facilitation Indicators",
     ],
-    realWorldExample: "Canada processes $1.3T in annual trade. The CBSA Assessment and Revenue Management (CARM) system upgrade cost $500M. GRGF integration would provide the governance integrity layer that current trade systems lack.",
+    realWorldExample: "Canada processes $1.3T in annual trade. The CBSA Assessment and Revenue Management (CARM) system upgrade cost $500M. GRGF™ integration would provide the governance integrity layer that current trade systems lack.",
   },
 ];
 
@@ -541,8 +541,8 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
             <p className="text-sm font-semibold text-destructive">{fmtCurrency(sector.annualExposure)}</p>
           </div>
           <div className="text-right">
-            <p className="text-[10px] font-mono text-muted-foreground uppercase">Post-GRGF</p>
-            <p className="text-sm font-semibold text-primary">{fmtCurrency(sector.postGRGF)}</p>
+            <p className="text-[10px] font-mono text-muted-foreground uppercase">Post-GRGF™</p>
+            <p className="text-sm font-semibold text-primary">{fmtCurrency(sector.postGRGF™)}</p>
           </div>
           <div className="text-right">
             <p className="text-[10px] font-mono text-muted-foreground uppercase">5-Year Benefit</p>
@@ -560,8 +560,8 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
         </div>
         <ArrowRight className="w-3 h-3 text-muted-foreground" />
         <div>
-          <p className="text-[9px] font-mono text-muted-foreground">POST-GRGF</p>
-          <p className="text-xs font-semibold text-primary">{fmtCurrency(sector.postGRGF)}</p>
+          <p className="text-[9px] font-mono text-muted-foreground">POST-GRGF™</p>
+          <p className="text-xs font-semibold text-primary">{fmtCurrency(sector.postGRGF™)}</p>
         </div>
         <div className="ml-auto">
           <p className="text-[9px] font-mono text-muted-foreground">5YR BENEFIT</p>
@@ -634,7 +634,7 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
                   </div>
                   <div className="p-3 rounded border border-primary/20 bg-primary/5">
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-[9px] font-mono text-primary uppercase">After GRGF</span>
+                      <span className="text-[9px] font-mono text-primary uppercase">After GRGF™</span>
                       <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-primary/10 text-primary">{w.timeAfter}</span>
                     </div>
                     <p className="text-xs text-foreground leading-relaxed">{w.after}</p>
@@ -707,7 +707,7 @@ function SectorCard({ sector }: { sector: SectorProfile }) {
    ──────────────────────────────────────────────────────────── */
 export default function SectorIntegrationExamples() {
   const totalExposure = sectors.reduce((s, x) => s + x.annualExposure, 0);
-  const totalPostGRGF = sectors.reduce((s, x) => s + x.postGRGF, 0);
+  const totalPostGRGF™ = sectors.reduce((s, x) => s + x.postGRGF™, 0);
   const totalBenefit = sectors.reduce((s, x) => s + x.fiveYearBenefit, 0);
   const avgReduction = Math.round(sectors.reduce((s, x) => s + x.reductionPct, 0) / sectors.length);
 
@@ -723,7 +723,7 @@ export default function SectorIntegrationExamples() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {[
             { label: "Total Annual Governance Exposure", value: fmtCurrency(totalExposure), sub: "Across 12 sectors", color: "text-destructive" },
-            { label: "Post-GRGF Annual Cost", value: fmtCurrency(totalPostGRGF), sub: `${avgReduction}% avg reduction`, color: "text-primary" },
+            { label: "Post-GRGF™ Annual Cost", value: fmtCurrency(totalPostGRGF™), sub: `${avgReduction}% avg reduction`, color: "text-primary" },
             { label: "Combined 5-Year Net Benefit", value: fmtCurrency(totalBenefit), sub: "Evidence-based projection", color: "text-accent" },
             { label: "Sectors Analyzed", value: "12", sub: "Full integration profiles", color: "text-foreground" },
           ].map(c => (
@@ -743,7 +743,7 @@ export default function SectorIntegrationExamples() {
           <p className="text-xs text-muted-foreground leading-relaxed">
             All financial projections use a <strong>cost-of-failure model</strong> derived from published institutional data. 
             Annual governance exposure represents the total cost of governance-related failures, inefficiencies, and risks 
-            within each sector. GRGF reduction estimates assume a conservative <strong>75% reduction</strong> in governance exposure — 
+            within each sector. GRGF™ reduction estimates assume a conservative <strong>75% reduction</strong> in governance exposure — 
             consistent with comparable DPI deployments (Estonia X-Road: 78%, Singapore GovTech: 72%, India Aadhaar: 81%). 
             Five-year benefits apply a phased adoption curve: Year 1 (40%), Year 2 (60%), Year 3 (80%), Years 4–5 (100%). 
             Implementation costs include software integration, training, and first-year operational support. 
@@ -771,7 +771,7 @@ export default function SectorIntegrationExamples() {
                        │  Governance Events (non-intrusive)
                        ▼
 ┌──────────────────────────────────────────────────────────────┐
-│           GRGF Event Normalization Layer                     │
+│           GRGF™ Event Normalization Layer                     │
 │   REST API / HL7 FHIR / ISO 20022 / MQTT / OPC-UA          │
 │   Structured, contextualized, protocol-agnostic events      │
 └──────────────────────┬───────────────────────────────────────┘
@@ -785,7 +785,7 @@ export default function SectorIntegrationExamples() {
                        │
                        ▼
 ┌──────────────────────────────────────────────────────────────┐
-│           GRGF Evidence Backbone                             │
+│           GRGF™ Evidence Backbone                             │
 │   Append-only / SHA-256 hash-chain / Merkle proofs           │
 │   OPA/Rego policy evaluation / Deterministic recording       │
 └──────────────────────┬───────────────────────────────────────┘
@@ -798,8 +798,8 @@ export default function SectorIntegrationExamples() {
 └──────────────────────────────────────────────────────────────┘`}</pre>
         </div>
         <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
-          GRGF operates as a <strong>non-intrusive governance overlay</strong>. Source systems do not change how they work — they gain verifiability. 
-          No data flows back to alter operational systems. Systems emit governance events; GRGF records and preserves them with cryptographic integrity.
+          GRGF™ operates as a <strong>non-intrusive governance overlay</strong>. Source systems do not change how they work — they gain verifiability. 
+          No data flows back to alter operational systems. Systems emit governance events; GRGF™ records and preserves them with cryptographic integrity.
         </p>
       </Section>
 

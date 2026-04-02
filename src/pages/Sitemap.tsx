@@ -44,7 +44,7 @@ const routes: RouteEntry[] = [
   { group: "Simulation & Demo", path: "/systems", title: "Systems", description: "Governance Operating System component documentation.", classification: "Level 1 — Public", icon: Cpu },
   { group: "Simulation & Demo", path: "/blueprints", title: "Technical Blueprints", description: "Detailed technical specifications and deployment blueprints.", classification: "Level 2 — Institutional", icon: Layers },
   { group: "Simulation & Demo", path: "/academy", title: "Academy", description: "Professional certification: Foundations, Practitioner, Steward/Architect.", classification: "Level 1 — Public", icon: GraduationCap },
-  { group: "Simulation & Demo", path: "/dpi-comparison", title: "DPI Comparison", description: "28-capability matrix comparing GRGF to traditional DPI systems.", classification: "Level 1 — Public", icon: BarChart3 },
+  { group: "Simulation & Demo", path: "/dpi-comparison", title: "DPI Comparison", description: "28-capability matrix comparing GRGF™ to traditional DPI systems.", classification: "Level 1 — Public", icon: BarChart3 },
 
   // Decision Tools
   { group: "Decision Tools", path: "/financial-model", title: "Financial Model", description: "Interactive fiscal modeling engine with GDP, population, and fraud exposure inputs.", classification: "Level 2 — Institutional", icon: BarChart3 },
@@ -79,7 +79,7 @@ export default function Sitemap() {
     <div className="animate-fade-in">
       <PageHeader
         title="Institutional Sitemap"
-        subtitle="Complete route map of the GRGF Digital Public Infrastructure platform with classification levels and descriptions."
+        subtitle="Complete route map of the GRGF™ Digital Public Infrastructure platform with classification levels and descriptions."
       />
 
       <Section>
@@ -135,7 +135,7 @@ export default function Sitemap() {
       ))}
 
       <Section className="border-t border-border bg-card/30">
-        <p className="hash-text">SITEMAP-v1.0 · {routes.length} ROUTES · {groups.length} SECTIONS · GRGF DPI PLATFORM</p>
+        <p className="hash-text">SITEMAP-v1.0 · {routes.length} ROUTES · {groups.length} SECTIONS · GRGF™ DPI PLATFORM</p>
       </Section>
     </div>
   );

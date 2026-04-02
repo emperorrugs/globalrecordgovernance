@@ -51,7 +51,7 @@ export function PersonaOnboarding() {
               Start With Your Role
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Choose your path to explore GRGF through the lens that matters most to your institutional role.
+              Choose your path to explore GRGF™ through the lens that matters most to your institutional role.
             </p>
           </div>
         </FadeIn>

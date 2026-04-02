@@ -178,7 +178,7 @@ export default function ChainIntegrity() {
 
       {/* System invariant message */}
       <p className="text-xs text-center text-muted-foreground italic pt-4 border-t border-border">
-        GRGF does not interpret reality. It records it — immutably.
+        GRGF™ does not interpret reality. It records it — immutably.
       </p>
     </div>
   );

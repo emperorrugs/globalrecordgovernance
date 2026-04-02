@@ -9,7 +9,7 @@
 
 ## Verification Model
 
-GRGF supports two fundamental verification modes:
+GRGF™ supports two fundamental verification modes:
 
 ### Positive Verification
 Confirming that a governance record exists for a claimed event. The verifier receives cryptographic proof of existence without accessing record content.
@@ -37,7 +37,7 @@ The Evidence Backbone represents a persistent, append-only record fabric that is
 
 ## Proof Artifacts
 
-GRGF generates the following cryptographic proof artifacts:
+GRGF™ generates the following cryptographic proof artifacts:
 
 | Artifact | Purpose |
 |----------|---------|

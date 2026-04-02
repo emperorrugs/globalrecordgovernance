@@ -68,7 +68,7 @@ export default function AppLogin() {
               <span className="text-background text-lg font-bold">G</span>
             </div>
             <div>
-              <span className="text-lg font-bold text-background">GRGF</span>
+              <span className="text-lg font-bold text-background">GRGF™</span>
               <p className="text-[11px] text-background/50">Global Record Governance Framework</p>
             </div>
           </Link>
@@ -87,7 +87,7 @@ export default function AppLogin() {
         </div>
         <div className="relative">
           <p className="text-[11px] text-background/30">
-            GRGF v1.0 · Sovereign-Grade Governance Infrastructure
+            GRGF™ v1.0 · Sovereign-Grade Governance Infrastructure
           </p>
         </div>
       </div>
@@ -108,7 +108,7 @@ export default function AppLogin() {
               <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground text-sm font-bold">G</span>
               </div>
-              <span className="text-[15px] font-bold">GRGF</span>
+              <span className="text-[15px] font-bold">GRGF™</span>
             </div>
             <h1 className="text-heading-1 font-bold text-foreground mb-2">
               {isForgot ? "Reset Password" : isSignUp ? "Create Account" : "Sign In"}

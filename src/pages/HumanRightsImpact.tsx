@@ -29,7 +29,7 @@ const HumanRightsImpact = () => (
         <h2 className="institutional-heading text-heading-1 font-semibold mb-8">UN Guiding Principles Alignment</h2>
         <div className="grid gap-5 md:grid-cols-3">
           {[
-            { title: "Pillar I: State Duty to Protect", desc: "GRGF strengthens state capacity to protect human rights by making institutional governance verifiable, reducing opportunities for arbitrary or opaque administrative action." },
+            { title: "Pillar I: State Duty to Protect", desc: "GRGF™ strengthens state capacity to protect human rights by making institutional governance verifiable, reducing opportunities for arbitrary or opaque administrative action." },
             { title: "Pillar II: Corporate Responsibility", desc: "The Foundation's governance charter, anti-capture clauses, and institutional neutrality demonstrate responsible governance infrastructure stewardship." },
             { title: "Pillar III: Access to Remedy", desc: "Omission-awareness architecture ensures that failures to act — including failures to provide remedy — become structurally visible and independently verifiable." },
           ].map(({ title, desc }) => (

@@ -65,7 +65,7 @@ const tiers = [
       "Post-quantum cryptography",
       "HSM key management",
       "Custom sector policy engines",
-      "GRGF Academy certification program",
+      "GRGF™ Academy certification program",
       "Sovereign SLA (99.99%)",
       "Continuous security monitoring",
       "IP co-stewardship options",
@@ -97,7 +97,7 @@ const tiers = [
 
 const roiMetrics = [
   { label: "Cost of governance failure (global/yr)", value: "$113.2B", source: "Historical counterfactual analysis" },
-  { label: "GRGF annual application value", value: "$61.7B", source: "126 applications × sector value" },
+  { label: "GRGF™ annual application value", value: "$61.7B", source: "126 applications × sector value" },
   { label: "Target capture rate", value: "1–3%", source: "Conservative institutional modeling" },
   { label: "Social Return on Investment", value: "20:1", source: "10-year fiscal projection" },
   { label: "Breakeven for pilot nations", value: "18 months", source: "Based on 10-app pilot scope" },
@@ -110,7 +110,7 @@ const Pricing = () => {
   return (
     <div className="animate-fade-in">
       <SEOHead
-        title="GRGF Licensing & Pricing — Institutional Deployment Tiers"
+        title="GRGF™ Licensing & Pricing — Institutional Deployment Tiers"
         description="Four institutional tiers from Pilot License to Federation Node. Transparent pricing for sovereign governance infrastructure."
       />
 
@@ -183,7 +183,7 @@ const Pricing = () => {
             {[
               { label: "Licensing & Subscriptions", pct: "40%", color: "var(--ms-blue)", desc: "Annual platform licensing for sovereign deployments" },
               { label: "Professional Services", pct: "25%", color: "var(--ms-green)", desc: "Implementation, integration, and customization" },
-              { label: "Academy & Certification", pct: "20%", color: "var(--ms-red)", desc: "GRGF practitioner and institutional certifications" },
+              { label: "Academy & Certification", pct: "20%", color: "var(--ms-red)", desc: "GRGF™ practitioner and institutional certifications" },
             ].map(item => (
               <div key={item.label} className="bg-card border border-border rounded-lg p-5 text-center">
                 <div className="text-3xl font-bold mb-1" style={{ color: `hsl(${item.color})` }}>{item.pct}</div>
@@ -241,7 +241,7 @@ const Pricing = () => {
             </Button>
           </div>
           <p className="text-[10px] font-mono text-muted-foreground mt-6">
-            Canadian Patent No. CA 3,300,102 · © {new Date().getFullYear()} GRGF — Global Record Governance Framework
+            Canadian Patent No. CA 3,300,102 · © {new Date().getFullYear()} GRGF™ — Global Record Governance Framework
           </p>
         </div>
       </section>

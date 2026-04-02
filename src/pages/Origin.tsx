@@ -30,12 +30,12 @@ const Origin = () => {
             <div>
               <h3 className="font-serif text-base font-semibold mb-2 flex items-center gap-2">
                 <Globe className="h-4 w-4 text-accent" />
-                Origin of GRGF
+                Origin of GRGF™
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {isPlain
-                  ? "GRGF was created as a new type of global infrastructure — designed from the ground up to record what governments do, decide, and fail to do. It is not a product, service, or commercial venture."
-                  : "GRGF originated as a unified Digital Public Infrastructure architecture and governance model. Designed from inception as a sovereign-grade governance primitive — not a product, service, or commercial venture."}
+                  ? "GRGF™ was created as a new type of global infrastructure — designed from the ground up to record what governments do, decide, and fail to do. It is not a product, service, or commercial venture."
+                  : "GRGF™ originated as a unified Digital Public Infrastructure architecture and governance model. Designed from inception as a sovereign-grade governance primitive — not a product, service, or commercial venture."}
               </p>
             </div>
 
@@ -46,8 +46,8 @@ const Origin = () => {
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {isPlain
-                  ? "No other system records government omissions alongside actions and decisions in a single, verifiable framework. GRGF is the first architecture designed to do this at a global scale."
-                  : "GRGF is the first governance infrastructure to unify action recording, decision documentation, and omission capture within a single cryptographically verifiable framework deployable across sovereign jurisdictions."}
+                  ? "No other system records government omissions alongside actions and decisions in a single, verifiable framework. GRGF™ is the first architecture designed to do this at a global scale."
+                  : "GRGF™ is the first governance infrastructure to unify action recording, decision documentation, and omission capture within a single cryptographically verifiable framework deployable across sovereign jurisdictions."}
               </p>
             </div>
 
@@ -68,7 +68,7 @@ const Origin = () => {
               <h3 className="font-serif text-base font-semibold mb-2">Long-Term Stewardship</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {isPlain
-                  ? "GRGF is designed to last 20–50 years. Its stewardship model ensures the framework survives beyond any individual, organisation, or government — through succession planning, anti-capture protections, and institutional independence."
+                  ? "GRGF™ is designed to last 20–50 years. Its stewardship model ensures the framework survives beyond any individual, organisation, or government — through succession planning, anti-capture protections, and institutional independence."
                   : "Stewardship model ensures multi-generational framework continuity through succession protocols, anti-capture vigilance, and institutional independence safeguards. Designed for 20–50 year institutional credibility horizons."}
               </p>
             </div>

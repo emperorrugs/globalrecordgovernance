@@ -131,14 +131,14 @@ export default function PilotResults() {
     <div className="animate-fade-in">
       <PageHeader
         title="Pilot Simulation Results — Republic of Novaris"
-        subtitle="GRGF Pilot Node v0.1 — Controlled Evaluation Outcomes"
+        subtitle="GRGF™ Pilot Node v0.1 — Controlled Evaluation Outcomes"
       />
 
       {/* Executive Summary */}
       <Section title="Executive Summary" className="border-b border-border">
         <div className="governance-card border-l-2 border-l-accent">
           <p className="text-sm text-foreground leading-relaxed mb-4">
-            The GRGF Pilot Node v0.1 was deployed in a controlled simulation environment representing the <strong>Republic of Novaris</strong> — a fictional but realistic sovereign state. Three institutional tenants processed <strong>24 governance records</strong> across <strong>12 sectors</strong>, exercising the full record lifecycle from creation through sealing, verification, audit, and dispute handling.
+            The GRGF™ Pilot Node v0.1 was deployed in a controlled simulation environment representing the <strong>Republic of Novaris</strong> — a fictional but realistic sovereign state. Three institutional tenants processed <strong>24 governance records</strong> across <strong>12 sectors</strong>, exercising the full record lifecycle from creation through sealing, verification, audit, and dispute handling.
           </p>
           <p className="text-sm text-foreground leading-relaxed mb-4">
             <strong>All 7 pilot KPIs were met or exceeded.</strong> The system demonstrated deterministic policy enforcement, cryptographic record integrity, multi-tenant isolation, role-based access control, immutable audit trails, and independent public verification — confirming readiness for structured institutional evaluation.
@@ -333,7 +333,7 @@ export default function PilotResults() {
             <h3 className="text-lg font-semibold text-foreground">VERDICT: PILOT OBJECTIVES MET</h3>
           </div>
           <p className="text-sm text-foreground leading-relaxed mb-4">
-            The GRGF Pilot Node v0.1 has successfully demonstrated the core thesis: governance actions can be recorded at execution time, bound to authority and context, stored immutably, verified independently, and audited fully — transforming trust-based governance into <strong>proof-based governance</strong>.
+            The GRGF™ Pilot Node v0.1 has successfully demonstrated the core thesis: governance actions can be recorded at execution time, bound to authority and context, stored immutably, verified independently, and audited fully — transforming trust-based governance into <strong>proof-based governance</strong>.
           </p>
           <p className="text-sm text-foreground leading-relaxed mb-6">
             The system is ready for structured institutional evaluation by authorized government bodies, multilateral organizations, and independent assurance teams. Progression to Phase 2 (multi-node federation and external audit) is recommended.
@@ -351,7 +351,7 @@ export default function PilotResults() {
           </div>
         </div>
         <p className="mt-6 text-[10px] font-mono text-muted-foreground/40 tracking-wider text-center">
-          GRGF PILOT NODE v0.1 — REPUBLIC OF NOVARIS — CONTROLLED EVALUATION COMPLETE — {new Date().toISOString().split('T')[0]}
+          GRGF™ PILOT NODE v0.1 — REPUBLIC OF NOVARIS — CONTROLLED EVALUATION COMPLETE — {new Date().toISOString().split('T')[0]}
         </p>
       </Section>
     </div>

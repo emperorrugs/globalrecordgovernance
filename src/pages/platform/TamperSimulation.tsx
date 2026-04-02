@@ -9,7 +9,7 @@ import { AlertTriangle, CheckCircle, Shield, ShieldAlert, Lock, Edit3 } from 'lu
 import { sha256 } from '@/lib/hash';
 
 const SEALED_RECORD = {
-  id: 'GRGF-2026-00847',
+  id: 'GRGF™-2026-00847',
   title: 'Procurement Approval — Federal IT Modernization Contract',
   actor: 'Deputy Minister, Public Services',
   action: 'Approved procurement award of $42.6M for IT modernization',

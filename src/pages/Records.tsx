@@ -4,12 +4,12 @@ import { Eye, Search } from "lucide-react";
 import { useState } from "react";
 
 const SIMULATED_RECORDS = [
-  { id: "GRGF-SIM-0001", type: "Government Decision", status: "Approved", institution: "Ministry of Finance", date: "2024-03-15", lifecycle: ["Draft", "Review", "Approved"] },
-  { id: "GRGF-SIM-0002", type: "Procurement Action", status: "Closed", institution: "National Procurement Authority", date: "2024-04-02", lifecycle: ["Draft", "Review", "Approved", "Closed"] },
-  { id: "GRGF-SIM-0003", type: "Regulatory Filing", status: "Denied", institution: "Central Regulatory Office", date: "2024-05-10", lifecycle: ["Draft", "Review", "Denied"] },
-  { id: "GRGF-SIM-0004", type: "Omission Event", status: "Recorded", institution: "Health Safety Board", date: "2024-06-01", lifecycle: ["Obligation Deadline", "No Action Filed", "Omission Recorded"] },
-  { id: "GRGF-SIM-0005", type: "Judicial Ruling", status: "Approved", institution: "Federal Court", date: "2024-06-15", lifecycle: ["Draft", "Review", "Approved"] },
-  { id: "GRGF-SIM-0006", type: "Audit Report", status: "Review", institution: "Office of the Auditor General", date: "2024-07-20", lifecycle: ["Draft", "Review"] },
+  { id: "GRGF™-SIM-0001", type: "Government Decision", status: "Approved", institution: "Ministry of Finance", date: "2024-03-15", lifecycle: ["Draft", "Review", "Approved"] },
+  { id: "GRGF™-SIM-0002", type: "Procurement Action", status: "Closed", institution: "National Procurement Authority", date: "2024-04-02", lifecycle: ["Draft", "Review", "Approved", "Closed"] },
+  { id: "GRGF™-SIM-0003", type: "Regulatory Filing", status: "Denied", institution: "Central Regulatory Office", date: "2024-05-10", lifecycle: ["Draft", "Review", "Denied"] },
+  { id: "GRGF™-SIM-0004", type: "Omission Event", status: "Recorded", institution: "Health Safety Board", date: "2024-06-01", lifecycle: ["Obligation Deadline", "No Action Filed", "Omission Recorded"] },
+  { id: "GRGF™-SIM-0005", type: "Judicial Ruling", status: "Approved", institution: "Federal Court", date: "2024-06-15", lifecycle: ["Draft", "Review", "Approved"] },
+  { id: "GRGF™-SIM-0006", type: "Audit Report", status: "Review", institution: "Office of the Auditor General", date: "2024-07-20", lifecycle: ["Draft", "Review"] },
 ];
 
 const statusColor: Record<string, string> = {
@@ -40,7 +40,7 @@ const Records = () => {
         subtitle={
           isPlain
             ? "Browse simulated governance records to understand how the system tracks institutional actions."
-            : "Simulated record registry demonstrating GRGF record lifecycle, classification, and status management."
+            : "Simulated record registry demonstrating GRGF™ record lifecycle, classification, and status management."
         }
       />
 
