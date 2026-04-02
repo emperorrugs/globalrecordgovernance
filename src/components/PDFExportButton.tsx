@@ -13,7 +13,7 @@ interface PDFExportButtonProps {
 
 export function PDFExportButton({
   selector = "main",
-  filename = "GRGF™-Document",
+  filename = "GRGF™ - Document",
   label = "Export PDF",
 }: PDFExportButtonProps) {
   const { toast } = useToast();

@@ -14,7 +14,7 @@ interface RecordEntry {
 }
 
 function generateId() {
-  return `GRGF™-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
+  return `GRGF-${Date.now().toString(36).toUpperCase()}-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
 }
 
 export function LiveRecordDemo() {
